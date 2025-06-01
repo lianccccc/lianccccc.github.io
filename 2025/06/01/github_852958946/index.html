@@ -19,24 +19,24 @@
   <meta name="author" content="lianccc">
   <meta name="keywords" content="">
   
-    <meta name="description" content="漏洞名称： Linux 权限提升漏洞 (OtterRoot) 漏洞编号：  CVE： CVE-2024-26809  漏洞类型： 权限提升 漏洞等级： 高危 漏洞描述： Linux系统中存在一个权限提升漏洞（CVE-2024-26809），被称为OtterRoot。该漏洞允许攻击者在受影响的系统上提升权限。漏洞利用代码自包含于一个单一的exploit.c文件中，具有极高的可移植性。 产品名称： L">
+    <meta name="description" content="漏洞名称： Roundcube Webmail 命令注入漏洞 漏洞编号：  CVE： CVE-2020-12641  漏洞类型： 命令执行 漏洞等级： 严重 漏洞描述： Roundcube Webmail 1.4.4之前的版本中，由于im_convert_path或im_identify_path配置设置中的shell元字符，导致命令注入漏洞，攻击者可以执行任意代码。利用此漏洞需要攻击者能够控制配">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux 权限提升漏洞 (OtterRoot)">
-<meta property="og:url" content="http://example.com/2025/06/01/github_2088529382/index.html">
+<meta property="og:title" content="Roundcube Webmail 命令注入漏洞">
+<meta property="og:url" content="http://example.com/2025/06/01/github_852958946/index.html">
 <meta property="og:site_name" content="liancc&#39; infos blog">
-<meta property="og:description" content="漏洞名称： Linux 权限提升漏洞 (OtterRoot) 漏洞编号：  CVE： CVE-2024-26809  漏洞类型： 权限提升 漏洞等级： 高危 漏洞描述： Linux系统中存在一个权限提升漏洞（CVE-2024-26809），被称为OtterRoot。该漏洞允许攻击者在受影响的系统上提升权限。漏洞利用代码自包含于一个单一的exploit.c文件中，具有极高的可移植性。 产品名称： L">
+<meta property="og:description" content="漏洞名称： Roundcube Webmail 命令注入漏洞 漏洞编号：  CVE： CVE-2020-12641  漏洞类型： 命令执行 漏洞等级： 严重 漏洞描述： Roundcube Webmail 1.4.4之前的版本中，由于im_convert_path或im_identify_path配置设置中的shell元字符，导致命令注入漏洞，攻击者可以执行任意代码。利用此漏洞需要攻击者能够控制配">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-06-01T13:17:30.046Z">
-<meta property="article:modified_time" content="2025-06-01T13:17:30.042Z">
+<meta property="article:published_time" content="2025-06-01T13:30:15.346Z">
+<meta property="article:modified_time" content="2025-06-01T13:30:15.341Z">
 <meta property="article:author" content="lianccc">
-<meta property="article:tag" content="rapid7&#x2F;metasploit-framework:github issues">
-<meta property="article:tag" content="CVE-2024-26809">
-<meta property="article:tag" content="权限提升">
+<meta property="article:tag" content="projectdiscovery&#x2F;nuclei-templates:github issues">
+<meta property="article:tag" content="命令执行">
+<meta property="article:tag" content="CVE-2020-12641">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Linux 权限提升漏洞 (OtterRoot) - liancc&#39; infos blog</title>
+  <title>Roundcube Webmail 命令注入漏洞 - liancc&#39; infos blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,7 +203,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Linux 权限提升漏洞 (OtterRoot)"></span>
+            <span id="subtitle" data-typed-text="Roundcube Webmail 命令注入漏洞"></span>
           
         </div>
 
@@ -214,7 +214,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-06-01 13:17" pubdate>
+        <time datetime="2025-06-01 13:30" pubdate>
           2025年6月1日 下午
         </time>
       </span>
@@ -226,7 +226,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          192 字
+          213 字
         
       </span>
     
@@ -274,23 +274,26 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Linux 权限提升漏洞 (OtterRoot)</h1>
+            <h1 id="seo-header">Roundcube Webmail 命令注入漏洞</h1>
             
             
               <div class="markdown-body">
                 
-                <p><strong>漏洞名称：</strong> Linux 权限提升漏洞 (OtterRoot)</p>
+                <p><strong>漏洞名称：</strong> Roundcube Webmail 命令注入漏洞</p>
 <p><strong>漏洞编号：</strong></p>
 <ul>
-<li><strong>CVE：</strong> CVE-2024-26809</li>
+<li><strong>CVE：</strong> CVE-2020-12641</li>
 </ul>
-<p><strong>漏洞类型：</strong> 权限提升</p>
-<p><strong>漏洞等级：</strong> 高危</p>
-<p><strong>漏洞描述：</strong> Linux系统中存在一个权限提升漏洞（CVE-2024-26809），被称为OtterRoot。该漏洞允许攻击者在受影响的系统上提升权限。漏洞利用代码自包含于一个单一的exploit.c文件中，具有极高的可移植性。</p>
-<p><strong>产品名称：</strong> Linux</p>
-<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/rapid7/metasploit-framework/issues/19863">https://github.com/rapid7/metasploit-framework/issues/19863</a></p>
-<p><strong>类型：</strong> rapid7&#x2F;metasploit-framework:github issues</p>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">&lt;!<span class="hljs-comment">--</span><br>  To make <span class="hljs-keyword">it</span> easier <span class="hljs-keyword">for</span> us <span class="hljs-built_in">to</span> help you, please <span class="hljs-built_in">include</span> <span class="hljs-keyword">as</span> much useful information <span class="hljs-keyword">as</span> possible.<br><br>  Useful Links:<br>  - Wiki: <span class="hljs-keyword">https</span>://docs.metasploit.com/<br><br>  Before opening <span class="hljs-keyword">a</span> <span class="hljs-built_in">new</span> issue, please search existing issues <span class="hljs-keyword">https</span>://github.com/rapid7/metasploit-framework/issues<br><span class="hljs-comment">--&gt;</span><br><br><span class="hljs-comment">## Summary</span><br><br>Offset-less Linux LPE (CVE<span class="hljs-number">-2024</span><span class="hljs-number">-26809</span>)<br><br><span class="hljs-comment">### Basic example</span><br><br>![Image](<span class="hljs-keyword">https</span>://github.com/user-attachments/assets/f77f9608-d343<span class="hljs-number">-4039</span><span class="hljs-number">-80</span>a8<span class="hljs-number">-51</span>fb1bd64716)<br><br>- <span class="hljs-keyword">https</span>://osec.io/blog/<span class="hljs-number">2024</span><span class="hljs-number">-11</span><span class="hljs-number">-25</span>-netfilter-universal-root<span class="hljs-number">-1</span>-day/<br>- <span class="hljs-keyword">https</span>://github.com/otter-<span class="hljs-built_in">sec</span>/OtterRoot/tree/master<br><br><span class="hljs-comment">### Motivation</span><br><br>Self-contained (<span class="hljs-keyword">a</span> single exploit.c <span class="hljs-built_in">file</span>) ultra-portable Linux exploit.<br></code></pre></td></tr></table></figure>
+<p><strong>漏洞类型：</strong> 命令执行</p>
+<p><strong>漏洞等级：</strong> 严重</p>
+<p><strong>漏洞描述：</strong> Roundcube Webmail 1.4.4之前的版本中，由于im_convert_path或im_identify_path配置设置中的shell元字符，导致命令注入漏洞，攻击者可以执行任意代码。利用此漏洞需要攻击者能够控制配置设置。</p>
+<p><strong>产品厂商：</strong> Roundcube</p>
+<p><strong>产品名称：</strong> Roundcube Webmail</p>
+<p><strong>影响版本：</strong> version &lt; 1.4.4</p>
+<p><strong>搜索语法：</strong> http.component:”roundcube”</p>
+<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei-templates/issues/12153">https://github.com/projectdiscovery/nuclei-templates/issues/12153</a></p>
+<p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs coffeescript"><br><span class="hljs-comment">### Description: </span><br><span class="hljs-comment">&gt; Roundcube Webmail before 1.4.4 contains a command injection caused by shell metacharacters in configuration settings for im_convert_path or im_identify_path, letting attackers execute arbitrary code, exploit requires attacker to control configuration settings.</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">###</span><span class="hljs-comment"># Severity: `Critical`</span><br><br><span class="hljs-comment">#### POC: </span><br><span class="hljs-comment">- https://github.com/DrunkenShells/Disclosures/tree/master/CVE-2020-12641-Command%20Injection-Roundcube</span><br><span class="hljs-comment">- https://github.com/mbadanoiu/MAL-004</span><br><span class="hljs-comment">- https://github.com/mbadanoiu/CVE-2020-12641</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">###</span> KEV: True<br><br><span class="hljs-comment">### Shodan Query: `http.component:&quot;roundcube&quot;`</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">&gt; Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(`-debug`) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </span><br><span class="hljs-comment"></span><br><span class="hljs-comment">&gt; Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">You can check the FAQ for the Nuclei Templates Community Rewards Program [here](https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md).</span><br></code></pre></td></tr></table></figure>
 
 
                 
@@ -325,11 +328,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/rapid7-metasploit-framework-github-issues/" class="print-no-link">#rapid7/metasploit-framework:github issues</a>
+        <a href="/tags/projectdiscovery-nuclei-templates-github-issues/" class="print-no-link">#projectdiscovery/nuclei-templates:github issues</a>
       
-        <a href="/tags/CVE-2024-26809/" class="print-no-link">#CVE-2024-26809</a>
+        <a href="/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/" class="print-no-link">#命令执行</a>
       
-        <a href="/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/" class="print-no-link">#权限提升</a>
+        <a href="/tags/CVE-2020-12641/" class="print-no-link">#CVE-2020-12641</a>
       
     </div>
   
@@ -341,8 +344,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Linux 权限提升漏洞 (OtterRoot)</div>
-      <div>http://example.com/2025/06/01/github_2088529382/</div>
+      <div>Roundcube Webmail 命令注入漏洞</div>
+      <div>http://example.com/2025/06/01/github_852958946/</div>
     </div>
     <div class="license-meta">
       
@@ -386,9 +389,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/01/github_852958946/" title="Roundcube Webmail 命令注入漏洞">
+                      <a href="/2025/06/01/github_473504722/" title="Apache HTTP Server mod_proxy HTTP Request Smuggling Vulnerability">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Roundcube Webmail 命令注入漏洞</span>
+                        <span class="hidden-mobile">Apache HTTP Server mod_proxy HTTP Request Smuggling Vulnerability</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -396,8 +399,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/01/github_1507688631/" title="AnyDesk 远程代码执行漏洞">
-                        <span class="hidden-mobile">AnyDesk 远程代码执行漏洞</span>
+                      <a href="/2025/06/01/github_2088529382/" title="Linux 权限提升漏洞 (OtterRoot)">
+                        <span class="hidden-mobile">Linux 权限提升漏洞 (OtterRoot)</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
