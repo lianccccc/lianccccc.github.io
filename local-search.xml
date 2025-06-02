@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>WordPress suretriggers 权限绕过漏洞 (CVE-2025-3102) 附POC</title>
+    <link href="/2025/06/02/weixin_3948685999/"/>
+    <url>/2025/06/02/weixin_3948685999/</url>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/Etai-xZ90wkYfbDBLQ3whA">https://mp.weixin.qq.com/s/Etai-xZ90wkYfbDBLQ3whA</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信公众号</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>mp.weixin.qq.com</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>VMware VMX TOCTOU Race Condition Vulnerability</title>
     <link href="/2025/06/02/github_1544663935/"/>
     <url>/2025/06/02/github_1544663935/</url>

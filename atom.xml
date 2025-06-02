@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-02T12:45:36.316Z</updated>
+  <updated>2025-06-02T14:17:52.629Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WordPress suretriggers 权限绕过漏洞 (CVE-2025-3102) 附POC</title>
+    <link href="http://example.com/2025/06/02/weixin_3948685999/"/>
+    <id>http://example.com/2025/06/02/weixin_3948685999/</id>
+    <published>2025-06-02T14:17:52.632Z</published>
+    <updated>2025-06-02T14:17:52.629Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/Etai-xZ90wkYfbDBLQ3whA">https://mp.weixin.qq.com/s/Etai-xZ90wkYfbDBLQ3whA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/Etai-xZ90wkYfbDBLQ3whA&quot;&gt;https://mp.weixin.qq.com/s/Etai-xZ90wkYfbDBLQ3whA&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+  </entry>
   
   <entry>
     <title>VMware VMX TOCTOU Race Condition Vulnerability</title>
