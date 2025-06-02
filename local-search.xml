@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>IBM QRadar SIEM 存储型跨站脚本漏洞</title>
+    <link href="/2025/06/02/github_1284460091/"/>
+    <url>/2025/06/02/github_1284460091/</url>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> IBM QRadar SIEM 存储型跨站脚本漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-28784</li></ul><p><strong>漏洞类型：</strong> 跨站可执行脚本</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> IBM QRadar SIEM 7.5.0 UpdatePackage 7中的Rule Wizard组件存在存储型跨站脚本(XSS)漏洞。该漏洞源于对用户控制的输入在“正则表达式”逻辑块中未进行适当的清理，攻击者可以注入未转义的HTML&#x2F;JavaScript代码，这些代码将被存储并在其他认证用户的浏览器上下文中执行。</p><p><strong>产品厂商：</strong> IBM</p><p><strong>产品名称：</strong> IBM Security QRadar SIEM</p><p><strong>影响版本：</strong> 7.5.0 UpdatePackage 7 (Build 20230822112654)</p><p><strong>来源：</strong> <a href="https://github.com/CainSoulless/CVE-2024-28784">https://github.com/CainSoulless/CVE-2024-28784</a></p><p><strong>类型：</strong> CVE-2024:github search</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-section"># CVE-2024-28784 — Stored XSS in IBM QRadar SIEM Rule Wizard</span><br><br><span class="hljs-section">## 🛠 Product Information</span><br><br><span class="hljs-bullet">-</span> <span class="hljs-strong">**Vendor:**</span> IBM<br><span class="hljs-bullet">-</span> <span class="hljs-strong">**Product:**</span> IBM Security QRadar SIEM<br><span class="hljs-bullet">-</span> <span class="hljs-strong">**Affected Version:**</span> 7.5.0 UpdatePackage 7 (Build 20230822112654)<br><span class="hljs-bullet">-</span> <span class="hljs-strong">**Component:**</span> Rule Wizard (Regular Expression Logic Block)<br><span class="hljs-bullet">-</span> <span class="hljs-strong">**CVE ID:**</span> [<span class="hljs-string">CVE-2024-28784</span>](<span class="hljs-link">https://nvd.nist.gov/vuln/detail/CVE-2024-28784</span>)<br><br>---<br><br><span class="hljs-section">## 🐞 Vulnerability Summary</span><br><br>A <span class="hljs-strong">**stored cross-site scripting (XSS)**</span> vulnerability exists in the Rule Wizard component of QRadar SIEM. The issue lies in the improper sanitization of user-controlled input within the &quot;regular expression&quot; logic block. Malicious input containing unescaped HTML/JavaScript can be stored and later executed in the browser context of other authenticated users.<br><br>---<br><br><span class="hljs-section">## 📋 Steps to Reproduce</span><br><br><span class="hljs-bullet">1.</span> Log into QRadar SIEM with a user account that has <span class="hljs-strong">**rule creation/edit permissions**</span>.<br><span class="hljs-bullet">2.</span> Navigate to:  <br>   \<span class="hljs-code">`Offense → Rules → Actions → New Event Rule\`</span><br><span class="hljs-bullet">3.</span> Add a condition block:  <br>   <span class="hljs-strong">**&quot;when any of these properties match this regular expression&quot;**</span> .  <br>![<span class="hljs-string">Logic Block</span>](<span class="hljs-link">/img/imagen.png</span>)<br><span class="hljs-bullet">4.</span> Choose any property.<br><span class="hljs-bullet">5.</span> In the &quot;this regular expression&quot; input, enter the following payload:<br>   \<span class="hljs-code">`\`</span>\`html<br>   &quot;&gt;<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span></span>alert(alert(&#x27;XSS&#x27;))<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br>   \<span class="hljs-code">`\`</span>\`<br><span class="hljs-bullet">6.</span> Click <span class="hljs-strong">**Submit**</span>.<br><span class="hljs-bullet">7.</span> Reopen the rule block; the malicious payload persists and triggers upon interaction or load.<br><br>![<span class="hljs-string">XSS Succeed</span>](<span class="hljs-link">/img/imagen-2.png</span>)  <br>![<span class="hljs-string">HTML</span>](<span class="hljs-link">/img/imagen-3.png</span>)<br><br>---<br><br><span class="hljs-section">## 🔐 Access Requirements</span><br><br><span class="hljs-bullet">-</span> <span class="hljs-strong">**Authentication:**</span> Yes  <br><span class="hljs-bullet">-</span> <span class="hljs-strong">**Privileges:**</span> Any user with access to rule creation/editing<br><br>---<br><br><span class="hljs-section">## ⚙️ Technical Details</span><br><br><span class="hljs-bullet">-</span> <span class="hljs-strong">**Vulnerability Type:**</span> Stored Cross-site Scripting (XSS)<br><span class="hljs-bullet">-</span> <span class="hljs-strong">**Vector:**</span> Web UI → Rule Wizard<br><span class="hljs-bullet">-</span> <span class="hljs-strong">**Injection Point:**</span> Regular Expression field<br><span class="hljs-bullet">-</span> <span class="hljs-strong">**Persistence:**</span> Stored in configuration and triggered on view<br><span class="hljs-bullet">-</span> <span class="hljs-strong">**Security Misstep:**</span> Improper input sanitization and reflection in HTML context<br><br>---<br><br><span class="hljs-section">## ⚠️ Impact</span><br><br>This XSS vulnerability allows an attacker to:<br><span class="hljs-bullet">-</span> Execute arbitrary JavaScript in another user’s browser session<br><span class="hljs-bullet">-</span> Perform session hijacking or token theft<br><span class="hljs-bullet">-</span> Steal sensitive data from authenticated users<br><span class="hljs-bullet">-</span> Impersonate users or elevate privileges (if privileged users trigger the payload)<br><span class="hljs-bullet">-</span> Redirect victims to phishing or malicious domains<br><br>---<br><br><span class="hljs-section">## 🧪 Exploitation Notes</span><br><br><span class="hljs-bullet">-</span> Exploitation is <span class="hljs-strong">**non-trivial**</span>, requiring an attacker to inject the payload and a victim to interact with the infected rule interface.<br><span class="hljs-bullet">-</span> The attack does <span class="hljs-strong">**not require social engineering**</span> if users frequently interact with saved rules.<br><br>---<br><br><span class="hljs-section">## 🏁 Timeline</span><br><br>| Date           | Event                                 |<br>|----------------|---------------------------------------|<br>| 2024-03-18     | Vulnerability discovered              |<br>| 2024-03-18     | Reported to IBM via HackerOne |<br>| 2024-04-02     | CVE-2024-28784 assigned                |<br><br>---<br><br><span class="hljs-section">## 📄 Disclaimer</span><br><br>This research was conducted under ethical guidelines and in a responsible disclosure process. No production systems were harmed. This publication is for educational and defensive purposes only.<br><br>---<br><br><span class="hljs-section">## 👤 Author</span><br><br><span class="hljs-strong">**Rodrigo Hormazábal**</span>  <br>Security Researcher — SOAR &amp; SIEM Automation  <br>🔗 [<span class="hljs-string">LinkedIn</span>](<span class="hljs-link">https://www.linkedin.com/in/rodrigo-hormazabal-cybersec/</span>)  <br>🧑‍💻 [<span class="hljs-string">GitHub</span>](<span class="hljs-link">https://github.com/CainSoulless</span>)  <br>🐙 [<span class="hljs-string">HackerOne</span>](<span class="hljs-link">https://hackerone.com/cainsoulless</span>)<br></code></pre></td></tr></table></figure><pre><code class="hljs">- .gitignore- README.md- img```</code></pre>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc 监控</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CVE-2024:github search</tag>
+      
+      <tag>CVE-2024-28784</tag>
+      
+      <tag>跨站可执行脚本</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>MailEnable Webmail 反射型跨站脚本漏洞</title>
     <link href="/2025/06/02/github_3347181898/"/>
     <url>/2025/06/02/github_3347181898/</url>
@@ -20,9 +49,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>跨站可执行脚本</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
       <tag>CVE-2025-44148</tag>
       
@@ -49,11 +78,11 @@
     
     <tags>
       
+      <tag>跨站可执行脚本</tag>
+      
       <tag>CVE-2023-4136</tag>
       
       <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
-      <tag>跨站可执行脚本</tag>
       
     </tags>
     
@@ -107,11 +136,11 @@
     
     <tags>
       
+      <tag>CVE-2024:github search</tag>
+      
       <tag>权限提升</tag>
       
       <tag>CVE-2024-39924</tag>
-      
-      <tag>CVE-2024:github search</tag>
       
     </tags>
     
