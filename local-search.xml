@@ -4,6 +4,64 @@
   
   
   <entry>
+    <title>Django strip_tags() Security Issue</title>
+    <link href="/2025/06/03/github_545553022/"/>
+    <url>/2025/06/03/github_545553022/</url>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Django strip_tags() Security Issue</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-32873</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> Django框架中的strip_tags()函数存在安全漏洞（CVE-2025-32873），可能被利用进行攻击。</p><p><strong>产品厂商：</strong> Django</p><p><strong>产品名称：</strong> Django</p><p><strong>影响版本：</strong> 5.2</p><p><strong>来源：</strong> <a href="https://github.com/Apollo-R3bot/django-vulnerability-CVE-2025-32873">https://github.com/Apollo-R3bot/django-vulnerability-CVE-2025-32873</a></p><p><strong>类型：</strong> CVE-2025:github search</p><figure class="highlight ldif"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs ldif"><br><span class="hljs-comment"># Django Security Issue on strip_tags()</span><br><br><span class="hljs-comment">#requirements</span><br><span class="hljs-literal">-</span> Django 5.2<br><span class="hljs-literal">-</span> Django Rate Limit (pip install django-ratelimit)<br><br><br></code></pre></td></tr></table></figure><pre><code class="hljs">- README.md```</code></pre>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc 监控</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
+      
+      <tag>CVE-2025-32873</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>xz-utils (liblzma) 后门漏洞</title>
+    <link href="/2025/06/03/github_1433739717/"/>
+    <url>/2025/06/03/github_1433739717/</url>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> xz-utils (liblzma) 后门漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-3094</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> 该项目分析了在xz-utils (liblzma)中发现的高调后门，影响了版本5.6.0和5.6.1。恶意代码被引入上游构建系统，通过修改sshd与LZMA压缩库在运行时的交互方式，针对SSH认证。此项目仅用于教育和防御研究目的。</p><p><strong>产品名称：</strong> xz-utils (liblzma)</p><p><strong>影响版本：</strong> 5.6.0 &lt;&#x3D; version &lt;&#x3D; 5.6.1</p><p><strong>来源：</strong> <a href="https://github.com/valeriot30/cve-2024-3094">https://github.com/valeriot30/cve-2024-3094</a></p><p><strong>类型：</strong> CVE-2024:github search</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><br><span class="hljs-comment"># 🛡️ Cybersecurity Project: Analyzing the XZ Backdoor in liblzma</span><br><br><span class="hljs-comment">## 📄 Overview</span><br><br><span class="hljs-string">This</span> <span class="hljs-string">project</span> <span class="hljs-string">analyzes</span> <span class="hljs-string">the</span> <span class="hljs-string">high-profile</span> <span class="hljs-string">backdoor</span> <span class="hljs-string">discovered</span> <span class="hljs-string">in</span> <span class="hljs-string">**xz-utils</span> <span class="hljs-string">(liblzma)**,</span> <span class="hljs-string">affecting</span> <span class="hljs-string">versions</span> <span class="hljs-string">**5.6.0**</span> <span class="hljs-string">and</span> <span class="hljs-string">**5.6.1**.</span> <span class="hljs-string">The</span> <span class="hljs-string">malicious</span> <span class="hljs-string">code</span> <span class="hljs-string">introduced</span> <span class="hljs-string">into</span> <span class="hljs-string">the</span> <span class="hljs-string">upstream</span> <span class="hljs-string">build</span> <span class="hljs-string">system</span> <span class="hljs-string">targeted</span> <span class="hljs-string">SSH</span> <span class="hljs-string">authentication</span> <span class="hljs-string">by</span> <span class="hljs-string">modifying</span> <span class="hljs-string">how</span> <span class="hljs-string">\`sshd\`</span> <span class="hljs-string">interacts</span> <span class="hljs-string">with</span> <span class="hljs-string">the</span> <span class="hljs-string">LZMA</span> <span class="hljs-string">compression</span> <span class="hljs-string">library</span> <span class="hljs-string">at</span> <span class="hljs-string">runtime.</span><br><br><span class="hljs-string">&gt;</span> <span class="hljs-string">⚠️</span> <span class="hljs-string">This</span> <span class="hljs-string">project</span> <span class="hljs-string">is</span> <span class="hljs-string">for</span> <span class="hljs-string">**educational</span> <span class="hljs-string">and</span> <span class="hljs-string">defensive</span> <span class="hljs-string">research**</span> <span class="hljs-string">purposes</span> <span class="hljs-string">only.</span><br><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br><span class="hljs-meta"></span><br></code></pre></td></tr></table></figure><pre><code class="hljs">- README.md```</code></pre>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc 监控</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CVE-2024:github search</tag>
+      
+      <tag>其他</tag>
+      
+      <tag>CVE-2024-3094</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>【AI高危漏洞预警】AstrBot路径遍历漏洞CVE-2025-48957</title>
     <link href="/2025/06/03/weixin_1548465742/"/>
     <url>/2025/06/03/weixin_1548465742/</url>
@@ -176,9 +234,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
       <tag>CVE-2025-4123</tag>
       

