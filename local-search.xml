@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Apache Kyuubi 配置信息泄露漏洞</title>
+    <link href="/2025/06/03/github_3160443117/"/>
+    <url>/2025/06/03/github_3160443117/</url>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Apache Kyuubi 配置信息泄露漏洞</p><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 检测Apache Kyuubi web应用程序的Appconfigs路径是否暴露，从而获取有关配置的内部信息。</p><p><strong>产品厂商：</strong> apache</p><p><strong>产品名称：</strong> kyuubi</p><p><strong>影响版本：</strong> *</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/4caf278d899016c4560d0719bed86f1eb7e34ad8/http%2Fexposures%2Fconfigs%2Fapache-kyuubi-config.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/4caf278d899016c4560d0719bed86f1eb7e34ad8/http%2Fexposures%2Fconfigs%2Fapache-kyuubi-config.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><br><span class="hljs-attribute">id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">apache-kyuubi-config</span><br><br><span class="hljs-attribute">info</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Apache Kyuubi - Configuration Exposure</span><br>  <span class="hljs-attribute">author</span><span class="hljs-punctuation">:</span> <span class="hljs-string">icarot</span><br>  <span class="hljs-attribute">severity</span><span class="hljs-punctuation">:</span> <span class="hljs-string">medium</span><br>  <span class="hljs-attribute">description</span><span class="hljs-punctuation">:</span> <span class="hljs-string">|</span><br>    <span class="hljs-attribute">Detects if path Appconfigs of Apache Kyuubi web application is exposed, getting internal information about the configuration made.</span><br><span class="hljs-attribute">  classification</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">cpe</span><span class="hljs-punctuation">:</span> <span class="hljs-string">cpe:2.3:a:apache:kyuubi:*:*:*:*:*:*:*:*</span><br>  <span class="hljs-attribute">metadata</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">max-request</span><span class="hljs-punctuation">:</span> <span class="hljs-string">1</span><br>    <span class="hljs-attribute">vendor</span><span class="hljs-punctuation">:</span> <span class="hljs-string">apache</span><br>    <span class="hljs-attribute">product</span><span class="hljs-punctuation">:</span> <span class="hljs-string">kyuubi</span><br>  <span class="hljs-attribute">tags</span><span class="hljs-punctuation">:</span> <span class="hljs-string">config,exposure,kyuubi,apache</span><br><br><span class="hljs-attribute">http</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">method: GET</span><br>    <span class="hljs-attribute">path</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/engine-ui/0.0.0.0:4040/environment/&quot;</span><br><br>    <span class="hljs-attribute">matchers-condition</span><span class="hljs-punctuation">:</span> <span class="hljs-string">and</span><br>    <span class="hljs-attribute">matchers</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: word</span><br>        <span class="hljs-attribute">words</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;Environment&lt;/title&gt;&#x27;</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;kyuubi&#x27;</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;/opt/apache-kyuubi&#x27;</span><br>        <span class="hljs-attribute">condition</span><span class="hljs-punctuation">:</span> <span class="hljs-string">and</span><br><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: status</span><br>        <span class="hljs-attribute">status</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">200</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc 监控</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>信息泄露</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Ivanti EPMM Authentication Bypass for Expression Language Remote Code Execution</title>
     <link href="/2025/06/03/github_3743501456/"/>
     <url>/2025/06/03/github_3743501456/</url>

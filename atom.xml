@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-03T21:15:15.303Z</updated>
+  <updated>2025-06-03T23:45:12.295Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Apache Kyuubi 配置信息泄露漏洞</title>
+    <link href="http://example.com/2025/06/03/github_3160443117/"/>
+    <id>http://example.com/2025/06/03/github_3160443117/</id>
+    <published>2025-06-03T23:45:12.298Z</published>
+    <updated>2025-06-03T23:45:12.295Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Apache Kyuubi 配置信息泄露漏洞</p><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 检测Apache Kyuubi web应用程序的Appconfigs路径是否暴露，从而获取有关配置的内部信息。</p><p><strong>产品厂商：</strong> apache</p><p><strong>产品名称：</strong> kyuubi</p><p><strong>影响版本：</strong> *</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/4caf278d899016c4560d0719bed86f1eb7e34ad8/http%2Fexposures%2Fconfigs%2Fapache-kyuubi-config.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/4caf278d899016c4560d0719bed86f1eb7e34ad8/http%2Fexposures%2Fconfigs%2Fapache-kyuubi-config.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><br><span class="hljs-attribute">id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">apache-kyuubi-config</span><br><br><span class="hljs-attribute">info</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Apache Kyuubi - Configuration Exposure</span><br>  <span class="hljs-attribute">author</span><span class="hljs-punctuation">:</span> <span class="hljs-string">icarot</span><br>  <span class="hljs-attribute">severity</span><span class="hljs-punctuation">:</span> <span class="hljs-string">medium</span><br>  <span class="hljs-attribute">description</span><span class="hljs-punctuation">:</span> <span class="hljs-string">|</span><br>    <span class="hljs-attribute">Detects if path Appconfigs of Apache Kyuubi web application is exposed, getting internal information about the configuration made.</span><br><span class="hljs-attribute">  classification</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">cpe</span><span class="hljs-punctuation">:</span> <span class="hljs-string">cpe:2.3:a:apache:kyuubi:*:*:*:*:*:*:*:*</span><br>  <span class="hljs-attribute">metadata</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">max-request</span><span class="hljs-punctuation">:</span> <span class="hljs-string">1</span><br>    <span class="hljs-attribute">vendor</span><span class="hljs-punctuation">:</span> <span class="hljs-string">apache</span><br>    <span class="hljs-attribute">product</span><span class="hljs-punctuation">:</span> <span class="hljs-string">kyuubi</span><br>  <span class="hljs-attribute">tags</span><span class="hljs-punctuation">:</span> <span class="hljs-string">config,exposure,kyuubi,apache</span><br><br><span class="hljs-attribute">http</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">method: GET</span><br>    <span class="hljs-attribute">path</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/engine-ui/0.0.0.0:4040/environment/&quot;</span><br><br>    <span class="hljs-attribute">matchers-condition</span><span class="hljs-punctuation">:</span> <span class="hljs-string">and</span><br>    <span class="hljs-attribute">matchers</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: word</span><br>        <span class="hljs-attribute">words</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;Environment&lt;/title&gt;&#x27;</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;kyuubi&#x27;</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;/opt/apache-kyuubi&#x27;</span><br>        <span class="hljs-attribute">condition</span><span class="hljs-punctuation">:</span> <span class="hljs-string">and</span><br><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: status</span><br>        <span class="hljs-attribute">status</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">200</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Apache Kyuubi 配置信息泄露漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞类型：&lt;/strong&gt; 信息泄露&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞等级：&lt;/strong&gt; 中危&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞描述：&lt;/s</summary>
+      
+    
+    
+    
+    <category term="Github Poc 监控" scheme="http://example.com/categories/Github-Poc-%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>Ivanti EPMM Authentication Bypass for Expression Language Remote Code Execution</title>
@@ -595,35 +624,6 @@
     <category term="CVE-2021-26599" scheme="http://example.com/tags/CVE-2021-26599/"/>
     
     <category term="SQL注入" scheme="http://example.com/tags/SQL%E6%B3%A8%E5%85%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NextcloudPi Dashboard - Exposed</title>
-    <link href="http://example.com/2025/06/03/github_953987399/"/>
-    <id>http://example.com/2025/06/03/github_953987399/</id>
-    <published>2025-06-03T13:45:16.949Z</published>
-    <updated>2025-06-03T13:45:16.945Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> NextcloudPi Dashboard - Exposed</p><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 检测到暴露的NextcloudPi仪表板实例。NextcloudPi仪表板通常可在端口4443上访问，不应暴露于互联网，因为它提供了对NextcloudPi实例的管理访问权限。</p><p><strong>产品厂商：</strong> nextcloud</p><p><strong>产品名称：</strong> nextcloudpi</p><p><strong>搜索语法：</strong> title:”NextcloudPi Panel”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/1668b72de4560e4da4f2807208068519a570fc9c/http%2Fmisconfiguration%2Fnextcloudpi-dashboard.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/1668b72de4560e4da4f2807208068519a570fc9c/http%2Fmisconfiguration%2Fnextcloudpi-dashboard.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> nextcloudpi-dashboard<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> NextcloudPi Dashboard <span class="hljs-operator">-</span> Exposed<br>  <span class="hljs-params">author:</span> ritikchaddha<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> |<br>    Detects exposed NextcloudPi dashboard instances. NextcloudPi dashboard is typically accessible on port <span class="hljs-number">4443</span> and should not be exposed to the internet as it provides administrative access to the NextcloudPi instance.<br>  <span class="hljs-params">remediation:</span> |<br>    Restrict access to the NextcloudPi dashboard to trusted IP addresses only. Use a VPN <span class="hljs-keyword">or</span> firewall rules to limit access.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/nextcloud/nextcloudpi</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">vendor:</span> nextcloud<br>    <span class="hljs-params">product:</span> nextcloudpi<br>    <span class="hljs-params">shodan-query:</span> title:<span class="hljs-string">&quot;NextcloudPi Panel&quot;</span><br>    <span class="hljs-params">fofa-query:</span> title:<span class="hljs-string">&quot;NextcloudPi Panel&quot;</span><br>  <span class="hljs-params">tags:</span> nextcloud,nextcloudpi,dashboard,misconfig,exposed<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/?app=config&quot;</span><br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;contains_any(body, &#x27;Power Off&#x27;, &#x27;Nextcloud configuration&#x27;)&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;status_code==200&quot;</span><br>        <span class="hljs-params">condition:</span> and<br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; NextcloudPi Dashboard - Exposed&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞类型：&lt;/strong&gt; 未授权访问&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞等级：&lt;/strong&gt; 高危&lt;/p&gt;
-&lt;p&gt;&lt;stron</summary>
-      
-    
-    
-    
-    <category term="Github Poc 监控" scheme="http://example.com/categories/Github-Poc-%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
     
   </entry>
   
