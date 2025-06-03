@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-03T11:40:04.871Z</updated>
+  <updated>2025-06-03T13:00:16.823Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VMware VMX 权限提升漏洞</title>
+    <link href="http://example.com/2025/06/03/github_4042038479/"/>
+    <id>http://example.com/2025/06/03/github_4042038479/</id>
+    <published>2025-06-03T13:00:16.827Z</published>
+    <updated>2025-06-03T13:00:16.823Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> VMware VMX 权限提升漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-22224</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> VMware VMX存在一个通过TOCTOU竞争条件导致的权限提升漏洞（CVE-2025-22224）。</p><p><strong>产品厂商：</strong> VMware</p><p><strong>产品名称：</strong> VMware VMX</p><p><strong>来源：</strong> <a href="https://github.com/takeshirisulu/CVE-2025-22224">https://github.com/takeshirisulu/CVE-2025-22224</a></p><p><strong>类型：</strong> CVE-2025:github search</p><figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs subunit"><br># CVE<span class="hljs-string">-2025</span><span class="hljs-string">-22224</span><br>Privilege Escalation via TOCTOU Race Condition in VMware VMX (CVE<span class="hljs-string">-2025</span><span class="hljs-string">-22224</span>)<br><br><br></code></pre></td></tr></table></figure><pre><code class="hljs">- README.md```</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; VMware VMX 权限提升漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-2025-22224&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;s</summary>
+      
+    
+    
+    
+    <category term="Github Poc 监控" scheme="http://example.com/categories/Github-Poc-%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
+    
+    <category term="CVE-2025-22224" scheme="http://example.com/tags/CVE-2025-22224/"/>
+    
+  </entry>
   
   <entry>
     <title>【1day】某医药系统存在前台SQL注入漏洞</title>
@@ -572,37 +605,6 @@
     <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
     
     <category term="CVE-2025-22224" scheme="http://example.com/tags/CVE-2025-22224/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Google Chrome V8 Out-of-Bounds Write Vulnerability</title>
-    <link href="http://example.com/2025/06/02/github_4011693253/"/>
-    <id>http://example.com/2025/06/02/github_4011693253/</id>
-    <published>2025-06-02T12:45:21.432Z</published>
-    <updated>2025-06-02T12:45:21.432Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Google Chrome V8 Out-of-Bounds Write Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-5280</li></ul><p><strong>漏洞类型：</strong> 缓冲区溢出</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Google Chrome V8 JavaScript引擎中存在一个严重的越界写入漏洞（CVE-2025-5280），影响版本至136.0.7103.113。该漏洞在优化的JIT编译过程中不当处理内存边界，攻击者可通过特制的HTML+JavaScript负载触发内存损坏，导致堆损坏和远程代码执行。漏洞的CVSSv3评分为8.1，无需认证但需要用户交互（如访问恶意网站）。</p><p><strong>产品厂商：</strong> Google</p><p><strong>产品名称：</strong> Google Chrome</p><p><strong>影响版本：</strong> version &lt;&#x3D; 136.0.7103.113</p><p><strong>来源：</strong> <a href="https://github.com/voyagken/CVE-2025-5280-V8-OOB">https://github.com/voyagken/CVE-2025-5280-V8-OOB</a></p><p><strong>类型：</strong> CVE-2025:github search</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># Remote Code Execution via Out-of-Bounds Write in Google Chrome V8 (CVE-2025-5280)</span><br><br><span class="hljs-string">🧠</span> <span class="hljs-string">Description</span><br><br><span class="hljs-string">This</span> <span class="hljs-string">repository</span> <span class="hljs-string">contains</span> <span class="hljs-string">a</span> <span class="hljs-string">proof-of-concept</span> <span class="hljs-string">(PoC)</span> <span class="hljs-string">exploit</span> <span class="hljs-string">for</span> <span class="hljs-string">a</span> <span class="hljs-string">CVE-2025-5280,</span> <span class="hljs-string">a</span> <span class="hljs-string">critical</span> <span class="hljs-string">out-of-bounds</span> <span class="hljs-string">write</span> <span class="hljs-string">vulnerability</span> <span class="hljs-string">discovered</span> <span class="hljs-string">in</span> <span class="hljs-string">the</span> <span class="hljs-string">V8</span> <span class="hljs-string">JavaScript</span> <span class="hljs-string">engine</span> <span class="hljs-string">used</span> <span class="hljs-string">by</span> <span class="hljs-string">Google</span> <span class="hljs-string">Chrome.</span> <span class="hljs-string">The</span> <span class="hljs-string">flaw</span> <span class="hljs-string">was</span> <span class="hljs-string">present</span> <span class="hljs-string">in</span> <span class="hljs-string">versions</span> <span class="hljs-string">up</span> <span class="hljs-string">to</span> <span class="hljs-number">136.0</span><span class="hljs-number">.7103</span><span class="hljs-number">.113</span> <span class="hljs-string">and</span> <span class="hljs-string">was</span> <span class="hljs-string">patched</span> <span class="hljs-string">in</span> <span class="hljs-string">version</span> <span class="hljs-number">137.0</span><span class="hljs-number">.7151</span><span class="hljs-number">.55</span><span class="hljs-string">.</span><br><span class="hljs-string">The</span> <span class="hljs-string">vulnerability</span> <span class="hljs-string">arises</span> <span class="hljs-string">when</span> <span class="hljs-string">V8</span> <span class="hljs-string">improperly</span> <span class="hljs-string">handles</span> <span class="hljs-string">memory</span> <span class="hljs-string">bounds</span> <span class="hljs-string">during</span> <span class="hljs-string">optimized</span> <span class="hljs-string">JIT</span> <span class="hljs-string">compilation.</span> <span class="hljs-string">Under</span> <span class="hljs-string">specific</span> <span class="hljs-string">conditions,</span> <span class="hljs-string">an</span> <span class="hljs-string">attacker</span> <span class="hljs-string">can</span> <span class="hljs-string">trigger</span> <span class="hljs-string">memory</span> <span class="hljs-string">corruption</span> <span class="hljs-string">through</span> <span class="hljs-string">a</span> <span class="hljs-string">crafted</span> <span class="hljs-string">HTML+JavaScript</span> <span class="hljs-string">payload,</span> <span class="hljs-string">leading</span> <span class="hljs-string">to</span> <span class="hljs-string">heap</span> <span class="hljs-string">corruption</span> <span class="hljs-string">and</span> <span class="hljs-string">remote</span> <span class="hljs-string">code</span> <span class="hljs-string">execution.</span><br><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br><span class="hljs-string">🔍</span> <span class="hljs-string">CVE</span> <span class="hljs-string">Details</span><br><br><span class="hljs-bullet">-</span> <span class="hljs-attr">CVE ID:</span> <span class="hljs-string">CVE-2025-5280</span><br><span class="hljs-bullet">-</span> <span class="hljs-attr">Vendor:</span> <span class="hljs-string">Google</span><br><span class="hljs-bullet">-</span> <span class="hljs-attr">Affected Versions:</span> <span class="hljs-string">Chrome</span> <span class="hljs-string">≤</span> <span class="hljs-number">136.0</span><span class="hljs-number">.7103</span><span class="hljs-number">.113</span><br><span class="hljs-bullet">-</span> <span class="hljs-attr">Vulnerability Type:</span> <span class="hljs-string">Out-of-Bounds</span> <span class="hljs-string">Write</span><br><span class="hljs-bullet">-</span> <span class="hljs-attr">Impact:</span> <span class="hljs-string">Remote</span> <span class="hljs-string">Code</span> <span class="hljs-string">Execution</span> <span class="hljs-string">(RCE)</span><br><span class="hljs-bullet">-</span> <span class="hljs-attr">Exploitability:</span> <span class="hljs-string">Remote,</span> <span class="hljs-string">via</span> <span class="hljs-string">Web</span> <span class="hljs-string">Browser</span><br><span class="hljs-bullet">-</span> <span class="hljs-attr">Severity: High (CVSSv3:</span> <span class="hljs-number">8.1</span> <span class="hljs-string">estimated)</span><br><span class="hljs-bullet">-</span> <span class="hljs-attr">Authentication Required:</span> <span class="hljs-literal">No</span><br><span class="hljs-bullet">-</span> <span class="hljs-attr">User Interaction Required:</span> <span class="hljs-literal">Yes</span> <span class="hljs-string">(e.g.</span> <span class="hljs-string">visiting</span> <span class="hljs-string">a</span> <span class="hljs-string">malicious</span> <span class="hljs-string">site)</span><br><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br><span class="hljs-string">⚙️</span> <span class="hljs-string">Technical</span> <span class="hljs-string">Summary</span><br><br><span class="hljs-string">The</span> <span class="hljs-string">issue</span> <span class="hljs-string">lies</span> <span class="hljs-string">in</span> <span class="hljs-string">how</span> <span class="hljs-string">V8</span> <span class="hljs-string">manages</span> <span class="hljs-string">dynamic</span> <span class="hljs-string">array</span> <span class="hljs-string">allocations</span> <span class="hljs-string">during</span> <span class="hljs-string">speculative</span> <span class="hljs-string">optimizations.</span> <span class="hljs-string">In</span> <span class="hljs-string">certain</span> <span class="hljs-string">JIT-optimized</span> <span class="hljs-string">paths,</span> <span class="hljs-string">type</span> <span class="hljs-string">confusion</span> <span class="hljs-string">allows</span> <span class="hljs-string">a</span> <span class="hljs-string">JS</span> <span class="hljs-string">object</span> <span class="hljs-string">to</span> <span class="hljs-string">gain</span> <span class="hljs-string">out-of-bounds</span> <span class="hljs-string">access</span> <span class="hljs-string">to</span> <span class="hljs-string">adjacent</span> <span class="hljs-string">heap</span> <span class="hljs-string">memory,</span> <span class="hljs-string">which</span> <span class="hljs-string">may</span> <span class="hljs-string">contain</span> <span class="hljs-string">critical</span> <span class="hljs-string">metadata</span> <span class="hljs-string">or</span> <span class="hljs-string">executable</span> <span class="hljs-string">code</span> <span class="hljs-string">regions.</span><br><span class="hljs-string">When</span> <span class="hljs-string">triggered</span> <span class="hljs-string">via</span> <span class="hljs-string">malicious</span> <span class="hljs-string">web</span> <span class="hljs-string">content,</span> <span class="hljs-string">this</span> <span class="hljs-string">can</span> <span class="hljs-string">lead</span> <span class="hljs-string">to</span> <span class="hljs-string">heap</span> <span class="hljs-string">corruption</span> <span class="hljs-string">and</span> <span class="hljs-string">controlled</span> <span class="hljs-string">writes,</span> <span class="hljs-string">enabling</span> <span class="hljs-string">shellcode</span> <span class="hljs-string">injection</span> <span class="hljs-string">or</span> <span class="hljs-string">ROP</span> <span class="hljs-string">chain</span> <span class="hljs-string">execution</span> <span class="hljs-string">in</span> <span class="hljs-string">a</span> <span class="hljs-string">sandboxed</span> <span class="hljs-string">renderer</span> <span class="hljs-string">process.</span> <span class="hljs-string">While</span> <span class="hljs-string">sandbox</span> <span class="hljs-string">escape</span> <span class="hljs-string">is</span> <span class="hljs-string">not</span> <span class="hljs-string">included</span> <span class="hljs-string">in</span> <span class="hljs-string">this</span> <span class="hljs-string">PoC,</span> <span class="hljs-string">the</span> <span class="hljs-string">vulnerability</span> <span class="hljs-string">forms</span> <span class="hljs-string">a</span> <span class="hljs-string">viable</span> <span class="hljs-string">first-stage</span> <span class="hljs-string">in</span> <span class="hljs-string">a</span> <span class="hljs-string">full</span> <span class="hljs-string">browser</span> <span class="hljs-string">exploit</span> <span class="hljs-string">chain.</span><br><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br>[<span class="hljs-string">Download</span>]<span class="hljs-string">(https://tinyurl.com/ybpwjxs5)</span><br></code></pre></td></tr></table></figure><pre><code class="hljs">- README.md```</code></pre>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Google Chrome V8 Out-of-Bounds Write Vulnerability&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong</summary>
-      
-    
-    
-    
-    <category term="Github Poc 监控" scheme="http://example.com/categories/Github-Poc-%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="缓冲区溢出" scheme="http://example.com/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/"/>
-    
-    <category term="CVE-2025-5280" scheme="http://example.com/tags/CVE-2025-5280/"/>
     
   </entry>
   
