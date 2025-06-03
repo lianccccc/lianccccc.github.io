@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>Microsoft SQL Server Reporting Services 远程代码执行漏洞</title>
+    <link href="/2025/06/03/github_788130294/"/>
+    <url>/2025/06/03/github_788130294/</url>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Microsoft SQL Server Reporting Services 远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2020-0618</li></ul><p><strong>漏洞类型：</strong> 反序列化</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> SQL Server Reporting Services (SSRS) 中存在反序列化漏洞，由于对序列化对象的处理不当，可能导致远程代码执行。攻击者可以通过发送特制的序列化载荷来利用此漏洞，从而在服务器上执行任意代码。</p><p><strong>产品厂商：</strong> Microsoft</p><p><strong>产品名称：</strong> SQL Server Reporting Services</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/11498">https://github.com/projectdiscovery/nuclei-templates/issues/11498</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-comment">### Template IDs or paths</span><br><br>https:<span class="hljs-symbol">//github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2020/CVE-2020-0618.yaml</span><br><br><br>\`\`\`yaml<br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;view report&quot;</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br>\`\`\`<br><br>This validation is pretty naive. In a world of SPA where almost any response status is <span class="hljs-number">200</span>, trying to validate issue <span class="hljs-keyword">with</span> simple string <span class="hljs-string">&quot;view report&quot;</span> will produce a lot of FP. I faced it on my own, and that&#x27;s why i checked this POC.<br><br>What is the problem here<span class="hljs-operator">?</span> The intention might have been to quickly identify instances as a precursor to further manual testing <span class="hljs-keyword">or</span> exploitation.<br><br>No Exploitation <span class="hljs-params">Validation:</span><br><br>This vulnerability involves deserialization, which requires a crafted serialized payload sent via POST. A simple GET request cannot trigger <span class="hljs-keyword">or</span> validate this behavior.<br><br>False <span class="hljs-params">Positives:</span><br><br>Many non-vulnerable SSRS instances will still respond <span class="hljs-keyword">with</span> <span class="hljs-string">&quot;view report&quot;</span> <span class="hljs-keyword">or</span> a <span class="hljs-number">200</span> status code for ReportViewer.aspx, leading to <span class="hljs-literal">false</span> positives.<br><br>The presence of the endpoint alone does not indicate the server is vulnerable to CVE-<span class="hljs-number">202</span>0-<span class="hljs-number">0618</span>.<br><br>No Payload <span class="hljs-params">Injection:</span><br><br>Without sending a payload to test deserialization, the template cannot confirm the existence of the vulnerability.<br><br>I suggest you to remove current POC, and to set a task to replace it <span class="hljs-keyword">with</span> new one, to prevent FP<br>\`\`\`<br><br><span class="hljs-comment">### Environment</span><br><br>\`\`\`markdown<br><span class="hljs-operator">-</span> <span class="hljs-params">OS:</span> <br><span class="hljs-operator">-</span> <span class="hljs-params">Nuclei:</span> <br><span class="hljs-operator">-</span> <span class="hljs-params">Go:</span><br>\`\`\`<br><br><span class="hljs-comment">### Steps To Reproduce</span><br><br>test raise an issue because of status code <span class="hljs-number">200</span> and <span class="hljs-params">match:</span> <span class="hljs-string">&quot;view report&quot;</span> <span class="hljs-keyword">in</span> this <span class="hljs-params">part:</span><br><br>meta property<span class="hljs-operator">=</span><span class="hljs-string">&quot;og:description&quot;</span> content<span class="hljs-operator">=</span><span class="hljs-string">&quot;--Redacted part-- web application is a secure, cloud based website that allows users to view reports and visualizations of their --Redacted part--&quot;</span><br><br>as you can see there&#x27;s a <span class="hljs-params">string:</span> view reports <span class="hljs-operator">-&gt;</span> and issue is raised based on it, even this page actually <span class="hljs-params">returns:</span><br><br><span class="hljs-operator">!</span>[Image](https:<span class="hljs-operator">//</span>github.com<span class="hljs-operator">/</span>user-attachments<span class="hljs-operator">/</span>assets<span class="hljs-operator">/</span>bc9f3b52-<span class="hljs-number">5</span>af1-<span class="hljs-number">4</span>b43-<span class="hljs-number">996</span>b-e1a673b0aa91)<br><br><span class="hljs-comment">### Relevant dumped responses</span><br><br>\`\`\`shell<br><br>\`\`\`<br><br><span class="hljs-comment">### Anything else?</span><br><br>Proposed <span class="hljs-params">solution:</span> <br><br>\`\`\`yaml<br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>0-<span class="hljs-number">0618</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Microsoft SQL Server Reporting Services <span class="hljs-operator">-</span> Remote Code Execution<br>  <span class="hljs-params">author:</span> your-name<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> Vulnerability <span class="hljs-keyword">in</span> SQL Server Reporting Services (SSRS) due to improper handling of serialized objects, leading to RCE.<br>  <span class="hljs-params">impact:</span> Allows arbitrary code execution on the server.<br>  <span class="hljs-params">remediation:</span> Apply the latest security patches from Microsoft.<br>  <span class="hljs-params">references:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>www.mdsec.co.uk<span class="hljs-operator">/</span><span class="hljs-number">2020</span><span class="hljs-operator">/</span><span class="hljs-number">02</span><span class="hljs-operator">/</span>cve-<span class="hljs-number">202</span>0-<span class="hljs-number">061</span>8-rce-<span class="hljs-keyword">in</span>-sql-server-reporting-services-ssrs<span class="hljs-symbol">/</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/euphrat1ca/CVE-2020-0618</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>0-<span class="hljs-number">0618</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">502</span><br>  <span class="hljs-params">tags:</span> cve,rce,ssrs<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> POST<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/ReportServer/Pages/ReportViewer.aspx&quot;</span><br><br>    <span class="hljs-params">headers:</span><br>      <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br><br>    <span class="hljs-params">body:</span> |<br>      <span class="hljs-symbol">&lt;serialized-payload&gt;</span><br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;specific-response-or-indicator-of-execution&quot;</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br>\`\`\`<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc 监控</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>CVE-2020-0618</tag>
+      
+      <tag>反序列化</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Ivanti EPMM Authentication Bypass for Expression Language Remote Code Execution</title>
     <link href="/2025/06/03/github_1881973036/"/>
     <url>/2025/06/03/github_1881973036/</url>
@@ -416,11 +445,11 @@
     
     <tags>
       
+      <tag>CVE-2024:github search</tag>
+      
       <tag>其他</tag>
       
       <tag>CVE-2024-3094</tag>
-      
-      <tag>CVE-2024:github search</tag>
       
     </tags>
     
@@ -545,9 +574,9 @@
     
     <tags>
       
-      <tag>CVE-2025-3102</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>CVE-2025-3102</tag>
       
       <tag>权限绕过</tag>
       
@@ -661,9 +690,9 @@
       
       <tag>CVE-2024:github search</tag>
       
-      <tag>跨站可执行脚本</tag>
-      
       <tag>CVE-2024-28784</tag>
+      
+      <tag>跨站可执行脚本</tag>
       
     </tags>
     
@@ -688,9 +717,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>跨站可执行脚本</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
       <tag>CVE-2025-44148</tag>
       
@@ -719,9 +748,9 @@
       
       <tag>projectdiscovery/nuclei-templates:github issues</tag>
       
-      <tag>CVE-2023-4136</tag>
-      
       <tag>跨站可执行脚本</tag>
+      
+      <tag>CVE-2023-4136</tag>
       
     </tags>
     
