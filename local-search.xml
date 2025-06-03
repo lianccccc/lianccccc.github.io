@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>vBulletin replaceAdTemplate 远程代码执行漏洞 (CVE-2025-48827)</title>
+    <link href="/2025/06/03/weixin_3330510392/"/>
+    <url>/2025/06/03/weixin_3330510392/</url>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/EhACVdeQRtsJ2SgFZ-HYHw">https://mp.weixin.qq.com/s/EhACVdeQRtsJ2SgFZ-HYHw</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信公众号</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>mp.weixin.qq.com</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Intelbras NPLUG 认证绕过漏洞</title>
     <link href="/2025/06/03/github_436960885/"/>
     <url>/2025/06/03/github_436960885/</url>
@@ -462,9 +487,9 @@
     
     <tags>
       
-      <tag>CVE-2025-3102</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>CVE-2025-3102</tag>
       
       <tag>权限绕过</tag>
       

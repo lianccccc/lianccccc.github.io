@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-03T13:46:20.967Z</updated>
+  <updated>2025-06-03T13:52:15.838Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vBulletin replaceAdTemplate 远程代码执行漏洞 (CVE-2025-48827)</title>
+    <link href="http://example.com/2025/06/03/weixin_3330510392/"/>
+    <id>http://example.com/2025/06/03/weixin_3330510392/</id>
+    <published>2025-06-03T13:52:15.842Z</published>
+    <updated>2025-06-03T13:52:15.838Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/EhACVdeQRtsJ2SgFZ-HYHw">https://mp.weixin.qq.com/s/EhACVdeQRtsJ2SgFZ-HYHw</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/EhACVdeQRtsJ2SgFZ-HYHw&quot;&gt;https://mp.weixin.qq.com/s/EhACVdeQRtsJ2SgFZ-HYHw&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+  </entry>
   
   <entry>
     <title>Intelbras NPLUG 认证绕过漏洞</title>
@@ -512,9 +536,9 @@
     <category term="Github Poc 监控" scheme="http://example.com/categories/Github-Poc-%E7%9B%91%E6%8E%A7/"/>
     
     
-    <category term="CVE-2025-3102" scheme="http://example.com/tags/CVE-2025-3102/"/>
-    
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="CVE-2025-3102" scheme="http://example.com/tags/CVE-2025-3102/"/>
     
     <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
     
@@ -579,37 +603,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="CVE-2025-4123" scheme="http://example.com/tags/CVE-2025-4123/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Oracle WebLogic Server 远程代码执行漏洞</title>
-    <link href="http://example.com/2025/06/03/github_1030872404/"/>
-    <id>http://example.com/2025/06/03/github_1030872404/</id>
-    <published>2025-06-03T02:30:18.804Z</published>
-    <updated>2025-06-03T02:30:18.801Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Oracle WebLogic Server 远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2020-2883</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Oracle WebLogic Server (10.3.6.0.0, 12.1.3.0.0, 12.2.1.3.0, 12.2.1.4.0) 存在远程代码执行漏洞，攻击者可以通过IIOP和T3协议未经认证访问服务器，从而控制服务器。此漏洞需要通过网络访问IIOP或T3协议来利用。</p><p><strong>产品厂商：</strong> Oracle</p><p><strong>产品名称：</strong> WebLogic Server</p><p><strong>影响版本：</strong> 10.3.6.0.0, 12.1.3.0.0, 12.2.1.3.0, 12.2.1.4.0</p><p><strong>搜索语法：</strong> product:”oracle weblogic”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12228">https://github.com/projectdiscovery/nuclei-templates/issues/12228</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs awk"><br><span class="hljs-comment">### Description: </span><br>&gt; Oracle WebLogic Server (<span class="hljs-number">10.3</span>.<span class="hljs-number">6.0</span>.<span class="hljs-number">0</span>, <span class="hljs-number">12.1</span>.<span class="hljs-number">3.0</span>.<span class="hljs-number">0</span>, <span class="hljs-number">12.2</span>.<span class="hljs-number">1.3</span>.<span class="hljs-number">0</span>, <span class="hljs-number">12.2</span>.<span class="hljs-number">1.4</span>.<span class="hljs-number">0</span>) contains a remote code execution caused by unauthenticated access via IIOP and T3 protocols, letting network attackers take over the server, exploit requires network access via IIOP or T3.<br><br><span class="hljs-comment">#### Severity: \`Critical\`</span><br><br><span class="hljs-comment">#### POC: </span><br>- https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/Qynklee/</span>POC_CVE-<span class="hljs-number">2020</span>-<span class="hljs-number">2883</span><br>- https:<span class="hljs-regexp">//</span>vulncheck.com<span class="hljs-regexp">/xdb/</span><span class="hljs-number">7960</span>bb5df13e<br>- https<span class="hljs-regexp">//</span><span class="hljs-regexp">/github.com:Qynklee/</span>POC_CVE-<span class="hljs-number">2020</span>-<span class="hljs-number">2883</span>.git<br>- https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/Al1ex/</span>CVE-<span class="hljs-number">2020</span>-<span class="hljs-number">2883</span><br>- https:<span class="hljs-regexp">//</span>vulncheck.com<span class="hljs-regexp">/xdb/</span><span class="hljs-number">407219371</span>c37<br>- https<span class="hljs-regexp">//</span><span class="hljs-regexp">/github.com:Al1ex/</span>CVE-<span class="hljs-number">2020</span>-<span class="hljs-number">2883</span>.git<br>- https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/FancyDoesSecurity/</span>CVE-<span class="hljs-number">2020</span>-<span class="hljs-number">2883</span><br>- https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/Y4er/</span>WebLogic-Shiro-shell<br>- https:<span class="hljs-regexp">//</span>vulncheck.com<span class="hljs-regexp">/xdb/</span>da7b6fb2895f<br>- https<span class="hljs-regexp">//</span><span class="hljs-regexp">/github.com:Y4er/</span>WebLogic-Shiro-shell.git<br>- https:<span class="hljs-regexp">//</span>vulncheck.com<span class="hljs-regexp">/xdb/</span><span class="hljs-number">9</span>ab580b3f80b<br>- https<span class="hljs-regexp">//</span><span class="hljs-regexp">/gitee.com:akira09/</span>exphub.git<br>- https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/ZZZWD/</span>CVE-<span class="hljs-number">2020</span>-<span class="hljs-number">2883</span><br>- https:<span class="hljs-regexp">//</span>vulncheck.com<span class="hljs-regexp">/xdb/</span>d55ddb5fac32<br>- https<span class="hljs-regexp">//</span><span class="hljs-regexp">/github.com:zzwlpx/</span>weblogicPoc.git<br>- https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/MagicZer0/</span>Weblogic_CVE-<span class="hljs-number">2020</span>-<span class="hljs-number">2883</span>_POC<br>- https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/Y4er/</span>CVE-<span class="hljs-number">2020</span>-<span class="hljs-number">2883</span><br>- https:<span class="hljs-regexp">//</span>vulncheck.com<span class="hljs-regexp">/xdb/</span><span class="hljs-number">7927833</span>b7021<br>- https<span class="hljs-regexp">//</span><span class="hljs-regexp">/github.com:Y4er/</span>CVE-<span class="hljs-number">2020</span>-<span class="hljs-number">2883</span>.git<br>- https:<span class="hljs-regexp">//</span>vulncheck.com<span class="hljs-regexp">/xdb/</span>f0337df1320b<br>- https<span class="hljs-regexp">//</span><span class="hljs-regexp">/github.com:0xn0ne/</span>weblogicScanner.git<br><br><span class="hljs-comment">### KEV: True</span><br><br><span class="hljs-comment">### Shodan Query: \`product:&quot;oracle weblogic&quot;\`</span><br><br>&gt; Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(\`-debug\`) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. <br><br>&gt; Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates <span class="hljs-keyword">for</span> CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.<br><br>You can check the FAQ <span class="hljs-keyword">for</span> the Nuclei Templates Community Rewards Program [here](https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/projectdiscovery/</span>nuclei-templates<span class="hljs-regexp">/blob/m</span>ain/Community-Rewards-FAQ.md).<br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Oracle WebLogic Server 远程代码执行漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-2020-2883&lt;/li</summary>
-      
-    
-    
-    
-    <category term="Github Poc 监控" scheme="http://example.com/categories/Github-Poc-%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-    <category term="CVE-2020-2883" scheme="http://example.com/tags/CVE-2020-2883/"/>
     
   </entry>
   
