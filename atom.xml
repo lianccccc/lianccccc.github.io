@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-03T15:30:16.902Z</updated>
+  <updated>2025-06-03T16:00:19.274Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Metasploit remove_host Module Hard-coded Hosts File Path Vulnerability</title>
+    <link href="http://example.com/2025/06/03/github_2649039512/"/>
+    <id>http://example.com/2025/06/03/github_2649039512/</id>
+    <published>2025-06-03T16:00:19.276Z</published>
+    <updated>2025-06-03T16:00:19.274Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Metasploit remove_host Module Hard-coded Hosts File Path Vulnerability</p><p><strong>漏洞类型：</strong> 配置问题</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> Metasploit Framework中的remove_host模块存在硬编码的主机文件路径问题，当Windows系统未安装在C盘时，模块无法正确找到hosts文件，导致功能失效。建议使用环境变量SystemRoot或windir动态确定hosts文件的正确位置。</p><p><strong>产品厂商：</strong> rapid7</p><p><strong>产品名称：</strong> Metasploit Framework</p><p><strong>来源：</strong> <a href="https://github.com/rapid7/metasploit-framework/issues/20280">https://github.com/rapid7/metasploit-framework/issues/20280</a></p><p><strong>类型：</strong> rapid7&#x2F;metasploit-framework:github issues</p><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs r"><br><br><br>https<span class="hljs-operator">:</span><span class="hljs-operator">/</span><span class="hljs-operator">/</span>github.com<span class="hljs-operator">/</span>rapid7<span class="hljs-operator">/</span>metasploit<span class="hljs-operator">-</span>framework<span class="hljs-operator">/</span>blob<span class="hljs-operator">/</span>dd166b4d497a402da9151850a0c82c8eb4ea4b39<span class="hljs-operator">/</span>modules<span class="hljs-operator">/</span>post<span class="hljs-operator">/</span>windows<span class="hljs-operator">/</span>manage<span class="hljs-operator">/</span>remove_host.rb<span class="hljs-comment">#L50  </span><br>https<span class="hljs-operator">:</span><span class="hljs-operator">/</span><span class="hljs-operator">/</span>github.com<span class="hljs-operator">/</span>rapid7<span class="hljs-operator">/</span>metasploit<span class="hljs-operator">-</span>framework<span class="hljs-operator">/</span>blob<span class="hljs-operator">/</span>b5129fe19874e74d5a103bb9d1372fb30f618b32<span class="hljs-operator">/</span>modules<span class="hljs-operator">/</span>post<span class="hljs-operator">/</span>windows<span class="hljs-operator">/</span>manage<span class="hljs-operator">/</span>remove_host.rb<span class="hljs-comment">#L72</span><br><br><span class="hljs-comment">#### Steps to reproduce</span><br><br><span class="hljs-number">1.</span> Get a Meterpreter session on a Windows system installed <span class="hljs-keyword">in</span> <span class="hljs-operator">*</span><span class="hljs-operator">*</span><span class="hljs-punctuation">\</span>`D:\Windows\`** (or any drive other than \`C:\`).  <br>2. Run:<br><br>   \`\`\`text<br>   use post/windows/manage/remove_host<br>   set SESSION &lt;id&gt;<br>   set DOMAIN example.com<br>   run<br>   \`\`\`<br><br>#### Expected behaviour<br><br>The module should locate the hosts file via \`%SystemRoot%\` / \`%windir%\` and work on any installation path.<br><br>#### Current behaviour<br><br>The module currently hard-codes the hosts-file path to \`C:\WINDOWS\System32\drivers\etc\hosts\`, which fails if Windows isn’t installed on \`C:\`.<br><br>#### Suggested fix<br><br>Use the environment variables \`SystemRoot\` or \`windir\` to dynamically determine the correct hosts file location. For example:<br><br>\`\`\`ruby<br>def hosts_path<br>  root = client.sys.config.getenv(&#x27;SystemRoot&#x27;) ||<br>         client.sys.config.getenv(&#x27;windir&#x27;)     ||<br>         &#x27;C:\\Windows&#x27;<br>  &quot;#&#123;root&#125;\\System32\\drivers\\etc\\hosts&quot;<br>end<br>\`\`\`<br><br>This approach ensures better compatibility and makes the module more robust on systems where Windows is installed on a different drive.<br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Metasploit remove_host Module Hard-coded Hosts File Path Vulnerability&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞类型：&lt;/strong&gt; 配置问题&lt;/p&gt;
+&lt;p&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc 监控" scheme="http://example.com/categories/Github-Poc-%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
+    
+    <category term="配置问题" scheme="http://example.com/tags/%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>Microsoft SQL Server Reporting Services 远程代码执行漏洞</title>
@@ -568,30 +596,6 @@
       
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/6uoOHzsSWgtZRl5yRYoxJQ&quot;&gt;https://mp.weixin.qq.com/s/6uoOHzsSWgtZRl5yRYoxJQ&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>漏洞通告 | llama_Index SQL注入漏洞</title>
-    <link href="http://example.com/2025/06/03/weixin_3708363201/"/>
-    <id>http://example.com/2025/06/03/weixin_3708363201/</id>
-    <published>2025-06-03T09:25:48.814Z</published>
-    <updated>2025-06-03T09:25:48.811Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/W2dyl0sQ-eddtnyimxA6Wg">https://mp.weixin.qq.com/s/W2dyl0sQ-eddtnyimxA6Wg</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/W2dyl0sQ-eddtnyimxA6Wg&quot;&gt;https://mp.weixin.qq.com/s/W2dyl0sQ-eddtnyimxA6Wg&lt;/a&gt;&lt;/p</summary>
       
     
     
