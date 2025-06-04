@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-04T15:28:46.515Z</updated>
+  <updated>2025-06-04T16:45:14.959Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CVE-2025-4632-POC</title>
+    <link href="http://example.com/2025/06/04/github_540893446/"/>
+    <id>http://example.com/2025/06/04/github_540893446/</id>
+    <published>2025-06-04T16:45:14.963Z</published>
+    <updated>2025-06-04T16:45:14.959Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> CVE-2025-4632-POC</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-4632</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> CVE-2025-4632的POC（概念验证）。</p><p><strong>来源：</strong> <a href="https://github.com/MantisToboggan-git/CVE-2025-4632-POC">https://github.com/MantisToboggan-git/CVE-2025-4632-POC</a></p><p><strong>类型：</strong> CVE-2025:github search</p><figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs subunit"><br># CVE<span class="hljs-string">-2025</span><span class="hljs-string">-4632</span>-POC<br><br>POC for CVE<span class="hljs-string">-2025</span><span class="hljs-string">-4632</span><br><br><br></code></pre></td></tr></table></figure><pre><code class="hljs">- README.md```</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CVE-2025-4632-POC&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-2025-4632&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;st</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+  </entry>
   
   <entry>
     <title>帮朋友发个招聘</title>
@@ -554,33 +585,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>潘多拉魔盒：无限制大模型如何威胁加密行业安全？</title>
-    <link href="http://example.com/2025/06/04/weixin_3422943728/"/>
-    <id>http://example.com/2025/06/04/weixin_3422943728/</id>
-    <published>2025-06-04T10:52:34.794Z</published>
-    <updated>2025-06-04T10:52:34.792Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 慢雾科技</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/8pF-1XWTH17AfXfNcW7KCA">https://mp.weixin.qq.com/s/8pF-1XWTH17AfXfNcW7KCA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 慢雾科技&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/8pF-1XWTH17AfXfNcW7KCA&quot;&gt;https://mp.weixin.qq.c</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="慢雾科技" scheme="http://example.com/tags/%E6%85%A2%E9%9B%BE%E7%A7%91%E6%8A%80/"/>
     
   </entry>
   
