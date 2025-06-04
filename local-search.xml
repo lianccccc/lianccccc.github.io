@@ -4,6 +4,64 @@
   
   
   <entry>
+    <title>WordPress Likes and Dislikes SQL注入漏洞</title>
+    <link href="/2025/06/04/github_465259957/"/>
+    <url>/2025/06/04/github_465259957/</url>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> WordPress Likes and Dislikes SQL注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-5287</li></ul><p><strong>漏洞类型：</strong> SQL注入</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> WordPress Likes and Dislikes插件存在SQL注入漏洞，攻击者可以利用此漏洞执行恶意SQL命令，可能导致数据泄露或其他恶意操作。</p><p><strong>产品厂商：</strong> WordPress</p><p><strong>产品名称：</strong> WordPress Likes and Dislikes</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12242">https://github.com/projectdiscovery/nuclei-templates/issues/12242</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs clean"><br>### Is there an existing template for this?<br><br>- [x] I have searched the existing templates.<br><br>### Template requests<br><br>- ...<br>CVE<span class="hljs-number">-2025</span><span class="hljs-number">-5287</span><br>*<br>WordPress Likes and Dislikes - SQL Injection <br>*<br>PoC (https:<span class="hljs-comment">//github.com/wiseep/CVE-2025-5287/blob/main/CVE-2025-5287.py)</span><br><br>### Anything else?<br><br>_No response_<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc 监控</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>SQL注入</tag>
+      
+      <tag>CVE-2025-5287</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>vBulletin Unauthenticated API Access Vulnerability</title>
+    <link href="/2025/06/04/github_1286802768/"/>
+    <url>/2025/06/04/github_1286802768/</url>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> vBulletin Unauthenticated API Access Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-48827</li></ul><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> vBulletin存在未授权API访问漏洞，攻击者可以利用此漏洞无需认证即可访问API接口，可能导致远程代码执行。</p><p><strong>产品厂商：</strong> vBulletin</p><p><strong>产品名称：</strong> vBulletin</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12243">https://github.com/projectdiscovery/nuclei-templates/issues/12243</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs clean"><br>### Is there an existing template for this?<br><br>- [x] I have searched the existing templates.<br><br>### Template requests<br><br>CVE<span class="hljs-number">-2025</span><span class="hljs-number">-48827</span><br>*<br>Unauthenticated API Access <span class="hljs-keyword">in</span> vBulletin<br>*<br>WriteUP (https:<span class="hljs-comment">//karmainsecurity.com/dont-call-that-protected-method-vbulletin-rce)</span><br>*<br>POC (https:<span class="hljs-comment">//karmainsecurity.com/pocs/vBulletin-replaceAdTemplate-RCE.php)</span><br><br>### Anything else?<br><br>_No response_<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc 监控</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>未授权访问</tag>
+      
+      <tag>CVE-2025-48827</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>2025 年 6 月安卓安全更新修复 30 多个漏洞</title>
     <link href="/2025/06/04/weixin_3639498523/"/>
     <url>/2025/06/04/weixin_3639498523/</url>
@@ -1422,9 +1480,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>未授权访问</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
