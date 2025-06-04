@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-04T11:45:42.741Z</updated>
+  <updated>2025-06-04T12:03:45.975Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【新安全事件】vBulletin 远程代码执行漏洞(CVE-2025-48827)安全风险通告</title>
+    <link href="http://example.com/2025/06/04/weixin_265521075/"/>
+    <id>http://example.com/2025/06/04/weixin_265521075/</id>
+    <published>2025-06-04T12:03:45.980Z</published>
+    <updated>2025-06-04T12:03:45.975Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 奇安信 CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/p2ip7uLDJHzUmqiLZqcaHQ">https://mp.weixin.qq.com/s/p2ip7uLDJHzUmqiLZqcaHQ</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 奇安信 CERT&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/p2ip7uLDJHzUmqiLZqcaHQ&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="奇安信 CERT" scheme="http://example.com/tags/%E5%A5%87%E5%AE%89%E4%BF%A1-CERT/"/>
+    
+  </entry>
   
   <entry>
     <title>Tenda AC15 AC1900 命令注入漏洞</title>
@@ -566,34 +593,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows Get Stored Credentials - cmdkey Vulnerability</title>
-    <link href="http://example.com/2025/06/04/github_4091971944/"/>
-    <id>http://example.com/2025/06/04/github_4091971944/</id>
-    <published>2025-06-04T07:46:48.501Z</published>
-    <updated>2025-06-04T07:46:48.497Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Windows Get Stored Credentials - cmdkey Vulnerability</p><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Windows中的cmdkey &#x2F;list命令用于列出系统上存储的所有凭据。这些凭据可以包括为网络资源、网站或远程计算机保存的用户名和密码。</p><p><strong>产品厂商：</strong> Microsoft</p><p><strong>产品名称：</strong> Windows</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/36e1d90f0095039e17a3176d3561f403cd216480/code%2Fwindows%2Fget-stored-credentials-cmdkey.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/36e1d90f0095039e17a3176d3561f403cd216480/code%2Fwindows%2Fget-stored-credentials-cmdkey.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><br><span class="hljs-attribute">id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">get-stored-credentials-cmdkey</span><br><br><span class="hljs-attribute">info</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Get Stored Credentials - cmdkey</span><br>  <span class="hljs-attribute">author</span><span class="hljs-punctuation">:</span> <span class="hljs-string">pussycat0x</span><br>  <span class="hljs-attribute">severity</span><span class="hljs-punctuation">:</span> <span class="hljs-string">high</span><br>  <span class="hljs-attribute">description</span><span class="hljs-punctuation">:</span> <span class="hljs-string">|</span><br>    <span class="hljs-attribute">The cmdkey /list command in Windows is used to list all the stored credentials on the system. These credentials can include saved usernames and passwords for network resources, websites, or remote computers</span><br><span class="hljs-attribute">  tags</span><span class="hljs-punctuation">:</span> <span class="hljs-string">code,windows,privesc,ps</span><br><br><span class="hljs-attribute">self-contained</span><span class="hljs-punctuation">:</span> <span class="hljs-string">true</span><br><span class="hljs-attribute">code</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">engine:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">powershell</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">powershell.exe</span><br>    <span class="hljs-attribute">args</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">-ExecutionPolicy</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">Bypass</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">-File</span><br>    <span class="hljs-attribute">pattern</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;*.ps1&quot;</span><br>    <span class="hljs-attribute">source</span><span class="hljs-punctuation">:</span> <span class="hljs-string">|</span><br>      <span class="hljs-attribute">cmdkey /list</span><br><span class="hljs-attribute"></span><br><span class="hljs-attribute">    extractors</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: dsl</span><br>        <span class="hljs-attribute">dsl</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">response</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Windows Get Stored Credentials - cmdkey Vulnerability&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞类型：&lt;/strong&gt; 信息泄露&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞等级：&lt;/str</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
     
   </entry>
   

@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>【新安全事件】vBulletin 远程代码执行漏洞(CVE-2025-48827)安全风险通告</title>
+    <link href="/2025/06/04/weixin_265521075/"/>
+    <url>/2025/06/04/weixin_265521075/</url>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 奇安信 CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/p2ip7uLDJHzUmqiLZqcaHQ">https://mp.weixin.qq.com/s/p2ip7uLDJHzUmqiLZqcaHQ</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信公众号</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>mp.weixin.qq.com</tag>
+      
+      <tag>奇安信 CERT</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Tenda AC15 AC1900 命令注入漏洞</title>
     <link href="/2025/06/04/github_3395140682/"/>
     <url>/2025/06/04/github_3395140682/</url>
@@ -1967,9 +1994,9 @@
       
       <tag>CVE-2025:github search</tag>
       
-      <tag>权限绕过</tag>
-      
       <tag>CVE-2025-3102</tag>
+      
+      <tag>权限绕过</tag>
       
     </tags>
     
