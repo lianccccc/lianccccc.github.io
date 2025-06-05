@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-05T02:02:52.373Z</updated>
+  <updated>2025-06-05T02:30:15.301Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>QNAP Photo Station 路径遍历漏洞</title>
+    <link href="http://example.com/2025/06/05/github_2731243997/"/>
+    <id>http://example.com/2025/06/05/github_2731243997/</id>
+    <published>2025-06-05T02:30:15.304Z</published>
+    <updated>2025-06-05T02:30:15.301Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> QNAP Photo Station 路径遍历漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2019-7194</li></ul><p><strong>漏洞类型：</strong> 目录遍历</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> QNAP Photo Station 存在一个由于验证不足导致的外部文件名或路径控制漏洞，允许远程攻击者访问或修改系统文件，利用此漏洞需要远程网络访问。</p><p><strong>产品厂商：</strong> QNAP</p><p><strong>产品名称：</strong> QNAP Photo Station</p><p><strong>搜索语法：</strong> content-length: 580 “http server 1.0”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12254">https://github.com/projectdiscovery/nuclei-templates/issues/12254</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs coffeescript"><br><br><span class="hljs-comment">### Description: </span><br><span class="hljs-comment">&gt; QNAP Photo Station contains an external control of file name or path caused by insufficient validation, letting remote attackers access or modify system files, exploit requires remote network access.</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">###</span><span class="hljs-comment"># Severity: \`Critical\`</span><br><br><span class="hljs-comment">#### POC: </span><br><span class="hljs-comment">- http://packetstormsecurity.com/files/157857/QNAP-QTS-And-Photo-Station-6.0.3-Remote-Command-Execution.html</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">###</span> KEV: True<br><br><span class="hljs-comment">### Shodan Query: \`content-length: 580 &quot;http server 1.0&quot;\`</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">&gt; Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(\`-debug\`) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </span><br><span class="hljs-comment"></span><br><span class="hljs-comment">&gt; Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">You can check the FAQ for the Nuclei Templates Community Rewards Program [here](https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md).</span><br><span class="hljs-comment"></span><br><span class="hljs-comment"></span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; QNAP Photo Station 路径遍历漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-2019-7194&lt;/li&gt;
+&lt;/ul</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="目录遍历" scheme="http://example.com/tags/%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86/"/>
+    
+  </entry>
   
   <entry>
     <title>35,000个太阳能发电系统暴露在互联网</title>
@@ -550,37 +580,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Grafana 路径遍历漏洞</title>
-    <link href="http://example.com/2025/06/04/github_730453173/"/>
-    <id>http://example.com/2025/06/04/github_730453173/</id>
-    <published>2025-06-04T13:00:18.161Z</published>
-    <updated>2025-06-05T02:02:52.345Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Grafana 路径遍历漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-4123</li></ul><p><strong>漏洞类型：</strong> 目录遍历</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> CVE-2025-4123是Grafana中的一个严重路径遍历漏洞，影响<code>/public</code>端点。该漏洞允许攻击者进行服务器端请求伪造(SSRF)、本地文件包含(LFI)、开放重定向和跨站脚本(XSS)攻击。</p><p><strong>产品厂商：</strong> Grafana</p><p><strong>产品名称：</strong> Grafana</p><p><strong>来源：</strong> <a href="https://github.com/ynsmroztas/CVE-2025-4123-Exploit-Tool-Grafana-">https://github.com/ynsmroztas/CVE-2025-4123-Exploit-Tool-Grafana-</a></p><p><strong>类型：</strong> CVE-2025:github search</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><br><br><span class="hljs-comment"># CVE-2025-4123 - Grafana Path Traversal Exploit</span><br><br><span class="hljs-string">&gt;</span> <span class="hljs-string">Developed</span> <span class="hljs-string">by</span> <span class="hljs-string">**mitsec**</span><br><br><span class="hljs-string">This</span> <span class="hljs-string">is</span> <span class="hljs-string">a</span> <span class="hljs-string">proof-of-concept</span> <span class="hljs-string">(PoC)</span> <span class="hljs-string">exploit</span> <span class="hljs-string">tool</span> <span class="hljs-string">for</span> <span class="hljs-string">**CVE-2025-4123**,</span> <span class="hljs-string">a</span> <span class="hljs-string">critical</span> <span class="hljs-string">path</span> <span class="hljs-string">traversal</span> <span class="hljs-string">vulnerability</span> <span class="hljs-string">in</span> <span class="hljs-string">Grafana&#x27;s</span> <span class="hljs-string">\`/public\`</span> <span class="hljs-attr">endpoint. The exploit allows for:</span><br><br><span class="hljs-bullet">-</span> <span class="hljs-string">✅</span> <span class="hljs-string">Server-Side</span> <span class="hljs-string">Request</span> <span class="hljs-string">Forgery</span> <span class="hljs-string">(SSRF)</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">✅</span> <span class="hljs-string">Local</span> <span class="hljs-string">File</span> <span class="hljs-string">Inclusion</span> <span class="hljs-string">(LFI)</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">✅</span> <span class="hljs-string">Open</span> <span class="hljs-string">Redirect</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">✅</span> <span class="hljs-string">Cross-Site</span> <span class="hljs-string">Scripting</span> <span class="hljs-string">(XSS)</span><br><br><span class="hljs-comment">## 🔥 Affected</span><br><br><span class="hljs-string">Grafana</span> <span class="hljs-string">instances</span> <span class="hljs-string">with</span> <span class="hljs-string">\`/public/\`</span> <span class="hljs-attr">endpoint improperly handling encoded paths like:</span><br><span class="hljs-string">\`\`\`</span><br><span class="hljs-string">/public/..%2F%5coast.pro%2F%3f%2F..%2F..</span><br><span class="hljs-string">\`\`\`</span><br><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br><span class="hljs-comment">## 🚀 Usage</span><br><br><span class="hljs-string">\`\`\`bash</span><br><span class="hljs-string">python3</span> <span class="hljs-string">cve_2025_4123_exploit_mitsec_final.py</span><br><span class="hljs-string">\`\`\`</span><br><br><span class="hljs-attr">Then select the desired mode:</span><br><br><span class="hljs-number">1</span><span class="hljs-string">.</span> <span class="hljs-string">SSRF</span> <span class="hljs-bullet">-</span> <span class="hljs-string">Internal</span> <span class="hljs-string">services</span> <span class="hljs-string">like</span> <span class="hljs-string">\`169.254.169.254\`</span><br><span class="hljs-number">2</span><span class="hljs-string">.</span> <span class="hljs-string">LFI</span>  <span class="hljs-bullet">-</span> <span class="hljs-string">Read</span> <span class="hljs-string">files</span> <span class="hljs-string">like</span> <span class="hljs-string">\`/etc/passwd\`</span><br><span class="hljs-number">3</span><span class="hljs-string">.</span> <span class="hljs-string">Open</span> <span class="hljs-string">Redirect</span> <span class="hljs-bullet">-</span> <span class="hljs-string">Redirect</span> <span class="hljs-string">to</span> <span class="hljs-string">external</span> <span class="hljs-string">domains</span><br><span class="hljs-number">4</span><span class="hljs-string">.</span> <span class="hljs-string">XSS</span> <span class="hljs-bullet">-</span> <span class="hljs-string">JavaScript</span> <span class="hljs-string">injection</span> <span class="hljs-string">in</span> <span class="hljs-string">public</span> <span class="hljs-string">path</span><br><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br><span class="hljs-comment">## 🧪 Example</span><br><br><span class="hljs-string">\`\`\`bash</span><br>[<span class="hljs-string">*</span>] <span class="hljs-attr">SSRF URL:</span> <span class="hljs-string">http://127.0.0.1:3000/public/..%2F%5C169.254.169.254/latest/meta-data/%2F%3f%2F..%2F..</span><br>[<span class="hljs-string">*</span>] <span class="hljs-attr">LFI URL:</span>  <span class="hljs-string">http://127.0.0.1:3000/public/..%2F%5coast.pro%2F%3f%2F..%2F..%2F..%2Fetc%2Fpasswd</span><br>[<span class="hljs-string">*</span>] <span class="hljs-attr">XSS URL:</span>  <span class="hljs-string">http://127.0.0.1:3000/public/%3Cscript%3Ealert(&#x27;mitsec&#x27;)%3C%2Fscript%3E</span><br><span class="hljs-string">\`\`\`</span><br><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br><span class="hljs-comment">## 📄 Disclaimer</span><br><br><span class="hljs-string">This</span> <span class="hljs-string">code</span> <span class="hljs-string">is</span> <span class="hljs-string">provided</span> <span class="hljs-string">for</span> <span class="hljs-string">educational</span> <span class="hljs-string">and</span> <span class="hljs-string">authorized</span> <span class="hljs-string">testing</span> <span class="hljs-string">purposes</span> <span class="hljs-string">only.</span> <span class="hljs-string">Unauthorized</span> <span class="hljs-string">use</span> <span class="hljs-string">against</span> <span class="hljs-string">systems</span> <span class="hljs-string">without</span> <span class="hljs-string">consent</span> <span class="hljs-string">is</span> <span class="hljs-string">illegal.</span><br><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br><span class="hljs-comment">## ✍️ Author</span><br><br><span class="hljs-bullet">-</span> [<span class="hljs-string">mitsec</span>]<span class="hljs-string">(https://github.com/ynsmroztas)</span><br><br><br></code></pre></td></tr></table></figure><pre><code class="hljs">- Grafana.jpg- README.md- cve_2025_4123_exploit-mitsec.py```</code></pre>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Grafana 路径遍历漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-2025-4123&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;stron</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="目录遍历" scheme="http://example.com/tags/%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86/"/>
     
   </entry>
   
