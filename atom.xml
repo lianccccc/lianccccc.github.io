@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-06T05:58:36.337Z</updated>
+  <updated>2025-06-06T08:09:41.354Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【已复现】Roundcube Webmail 后台代码执行漏洞(CVE-2025-49113)安全风险通告</title>
+    <link href="http://example.com/2025/06/06/weixin_2145314049/"/>
+    <id>http://example.com/2025/06/06/weixin_2145314049/</id>
+    <published>2025-06-06T08:09:41.360Z</published>
+    <updated>2025-06-06T08:09:41.354Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 奇安信 CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/V3wPVmPgq_ZM-kUgYAjnFQ">https://mp.weixin.qq.com/s/V3wPVmPgq_ZM-kUgYAjnFQ</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 奇安信 CERT&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/V3wPVmPgq_ZM-kUgYAjnFQ&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="奇安信 CERT" scheme="http://example.com/tags/%E5%A5%87%E5%AE%89%E4%BF%A1-CERT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【威胁预警】国内未知公司访问权限被出售</title>
+    <link href="http://example.com/2025/06/06/weixin_3125021940/"/>
+    <id>http://example.com/2025/06/06/weixin_3125021940/</id>
+    <published>2025-06-06T08:04:23.372Z</published>
+    <updated>2025-06-06T08:04:23.366Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/9v-x-PMRiVHLQ90DaCJ5Kw">https://mp.weixin.qq.com/s/9v-x-PMRiVHLQ90DaCJ5Kw</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/9v-x-PMRiVHLQ90DaCJ5Kw&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>近 60 万用户安装了恶意chrome扩展程序插件</title>
@@ -522,64 +576,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WP Directorybox Manager 认证绕过漏洞</title>
-    <link href="http://example.com/2025/06/05/github_3494944831/"/>
-    <id>http://example.com/2025/06/05/github_3494944831/</id>
-    <published>2025-06-05T19:15:25.168Z</published>
-    <updated>2025-06-05T19:15:25.163Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> WP Directorybox Manager 认证绕过漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-0316</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> WP Directorybox Manager插件在2.5及以下版本中存在认证绕过漏洞，由于’wp_dp_enquiry_agent_contact_form_submit_callback’函数中的认证不正确，未认证的攻击者可以以任何现有用户（如管理员）的身份登录网站，前提是他们知道用户名。</p><p><strong>产品厂商：</strong> WordPress</p><p><strong>产品名称：</strong> WP Directorybox Manager</p><p><strong>影响版本：</strong> &lt;&#x3D; 2.5</p><p><strong>来源：</strong> <a href="https://github.com/AvonBorn/CVE-2025-0316-Exploit">https://github.com/AvonBorn/CVE-2025-0316-Exploit</a></p><p><strong>类型：</strong> CVE-2025:github search</p><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs livescript"><br><span class="hljs-comment"># CVE-2025-0316 </span><br><br><span class="hljs-comment">## Details</span><br>+ **CVE ID**: CVE-<span class="hljs-number">2025</span>-<span class="hljs-number">0316</span> <br>+ **Published**: <span class="hljs-number">02</span>/<span class="hljs-number">08</span>/<span class="hljs-number">2025</span><br>+ **CVSS**: <span class="hljs-number">9.8</span><br>+ **Patch Available:  (No official patch yet)**<br><span class="hljs-comment">## Impact</span><br>The WP Directorybox Manager plugin <span class="hljs-keyword">for</span> WordPress <span class="hljs-keyword">is</span> vulnerable <span class="hljs-keyword">to</span> authentication bypass <span class="hljs-keyword">in</span> versions up <span class="hljs-keyword">to</span>, <span class="hljs-keyword">and</span> including, <span class="hljs-number">2.5</span>. This <span class="hljs-keyword">is</span> due <span class="hljs-keyword">to</span> incorrect authentication <span class="hljs-keyword">in</span> the <span class="hljs-string">&#x27;wp_dp_enquiry_agent_contact_form_submit_callback&#x27;</span> <span class="hljs-keyword">function</span>. This makes <span class="hljs-literal">it</span> possible <span class="hljs-keyword">for</span> unauthenticated attackers <span class="hljs-keyword">to</span> log <span class="hljs-keyword">in</span> <span class="hljs-keyword">as</span> any existing user <span class="hljs-literal">on</span> the site, such <span class="hljs-keyword">as</span> an administrator, <span class="hljs-keyword">if</span> they have access <span class="hljs-keyword">to</span> the username.<br><br><br><span class="hljs-comment">## Affected Versions</span><br><br> WP Directorybox Manager&lt;= <span class="hljs-number">2.5</span><br><br><span class="hljs-comment">### [Download here](https://tinyurl.com/2ytp7dad)</span><br><br><span class="hljs-comment">## Contact</span><br>+ **For inquiries, please contact:avonbergs@outlook.com**<br><br><br></code></pre></td></tr></table></figure><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><br><br><span class="hljs-bullet">- </span>README.md<br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; WP Directorybox Manager 认证绕过漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-2025-0316&lt;/li&gt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PHPGurukul Hostel Management System 存储型跨站脚本漏洞</title>
-    <link href="http://example.com/2025/06/05/github_3789323952/"/>
-    <id>http://example.com/2025/06/05/github_3789323952/</id>
-    <published>2025-06-05T19:15:14.558Z</published>
-    <updated>2025-06-05T19:15:14.555Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> PHPGurukul Hostel Management System 存储型跨站脚本漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025</li></ul><p><strong>漏洞类型：</strong> 跨站可执行脚本</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 在PHPGurukul的Hostel Management System中发现了一个严重的存储型跨站脚本(XSS)漏洞。攻击者可以通过名称字段(POST参数)注入恶意JavaScript，这些脚本会被持久存储在数据库中，并在查看个人资料页面时执行。漏洞存在于投诉系统模块，攻击向量是通过POST请求的name参数。</p><p><strong>产品厂商：</strong> PHPGurukul</p><p><strong>产品名称：</strong> Hostel Management System</p><p><strong>来源：</strong> <a href="https://github.com/Vanshdhawan188/CVE-2025-PHPGurukul-Hostel-management-system">https://github.com/Vanshdhawan188/CVE-2025-PHPGurukul-Hostel-management-system</a></p><p><strong>类型：</strong> CVE-2025:github search</p><figure class="highlight sas"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><code class="hljs sas"><br>## Authors / Discovery Team:<br>- <span class="hljs-comment">**Founder**: Subhash Paudel</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">A critical Stored Cross-Site Scripting (XSS) vulnerability was discovered in project </span><br><span class="hljs-comment">file of PHPGurukul&#x27;s Hostel Management System.</span><br><span class="hljs-comment">Attackers can inject malicious JavaScript via the name field (POST parameter), which gets persistently stored in the database and executed whenever the profile page is viewed. </span><br><span class="hljs-comment">Key Details</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">PropertyValue</span><br><span class="hljs-comment">Affected VendorPHPGurukul</span><br><span class="hljs-comment">Affected ModuleComplaint System</span><br><span class="hljs-comment">Attack Vectorname parameter via POST request</span><br><span class="hljs-comment">Vulnerability TypeStored Cross-Site Scripting (XSS)</span><br><span class="hljs-comment">Input FieldCourse Name / Course Short Name</span><br><span class="hljs-comment">Official WebsiteHostel Management System</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">Proof of Concept (PoC)</span><br><span class="hljs-comment">Step-by-Step Exploitation</span><br><span class="hljs-comment">Login to the Hostel Student Panel:</span><br><span class="hljs-comment">    • Navigate to the login portal and authenticate using valid admin credentials.</span><br><span class="hljs-comment">    • http://localhost/hostel/ </span><br><span class="hljs-comment">     </span><br><span class="hljs-comment">Inject XSS Payload in Complaint Section:</span><br><span class="hljs-comment">http://localhost/hostel/register-complaint.php</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">Paste the following payload in the &quot;Explain the Complaint&quot; input field and click Submit:</span><br><span class="hljs-comment">&lt;script&gt;alert(Subhash Paudel)&lt;/script&gt;</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">3. Success Message</span><br><span class="hljs-comment">A confirmation message will appear stating that your complaint has been added successfully. </span><br><span class="hljs-comment"></span><br><span class="hljs-comment">4. Trigger the Payload </span><br><span class="hljs-comment">Navigate to the My Complaints section And select your complaint. You’ll see a JavaScript alert(subhash paudel) triggered — confirming the stored XSS vulnerability. </span><br><span class="hljs-comment">http://localhost/hostel/my-complaints.php</span><br><span class="hljs-comment"></span><br><span class="hljs-comment"> </span><br><span class="hljs-comment">Stored XSS Potential</span><br><span class="hljs-comment">    • User input stored in DB: Malicious scripts submitted via forms, comments, or profile fields.</span><br><span class="hljs-comment">    • Displayed unsanitized: Output shown in HTML without proper escaping.</span><br><span class="hljs-comment">    • Persistent attack: Script runs whenever any user views the infected page.</span><br><span class="hljs-comment">    • Common targets: Forums, admin dashboards, comment sections, user profiles.</span><br><span class="hljs-comment">    • Can hijack sessions: Steal cookies, deface content, or redirect users.</span><br><span class="hljs-comment">    • Executed in victim’s browser: Runs with the same origin privileges.</span><br><span class="hljs-comment">      </span><br><span class="hljs-comment">Stored XSS Mitigations</span><br><span class="hljs-comment">    • Escape output: Encode HTML entities before rendering (&lt; → &amp;lt;</span>, etc.).<br>    • Use CSP (Content Security Policy): Block inline scripts <span class="hljs-keyword">and</span> limit script sources.<br>    • <span class="hljs-keyword">Input</span> validation: Reject unexpected tags <span class="hljs-keyword">or</span> scripts at submission time.<br>    • Sanitize inputs: Strip dangerous HTML/JS using libraries (e.g., DOMPurify).<br>    • HTTP-only cookies: Prevent cookie theft via document.cookie.<br>    • Use frameworks securely: Rely <span class="hljs-keyword">on</span> built-<span class="hljs-keyword">in</span> auto-escaping (React, Angular, etc.).<br>    • Security headers: <span class="hljs-keyword">Add</span> <span class="hljs-keyword">X</span>-XSS-Protection, Content-Type, <span class="hljs-keyword">and</span> <span class="hljs-keyword">X</span>-Content-Type-<span class="hljs-keyword">Options</span>.<br><br><br></code></pre></td></tr></table></figure><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><br><br><span class="hljs-bullet">- </span>README.md<br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; PHPGurukul Hostel Management System 存储型跨站脚本漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="跨站可执行脚本" scheme="http://example.com/tags/%E8%B7%A8%E7%AB%99%E5%8F%AF%E6%89%A7%E8%A1%8C%E8%84%9A%E6%9C%AC/"/>
     
   </entry>
   
