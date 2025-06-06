@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>CVE-2025-30208</title>
+    <link href="/2025/06/06/github_452810491/"/>
+    <url>/2025/06/06/github_452810491/</url>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> CVE-2025-30208</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-30208</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> POC</p><p><strong>来源：</strong> <a href="https://github.com/HaGsec/CVE-2025-30208">https://github.com/HaGsec/CVE-2025-30208</a></p><p><strong>类型：</strong> CVE-2025:github search</p><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><br><span class="hljs-comment"># CVE-2025-30208</span><br><span class="hljs-attribute">POC</span><br><br><br></code></pre></td></tr></table></figure><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><br><br><span class="hljs-bullet">- </span>README.md<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>【已复现】Roundcube Webmail 后台代码执行漏洞(CVE-2025-49113)安全风险通告</title>
     <link href="/2025/06/06/weixin_2145314049/"/>
     <url>/2025/06/06/weixin_2145314049/</url>
