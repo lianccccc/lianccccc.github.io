@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-06T08:45:12.988Z</updated>
+  <updated>2025-06-06T09:32:09.034Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【高危漏洞预警】FreeFloat FTP服务器缓冲区溢出漏洞CVE-2025-5596</title>
+    <link href="http://example.com/2025/06/06/weixin_668747673/"/>
+    <id>http://example.com/2025/06/06/weixin_668747673/</id>
+    <published>2025-06-06T09:32:09.037Z</published>
+    <updated>2025-06-06T09:32:09.034Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 飓风网络安全</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/ovMY16FDLbhWYQWo5b6nbw">https://mp.weixin.qq.com/s/ovMY16FDLbhWYQWo5b6nbw</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 飓风网络安全&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/ovMY16FDLbhWYQWo5b6nbw&quot;&gt;https://mp.weixin.qq</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="飓风网络安全" scheme="http://example.com/tags/%E9%A3%93%E9%A3%8E%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【高危漏洞预警】PHPGurukul Management System代码执行漏洞(CVE-2025-5560)</title>
+    <link href="http://example.com/2025/06/06/weixin_3912500509/"/>
+    <id>http://example.com/2025/06/06/weixin_3912500509/</id>
+    <published>2025-06-06T09:32:07.638Z</published>
+    <updated>2025-06-06T09:32:07.638Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 飓风网络安全</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/sGGxMDbGSE7XuJ4Xd73w3g">https://mp.weixin.qq.com/s/sGGxMDbGSE7XuJ4Xd73w3g</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 飓风网络安全&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/sGGxMDbGSE7XuJ4Xd73w3g&quot;&gt;https://mp.weixin.qq</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="飓风网络安全" scheme="http://example.com/tags/%E9%A3%93%E9%A3%8E%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>CVE-2025-30208</title>
@@ -507,65 +561,6 @@
 &lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-2025-3102&lt;/li&gt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WordPress Eventin 任意文件读取漏洞</title>
-    <link href="http://example.com/2025/06/05/github_508767359/"/>
-    <id>http://example.com/2025/06/05/github_508767359/</id>
-    <published>2025-06-05T19:15:51.957Z</published>
-    <updated>2025-06-05T19:15:51.956Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> WordPress Eventin 任意文件读取漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-3419</li></ul><p><strong>漏洞类型：</strong> 文件读取</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> WordPress的Eventin插件（版本&lt;&#x3D;4.0.26）包含一个未经身份验证的任意文件读取漏洞。攻击者可以通过操纵<code>url</code>参数来获取服务器文件（如<code>/etc/passwd</code>，<code>wp-config.php</code>）。该功能未能限制对本地文件路径的访问，允许目录遍历（如<code>../../</code>）。这暴露了敏感数据，如数据库凭证、API密钥和系统文件。该漏洞源于文件操作前缺少清理检查。</p><p><strong>产品厂商：</strong> WordPress</p><p><strong>产品名称：</strong> Eventin</p><p><strong>影响版本：</strong> &lt;&#x3D; 4.0.26</p><p><strong>来源：</strong> <a href="https://github.com/Yucaerin/CVE-2025-3419">https://github.com/Yucaerin/CVE-2025-3419</a></p><p><strong>类型：</strong> CVE-2025:github search</p><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><code class="hljs r"><br><span class="hljs-comment"># CVE-2025-3419 - WordPress Eventin &lt;= 4.0.26 - Arbitrary File Read</span><br><br>🔥 <span class="hljs-operator">*</span><span class="hljs-operator">*</span>Vulnerability Summary<span class="hljs-operator">*</span><span class="hljs-operator">*</span><br><br>The Eventin plugin <span class="hljs-punctuation">(</span><span class="hljs-operator">&lt;=</span> <span class="hljs-number">4.0</span>.26<span class="hljs-punctuation">)</span> <span class="hljs-keyword">for</span> WordPress contains an unauthenticated arbitrary file read vulnerability <span class="hljs-keyword">in</span> the <span class="hljs-punctuation">\</span>`proxy_image()\` function. Attackers exploit insufficient input validation by manipulating the \`url\` parameter to fetch server files (e.g., \`/etc/passwd\`, \`wp-config.php\`). The function fails to restrict access to local file paths, allowing directory traversal (e.g., \`../../\`). This exposes sensitive data like database credentials, API keys, and system files. The flaw stems from missing sanitization checks before file operations.<br><br>🔍 **Affected Plugin**<br>- Plugin Name: Eventin<br>- Affected Version: &lt;= 4.0.26<br>- Vulnerability Type: Unauthenticated Arbitrary File Read<br>- CVE ID: CVE-2025-3419<br>- CVSS Score: 9.8 (Critical)<br>- Impact: Sensitive File Disclosure<br><br>🧪 **Exploit Features**<br>- ✅ Automatically sends file read request to \`?action=proxy_image&amp;url=file:///etc/passwd\`<br>- 🔎 Detects presence of \`/etc/passwd\` via keyword \`root:x:0:0:\`<br>- 🧠 Checks server header (\`Apache\` or \`Nginx\`)<br>- 💾 Saves:<br>  - All vulnerable targets to \`result.txt\`<br>  - Apache-based servers to \`passwd_server_apache.txt\`<br>  - Nginx-based servers to \`passwd_server_nginx.txt\`<br><br>🚀 **Usage**<br>1. Create a \`list.txt\` file containing target domains (one per line, without \`http://\` or \`https://\`)<br>   \`\`\`<br>   example.com<br>   site123.org<br>   \`\`\`<br><br>2. Run the script:<br>   \`\`\`bash<br>   python3 cve_2025_3419_checker.py<br>   \`\`\`<br><br>📁 **Output**<br>- \`result.txt\`: List of sites leaking \`/etc/passwd\`<br>- \`passwd_server_apache.txt\`: Apache servers vulnerable<br>- \`passwd_server_nginx.txt\`: Nginx servers vulnerable<br><br>🧠 **Researcher**<br>Credit: [DailyCVE](https://dailycve.com/wordpress-arbitrary-file-read-cve-2025-3419-critical/)<br><br>🔒 **Disclaimer:**  <br>This tool is for educational and authorized testing purposes only. Do not use against targets you do not have permission to assess.<br><br><br></code></pre></td></tr></table></figure><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><br><br><span class="hljs-bullet">- </span>CVE-2025-3419.py<br><span class="hljs-bullet">- </span>README.md<br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; WordPress Eventin 任意文件读取漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-2025-3419&lt;/li&gt;
-&lt;/u</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="文件读取" scheme="http://example.com/tags/%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WP Directorybox Manager 认证绕过漏洞</title>
-    <link href="http://example.com/2025/06/05/github_1893135766/"/>
-    <id>http://example.com/2025/06/05/github_1893135766/</id>
-    <published>2025-06-05T19:15:40.881Z</published>
-    <updated>2025-06-05T19:15:40.880Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> WP Directorybox Manager 认证绕过漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-0316</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> WP Directorybox Manager插件2.5及以下版本存在认证绕过漏洞，攻击者可以通过利用易受攻击的AJAX操作绕过认证，获得管理员面板访问权限。</p><p><strong>产品厂商：</strong> WordPress</p><p><strong>产品名称：</strong> WP Directorybox Manager</p><p><strong>影响版本：</strong> &lt;&#x3D; 2.5</p><p><strong>来源：</strong> <a href="https://github.com/zorvithonleon/CVE-2025-0316-Exploit">https://github.com/zorvithonleon/CVE-2025-0316-Exploit</a></p><p><strong>类型：</strong> CVE-2025:github search</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><br><span class="hljs-comment"># CVE-2025-0316-Exploit</span><br><br><span class="hljs-comment"># CVE-2025-0316 Exploit Toolkit</span><br><br><span class="hljs-string">🚨</span> <span class="hljs-string">Auth</span> <span class="hljs-string">Bypass</span> <span class="hljs-string">Exploit</span> <span class="hljs-string">for</span> <span class="hljs-string">WordPress</span> <span class="hljs-string">Plugin</span> <span class="hljs-string">WP</span> <span class="hljs-string">Directorybox</span> <span class="hljs-string">Manager</span> <span class="hljs-string">&lt;=</span> <span class="hljs-number">2.5</span><br><br><span class="hljs-string">&gt;</span> <span class="hljs-string">🔥</span> <span class="hljs-string">Automated</span> <span class="hljs-string">exploit</span> <span class="hljs-string">script</span> <span class="hljs-string">for</span> <span class="hljs-string">CVE-2025-0316</span> <span class="hljs-string">—</span> <span class="hljs-string">Auth</span> <span class="hljs-string">Bypass</span> <span class="hljs-string">via</span> <span class="hljs-string">vulnerable</span> <span class="hljs-string">AJAX</span> <span class="hljs-string">action.</span><br><br><span class="hljs-comment">### ⚠️ Legal Notice</span><br><span class="hljs-attr">This tool is intended strictly for:</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">Research</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">Red</span> <span class="hljs-string">Team</span> <span class="hljs-string">simulation</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">Authorized</span> <span class="hljs-string">security</span> <span class="hljs-string">assessment</span><br><br><span class="hljs-string">Using</span> <span class="hljs-string">this</span> <span class="hljs-string">tool</span> <span class="hljs-string">against</span> <span class="hljs-string">targets</span> <span class="hljs-string">without</span> <span class="hljs-string">consent</span> <span class="hljs-string">is</span> <span class="hljs-string">illegal.</span><br><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br><span class="hljs-comment">## 🛠 Features</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">🔍</span> <span class="hljs-string">User</span> <span class="hljs-string">enumeration</span> <span class="hljs-string">via</span> <span class="hljs-string">\`?author=\`</span> <span class="hljs-string">trick</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">🚪</span> <span class="hljs-string">Exploit</span> <span class="hljs-string">vulnerable</span> <span class="hljs-string">plugin</span> <span class="hljs-string">action</span> <span class="hljs-string">to</span> <span class="hljs-string">gain</span> <span class="hljs-string">admin</span> <span class="hljs-string">panel</span> <span class="hljs-string">access</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">🧠</span> <span class="hljs-string">Auto</span> <span class="hljs-string">cookie</span> <span class="hljs-string">save</span> <span class="hljs-string">+</span> <span class="hljs-string">login</span> <span class="hljs-string">popup</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">🌐</span> <span class="hljs-string">Proxy</span> <span class="hljs-string">support</span> <span class="hljs-string">+</span> <span class="hljs-string">random</span> <span class="hljs-string">user-agents</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">💻</span> <span class="hljs-string">Multi-threaded</span> <span class="hljs-string">and</span> <span class="hljs-string">delay-tunable</span><br><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br><span class="hljs-comment">## ✅ Tested On</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">WordPress</span> <span class="hljs-number">6.</span><span class="hljs-string">x</span><br><span class="hljs-bullet">-</span> <span class="hljs-attr">Plugin:</span> <span class="hljs-string">WP</span> <span class="hljs-string">Directorybox</span> <span class="hljs-string">Manager</span> <span class="hljs-string">&lt;=</span> <span class="hljs-number">2.5</span><br><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br><span class="hljs-comment">## 🚀 Usage</span><br><span class="hljs-string">\`\`\`bash</span><br><span class="hljs-string">python3</span> <span class="hljs-string">exploit.py</span> <span class="hljs-string">-u</span> <span class="hljs-string">https://victim-site.com</span> <span class="hljs-string">-t</span> <span class="hljs-number">5</span> <span class="hljs-string">-d</span> <span class="hljs-number">1</span><br><span class="hljs-string">\`\`\`</span><br><br><span class="hljs-attr">Options:</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">-u,</span> <span class="hljs-string">--url:</span> <span class="hljs-string">Target</span> <span class="hljs-string">WordPress</span> <span class="hljs-string">site</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">-t,</span> <span class="hljs-string">--threads:</span> <span class="hljs-string">Number</span> <span class="hljs-string">of</span> <span class="hljs-string">parallel</span> <span class="hljs-string">threads</span> <span class="hljs-string">(default</span> <span class="hljs-number">3</span><span class="hljs-string">)</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">-d,</span> <span class="hljs-string">--delay:</span> <span class="hljs-string">Delay</span> <span class="hljs-string">between</span> <span class="hljs-string">requests</span> <span class="hljs-string">(default</span> <span class="hljs-number">1.</span><span class="hljs-string">5s)</span><br><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br><span class="hljs-comment">## 📁 Output</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">Logs</span> <span class="hljs-string">saved</span> <span class="hljs-string">in</span> <span class="hljs-string">\`logs/\`</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">Cookies</span> <span class="hljs-string">saved</span> <span class="hljs-string">as</span> <span class="hljs-string">JSON</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">Browser</span> <span class="hljs-string">auto-login</span> <span class="hljs-string">on</span> <span class="hljs-string">success</span><br><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br><span class="hljs-comment">## </span><br><span class="hljs-string">\`\`\`</span><br> <span class="hljs-string">⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣶⣖⠠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</span><br><span class="hljs-string">⠀⠀⠀⠀⠀⠀⠀⠠⣿⣿⣿⣿⣾⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⢠⢤⡄⠀⠀</span><br><span class="hljs-string">⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⣿⣯⢻⡇⠀⠀⠀⠀⠀⠀⠀⢀⣤⣷⠏⠉⠉⢞⠀</span><br><span class="hljs-string">⠀⠀⠀⠀⢀⢠⣤⣶⣿⣿⣿⣿⡽⢻⣷⣦⣆⣤⣀⣢⣤⡾⠟⠁⠀⠀⠀⠀⠀</span><br><span class="hljs-string">⠀⠀⠀⢀⣭⣿⣿⣿⣿⣿⣿⣿⡿⡟⡘⢿⣿⣍⡉⢍⢁⠁⠀⠀⠀⡠⠀⢆⣠</span><br><span class="hljs-string">⠀⠀⢠⣾⣯⣿⣿⣿⣿⢿⡻⣿⣿⣇⣷⣾⠻⣿⣿⣿⣷⣾⣷⣨⣣⣳⢾⣻⣝</span><br><span class="hljs-string">⠀⣐⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠄⠹⢻⠻⡿⣿⣿⣷⣽⡷⣿⣏⡀</span><br><span class="hljs-string">⣰⣾⣿⣿⣿⣿⣿⣿⣿⣿⣽⣿⢯⣼⣿⣿⡷⠀⠀⠀⠀⠈⠛⢾⡈⠙⢇⡌⢇</span><br><span class="hljs-string">⣻⣿⣿⣿⡏⠈⣿⣿⣿⣿⣿⡿⡿⣿⣟⣿⣧⡧⠄⠀⠀⠀⠀⠀⠀⠀⠀⠈⠂</span><br><span class="hljs-string">⢘⢿⣿⣿⣥⠻⣿⣿⣿⣿⡿⣿⣿⣟⣿⣿⣿⣿⣛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</span><br><span class="hljs-string">⠀⠘⠁⡈⣻⣯⡭⡟⣿⣽⣿⣿⣿⣿⣿⣯⡛⠹⣿⣦⢀⠀⠀⠀⠀⢀⣀⣤⠔</span><br><span class="hljs-string">⠀⠀⠀⡏⢩⣿⣿⣿⣿⣿⣿⣤⣦⣤⣈⣋⣭⡴⠾⣿⣿⡿⠞⠛⠛⠋⠉⠀⠀</span><br><span class="hljs-string">⠀⠀⣘⠇⢾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣞⣷⡀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀</span><br><span class="hljs-string">⠀⠀⡏⠀⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿⣿⣿⣿⣎⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</span><br><span class="hljs-string">⠀⠰⠀⠹⢻⡻⡽⢿⣳⠯⡹⣿⠷⡩⢿⣿⣿⣿⣿⣎⠓⠀⠀⠀⠀⠀⠀⠀⠀</span><br><span class="hljs-string">\`\`\`</span><br><br><span class="hljs-comment">## </span><br><span class="hljs-string">this</span> <span class="hljs-string">exploit</span> <span class="hljs-string">is</span> <span class="hljs-string">fully</span> <span class="hljs-string">open</span> <span class="hljs-string">source</span> <span class="hljs-string">so</span> <span class="hljs-string">u</span> <span class="hljs-string">can</span> <span class="hljs-string">use</span> <span class="hljs-string">it</span> <span class="hljs-string">without</span> <span class="hljs-string">any</span> <span class="hljs-string">tension</span> <span class="hljs-string">or</span> <span class="hljs-string">fear</span> <span class="hljs-string">and</span> <span class="hljs-string">if</span> <span class="hljs-string">u</span> <span class="hljs-string">find</span> <span class="hljs-string">any</span> <span class="hljs-string">issues</span> <span class="hljs-string">in</span> <span class="hljs-string">my</span> <span class="hljs-string">code</span> <span class="hljs-string">just</span> <span class="hljs-string">send</span> <span class="hljs-string">a</span> <span class="hljs-string">msg</span> <span class="hljs-string">to</span> <span class="hljs-string">me</span> <span class="hljs-string">ill</span> <span class="hljs-string">fix</span> <span class="hljs-string">it</span> <br><span class="hljs-comment"># REQUIRMENTS</span><br><span class="hljs-string">requests</span><br><span class="hljs-string">colorama</span><br><span class="hljs-string">termcolor</span><br><span class="hljs-string">browser-cookie3</span><br><br><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br><span class="hljs-comment">## 👤 Author</span><br><span class="hljs-string">ZORVITHON</span> <span class="hljs-string">LEO</span> <span class="hljs-bullet">-</span> <span class="hljs-string">A</span> <span class="hljs-string">ORDINARY</span> <span class="hljs-string">PERSON</span><br><br><br></code></pre></td></tr></table></figure><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><br><br><span class="hljs-bullet">- </span>README.md<br><span class="hljs-bullet">- </span>exploit.py<br><span class="hljs-bullet">- </span>helpers.py<br><span class="hljs-bullet">- </span>recon.py<br><span class="hljs-bullet">- </span>session<span class="hljs-emphasis">_handler.py</span><br><span class="hljs-emphasis">- user_</span>agents.txt<br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; WP Directorybox Manager 认证绕过漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-2025-0316&lt;/li&gt;</summary>
       
     
     
