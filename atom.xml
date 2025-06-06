@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-06T05:30:16.581Z</updated>
+  <updated>2025-06-06T05:58:36.337Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,87 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>近 60 万用户安装了恶意chrome扩展程序插件</title>
+    <link href="http://example.com/2025/06/06/weixin_1453245464/"/>
+    <id>http://example.com/2025/06/06/weixin_1453245464/</id>
+    <published>2025-06-06T05:58:36.340Z</published>
+    <updated>2025-06-06T05:58:36.337Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/41igQGH8SAamQhOfDX6Pjw">https://mp.weixin.qq.com/s/41igQGH8SAamQhOfDX6Pjw</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/41igQGH8SAamQhOfDX6Pjw&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【深度好文】勒索软件攻击生命周期运行分析</title>
+    <link href="http://example.com/2025/06/06/weixin_3161792675/"/>
+    <id>http://example.com/2025/06/06/weixin_3161792675/</id>
+    <published>2025-06-06T05:58:36.013Z</published>
+    <updated>2025-06-06T05:58:36.009Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/5XDD9590lD-XG3AQ0J2-1w">https://mp.weixin.qq.com/s/5XDD9590lD-XG3AQ0J2-1w</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/5XDD9590lD-XG3AQ0J2-1w&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>黑产数据库又漏了，逾 40 亿用户记录曝光</title>
+    <link href="http://example.com/2025/06/06/weixin_1794740917/"/>
+    <id>http://example.com/2025/06/06/weixin_1794740917/</id>
+    <published>2025-06-06T05:58:35.475Z</published>
+    <updated>2025-06-06T05:58:35.473Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/mo_PxEkuBGQA1L5eGAqEDw">https://mp.weixin.qq.com/s/mo_PxEkuBGQA1L5eGAqEDw</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/mo_PxEkuBGQA1L5eGAqEDw&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>SyFi/CVE-2025-49113</title>
@@ -499,89 +580,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="跨站可执行脚本" scheme="http://example.com/tags/%E8%B7%A8%E7%AB%99%E5%8F%AF%E6%89%A7%E8%A1%8C%E8%84%9A%E6%9C%AC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WordPress HyperComments Plugin 权限提升漏洞</title>
-    <link href="http://example.com/2025/06/05/github_842598469/"/>
-    <id>http://example.com/2025/06/05/github_842598469/</id>
-    <published>2025-06-05T15:45:17.622Z</published>
-    <updated>2025-06-05T15:45:17.621Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> WordPress HyperComments Plugin 权限提升漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-5701</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> WordPress的HyperComments插件1.2.2及以下版本存在权限提升漏洞，由于<code>hc_request_handler</code>函数中缺少能力检查，未经认证的攻击者可以修改任意的WordPress选项，如启用用户注册和更改新注册用户的默认角色为管理员，从而导致权限提升。</p><p><strong>产品厂商：</strong> WordPress</p><p><strong>产品名称：</strong> HyperComments Plugin</p><p><strong>影响版本：</strong> &lt;&#x3D; 1.2.2</p><p><strong>来源：</strong> <a href="https://github.com/Nxploited/CVE-2025-5701">https://github.com/Nxploited/CVE-2025-5701</a></p><p><strong>类型：</strong> CVE-2025:github search</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><br><br><span class="hljs-comment"># CVE-2025-5701 - Unauthenticated Privilege Escalation Exploit</span><br><br><br><span class="hljs-string">**Severity:**</span> <span class="hljs-string">CRITICAL</span> <span class="hljs-string">(CVSS</span> <span class="hljs-number">9.8</span><span class="hljs-string">)</span>  <br><span class="hljs-string">**Plugin</span> <span class="hljs-string">Affected:**</span> <span class="hljs-string">HyperComments</span> <span class="hljs-string">for</span> <span class="hljs-string">WordPress</span>  <br><span class="hljs-string">**Versions</span> <span class="hljs-string">Affected:**</span> <span class="hljs-string">≤</span> <span class="hljs-number">1.2</span><span class="hljs-number">.2</span><br><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br><span class="hljs-comment">## 📌 Vulnerability Summary</span><br><br><span class="hljs-string">The</span> <span class="hljs-string">**HyperComments**</span> <span class="hljs-string">plugin</span> <span class="hljs-string">for</span> <span class="hljs-string">WordPress</span> <span class="hljs-string">is</span> <span class="hljs-string">vulnerable</span> <span class="hljs-string">to</span> <span class="hljs-string">unauthorized</span> <span class="hljs-string">modification</span> <span class="hljs-string">of</span> <span class="hljs-string">WordPress</span> <span class="hljs-string">options</span> <span class="hljs-string">due</span> <span class="hljs-string">to</span> <span class="hljs-string">a</span> <span class="hljs-string">missing</span> <span class="hljs-string">capability</span> <span class="hljs-string">check</span> <span class="hljs-string">in</span> <span class="hljs-string">the</span> <span class="hljs-string">\`hc_request_handler\`</span> <span class="hljs-string">function.</span> <span class="hljs-string">This</span> <span class="hljs-string">allows</span> <span class="hljs-string">**unauthenticated</span> <span class="hljs-string">attackers**</span> <span class="hljs-string">to</span> <span class="hljs-string">update</span> <span class="hljs-string">**arbitrary</span> <span class="hljs-string">WordPress</span> <span class="hljs-string">options**,</span> <span class="hljs-attr">such as:</span><br><br><span class="hljs-bullet">-</span> <span class="hljs-string">Enabling</span> <span class="hljs-string">user</span> <span class="hljs-string">registration</span> <span class="hljs-string">(\`users_can_register\`)</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">Changing</span> <span class="hljs-string">the</span> <span class="hljs-string">default</span> <span class="hljs-string">role</span> <span class="hljs-string">assigned</span> <span class="hljs-string">to</span> <span class="hljs-string">newly</span> <span class="hljs-string">registered</span> <span class="hljs-string">users</span> <span class="hljs-string">(\`default_role\`)</span><br><br><span class="hljs-string">By</span> <span class="hljs-string">chaining</span> <span class="hljs-string">these</span> <span class="hljs-string">together,</span> <span class="hljs-string">an</span> <span class="hljs-string">attacker</span> <span class="hljs-string">can</span> <span class="hljs-string">enable</span> <span class="hljs-string">registration</span> <span class="hljs-string">and</span> <span class="hljs-string">ensure</span> <span class="hljs-string">any</span> <span class="hljs-string">new</span> <span class="hljs-string">user</span> <span class="hljs-string">is</span> <span class="hljs-string">automatically</span> <span class="hljs-string">granted</span> <span class="hljs-string">the</span> <span class="hljs-string">**Administrator**</span> <span class="hljs-string">role.</span><br><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br><span class="hljs-comment">### 🧨 CVSS Score</span><br><br><span class="hljs-string">\`\`\`</span><br><span class="hljs-attr">CVSS v3.1:</span> <span class="hljs-number">9.8</span> <span class="hljs-string">CRITICAL</span>  <br><span class="hljs-string">AV:N</span> <span class="hljs-string">/</span> <span class="hljs-string">AC:L</span> <span class="hljs-string">/</span> <span class="hljs-string">PR:N</span> <span class="hljs-string">/</span> <span class="hljs-string">UI:N</span> <span class="hljs-string">/</span> <span class="hljs-string">S:U</span> <span class="hljs-string">/</span> <span class="hljs-string">C:H</span> <span class="hljs-string">/</span> <span class="hljs-string">I:H</span> <span class="hljs-string">/</span> <span class="hljs-string">A:H</span><br><span class="hljs-string">\`\`\`</span><br><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br><span class="hljs-meta"></span><br><span class="hljs-comment">## 📦 Usage</span><br><br><span class="hljs-string">\`\`\`</span><br><span class="hljs-string">CVE-2025-5701</span> <span class="hljs-bullet">-</span> <span class="hljs-string">Unauthenticated</span> <span class="hljs-string">Privilege</span> <span class="hljs-string">Escalation</span> <span class="hljs-string">Exploit</span><br><span class="hljs-attr">Author:</span> <span class="hljs-string">Khaled</span> <span class="hljs-string">Alenazi</span> <span class="hljs-string">(Nxploited)</span><br><br><span class="hljs-attr">usage:</span> <span class="hljs-string">a.py</span> [<span class="hljs-string">-h</span>] <span class="hljs-string">-u</span> <span class="hljs-string">URL</span><br><br><span class="hljs-string">CVE-2025-5701</span> <span class="hljs-bullet">-</span> <span class="hljs-string">Unauthenticated</span> <span class="hljs-string">Privilege</span> <span class="hljs-string">Escalation</span> <span class="hljs-string">Exploit</span> <span class="hljs-string">by</span> <span class="hljs-string">Khaled</span> <span class="hljs-string">Alenazi</span> <span class="hljs-string">(Nxploited)</span><br><br><span class="hljs-attr">options:</span><br>  <span class="hljs-string">-h,</span> <span class="hljs-string">--help</span>     <span class="hljs-string">show</span> <span class="hljs-string">this</span> <span class="hljs-string">help</span> <span class="hljs-string">message</span> <span class="hljs-string">and</span> <span class="hljs-string">exit</span><br>  <span class="hljs-string">-u,</span> <span class="hljs-string">--url</span> <span class="hljs-string">URL</span>  <span class="hljs-string">Target</span> <span class="hljs-string">base</span> <span class="hljs-string">URL</span> <span class="hljs-string">(e.g.,</span> <span class="hljs-string">http://target-site.com)</span><br><span class="hljs-string">\`\`\`</span><br><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br><span class="hljs-comment">## 💬 Example Output</span><br><br><span class="hljs-string">\`\`\`</span><br><span class="hljs-string">CVE-2025-5701</span> <span class="hljs-bullet">-</span> <span class="hljs-string">Unauthenticated</span> <span class="hljs-string">Privilege</span> <span class="hljs-string">Escalation</span> <span class="hljs-string">Exploit</span><br><span class="hljs-attr">Author:</span> <span class="hljs-string">Khaled</span> <span class="hljs-string">Alenazi</span> <span class="hljs-string">(Nxploited)</span><br><br>[<span class="hljs-string">+</span>] <span class="hljs-attr">Target is vulnerable (version:</span> <span class="hljs-number">1.2</span><span class="hljs-number">.2</span><span class="hljs-string">)</span> <span class="hljs-bullet">-</span> <span class="hljs-string">proceeding</span> <span class="hljs-string">with</span> <span class="hljs-string">exploitation.</span><br>[<span class="hljs-string">+</span>] <span class="hljs-string">Exploit</span> <span class="hljs-string">endpoint</span> <span class="hljs-string">is</span> <span class="hljs-string">accessible.</span><br>[<span class="hljs-string">+</span>] <span class="hljs-attr">Server response:</span> &#123;<span class="hljs-string">&quot;result&quot;</span><span class="hljs-string">:&quot;success&quot;</span>&#125;<br>[<span class="hljs-string">+</span>] <span class="hljs-string">Registration</span> <span class="hljs-string">is</span> <span class="hljs-string">now</span> <span class="hljs-string">enabled.</span> <span class="hljs-string">New</span> <span class="hljs-string">users</span> <span class="hljs-string">will</span> <span class="hljs-string">be</span> <span class="hljs-string">assigned</span> <span class="hljs-string">administrator</span> <span class="hljs-string">role.</span><br>[<span class="hljs-string">+</span>] <span class="hljs-attr">Register here:</span> <span class="hljs-string">http://target-site.com/wp-login.php?action=register</span><br><br><span class="hljs-attr">Exploit by:</span> <span class="hljs-string">Khaled</span> <span class="hljs-string">Alenazi</span> <span class="hljs-string">(Nxploited)</span><br><span class="hljs-string">\`\`\`</span><br><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br><span class="hljs-comment">## ⚠️ Disclaimer</span><br><br><span class="hljs-string">This</span> <span class="hljs-string">script</span> <span class="hljs-string">is</span> <span class="hljs-string">provided</span> <span class="hljs-string">for</span> <span class="hljs-string">**educational</span> <span class="hljs-string">purposes</span> <span class="hljs-string">only**.</span> <span class="hljs-string">Unauthorized</span> <span class="hljs-string">access</span> <span class="hljs-string">to</span> <span class="hljs-string">systems</span> <span class="hljs-string">without</span> <span class="hljs-string">permission</span> <span class="hljs-string">is</span> <span class="hljs-string">illegal</span> <span class="hljs-string">and</span> <span class="hljs-string">unethical.</span> <span class="hljs-string">Use</span> <span class="hljs-string">only</span> <span class="hljs-string">in</span> <span class="hljs-string">controlled</span> <span class="hljs-string">environments</span> <span class="hljs-string">or</span> <span class="hljs-string">with</span> <span class="hljs-string">explicit</span> <span class="hljs-string">authorization.</span><br><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br><span class="hljs-string">*Nxploited</span> <span class="hljs-string">(Khaled_alenazi)*</span><br><br><br></code></pre></td></tr></table></figure><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><br><br><span class="hljs-bullet">- </span>README.md<br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; WordPress HyperComments Plugin 权限提升漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-2025-57</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Smartded Meteobridg的template.cgi接口存在任意命令注入CVE-2025-4008 附POC</title>
-    <link href="http://example.com/2025/06/05/weixin_3390411540/"/>
-    <id>http://example.com/2025/06/05/weixin_3390411540/</id>
-    <published>2025-06-05T15:44:04.362Z</published>
-    <updated>2025-06-05T15:44:04.360Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 南风漏洞复现文库</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/uXDXYURUE3dOztVQh3KgIQ">https://mp.weixin.qq.com/s/uXDXYURUE3dOztVQh3KgIQ</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 南风漏洞复现文库&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/uXDXYURUE3dOztVQh3KgIQ&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="南风漏洞复现文库" scheme="http://example.com/tags/%E5%8D%97%E9%A3%8E%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%E6%96%87%E5%BA%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Liferay icon.jsp接口存在跨站漏洞CVE-2025-4388 附POC</title>
-    <link href="http://example.com/2025/06/05/weixin_3218529364/"/>
-    <id>http://example.com/2025/06/05/weixin_3218529364/</id>
-    <published>2025-06-05T15:44:03.502Z</published>
-    <updated>2025-06-05T15:44:03.496Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 南风漏洞复现文库</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/IFeMwu9yZ641aXXl__Fg5A">https://mp.weixin.qq.com/s/IFeMwu9yZ641aXXl__Fg5A</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 南风漏洞复现文库&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/IFeMwu9yZ641aXXl__Fg5A&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="南风漏洞复现文库" scheme="http://example.com/tags/%E5%8D%97%E9%A3%8E%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%E6%96%87%E5%BA%93/"/>
     
   </entry>
   
