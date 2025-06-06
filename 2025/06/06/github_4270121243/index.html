@@ -19,15 +19,15 @@
   <meta name="author" content="lianccc">
   <meta name="keywords" content="">
   
-    <meta name="description" content="漏洞名称： Apport Symlink Hijacking Privilege Escalation 漏洞编号：  CVE： CVE-2020-8831  漏洞类型： 权限提升 漏洞等级： 高危 漏洞描述： 在Ubuntu Xenial Xerus 16.04.7等版本中，Apport 2.20崩溃处理器易受符号链接劫持攻击。崩溃后，Apport会将报告写入&#x2F;var&#x2F;lock">
+    <meta name="description" content="漏洞名称： Apport Symlink Hijacking Privilege Escalation 漏洞编号：  CVE： CVE-2020-8831  漏洞类型： 权限提升 漏洞等级： 高危 漏洞描述： 在Ubuntu Xenial Xerus 16.04.7等版本中，Apport 2.20崩溃处理器存在符号链接劫持漏洞。崩溃后，Apport会将报告写入&#x2F;var&#x2F;lock">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Apport Symlink Hijacking Privilege Escalation">
-<meta property="og:url" content="http://example.com/2025/06/04/github_4270121243/index.html">
+<meta property="og:url" content="http://example.com/2025/06/06/github_4270121243/index.html">
 <meta property="og:site_name" content="liancc&#39; infos blog">
-<meta property="og:description" content="漏洞名称： Apport Symlink Hijacking Privilege Escalation 漏洞编号：  CVE： CVE-2020-8831  漏洞类型： 权限提升 漏洞等级： 高危 漏洞描述： 在Ubuntu Xenial Xerus 16.04.7等版本中，Apport 2.20崩溃处理器易受符号链接劫持攻击。崩溃后，Apport会将报告写入&#x2F;var&#x2F;lock">
+<meta property="og:description" content="漏洞名称： Apport Symlink Hijacking Privilege Escalation 漏洞编号：  CVE： CVE-2020-8831  漏洞类型： 权限提升 漏洞等级： 高危 漏洞描述： 在Ubuntu Xenial Xerus 16.04.7等版本中，Apport 2.20崩溃处理器存在符号链接劫持漏洞。崩溃后，Apport会将报告写入&#x2F;var&#x2F;lock">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-06-04T14:15:17.964Z">
-<meta property="article:modified_time" content="2025-06-05T02:02:52.433Z">
+<meta property="article:published_time" content="2025-06-06T16:15:18.712Z">
+<meta property="article:modified_time" content="2025-06-06T16:15:18.708Z">
 <meta property="article:author" content="lianccc">
 <meta property="article:tag" content="rapid7&#x2F;metasploit-framework:github issues">
 <meta property="article:tag" content="权限提升">
@@ -213,8 +213,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-06-04 14:15" pubdate>
-          2025年6月4日 下午
+        <time datetime="2025-06-06 16:15" pubdate>
+          2025年6月6日 下午
         </time>
       </span>
     
@@ -285,7 +285,7 @@
 </ul>
 <p><strong>漏洞类型：</strong> 权限提升</p>
 <p><strong>漏洞等级：</strong> 高危</p>
-<p><strong>漏洞描述：</strong> 在Ubuntu Xenial Xerus 16.04.7等版本中，Apport 2.20崩溃处理器易受符号链接劫持攻击。崩溃后，Apport会将报告写入&#x2F;var&#x2F;lock&#x2F;apport&#x2F;lock，攻击者可以通过&#x2F;var&#x2F;lock&#x2F;apport创建指向特权目录的符号链接，从而创建具有全局0777权限的文件。此模块利用此弱点，通过创建指向&#x2F;etc&#x2F;cron.d&#x2F;的符号链接来写入系统crontab，该crontab将以提升的权限执行有效载荷。</p>
+<p><strong>漏洞描述：</strong> 在Ubuntu Xenial Xerus 16.04.7等版本中，Apport 2.20崩溃处理器存在符号链接劫持漏洞。崩溃后，Apport会将报告写入&#x2F;var&#x2F;lock&#x2F;apport&#x2F;lock，攻击者可以通过&#x2F;var&#x2F;lock&#x2F;apport创建指向特权目录的符号链接，从而创建具有全局0777权限的文件。此模块利用此弱点，通过创建指向&#x2F;etc&#x2F;cron.d&#x2F;的符号链接来写入系统crontab，该crontab将以提升的权限执行有效载荷。</p>
 <p><strong>产品厂商：</strong> Ubuntu</p>
 <p><strong>产品名称：</strong> Apport</p>
 <p><strong>影响版本：</strong> 2.20.11</p>
@@ -341,7 +341,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>Apport Symlink Hijacking Privilege Escalation</div>
-      <div>http://example.com/2025/06/04/github_4270121243/</div>
+      <div>http://example.com/2025/06/06/github_4270121243/</div>
     </div>
     <div class="license-meta">
       
@@ -353,7 +353,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年6月4日</div>
+          <div>2025年6月6日</div>
         </div>
       
       
@@ -385,18 +385,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/04/github_2958453519/" title="Ivanti EPMM Authentication Bypass for Expression Language Remote Code Execution">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Ivanti EPMM Authentication Bypass for Expression Language Remote Code Execution</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/04/github_2185986903/" title="Ivanti EPMM Authentication Bypass for Expression Language Remote Code Execution">
-                        <span class="hidden-mobile">Ivanti EPMM Authentication Bypass for Expression Language Remote Code Execution</span>
+                      <a href="/2025/06/06/github_3632516539/" title="NIH BRICS 权限提升漏洞">
+                        <span class="hidden-mobile">NIH BRICS 权限提升漏洞</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
