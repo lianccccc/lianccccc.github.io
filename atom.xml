@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-06T14:00:18.707Z</updated>
+  <updated>2025-06-06T14:30:20.069Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>NIH BRICS 权限提升漏洞</title>
+    <link href="http://example.com/2025/06/06/github_3632516539/"/>
+    <id>http://example.com/2025/06/06/github_3632516539/</id>
+    <published>2025-06-06T14:30:20.070Z</published>
+    <updated>2025-06-06T14:30:20.069Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> NIH BRICS 权限提升漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-27580</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> NIH BRICS（又名生物医学研究信息计算系统）至14.0.0-67版本存在一个可预测令牌漏洞，该漏洞依赖于用户名、时间和固定的7Dl9#dj-字符串。这使得拥有普通访问卡（CAC）的未认证用户能够提升权限并危害任何账户，包括管理员账户。</p><p><strong>产品厂商：</strong> NIH</p><p><strong>产品名称：</strong> BRICS (Biomedical Research Informatics Computing System)</p><p><strong>影响版本：</strong> version &lt;&#x3D; 14.0.0-67</p><p><strong>来源：</strong> <a href="https://github.com/TrustStackSecurity/CVE-2025-27580">https://github.com/TrustStackSecurity/CVE-2025-27580</a></p><p><strong>类型：</strong> CVE-2025:github search</p><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs perl"><br><span class="hljs-comment"># CVE-2025-27580: Unauthenticated Account Takeover in NIH BRICS</span><br><br>NIH BRICS (aka Biomedical Research Informatics Computing System) through <span class="hljs-number">14.0</span>.<span class="hljs-number">0</span>-<span class="hljs-number">67</span> generates predictable tokens (that depend on username, <span class="hljs-keyword">time</span>, <span class="hljs-keyword">and</span> the fixed 7Dl9<span class="hljs-comment">#dj- string) and thus allows unauthenticated users with a Common Access Card (CAC) to escalate privileges and compromise any account, including administrators.</span><br><br>Published a <span class="hljs-keyword">write</span>-up: https:<span class="hljs-regexp">//</span>bugculture.io/CVE-<span class="hljs-number">2025</span>-<span class="hljs-number">27580</span>/<br><br>Discovered by Chandler Rose (Founder/Security Consultant), February <span class="hljs-number">2025</span>.<br><br>References:<br><br>- https:<span class="hljs-regexp">//</span>www.cve.org/CVERecord?id=CVE-<span class="hljs-number">2025</span>-<span class="hljs-number">27580</span><br><br><br><br></code></pre></td></tr></table></figure><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><br><br><span class="hljs-bullet">- </span>README.md<br><span class="hljs-bullet">- </span>exploit.py<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; NIH BRICS 权限提升漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-2025-27580&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;st</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
+    
+  </entry>
   
   <entry>
     <title>CloudClassroom PHP Project 跨站可执行脚本漏洞</title>
@@ -535,33 +566,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/_Mfn8t42G3Mc3MRD2md_Sw&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>伊朗APT组织“BladedFeline”在目标网络潜伏了8年</title>
-    <link href="http://example.com/2025/06/06/weixin_3034425148/"/>
-    <id>http://example.com/2025/06/06/weixin_3034425148/</id>
-    <published>2025-06-06T01:01:54.930Z</published>
-    <updated>2025-06-06T01:01:54.928Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/BiBHfEgaME9yLuEzy0BY2w">https://mp.weixin.qq.com/s/BiBHfEgaME9yLuEzy0BY2w</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/BiBHfEgaME9yLuEzy0BY2w&quot;&gt;https://mp.weixin.</summary>
       
     
     
