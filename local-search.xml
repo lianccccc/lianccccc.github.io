@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>CrushFTP 认证绕过漏洞</title>
+    <link href="/2025/06/06/github_3893427823/"/>
+    <url>/2025/06/06/github_3893427823/</url>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> CrushFTP 认证绕过漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-31161</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> CVE-2025-31161是一个影响CrushFTP服务器的认证绕过漏洞，允许攻击者通过利用该漏洞创建一个具有管理员权限的新用户账户。此漏洞需要目标服务器上存在一个已知用户名的用户，默认用户名为’crushadmin’。</p><p><strong>产品名称：</strong> CrushFTP</p><p><strong>来源：</strong> <a href="https://github.com/B1ack4sh/Blackash-CVE-2025-31161">https://github.com/B1ack4sh/Blackash-CVE-2025-31161</a></p><p><strong>类型：</strong> CVE-2025:github search</p><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver"><br><span class="hljs-comment"># Blackash-CVE-2025-31161</span><br>CVE<span class="hljs-number">-2025</span><span class="hljs-number">-31161</span><br><br><br>Proof <span class="hljs-keyword">of</span> Concept <span class="hljs-keyword">for</span> CVE<span class="hljs-number">-2025</span><span class="hljs-number">-31161</span> / CVE<span class="hljs-number">-2025</span><span class="hljs-number">-2825</span><br><br>This POC will exploit <span class="hljs-keyword">the</span> authbypass vulnerability <span class="hljs-built_in">to</span> <span class="hljs-built_in">create</span> <span class="hljs-keyword">a</span> <span class="hljs-built_in">new</span> user account <span class="hljs-keyword">with</span> Admin level permissions. The Auth Bypass requires <span class="hljs-keyword">the</span> username (target_user) <span class="hljs-keyword">of</span> <span class="hljs-keyword">an</span> existing user <span class="hljs-keyword">on</span> <span class="hljs-title">the</span> <span class="hljs-title">CrushFTP</span> <span class="hljs-title">server</span>. <span class="hljs-title">The</span> <span class="hljs-title">default</span> <span class="hljs-title">is</span> <span class="hljs-title">set</span> <span class="hljs-title">to</span> <span class="hljs-string">&quot;crushadmin&quot;</span><br><br><span class="hljs-comment">## Uasge</span><br><br>usage: cve<span class="hljs-number">-2025</span><span class="hljs-number">-31161.</span>py [-h] [<span class="hljs-comment">--target_host TARGET_HOST] [--port PORT] [--target_user TARGET_USER] [--new_user NEW_USER] [--password PASSWORD]</span><br><br>Exploit CVE<span class="hljs-number">-2025</span><span class="hljs-number">-2825</span><br><br>options:<br>  -h, <span class="hljs-comment">--help            show this help message and exit</span><br>  <span class="hljs-comment">--target_host TARGET_HOST</span><br>                        Target host<br>  <span class="hljs-comment">--port PORT           Target port</span><br>  <span class="hljs-comment">--target_user TARGET_USER</span><br>                        Target user<br>  <span class="hljs-comment">--new_user NEW_USER   New user to create</span><br>  <span class="hljs-comment">--password PASSWORD   Password for the new user</span><br><br><br>  <span class="hljs-comment">## Detction and Mitigation.</span><br><br>  For Immersive Customers you can find Practical Offensive <span class="hljs-keyword">and</span> Defensive labs <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> <span class="hljs-built_in">platform</span> under <span class="hljs-keyword">the</span> Latest CVEs section.<br><br>  Additional details <span class="hljs-keyword">on</span> <span class="hljs-title">this</span> <span class="hljs-title">exploit</span> <span class="hljs-title">can</span> <span class="hljs-title">be</span> <span class="hljs-title">found</span> <span class="hljs-title">on</span> <span class="hljs-title">Attacker</span> <span class="hljs-title">KB</span><br><br><br></code></pre></td></tr></table></figure><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><br><br><span class="hljs-bullet">- </span>CVE-2025-31161.py<br><span class="hljs-bullet">- </span>README.md<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CVE-2025:github search</tag>
+      
+      <tag>权限绕过</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>【高危漏洞预警】FreeFloat FTP服务器缓冲区溢出漏洞CVE-2025-5596</title>
     <link href="/2025/06/06/weixin_668747673/"/>
     <url>/2025/06/06/weixin_668747673/</url>
