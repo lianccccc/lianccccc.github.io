@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-06T02:30:17.400Z</updated>
+  <updated>2025-06-06T03:08:15.401Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PaloAlto-Expedition OS命令注入漏洞 (CVE-2025-0107)</title>
+    <link href="http://example.com/2025/06/06/weixin_2159643239/"/>
+    <id>http://example.com/2025/06/06/weixin_2159643239/</id>
+    <published>2025-06-06T03:08:15.402Z</published>
+    <updated>2025-06-06T03:08:15.401Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> Nday Poc</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/c4ClFZyz2V0EuoZS8J8Mzg">https://mp.weixin.qq.com/s/c4ClFZyz2V0EuoZS8J8Mzg</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; Nday Poc&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/c4ClFZyz2V0EuoZS8J8Mzg&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="Nday Poc" scheme="http://example.com/tags/Nday-Poc/"/>
+    
+  </entry>
   
   <entry>
     <title>HTTP Protocol Stack Remote Code Execution Vulnerability</title>
@@ -556,35 +583,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="缓冲区溢出" scheme="http://example.com/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HyperComments WordPress 权限提升漏洞</title>
-    <link href="http://example.com/2025/06/05/github_4186176404/"/>
-    <id>http://example.com/2025/06/05/github_4186176404/</id>
-    <published>2025-06-05T13:45:17.661Z</published>
-    <updated>2025-06-05T13:45:17.658Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> HyperComments WordPress 权限提升漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-5701</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> HyperComments WordPress插件存在权限提升漏洞，由于在hc_request_handler函数中缺少能力检查，攻击者可以未经授权修改数据，导致权限提升。此漏洞允许未认证的攻击者更新WordPress站点上的任意选项，包括将注册默认角色更新为管理员，并启用用户注册，从而获得对受影响站点的管理员用户访问权限。</p><p><strong>产品厂商：</strong> HyperComments</p><p><strong>产品名称：</strong> HyperComments WordPress Plugin</p><p><strong>影响版本：</strong> version &lt;&#x3D; 1.2.2</p><p><strong>来源：</strong> <a href="https://github.com/Harley21211/CVE-2025-5701-Exploit">https://github.com/Harley21211/CVE-2025-5701-Exploit</a></p><p><strong>类型：</strong> CVE-2025:github search</p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><br><span class="hljs-comment"># CVE-2025-5701 - HyperComments WordPress Privilege Escalation Vulnerability</span><br><br><span class="hljs-comment">## Exploit:</span><br><span class="hljs-comment">### [Download here](https://tinyurl.com/ypnm6cpe)</span><br><br><span class="hljs-comment">## Details</span><br>+ *<span class="hljs-number">*C</span>VE ID**: CVE-2025-5701<br><br>+ **Published**: 6/5/2025<br>+ *<span class="hljs-number">*C</span>VSS**: 9.8<br>+ **Patch Available:  (<span class="hljs-literal">No</span> official patch yet)**<br><span class="hljs-comment">## Impact</span><br>The HyperComments plugin <span class="hljs-keyword">for</span> WordPress is vulnerable <span class="hljs-keyword">to</span> unauthorized modification of data that can lead <span class="hljs-keyword">to</span> privilege escalation due <span class="hljs-keyword">to</span> a missing capability check on the hc_request_handler function <span class="hljs-keyword">in</span> all versions up <span class="hljs-keyword">to</span>, <span class="hljs-keyword">and</span> including, 1.2.2. This makes it possible <span class="hljs-keyword">for</span> unauthenticated attackers <span class="hljs-keyword">to</span> update arbitrary options on the WordPress site. This can be leveraged <span class="hljs-keyword">to</span> update the<span class="hljs-built_in"> default </span>role <span class="hljs-keyword">for</span> registration <span class="hljs-keyword">to</span> administrator <span class="hljs-keyword">and</span> <span class="hljs-built_in">enable</span><span class="hljs-built_in"> user </span>registration <span class="hljs-keyword">for</span> attackers <span class="hljs-keyword">to</span> gain administrative<span class="hljs-built_in"> user </span>access <span class="hljs-keyword">to</span> a vulnerable site.<br><br><br><span class="hljs-comment">## Contact</span><br>+ *<span class="hljs-number">*F</span><span class="hljs-keyword">or</span> inquiries, please contact:johntabs21@outlook.com**<br><br><br></code></pre></td></tr></table></figure><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><br><br><span class="hljs-bullet">- </span>README.md<br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; HyperComments WordPress 权限提升漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-2025-5701&lt;/li&gt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
     
   </entry>
   
