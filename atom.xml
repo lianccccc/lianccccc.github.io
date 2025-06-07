@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-07T07:42:06.985Z</updated>
+  <updated>2025-06-07T09:08:24.548Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【已复现】Dataease JWT 认证绕过漏洞/远程代码执行（CVE-2025-49001/CVE-2025-49002）</title>
+    <link href="http://example.com/2025/06/07/weixin_1406208734/"/>
+    <id>http://example.com/2025/06/07/weixin_1406208734/</id>
+    <published>2025-06-07T09:08:24.551Z</published>
+    <updated>2025-06-07T09:08:24.548Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 安全探索者</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/mCtwln5-56IRkT2-6ht-Dg">https://mp.weixin.qq.com/s/mCtwln5-56IRkT2-6ht-Dg</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 安全探索者&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/mCtwln5-56IRkT2-6ht-Dg&quot;&gt;https://mp.weixin.qq.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="安全探索者" scheme="http://example.com/tags/%E5%AE%89%E5%85%A8%E6%8E%A2%E7%B4%A2%E8%80%85/"/>
+    
+  </entry>
   
   <entry>
     <title>勒索软件面前：谈判究竟是救命还是陷阱？</title>
@@ -556,35 +583,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CloudClassroom PHP Project 跨站可执行脚本漏洞</title>
-    <link href="http://example.com/2025/06/06/github_1410594503/"/>
-    <id>http://example.com/2025/06/06/github_1410594503/</id>
-    <published>2025-06-06T14:00:18.711Z</published>
-    <updated>2025-06-06T14:00:18.707Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> CloudClassroom PHP Project 跨站可执行脚本漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-46178</li></ul><p><strong>漏洞类型：</strong> 跨站可执行脚本</p><p><strong>漏洞描述：</strong> CloudClassroom PHP Project中存在跨站脚本(XSS)漏洞，具体细节未提供。</p><p><strong>产品名称：</strong> CloudClassroom PHP Project</p><p><strong>来源：</strong> <a href="https://github.com/SacX-7/CVE-2025-46178">https://github.com/SacX-7/CVE-2025-46178</a></p><p><strong>类型：</strong> CVE-2025:github search</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs"><br><br><br></code></pre></td></tr></table></figure><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm"><br><br>- Cross-Site <span class="hljs-keyword">Scripting </span>(XSS) in <span class="hljs-keyword">CloudClassroom </span>PHP Project<br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CloudClassroom PHP Project 跨站可执行脚本漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-2025-461</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="跨站可执行脚本" scheme="http://example.com/tags/%E8%B7%A8%E7%AB%99%E5%8F%AF%E6%89%A7%E8%A1%8C%E8%84%9A%E6%9C%AC/"/>
     
   </entry>
   
