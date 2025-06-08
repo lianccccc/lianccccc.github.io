@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-08T14:45:28.108Z</updated>
+  <updated>2025-06-08T15:15:14.647Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CVE-2025-5840 Exploit</title>
+    <link href="http://example.com/2025/06/08/github_2646467311/"/>
+    <id>http://example.com/2025/06/08/github_2646467311/</id>
+    <published>2025-06-08T15:15:14.648Z</published>
+    <updated>2025-06-08T15:15:14.647Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> CVE-2025-5840 Exploit</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-5840</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> CVE-2025-5840的利用程序，由haxerr9用Python编写。</p><p><strong>来源：</strong> <a href="https://github.com/haxerr9/CVE-2025-5840">https://github.com/haxerr9/CVE-2025-5840</a></p><p><strong>类型：</strong> CVE-2025:github search</p><figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs subunit"><br># CVE<span class="hljs-string">-2025</span><span class="hljs-string">-5840</span><br>CVE<span class="hljs-string">-2025</span><span class="hljs-string">-5840</span> Exploit Written In Python By haxerr9<br><br><br></code></pre></td></tr></table></figure><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><br><br><span class="hljs-bullet">- </span>README.md<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CVE-2025-5840 Exploit&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-2025-5840&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+  </entry>
   
   <entry>
     <title>Remote for Mac 未授权远程代码执行漏洞</title>
@@ -554,33 +585,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/PdK8JsTm-MWtyjGH-7UVoQ&quot;&gt;https://mp.weixin.qq.c</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>真实场景下蜜罐里的黑客会做什么？</title>
-    <link href="http://example.com/2025/06/08/weixin_1317074895/"/>
-    <id>http://example.com/2025/06/08/weixin_1317074895/</id>
-    <published>2025-06-08T03:30:12.211Z</published>
-    <updated>2025-06-08T03:30:12.229Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/8bopmYjhXdDBaDRZQee6WA">https://mp.weixin.qq.com/s/8bopmYjhXdDBaDRZQee6WA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/8bopmYjhXdDBaDRZQee6WA&quot;&gt;https://mp.weixin.qq.c</summary>
       
     
     
