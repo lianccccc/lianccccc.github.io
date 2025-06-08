@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Apache HTTP Server mod_proxy_uwsgi 信息泄露与远程代码执行漏洞</title>
+    <link href="/2025/06/08/github_2105330856/"/>
+    <url>/2025/06/08/github_2105330856/</url>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Apache HTTP Server mod_proxy_uwsgi 信息泄露与远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2020-11984</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Apache HTTP Server 2.4.32至2.4.44版本中的mod_proxy_uwsgi模块存在信息泄露及可能的远程代码执行漏洞。远程攻击者可通过发送精心构造的请求访问敏感信息，并可能执行任意代码。</p><p><strong>产品厂商：</strong> Apache</p><p><strong>产品名称：</strong> Apache HTTP Server</p><p><strong>影响版本：</strong> 2.4.32 &lt;&#x3D; version &lt;&#x3D; 2.4.44</p><p><strong>搜索语法：</strong> cpe:”cpe:2.3:a:apache:http_server”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12266">https://github.com/projectdiscovery/nuclei-templates/issues/12266</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs coffeescript"><br><br><span class="hljs-comment">### Description: </span><br><span class="hljs-comment">&gt; Apache HTTP Server 2.4.32 to 2.4.44 contains an info disclosure and possible remote code execution caused by a vulnerability in mod_proxy_uwsgi, letting remote attackers access sensitive information and potentially execute arbitrary code, exploit requires sending crafted requests.</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">###</span><span class="hljs-comment"># Severity: \`Critical\`</span><br><br><span class="hljs-comment">#### POC: </span><br><span class="hljs-comment">- http://packetstormsecurity.com/files/159009/Apache2-mod_proxy_uwsgi-Incorrect-Request-Handling.html</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">###</span> KEV: True<br><br><span class="hljs-comment">### Shodan Query: \`cpe:&quot;cpe:2.3:a:apache:http_server&quot;\`</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">&gt; Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(\`-debug\`) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </span><br><span class="hljs-comment"></span><br><span class="hljs-comment">&gt; Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">You can check the FAQ for the Nuclei Templates Community Rewards Program [here](https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md).</span><br><span class="hljs-comment"></span><br><span class="hljs-comment"></span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>信息泄露</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>CVE-2025-5840 Exploit</title>
     <link href="/2025/06/08/github_2646467311/"/>
     <url>/2025/06/08/github_2646467311/</url>
@@ -806,33 +833,6 @@
       <tag>rapid7/metasploit-framework:github issues</tag>
       
       <tag>反序列化</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Apache HTTP Server mod_proxy_uwsgi 信息泄露与远程代码执行漏洞</title>
-    <link href="/2025/06/07/github_2105330856/"/>
-    <url>/2025/06/07/github_2105330856/</url>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Apache HTTP Server mod_proxy_uwsgi 信息泄露与远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2020-11984</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Apache HTTP Server 2.4.32至2.4.44版本中的mod_proxy_uwsgi模块存在信息泄露及可能的远程代码执行漏洞。远程攻击者可通过发送特制请求访问敏感信息并可能执行任意代码。</p><p><strong>产品厂商：</strong> Apache</p><p><strong>产品名称：</strong> Apache HTTP Server</p><p><strong>影响版本：</strong> 2.4.32 &lt;&#x3D; version &lt;&#x3D; 2.4.44</p><p><strong>搜索语法：</strong> cpe:”cpe:2.3:a:apache:http_server”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12266">https://github.com/projectdiscovery/nuclei-templates/issues/12266</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs coffeescript"><br><br><span class="hljs-comment">### Description: </span><br><span class="hljs-comment">&gt; Apache HTTP Server 2.4.32 to 2.4.44 contains an info disclosure and possible remote code execution caused by a vulnerability in mod_proxy_uwsgi, letting remote attackers access sensitive information and potentially execute arbitrary code, exploit requires sending crafted requests.</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">###</span><span class="hljs-comment"># Severity: \`Critical\`</span><br><br><span class="hljs-comment">#### POC: </span><br><span class="hljs-comment">- http://packetstormsecurity.com/files/159009/Apache2-mod_proxy_uwsgi-Incorrect-Request-Handling.html</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">###</span> KEV: True<br><br><span class="hljs-comment">### Shodan Query: \`cpe:&quot;cpe:2.3:a:apache:http_server&quot;\`</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">&gt; Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(\`-debug\`) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </span><br><span class="hljs-comment"></span><br><span class="hljs-comment">&gt; Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">You can check the FAQ for the Nuclei Templates Community Rewards Program [here](https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md).</span><br><span class="hljs-comment"></span><br><span class="hljs-comment"></span><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-    <categories>
-      
-      <category>Github Poc</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
-      <tag>信息泄露</tag>
       
     </tags>
     
