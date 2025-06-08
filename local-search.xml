@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>MSKSSRV Vulnerability</title>
+    <link href="/2025/06/08/github_1355030689/"/>
+    <url>/2025/06/08/github_1355030689/</url>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> MSKSSRV Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-36802</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>产品名称：</strong> MSKSSRV</p><p><strong>来源：</strong> <a href="https://github.com/sahil-mpatki/CVE-2023-36802-MSKSSRV">https://github.com/sahil-mpatki/CVE-2023-36802-MSKSSRV</a></p><p><strong>类型：</strong> CVE-2023:github search</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs"><br><br><br></code></pre></td></tr></table></figure><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><br><br><span class="hljs-bullet">- </span>.gitignore<br><span class="hljs-bullet">- </span>Cargo.toml<br><span class="hljs-bullet">- </span>src<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>其他</tag>
+      
+      <tag>CVE-2023:github search</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>真实场景下蜜罐里的黑客会做什么？</title>
     <link href="/2025/06/08/weixin_306252007/"/>
     <url>/2025/06/08/weixin_306252007/</url>
