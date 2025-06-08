@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>QNAP Photo Station 路径遍历漏洞</title>
+    <link href="/2025/06/08/github_2731243997/"/>
+    <url>/2025/06/08/github_2731243997/</url>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> QNAP Photo Station 路径遍历漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2019-7194</li></ul><p><strong>漏洞类型：</strong> 目录遍历</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> QNAP Photo Station 存在外部文件名或路径控制漏洞，由于验证不足，远程攻击者可以访问或修改系统文件，利用此漏洞需要远程网络访问。</p><p><strong>产品厂商：</strong> QNAP</p><p><strong>产品名称：</strong> QNAP Photo Station</p><p><strong>搜索语法：</strong> content-length: 580 “http server 1.0”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12254">https://github.com/projectdiscovery/nuclei-templates/issues/12254</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs coffeescript"><br><br><span class="hljs-comment">### Description: </span><br><span class="hljs-comment">&gt; QNAP Photo Station contains an external control of file name or path caused by insufficient validation, letting remote attackers access or modify system files, exploit requires remote network access.</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">###</span><span class="hljs-comment"># Severity: \`Critical\`</span><br><br><span class="hljs-comment">#### POC: </span><br><span class="hljs-comment">- http://packetstormsecurity.com/files/157857/QNAP-QTS-And-Photo-Station-6.0.3-Remote-Command-Execution.html</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">###</span> KEV: True<br><br><span class="hljs-comment">### Shodan Query: \`content-length: 580 &quot;http server 1.0&quot;\`</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">&gt; Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(\`-debug\`) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </span><br><span class="hljs-comment"></span><br><span class="hljs-comment">&gt; Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">You can check the FAQ for the Nuclei Templates Community Rewards Program [here](https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md).</span><br><span class="hljs-comment"></span><br><span class="hljs-comment"></span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>目录遍历</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>CVE-2025-22870 SSRF Vulnerability</title>
     <link href="/2025/06/08/github_872488466/"/>
     <url>/2025/06/08/github_872488466/</url>
@@ -2829,33 +2856,6 @@
       <tag>mp.weixin.qq.com</tag>
       
       <tag>独眼情报</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>QNAP Photo Station 路径遍历漏洞</title>
-    <link href="/2025/06/05/github_2731243997/"/>
-    <url>/2025/06/05/github_2731243997/</url>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> QNAP Photo Station 路径遍历漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2019-7194</li></ul><p><strong>漏洞类型：</strong> 目录遍历</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> QNAP Photo Station 存在一个由于验证不足导致的外部文件名或路径控制漏洞，允许远程攻击者访问或修改系统文件，利用此漏洞需要远程网络访问。</p><p><strong>产品厂商：</strong> QNAP</p><p><strong>产品名称：</strong> QNAP Photo Station</p><p><strong>搜索语法：</strong> content-length: 580 “http server 1.0”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12254">https://github.com/projectdiscovery/nuclei-templates/issues/12254</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs coffeescript"><br><br><span class="hljs-comment">### Description: </span><br><span class="hljs-comment">&gt; QNAP Photo Station contains an external control of file name or path caused by insufficient validation, letting remote attackers access or modify system files, exploit requires remote network access.</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">###</span><span class="hljs-comment"># Severity: \`Critical\`</span><br><br><span class="hljs-comment">#### POC: </span><br><span class="hljs-comment">- http://packetstormsecurity.com/files/157857/QNAP-QTS-And-Photo-Station-6.0.3-Remote-Command-Execution.html</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">###</span> KEV: True<br><br><span class="hljs-comment">### Shodan Query: \`content-length: 580 &quot;http server 1.0&quot;\`</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">&gt; Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(\`-debug\`) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </span><br><span class="hljs-comment"></span><br><span class="hljs-comment">&gt; Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">You can check the FAQ for the Nuclei Templates Community Rewards Program [here](https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md).</span><br><span class="hljs-comment"></span><br><span class="hljs-comment"></span><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-    <categories>
-      
-      <category>Github Poc</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
-      <tag>目录遍历</tag>
       
     </tags>
     
