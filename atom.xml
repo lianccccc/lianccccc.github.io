@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-09T07:16:07.499Z</updated>
+  <updated>2025-06-09T07:45:13.607Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Chromium Blink Use-After-Free Vulnerability</title>
+    <link href="http://example.com/2025/06/09/github_3414628195/"/>
+    <id>http://example.com/2025/06/09/github_3414628195/</id>
+    <published>2025-06-09T07:45:13.608Z</published>
+    <updated>2025-06-09T07:45:13.607Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> Chromium Blink Use-After-Free Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-5068</li></ul><p><strong>漏洞类型：</strong> 代码注入</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Chromium Blink 组件中存在一个释放后使用漏洞，可能导致远程代码执行。</p><p><strong>产品厂商：</strong> Chromium</p><p><strong>产品名称：</strong> Chromium Blink</p><p><strong>来源：</strong> <a href="https://github.com/amandanegefa/CVE-2025-5068">https://github.com/amandanegefa/CVE-2025-5068</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><h1 id="CVE-2025-5068"><a href="#CVE-2025-5068" class="headerlink" title="CVE-2025-5068"></a>CVE-2025-5068</h1><p>Remote Code Execution via Use-After-Free in Chromium Blink</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;注: 本模块来自 AI 可能存在错误 &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="代码注入" scheme="http://example.com/tags/%E4%BB%A3%E7%A0%81%E6%B3%A8%E5%85%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>D-Link Network Attached Storage (NAS) 命令注入漏洞</title>
@@ -401,9 +430,9 @@
     <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
     
     
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
     
   </entry>
   
@@ -551,33 +580,6 @@
     <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
     
     <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>风险自担</title>
-    <link href="http://example.com/2025/06/08/weixin_1737441097/"/>
-    <id>http://example.com/2025/06/08/weixin_1737441097/</id>
-    <published>2025-06-08T14:20:22.643Z</published>
-    <updated>2025-06-08T14:20:22.640Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/PyeoBQIdOL7uddtuMlM3ww">https://mp.weixin.qq.com/s/PyeoBQIdOL7uddtuMlM3ww</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/PyeoBQIdOL7uddtuMlM3ww&quot;&gt;https://mp.weixin.qq.c</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
     
   </entry>
   

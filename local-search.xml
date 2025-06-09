@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Chromium Blink Use-After-Free Vulnerability</title>
+    <link href="/2025/06/09/github_3414628195/"/>
+    <url>/2025/06/09/github_3414628195/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> Chromium Blink Use-After-Free Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-5068</li></ul><p><strong>漏洞类型：</strong> 代码注入</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Chromium Blink 组件中存在一个释放后使用漏洞，可能导致远程代码执行。</p><p><strong>产品厂商：</strong> Chromium</p><p><strong>产品名称：</strong> Chromium Blink</p><p><strong>来源：</strong> <a href="https://github.com/amandanegefa/CVE-2025-5068">https://github.com/amandanegefa/CVE-2025-5068</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><h1 id="CVE-2025-5068"><a href="#CVE-2025-5068" class="headerlink" title="CVE-2025-5068"></a>CVE-2025-5068</h1><p>Remote Code Execution via Use-After-Free in Chromium Blink</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CVE-2025:github search</tag>
+      
+      <tag>代码注入</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>D-Link Network Attached Storage (NAS) 命令注入漏洞</title>
     <link href="/2025/06/09/github_1810332867/"/>
     <url>/2025/06/09/github_1810332867/</url>
@@ -371,9 +398,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -587,9 +614,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -776,9 +803,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -1019,9 +1046,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -1908,9 +1935,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -2097,9 +2124,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -2448,9 +2475,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -3555,9 +3582,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -3609,9 +3636,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -3636,9 +3663,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -3663,9 +3690,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -4230,9 +4257,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -4257,9 +4284,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -4392,9 +4419,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -4446,9 +4473,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -4473,9 +4500,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -4554,9 +4581,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -4849,9 +4876,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -4876,9 +4903,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -5146,9 +5173,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -5198,9 +5225,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -5306,9 +5333,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -5489,9 +5516,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -5516,9 +5543,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -5570,9 +5597,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -5597,9 +5624,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -5651,9 +5678,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -5705,9 +5732,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -5813,9 +5840,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -6133,9 +6160,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -6395,9 +6422,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -6503,9 +6530,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -6636,9 +6663,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
