@@ -4,6 +4,60 @@
   
   
   <entry>
+    <title>WordPress Nasa Core Plugin 本地文件包含漏洞</title>
+    <link href="/2025/06/09/github_3642247367/"/>
+    <url>/2025/06/09/github_3642247367/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> WordPress Nasa Core Plugin 本地文件包含漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-39507</li></ul><p><strong>漏洞类型：</strong> 文件包含</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> WordPress的Nasa Core插件（版本6.3.2及以下）存在一个本地文件包含漏洞（CVE-2025-39507）。攻击者可以通过操纵文件输入参数来访问服务器上的敏感文件，例如通过构造特定的URL路径（如<code>/index.php?file=../../../../etc/passwd</code>）来尝试读取系统文件。该漏洞源于插件未能正确验证文件输入，导致攻击者可以指定任意路径进行文件包含操作。</p><p><strong>产品厂商：</strong> WordPress</p><p><strong>产品名称：</strong> Nasa Core Plugin</p><p><strong>影响版本：</strong> &lt;&#x3D; 6.3.2</p><p><strong>来源：</strong> <a href="https://github.com/blackgirlinfosec/cve-lfi-lab">https://github.com/blackgirlinfosec/cve-lfi-lab</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="原始信息"><a href="#原始信息" class="headerlink" title="原始信息"></a>原始信息</h1><h2 id="🧠-CVE-Lab-Tier-1-SOC-Analyst-Simulation"><a href="#🧠-CVE-Lab-Tier-1-SOC-Analyst-Simulation" class="headerlink" title="🧠 CVE Lab: Tier 1 SOC Analyst Simulation"></a>🧠 CVE Lab: Tier 1 SOC Analyst Simulation</h2><h3 id="CVE-2025-39507-Local-File-Inclusion-in-WordPress-Nasa-Core-Plugin"><a href="#CVE-2025-39507-Local-File-Inclusion-in-WordPress-Nasa-Core-Plugin" class="headerlink" title="CVE-2025-39507 | Local File Inclusion in WordPress Nasa Core Plugin"></a>CVE-2025-39507 | Local File Inclusion in WordPress Nasa Core Plugin</h3><hr><h3 id="📝-Scenario-A-Day-in-the-SOC"><a href="#📝-Scenario-A-Day-in-the-SOC" class="headerlink" title="📝 Scenario: A Day in the SOC"></a>📝 Scenario: A Day in the SOC</h3><p>It’s a regular Monday. I’m logged into the SOC dashboard, reviewing alerts like usual. One comes in that catches my eye:</p><blockquote><p><strong>ALERT:</strong> Possible Local File Inclusion (LFI) Attempt<br><strong>IP Address:</strong> 203.0.113.44<br><strong>URL:</strong> <code>/index.php?file=../../../../etc/passwd</code><br><strong>User Agent:</strong> curl&#x2F;7.81.0</p></blockquote><p>It looks like someone might be trying to access system files by manipulating a URL. My job is to look into it and decide if this needs to be escalated.</p><hr><h3 id="🔎-Background-on-the-CVE"><a href="#🔎-Background-on-the-CVE" class="headerlink" title="🔎 Background on the CVE"></a>🔎 Background on the CVE</h3><p>After some quick research, I found this matches a known vulnerability: <strong>CVE-2025-39507</strong>. It affects a WordPress plugin called <strong>Nasa Core</strong> (version 6.3.2 and below). It allows attackers to view sensitive files on the server by changing a file input parameter.</p><p>Example:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">/index.php?file=../../../../etc/passwd<br></code></pre></td></tr></table></figure><p>If the plugin doesn’t validate the file input correctly, it’ll just follow whatever path the attacker gives it.</p><hr><h3 id="🛠️-My-Tier-1-Investigation"><a href="#🛠️-My-Tier-1-Investigation" class="headerlink" title="🛠️ My Tier 1 Investigation"></a>🛠️ My Tier 1 Investigation</h3><h4 id="1-Checked-the-Alert-in-Sentinel"><a href="#1-Checked-the-Alert-in-Sentinel" class="headerlink" title="1. Checked the Alert in Sentinel"></a>1. Checked the Alert in Sentinel</h4><p>I didn’t write the detection rule, but I reviewed it to understand what triggered the alert. It looks for things like:</p><ul><li>URLs with “..&#x2F;” (path traversal)</li><li>Requests to sensitive files like <code>/etc/passwd</code> or <code>/wp-config.php</code></li><li>Scripts or tools in the user agent (like curl or Python)</li></ul><p>Here’s a simplified version of the rule:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs kql">CommonSecurityLog<br>| where RequestURL has &quot;../&quot; <br>   or RequestURL has &quot;etc/passwd&quot;<br>   or RequestURL has &quot;wp-config&quot;<br>| where DeviceCustomString1 contains &quot;curl&quot; or DeviceCustomString1 contains &quot;python&quot;<br>| project TimeGenerated, SourceIP, RequestURL, DeviceCustomString1<br></code></pre></td></tr></table></figure><hr><h4 id="2-Looked-Up-the-IP-Address"><a href="#2-Looked-Up-the-IP-Address" class="headerlink" title="2. Looked Up the IP Address"></a>2. Looked Up the IP Address</h4><p>I ran a query to see if the IP <code>203.0.113.44</code> was trying anything else:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs kql">CommonSecurityLog<br>| where SourceIP == &quot;203.0.113.44&quot;<br>| summarize count() by RequestURL<br></code></pre></td></tr></table></figure><p>Turns out, it also hit other paths like <code>/admin/</code>, <code>/login.php</code>, and <code>/wp-config.php</code>. That told me this wasn’t just a one-time request — it was probably a scanner or someone doing recon.</p><hr><h4 id="3-Checked-the-Timeline"><a href="#3-Checked-the-Timeline" class="headerlink" title="3. Checked the Timeline"></a>3. Checked the Timeline</h4><p>I checked how long the IP had been active in our logs:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs kql">CommonSecurityLog<br>| where SourceIP == &quot;203.0.113.44&quot;<br>| summarize FirstSeen=min(TimeGenerated), LastSeen=max(TimeGenerated)<br></code></pre></td></tr></table></figure><p>It started a few hours ago and was still active recently. So it wasn’t historical noise — this was ongoing.</p><hr><h4 id="4-Escalated-to-Tier-2"><a href="#4-Escalated-to-Tier-2" class="headerlink" title="4. Escalated to Tier 2"></a>4. Escalated to Tier 2</h4><p>Here’s how I documented it for escalation:</p><blockquote><p>“Possible LFI scan from IP 203.0.113.44. The request pattern matches CVE-2025-39507. IP accessed 9 unique paths including &#x2F;etc&#x2F;passwd and wp-config.php using curl. Behavior suggests automated recon. Recommend Tier 2 review and possible IP block.”</p></blockquote><hr><h3 id="📸-Screenshots"><a href="#📸-Screenshots" class="headerlink" title="📸 Screenshots"></a>📸 Screenshots</h3><table><thead><tr><th>#</th><th>Description</th><th>File</th></tr></thead><tbody><tr><td>1</td><td>CVE Listing (Patchstack)</td><td><code>1_cve_selection_listing.png</code></td></tr><tr><td>2</td><td>Patchstack Overview</td><td><code>2_patchstack_cve_overview.png</code></td></tr><tr><td>3</td><td>VulDB Vector Example</td><td><code>3_vuldb_exploit_vector.png</code></td></tr><tr><td>4</td><td>Azure Kali VM Created</td><td><code>4_kali_vm_deployed.png</code></td></tr><tr><td>5</td><td>VM Running Screenshot</td><td><code>5_kali_vm_running_status.png</code></td></tr><tr><td>6</td><td>SSH Access to Kali</td><td><code>6_kali_vm_logged_in.png</code></td></tr><tr><td>7</td><td>Sentinel KQL Rule Review</td><td><code>7_lfi_detection_kql_query.png</code></td></tr></tbody></table><p>All screenshots are located in the <code>/screenshots</code> folder.</p><hr><h3 id="🔁-Reflection"><a href="#🔁-Reflection" class="headerlink" title="🔁 Reflection"></a>🔁 Reflection</h3><p>Some questions I asked myself as I worked through this:</p><ul><li>What signs in the logs made this alert stand out?</li><li>How can I tell if this is just a scanner or something more serious?</li><li>What else might happen if this LFI attack actually succeeded?</li><li>What’s the right balance between alert fatigue and escalation?</li></ul><hr><h3 id="🔜-What’s-Next-–-Phase-2"><a href="#🔜-What’s-Next-–-Phase-2" class="headerlink" title="🔜 What’s Next – Phase 2"></a>🔜 What’s Next – Phase 2</h3><p>Next, I’ll run a safe simulation of this attack in a controlled lab environment using a platform like TryHackMe. The goal is to better understand what this type of activity looks like from the attacker’s side — and what kind of logs it creates.</p><hr><h3 id="⚠️-Disclaimer"><a href="#⚠️-Disclaimer" class="headerlink" title="⚠️ Disclaimer"></a>⚠️ Disclaimer</h3><p>This lab was done in a safe, ethical environment for training purposes only. No real systems were targeted or harmed. Always follow your organization’s rules and never test exploits on systems you don’t own or have permission to test.</p><hr>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CVE-2025:github search</tag>
+      
+      <tag>文件包含</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Dataease JWT 认证绕过导致未授权访问漏洞CVE-2025-49001 附POC</title>
+    <link href="/2025/06/09/weixin_3638245131/"/>
+    <url>/2025/06/09/weixin_3638245131/</url>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 南风漏洞复现文库</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/zRGIM1-H0Y3PZ5OTPg3FNw">https://mp.weixin.qq.com/s/zRGIM1-H0Y3PZ5OTPg3FNw</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信公众号</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>mp.weixin.qq.com</tag>
+      
+      <tag>南风漏洞复现文库</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Roundcube Post-Auth RCE via PHP Object Deserialization Vulnerability</title>
     <link href="/2025/06/09/github_1520894148/"/>
     <url>/2025/06/09/github_1520894148/</url>
