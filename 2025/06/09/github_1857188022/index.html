@@ -1,0 +1,770 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="lianccc">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="漏洞名称： Remote Desktop Services 远程代码执行漏洞 漏洞编号：  CVE： CVE-2019-0708  漏洞类型： 远程代码执行 漏洞等级： 严重 漏洞描述： 远程桌面服务（原终端服务）存在一个远程代码执行漏洞，由未经认证的攻击者通过RDP发送特制请求引起，允许远程攻击者执行任意代码。利用此漏洞需要网络访问RDP端口。 产品厂商： Microsoft 产品名称： Rem">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Remote Desktop Services 远程代码执行漏洞">
+<meta property="og:url" content="http://example.com/2025/06/09/github_1857188022/index.html">
+<meta property="og:site_name" content="liancc&#39; infos blog">
+<meta property="og:description" content="漏洞名称： Remote Desktop Services 远程代码执行漏洞 漏洞编号：  CVE： CVE-2019-0708  漏洞类型： 远程代码执行 漏洞等级： 严重 漏洞描述： 远程桌面服务（原终端服务）存在一个远程代码执行漏洞，由未经认证的攻击者通过RDP发送特制请求引起，允许远程攻击者执行任意代码。利用此漏洞需要网络访问RDP端口。 产品厂商： Microsoft 产品名称： Rem">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-06-09T02:30:17.519Z">
+<meta property="article:modified_time" content="2025-06-09T02:30:17.519Z">
+<meta property="article:author" content="lianccc">
+<meta property="article:tag" content="projectdiscovery&#x2F;nuclei-templates:github issues">
+<meta property="article:tag" content="远程代码执行">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>Remote Desktop Services 远程代码执行漏洞 - liancc&#39; infos blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="liancc' infos blog" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Remote Desktop Services 远程代码执行漏洞"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-06-09 02:30" pubdate>
+          2025年6月9日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          957 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          8 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Remote Desktop Services 远程代码执行漏洞</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p><strong>漏洞名称：</strong> Remote Desktop Services 远程代码执行漏洞</p>
+<p><strong>漏洞编号：</strong></p>
+<ul>
+<li><strong>CVE：</strong> CVE-2019-0708</li>
+</ul>
+<p><strong>漏洞类型：</strong> 远程代码执行</p>
+<p><strong>漏洞等级：</strong> 严重</p>
+<p><strong>漏洞描述：</strong> 远程桌面服务（原终端服务）存在一个远程代码执行漏洞，由未经认证的攻击者通过RDP发送特制请求引起，允许远程攻击者执行任意代码。利用此漏洞需要网络访问RDP端口。</p>
+<p><strong>产品厂商：</strong> Microsoft</p>
+<p><strong>产品名称：</strong> Remote Desktop Services</p>
+<p><strong>搜索语法：</strong> cpe:”cpe:2.3:o:microsoft:windows_7”</p>
+<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei-templates/issues/12278">https://github.com/projectdiscovery/nuclei-templates/issues/12278</a></p>
+<p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p>
+<h3 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h3><blockquote>
+<p>Remote Desktop Services (formerly Terminal Services) contains a remote code execution caused by specially crafted requests sent over RDP by unauthenticated attackers, letting remote attackers execute arbitrary code, exploit requires network access to RDP port.</p>
+</blockquote>
+<h4 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h4><h4 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h4><ul>
+<li><a target="_blank" rel="noopener" href="http://packetstormsecurity.com/files/153133/Microsoft-Windows-Remote-Desktop-BlueKeep-Denial-Of-Service.html">http://packetstormsecurity.com/files/153133/Microsoft-Windows-Remote-Desktop-BlueKeep-Denial-Of-Service.html</a></li>
+<li><a target="_blank" rel="noopener" href="http://packetstormsecurity.com/files/153627/Microsoft-Windows-RDP-BlueKeep-Denial-Of-Service.html">http://packetstormsecurity.com/files/153627/Microsoft-Windows-RDP-BlueKeep-Denial-Of-Service.html</a></li>
+<li><a target="_blank" rel="noopener" href="http://packetstormsecurity.com/files/154579/BlueKeep-RDP-Remote-Windows-Kernel-Use-After-Free.html">http://packetstormsecurity.com/files/154579/BlueKeep-RDP-Remote-Windows-Kernel-Use-After-Free.html</a></li>
+<li><a target="_blank" rel="noopener" href="http://packetstormsecurity.com/files/162960/Microsoft-RDP-Remote-Code-Execution.html">http://packetstormsecurity.com/files/162960/Microsoft-RDP-Remote-Code-Execution.html</a></li>
+<li>https&#x2F;&#x2F;&#x2F;github.com:jinshengsoul&#x2F;Exploit-factory.git</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/isabelacostaz/CVE-2019-0708-POC">https://github.com/isabelacostaz/CVE-2019-0708-POC</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/hualy13/CVE-2019-0708-Check">https://github.com/hualy13/CVE-2019-0708-Check</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/DenuwanJayasekara/CVE-Exploitation-Reports">https://github.com/DenuwanJayasekara/CVE-Exploitation-Reports</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/adyanamul/Remote-Code-Execution-RCE-Exploit-BlueKeep-CVE-2019-0708-PoC">https://github.com/adyanamul/Remote-Code-Execution-RCE-Exploit-BlueKeep-CVE-2019-0708-PoC</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/rasan2001/Microsoft-Remote-Desktop-Services-Remote-Code-Execution-Vulnerability-CVE-2019-0708">https://github.com/rasan2001/Microsoft-Remote-Desktop-Services-Remote-Code-Execution-Vulnerability-CVE-2019-0708</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/tranqtruong/Detect-BlueKeep">https://github.com/tranqtruong/Detect-BlueKeep</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/davidfortytwo/bluekeep">https://github.com/davidfortytwo/bluekeep</a></li>
+<li><a target="_blank" rel="noopener" href="https://vulncheck.com/xdb/0543fd1784c2">https://vulncheck.com/xdb/0543fd1784c2</a></li>
+<li>https&#x2F;&#x2F;&#x2F;github.com:davidfortytwo&#x2F;bluekeep.git</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Ravaan21/Bluekeep-Hunter">https://github.com/Ravaan21/Bluekeep-Hunter</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CPT-Jack-A-Castle/Haruster-CVE-2019-0708-Exploit">https://github.com/CPT-Jack-A-Castle/Haruster-CVE-2019-0708-Exploit</a></li>
+<li><a target="_blank" rel="noopener" href="https://vulncheck.com/xdb/fee7134123f4">https://vulncheck.com/xdb/fee7134123f4</a></li>
+<li>https&#x2F;&#x2F;&#x2F;gitee.com:mirrors_n1xbyte&#x2F;CVE-2019-0708.git</li>
+<li><a target="_blank" rel="noopener" href="https://vulncheck.com/xdb/495f5c9a61a0">https://vulncheck.com/xdb/495f5c9a61a0</a></li>
+<li>https&#x2F;&#x2F;&#x2F;gitee.com:mirrors_k8gege&#x2F;CVE-2019-0708.git</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/offensity/CVE-2019-0708">https://github.com/offensity/CVE-2019-0708</a></li>
+<li><a target="_blank" rel="noopener" href="https://vulncheck.com/xdb/a34013074716">https://vulncheck.com/xdb/a34013074716</a></li>
+<li>https&#x2F;&#x2F;&#x2F;github.com:offensity&#x2F;CVE-2019-0708.git</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/lisinan988/CVE-2019-0708-scan">https://github.com/lisinan988/CVE-2019-0708-scan</a></li>
+<li><a target="_blank" rel="noopener" href="https://vulncheck.com/xdb/87091cafec0a">https://vulncheck.com/xdb/87091cafec0a</a></li>
+<li>https&#x2F;&#x2F;&#x2F;github.com:lisinan988&#x2F;CVE-2019-0708-scan.git</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/bibo318/kali-CVE-2019-0708-lab">https://github.com/bibo318/kali-CVE-2019-0708-lab</a></li>
+<li><a target="_blank" rel="noopener" href="https://vulncheck.com/xdb/7536b79e5849">https://vulncheck.com/xdb/7536b79e5849</a></li>
+<li>https&#x2F;&#x2F;&#x2F;gitee.com:e4ting&#x2F;CVE-2019-0708.git</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/pywc/CVE-2019-0708">https://github.com/pywc/CVE-2019-0708</a></li>
+<li><a target="_blank" rel="noopener" href="https://vulncheck.com/xdb/d18cbf862a1b">https://vulncheck.com/xdb/d18cbf862a1b</a></li>
+<li>https&#x2F;&#x2F;&#x2F;github.com:pywc&#x2F;CVE-2019-0708.git</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/CircuitSoul/CVE-2019-0708">https://github.com/CircuitSoul/CVE-2019-0708</a></li>
+<li><a target="_blank" rel="noopener" href="https://vulncheck.com/xdb/9565e85eb46c">https://vulncheck.com/xdb/9565e85eb46c</a></li>
+<li>https&#x2F;&#x2F;&#x2F;gitee.com:tancehello&#x2F;CVE-2019-0708.git</li>
+<li><a target="_blank" rel="noopener" href="https://vulncheck.com/xdb/92468824377e">https://vulncheck.com/xdb/92468824377e</a></li>
+<li>https&#x2F;&#x2F;&#x2F;gitee.com:tancehello&#x2F;Check-vuln-CVE-2019-0708.git</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/go-bi/CVE-2019-0708-EXP-Windows">https://github.com/go-bi/CVE-2019-0708-EXP-Windows</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/DeathStroke-source/Mass-scanner-for-CVE-2019-0708-RDP-RCE-Exploit">https://github.com/DeathStroke-source/Mass-scanner-for-CVE-2019-0708-RDP-RCE-Exploit</a></li>
+<li><a target="_blank" rel="noopener" href="https://vulncheck.com/xdb/9523c9b3ece9">https://vulncheck.com/xdb/9523c9b3ece9</a></li>
+<li>https&#x2F;&#x2F;&#x2F;gitee.com:nmaps&#x2F;cve-2019-0708-exp-msf.git</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/AaronCaiii/CVE-2019-0708-POC">https://github.com/AaronCaiii/CVE-2019-0708-POC</a></li>
+<li><a target="_blank" rel="noopener" href="https://vulncheck.com/xdb/2116a08dcafd">https://vulncheck.com/xdb/2116a08dcafd</a></li>
+<li>https&#x2F;&#x2F;&#x2F;gitee.com:isdc_admin&#x2F;CVE-2019-0708.git</li>
+<li><a target="_blank" rel="noopener" href="https://vulncheck.com/xdb/c67a96a54a2f">https://vulncheck.com/xdb/c67a96a54a2f</a></li>
+<li>https&#x2F;&#x2F;&#x2F;gitee.com:noofisec&#x2F;CVE-2019-0708-1.git</li>
+<li><a target="_blank" rel="noopener" href="https://vulncheck.com/xdb/d0813d668813">https://vulncheck.com/xdb/d0813d668813</a></li>
+<li>https&#x2F;&#x2F;&#x2F;gitee.com:noofisec&#x2F;CVE-2019-0708.git</li>
+<li><a target="_blank" rel="noopener" href="https://vulncheck.com/xdb/f783965878ba">https://vulncheck.com/xdb/f783965878ba</a></li>
+<li>https&#x2F;&#x2F;&#x2F;gitee.com:cysec&#x2F;CVE-2019-0708.git</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/nochemax/bLuEkEeP-GUI">https://github.com/nochemax/bLuEkEeP-GUI</a></li>
+<li><a target="_blank" rel="noopener" href="https://vulncheck.com/xdb/48acdd34a61b">https://vulncheck.com/xdb/48acdd34a61b</a></li>
+<li>https&#x2F;&#x2F;&#x2F;gitee.com:hazy_little_sky&#x2F;CVE-2019-0708-1.git</li>
+<li><a target="_blank" rel="noopener" href="https://vulncheck.com/xdb/3a02e0152437">https://vulncheck.com/xdb/3a02e0152437</a></li>
+<li>https&#x2F;&#x2F;&#x2F;gitee.com:hazy_little_sky&#x2F;CVE-2019-0708.git</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/JSec1337/Scanner-CVE-2019-0708">https://github.com/JSec1337/Scanner-CVE-2019-0708</a></li>
+<li><a target="_blank" rel="noopener" href="https://vulncheck.com/xdb/b78833c5a34c">https://vulncheck.com/xdb/b78833c5a34c</a></li>
+<li>https&#x2F;&#x2F;&#x2F;github.com:JSec1337&#x2F;Scanner-CVE-2019-0708.git</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/RICSecLab/CVE-2019-0708">https://github.com/RICSecLab/CVE-2019-0708</a></li>
+<li><a target="_blank" rel="noopener" href="https://vulncheck.com/xdb/0a6b5b0cbd12">https://vulncheck.com/xdb/0a6b5b0cbd12</a></li>
+<li>https&#x2F;&#x2F;&#x2F;github.com:RICSecLab&#x2F;CVE-2019-0708.git</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/eastmountyxz/CVE-2019-0708-Windows">https://github.com/eastmountyxz/CVE-2019-0708-Windows</a></li>
+<li><a target="_blank" rel="noopener" href="https://vulncheck.com/xdb/4447344e0e57">https://vulncheck.com/xdb/4447344e0e57</a></li>
+<li>https&#x2F;&#x2F;&#x2F;github.com:eastmountyxz&#x2F;CVE-2019-0708-Windows.git</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/cbwang505/CVE-2019-0708-EXP-Windows">https://github.com/cbwang505/CVE-2019-0708-EXP-Windows</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Ameg-yag/Wincrash">https://github.com/Ameg-yag/Wincrash</a></li>
+<li><a target="_blank" rel="noopener" href="https://vulncheck.com/xdb/9b644acc642d">https://vulncheck.com/xdb/9b644acc642d</a></li>
+<li>https&#x2F;&#x2F;&#x2F;github.com:Ameg-yag&#x2F;Wincrash.git</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/worawit/CVE-2019-0708">https://github.com/worawit/CVE-2019-0708</a></li>
+<li><a target="_blank" rel="noopener" href="https://vulncheck.com/xdb/9d68385aa1c1">https://vulncheck.com/xdb/9d68385aa1c1</a></li>
+<li>https&#x2F;&#x2F;&#x2F;github.com:worawit&#x2F;CVE-2019-0708.git</li>
+<li><a target="_blank" rel="noopener" href="https://vulncheck.com/xdb/b0cd57c5988d">https://vulncheck.com/xdb/b0cd57c5988d</a></li>
+<li>https&#x2F;&#x2F;&#x2F;gitlab.com:ntkernel&#x2F;Remote-Desktop-Services-Remote-Code-Execution-Vulnerability-CVE-2019-0708-.git</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/ulisesrc/-2-CVE-2019-0708">https://github.com/ulisesrc/-2-CVE-2019-0708</a></li>
+<li><a target="_blank" rel="noopener" href="https://vulncheck.com/xdb/8b5d56b910c5">https://vulncheck.com/xdb/8b5d56b910c5</a></li>
+<li>https&#x2F;&#x2F;&#x2F;github.com:ulisesrc&#x2F;-2-CVE-2019-0708.git</li>
+<li><a target="_blank" rel="noopener" href="https://vulncheck.com/xdb/b63c341a0817">https://vulncheck.com/xdb/b63c341a0817</a></li>
+<li>https&#x2F;&#x2F;&#x2F;gitee.com:Cross6&#x2F;CVE-2019-0708.git</li>
+<li><a target="_blank" rel="noopener" href="https://vulncheck.com/xdb/1bd6e3d7edf2">https://vulncheck.com/xdb/1bd6e3d7edf2</a></li>
+<li>https&#x2F;&#x2F;&#x2F;gitee.com:mibrony&#x2F;BlueKeep.git</li>
+<li><a target="_blank" rel="noopener" href="https://vulncheck.com/xdb/181fc435a9f1">https://vulncheck.com/xdb/181fc435a9f1</a></li>
+<li>https&#x2F;&#x2F;&#x2F;gitee.com:bxqtee&#x2F;CVE-2019-0708.git</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Cyb0r9/ispy">https://github.com/Cyb0r9/ispy</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/coolboy4me/cve-2019-0708_bluekeep_rce">https://github.com/coolboy4me/cve-2019-0708_bluekeep_rce</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/1aa87148377/CVE-2019-0708">https://github.com/1aa87148377/CVE-2019-0708</a></li>
+<li><a target="_blank" rel="noopener" href="https://vulncheck.com/xdb/387c8e6971fe">https://vulncheck.com/xdb/387c8e6971fe</a></li>
+<li>https&#x2F;&#x2F;&#x2F;github.com:1aa87148377&#x2F;CVE-2019-0708.git</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/0xFlag/CVE-2019-0708-test">https://github.com/0xFlag/CVE-2019-0708-test</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/distance-vector/CVE-2019-0708">https://github.com/distance-vector/CVE-2019-0708</a></li>
+<li><a target="_blank" rel="noopener" href="https://vulncheck.com/xdb/bf63479c559b">https://vulncheck.com/xdb/bf63479c559b</a></li>
+<li>https&#x2F;&#x2F;&#x2F;github.com:distance-vector&#x2F;CVE-2019-0708.git</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/qing-root/CVE-2019-0708-EXP-MSF-">https://github.com/qing-root/CVE-2019-0708-EXP-MSF-</a></li>
+<li><a target="_blank" rel="noopener" href="https://vulncheck.com/xdb/bb428db8e94d">https://vulncheck.com/xdb/bb428db8e94d</a></li>
+<li>https&#x2F;&#x2F;&#x2F;github.com:qing-root&#x2F;CVE-2019-0708-EXP-MSF-.git</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/0x6b7966/CVE-2019-0708-RCE">https://github.com/0x6b7966/CVE-2019-0708-RCE</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/FrostsaberX/CVE-2019-0708">https://github.com/FrostsaberX/CVE-2019-0708</a></li>
+<li><a target="_blank" rel="noopener" href="https://vulncheck.com/xdb/f0d631a0e09b">https://vulncheck.com/xdb/f0d631a0e09b</a></li>
+<li>https&#x2F;&#x2F;&#x2F;github.com:FrostsaberX&#x2F;CVE-2019-0708.git</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Micr067/CVE-2019-0708RDP-MSF">https://github.com/Micr067/CVE-2019-0708RDP-MSF</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/wqsemc/CVE-2019-0708">https://github.com/wqsemc/CVE-2019-0708</a></li>
+</ul>
+<h3 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h3><h3 id="Shodan-Query-cpe-cpe-2-3-o-microsoft-windows-7"><a href="#Shodan-Query-cpe-cpe-2-3-o-microsoft-windows-7" class="headerlink" title="Shodan Query: cpe:&quot;cpe:2.3:o:microsoft:windows_7&quot;"></a>Shodan Query: <code>cpe:&quot;cpe:2.3:o:microsoft:windows_7&quot;</code></h3><blockquote>
+<p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p>
+</blockquote>
+<blockquote>
+<p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p>
+</blockquote>
+<p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Github-Poc/" class="category-chain-item">Github Poc</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/projectdiscovery-nuclei-templates-github-issues/" class="print-no-link">#projectdiscovery/nuclei-templates:github issues</a>
+      
+        <a href="/tags/%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C/" class="print-no-link">#远程代码执行</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Remote Desktop Services 远程代码执行漏洞</div>
+      <div>http://example.com/2025/06/09/github_1857188022/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>lianccc</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年6月9日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/06/09/weixin_902362189/" title="博斯外贸管理软件V6.0 DCreceiveBox.jsp SQL注入漏洞">
+                        <span class="hidden-mobile">博斯外贸管理软件V6.0 DCreceiveBox.jsp SQL注入漏洞</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
