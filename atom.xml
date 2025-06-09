@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-09T21:30:13.786Z</updated>
+  <updated>2025-06-09T21:45:14.039Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>FortiVoice, FortiMail, FortiNDR, FortiRecorder and FortiCamera Vulnerability</title>
+    <link href="http://example.com/2025/06/09/github_267401796/"/>
+    <id>http://example.com/2025/06/09/github_267401796/</id>
+    <published>2025-06-09T21:45:14.038Z</published>
+    <updated>2025-06-09T21:45:14.039Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> FortiVoice, FortiMail, FortiNDR, FortiRecorder and FortiCamera Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-32756</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> CVE-2025-32756是一个影响FortiVoice、FortiMail、FortiNDR、FortiRecorder和FortiCamera的漏洞，允许远程代码执行。</p><p><strong>产品厂商：</strong> Fortinet</p><p><strong>产品名称：</strong> FortiVoice, FortiMail, FortiNDR, FortiRecorder, FortiCamera</p><p><strong>来源：</strong> <a href="https://github.com/becrevex/CVE-2025-32756">https://github.com/becrevex/CVE-2025-32756</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>fortinet_cve_2025_32756.nse</li></ul><h1 id="原始信息"><a href="#原始信息" class="headerlink" title="原始信息"></a>原始信息</h1><h2 id="CVE-2025-32756"><a href="#CVE-2025-32756" class="headerlink" title="CVE-2025-32756"></a>CVE-2025-32756</h2><p>CVE-2025-32756: FortiVoice, FortiMail, FortiNDR, FortiRecorder and FortiCamera Vulnerability</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;注: 本模块来自 AI 可能存在错误 &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+  </entry>
   
   <entry>
     <title>Yealink 默认用户凭证漏洞</title>
@@ -549,35 +578,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CVE-2023-20198</title>
-    <link href="http://example.com/2025/06/09/github_3682454851/"/>
-    <id>http://example.com/2025/06/09/github_3682454851/</id>
-    <published>2025-06-09T10:45:45.948Z</published>
-    <updated>2025-06-09T10:45:45.947Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> CVE-2023-20198</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-20198</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>来源：</strong> <a href="https://github.com/Arshit01/CVE-2023-20198">https://github.com/Arshit01/CVE-2023-20198</a></p><p><strong>类型：</strong> CVE-2023:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>1.png</li><li>10.png</li><li>2.png</li><li>3.png</li><li>4.png</li><li>5.png</li><li>6.png</li><li>7.png</li><li>8.png</li><li>9.png</li><li>C3850.png</li><li>CVE-2023-20198.docx</li><li>CVE-2023-20198.pdf</li><li>exploit.py</li><li>nmap.png</li></ul><h1 id="原始信息"><a href="#原始信息" class="headerlink" title="原始信息"></a>原始信息</h1>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;注: 本模块来自 AI 可能存在错误 &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
-    
-    <category term="CVE-2023:github search" scheme="http://example.com/tags/CVE-2023-github-search/"/>
     
   </entry>
   
