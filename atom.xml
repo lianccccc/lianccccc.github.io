@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-09T09:45:32.581Z</updated>
+  <updated>2025-06-09T10:02:45.978Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安全热点周报：Google 修复了在攻击中被利用的新 Chrome 零日漏洞</title>
+    <link href="http://example.com/2025/06/09/weixin_3039797443/"/>
+    <id>http://example.com/2025/06/09/weixin_3039797443/</id>
+    <published>2025-06-09T10:02:45.981Z</published>
+    <updated>2025-06-09T10:02:45.978Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 奇安信 CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/QHwsoObCZZYi0IdQ7QRBcQ">https://mp.weixin.qq.com/s/QHwsoObCZZYi0IdQ7QRBcQ</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 奇安信 CERT&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/QHwsoObCZZYi0IdQ7QRBcQ&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="奇安信 CERT" scheme="http://example.com/tags/%E5%A5%87%E5%AE%89%E4%BF%A1-CERT/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux Kernel ksmbd Use-After-Free Vulnerability</title>
@@ -549,33 +576,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>新版 Mirai 僵尸网络攻击全球超5万台DVR设备</title>
-    <link href="http://example.com/2025/06/09/weixin_2026431937/"/>
-    <id>http://example.com/2025/06/09/weixin_2026431937/</id>
-    <published>2025-06-09T01:05:05.710Z</published>
-    <updated>2025-06-09T01:05:05.705Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/2tXpRoSsRdc3X9uOP_EUlQ">https://mp.weixin.qq.com/s/2tXpRoSsRdc3X9uOP_EUlQ</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/2tXpRoSsRdc3X9uOP_EUlQ&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
     
   </entry>
   
