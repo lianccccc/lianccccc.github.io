@@ -4,6 +4,87 @@
   
   
   <entry>
+    <title>D-Link Network Attached Storage (NAS) 命令注入漏洞</title>
+    <link href="/2025/06/09/github_1810332867/"/>
+    <url>/2025/06/09/github_1810332867/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> D-Link Network Attached Storage (NAS) 命令注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-10914</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> CVE-2024-10914是一个影响多款旧版D-Link网络附加存储(NAS)设备的关键命令注入漏洞。该漏洞允许攻击者通过向易受攻击的端点发送特制请求来执行任意命令。</p><p><strong>产品厂商：</strong> D-Link</p><p><strong>产品名称：</strong> D-Link-DNS-ShareCenter</p><p><strong>搜索语法：</strong> app&#x3D;”D_Link-DNS-ShareCenter” &amp;&amp; server&#x3D;&#x3D;”lighttpd&#x2F;1.4.25-devel-fb150ff”</p><p><strong>来源：</strong> <a href="https://github.com/TH-SecForge/CVE-2024-10914">https://github.com/TH-SecForge/CVE-2024-10914</a></p><p><strong>类型：</strong> CVE-2024:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>LICENSE</li><li>README.md</li><li>exploit.py</li><li>requirements.txt</li><li>targets.txt</li></ul><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><h1 id="CVE-2024-10914-D-Link-Remote-Code-Execution-RCE-Exploit"><a href="#CVE-2024-10914-D-Link-Remote-Code-Execution-RCE-Exploit" class="headerlink" title="CVE-2024-10914 - D-Link Remote Code Execution (RCE) Exploit"></a>CVE-2024-10914 - D-Link Remote Code Execution (RCE) Exploit</h1><p>This script is a proof-of-concept (PoC) exploit for CVE-2024-10914, a remote code execution vulnerability in certain D-Link devices. The script identifies and exploits vulnerable devices to execute arbitrary commands.</p><p><strong>Note:</strong> This script should only be used for educational purposes or in authorized environments. Unauthorized exploitation of this vulnerability may be illegal and unethical.</p><hr><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">Finding Targets<br>To find potential targets, use Fofa (similar to Shodan.io):<br><br>Fofa Dork: app=<span class="hljs-string">&quot;D_Link-DNS-ShareCenter&quot;</span> &amp;&amp; server==<span class="hljs-string">&quot;lighttpd/1.4.25-devel-fb150ff&quot;</span><br></code></pre></td></tr></table></figure><h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><ul><li><strong>Vulnerability Check</strong>: The script can check if a target is vulnerable to CVE-2024-10914.</li><li><strong>Exploit</strong>: Exploit the vulnerability by sending payloads to gain remote command execution.</li><li><strong>Interactive Shell</strong>: After exploitation, an interactive shell is started for executing further commands.</li><li><strong>Multi-target Scanning</strong>: Scan multiple targets from a file using multiple threads for faster vulnerability detection.</li></ul><hr><h2 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h2><ul><li>Python 3.x</li><li><code>requests</code> (for HTTP requests)</li><li><code>alive-progress</code> (for progress bars)</li><li><code>prompt_toolkit</code> (for the interactive shell)</li><li><code>argparse</code> (for handling command-line arguments)</li></ul><p>To install required libraries, use:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip3 install -r requirements.txt<br></code></pre></td></tr></table></figure><h2 id="Command-Line-Arguments"><a href="#Command-Line-Arguments" class="headerlink" title="Command-Line Arguments"></a>Command-Line Arguments</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs bash">usage: exploit.py [-h] [-u URL] [-f FILE] [-t THREADS] [-p PORT]<br><br>A PoC exploit <span class="hljs-keyword">for</span> CVE-2024-10914 - D-Link Remote Code Execution (RCE)<br><br>optional arguments:<br>  -h, --<span class="hljs-built_in">help</span>            Show this <span class="hljs-built_in">help</span> message and <span class="hljs-built_in">exit</span><br>  -u URL, --url URL     Single target IP to <span class="hljs-built_in">test</span> (e.g., 192.168.1.1)<br>  -f FILE, --file FILE  File containing list of target IPs to scan<br>  -t THREADS, --threads THREADS<br>                        Number of threads to use <span class="hljs-keyword">for</span> scanning (default: 5)<br>  -p PORT, --port PORT  Port to target (default: 80)<br><br></code></pre></td></tr></table></figure><h1 id="Example-Usage"><a href="#Example-Usage" class="headerlink" title="Example Usage"></a>Example Usage</h1><ul><li>Check a Single Target:</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 exploit.py -u 192.168.1.100 -p 80<br></code></pre></td></tr></table></figure><h1 id="Scan-Multiple-Targets-from-a-File"><a href="#Scan-Multiple-Targets-from-a-File" class="headerlink" title="Scan Multiple Targets from a File"></a>Scan Multiple Targets from a File</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 exploit.py -f targets.txt -p 80 -t 10<br></code></pre></td></tr></table></figure><h1 id="Exploit-Details"><a href="#Exploit-Details" class="headerlink" title="Exploit Details"></a>Exploit Details</h1><p>This script attempts to exploit a vulnerability in D-Link devices, specifically targeting the following</p><ul><li>Vulnerable Endpoint: &#x2F;cgi-bin&#x2F;account_mgr.cgi?cmd&#x3D;cgi_user_add&amp;name&#x3D;’;{};’</li><li>Payloads: Various system commands (id, uname -a, hostname, cat &#x2F;proc&#x2F;cpuinfo, etc.)<br>The exploit is carried out by injecting system commands into the vulnerable endpoint, triggering the remote execution of arbitrary commands on the target device</li></ul><h1 id="Disclaimer"><a href="#Disclaimer" class="headerlink" title="Disclaimer"></a>Disclaimer</h1><p>This script is for educational purposes only. Do not use this script on systems or networks you do not have explicit permission to test.</p><p>The authors are not responsible for any misuse of this tool.</p><p>For more details, please refer to the official GitHub repository:<br><a href="https://github.com/ThemeHackers/CVE-2024-10914">https://github.com/ThemeHackers/CVE-2024-10914</a></p><h1 id="Contributing"><a href="#Contributing" class="headerlink" title="Contributing"></a>Contributing</h1><p>If you find any issues or want to contribute, feel free to open an issue or submit a pull request on the GitHub repository.</p><h1 id="License"><a href="#License" class="headerlink" title="License"></a>License</h1><p>This project is licensed under the MIT License - see the LICENSE file for details</p><h3 id="Key-Sections-of-the-README"><a href="#Key-Sections-of-the-README" class="headerlink" title="Key Sections of the README:"></a>Key Sections of the README:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs bash">MIT License<br><br>Copyright (c) 2024 ds_zct<br><br>Permission is hereby granted, free of charge, to any person obtaining a copy<br>of this software and associated documentation files (the <span class="hljs-string">&quot;Software&quot;</span>), to deal<br><span class="hljs-keyword">in</span> the Software without restriction, including without limitation the rights<br>to use, copy, modify, merge, publish, distribute, sublicense, and/or sell<br>copies of the Software, and to permit persons to whom the Software is<br>furnished to <span class="hljs-keyword">do</span> so, subject to the following conditions:<br><br>The above copyright notice and this permission notice shall be included <span class="hljs-keyword">in</span> all<br>copies or substantial portions of the Software.<br><br>THE SOFTWARE IS PROVIDED <span class="hljs-string">&quot;AS IS&quot;</span>, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR<br>IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,<br>FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE<br>AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER<br>LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,<br>OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE<br>SOFTWARE.<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>命令执行</tag>
+      
+      <tag>CVE-2024:github search</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Windows File Explorer Spoofing Vulnerability</title>
+    <link href="/2025/06/09/github_1509923262/"/>
+    <url>/2025/06/09/github_1509923262/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> Windows File Explorer Spoofing Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-24071</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Microsoft Windows File Explorer存在一个欺骗漏洞，编号为CVE-2025-24071。该漏洞源于Windows Explorer对<code>.library-ms</code>文件的隐式信任和自动解析行为。未经认证的攻击者可以通过构造包含恶意SMB路径的RAR&#x2F;ZIP文件来利用此漏洞。解压缩时，会触发SMB认证请求，可能泄露用户的NTLM哈希。目前已有公开的PoC（概念验证）利用代码，使得该漏洞成为当前威胁。受影响的用户应立即应用补丁以降低风险。</p><p><strong>产品厂商：</strong> Microsoft</p><p><strong>产品名称：</strong> Windows File Explorer</p><p><strong>影响版本：</strong> Windows 10 Version 1809 for x64-based Systems, Windows 10 Version 1809 for 32-bit Systems, Windows Server 2025 (Server Core installation), Windows Server 2025, Windows Server 2012 R2 (Server Core installation), Windows Server 2012 R2, Windows Server 2016 (Server Core installation), Windows Server 2016, Windows 10 Version 1607 for x64-based Systems, Windows 10 Version 1607 for 32-bit Systems, Windows 10 for x64-based Systems, Windows 10 for 32-bit Systems, Windows 11 Version 24H2 for x64-based Systems, Windows 11 Version 24H2 for ARM64-based Systems, Windows Server 2022, 23H2 Edition (Server Core installation), Windows 11 Version 23H2 for x64-based Systems, Windows 11 Version 23H2 for ARM64-based Systems, Windows 10 Version 22H2 for 32-bit Systems, Windows 10 Version 22H2 for ARM64-based Systems, Windows 10 Version 22H2 for x64-based Systems, Windows 11 Version 22H2 for x64-based Systems, Windows 11 Version 22H2 for ARM64-based Systems, Windows 10 Version 21H2 for x64-based Systems, Windows 10 Version 21H2 for ARM64-based Systems, Windows 10 Version 21H2 for 32-bit Systems, Windows Server 2022 (Server Core installation), Windows Server 2022, Windows Server 2019 (Server Core installation), Windows Server 2019</p><p><strong>来源：</strong> <a href="https://github.com/TH-SecForge/CVE-2025-24071">https://github.com/TH-SecForge/CVE-2025-24071</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>LICENSE</li><li>README.md</li><li>exploit.py</li><li>requirements.txt</li></ul><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><h1 id="Security-Vulnerability-Report-CVE-2025-24071-Windows-File-Explorer-Spoofing-Vulnerability"><a href="#Security-Vulnerability-Report-CVE-2025-24071-Windows-File-Explorer-Spoofing-Vulnerability" class="headerlink" title="Security Vulnerability Report: CVE-2025-24071 - Windows File Explorer Spoofing Vulnerability"></a>Security Vulnerability Report: CVE-2025-24071 - Windows File Explorer Spoofing Vulnerability</h1><h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>NSFOCUS CERT has detected that Microsoft recently released a security update to address a critical spoofing vulnerability in Windows File Explorer, identified as <strong>CVE-2025-24071</strong>. This vulnerability has a CVSS score of 7.5, indicating its severity. The issue arises from the implicit trust and automatic file parsing behavior of <code>.library-ms</code> files in Windows Explorer. An unauthenticated attacker can exploit this vulnerability by constructing RAR&#x2F;ZIP files containing a malicious SMB path. Upon decompression, this triggers an SMB authentication request, potentially exposing the user’s NTLM hash. PoC (Proof of Concept) exploits for this vulnerability are now publicly available, making it a current threat. Affected users are strongly advised to apply the patch immediately to mitigate the risk.</p><p><strong>Reference</strong>: <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-24071">Microsoft Security Update</a></p><hr><h2 id="Scope-of-Impact"><a href="#Scope-of-Impact" class="headerlink" title="Scope of Impact"></a>Scope of Impact</h2><h3 id="Affected-Versions"><a href="#Affected-Versions" class="headerlink" title="Affected Versions:"></a>Affected Versions:</h3><ul><li>Windows 10 Version 1809 for x64-based Systems</li><li>Windows 10 Version 1809 for 32-bit Systems</li><li>Windows Server 2025 (Server Core installation)</li><li>Windows Server 2025</li><li>Windows Server 2012 R2 (Server Core installation)</li><li>Windows Server 2012 R2</li><li>Windows Server 2016 (Server Core installation)</li><li>Windows Server 2016</li><li>Windows 10 Version 1607 for x64-based Systems</li><li>Windows 10 Version 1607 for 32-bit Systems</li><li>Windows 10 for x64-based Systems</li><li>Windows 10 for 32-bit Systems</li><li>Windows 11 Version 24H2 for x64-based Systems</li><li>Windows 11 Version 24H2 for ARM64-based Systems</li><li>Windows Server 2022, 23H2 Edition (Server Core installation)</li><li>Windows 11 Version 23H2 for x64-based Systems</li><li>Windows 11 Version 23H2 for ARM64-based Systems</li><li>Windows 10 Version 22H2 for 32-bit Systems</li><li>Windows 10 Version 22H2 for ARM64-based Systems</li><li>Windows 10 Version 22H2 for x64-based Systems</li><li>Windows 11 Version 22H2 for x64-based Systems</li><li>Windows 11 Version 22H2 for ARM64-based Systems</li><li>Windows 10 Version 21H2 for x64-based Systems</li><li>Windows 10 Version 21H2 for ARM64-based Systems</li><li>Windows 10 Version 21H2 for 32-bit Systems</li><li>Windows Server 2022 (Server Core installation)</li><li>Windows Server 2022</li><li>Windows Server 2019 (Server Core installation)</li><li>Windows Server 2019</li></ul><hr><h2 id="Detection"><a href="#Detection" class="headerlink" title="Detection"></a>Detection</h2><p>To determine whether your system is at risk, follow these steps:</p><ol><li><p><strong>Check System Version:</strong></p><ul><li>Press <strong>Win+R</strong>, type <code>winver</code>, and press <strong>Enter</strong>. This will display the version and build number of your Windows operating system.</li></ul></li><li><p><strong>Verify Patch Installation:</strong></p><ul><li>Open <strong>Command Prompt</strong> and run <code>systeminfo</code> to check the details of installed patches.</li></ul></li></ol><hr><h2 id="Mitigation"><a href="#Mitigation" class="headerlink" title="Mitigation"></a>Mitigation</h2><p>Microsoft has released a security patch to address this vulnerability for all supported versions. It is crucial to apply the patch as soon as possible to protect against potential exploitation.</p><h3 id="Patch-Installation"><a href="#Patch-Installation" class="headerlink" title="Patch Installation:"></a>Patch Installation:</h3><ul><li><strong>Download the patch</strong>: <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-24071">Microsoft Security Update</a></li><li><strong>Windows Update</strong>: Go to <strong>Settings</strong> → <strong>Update &amp; Security</strong> → <strong>Windows Update</strong>. Check for updates and ensure the patch has been installed.</li><li><strong>View Update History</strong>: If the patch installation fails, you can view the update history or manually download the update from the <a href="https://www.catalog.update.microsoft.com/Home.aspx">Microsoft Update Catalog</a>.</li></ul><p>If the patch fails to install through Windows Update, you can manually download and install the standalone package by visiting the Microsoft Update Catalog.</p><hr><p>For further information and updates, refer to the official <a href="https://msrc.microsoft.com/">Microsoft Security Response Center</a>.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CVE-2025:github search</tag>
+      
+      <tag>信息泄露</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Next.js 授权绕过漏洞</title>
+    <link href="/2025/06/09/github_3982821577/"/>
+    <url>/2025/06/09/github_3982821577/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> Next.js 授权绕过漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-29927</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> CVE-2025-29927是影响Next.js的一个严重安全漏洞，Next.js是一个用于构建全栈Web应用的流行React框架。此漏洞允许攻击者绕过Next.js中间件中实现的授权检查，可能未经授权访问应用的敏感区域，如管理页面或用户仪表板。漏洞源于对内部<code>x-middleware-subrequest</code>头的不当处理。通过构造包含此头的请求，攻击者可以绕过中间件安全检查，跳过认证和授权机制。</p><p><strong>产品厂商：</strong> Next.js</p><p><strong>产品名称：</strong> Next.js</p><p><strong>影响版本：</strong> version &lt; 14.2.25, version &lt; 15.2.3</p><p><strong>来源：</strong> <a href="https://github.com/TH-SecForge/CVE-2025-29972">https://github.com/TH-SecForge/CVE-2025-29972</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>LICENSE</li><li>README.md</li><li>exploit.py</li><li>requirements.txt</li></ul><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><h1 id="CVE-2025-29927-Critical-Security-Vulnerability-in-Next-js"><a href="#CVE-2025-29927-Critical-Security-Vulnerability-in-Next-js" class="headerlink" title="CVE-2025-29927 - Critical Security Vulnerability in Next.js"></a>CVE-2025-29927 - Critical Security Vulnerability in Next.js</h1><h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>CVE-2025-29927 is a critical security vulnerability affecting <strong>Next.js</strong>, a popular React framework for building full-stack web applications. This flaw allows attackers to bypass authorization checks implemented in Next.js middleware, potentially granting unauthorized access to sensitive areas of an application, such as <strong>admin pages</strong> or <strong>user dashboards</strong>.</p><h2 id="Vulnerability-Details"><a href="#Vulnerability-Details" class="headerlink" title="Vulnerability Details"></a>Vulnerability Details</h2><p>The vulnerability arises from the improper handling of the internal <code>x-middleware-subrequest</code> header. By crafting requests that include this header, an attacker can <strong>bypass middleware security checks</strong>, effectively skipping authentication and authorization mechanisms.</p><h2 id="Affected-Versions"><a href="#Affected-Versions" class="headerlink" title="Affected Versions"></a>Affected Versions</h2><ul><li><strong>Next.js versions prior to 14.2.25 and 15.2.3</strong> are vulnerable.</li></ul><h2 id="How-to-use"><a href="#How-to-use" class="headerlink" title="How to use"></a>How to use</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/ThemeHackers/CVE-2025-29972<br><span class="hljs-built_in">cd</span> CVE-2025-29972<br>python3 -m venv .venv<br><span class="hljs-built_in">source</span> .venv/bin/activate<br>python3 exploit.py -h<br></code></pre></td></tr></table></figure><h2 id="Quick-to-use"><a href="#Quick-to-use" class="headerlink" title="Quick to use"></a>Quick to use</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/ThemeHackers/CVE-2025-29972<br><span class="hljs-built_in">cd</span> CVE-2025-29972<br>python3 -m venv .venv<br><span class="hljs-built_in">source</span> .venv/bin/activate<br>python3 exploit.py --hostname HOSTNAME<br></code></pre></td></tr></table></figure><hr><p>⚠️ <strong>Note:</strong> Ensure that your Next.js applications are always updated to the latest stable versions to prevent security risks.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CVE-2025:github search</tag>
+      
+      <tag>权限绕过</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Roundcube Post-Auth RCE via PHP Object Deserialization</title>
     <link href="/2025/06/09/github_755327755/"/>
     <url>/2025/06/09/github_755327755/</url>
@@ -290,9 +371,9 @@
     
     <tags>
       
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
       
     </tags>
     
@@ -506,9 +587,9 @@
     
     <tags>
       
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
       
     </tags>
     
@@ -695,9 +776,9 @@
     
     <tags>
       
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
       
     </tags>
     
@@ -938,9 +1019,9 @@
     
     <tags>
       
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
       
     </tags>
     
@@ -1827,9 +1908,9 @@
     
     <tags>
       
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
       
     </tags>
     
@@ -2016,9 +2097,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>rapid7/metasploit-framework:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -2367,9 +2448,9 @@
     
     <tags>
       
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
       
     </tags>
     
@@ -3474,9 +3555,9 @@
     
     <tags>
       
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
       
     </tags>
     
@@ -3528,9 +3609,9 @@
     
     <tags>
       
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
       
     </tags>
     
@@ -3555,9 +3636,9 @@
     
     <tags>
       
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
       
     </tags>
     
@@ -3582,9 +3663,9 @@
     
     <tags>
       
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
       
     </tags>
     
@@ -4149,9 +4230,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>rapid7/metasploit-framework:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -4176,9 +4257,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>rapid7/metasploit-framework:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -4311,9 +4392,9 @@
     
     <tags>
       
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
       
     </tags>
     
@@ -4365,9 +4446,9 @@
     
     <tags>
       
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
       
     </tags>
     
@@ -4392,9 +4473,9 @@
     
     <tags>
       
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
       
     </tags>
     
@@ -4473,9 +4554,9 @@
     
     <tags>
       
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
       
     </tags>
     
@@ -4768,9 +4849,9 @@
     
     <tags>
       
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
       
     </tags>
     
@@ -4795,9 +4876,9 @@
     
     <tags>
       
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
       
     </tags>
     
@@ -5065,9 +5146,9 @@
     
     <tags>
       
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
       
     </tags>
     
@@ -5117,9 +5198,9 @@
     
     <tags>
       
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
       
     </tags>
     
@@ -5225,9 +5306,9 @@
     
     <tags>
       
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
       
     </tags>
     
@@ -5408,9 +5489,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>rapid7/metasploit-framework:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -5435,9 +5516,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>rapid7/metasploit-framework:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -5489,9 +5570,9 @@
     
     <tags>
       
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
       
     </tags>
     
@@ -5516,9 +5597,9 @@
     
     <tags>
       
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
       
     </tags>
     
@@ -5570,9 +5651,9 @@
     
     <tags>
       
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
       
     </tags>
     
@@ -5624,9 +5705,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>rapid7/metasploit-framework:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -5732,9 +5813,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>rapid7/metasploit-framework:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -6052,9 +6133,9 @@
     
     <tags>
       
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
       
     </tags>
     
@@ -6314,9 +6395,9 @@
     
     <tags>
       
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
       
     </tags>
     
@@ -6422,9 +6503,9 @@
     
     <tags>
       
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
       
     </tags>
     
@@ -6555,9 +6636,9 @@
     
     <tags>
       
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
       
     </tags>
     
