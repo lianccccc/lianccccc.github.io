@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Cisco ISE Cloud Credential Sharing Vulnerability</title>
+    <link href="/2025/06/09/github_690904059/"/>
+    <url>/2025/06/09/github_690904059/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> Cisco ISE Cloud Credential Sharing Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-20286</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Cisco ISE云部署在AWS、Microsoft Azure和Oracle Cloud Infrastructure (OCI)上存在一个严重的凭证生成和授权逻辑缺陷，导致使用相同软件版本的云部署共享相同的凭证。这使得未经认证的远程攻击者能够提取有效凭证并在不同部署间提升权限。</p><p><strong>产品厂商：</strong> Cisco</p><p><strong>产品名称：</strong> Cisco Identity Services Engine (ISE)</p><p><strong>来源：</strong> <a href="https://github.com/amandanegefa/CVE-2025-20286">https://github.com/amandanegefa/CVE-2025-20286</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="原始信息"><a href="#原始信息" class="headerlink" title="原始信息"></a>原始信息</h1><h2 id="Zero-Day-Expl0it-for-Cisco-ISE-Cloud-Credential-Sharing-Vulnerability-CVE-2025-20286"><a href="#Zero-Day-Expl0it-for-Cisco-ISE-Cloud-Credential-Sharing-Vulnerability-CVE-2025-20286" class="headerlink" title="Zero-Day Expl0it for Cisco ISE Cloud Credential Sharing Vulnerability (CVE-2025-20286)"></a>Zero-Day Expl0it for Cisco ISE Cloud Credential Sharing Vulnerability (CVE-2025-20286)</h2><blockquote><p>All materials included in this repository are collected from publicly available sources.</p></blockquote><p>Severity: Critical (CVSS 9.9)</p><p>Affected Platforms: Cisco Identity Services Engine (ISE) cloud deployments on AWS, Microsoft Azure, and Oracle Cloud Infrastructure (OCI)</p><ul><li><p>Vulnerability Description:<br>A critical flaw in the credential generation and authorization logic causes multiple Cisco ISE cloud deployments to share identical credentials when using the same software release on the same cloud platform. This allows an unauthenticated remote attacker to extract valid credentials and escalate privileges across different deployments.</p></li><li><p>Expl0it Capabilities:</p><ul><li>Remote credential disclosure</li><li>Limited administrative operations</li><li>System configuration modification</li><li>Service disruption</li></ul></li></ul><p>Exploitation Method: Network-based, no prior authentication needed</p><p>Stability: Fully developed and tested expl0it with detailed deployment instructions</p><h3 id="Disclaimer-Intended-for-authorized-research-and-penetration-testing-only-misuse-prohibited"><a href="#Disclaimer-Intended-for-authorized-research-and-penetration-testing-only-misuse-prohibited" class="headerlink" title="Disclaimer: Intended for authorized research and penetration testing only; misuse prohibited"></a>Disclaimer: Intended for authorized research and penetration testing only; misuse prohibited</h3><blockquote><p>This repository will be deleted.</p></blockquote><p><a href="https://2ur.jp/v4Pf">Download</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>信息泄露</tag>
+      
+      <tag>CVE-2025:github search</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>OptinMonster Plugin 未受保护的REST-API漏洞</title>
     <link href="/2025/06/09/github_2177089673/"/>
     <url>/2025/06/09/github_2177089673/</url>
