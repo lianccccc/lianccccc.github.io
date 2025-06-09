@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Fortinet 缓冲区溢出漏洞</title>
+    <link href="/2025/06/09/github_2489067951/"/>
+    <url>/2025/06/09/github_2489067951/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> Fortinet 缓冲区溢出漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-32756</li></ul><p><strong>漏洞类型：</strong> 缓冲区溢出</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Fortinet产品中存在一个严重的基于栈的缓冲区溢出漏洞（CVE-2025-32756），影响FortiVoice、FortiMail、FortiNDR、FortiRecorder和FortiCamera。该漏洞存在于处理<code>/remote/hostcheck_validate</code>端点中的<code>enc</code>参数时，由于边界检查不当导致缓冲区溢出，允许未经身份验证的远程代码执行。</p><p><strong>产品厂商：</strong> Fortinet</p><p><strong>产品名称：</strong> FortiVoice, FortiMail, FortiNDR, FortiRecorder, FortiCamera</p><p><strong>影响版本：</strong> FortiVoice: 1.0.0 &lt; version &lt; 7.2.1, 7.0.7, 6.4.11; FortiMail: 1.0.0 &lt; version &lt; 7.6.3, 7.4.5, 7.2.8, 7.0.9; FortiNDR: 1.0.0 &lt; version &lt; 7.6.1, 7.4.8, 7.2.5, 7.0.7; FortiRecorder: 1.0.0 &lt; version &lt; 7.2.4, 7.0.6, 6.4.6; FortiCamera: 1.0.0 &lt; version &lt; 2.1.4</p><p><strong>来源：</strong> <a href="https://github.com/alm6no5/CVE-2025-32756-POC">https://github.com/alm6no5/CVE-2025-32756-POC</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>fortinet_cve_2025_32756_poc.py</li><li>requirements.txt</li></ul><h1 id="原始信息"><a href="#原始信息" class="headerlink" title="原始信息"></a>原始信息</h1><h2 id="CVE-2025-32756-Fortinet-RCE-PoC"><a href="#CVE-2025-32756-Fortinet-RCE-PoC" class="headerlink" title="CVE-2025-32756: Fortinet RCE PoC"></a>CVE-2025-32756: Fortinet RCE PoC</h2><p>A proof-of-concept for the critical stack-based buffer overflow vulnerability (CVE-2025-32756) affecting Fortinet products.</p><h3 id="Vulnerability"><a href="#Vulnerability" class="headerlink" title="Vulnerability"></a>Vulnerability</h3><ul><li><strong>CVSS</strong>: 9.8 (Critical)</li><li><strong>Type</strong>: Stack-based buffer overflow in AuthHash cookie processing </li><li><strong>Impact</strong>: Unauthenticated remote code execution</li><li><strong>Affected Products</strong>: FortiVoice, FortiMail, FortiNDR, FortiRecorder, FortiCamera</li></ul><p>The vulnerability exists in the processing of the <code>enc</code> parameter in the <code>/remote/hostcheck_validate</code> endpoint, where improper bounds checking allows buffer overflow.</p><h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">python3 fortinet_cve_2025_32756_poc<span class="hljs-selector-class">.py</span> target_ip <span class="hljs-selector-attr">[-p port]</span> <span class="hljs-selector-attr">[-d]</span><br></code></pre></td></tr></table></figure><h4 id="Arguments"><a href="#Arguments" class="headerlink" title="Arguments:"></a>Arguments:</h4><ul><li><code>target_ip</code>: Target Fortinet device</li><li><code>-p, --port</code>: Target port (default: 443)</li><li><code>-d, --debug</code>: Enable debug output</li></ul><h3 id="Mitigation"><a href="#Mitigation" class="headerlink" title="Mitigation"></a>Mitigation</h3><p>Update to patched versions:</p><ul><li>FortiVoice: 7.2.1+, 7.0.7+, 6.4.11+</li><li>FortiMail: 7.6.3+, 7.4.5+, 7.2.8+, 7.0.9+</li><li>FortiNDR: 7.6.1+, 7.4.8+, 7.2.5+, 7.0.7+</li><li>FortiRecorder: 7.2.4+, 7.0.6+, 6.4.6+</li><li>FortiCamera: 2.1.4+</li></ul><h3 id="Disclaimer"><a href="#Disclaimer" class="headerlink" title="Disclaimer"></a>Disclaimer</h3><p>For educational and research purposes only. Use only against systems you own or have permission to test. </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>PHPSHE SQL注入漏洞</title>
     <link href="/2025/06/09/github_4072317173/"/>
     <url>/2025/06/09/github_4072317173/</url>

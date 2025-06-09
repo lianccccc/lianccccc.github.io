@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-09T11:45:27.489Z</updated>
+  <updated>2025-06-09T12:15:25.083Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Fortinet 缓冲区溢出漏洞</title>
+    <link href="http://example.com/2025/06/09/github_2489067951/"/>
+    <id>http://example.com/2025/06/09/github_2489067951/</id>
+    <published>2025-06-09T12:15:25.083Z</published>
+    <updated>2025-06-09T12:15:25.083Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> Fortinet 缓冲区溢出漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-32756</li></ul><p><strong>漏洞类型：</strong> 缓冲区溢出</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Fortinet产品中存在一个严重的基于栈的缓冲区溢出漏洞（CVE-2025-32756），影响FortiVoice、FortiMail、FortiNDR、FortiRecorder和FortiCamera。该漏洞存在于处理<code>/remote/hostcheck_validate</code>端点中的<code>enc</code>参数时，由于边界检查不当导致缓冲区溢出，允许未经身份验证的远程代码执行。</p><p><strong>产品厂商：</strong> Fortinet</p><p><strong>产品名称：</strong> FortiVoice, FortiMail, FortiNDR, FortiRecorder, FortiCamera</p><p><strong>影响版本：</strong> FortiVoice: 1.0.0 &lt; version &lt; 7.2.1, 7.0.7, 6.4.11; FortiMail: 1.0.0 &lt; version &lt; 7.6.3, 7.4.5, 7.2.8, 7.0.9; FortiNDR: 1.0.0 &lt; version &lt; 7.6.1, 7.4.8, 7.2.5, 7.0.7; FortiRecorder: 1.0.0 &lt; version &lt; 7.2.4, 7.0.6, 6.4.6; FortiCamera: 1.0.0 &lt; version &lt; 2.1.4</p><p><strong>来源：</strong> <a href="https://github.com/alm6no5/CVE-2025-32756-POC">https://github.com/alm6no5/CVE-2025-32756-POC</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>fortinet_cve_2025_32756_poc.py</li><li>requirements.txt</li></ul><h1 id="原始信息"><a href="#原始信息" class="headerlink" title="原始信息"></a>原始信息</h1><h2 id="CVE-2025-32756-Fortinet-RCE-PoC"><a href="#CVE-2025-32756-Fortinet-RCE-PoC" class="headerlink" title="CVE-2025-32756: Fortinet RCE PoC"></a>CVE-2025-32756: Fortinet RCE PoC</h2><p>A proof-of-concept for the critical stack-based buffer overflow vulnerability (CVE-2025-32756) affecting Fortinet products.</p><h3 id="Vulnerability"><a href="#Vulnerability" class="headerlink" title="Vulnerability"></a>Vulnerability</h3><ul><li><strong>CVSS</strong>: 9.8 (Critical)</li><li><strong>Type</strong>: Stack-based buffer overflow in AuthHash cookie processing </li><li><strong>Impact</strong>: Unauthenticated remote code execution</li><li><strong>Affected Products</strong>: FortiVoice, FortiMail, FortiNDR, FortiRecorder, FortiCamera</li></ul><p>The vulnerability exists in the processing of the <code>enc</code> parameter in the <code>/remote/hostcheck_validate</code> endpoint, where improper bounds checking allows buffer overflow.</p><h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">python3 fortinet_cve_2025_32756_poc<span class="hljs-selector-class">.py</span> target_ip <span class="hljs-selector-attr">[-p port]</span> <span class="hljs-selector-attr">[-d]</span><br></code></pre></td></tr></table></figure><h4 id="Arguments"><a href="#Arguments" class="headerlink" title="Arguments:"></a>Arguments:</h4><ul><li><code>target_ip</code>: Target Fortinet device</li><li><code>-p, --port</code>: Target port (default: 443)</li><li><code>-d, --debug</code>: Enable debug output</li></ul><h3 id="Mitigation"><a href="#Mitigation" class="headerlink" title="Mitigation"></a>Mitigation</h3><p>Update to patched versions:</p><ul><li>FortiVoice: 7.2.1+, 7.0.7+, 6.4.11+</li><li>FortiMail: 7.6.3+, 7.4.5+, 7.2.8+, 7.0.9+</li><li>FortiNDR: 7.6.1+, 7.4.8+, 7.2.5+, 7.0.7+</li><li>FortiRecorder: 7.2.4+, 7.0.6+, 6.4.6+</li><li>FortiCamera: 2.1.4+</li></ul><h3 id="Disclaimer"><a href="#Disclaimer" class="headerlink" title="Disclaimer"></a>Disclaimer</h3><p>For educational and research purposes only. Use only against systems you own or have permission to test. </p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;注: 本模块来自 AI 可能存在错误 &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="缓冲区溢出" scheme="http://example.com/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>PHPSHE SQL注入漏洞</title>
@@ -550,35 +579,6 @@
     <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
     
     <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows File Explorer Spoofing Vulnerability</title>
-    <link href="http://example.com/2025/06/09/github_1509923262/"/>
-    <id>http://example.com/2025/06/09/github_1509923262/</id>
-    <published>2025-06-09T07:15:50.520Z</published>
-    <updated>2025-06-09T07:15:50.519Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> Windows File Explorer Spoofing Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-24071</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Microsoft Windows File Explorer存在一个欺骗漏洞，编号为CVE-2025-24071。该漏洞源于Windows Explorer对<code>.library-ms</code>文件的隐式信任和自动解析行为。未经认证的攻击者可以通过构造包含恶意SMB路径的RAR&#x2F;ZIP文件来利用此漏洞。解压缩时，会触发SMB认证请求，可能泄露用户的NTLM哈希。目前已有公开的PoC（概念验证）利用代码，使得该漏洞成为当前威胁。受影响的用户应立即应用补丁以降低风险。</p><p><strong>产品厂商：</strong> Microsoft</p><p><strong>产品名称：</strong> Windows File Explorer</p><p><strong>影响版本：</strong> Windows 10 Version 1809 for x64-based Systems, Windows 10 Version 1809 for 32-bit Systems, Windows Server 2025 (Server Core installation), Windows Server 2025, Windows Server 2012 R2 (Server Core installation), Windows Server 2012 R2, Windows Server 2016 (Server Core installation), Windows Server 2016, Windows 10 Version 1607 for x64-based Systems, Windows 10 Version 1607 for 32-bit Systems, Windows 10 for x64-based Systems, Windows 10 for 32-bit Systems, Windows 11 Version 24H2 for x64-based Systems, Windows 11 Version 24H2 for ARM64-based Systems, Windows Server 2022, 23H2 Edition (Server Core installation), Windows 11 Version 23H2 for x64-based Systems, Windows 11 Version 23H2 for ARM64-based Systems, Windows 10 Version 22H2 for 32-bit Systems, Windows 10 Version 22H2 for ARM64-based Systems, Windows 10 Version 22H2 for x64-based Systems, Windows 11 Version 22H2 for x64-based Systems, Windows 11 Version 22H2 for ARM64-based Systems, Windows 10 Version 21H2 for x64-based Systems, Windows 10 Version 21H2 for ARM64-based Systems, Windows 10 Version 21H2 for 32-bit Systems, Windows Server 2022 (Server Core installation), Windows Server 2022, Windows Server 2019 (Server Core installation), Windows Server 2019</p><p><strong>来源：</strong> <a href="https://github.com/TH-SecForge/CVE-2025-24071">https://github.com/TH-SecForge/CVE-2025-24071</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>LICENSE</li><li>README.md</li><li>exploit.py</li><li>requirements.txt</li></ul><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><h1 id="Security-Vulnerability-Report-CVE-2025-24071-Windows-File-Explorer-Spoofing-Vulnerability"><a href="#Security-Vulnerability-Report-CVE-2025-24071-Windows-File-Explorer-Spoofing-Vulnerability" class="headerlink" title="Security Vulnerability Report: CVE-2025-24071 - Windows File Explorer Spoofing Vulnerability"></a>Security Vulnerability Report: CVE-2025-24071 - Windows File Explorer Spoofing Vulnerability</h1><h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>NSFOCUS CERT has detected that Microsoft recently released a security update to address a critical spoofing vulnerability in Windows File Explorer, identified as <strong>CVE-2025-24071</strong>. This vulnerability has a CVSS score of 7.5, indicating its severity. The issue arises from the implicit trust and automatic file parsing behavior of <code>.library-ms</code> files in Windows Explorer. An unauthenticated attacker can exploit this vulnerability by constructing RAR&#x2F;ZIP files containing a malicious SMB path. Upon decompression, this triggers an SMB authentication request, potentially exposing the user’s NTLM hash. PoC (Proof of Concept) exploits for this vulnerability are now publicly available, making it a current threat. Affected users are strongly advised to apply the patch immediately to mitigate the risk.</p><p><strong>Reference</strong>: <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-24071">Microsoft Security Update</a></p><hr><h2 id="Scope-of-Impact"><a href="#Scope-of-Impact" class="headerlink" title="Scope of Impact"></a>Scope of Impact</h2><h3 id="Affected-Versions"><a href="#Affected-Versions" class="headerlink" title="Affected Versions:"></a>Affected Versions:</h3><ul><li>Windows 10 Version 1809 for x64-based Systems</li><li>Windows 10 Version 1809 for 32-bit Systems</li><li>Windows Server 2025 (Server Core installation)</li><li>Windows Server 2025</li><li>Windows Server 2012 R2 (Server Core installation)</li><li>Windows Server 2012 R2</li><li>Windows Server 2016 (Server Core installation)</li><li>Windows Server 2016</li><li>Windows 10 Version 1607 for x64-based Systems</li><li>Windows 10 Version 1607 for 32-bit Systems</li><li>Windows 10 for x64-based Systems</li><li>Windows 10 for 32-bit Systems</li><li>Windows 11 Version 24H2 for x64-based Systems</li><li>Windows 11 Version 24H2 for ARM64-based Systems</li><li>Windows Server 2022, 23H2 Edition (Server Core installation)</li><li>Windows 11 Version 23H2 for x64-based Systems</li><li>Windows 11 Version 23H2 for ARM64-based Systems</li><li>Windows 10 Version 22H2 for 32-bit Systems</li><li>Windows 10 Version 22H2 for ARM64-based Systems</li><li>Windows 10 Version 22H2 for x64-based Systems</li><li>Windows 11 Version 22H2 for x64-based Systems</li><li>Windows 11 Version 22H2 for ARM64-based Systems</li><li>Windows 10 Version 21H2 for x64-based Systems</li><li>Windows 10 Version 21H2 for ARM64-based Systems</li><li>Windows 10 Version 21H2 for 32-bit Systems</li><li>Windows Server 2022 (Server Core installation)</li><li>Windows Server 2022</li><li>Windows Server 2019 (Server Core installation)</li><li>Windows Server 2019</li></ul><hr><h2 id="Detection"><a href="#Detection" class="headerlink" title="Detection"></a>Detection</h2><p>To determine whether your system is at risk, follow these steps:</p><ol><li><p><strong>Check System Version:</strong></p><ul><li>Press <strong>Win+R</strong>, type <code>winver</code>, and press <strong>Enter</strong>. This will display the version and build number of your Windows operating system.</li></ul></li><li><p><strong>Verify Patch Installation:</strong></p><ul><li>Open <strong>Command Prompt</strong> and run <code>systeminfo</code> to check the details of installed patches.</li></ul></li></ol><hr><h2 id="Mitigation"><a href="#Mitigation" class="headerlink" title="Mitigation"></a>Mitigation</h2><p>Microsoft has released a security patch to address this vulnerability for all supported versions. It is crucial to apply the patch as soon as possible to protect against potential exploitation.</p><h3 id="Patch-Installation"><a href="#Patch-Installation" class="headerlink" title="Patch Installation:"></a>Patch Installation:</h3><ul><li><strong>Download the patch</strong>: <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-24071">Microsoft Security Update</a></li><li><strong>Windows Update</strong>: Go to <strong>Settings</strong> → <strong>Update &amp; Security</strong> → <strong>Windows Update</strong>. Check for updates and ensure the patch has been installed.</li><li><strong>View Update History</strong>: If the patch installation fails, you can view the update history or manually download the update from the <a href="https://www.catalog.update.microsoft.com/Home.aspx">Microsoft Update Catalog</a>.</li></ul><p>If the patch fails to install through Windows Update, you can manually download and install the standalone package by visiting the Microsoft Update Catalog.</p><hr><p>For further information and updates, refer to the official <a href="https://msrc.microsoft.com/">Microsoft Security Response Center</a>.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;注: 本模块来自 AI 可能存在错误 &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
   </entry>
   
