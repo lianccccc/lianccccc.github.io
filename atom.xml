@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-09T12:15:25.083Z</updated>
+  <updated>2025-06-09T13:30:05.662Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>What 7,000+ NodeZero RAT Attempts Show Us About Cyber Security</title>
+    <link href="http://example.com/2025/06/09/blog_16659266/"/>
+    <id>http://example.com/2025/06/09/blog_16659266/</id>
+    <published>2025-06-09T13:30:05.663Z</published>
+    <updated>2025-06-09T13:30:05.662Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>描述：</strong> Discover how NodeZero’s autonomous RAT operates, why credentials dominate post-exploitation, and what it means for your cyber defense.</p><p><strong>链接：</strong> <a href="https://horizon3.ai/attack-research/attack-blogs/what-7000-nodezero-rat-attempts-show-us-about-cyber-security/">https://horizon3.ai/attack-research/attack-blogs/what-7000-nodezero-rat-attempts-show-us-about-cyber-security/</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;描述：&lt;/strong&gt; Discover how NodeZero’s autonomous RAT operates, why credentials dominate post-exploitation, and what it means for y</summary>
+      
+    
+    
+    
+    <category term="安全博客" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+    <category term="horizon3.ai" scheme="http://example.com/tags/horizon3-ai/"/>
+    
+  </entry>
   
   <entry>
     <title>Fortinet 缓冲区溢出漏洞</title>
@@ -550,35 +574,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="代码注入" scheme="http://example.com/tags/%E4%BB%A3%E7%A0%81%E6%B3%A8%E5%85%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>D-Link Network Attached Storage (NAS) 命令注入漏洞</title>
-    <link href="http://example.com/2025/06/09/github_1810332867/"/>
-    <id>http://example.com/2025/06/09/github_1810332867/</id>
-    <published>2025-06-09T07:16:07.502Z</published>
-    <updated>2025-06-09T07:16:07.499Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> D-Link Network Attached Storage (NAS) 命令注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-10914</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> CVE-2024-10914是一个影响多款旧版D-Link网络附加存储(NAS)设备的关键命令注入漏洞。该漏洞允许攻击者通过向易受攻击的端点发送特制请求来执行任意命令。</p><p><strong>产品厂商：</strong> D-Link</p><p><strong>产品名称：</strong> D-Link-DNS-ShareCenter</p><p><strong>搜索语法：</strong> app&#x3D;”D_Link-DNS-ShareCenter” &amp;&amp; server&#x3D;&#x3D;”lighttpd&#x2F;1.4.25-devel-fb150ff”</p><p><strong>来源：</strong> <a href="https://github.com/TH-SecForge/CVE-2024-10914">https://github.com/TH-SecForge/CVE-2024-10914</a></p><p><strong>类型：</strong> CVE-2024:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>LICENSE</li><li>README.md</li><li>exploit.py</li><li>requirements.txt</li><li>targets.txt</li></ul><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><h1 id="CVE-2024-10914-D-Link-Remote-Code-Execution-RCE-Exploit"><a href="#CVE-2024-10914-D-Link-Remote-Code-Execution-RCE-Exploit" class="headerlink" title="CVE-2024-10914 - D-Link Remote Code Execution (RCE) Exploit"></a>CVE-2024-10914 - D-Link Remote Code Execution (RCE) Exploit</h1><p>This script is a proof-of-concept (PoC) exploit for CVE-2024-10914, a remote code execution vulnerability in certain D-Link devices. The script identifies and exploits vulnerable devices to execute arbitrary commands.</p><p><strong>Note:</strong> This script should only be used for educational purposes or in authorized environments. Unauthorized exploitation of this vulnerability may be illegal and unethical.</p><hr><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">Finding Targets<br>To find potential targets, use Fofa (similar to Shodan.io):<br><br>Fofa Dork: app=<span class="hljs-string">&quot;D_Link-DNS-ShareCenter&quot;</span> &amp;&amp; server==<span class="hljs-string">&quot;lighttpd/1.4.25-devel-fb150ff&quot;</span><br></code></pre></td></tr></table></figure><h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><ul><li><strong>Vulnerability Check</strong>: The script can check if a target is vulnerable to CVE-2024-10914.</li><li><strong>Exploit</strong>: Exploit the vulnerability by sending payloads to gain remote command execution.</li><li><strong>Interactive Shell</strong>: After exploitation, an interactive shell is started for executing further commands.</li><li><strong>Multi-target Scanning</strong>: Scan multiple targets from a file using multiple threads for faster vulnerability detection.</li></ul><hr><h2 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h2><ul><li>Python 3.x</li><li><code>requests</code> (for HTTP requests)</li><li><code>alive-progress</code> (for progress bars)</li><li><code>prompt_toolkit</code> (for the interactive shell)</li><li><code>argparse</code> (for handling command-line arguments)</li></ul><p>To install required libraries, use:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip3 install -r requirements.txt<br></code></pre></td></tr></table></figure><h2 id="Command-Line-Arguments"><a href="#Command-Line-Arguments" class="headerlink" title="Command-Line Arguments"></a>Command-Line Arguments</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs bash">usage: exploit.py [-h] [-u URL] [-f FILE] [-t THREADS] [-p PORT]<br><br>A PoC exploit <span class="hljs-keyword">for</span> CVE-2024-10914 - D-Link Remote Code Execution (RCE)<br><br>optional arguments:<br>  -h, --<span class="hljs-built_in">help</span>            Show this <span class="hljs-built_in">help</span> message and <span class="hljs-built_in">exit</span><br>  -u URL, --url URL     Single target IP to <span class="hljs-built_in">test</span> (e.g., 192.168.1.1)<br>  -f FILE, --file FILE  File containing list of target IPs to scan<br>  -t THREADS, --threads THREADS<br>                        Number of threads to use <span class="hljs-keyword">for</span> scanning (default: 5)<br>  -p PORT, --port PORT  Port to target (default: 80)<br><br></code></pre></td></tr></table></figure><h1 id="Example-Usage"><a href="#Example-Usage" class="headerlink" title="Example Usage"></a>Example Usage</h1><ul><li>Check a Single Target:</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 exploit.py -u 192.168.1.100 -p 80<br></code></pre></td></tr></table></figure><h1 id="Scan-Multiple-Targets-from-a-File"><a href="#Scan-Multiple-Targets-from-a-File" class="headerlink" title="Scan Multiple Targets from a File"></a>Scan Multiple Targets from a File</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 exploit.py -f targets.txt -p 80 -t 10<br></code></pre></td></tr></table></figure><h1 id="Exploit-Details"><a href="#Exploit-Details" class="headerlink" title="Exploit Details"></a>Exploit Details</h1><p>This script attempts to exploit a vulnerability in D-Link devices, specifically targeting the following</p><ul><li>Vulnerable Endpoint: &#x2F;cgi-bin&#x2F;account_mgr.cgi?cmd&#x3D;cgi_user_add&amp;name&#x3D;’;{};’</li><li>Payloads: Various system commands (id, uname -a, hostname, cat &#x2F;proc&#x2F;cpuinfo, etc.)<br>The exploit is carried out by injecting system commands into the vulnerable endpoint, triggering the remote execution of arbitrary commands on the target device</li></ul><h1 id="Disclaimer"><a href="#Disclaimer" class="headerlink" title="Disclaimer"></a>Disclaimer</h1><p>This script is for educational purposes only. Do not use this script on systems or networks you do not have explicit permission to test.</p><p>The authors are not responsible for any misuse of this tool.</p><p>For more details, please refer to the official GitHub repository:<br><a href="https://github.com/ThemeHackers/CVE-2024-10914">https://github.com/ThemeHackers/CVE-2024-10914</a></p><h1 id="Contributing"><a href="#Contributing" class="headerlink" title="Contributing"></a>Contributing</h1><p>If you find any issues or want to contribute, feel free to open an issue or submit a pull request on the GitHub repository.</p><h1 id="License"><a href="#License" class="headerlink" title="License"></a>License</h1><p>This project is licensed under the MIT License - see the LICENSE file for details</p><h3 id="Key-Sections-of-the-README"><a href="#Key-Sections-of-the-README" class="headerlink" title="Key Sections of the README:"></a>Key Sections of the README:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs bash">MIT License<br><br>Copyright (c) 2024 ds_zct<br><br>Permission is hereby granted, free of charge, to any person obtaining a copy<br>of this software and associated documentation files (the <span class="hljs-string">&quot;Software&quot;</span>), to deal<br><span class="hljs-keyword">in</span> the Software without restriction, including without limitation the rights<br>to use, copy, modify, merge, publish, distribute, sublicense, and/or sell<br>copies of the Software, and to permit persons to whom the Software is<br>furnished to <span class="hljs-keyword">do</span> so, subject to the following conditions:<br><br>The above copyright notice and this permission notice shall be included <span class="hljs-keyword">in</span> all<br>copies or substantial portions of the Software.<br><br>THE SOFTWARE IS PROVIDED <span class="hljs-string">&quot;AS IS&quot;</span>, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR<br>IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,<br>FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE<br>AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER<br>LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,<br>OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE<br>SOFTWARE.<br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;注: 本模块来自 AI 可能存在错误 &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-    <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
     
   </entry>
   
