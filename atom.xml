@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-09T04:00:17.267Z</updated>
+  <updated>2025-06-09T05:19:15.565Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《政务数据共享条例》解读：以数据安全为基石，推进政务数据共享创新</title>
+    <link href="http://example.com/2025/06/09/weixin_267285597/"/>
+    <id>http://example.com/2025/06/09/weixin_267285597/</id>
+    <published>2025-06-09T05:19:15.572Z</published>
+    <updated>2025-06-09T05:19:15.565Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 安恒信息CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/g1snpzlE6uGOX3GykkMbmA">https://mp.weixin.qq.com/s/g1snpzlE6uGOX3GykkMbmA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 安恒信息CERT&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/g1snpzlE6uGOX3GykkMbmA&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="安恒信息CERT" scheme="http://example.com/tags/%E5%AE%89%E6%81%92%E4%BF%A1%E6%81%AFCERT/"/>
+    
+  </entry>
   
   <entry>
     <title>Android Dynamic Code Loading Restriction Vulnerability</title>
@@ -555,35 +582,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="缓冲区溢出" scheme="http://example.com/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Checkpoint Security Gateway Arbitrary File Read Vulnerability</title>
-    <link href="http://example.com/2025/06/08/github_2661680703/"/>
-    <id>http://example.com/2025/06/08/github_2661680703/</id>
-    <published>2025-06-08T11:15:33.355Z</published>
-    <updated>2025-06-08T11:15:33.355Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> Checkpoint Security Gateway Arbitrary File Read Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-24919</li></ul><p><strong>漏洞类型：</strong> 文件读取</p><p><strong>漏洞描述：</strong> Checkpoint Security Gateway 存在任意文件读取漏洞，CVE编号为CVE-2024-24919。该漏洞允许攻击者读取网关上的任意文件，可能导致敏感信息泄露。</p><p><strong>产品厂商：</strong> Checkpoint</p><p><strong>产品名称：</strong> Security Gateway</p><p><strong>来源：</strong> <a href="https://github.com/CyberBibs/Event-ID-263-Arbitrary-File-Read-on-Checkpoint-Security-Gateway-CVE-2024-24919-">https://github.com/CyberBibs/Event-ID-263-Arbitrary-File-Read-on-Checkpoint-Security-Gateway-CVE-2024-24919-</a></p><p><strong>类型：</strong> CVE-2024:github search</p><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm"><br><span class="hljs-comment"># SOC Alert Analysis: Arbitrary File Read on Checkpoint Security Gateway CVE-2024-24919</span><br><br><span class="hljs-comment"># Hello, I&#x27;m Habib</span><br><br>I am a passionate cybersecurity professional with <span class="hljs-keyword">multiple </span>certifications <span class="hljs-keyword">and </span>a Master of Engineering degree in Information Systems Security from Concordia University. My goal is to work in <span class="hljs-keyword">diverse </span><span class="hljs-keyword">and </span>intriguing fields of cybersecurity <span class="hljs-keyword">and </span>enhance my skills <span class="hljs-keyword">and </span>knowledge.<br><span class="hljs-comment">## Objective</span><br><br>My objective is to enhance the security posture <span class="hljs-keyword">and </span>resilience for <span class="hljs-keyword">organizations </span><span class="hljs-keyword">and </span>their clients, while supporting their unique mission. I highly value collaboration, innovation, <span class="hljs-keyword">and </span>excellence, <span class="hljs-keyword">and </span>I am committed to <span class="hljs-keyword">bringing </span><span class="hljs-keyword">diverse </span>perspectives <span class="hljs-keyword">and </span>experiences to any team I work with.<br><br><br></code></pre></td></tr></table></figure><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><br><br><span class="hljs-bullet">- </span>README.md<br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Checkpoint Security Gateway Arbitrary File Read Vulnerability&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;C</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
-    
-    <category term="文件读取" scheme="http://example.com/tags/%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96/"/>
     
   </entry>
   
