@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-10T02:30:23.962Z</updated>
+  <updated>2025-06-10T02:44:45.218Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安恒信息AI数据分类分级20：让效率提升60倍</title>
+    <link href="http://example.com/2025/06/10/weixin_1127159762/"/>
+    <id>http://example.com/2025/06/10/weixin_1127159762/</id>
+    <published>2025-06-10T02:44:45.219Z</published>
+    <updated>2025-06-10T02:44:45.218Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 安恒信息CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/DPA8xmRKzMfgs1PjNiUfXg">https://mp.weixin.qq.com/s/DPA8xmRKzMfgs1PjNiUfXg</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 安恒信息CERT&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/DPA8xmRKzMfgs1PjNiUfXg&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="安恒信息CERT" scheme="http://example.com/tags/%E5%AE%89%E6%81%92%E4%BF%A1%E6%81%AFCERT/"/>
+    
+  </entry>
   
   <entry>
     <title>elFinder Command Injection Vulnerability</title>
@@ -550,35 +577,6 @@
     <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
     
     <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WordPress File Away 任意文件读取漏洞</title>
-    <link href="http://example.com/2025/06/09/github_2694784172/"/>
-    <id>http://example.com/2025/06/09/github_2694784172/</id>
-    <published>2025-06-09T15:45:23.738Z</published>
-    <updated>2025-06-09T15:45:23.731Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> WordPress File Away 任意文件读取漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-2539</li></ul><p><strong>漏洞类型：</strong> 文件读取</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> WordPress插件File Away版本&lt;&#x3D;3.9.9.0.1存在未认证的任意文件读取漏洞。攻击者可以通过向插件的AJAX端点发送特制请求来读取服务器上的任何文件，如<code>wp-config.php</code>。漏洞源于使用<code>fileaway-stats</code>动作通过<code>admin-ajax.php</code>时的不当nonce验证和路径限制缺失。攻击者可利用此漏洞检索敏感文件并提取凭证，可能导致完全妥协。</p><p><strong>产品厂商：</strong> WordPress</p><p><strong>产品名称：</strong> File Away</p><p><strong>影响版本：</strong> &lt;&#x3D; 3.9.9.0.1</p><p><strong>来源：</strong> <a href="https://github.com/Yucaerin/CVE-2025-2539">https://github.com/Yucaerin/CVE-2025-2539</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>mass_cve_2539.py</li><li>readme.md</li></ul><h1 id="原始信息"><a href="#原始信息" class="headerlink" title="原始信息"></a>原始信息</h1><h2 id="CVE-2025-2539-WordPress-File-Away"><a href="#CVE-2025-2539-WordPress-File-Away" class="headerlink" title="CVE-2025-2539 - WordPress File Away &lt;&#x3D; 3.9.9.0.1 - Arbitrary File Read"></a>CVE-2025-2539 - WordPress File Away &lt;&#x3D; 3.9.9.0.1 - Arbitrary File Read</h2><p>🔥 <strong>Vulnerability Summary</strong><br>The WordPress plugin <strong>File Away</strong> version &lt;&#x3D; 3.9.9.0.1 is vulnerable to an unauthenticated arbitrary file read vulnerability.<br>This allows attackers to read any file on the server, such as <code>wp-config.php</code>, through a crafted request to the plugin’s AJAX endpoint.</p><p>The vulnerability stems from improper nonce validation and lack of path restriction when using the <code>fileaway-stats</code> action via <code>admin-ajax.php</code>.<br>Attackers can leverage this to retrieve sensitive files and extract credentials, potentially leading to full compromise.</p><hr><p>🔍 <strong>Affected Plugin</strong>  </p><ul><li><strong>Plugin Name:</strong> File Away  </li><li><strong>Affected Version:</strong> &lt;&#x3D; 3.9.9.0.1  </li><li><strong>Vulnerability Type:</strong> Unauthenticated Arbitrary File Read  </li><li><strong>CVE ID:</strong> CVE-2025-2539  </li><li><strong>CVSS Score:</strong> 9.1 (Critical)  </li><li><strong>Impact:</strong> Sensitive Information Disclosure → Potential RCE (via DB creds + upload)</li></ul><hr><p>🧪 <strong>Exploit Features</strong></p><ul><li>📥 Fetches <code>nonce</code> automatically from the target page</li><li>📄 Reads arbitrary file (e.g., <code>wp-config.php</code>)</li><li>🔍 Extracts DB credentials (<code>DB_USER</code>, <code>DB_PASSWORD</code>, <code>DB_HOST</code>)</li><li>✅ Validates access to <code>/phpmyadmin</code> or <code>/phpMyAdmin</code></li><li>🌐 Attempts remote DB login using retrieved credentials</li><li>💾 Stores valid credentials and phpMyAdmin access in:<ul><li><code>result_database.txt</code></li><li><code>result_phpmyadmin_dan_config_valid.txt</code></li><li><code>result_databaseremotevalid.txt</code></li></ul></li></ul><hr><p>🧠 <strong>Researcher</strong><br>Credit: <a href="https://github.com/RootHarpy/CVE-2025-2539">https://github.com/RootHarpy/CVE-2025-2539</a></p><hr><p>🚀 <strong>Usage</strong><br>Prepare your <code>list.txt</code> file with a list of target domains (one per line, <strong>without</strong> <code>http</code> or <code>https</code>).</p><p>Example <code>list.txt</code>:</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs stylus">example<span class="hljs-selector-class">.com</span>  <br>victimsite<span class="hljs-selector-class">.org</span>  <br>target123<span class="hljs-selector-class">.net</span>  <br></code></pre></td></tr></table></figure><p>Run the script:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 mass_cve_2539.py<br></code></pre></td></tr></table></figure><hr><p>📁 <strong>Output</strong></p><ul><li><code>result_database.txt</code> → List of extracted DB credentials</li><li><code>result_phpmyadmin_and_config_valid.txt</code> → List of phpMyAdmin URLs found</li><li><code>result_databaseremotevalid.txt</code> → List of valid remote DB credentials</li></ul><hr><p>🔒 <strong>Disclaimer:</strong><br>This tool is intended <strong>for educational purposes only</strong> and <strong>should only be used on systems you own or are explicitly authorized to test</strong>. Misuse of this code may lead to legal consequences.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;注: 本模块来自 AI 可能存在错误 &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="文件读取" scheme="http://example.com/tags/%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96/"/>
     
   </entry>
   
