@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Wazuh 反序列化漏洞</title>
+    <link href="/2025/06/10/github_3828578283/"/>
+    <url>/2025/06/10/github_3828578283/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Wazuh 反序列化漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-24016</li></ul><p><strong>漏洞类型：</strong> 反序列化</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Wazuh软件中存在反序列化漏洞，攻击者可以通过构造恶意数据实现远程代码执行。受影响版本为4.4.0至4.9.0。</p><p><strong>产品厂商：</strong> Wazuh</p><p><strong>产品名称：</strong> Wazuh</p><p><strong>影响版本：</strong> 4.4.0 &lt;&#x3D; version &lt;&#x3D; 4.9.0</p><p><strong>来源：</strong> <a href="https://github.com/rxerium/CVE-2025-24016">https://github.com/rxerium/CVE-2025-24016</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2025-24016.yaml</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-24016"><a href="#CVE-2025-24016" class="headerlink" title="CVE-2025-24016"></a>CVE-2025-24016</h2><h2 id="How-does-this-detection-method-work"><a href="#How-does-this-detection-method-work" class="headerlink" title="How does this detection method work?"></a>How does this detection method work?</h2><p>This Nuclei HTTP template checks a target URL (and its &#x2F;app&#x2F;login page) for the Wazuh web interface, extracts the wazuhVersion value with a regex, and confirms the page is accessible (200 status) and actually a Wazuh UI (via title and keyword match). If the extracted version sits between 4.4.0 and 4.9.0 (the vulnerable range for CVE-2025-24016), Nuclei reports a critical finding, signalling that unsafe deserialisation could allow remote code execution.</p><h2 id="How-do-I-run-this-script"><a href="#How-do-I-run-this-script" class="headerlink" title="How do I run this script?"></a>How do I run this script?</h2><ol><li>Download Nuclei from <a href="https://github.com/projectdiscovery/nuclei">here</a></li><li>Copy the template to your local system</li><li>Run the following command: <code>nuclei -u https://yourHost.com -t template.yaml</code></li></ol><h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ul><li><a href="https://github.com/wazuh/wazuh/security/advisories/GHSA-hcrc-79hj-m3qh">https://github.com/wazuh/wazuh/security/advisories/GHSA-hcrc-79hj-m3qh</a></li><li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">https://www.cisa.gov/known-exploited-vulnerabilities-catalog</a></li><li><a href="https://www.cve.org/CVERecord?id=CVE-2025-24016">https://www.cve.org/CVERecord?id=CVE-2025-24016</a></li></ul><h3 id="Disclaimer"><a href="#Disclaimer" class="headerlink" title="Disclaimer"></a>Disclaimer</h3><p>Use at your own risk, I will not be responsible for illegal activities you conduct on infrastructure you do not own or have permission to scan.</p><h3 id="Contact"><a href="#Contact" class="headerlink" title="Contact"></a>Contact</h3><p>Feel free to reach out to me on <a href="https://signal.me/#eu/0Qd68U1ivXNdWCF4hf70UYFo7tB0w-GQqFpYcyV6-yr4exn2SclB6bFeP7wTAxQw">Signal</a>.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CVE-2025:github search</tag>
+      
+      <tag>反序列化</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>WordPress RealHomes Theme 权限提升漏洞</title>
     <link href="/2025/06/10/github_4191632523/"/>
     <url>/2025/06/10/github_4191632523/</url>
@@ -205,9 +232,9 @@
     
     <tags>
       
-      <tag>反序列化</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>反序列化</tag>
       
     </tags>
     
@@ -2129,9 +2156,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2023:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -2264,9 +2291,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -2507,9 +2534,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -2885,9 +2912,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -3155,9 +3182,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -3317,9 +3344,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2023:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -3722,9 +3749,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4260,9 +4287,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4287,9 +4314,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4314,9 +4341,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4557,9 +4584,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4638,9 +4665,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -5043,9 +5070,9 @@
     
     <tags>
       
-      <tag>反序列化</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>反序列化</tag>
       
     </tags>
     
@@ -5070,9 +5097,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -5124,9 +5151,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -5151,9 +5178,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -5178,9 +5205,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -5421,9 +5448,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -5772,9 +5799,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -5988,9 +6015,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2023:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -6474,9 +6501,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -6501,9 +6528,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -7201,9 +7228,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -7658,9 +7685,9 @@
     
     <tags>
       
-      <tag>反序列化</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>反序列化</tag>
       
     </tags>
     
@@ -8566,9 +8593,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -8720,9 +8747,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -8774,9 +8801,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
