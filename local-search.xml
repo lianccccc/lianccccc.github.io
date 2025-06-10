@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>elFinder 命令注入漏洞</title>
+    <link href="/2025/06/10/github_3052878996/"/>
+    <url>/2025/06/10/github_3052878996/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> elFinder 命令注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2019-9194</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> elFinder 2.1.48之前版本中的PHP连接器存在命令注入漏洞，由于未对输入进行充分过滤，攻击者可通过发送特制请求执行任意命令。</p><p><strong>产品厂商：</strong> elFinder</p><p><strong>产品名称：</strong> elFinder</p><p><strong>影响版本：</strong> version &lt; 2.1.48</p><p><strong>搜索语法：</strong> http.title:”elfinder”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12288">https://github.com/projectdiscovery/nuclei-templates/issues/12288</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="原始信息"><a href="#原始信息" class="headerlink" title="原始信息"></a>原始信息</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>elFinder before 2.1.48 contains a command injection caused by unsanitized input in the PHP connector, letting attackers execute arbitrary commands, exploit requires attacker to send crafted requests.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://www.exploit-db.com/exploits/46481/">https://www.exploit-db.com/exploits/46481/</a></li><li><a href="https://www.exploit-db.com/exploits/46539/">https://www.exploit-db.com/exploits/46539/</a></li><li><a href="https://github.com/cved-sources/cve-2019-9194">https://github.com/cved-sources/cve-2019-9194</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-http-title-elfinder"><a href="#Shodan-Query-http-title-elfinder" class="headerlink" title="Shodan Query: http.title:&quot;elfinder&quot;"></a>Shodan Query: <code>http.title:&quot;elfinder&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>命令执行</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>安恒信息AI数据分类分级20：让效率提升60倍</title>
     <link href="/2025/06/10/weixin_1127159762/"/>
     <url>/2025/06/10/weixin_1127159762/</url>
@@ -23,33 +50,6 @@
       <tag>mp.weixin.qq.com</tag>
       
       <tag>安恒信息CERT</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>elFinder Command Injection Vulnerability</title>
-    <link href="/2025/06/10/github_3052878996/"/>
-    <url>/2025/06/10/github_3052878996/</url>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> elFinder Command Injection Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2019-9194</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> elFinder 2.1.48之前的版本中的PHP连接器存在命令注入漏洞，由于未对输入进行充分过滤，攻击者可以通过发送精心构造的请求来执行任意命令。</p><p><strong>产品厂商：</strong> elFinder</p><p><strong>产品名称：</strong> elFinder</p><p><strong>影响版本：</strong> version &lt; 2.1.48</p><p><strong>搜索语法：</strong> http.title:”elfinder”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12288">https://github.com/projectdiscovery/nuclei-templates/issues/12288</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="原始信息"><a href="#原始信息" class="headerlink" title="原始信息"></a>原始信息</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>elFinder before 2.1.48 contains a command injection caused by unsanitized input in the PHP connector, letting attackers execute arbitrary commands, exploit requires attacker to send crafted requests.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://www.exploit-db.com/exploits/46481/">https://www.exploit-db.com/exploits/46481/</a></li><li><a href="https://www.exploit-db.com/exploits/46539/">https://www.exploit-db.com/exploits/46539/</a></li><li><a href="https://github.com/cved-sources/cve-2019-9194">https://github.com/cved-sources/cve-2019-9194</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-http-title-elfinder"><a href="#Shodan-Query-http-title-elfinder" class="headerlink" title="Shodan Query: http.title:&quot;elfinder&quot;"></a>Shodan Query: <code>http.title:&quot;elfinder&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>Github Poc</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
-      <tag>命令执行</tag>
       
     </tags>
     
@@ -3256,9 +3256,9 @@
     
     <tags>
       
-      <tag>跨站可执行脚本</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>跨站可执行脚本</tag>
       
     </tags>
     
@@ -3823,9 +3823,9 @@
     
     <tags>
       
-      <tag>反序列化</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>反序列化</tag>
       
     </tags>
     
@@ -3985,9 +3985,9 @@
     
     <tags>
       
-      <tag>跨站可执行脚本</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>跨站可执行脚本</tag>
       
     </tags>
     
@@ -6438,9 +6438,9 @@
     
     <tags>
       
-      <tag>反序列化</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>反序列化</tag>
       
     </tags>
     
@@ -7373,9 +7373,9 @@
     
     <tags>
       
-      <tag>CVE-2024:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2024:github search</tag>
       
     </tags>
     
@@ -7635,9 +7635,9 @@
     
     <tags>
       
-      <tag>跨站可执行脚本</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>跨站可执行脚本</tag>
       
     </tags>
     
