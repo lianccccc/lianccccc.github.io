@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-09T23:15:16.213Z</updated>
+  <updated>2025-06-10T00:15:14.569Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WordPress Celestial Aura Theme 任意文件上传漏洞</title>
+    <link href="http://example.com/2025/06/10/github_2748281995/"/>
+    <id>http://example.com/2025/06/10/github_2748281995/</id>
+    <published>2025-06-10T00:15:14.571Z</published>
+    <updated>2025-06-10T00:15:14.569Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> WordPress Celestial Aura Theme 任意文件上传漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-26892</li></ul><p><strong>漏洞类型：</strong> 文件上传</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> WordPress Celestial Aura主题（由dkszone开发）版本2.2及以下存在一个<strong>不受限制的文件上传</strong>漏洞。低权限认证用户可以通过主题的管理面板上传任意PHP文件，可能导致<strong>远程代码执行（RCE）</strong>。受影响的文件是<code>wp-admin/admin.php?page=CA-settings</code>，任何认证用户（订阅者及以上）均可利用此漏洞，且没有nonce、文件类型或扩展名验证。</p><p><strong>产品厂商：</strong> dkszone</p><p><strong>产品名称：</strong> WordPress Celestial Aura Theme</p><p><strong>影响版本：</strong> &lt;&#x3D; 2.2</p><p><strong>来源：</strong> <a href="https://github.com/Nxploited/CVE-2025-26892">https://github.com/Nxploited/CVE-2025-26892</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2025-26892.py</li><li>LICENSE</li><li>README.md</li></ul><h1 id="原始信息"><a href="#原始信息" class="headerlink" title="原始信息"></a>原始信息</h1><h2 id="CVE-2025-26892-–-WordPress-Celestial-Aura-Theme"><a href="#CVE-2025-26892-–-WordPress-Celestial-Aura-Theme" class="headerlink" title="CVE-2025-26892 – WordPress Celestial Aura Theme &lt;&#x3D; 2.2 Arbitrary File Upload (Authenticated)"></a>CVE-2025-26892 – WordPress Celestial Aura Theme &lt;&#x3D; 2.2 Arbitrary File Upload (Authenticated)</h2><h3 id="📄-Description"><a href="#📄-Description" class="headerlink" title="📄 Description"></a>📄 Description</h3><p>An <strong>Unrestricted File Upload</strong> vulnerability exists in the WordPress <strong>Celestial Aura</strong> theme (developed by <em>dkszone</em>) up to version <strong>2.2</strong>.<br>A low-privileged authenticated user can upload arbitrary PHP files through the theme’s admin panel, potentially leading to <strong>Remote Code Execution (RCE)</strong>.</p><ul><li>Affected theme: <code>Celestial Aura</code></li><li>Affected versions: ≤ 2.2</li><li>Vulnerable file: <code>wp-admin/admin.php?page=CA-settings</code></li><li>Exploitable by: Any authenticated user (subscriber and above)</li><li>No nonce, file type, or extension validation</li></ul><h3 id="🛡️-CVSS-Score"><a href="#🛡️-CVSS-Score" class="headerlink" title="🛡️ CVSS Score"></a>🛡️ CVSS Score</h3><p><strong>Patchstack CNA Rating:</strong></p><ul><li><strong>Base Score:</strong> 9.9 (CRITICAL)</li><li><strong>Vector:</strong> <code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></li></ul><h3 id="🚀-Usage"><a href="#🚀-Usage" class="headerlink" title="🚀 Usage"></a>🚀 Usage</h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs awk">usage: CVE-<span class="hljs-number">2025</span>-<span class="hljs-number">26892</span>.py [-h] --url URL --username USERNAME --password PASSWORD<br><br>CVE-<span class="hljs-number">2025</span>-<span class="hljs-number">26892</span> | WordPress Celestial Aura Theme &lt;= <span class="hljs-number">2.2</span> Arbitrary File Upload (Authenticated)<br><br>options:<br>  -h, --help            Show this help message and <span class="hljs-keyword">exit</span><br>  --url, -u URL         Target WordPress site (e.g., http:<span class="hljs-regexp">//</span><span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>/wordpress)<br>  --username, -un       WordPress username (any authenticated user)<br>  --password, -p        WordPress password<br></code></pre></td></tr></table></figure><p>The script logs in with the provided credentials, uploads a malicious PHP shell (<code>nxploit.php</code>) via the vulnerable theme settings, and prints the direct URL to the uploaded shell.</p><h3 id="✅-Successful-Exploit-Output"><a href="#✅-Successful-Exploit-Output" class="headerlink" title="✅ Successful Exploit Output"></a>✅ Successful Exploit Output</h3><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs nix">[<span class="hljs-operator">+</span>] Exploit sent successfully.<br><br>[<span class="hljs-operator">+</span>] Form Fields <span class="hljs-params">Sent:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">CA_hdrimage:</span> yes<br>  ...<br>  <span class="hljs-operator">-</span> <span class="hljs-params">CA_save:</span> Save changes<br><br>[<span class="hljs-operator">+</span>] Shell <span class="hljs-params">Location:</span><br>http:<span class="hljs-symbol">//target-site/wp-content/uploads/nxploit.php</span><br><br>Exploit <span class="hljs-params">By:</span> Khaled_alenazi (Nxploited)<br></code></pre></td></tr></table></figure><h3 id="⚠️-Disclaimer"><a href="#⚠️-Disclaimer" class="headerlink" title="⚠️ Disclaimer"></a>⚠️ Disclaimer</h3><p>This project is for <strong>educational and authorized penetration testing</strong> purposes only.<br>Any misuse of this tool is not the responsibility of the author.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;注: 本模块来自 AI 可能存在错误 &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="文件上传" scheme="http://example.com/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>Roundcube Post-Auth RCE via PHP Object Deserialization</title>
@@ -541,33 +570,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/W4tbnPpNGrRA_6i5MStNvA&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>新型供应链恶意软件攻击npm和PyPI生态系统，百万用户面临风险</title>
-    <link href="http://example.com/2025/06/09/weixin_112110485/"/>
-    <id>http://example.com/2025/06/09/weixin_112110485/</id>
-    <published>2025-06-09T11:11:51.306Z</published>
-    <updated>2025-06-09T11:11:51.303Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/_PVbEikIzNW2tNFFzP1vAA">https://mp.weixin.qq.com/s/_PVbEikIzNW2tNFFzP1vAA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/_PVbEikIzNW2tNFFzP1vAA&quot;&gt;https://mp.weixin.q</summary>
       
     
     
