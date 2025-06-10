@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>Github Poc</title>
+    <link href="/2025/06/10/github_2870097019/"/>
+    <url>/2025/06/10/github_2870097019/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> </p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-22371</li></ul><p><strong>来源：</strong> <a href="https://github.com/vishalborkar7/POC_for_-CVE-2024-22371">https://github.com/vishalborkar7/POC_for_-CVE-2024-22371</a></p><p><strong>类型：</strong> CVE-2024:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>lib</li><li>pom.xml</li><li>src</li></ul><h1 id="原始信息"><a href="#原始信息" class="headerlink" title="原始信息"></a>原始信息</h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CVE-2024:github search</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>HTTP Protocol Stack 远程代码执行漏洞</title>
     <link href="/2025/06/10/github_1320469250/"/>
     <url>/2025/06/10/github_1320469250/</url>
@@ -3391,9 +3416,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>rapid7/metasploit-framework:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -3904,9 +3929,9 @@
     
     <tags>
       
-      <tag>反序列化</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>反序列化</tag>
       
     </tags>
     
@@ -5497,9 +5522,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>rapid7/metasploit-framework:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -5524,9 +5549,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>rapid7/metasploit-framework:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -6519,9 +6544,9 @@
     
     <tags>
       
-      <tag>反序列化</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>反序列化</tag>
       
     </tags>
     
@@ -6756,9 +6781,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>rapid7/metasploit-framework:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -6783,9 +6808,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>rapid7/metasploit-framework:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -6972,9 +6997,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>rapid7/metasploit-framework:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -7080,9 +7105,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>rapid7/metasploit-framework:github issues</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
