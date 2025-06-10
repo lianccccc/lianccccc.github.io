@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Cisco Identity Services Engine (ISE) 凭证生成和授权逻辑漏洞</title>
+    <link href="/2025/06/10/github_3318074303/"/>
+    <url>/2025/06/10/github_3318074303/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Cisco Identity Services Engine (ISE) 凭证生成和授权逻辑漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-20286</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Cisco Identity Services Engine (ISE)云部署在AWS、Microsoft Azure和Oracle Cloud Infrastructure (OCI)上时，存在一个严重的凭证生成和授权逻辑漏洞。当使用相同软件版本在同一云平台上时，多个Cisco ISE云部署会共享相同的凭证。这使得未经身份验证的远程攻击者能够提取有效凭证并在不同部署间提升权限。</p><p><strong>产品厂商：</strong> Cisco</p><p><strong>产品名称：</strong> Cisco Identity Services Engine (ISE)</p><p><strong>来源：</strong> <a href="https://github.com/noeneal/CVE-2025-20286">https://github.com/noeneal/CVE-2025-20286</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2025-20286.py</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-20286"><a href="#CVE-2025-20286" class="headerlink" title="CVE-2025-20286"></a>CVE-2025-20286</h2><p><strong>Severity</strong>: Critical (CVSS 9.9)</p><p> <strong>Affected Platforms</strong>: Cisco Identity Services Engine (ISE) cloud deployments on AWS, Microsoft Azure, and Oracle Cloud Infrastructure (OCI)</p><p><strong>Vulnerability Description</strong>: A critical flaw in the credential generation and authorization logic causes multiple Cisco ISE cloud deployments to share identical credentials when using the same software release on the same cloud platform. This allows an unauthenticated remote attacker to extract valid credentials and escalate privileges across different deployments</p><blockquote><p>Find the expl0it in CVE-2025-20286.py</p></blockquote>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CVE-2025:github search</tag>
+      
+      <tag>权限提升</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>GeoServer Missing Authorization on REST API Index</title>
     <link href="/2025/06/10/github_2073088160/"/>
     <url>/2025/06/10/github_2073088160/</url>
@@ -45,9 +72,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>反序列化</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -257,9 +284,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>反序列化</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -492,9 +519,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>缓冲区溢出</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -1992,9 +2019,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>缓冲区溢出</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -2181,9 +2208,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2023:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -2316,9 +2343,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -2559,9 +2586,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -2937,9 +2964,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -3126,9 +3153,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>缓冲区溢出</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -3153,9 +3180,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>缓冲区溢出</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -3207,9 +3234,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -3369,9 +3396,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2023:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -3774,9 +3801,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -3801,9 +3828,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>缓冲区溢出</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4312,9 +4339,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4339,9 +4366,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4366,9 +4393,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4555,9 +4582,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>跨站可执行脚本</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4609,9 +4636,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4690,9 +4717,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -5095,9 +5122,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>反序列化</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -5122,9 +5149,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -5176,9 +5203,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -5203,9 +5230,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -5230,9 +5257,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -5257,9 +5284,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>跨站可执行脚本</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -5392,9 +5419,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>缓冲区溢出</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -5473,9 +5500,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -5500,9 +5527,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>缓冲区溢出</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -5824,9 +5851,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -6040,9 +6067,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2023:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -6526,9 +6553,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -6553,9 +6580,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -7253,9 +7280,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -7710,9 +7737,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>反序列化</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -8298,9 +8325,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>缓冲区溢出</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -8618,9 +8645,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -8645,9 +8672,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2024:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -8772,9 +8799,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -8826,9 +8853,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -8907,9 +8934,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>跨站可执行脚本</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -9067,9 +9094,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>缓冲区溢出</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
