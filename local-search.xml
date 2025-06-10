@@ -4,6 +4,106 @@
   
   
   <entry>
+    <title>GeoServer Vulnerable to Unauthenticated SSRF via TestWfsPost</title>
+    <link href="/2025/06/10/github_2487733864/"/>
+    <url>/2025/06/10/github_2487733864/</url>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-5gw5-jccf-6hxw">https://github.com/advisories/GHSA-5gw5-jccf-6hxw</a></p><p><strong>仓库 Star：</strong> 4052</p><p><strong>CVSS 评分：</strong> 7.5</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/geoserver/geoserver/security/advisories/GHSA-5gw5-jccf-6hxw">https://github.com/geoserver/geoserver/security/advisories/GHSA-5gw5-jccf-6hxw</a></p></li><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2021-40822">https://nvd.nist.gov/vuln/detail/CVE-2021-40822</a></p></li><li><p><a href="https://osgeo-org.atlassian.net/browse/GEOS-11390">https://osgeo-org.atlassian.net/browse/GEOS-11390</a></p></li><li><p><a href="https://osgeo-org.atlassian.net/browse/GEOS-11794">https://osgeo-org.atlassian.net/browse/GEOS-11794</a></p></li><li><p><a href="https://github.com/advisories/GHSA-5gw5-jccf-6hxw">https://github.com/advisories/GHSA-5gw5-jccf-6hxw</a></p></li></ul><p><strong>描述：</strong></p><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>It possible to achieve Service Side Request Forgery (SSRF) via the Demo request endpoint if Proxy Base URL has not been set.</p><h3 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h3><p>A unauthenticated user can supply a request that will be issued by the server. This can be used to enumerate internal networks and also in the case of cloud instances can be used to obtain sensitive data.</p><h3 id="Mitigation"><a href="#Mitigation" class="headerlink" title="Mitigation"></a>Mitigation</h3><ol><li><p>When using GeoServer with a proxy, manage the proxy base value as a system administrator, use the application property <code>PROXY_BASE_URL</code> to provide a non-empty value that cannot be overridden by the user interface or incoming request.</p></li><li><p>When using GeoServer directly without a proxy, block all access to TestWfsPost by editing the web.xml file. Adding this block right before the end:</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">security-constraint</span>&gt;</span><br>     <span class="hljs-tag">&lt;<span class="hljs-name">web-resource-collection</span>&gt;</span><br>         <span class="hljs-tag">&lt;<span class="hljs-name">web-resource-name</span>&gt;</span>BlockDemoRequests<span class="hljs-tag">&lt;/<span class="hljs-name">web-resource-name</span>&gt;</span><br>         <span class="hljs-tag">&lt;<span class="hljs-name">url-pattern</span>&gt;</span>/TestWfsPost/*<span class="hljs-tag">&lt;/<span class="hljs-name">url-pattern</span>&gt;</span><br>     <span class="hljs-tag">&lt;/<span class="hljs-name">web-resource-collection</span>&gt;</span><br>     <span class="hljs-tag">&lt;<span class="hljs-name">auth-constraint</span>&gt;</span><br>         <span class="hljs-tag">&lt;<span class="hljs-name">role-name</span>&gt;</span>BLOCKED<span class="hljs-tag">&lt;/<span class="hljs-name">role-name</span>&gt;</span><br>     <span class="hljs-tag">&lt;/<span class="hljs-name">auth-constraint</span>&gt;</span><br> <span class="hljs-tag">&lt;/<span class="hljs-name">security-constraint</span>&gt;</span><br></code></pre></td></tr></table></figure></li></ol><h3 id="Resolution"><a href="#Resolution" class="headerlink" title="Resolution"></a>Resolution</h3><p>Upgrading to GeoServer 2.24.4, or 2.25.2, removes the <code>TestWfsPost</code> servlet resolving this issue.</p><p>The demo request page functionality is now implemented directly in the browser.</p><h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ul><li><a href="https://osgeo-org.atlassian.net/browse/GEOS-11794">https://osgeo-org.atlassian.net/browse/GEOS-11794</a></li><li><a href="https://osgeo-org.atlassian.net/browse/GEOS-11390">https://osgeo-org.atlassian.net/browse/GEOS-11390</a></li><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2021-40822">https://nvd.nist.gov/vuln/detail/CVE-2021-40822</a></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>安全公告</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Github Advisory</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>GeoServer has improper ENTITY_RESOLUTION_ALLOWLIST URI validation in XML Processing (SSRF)</title>
+    <link href="/2025/06/10/github_2137258774/"/>
+    <url>/2025/06/10/github_2137258774/</url>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-mc43-4fqr-c965">https://github.com/advisories/GHSA-mc43-4fqr-c965</a></p><p><strong>仓库 Star：</strong> 4052</p><p><strong>CVSS 评分：</strong> 9.3</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/geoserver/geoserver/security/advisories/GHSA-mc43-4fqr-c965">https://github.com/geoserver/geoserver/security/advisories/GHSA-mc43-4fqr-c965</a></p></li><li><p><a href="https://docs.geoserver.org/latest/en/user/production/config.html#production-config-external-entities">https://docs.geoserver.org/latest/en/user/production/config.html#production-config-external-entities</a></p></li><li><p><a href="https://github.com/advisories/GHSA-mc43-4fqr-c965">https://github.com/advisories/GHSA-mc43-4fqr-c965</a></p></li></ul><p><strong>描述：</strong></p><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>An improper URI validation vulnerability exists that enables an unauthorized attacker to perform XML External Entities (XEE) attack, then send GET request to any HTTP server. Attacker can abuse this to scan internal networks and gain information about them then exploit further. Moreover, attacker can read limited <code>.xsd</code> file on system.</p><h3 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h3><p>By default, GeoServer use <code>PreventLocalEntityResolver</code> class from GeoTools to filter out malicious URIs in XML entities before resolving them. The URI must match the regex <code>(?i)(jar:file|http|vfs)[^?#;]*\\.xsd</code>. But the regex leaves a chance for attackers to request to any HTTP server or limited file.</p><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>An unauthenticated attacker can:</p><ol><li>Scan internal network to gain insight about it and exploit further.</li><li>SSRF to endpoint ends with <code>.xsd</code>.</li><li>Read limited <code>.xsd</code> file on system.</li></ol><h3 id="Mitigation"><a href="#Mitigation" class="headerlink" title="Mitigation"></a>Mitigation</h3><ol><li>Define the system property <code>ENTITY_RESOLUTION_ALLOWLIST</code> to limit the supported external schema locaitons.</li><li>The built-in allow list covers the locations required for the operation of OGC web services: <code>www.w3.org</code>,<code>schemas.opengis.net</code>,<code>www.opengis.net</code>,<code>inspire.ec.europa.eu/schemas</code>.</li><li>The <a href="https://docs.geoserver.org/latest/en/user/production/config.html#production-config-external-entities">user guide</a> provides details on how to add additional locations (this is required for app-schema plugin where a schema is supplied to define an output format).</li></ol><h3 id="Resolution"><a href="#Resolution" class="headerlink" title="Resolution"></a>Resolution</h3><ol><li>GeoServer 2.25.0 and greater default to the use of <code>ENTITY_RESOLUTION_ALLOWLIST</code> and does not require you to provide a system property.</li><li>The use of <code>ENTITY_RESOLUTION_ALLOWLIST</code> is still supported if you require additional schema locations to be supported beyond the built-in allow list.</li><li>GeoServer 2.25.1 change <code>ENTITY_RESOLUTION_ALLOWLIST </code> no longer supports regular expressions</li></ol><h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ul><li><a href="https://docs.geoserver.org/latest/en/user/production/config.html#production-config-external-entities">External Entities Resolution</a> (GeoServer User Guide)</li></ul><h3 id="Credits"><a href="#Credits" class="headerlink" title="Credits"></a>Credits</h3><ul><li>Le Mau Anh Phong from VNG Security Response Center &amp; VNUHCM - University of Information Technology</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>安全公告</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Github Advisory</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>GWC Home Page communicate version and revision information</title>
+    <link href="/2025/06/10/github_1976186871/"/>
+    <url>/2025/06/10/github_1976186871/</url>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-jm79-7xhw-6f6f">https://github.com/advisories/GHSA-jm79-7xhw-6f6f</a></p><p><strong>仓库 Star：</strong> 4052</p><p><strong>CVSS 评分：</strong> 5.3</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/geoserver/geoserver/security/advisories/GHSA-jm79-7xhw-6f6f">https://github.com/geoserver/geoserver/security/advisories/GHSA-jm79-7xhw-6f6f</a></p></li><li><p><a href="https://github.com/GeoWebCache/geowebcache/issues/1344">https://github.com/GeoWebCache/geowebcache/issues/1344</a></p></li><li><p><a href="https://github.com/GeoWebCache/geowebcache/pull/1345">https://github.com/GeoWebCache/geowebcache/pull/1345</a></p></li><li><p><a href="https://github.com/geoserver/geoserver/pull/8189">https://github.com/geoserver/geoserver/pull/8189</a></p></li><li><p><a href="https://osgeo-org.atlassian.net/browse/GEOS-11677">https://osgeo-org.atlassian.net/browse/GEOS-11677</a></p></li><li><p><a href="https://github.com/advisories/GHSA-jm79-7xhw-6f6f">https://github.com/advisories/GHSA-jm79-7xhw-6f6f</a></p></li></ul><p><strong>描述：</strong></p><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>The GeoWebCache home page includes version and revision information about the software in use. This information is sensitive from a security point of view because it allows software used by the server to be easily identified.</p><h3 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h3><p>org.geowebcache.GeoWebCacheDispatcher.handleFrontPage(HttpServletRequest, HttpServletResponse) has no check to hide potentially sensitive information from users except for a hidden system property to hide the storage locations that defaults to showing the locations.</p><h3 id="PoC"><a href="#PoC" class="headerlink" title="PoC"></a>PoC</h3><p>Just open <a href="http://localhost:8080/geoserver/gwc/">http://localhost:8080/geoserver/gwc/</a></p><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>In addition to exposing the version and revision information, the home page will expose the config file and storage locations which may expose the system’s temp directory location and whether or not GeoServer is running in a Windows operating system. The approximate server start time and some basic GWC usage information is also exposed.</p><h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><p><a href="https://osgeo-org.atlassian.net/browse/GEOS-11677">https://osgeo-org.atlassian.net/browse/GEOS-11677</a><br><a href="https://github.com/geoserver/geoserver/pull/8189">https://github.com/geoserver/geoserver/pull/8189</a><br><a href="https://github.com/GeoWebCache/geowebcache/issues/1344">https://github.com/GeoWebCache/geowebcache/issues/1344</a><br><a href="https://github.com/GeoWebCache/geowebcache/pull/1345">https://github.com/GeoWebCache/geowebcache/pull/1345</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>安全公告</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Github Advisory</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Coverage REST API Server Side Request Forgery</title>
+    <link href="/2025/06/10/github_3689855047/"/>
+    <url>/2025/06/10/github_3689855047/</url>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-r4hf-r8gj-jgw2">https://github.com/advisories/GHSA-r4hf-r8gj-jgw2</a></p><p><strong>仓库 Star：</strong> 4052</p><p><strong>CVSS 评分：</strong> 5.5</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/geoserver/geoserver/security/advisories/GHSA-r4hf-r8gj-jgw2">https://github.com/geoserver/geoserver/security/advisories/GHSA-r4hf-r8gj-jgw2</a></p></li><li><p><a href="https://osgeo-org.atlassian.net/browse/GEOS-11468">https://osgeo-org.atlassian.net/browse/GEOS-11468</a></p></li><li><p><a href="https://osgeo-org.atlassian.net/browse/GEOS-11717">https://osgeo-org.atlassian.net/browse/GEOS-11717</a></p></li><li><p><a href="https://github.com/advisories/GHSA-r4hf-r8gj-jgw2">https://github.com/advisories/GHSA-r4hf-r8gj-jgw2</a></p></li></ul><p><strong>描述：</strong></p><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>The Coverage rest api <code>/workspaces/&#123;workspaceName&#125;/coveragestores/&#123;storeName&#125;/&#123;method&#125;.&#123;format&#125;</code> allow to upload file with a specified url (with {method} equals ‘url’) with no restrict.</p><h3 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h3><p>The Coverage rest api <code>/workspaces/&#123;workspaceName&#125;/coveragestores/&#123;storeName&#125;/&#123;method&#125;.&#123;format&#125;</code> allow to upload file with a specified url (with {method} equals ‘url’). But this url has not been check with <a href="https://docs.geoserver.org/latest/en/user/security/urlchecks.html#url-checks">URL Checks feature</a>.</p><p>For example, should add the code below to check fileURL:</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">URLCheckers.confirm(fileURL)<br></code></pre></td></tr></table></figure><p>The vulnerable code was <a href="https://github.com/geoserver/geoserver/blob/main/src/rest/src/main/java/org/geoserver/rest/util/RESTUtils.java#L176">RESTUtils.java</a></p><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>This vulnerability presents the opportunity for Server Side Request Forgery.</p><h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ul><li><a href="https://osgeo-org.atlassian.net/browse/GEOS-11468">https://osgeo-org.atlassian.net/browse/GEOS-11468</a></li><li><a href="https://osgeo-org.atlassian.net/browse/GEOS-11717">https://osgeo-org.atlassian.net/browse/GEOS-11717</a></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>安全公告</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Github Advisory</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>【已复现】Kafka Connect 任意文件读取漏洞（CVE-2025-27817）</title>
     <link href="/2025/06/10/weixin_3900224871/"/>
     <url>/2025/06/10/weixin_3900224871/</url>
@@ -4218,9 +4318,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -6324,9 +6424,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -6351,9 +6451,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -7583,9 +7683,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -7610,9 +7710,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -7799,9 +7899,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -7907,9 +8007,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
