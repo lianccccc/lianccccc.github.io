@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-10T20:00:18.782Z</updated>
+  <updated>2025-06-10T20:30:07.708Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GeoServer vulnerable to SSRF in TestWfsPost for specific targets, eg PHP + Nginx</title>
+    <link href="http://example.com/2025/06/10/github_1579901348/"/>
+    <id>http://example.com/2025/06/10/github_1579901348/</id>
+    <published>2025-06-10T20:30:07.710Z</published>
+    <updated>2025-06-10T20:30:07.708Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-68cf-j696-wvv9">https://github.com/advisories/GHSA-68cf-j696-wvv9</a></p><p><strong>仓库 Star：</strong> 4052</p><p><strong>CVSS 评分：</strong> 7.5</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/geoserver/geoserver/security/advisories/GHSA-5gw5-jccf-6hxw">https://github.com/geoserver/geoserver/security/advisories/GHSA-5gw5-jccf-6hxw</a></p></li><li><p><a href="https://github.com/geoserver/geoserver/security/advisories/GHSA-68cf-j696-wvv9">https://github.com/geoserver/geoserver/security/advisories/GHSA-68cf-j696-wvv9</a></p></li><li><p><a href="https://github.com/advisories/GHSA-68cf-j696-wvv9">https://github.com/advisories/GHSA-68cf-j696-wvv9</a></p></li></ul><p><strong>描述：</strong></p><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Missing checks allow for SSRF to specific targets using the TestWfsPost enpoint. </p><h3 id="Mitigation"><a href="#Mitigation" class="headerlink" title="Mitigation"></a>Mitigation</h3><p>To manage the proxy base value as a system administrator, use the parameter <code>PROXY_BASE_URL</code> to provide a non-empty value that cannot be overridden by the user interface or incoming request.<a href="https://github.com/thomsmith">thomsmith</a>.</p><h3 id="Resolution"><a href="#Resolution" class="headerlink" title="Resolution"></a>Resolution</h3><p>The TestWfsPost has been replaced in GeoServer 2.25.2 and GeoServer 2.24.4 with a JavaScript <a href="https://docs.geoserver.org/latest/en/user/configuration/demos/index.html#demo-requests">Demo Requests</a> page to test OGC Web Services.</p><h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ul><li><a href="https://github.com/geoserver/geoserver/security/advisories/GHSA-5gw5-jccf-6hxw">CVE-2024-29198</a> Unauthenticated SSRF via TestWfsPost</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-68cf-j696-wvv9&quot;&gt;https://github.com/advisories/GHSA-68cf-j696-wvv9&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>Cisco Identity Services Engine (ISE) 凭证生成和授权逻辑漏洞</title>
@@ -87,9 +111,9 @@
     <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
     
     
-    <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
-    
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
     
   </entry>
   
@@ -296,9 +320,9 @@
     <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
     
     
-    <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
-    
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
     
   </entry>
   
@@ -501,33 +525,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Chrome V8 堆损坏漏洞</title>
-    <link href="http://example.com/2025/06/10/github_4124073767/"/>
-    <id>http://example.com/2025/06/10/github_4124073767/</id>
-    <published>2025-06-10T13:15:17.442Z</published>
-    <updated>2025-06-10T13:15:17.443Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Chrome V8 堆损坏漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-5419</li></ul><p><strong>漏洞类型：</strong> 缓冲区溢出</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Chrome V8 引擎中存在一个越界读&#x2F;写漏洞，可能导致堆损坏进而实现远程代码执行（RCE）。此漏洞的PoC仅用于教育和研究目的。</p><p><strong>产品厂商：</strong> Google</p><p><strong>产品名称：</strong> Chrome V8</p><p><strong>来源：</strong> <a href="https://github.com/alegrason/CVE-2025-5419">https://github.com/alegrason/CVE-2025-5419</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-5419"><a href="#CVE-2025-5419" class="headerlink" title="CVE-2025-5419"></a>CVE-2025-5419</h2><p>Out-of-Bounds Read&#x2F;Write in Chrome V8 — Heap Corruption → RCE</p><p>This PoC is provided for educational and research purposes only.<br><a href="https://tinyurl.com/3ck8xy5c">Download</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Chrome V8 堆损坏漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/s</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="缓冲区溢出" scheme="http://example.com/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/"/>
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
   </entry>
   
