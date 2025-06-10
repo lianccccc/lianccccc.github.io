@@ -4,6 +4,383 @@
   
   
   <entry>
+    <title>Missing Authentication in the registration feature of Lablup&#39;s BackendAI allows arbitrary users</title>
+    <link href="/2025/06/10/github_2126764388/"/>
+    <url>/2025/06/10/github_2126764388/</url>
+    
+    <content type="html"><![CDATA[<p>**链接: ** <a href="https://github.com/advisories/GHSA-ww28-4m4v-cq4j">https://github.com/advisories/GHSA-ww28-4m4v-cq4j</a></p><p>**CVSS 评分: ** 9.8</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-49652">https://nvd.nist.gov/vuln/detail/CVE-2025-49652</a></p></li><li><p><a href="https://hiddenlayer.com/sai_security_advisor/2025-05-backendai-49653">https://hiddenlayer.com/sai_security_advisor/2025-05-backendai-49653</a></p></li><li><p><a href="https://github.com/advisories/GHSA-ww28-4m4v-cq4j">https://github.com/advisories/GHSA-ww28-4m4v-cq4j</a></p></li></ul><p>**描述: **</p><p>Missing Authentication in the registration feature of Lablup’s BackendAI allows arbitrary users to create user accounts that can access private data even when registration is disabled.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>安全公告</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Github Advisory</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>A vulnerability was found in TOTOLINK T10 418cu5207 It has been classified as critical</title>
+    <link href="/2025/06/10/github_3511379987/"/>
+    <url>/2025/06/10/github_3511379987/</url>
+    
+    <content type="html"><![CDATA[<p>**链接: ** <a href="https://github.com/advisories/GHSA-pwwc-x5p3-pqjj">https://github.com/advisories/GHSA-pwwc-x5p3-pqjj</a></p><p>**CVSS 评分: ** 8.8</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5903">https://nvd.nist.gov/vuln/detail/CVE-2025-5903</a></p></li><li><p><a href="https://candle-throne-f75.notion.site/TOTOLINK-T10-setWiFiAclRules-20bdf0aa118580399a8df6ba2a44c197">https://candle-throne-f75.notion.site/TOTOLINK-T10-setWiFiAclRules-20bdf0aa118580399a8df6ba2a44c197</a></p></li><li><p><a href="https://vuldb.com/?ctiid.311676">https://vuldb.com/?ctiid.311676</a></p></li><li><p><a href="https://vuldb.com/?id.311676">https://vuldb.com/?id.311676</a></p></li><li><p><a href="https://vuldb.com/?submit.592247">https://vuldb.com/?submit.592247</a></p></li><li><p><a href="https://www.totolink.net/">https://www.totolink.net</a></p></li><li><p><a href="https://github.com/advisories/GHSA-pwwc-x5p3-pqjj">https://github.com/advisories/GHSA-pwwc-x5p3-pqjj</a></p></li></ul><p>**描述: **</p><p>A vulnerability was found in TOTOLINK T10 4.1.8cu.5207. It has been classified as critical. Affected is the function setWiFiAclRules of the file &#x2F;cgi-bin&#x2F;cstecgi.cgi of the component POST Request Handler. The manipulation of the argument desc leads to buffer overflow. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>安全公告</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Github Advisory</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>A vulnerability was found in TOTOLINK T10 418cu5207 and classified as critical This issue</title>
+    <link href="/2025/06/10/github_2932792177/"/>
+    <url>/2025/06/10/github_2932792177/</url>
+    
+    <content type="html"><![CDATA[<p>**链接: ** <a href="https://github.com/advisories/GHSA-6mq6-6457-rccm">https://github.com/advisories/GHSA-6mq6-6457-rccm</a></p><p>**CVSS 评分: ** 8.8</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5902">https://nvd.nist.gov/vuln/detail/CVE-2025-5902</a></p></li><li><p><a href="https://candle-throne-f75.notion.site/TOTOLINK-T10-setUpgradeFW-20bdf0aa11858089bc28f634bb140d00">https://candle-throne-f75.notion.site/TOTOLINK-T10-setUpgradeFW-20bdf0aa11858089bc28f634bb140d00</a></p></li><li><p><a href="https://vuldb.com/?ctiid.311675">https://vuldb.com/?ctiid.311675</a></p></li><li><p><a href="https://vuldb.com/?id.311675">https://vuldb.com/?id.311675</a></p></li><li><p><a href="https://vuldb.com/?submit.592246">https://vuldb.com/?submit.592246</a></p></li><li><p><a href="https://www.totolink.net/">https://www.totolink.net</a></p></li><li><p><a href="https://github.com/advisories/GHSA-6mq6-6457-rccm">https://github.com/advisories/GHSA-6mq6-6457-rccm</a></p></li></ul><p>**描述: **</p><p>A vulnerability was found in TOTOLINK T10 4.1.8cu.5207 and classified as critical. This issue affects the function setUpgradeFW of the file &#x2F;cgi-bin&#x2F;cstecgi.cgi of the component POST Request Handler. The manipulation of the argument slaveIpList leads to buffer overflow. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>安全公告</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Github Advisory</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>A vulnerability has been found in TOTOLINK T10 418cu5207 and classified as critical This</title>
+    <link href="/2025/06/10/github_84218411/"/>
+    <url>/2025/06/10/github_84218411/</url>
+    
+    <content type="html"><![CDATA[<p>**链接: ** <a href="https://github.com/advisories/GHSA-jfcx-jqxf-6323">https://github.com/advisories/GHSA-jfcx-jqxf-6323</a></p><p>**CVSS 评分: ** 8.8</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5901">https://nvd.nist.gov/vuln/detail/CVE-2025-5901</a></p></li><li><p><a href="https://candle-throne-f75.notion.site/TOTOLINK-T10-UploadCustomModule-20bdf0aa118580d59961cd545582c118">https://candle-throne-f75.notion.site/TOTOLINK-T10-UploadCustomModule-20bdf0aa118580d59961cd545582c118</a></p></li><li><p><a href="https://vuldb.com/?ctiid.311674">https://vuldb.com/?ctiid.311674</a></p></li><li><p><a href="https://vuldb.com/?id.311674">https://vuldb.com/?id.311674</a></p></li><li><p><a href="https://vuldb.com/?submit.592243">https://vuldb.com/?submit.592243</a></p></li><li><p><a href="https://www.totolink.net/">https://www.totolink.net</a></p></li><li><p><a href="https://github.com/advisories/GHSA-jfcx-jqxf-6323">https://github.com/advisories/GHSA-jfcx-jqxf-6323</a></p></li></ul><p>**描述: **</p><p>A vulnerability has been found in TOTOLINK T10 4.1.8cu.5207 and classified as critical. This vulnerability affects the function UploadCustomModule of the file &#x2F;cgi-bin&#x2F;cstecgi.cgi of the component POST Request Handler. The manipulation of the argument File leads to buffer overflow. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>安全公告</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Github Advisory</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>A vulnerability was found in TOTOLINK T10 418cu5207 It has been declared as critical</title>
+    <link href="/2025/06/10/github_1435835657/"/>
+    <url>/2025/06/10/github_1435835657/</url>
+    
+    <content type="html"><![CDATA[<p>**链接: ** <a href="https://github.com/advisories/GHSA-m742-x7cw-3g4q">https://github.com/advisories/GHSA-m742-x7cw-3g4q</a></p><p>**CVSS 评分: ** 8.8</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5904">https://nvd.nist.gov/vuln/detail/CVE-2025-5904</a></p></li><li><p><a href="https://candle-throne-f75.notion.site/TOTOLINK-T10-setWiFiMeshName-20bdf0aa1185806eb922dbd496c4a4b4">https://candle-throne-f75.notion.site/TOTOLINK-T10-setWiFiMeshName-20bdf0aa1185806eb922dbd496c4a4b4</a></p></li><li><p><a href="https://vuldb.com/?ctiid.311677">https://vuldb.com/?ctiid.311677</a></p></li><li><p><a href="https://vuldb.com/?id.311677">https://vuldb.com/?id.311677</a></p></li><li><p><a href="https://vuldb.com/?submit.592264">https://vuldb.com/?submit.592264</a></p></li><li><p><a href="https://www.totolink.net/">https://www.totolink.net</a></p></li><li><p><a href="https://github.com/advisories/GHSA-m742-x7cw-3g4q">https://github.com/advisories/GHSA-m742-x7cw-3g4q</a></p></li></ul><p>**描述: **</p><p>A vulnerability was found in TOTOLINK T10 4.1.8cu.5207. It has been declared as critical. Affected by this vulnerability is the function setWiFiMeshName of the file &#x2F;cgi-bin&#x2F;cstecgi.cgi of the component POST Request Handler. The manipulation of the argument device_name leads to buffer overflow. The attack can be launched remotely. The exploit has been disclosed to the public and may be used.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>安全公告</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Github Advisory</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>A vulnerability was found in TOTOLINK T10 418cu5207 It has been rated as critical Affected</title>
+    <link href="/2025/06/10/github_1083299721/"/>
+    <url>/2025/06/10/github_1083299721/</url>
+    
+    <content type="html"><![CDATA[<p>**链接: ** <a href="https://github.com/advisories/GHSA-r36p-hj2v-vj2h">https://github.com/advisories/GHSA-r36p-hj2v-vj2h</a></p><p>**CVSS 评分: ** 8.8</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5905">https://nvd.nist.gov/vuln/detail/CVE-2025-5905</a></p></li><li><p><a href="https://candle-throne-f75.notion.site/TOTOLINK-T10-setWiFiRepeaterCfg-20bdf0aa118580bd8cd0da62d4d2e47f?pvs=73">https://candle-throne-f75.notion.site/TOTOLINK-T10-setWiFiRepeaterCfg-20bdf0aa118580bd8cd0da62d4d2e47f?pvs=73</a></p></li><li><p><a href="https://vuldb.com/?ctiid.311678">https://vuldb.com/?ctiid.311678</a></p></li><li><p><a href="https://vuldb.com/?id.311678">https://vuldb.com/?id.311678</a></p></li><li><p><a href="https://vuldb.com/?submit.592265">https://vuldb.com/?submit.592265</a></p></li><li><p><a href="https://www.totolink.net/">https://www.totolink.net</a></p></li><li><p><a href="https://github.com/advisories/GHSA-r36p-hj2v-vj2h">https://github.com/advisories/GHSA-r36p-hj2v-vj2h</a></p></li></ul><p>**描述: **</p><p>A vulnerability was found in TOTOLINK T10 4.1.8cu.5207. It has been rated as critical. Affected by this issue is the function setWiFiRepeaterCfg of the file &#x2F;cgi-bin&#x2F;cstecgi.cgi of the component POST Request Handler. The manipulation of the argument Password leads to buffer overflow. The attack may be launched remotely. The exploit has been disclosed to the public and may be used.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>安全公告</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Github Advisory</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>SAP Business Warehouse and SAP Plug-In Basis allows an authenticated attacker to drop arbitrary</title>
+    <link href="/2025/06/10/github_2255167076/"/>
+    <url>/2025/06/10/github_2255167076/</url>
+    
+    <content type="html"><![CDATA[<p>**链接: ** <a href="https://github.com/advisories/GHSA-6m52-p2fg-w7xc">https://github.com/advisories/GHSA-6m52-p2fg-w7xc</a></p><p>**CVSS 评分: ** 8.5</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-42983">https://nvd.nist.gov/vuln/detail/CVE-2025-42983</a></p></li><li><p><a href="https://me.sap.com/notes/3606484">https://me.sap.com/notes/3606484</a></p></li><li><p><a href="https://url.sap/sapsecuritypatchday">https://url.sap/sapsecuritypatchday</a></p></li><li><p><a href="https://github.com/advisories/GHSA-6m52-p2fg-w7xc">https://github.com/advisories/GHSA-6m52-p2fg-w7xc</a></p></li></ul><p>**描述: **</p><p>SAP Business Warehouse and SAP Plug-In Basis allows an authenticated attacker to drop arbitrary SAP database tables, potentially resulting in a loss of data or rendering the system unusable. On successful exploitation, an attacker can completely delete database entries but is not able to read any data.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>安全公告</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Github Advisory</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>SAP GRC allows a non-administrative user to access and initiate transaction which could allow</title>
+    <link href="/2025/06/10/github_2141996471/"/>
+    <url>/2025/06/10/github_2141996471/</url>
+    
+    <content type="html"><![CDATA[<p>**链接: ** <a href="https://github.com/advisories/GHSA-7xgc-5jg8-2xhx">https://github.com/advisories/GHSA-7xgc-5jg8-2xhx</a></p><p>**CVSS 评分: ** 8.8</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-42982">https://nvd.nist.gov/vuln/detail/CVE-2025-42982</a></p></li><li><p><a href="https://me.sap.com/notes/3609271">https://me.sap.com/notes/3609271</a></p></li><li><p><a href="https://url.sap/sapsecuritypatchday">https://url.sap/sapsecuritypatchday</a></p></li><li><p><a href="https://github.com/advisories/GHSA-7xgc-5jg8-2xhx">https://github.com/advisories/GHSA-7xgc-5jg8-2xhx</a></p></li></ul><p>**描述: **</p><p>SAP GRC allows a non-administrative user to access and initiate transaction which could allow them to modify or control the transmitted system credentials. This causes high impact on confidentiality, integrity and availability of the application.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>安全公告</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Github Advisory</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>A vulnerability classified as critical was found in TOTOLINK EX1200T up to 412cu5232_B20210713</title>
+    <link href="/2025/06/10/github_2243827768/"/>
+    <url>/2025/06/10/github_2243827768/</url>
+    
+    <content type="html"><![CDATA[<p>**链接: ** <a href="https://github.com/advisories/GHSA-7w7w-qmvg-8559">https://github.com/advisories/GHSA-7w7w-qmvg-8559</a></p><p>**CVSS 评分: ** 8.8</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5907">https://nvd.nist.gov/vuln/detail/CVE-2025-5907</a></p></li><li><p><a href="https://github.com/byxs0x0/cve2/blob/main/3.md">https://github.com/byxs0x0/cve2/blob/main/3.md</a></p></li><li><p><a href="https://vuldb.com/?ctiid.311680">https://vuldb.com/?ctiid.311680</a></p></li><li><p><a href="https://vuldb.com/?id.311680">https://vuldb.com/?id.311680</a></p></li><li><p><a href="https://vuldb.com/?submit.592267">https://vuldb.com/?submit.592267</a></p></li><li><p><a href="https://www.totolink.net/">https://www.totolink.net</a></p></li><li><p><a href="https://github.com/advisories/GHSA-7w7w-qmvg-8559">https://github.com/advisories/GHSA-7w7w-qmvg-8559</a></p></li></ul><p>**描述: **</p><p>A vulnerability classified as critical was found in TOTOLINK EX1200T up to 4.1.2cu.5232_B20210713. This vulnerability affects unknown code of the file &#x2F;boafrm&#x2F;formFilter of the component HTTP POST Request Handler. The manipulation leads to buffer overflow. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>安全公告</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Github Advisory</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>RFC inbound processing�does not perform necessary authorization checks for an authenticated user,</title>
+    <link href="/2025/06/10/github_3078219642/"/>
+    <url>/2025/06/10/github_3078219642/</url>
+    
+    <content type="html"><![CDATA[<p>**链接: ** <a href="https://github.com/advisories/GHSA-p85x-xv8x-v67q">https://github.com/advisories/GHSA-p85x-xv8x-v67q</a></p><p>**CVSS 评分: ** 9.6</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-42989">https://nvd.nist.gov/vuln/detail/CVE-2025-42989</a></p></li><li><p><a href="https://me.sap.com/notes/3600840">https://me.sap.com/notes/3600840</a></p></li><li><p><a href="https://url.sap/sapsecuritypatchday">https://url.sap/sapsecuritypatchday</a></p></li><li><p><a href="https://github.com/advisories/GHSA-p85x-xv8x-v67q">https://github.com/advisories/GHSA-p85x-xv8x-v67q</a></p></li></ul><p>**描述: **</p><p>RFC inbound processing�does not perform necessary authorization checks for an authenticated user, resulting in escalation of privileges. On successful exploitation the attacker could critically impact both integrity and availability of the application.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>安全公告</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Github Advisory</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>A vulnerability, which was classified as critical, has been found in TOTOLINK EX1200T up to 41</title>
+    <link href="/2025/06/10/github_3055421474/"/>
+    <url>/2025/06/10/github_3055421474/</url>
+    
+    <content type="html"><![CDATA[<p>**链接: ** <a href="https://github.com/advisories/GHSA-j52j-ph84-2j62">https://github.com/advisories/GHSA-j52j-ph84-2j62</a></p><p>**CVSS 评分: ** 8.8</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5908">https://nvd.nist.gov/vuln/detail/CVE-2025-5908</a></p></li><li><p><a href="https://github.com/byxs0x0/cve2/blob/main/4.md">https://github.com/byxs0x0/cve2/blob/main/4.md</a></p></li><li><p><a href="https://vuldb.com/?ctiid.311681">https://vuldb.com/?ctiid.311681</a></p></li><li><p><a href="https://vuldb.com/?id.311681">https://vuldb.com/?id.311681</a></p></li><li><p><a href="https://vuldb.com/?submit.592269">https://vuldb.com/?submit.592269</a></p></li><li><p><a href="https://www.totolink.net/">https://www.totolink.net</a></p></li><li><p><a href="https://github.com/advisories/GHSA-j52j-ph84-2j62">https://github.com/advisories/GHSA-j52j-ph84-2j62</a></p></li></ul><p>**描述: **</p><p>A vulnerability, which was classified as critical, has been found in TOTOLINK EX1200T up to 4.1.2cu.5232_B20210713. This issue affects some unknown processing of the file &#x2F;boafrm&#x2F;formIpQoS of the component HTTP POST Request Handler. The manipulation leads to buffer overflow. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>安全公告</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Github Advisory</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>A vulnerability has been found in TOTOLINK EX1200T up to 412cu5232_B20210713 and classified as</title>
+    <link href="/2025/06/10/github_1612062170/"/>
+    <url>/2025/06/10/github_1612062170/</url>
+    
+    <content type="html"><![CDATA[<p>**链接: ** <a href="https://github.com/advisories/GHSA-457f-pcj5-v75v">https://github.com/advisories/GHSA-457f-pcj5-v75v</a></p><p>**CVSS 评分: ** 8.8</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5910">https://nvd.nist.gov/vuln/detail/CVE-2025-5910</a></p></li><li><p><a href="https://github.com/byxs0x0/cve2/blob/main/6.md">https://github.com/byxs0x0/cve2/blob/main/6.md</a></p></li><li><p><a href="https://vuldb.com/?ctiid.311683">https://vuldb.com/?ctiid.311683</a></p></li><li><p><a href="https://vuldb.com/?id.311683">https://vuldb.com/?id.311683</a></p></li><li><p><a href="https://vuldb.com/?submit.592271">https://vuldb.com/?submit.592271</a></p></li><li><p><a href="https://www.totolink.net/">https://www.totolink.net</a></p></li><li><p><a href="https://github.com/advisories/GHSA-457f-pcj5-v75v">https://github.com/advisories/GHSA-457f-pcj5-v75v</a></p></li></ul><p>**描述: **</p><p>A vulnerability has been found in TOTOLINK EX1200T up to 4.1.2cu.5232_B20210713 and classified as critical. Affected by this vulnerability is an unknown functionality of the file &#x2F;boafrm&#x2F;formWsc of the component HTTP POST Request Handler. The manipulation leads to buffer overflow. The attack can be launched remotely. The exploit has been disclosed to the public and may be used.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>安全公告</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Github Advisory</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>A vulnerability was found in TOTOLINK EX1200T up to 412cu5232_B20210713 and classified as</title>
+    <link href="/2025/06/10/github_2150810134/"/>
+    <url>/2025/06/10/github_2150810134/</url>
+    
+    <content type="html"><![CDATA[<p>**链接: ** <a href="https://github.com/advisories/GHSA-qjqq-q9g6-p92r">https://github.com/advisories/GHSA-qjqq-q9g6-p92r</a></p><p>**CVSS 评分: ** 8.8</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5911">https://nvd.nist.gov/vuln/detail/CVE-2025-5911</a></p></li><li><p><a href="https://github.com/byxs0x0/cve2/blob/main/7.md">https://github.com/byxs0x0/cve2/blob/main/7.md</a></p></li><li><p><a href="https://vuldb.com/?ctiid.311684">https://vuldb.com/?ctiid.311684</a></p></li><li><p><a href="https://vuldb.com/?id.311684">https://vuldb.com/?id.311684</a></p></li><li><p><a href="https://vuldb.com/?submit.592272">https://vuldb.com/?submit.592272</a></p></li><li><p><a href="https://www.totolink.net/">https://www.totolink.net</a></p></li><li><p><a href="https://github.com/advisories/GHSA-qjqq-q9g6-p92r">https://github.com/advisories/GHSA-qjqq-q9g6-p92r</a></p></li></ul><p>**描述: **</p><p>A vulnerability was found in TOTOLINK EX1200T up to 4.1.2cu.5232_B20210713 and classified as critical. Affected by this issue is some unknown functionality of the file &#x2F;boafrm&#x2F;formDMZ of the component HTTP POST Request Handler. The manipulation leads to buffer overflow. The attack may be launched remotely. The exploit has been disclosed to the public and may be used.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>安全公告</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Github Advisory</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>A vulnerability, which was classified as critical, was found in TOTOLINK EX1200T up to 412cu</title>
+    <link href="/2025/06/10/github_1361192037/"/>
+    <url>/2025/06/10/github_1361192037/</url>
+    
+    <content type="html"><![CDATA[<p>**链接: ** <a href="https://github.com/advisories/GHSA-64c7-4r62-687q">https://github.com/advisories/GHSA-64c7-4r62-687q</a></p><p>**CVSS 评分: ** 8.8</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5909">https://nvd.nist.gov/vuln/detail/CVE-2025-5909</a></p></li><li><p><a href="https://github.com/byxs0x0/cve2/blob/main/5.md">https://github.com/byxs0x0/cve2/blob/main/5.md</a></p></li><li><p><a href="https://vuldb.com/?ctiid.311682">https://vuldb.com/?ctiid.311682</a></p></li><li><p><a href="https://vuldb.com/?id.311682">https://vuldb.com/?id.311682</a></p></li><li><p><a href="https://vuldb.com/?submit.592270">https://vuldb.com/?submit.592270</a></p></li><li><p><a href="https://www.totolink.net/">https://www.totolink.net</a></p></li><li><p><a href="https://github.com/advisories/GHSA-64c7-4r62-687q">https://github.com/advisories/GHSA-64c7-4r62-687q</a></p></li></ul><p>**描述: **</p><p>A vulnerability, which was classified as critical, was found in TOTOLINK EX1200T up to 4.1.2cu.5232_B20210713. Affected is an unknown function of the file &#x2F;boafrm&#x2F;formReflashClientTbl of the component HTTP POST Request Handler. The manipulation leads to buffer overflow. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>安全公告</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Github Advisory</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Apache Kafka 多个高危漏洞安全风险通告</title>
+    <link href="/2025/06/10/weixin_2447902475/"/>
+    <url>/2025/06/10/weixin_2447902475/</url>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 奇安信 CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/ZvZDD-QufFBnmrXVp7x47w">https://mp.weixin.qq.com/s/ZvZDD-QufFBnmrXVp7x47w</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信公众号</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>mp.weixin.qq.com</tag>
+      
+      <tag>奇安信 CERT</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Github Poc</title>
     <link href="/2025/06/10/github_2870097019/"/>
     <url>/2025/06/10/github_2870097019/</url>
@@ -3416,9 +3793,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -5522,9 +5899,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -5549,9 +5926,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -6781,9 +7158,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -6808,9 +7185,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -6997,9 +7374,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -7105,9 +7482,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
