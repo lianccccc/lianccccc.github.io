@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-10T06:29:31.264Z</updated>
+  <updated>2025-06-10T06:46:54.312Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,15 +21,14 @@
     <link href="http://example.com/2025/06/10/github_2126764388/"/>
     <id>http://example.com/2025/06/10/github_2126764388/</id>
     <published>2025-06-10T06:29:31.267Z</published>
-    <updated>2025-06-10T06:29:31.264Z</updated>
+    <updated>2025-06-10T06:46:54.312Z</updated>
     
-    <content type="html"><![CDATA[<p>**链接: ** <a href="https://github.com/advisories/GHSA-ww28-4m4v-cq4j">https://github.com/advisories/GHSA-ww28-4m4v-cq4j</a></p><p>**CVSS 评分: ** 9.8</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-49652">https://nvd.nist.gov/vuln/detail/CVE-2025-49652</a></p></li><li><p><a href="https://hiddenlayer.com/sai_security_advisor/2025-05-backendai-49653">https://hiddenlayer.com/sai_security_advisor/2025-05-backendai-49653</a></p></li><li><p><a href="https://github.com/advisories/GHSA-ww28-4m4v-cq4j">https://github.com/advisories/GHSA-ww28-4m4v-cq4j</a></p></li></ul><p>**描述: **</p><p>Missing Authentication in the registration feature of Lablup’s BackendAI allows arbitrary users to create user accounts that can access private data even when registration is disabled.</p>]]></content>
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-ww28-4m4v-cq4j">https://github.com/advisories/GHSA-ww28-4m4v-cq4j</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-49652">https://nvd.nist.gov/vuln/detail/CVE-2025-49652</a></p></li><li><p><a href="https://hiddenlayer.com/sai_security_advisor/2025-05-backendai-49653">https://hiddenlayer.com/sai_security_advisor/2025-05-backendai-49653</a></p></li><li><p><a href="https://github.com/advisories/GHSA-ww28-4m4v-cq4j">https://github.com/advisories/GHSA-ww28-4m4v-cq4j</a></p></li></ul><p><strong>描述：</strong></p><p>Missing Authentication in the registration feature of Lablup’s BackendAI allows arbitrary users to create user accounts that can access private data even when registration is disabled.</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;**链接: ** &lt;a href=&quot;https://github.com/advisories/GHSA-ww28-4m4v-cq4j&quot;&gt;https://github.com/advisories/GHSA-ww28-4m4v-cq4j&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;**CVSS </summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-ww28-4m4v-cq4j&quot;&gt;https://github.com/advisories/GHSA-ww28-4m4v-cq4j&lt;/a&gt;&lt;/p</summary>
       
     
     
@@ -46,15 +45,14 @@
     <link href="http://example.com/2025/06/10/github_2255167076/"/>
     <id>http://example.com/2025/06/10/github_2255167076/</id>
     <published>2025-06-10T06:29:29.323Z</published>
-    <updated>2025-06-10T06:29:29.320Z</updated>
+    <updated>2025-06-10T06:46:54.300Z</updated>
     
-    <content type="html"><![CDATA[<p>**链接: ** <a href="https://github.com/advisories/GHSA-6m52-p2fg-w7xc">https://github.com/advisories/GHSA-6m52-p2fg-w7xc</a></p><p>**CVSS 评分: ** 8.5</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-42983">https://nvd.nist.gov/vuln/detail/CVE-2025-42983</a></p></li><li><p><a href="https://me.sap.com/notes/3606484">https://me.sap.com/notes/3606484</a></p></li><li><p><a href="https://url.sap/sapsecuritypatchday">https://url.sap/sapsecuritypatchday</a></p></li><li><p><a href="https://github.com/advisories/GHSA-6m52-p2fg-w7xc">https://github.com/advisories/GHSA-6m52-p2fg-w7xc</a></p></li></ul><p>**描述: **</p><p>SAP Business Warehouse and SAP Plug-In Basis allows an authenticated attacker to drop arbitrary SAP database tables, potentially resulting in a loss of data or rendering the system unusable. On successful exploitation, an attacker can completely delete database entries but is not able to read any data.</p>]]></content>
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-6m52-p2fg-w7xc">https://github.com/advisories/GHSA-6m52-p2fg-w7xc</a></p><p><strong>CVSS 评分：</strong> 8.5</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-42983">https://nvd.nist.gov/vuln/detail/CVE-2025-42983</a></p></li><li><p><a href="https://me.sap.com/notes/3606484">https://me.sap.com/notes/3606484</a></p></li><li><p><a href="https://url.sap/sapsecuritypatchday">https://url.sap/sapsecuritypatchday</a></p></li><li><p><a href="https://github.com/advisories/GHSA-6m52-p2fg-w7xc">https://github.com/advisories/GHSA-6m52-p2fg-w7xc</a></p></li></ul><p><strong>描述：</strong></p><p>SAP Business Warehouse and SAP Plug-In Basis allows an authenticated attacker to drop arbitrary SAP database tables, potentially resulting in a loss of data or rendering the system unusable. On successful exploitation, an attacker can completely delete database entries but is not able to read any data.</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;**链接: ** &lt;a href=&quot;https://github.com/advisories/GHSA-6m52-p2fg-w7xc&quot;&gt;https://github.com/advisories/GHSA-6m52-p2fg-w7xc&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;**CVSS </summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-6m52-p2fg-w7xc&quot;&gt;https://github.com/advisories/GHSA-6m52-p2fg-w7xc&lt;/a&gt;&lt;/p</summary>
       
     
     
@@ -71,15 +69,14 @@
     <link href="http://example.com/2025/06/10/github_2141996471/"/>
     <id>http://example.com/2025/06/10/github_2141996471/</id>
     <published>2025-06-10T06:29:28.998Z</published>
-    <updated>2025-06-10T06:29:28.992Z</updated>
+    <updated>2025-06-10T06:46:54.308Z</updated>
     
-    <content type="html"><![CDATA[<p>**链接: ** <a href="https://github.com/advisories/GHSA-7xgc-5jg8-2xhx">https://github.com/advisories/GHSA-7xgc-5jg8-2xhx</a></p><p>**CVSS 评分: ** 8.8</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-42982">https://nvd.nist.gov/vuln/detail/CVE-2025-42982</a></p></li><li><p><a href="https://me.sap.com/notes/3609271">https://me.sap.com/notes/3609271</a></p></li><li><p><a href="https://url.sap/sapsecuritypatchday">https://url.sap/sapsecuritypatchday</a></p></li><li><p><a href="https://github.com/advisories/GHSA-7xgc-5jg8-2xhx">https://github.com/advisories/GHSA-7xgc-5jg8-2xhx</a></p></li></ul><p>**描述: **</p><p>SAP GRC allows a non-administrative user to access and initiate transaction which could allow them to modify or control the transmitted system credentials. This causes high impact on confidentiality, integrity and availability of the application.</p>]]></content>
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-7xgc-5jg8-2xhx">https://github.com/advisories/GHSA-7xgc-5jg8-2xhx</a></p><p><strong>CVSS 评分：</strong> 8.8</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-42982">https://nvd.nist.gov/vuln/detail/CVE-2025-42982</a></p></li><li><p><a href="https://me.sap.com/notes/3609271">https://me.sap.com/notes/3609271</a></p></li><li><p><a href="https://url.sap/sapsecuritypatchday">https://url.sap/sapsecuritypatchday</a></p></li><li><p><a href="https://github.com/advisories/GHSA-7xgc-5jg8-2xhx">https://github.com/advisories/GHSA-7xgc-5jg8-2xhx</a></p></li></ul><p><strong>描述：</strong></p><p>SAP GRC allows a non-administrative user to access and initiate transaction which could allow them to modify or control the transmitted system credentials. This causes high impact on confidentiality, integrity and availability of the application.</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;**链接: ** &lt;a href=&quot;https://github.com/advisories/GHSA-7xgc-5jg8-2xhx&quot;&gt;https://github.com/advisories/GHSA-7xgc-5jg8-2xhx&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;**CVSS </summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-7xgc-5jg8-2xhx&quot;&gt;https://github.com/advisories/GHSA-7xgc-5jg8-2xhx&lt;/a&gt;&lt;/p</summary>
       
     
     
@@ -96,15 +93,14 @@
     <link href="http://example.com/2025/06/10/github_3078219642/"/>
     <id>http://example.com/2025/06/10/github_3078219642/</id>
     <published>2025-06-10T06:29:28.307Z</published>
-    <updated>2025-06-10T06:29:28.308Z</updated>
+    <updated>2025-06-10T06:46:54.296Z</updated>
     
-    <content type="html"><![CDATA[<p>**链接: ** <a href="https://github.com/advisories/GHSA-p85x-xv8x-v67q">https://github.com/advisories/GHSA-p85x-xv8x-v67q</a></p><p>**CVSS 评分: ** 9.6</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-42989">https://nvd.nist.gov/vuln/detail/CVE-2025-42989</a></p></li><li><p><a href="https://me.sap.com/notes/3600840">https://me.sap.com/notes/3600840</a></p></li><li><p><a href="https://url.sap/sapsecuritypatchday">https://url.sap/sapsecuritypatchday</a></p></li><li><p><a href="https://github.com/advisories/GHSA-p85x-xv8x-v67q">https://github.com/advisories/GHSA-p85x-xv8x-v67q</a></p></li></ul><p>**描述: **</p><p>RFC inbound processing�does not perform necessary authorization checks for an authenticated user, resulting in escalation of privileges. On successful exploitation the attacker could critically impact both integrity and availability of the application.</p>]]></content>
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-p85x-xv8x-v67q">https://github.com/advisories/GHSA-p85x-xv8x-v67q</a></p><p><strong>CVSS 评分：</strong> 9.6</p><p><strong>参考链接</strong>:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-42989">https://nvd.nist.gov/vuln/detail/CVE-2025-42989</a></p></li><li><p><a href="https://me.sap.com/notes/3600840">https://me.sap.com/notes/3600840</a></p></li><li><p><a href="https://url.sap/sapsecuritypatchday">https://url.sap/sapsecuritypatchday</a></p></li><li><p><a href="https://github.com/advisories/GHSA-p85x-xv8x-v67q">https://github.com/advisories/GHSA-p85x-xv8x-v67q</a></p></li></ul><p><strong>描述：</strong></p><p>RFC inbound processing�does not perform necessary authorization checks for an authenticated user, resulting in escalation of privileges. On successful exploitation the attacker could critically impact both integrity and availability of the application.</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;**链接: ** &lt;a href=&quot;https://github.com/advisories/GHSA-p85x-xv8x-v67q&quot;&gt;https://github.com/advisories/GHSA-p85x-xv8x-v67q&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;**CVSS </summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-p85x-xv8x-v67q&quot;&gt;https://github.com/advisories/GHSA-p85x-xv8x-v67q&lt;/a&gt;&lt;/p</summary>
       
     
     
@@ -121,7 +117,7 @@
     <link href="http://example.com/2025/06/10/weixin_2447902475/"/>
     <id>http://example.com/2025/06/10/weixin_2447902475/</id>
     <published>2025-06-10T06:24:01.563Z</published>
-    <updated>2025-06-10T06:24:01.560Z</updated>
+    <updated>2025-06-10T06:46:54.288Z</updated>
     
     <content type="html"><![CDATA[<p><strong>公众号：</strong> 奇安信 CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/ZvZDD-QufFBnmrXVp7x47w">https://mp.weixin.qq.com/s/ZvZDD-QufFBnmrXVp7x47w</a></p>]]></content>
     
