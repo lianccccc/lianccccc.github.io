@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-10T15:30:25.593Z</updated>
+  <updated>2025-06-10T16:00:07.549Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Deserialization of Untrusted Data vulnerability in LoftOcean TinySalt allows Object Injection</title>
+    <link href="http://example.com/2025/06/10/github_663333958/"/>
+    <id>http://example.com/2025/06/10/github_663333958/</id>
+    <published>2025-06-10T16:00:07.552Z</published>
+    <updated>2025-06-10T16:00:07.549Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-v5f4-pm7v-cv3f">https://github.com/advisories/GHSA-v5f4-pm7v-cv3f</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-49455">https://nvd.nist.gov/vuln/detail/CVE-2025-49455</a></p></li><li><p><a href="https://patchstack.com/database/wordpress/theme/tinysalt/vulnerability/wordpress-tinysalt-3-10-0-php-object-injection-vulnerability?_s_id=cve">https://patchstack.com/database/wordpress/theme/tinysalt/vulnerability/wordpress-tinysalt-3-10-0-php-object-injection-vulnerability?_s_id=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-v5f4-pm7v-cv3f">https://github.com/advisories/GHSA-v5f4-pm7v-cv3f</a></p></li></ul><p><strong>描述：</strong></p><p>Deserialization of Untrusted Data vulnerability in LoftOcean TinySalt allows Object Injection.This issue affects TinySalt: from n&#x2F;a before 3.10.0.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-v5f4-pm7v-cv3f&quot;&gt;https://github.com/advisories/GHSA-v5f4-pm7v-cv3f&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Deserialization of Untrusted Data vulnerability in LoftOcean CozyStay allows Object Injection</title>
+    <link href="http://example.com/2025/06/10/github_3851882550/"/>
+    <id>http://example.com/2025/06/10/github_3851882550/</id>
+    <published>2025-06-10T16:00:06.160Z</published>
+    <updated>2025-06-10T16:00:06.181Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-77r3-7jcc-r6rj">https://github.com/advisories/GHSA-77r3-7jcc-r6rj</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-49507">https://nvd.nist.gov/vuln/detail/CVE-2025-49507</a></p></li><li><p><a href="https://patchstack.com/database/wordpress/theme/cozystay/vulnerability/wordpress-cozystay-1-7-1-php-object-injection-vulnerability?_s_id=cve">https://patchstack.com/database/wordpress/theme/cozystay/vulnerability/wordpress-cozystay-1-7-1-php-object-injection-vulnerability?_s_id=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-77r3-7jcc-r6rj">https://github.com/advisories/GHSA-77r3-7jcc-r6rj</a></p></li></ul><p><strong>描述：</strong></p><p>Deserialization of Untrusted Data vulnerability in LoftOcean CozyStay allows Object Injection.This issue affects CozyStay: from n&#x2F;a before 1.7.1.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-77r3-7jcc-r6rj&quot;&gt;https://github.com/advisories/GHSA-77r3-7jcc-r6rj&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>Roundcube Webmail 远程代码执行漏洞</title>
@@ -473,60 +521,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/TCe0ZqpbEHE_MFye-KInrA&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>APT组织“图书管理员食尸鬼”再度活跃，将合法工具武器化</title>
-    <link href="http://example.com/2025/06/10/weixin_1279158755/"/>
-    <id>http://example.com/2025/06/10/weixin_1279158755/</id>
-    <published>2025-06-10T10:04:47.903Z</published>
-    <updated>2025-06-10T10:04:47.903Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/ibH02I9ew7HpQu9Yg4RpSQ">https://mp.weixin.qq.com/s/ibH02I9ew7HpQu9Yg4RpSQ</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/ibH02I9ew7HpQu9Yg4RpSQ&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>报名开启  2025年&quot;工赋砺网&quot;芯片安全主题培训</title>
-    <link href="http://example.com/2025/06/10/weixin_3306435773/"/>
-    <id>http://example.com/2025/06/10/weixin_3306435773/</id>
-    <published>2025-06-10T10:04:47.558Z</published>
-    <updated>2025-06-10T10:04:47.555Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/PaFQtA4WKBzO8qS-u4NB-g">https://mp.weixin.qq.com/s/PaFQtA4WKBzO8qS-u4NB-g</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/PaFQtA4WKBzO8qS-u4NB-g&quot;&gt;https://mp.weixin.q</summary>
       
     
     
