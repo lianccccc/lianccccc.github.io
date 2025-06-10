@@ -4,6 +4,60 @@
   
   
   <entry>
+    <title>【高危漏洞预警】Apache Kafka Client配置造成远程代码执行漏洞CVE-2025-27818</title>
+    <link href="/2025/06/10/weixin_4277695278/"/>
+    <url>/2025/06/10/weixin_4277695278/</url>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 飓风网络安全</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/yA8NWyBI7d5H9uVQajLSiw">https://mp.weixin.qq.com/s/yA8NWyBI7d5H9uVQajLSiw</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信公众号</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>mp.weixin.qq.com</tag>
+      
+      <tag>飓风网络安全</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>【高危漏洞预警】Apache Kafka Client 任意文件读取与SSRF漏洞CVE-2025-27817</title>
+    <link href="/2025/06/10/weixin_1411510518/"/>
+    <url>/2025/06/10/weixin_1411510518/</url>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 飓风网络安全</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/lvm_-UBieWNVzBKhbRMFeA">https://mp.weixin.qq.com/s/lvm_-UBieWNVzBKhbRMFeA</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信公众号</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>mp.weixin.qq.com</tag>
+      
+      <tag>飓风网络安全</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Fortinet SSL-VPN 堆缓冲区溢出漏洞</title>
     <link href="/2025/06/10/github_1249466416/"/>
     <url>/2025/06/10/github_1249466416/</url>
