@@ -4,6 +4,87 @@
   
   
   <entry>
+    <title>Apache Struts 路径遍历与远程代码执行漏洞</title>
+    <link href="/2025/06/11/github_4241703152/"/>
+    <url>/2025/06/11/github_4241703152/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache Struts 路径遍历与远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-50164</li></ul><p><strong>漏洞类型：</strong> 目录遍历</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Apache Struts 2.5.33和6.3.0.2+版本中存在路径遍历漏洞，攻击者可以通过操纵文件上传参数上传恶意文件，并可能执行远程代码。此漏洞要求攻击者能够操纵上传参数。</p><p><strong>产品厂商：</strong> Apache</p><p><strong>产品名称：</strong> Struts</p><p><strong>影响版本：</strong> 2.5.33, 6.3.0.2+</p><p><strong>搜索语法：</strong> http.title:”struts2 showcase”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12302">https://github.com/projectdiscovery/nuclei-templates/issues/12302</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Struts 2.5.33 and 6.3.0.2+ contain a path traversal caused by manipulation of file upload parameters, letting attackers upload malicious files and potentially execute remote code, exploit requires attacker to manipulate upload parameters.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://vulncheck.com/xdb/676c45378050">https://vulncheck.com/xdb/676c45378050</a></li><li><a href="https://github.com/Pixel-DefaultBR/CVE-2023-50164">https://github.com/Pixel-DefaultBR/CVE-2023-50164</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:Pixel-DefaultBR&#x2F;CVE-2023-50164.git</li><li><a href="https://github.com/Trackflaw/CVE-2024-10924-Wordpress-Docker">https://github.com/Trackflaw/CVE-2024-10924-Wordpress-Docker</a></li><li><a href="https://vulncheck.com/xdb/891b149617f9">https://vulncheck.com/xdb/891b149617f9</a></li><li><a href="https://github.com/NikitaPark/CVE-2023-50164-PoC">https://github.com/NikitaPark/CVE-2023-50164-PoC</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:NikitaPark&#x2F;CVE-2023-50164-PoC.git</li><li><a href="https://vulncheck.com/xdb/78854c0dc088">https://vulncheck.com/xdb/78854c0dc088</a></li><li><a href="https://github.com/AsfandAliMemon25/CVE-2023-50164Analysis-">https://github.com/AsfandAliMemon25/CVE-2023-50164Analysis-</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:AsfandAliMemon25&#x2F;CVE-2023-50164Analysis-.git</li><li><a href="https://github.com/sunnyvale-it/CVE-2023-50164-PoC">https://github.com/sunnyvale-it/CVE-2023-50164-PoC</a></li><li><a href="https://vulncheck.com/xdb/17870a6362f9">https://vulncheck.com/xdb/17870a6362f9</a></li><li>https&#x2F;&#x2F;&#x2F;gitlab.com:Hamdane10&#x2F;cve-2023-50164.git</li><li><a href="https://vulncheck.com/xdb/83f6fcc57b59">https://vulncheck.com/xdb/83f6fcc57b59</a></li><li><a href="https://github.com/snyk-labs/CVE-2023-50164-POC">https://github.com/snyk-labs/CVE-2023-50164-POC</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:snyk-labs&#x2F;CVE-2023-50164-POC.git</li><li><a href="https://github.com/aaronm-sysdig/cve-2023-50164">https://github.com/aaronm-sysdig/cve-2023-50164</a></li><li><a href="https://github.com/miles3719/cve-2023-50164">https://github.com/miles3719/cve-2023-50164</a></li><li><a href="https://github.com/Trackflaw/CVE-2023-50164-ApacheStruts2-Docker">https://github.com/Trackflaw/CVE-2023-50164-ApacheStruts2-Docker</a></li><li><a href="https://github.com/Thirukrishnan/CVE-2023-50164-Apache-Struts-RCE">https://github.com/Thirukrishnan/CVE-2023-50164-Apache-Struts-RCE</a></li><li><a href="https://github.com/helsecert/cve-2023-50164">https://github.com/helsecert/cve-2023-50164</a></li><li><a href="https://vulncheck.com/xdb/6b23f76ae74b">https://vulncheck.com/xdb/6b23f76ae74b</a></li><li><a href="https://github.com/dwisiswant0/cve-2023-50164-poc">https://github.com/dwisiswant0/cve-2023-50164-poc</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:dwisiswant0&#x2F;cve-2023-50164-poc.git</li><li><a href="https://vulncheck.com/xdb/2eedf38daab7">https://vulncheck.com/xdb/2eedf38daab7</a></li><li><a href="https://github.com/bcdannyboy/CVE-2023-50164">https://github.com/bcdannyboy/CVE-2023-50164</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:bcdannyboy&#x2F;CVE-2023-50164.git</li><li><a href="https://github.com/jakabakos/CVE-2023-50164-Apache-Struts-RCE">https://github.com/jakabakos/CVE-2023-50164-Apache-Struts-RCE</a></li><li><a href="https://github.com/minhbao15677/CVE-2023-50164">https://github.com/minhbao15677/CVE-2023-50164</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-http-title-struts2-showcase"><a href="#Shodan-Query-http-title-struts2-showcase" class="headerlink" title="Shodan Query: http.title:&quot;struts2 showcase&quot;"></a>Shodan Query: <code>http.title:&quot;struts2 showcase&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>目录遍历</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>【补丁日速递】2025年6月微软补丁日安全风险通告</title>
+    <link href="/2025/06/11/weixin_410875472/"/>
+    <url>/2025/06/11/weixin_410875472/</url>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 赛博昆仑CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/IlRQc1tmk3uU4EQ3sUh0ig">https://mp.weixin.qq.com/s/IlRQc1tmk3uU4EQ3sUh0ig</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信公众号</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>mp.weixin.qq.com</tag>
+      
+      <tag>赛博昆仑CERT</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>DataEase JWT认证绕过漏洞 (CVE-2025-49001)</title>
+    <link href="/2025/06/11/weixin_1234151728/"/>
+    <url>/2025/06/11/weixin_1234151728/</url>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> Nday Poc</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/fiQMW-AYJ7cQtKBWTv4fIg">https://mp.weixin.qq.com/s/fiQMW-AYJ7cQtKBWTv4fIg</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信公众号</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>mp.weixin.qq.com</tag>
+      
+      <tag>Nday Poc</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>elFinder 命令注入漏洞</title>
     <link href="/2025/06/11/github_3029529399/"/>
     <url>/2025/06/11/github_3029529399/</url>
