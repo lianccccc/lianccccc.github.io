@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Blackash-CVE-2025-21333</title>
+    <link href="/2025/06/11/github_1879249920/"/>
+    <url>/2025/06/11/github_1879249920/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Blackash-CVE-2025-21333</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-21333</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> CVE-2025-21333的漏洞详情未提供具体信息。</p><p><strong>来源：</strong> <a href="https://github.com/B1ack4sh/Blackash-CVE-2025-21333">https://github.com/B1ack4sh/Blackash-CVE-2025-21333</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="Blackash-CVE-2025-21333"><a href="#Blackash-CVE-2025-21333" class="headerlink" title="Blackash-CVE-2025-21333"></a>Blackash-CVE-2025-21333</h2><p>CVE-2025-21333</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Apache Struts 任意文件上传远程代码执行漏洞</title>
     <link href="/2025/06/11/github_3836685325/"/>
     <url>/2025/06/11/github_3836685325/</url>
