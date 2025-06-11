@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Spring Data REST &amp; Boot 任意代码执行漏洞</title>
+    <link href="/2025/06/11/github_1456201235/"/>
+    <url>/2025/06/11/github_1456201235/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Spring Data REST &amp; Boot 任意代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2017-8046</li></ul><p><strong>漏洞类型：</strong> 反序列化</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Spring Data REST &lt; 2.6.9和3.0.1版本，以及Spring Boot &lt; 1.5.9和2.0 M6版本中存在一个远程代码执行漏洞。攻击者可以通过发送恶意的PATCH请求，利用精心构造的JSON数据执行任意Java代码。</p><p><strong>产品厂商：</strong> Spring</p><p><strong>产品名称：</strong> Spring Data REST, Spring Boot</p><p><strong>影响版本：</strong> Spring Data REST &lt; 2.6.9, 3.0.1; Spring Boot &lt; 1.5.9, 2.0 M6</p><p><strong>搜索语法：</strong> http.title:”eureka”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12202">https://github.com/projectdiscovery/nuclei-templates/issues/12202</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Spring Data REST &lt; 2.6.9 and 3.0.1, Spring Boot &lt; 1.5.9 and 2.0 M6 contain a remote code execution caused by processing malicious PATCH requests with crafted JSON data, letting attackers execute arbitrary Java code, exploit requires sending malicious PATCH requests.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://github.com/guanjivip/CVE-2017-8046">https://github.com/guanjivip/CVE-2017-8046</a></li><li><a href="https://github.com/jsotiro/VulnerableSpringDataRest">https://github.com/jsotiro/VulnerableSpringDataRest</a></li><li><a href="https://github.com/cved-sources/cve-2017-8046">https://github.com/cved-sources/cve-2017-8046</a></li><li><a href="https://vulncheck.com/xdb/a2ab2493c69d">https://vulncheck.com/xdb/a2ab2493c69d</a></li><li><a href="https://github.com/bkhablenko/CVE-2017-8046">https://github.com/bkhablenko/CVE-2017-8046</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:bkhablenko&#x2F;CVE-2017-8046.git</li><li><a href="https://github.com/jkutner/spring-break-cve-2017-8046">https://github.com/jkutner/spring-break-cve-2017-8046</a></li><li><a href="https://vulncheck.com/xdb/cf4f8c3e40a7">https://vulncheck.com/xdb/cf4f8c3e40a7</a></li><li><a href="https://github.com/FixYourFace/SpringBreakPoC">https://github.com/FixYourFace/SpringBreakPoC</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:FixYourFace&#x2F;SpringBreakPoC.git</li><li><a href="https://github.com/m3ssap0/spring-break_cve-2017-8046">https://github.com/m3ssap0/spring-break_cve-2017-8046</a></li><li><a href="https://github.com/m3ssap0/SpringBreakVulnerableApp">https://github.com/m3ssap0/SpringBreakVulnerableApp</a></li><li><a href="https://github.com/sj/spring-data-rest-CVE-2017-8046">https://github.com/sj/spring-data-rest-CVE-2017-8046</a></li><li><a href="https://github.com/Soontao/CVE-2017-8046-DEMO">https://github.com/Soontao/CVE-2017-8046-DEMO</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-http-title-eureka"><a href="#Shodan-Query-http-title-eureka" class="headerlink" title="Shodan Query: http.title:&quot;eureka&quot;"></a>Shodan Query: <code>http.title:&quot;eureka&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>反序列化</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>AndroidManifest.xml minSdkVersion=21 检查漏洞</title>
     <link href="/2025/06/11/github_854999132/"/>
     <url>/2025/06/11/github_854999132/</url>
