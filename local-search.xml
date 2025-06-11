@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>AndroidManifest.xml minSdkVersion=21 检查漏洞</title>
+    <link href="/2025/06/11/github_854999132/"/>
+    <url>/2025/06/11/github_854999132/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> AndroidManifest.xml minSdkVersion&#x3D;21 检查漏洞</p><p><strong>漏洞类型：</strong> 配置问题</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 扫描AndroidManifest.xml文件以检测minSdkVersion是否设置为21（Android 5.0），这可能使应用在未打补丁的Android 5.0-5.0.2设备上暴露于漏洞中。</p><p><strong>产品名称：</strong> Android</p><p><strong>影响版本：</strong> 5.0 &lt;&#x3D; version &lt;&#x3D; 5.0.2</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/3f7411b76d5a074f6ad9c102e13eff1e360060f2/file%2Fandroid%2Fandroid-minsdk-21-xml-check.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/3f7411b76d5a074f6ad9c102e13eff1e360060f2/file%2Fandroid%2Fandroid-minsdk-21-xml-check.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> android-minsdk-<span class="hljs-number">2</span>1-xml-check<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> AndroidManifest.xml minSdkVersion<span class="hljs-operator">=</span><span class="hljs-number">21</span> Check (Local File Scan)<br>  <span class="hljs-params">author:</span> Th3l0newolf<br>  <span class="hljs-params">severity:</span> medium<br>  <span class="hljs-params">description:</span> |<br>    Scans AndroidManifest.xml files to detect <span class="hljs-keyword">if</span> minSdkVersion is set<br>    to <span class="hljs-number">21</span> (Android <span class="hljs-number">5.0</span>), which may expose the app to vulnerabilities <br>    on unpatched Android <span class="hljs-number">5</span>.<span class="hljs-number">0</span><span class="hljs-operator">-</span><span class="hljs-number">5.0</span>.<span class="hljs-number">2</span> devices.<br>  <span class="hljs-params">tags:</span> android,manifest,xml,security<br><br><span class="hljs-params">file:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">extensions:</span><br>      <span class="hljs-operator">-</span> xml<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;android:minSdkVersion<span class="hljs-char escape_">\\</span>s*=<span class="hljs-char escape_">\\</span>s*[&#x27;<span class="hljs-char escape_">\&quot;</span>]21[&#x27;<span class="hljs-char escape_">\&quot;</span>]&quot;</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>配置问题</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Ai command injection in M365 Copilot allows an unauthorized attacker to disclose information over</title>
     <link href="/2025/06/11/github_769546507/"/>
     <url>/2025/06/11/github_769546507/</url>
