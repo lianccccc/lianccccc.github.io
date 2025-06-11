@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-11T15:42:48.802Z</updated>
+  <updated>2025-06-11T16:00:05.895Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ai command injection in M365 Copilot allows an unauthorized attacker to disclose information over</title>
+    <link href="http://example.com/2025/06/11/github_769546507/"/>
+    <id>http://example.com/2025/06/11/github_769546507/</id>
+    <published>2025-06-11T16:00:05.895Z</published>
+    <updated>2025-06-11T16:00:05.895Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-h2w9-p5qf-qmrh">https://github.com/advisories/GHSA-h2w9-p5qf-qmrh</a></p><p><strong>CVSS 评分：</strong> 9.3</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32711">https://nvd.nist.gov/vuln/detail/CVE-2025-32711</a></p></li><li><p><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-32711">https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-32711</a></p></li><li><p><a href="https://github.com/advisories/GHSA-h2w9-p5qf-qmrh">https://github.com/advisories/GHSA-h2w9-p5qf-qmrh</a></p></li></ul><p><strong>描述：</strong></p><p>Ai command injection in M365 Copilot allows an unauthorized attacker to disclose information over a network.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-h2w9-p5qf-qmrh&quot;&gt;https://github.com/advisories/GHSA-h2w9-p5qf-qmrh&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>【高危漏洞预警】Autodesk Installer权限提升漏洞(CVE-2025-5335)</title>
@@ -521,33 +545,6 @@
     <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
     
     <category term="rapid7/metasploit-framework:github commit" scheme="http://example.com/tags/rapid7-metasploit-framework-github-commit/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>德克萨斯州交通运输部（TXDOT）数据泄露事件暴露 30 万份车祸报告</title>
-    <link href="http://example.com/2025/06/11/weixin_3239286202/"/>
-    <id>http://example.com/2025/06/11/weixin_3239286202/</id>
-    <published>2025-06-11T09:08:44.139Z</published>
-    <updated>2025-06-11T09:08:44.136Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/AKsM1NgMLuPTHMx1LyE1OA">https://mp.weixin.qq.com/s/AKsM1NgMLuPTHMx1LyE1OA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/AKsM1NgMLuPTHMx1LyE1OA&quot;&gt;https://mp.weixin.qq.c</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
     
   </entry>
   
