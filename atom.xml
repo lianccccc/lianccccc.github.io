@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-11T02:45:16.477Z</updated>
+  <updated>2025-06-11T03:54:01.162Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安恒恒脑智能体，重塑安全运营“点-线-面-体”新范式</title>
+    <link href="http://example.com/2025/06/11/weixin_4034567244/"/>
+    <id>http://example.com/2025/06/11/weixin_4034567244/</id>
+    <published>2025-06-11T03:54:01.161Z</published>
+    <updated>2025-06-11T03:54:01.162Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 安恒信息CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/njLRxcpsLvhZZiFoQOE3uA">https://mp.weixin.qq.com/s/njLRxcpsLvhZZiFoQOE3uA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 安恒信息CERT&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/njLRxcpsLvhZZiFoQOE3uA&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="安恒信息CERT" scheme="http://example.com/tags/%E5%AE%89%E6%81%92%E4%BF%A1%E6%81%AFCERT/"/>
+    
+  </entry>
   
   <entry>
     <title>Dataease JWT 认证绕过漏洞</title>
@@ -519,32 +546,6 @@
     
     
     <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Cisco Identity Services Engine (ISE) 凭证生成和授权逻辑漏洞</title>
-    <link href="http://example.com/2025/06/10/github_3318074303/"/>
-    <id>http://example.com/2025/06/10/github_3318074303/</id>
-    <published>2025-06-10T20:00:18.783Z</published>
-    <updated>2025-06-10T20:00:18.782Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Cisco Identity Services Engine (ISE) 凭证生成和授权逻辑漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-20286</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Cisco Identity Services Engine (ISE)云部署在AWS、Microsoft Azure和Oracle Cloud Infrastructure (OCI)上时，存在一个严重的凭证生成和授权逻辑漏洞。当使用相同软件版本在同一云平台上时，多个Cisco ISE云部署会共享相同的凭证。这使得未经身份验证的远程攻击者能够提取有效凭证并在不同部署间提升权限。</p><p><strong>产品厂商：</strong> Cisco</p><p><strong>产品名称：</strong> Cisco Identity Services Engine (ISE)</p><p><strong>来源：</strong> <a href="https://github.com/noeneal/CVE-2025-20286">https://github.com/noeneal/CVE-2025-20286</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2025-20286.py</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-20286"><a href="#CVE-2025-20286" class="headerlink" title="CVE-2025-20286"></a>CVE-2025-20286</h2><p><strong>Severity</strong>: Critical (CVSS 9.9)</p><p> <strong>Affected Platforms</strong>: Cisco Identity Services Engine (ISE) cloud deployments on AWS, Microsoft Azure, and Oracle Cloud Infrastructure (OCI)</p><p><strong>Vulnerability Description</strong>: A critical flaw in the credential generation and authorization logic causes multiple Cisco ISE cloud deployments to share identical credentials when using the same software release on the same cloud platform. This allows an unauthenticated remote attacker to extract valid credentials and escalate privileges across different deployments</p><blockquote><p>Find the expl0it in CVE-2025-20286.py</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Cisco Identity Services Engine (ISE) 凭证</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
     
   </entry>
   
