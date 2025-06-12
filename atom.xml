@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-12T13:00:19.412Z</updated>
+  <updated>2025-06-12T13:15:27.198Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CLFS 权限提升漏洞</title>
+    <link href="http://example.com/2025/06/12/github_2699365625/"/>
+    <id>http://example.com/2025/06/12/github_2699365625/</id>
+    <published>2025-06-12T13:15:27.201Z</published>
+    <updated>2025-06-12T13:15:27.198Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CLFS 权限提升漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-49138</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 该漏洞允许攻击者通过外部RDP入侵开始，利用一个全新的CLFS权限提升漏洞（CVE-2024-49138），最终实现SYSTEM级别的云凭证收集。</p><p><strong>产品名称：</strong> CLFS</p><p><strong>来源：</strong> <a href="https://github.com/onixgod/SOC335-Event-ID-313-CVE-2024-49138-Exploitation-Detected--Lest-Defend-Writeup">https://github.com/onixgod/SOC335-Event-ID-313-CVE-2024-49138-Exploitation-Detected--Lest-Defend-Writeup</a></p><p><strong>类型：</strong> CVE-2024:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="SOC335-Event-ID-313-CVE-2024-49138-Exploitation-Detected–Lest-Defend-Writeup"><a href="#SOC335-Event-ID-313-CVE-2024-49138-Exploitation-Detected–Lest-Defend-Writeup" class="headerlink" title="SOC335-Event-ID-313-CVE-2024-49138-Exploitation-Detected–Lest-Defend-Writeup"></a>SOC335-Event-ID-313-CVE-2024-49138-Exploitation-Detected–Lest-Defend-Writeup</h2><p>In this lab I walked through an end-to-end intrusion that began with an external RDP break-in, used a brand-new CLFS privilege-escalation exploit (CVE-2024–49138), and ended with SYSTEM-level cloud credential harvesting. Below is the story, the evidence, and the lessons I drew from it.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CLFS 权限提升漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/stron</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
+    
+    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
+    
+  </entry>
   
   <entry>
     <title>Fortinet FortiVoice AuthHash Buffer Overflow RCE</title>
@@ -522,33 +549,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="SQL注入" scheme="http://example.com/tags/SQL%E6%B3%A8%E5%85%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RD Gateway WebSocket 处理漏洞</title>
-    <link href="http://example.com/2025/06/12/github_2263696199/"/>
-    <id>http://example.com/2025/06/12/github_2263696199/</id>
-    <published>2025-06-12T09:15:14.862Z</published>
-    <updated>2025-06-12T09:15:14.861Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> RD Gateway WebSocket 处理漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-24035</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 这是一个针对CVE-2025-24035的安全模拟测试，用于测试RD Gateway WebSocket处理超大头部的能力。此脚本仅用于教育目的，在安全的实验室环境中使用。</p><p><strong>产品名称：</strong> RD Gateway</p><p><strong>来源：</strong> <a href="https://github.com/MSeymenD/cve-2025-24035-rds-websocket-dos-test">https://github.com/MSeymenD/cve-2025-24035-rds-websocket-dos-test</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>LICENSE</li><li>README.md</li><li>test_abnormal_rds_websocket.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-24035-WebSocket-Stress-Test-Safe"><a href="#CVE-2025-24035-WebSocket-Stress-Test-Safe" class="headerlink" title="CVE-2025-24035 WebSocket Stress Test (Safe)"></a>CVE-2025-24035 WebSocket Stress Test (Safe)</h2><p>🚨 <strong>DISCLAIMER</strong>: This is NOT an exploit. This script is a simulation and should only be used for educational purposes in a safe lab environment.</p><h3 id="Purpose"><a href="#Purpose" class="headerlink" title="Purpose"></a>Purpose</h3><p>This test sends a deliberately oversized WebSocket header to simulate a malformed request toward RD Gateway services (such as those affected by CVE-2025-24035).</p><h3 id="Legal"><a href="#Legal" class="headerlink" title="Legal"></a>Legal</h3><p>⚠️ Do not use this against systems without explicit authorization. Unauthorized use may be illegal.</p><h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 test_abnormal_rds_websocket.py<br></code></pre></td></tr></table></figure><p>Edit the IP address in the script according to your local lab setup.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; RD Gateway WebSocket 处理漏洞&lt;/p&gt;
-&lt;p&gt;&lt;stron</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
     
   </entry>
   
