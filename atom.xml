@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-12T07:00:38.254Z</updated>
+  <updated>2025-06-12T07:13:32.744Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,87 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>国外某数据库管理系统存在前台任意文件上传漏洞 (CVE-2025-5840)</title>
+    <link href="http://example.com/2025/06/12/weixin_990450554/"/>
+    <id>http://example.com/2025/06/12/weixin_990450554/</id>
+    <published>2025-06-12T07:13:32.749Z</published>
+    <updated>2025-06-12T07:13:32.744Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 星悦安全</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/KJ_LF-mzMgkPq-j1I8Oi9A">https://mp.weixin.qq.com/s/KJ_LF-mzMgkPq-j1I8Oi9A</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 星悦安全&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/KJ_LF-mzMgkPq-j1I8Oi9A&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="星悦安全" scheme="http://example.com/tags/%E6%98%9F%E6%82%A6%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络安全信息与动态周报2025年第23期（6月2日-6月8日）</title>
+    <link href="http://example.com/2025/06/12/weixin_3861408248/"/>
+    <id>http://example.com/2025/06/12/weixin_3861408248/</id>
+    <published>2025-06-12T07:07:51.852Z</published>
+    <updated>2025-06-12T07:07:51.848Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 国家互联网应急中心CNCERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/Exs8xmndiaYe87fSMzqayg">https://mp.weixin.qq.com/s/Exs8xmndiaYe87fSMzqayg</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 国家互联网应急中心CNCERT&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/Exs8xmndiaYe87fSMzqayg&quot;&gt;https://mp.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="国家互联网应急中心CNCERT" scheme="http://example.com/tags/%E5%9B%BD%E5%AE%B6%E4%BA%92%E8%81%94%E7%BD%91%E5%BA%94%E6%80%A5%E4%B8%AD%E5%BF%83CNCERT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>独眼情报社群10正式版介绍</title>
+    <link href="http://example.com/2025/06/12/weixin_2785261893/"/>
+    <id>http://example.com/2025/06/12/weixin_2785261893/</id>
+    <published>2025-06-12T07:03:09.814Z</published>
+    <updated>2025-06-12T07:03:09.810Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/ho-LnD4QKg9Oz_F0Y1nMOA">https://mp.weixin.qq.com/s/ho-LnD4QKg9Oz_F0Y1nMOA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/ho-LnD4QKg9Oz_F0Y1nMOA&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>Evertz Unauthenticated Arbitrary Command Injection</title>
@@ -467,87 +548,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>FIN6 黑客假扮求职者，入侵目标组织HR部门</title>
-    <link href="http://example.com/2025/06/12/weixin_436495056/"/>
-    <id>http://example.com/2025/06/12/weixin_436495056/</id>
-    <published>2025-06-12T01:34:15.991Z</published>
-    <updated>2025-06-12T01:34:15.991Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/-AVOp9Kw3ZRVj-7fr1QxFA">https://mp.weixin.qq.com/s/-AVOp9Kw3ZRVj-7fr1QxFA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/-AVOp9Kw3ZRVj-7fr1QxFA&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>微软 Copilot 严重漏洞可能引发零点击攻击</title>
-    <link href="http://example.com/2025/06/12/weixin_1952715498/"/>
-    <id>http://example.com/2025/06/12/weixin_1952715498/</id>
-    <published>2025-06-12T01:34:15.599Z</published>
-    <updated>2025-06-12T01:34:15.599Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/2Zkz5GexbTCn__B2EF9sHg">https://mp.weixin.qq.com/s/2Zkz5GexbTCn__B2EF9sHg</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/2Zkz5GexbTCn__B2EF9sHg&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【复现】契约锁远程代码执行漏洞风险通告</title>
-    <link href="http://example.com/2025/06/12/weixin_54870527/"/>
-    <id>http://example.com/2025/06/12/weixin_54870527/</id>
-    <published>2025-06-12T01:31:40.058Z</published>
-    <updated>2025-06-12T01:31:40.056Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 赛博昆仑CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/ciwI3TAZR_bciiVXdkAJbg">https://mp.weixin.qq.com/s/ciwI3TAZR_bciiVXdkAJbg</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 赛博昆仑CERT&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/ciwI3TAZR_bciiVXdkAJbg&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="赛博昆仑CERT" scheme="http://example.com/tags/%E8%B5%9B%E5%8D%9A%E6%98%86%E4%BB%91CERT/"/>
     
   </entry>
   
