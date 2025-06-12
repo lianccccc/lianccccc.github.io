@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-12T00:30:16.142Z</updated>
+  <updated>2025-06-12T01:34:16.335Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,114 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Roundcube RCE 漏洞被迅速利用，超过 8 万台服务器受到影响</title>
+    <link href="http://example.com/2025/06/12/weixin_3958452419/"/>
+    <id>http://example.com/2025/06/12/weixin_3958452419/</id>
+    <published>2025-06-12T01:34:16.335Z</published>
+    <updated>2025-06-12T01:34:16.335Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/srCXcv41C-FQNvK5mGXMzA">https://mp.weixin.qq.com/s/srCXcv41C-FQNvK5mGXMzA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/srCXcv41C-FQNvK5mGXMzA&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FIN6 黑客假扮求职者，入侵目标组织HR部门</title>
+    <link href="http://example.com/2025/06/12/weixin_436495056/"/>
+    <id>http://example.com/2025/06/12/weixin_436495056/</id>
+    <published>2025-06-12T01:34:15.991Z</published>
+    <updated>2025-06-12T01:34:15.991Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/-AVOp9Kw3ZRVj-7fr1QxFA">https://mp.weixin.qq.com/s/-AVOp9Kw3ZRVj-7fr1QxFA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/-AVOp9Kw3ZRVj-7fr1QxFA&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微软 Copilot 严重漏洞可能引发零点击攻击</title>
+    <link href="http://example.com/2025/06/12/weixin_1952715498/"/>
+    <id>http://example.com/2025/06/12/weixin_1952715498/</id>
+    <published>2025-06-12T01:34:15.599Z</published>
+    <updated>2025-06-12T01:34:15.599Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/2Zkz5GexbTCn__B2EF9sHg">https://mp.weixin.qq.com/s/2Zkz5GexbTCn__B2EF9sHg</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/2Zkz5GexbTCn__B2EF9sHg&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【复现】契约锁远程代码执行漏洞风险通告</title>
+    <link href="http://example.com/2025/06/12/weixin_54870527/"/>
+    <id>http://example.com/2025/06/12/weixin_54870527/</id>
+    <published>2025-06-12T01:31:40.058Z</published>
+    <updated>2025-06-12T01:31:40.056Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 赛博昆仑CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/ciwI3TAZR_bciiVXdkAJbg">https://mp.weixin.qq.com/s/ciwI3TAZR_bciiVXdkAJbg</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 赛博昆仑CERT&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/ciwI3TAZR_bciiVXdkAJbg&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="赛博昆仑CERT" scheme="http://example.com/tags/%E8%B5%9B%E5%8D%9A%E6%98%86%E4%BB%91CERT/"/>
+    
+  </entry>
   
   <entry>
     <title>Fortinet FortiVoice AuthHash Overflow RCE</title>
@@ -63,9 +171,9 @@
     <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
     
     
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
     <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
   </entry>
   
@@ -170,9 +278,9 @@
     <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
     
     
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
     <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
   </entry>
   
@@ -437,110 +545,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AndroidManifest.xml minSdkVersion=21 检查漏洞</title>
-    <link href="http://example.com/2025/06/11/github_854999132/"/>
-    <id>http://example.com/2025/06/11/github_854999132/</id>
-    <published>2025-06-11T17:00:17.274Z</published>
-    <updated>2025-06-11T17:00:17.271Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> AndroidManifest.xml minSdkVersion&#x3D;21 检查漏洞</p><p><strong>漏洞类型：</strong> 配置问题</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 扫描AndroidManifest.xml文件以检测minSdkVersion是否设置为21（Android 5.0），这可能使应用在未打补丁的Android 5.0-5.0.2设备上暴露于漏洞中。</p><p><strong>产品名称：</strong> Android</p><p><strong>影响版本：</strong> 5.0 &lt;&#x3D; version &lt;&#x3D; 5.0.2</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/3f7411b76d5a074f6ad9c102e13eff1e360060f2/file%2Fandroid%2Fandroid-minsdk-21-xml-check.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/3f7411b76d5a074f6ad9c102e13eff1e360060f2/file%2Fandroid%2Fandroid-minsdk-21-xml-check.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> android-minsdk-<span class="hljs-number">2</span>1-xml-check<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> AndroidManifest.xml minSdkVersion<span class="hljs-operator">=</span><span class="hljs-number">21</span> Check (Local File Scan)<br>  <span class="hljs-params">author:</span> Th3l0newolf<br>  <span class="hljs-params">severity:</span> medium<br>  <span class="hljs-params">description:</span> |<br>    Scans AndroidManifest.xml files to detect <span class="hljs-keyword">if</span> minSdkVersion is set<br>    to <span class="hljs-number">21</span> (Android <span class="hljs-number">5.0</span>), which may expose the app to vulnerabilities <br>    on unpatched Android <span class="hljs-number">5</span>.<span class="hljs-number">0</span><span class="hljs-operator">-</span><span class="hljs-number">5.0</span>.<span class="hljs-number">2</span> devices.<br>  <span class="hljs-params">tags:</span> android,manifest,xml,security<br><br><span class="hljs-params">file:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">extensions:</span><br>      <span class="hljs-operator">-</span> xml<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;android:minSdkVersion<span class="hljs-char escape_">\\</span>s*=<span class="hljs-char escape_">\\</span>s*[&#x27;<span class="hljs-char escape_">\&quot;</span>]21[&#x27;<span class="hljs-char escape_">\&quot;</span>]&quot;</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; AndroidManifest.xml minSdkVersion&amp;#x3D;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="配置问题" scheme="http://example.com/tags/%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ai command injection in M365 Copilot allows an unauthorized attacker to disclose information over</title>
-    <link href="http://example.com/2025/06/11/github_769546507/"/>
-    <id>http://example.com/2025/06/11/github_769546507/</id>
-    <published>2025-06-11T16:00:05.895Z</published>
-    <updated>2025-06-11T16:00:05.895Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-h2w9-p5qf-qmrh">https://github.com/advisories/GHSA-h2w9-p5qf-qmrh</a></p><p><strong>CVSS 评分：</strong> 9.3</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32711">https://nvd.nist.gov/vuln/detail/CVE-2025-32711</a></p></li><li><p><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-32711">https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-32711</a></p></li><li><p><a href="https://github.com/advisories/GHSA-h2w9-p5qf-qmrh">https://github.com/advisories/GHSA-h2w9-p5qf-qmrh</a></p></li></ul><p><strong>描述：</strong></p><p>Ai command injection in M365 Copilot allows an unauthorized attacker to disclose information over a network.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-h2w9-p5qf-qmrh&quot;&gt;https://github.com/advisories/GHSA-h2w9-p5qf-qmrh&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【高危漏洞预警】Autodesk Installer权限提升漏洞(CVE-2025-5335)</title>
-    <link href="http://example.com/2025/06/11/weixin_274773988/"/>
-    <id>http://example.com/2025/06/11/weixin_274773988/</id>
-    <published>2025-06-11T15:42:48.806Z</published>
-    <updated>2025-06-11T15:42:48.802Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 飓风网络安全</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/iPBL6l4opY7XXQhD-a8dQA">https://mp.weixin.qq.com/s/iPBL6l4opY7XXQhD-a8dQA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 飓风网络安全&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/iPBL6l4opY7XXQhD-a8dQA&quot;&gt;https://mp.weixin.qq</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="飓风网络安全" scheme="http://example.com/tags/%E9%A3%93%E9%A3%8E%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>漏洞预警：用友NC loadDocajax接口存在任意文件读取漏洞 附POC</title>
-    <link href="http://example.com/2025/06/11/weixin_3099449312/"/>
-    <id>http://example.com/2025/06/11/weixin_3099449312/</id>
-    <published>2025-06-11T15:37:32.214Z</published>
-    <updated>2025-06-11T15:37:32.210Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 南风漏洞复现文库</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/HmoGyH97FhpPqeUra43VOQ">https://mp.weixin.qq.com/s/HmoGyH97FhpPqeUra43VOQ</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 南风漏洞复现文库&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/HmoGyH97FhpPqeUra43VOQ&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="南风漏洞复现文库" scheme="http://example.com/tags/%E5%8D%97%E9%A3%8E%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%E6%96%87%E5%BA%93/"/>
     
   </entry>
   

@@ -4,6 +4,114 @@
   
   
   <entry>
+    <title>Roundcube RCE 漏洞被迅速利用，超过 8 万台服务器受到影响</title>
+    <link href="/2025/06/12/weixin_3958452419/"/>
+    <url>/2025/06/12/weixin_3958452419/</url>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/srCXcv41C-FQNvK5mGXMzA">https://mp.weixin.qq.com/s/srCXcv41C-FQNvK5mGXMzA</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信公众号</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>mp.weixin.qq.com</tag>
+      
+      <tag>军哥网络安全读报</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>FIN6 黑客假扮求职者，入侵目标组织HR部门</title>
+    <link href="/2025/06/12/weixin_436495056/"/>
+    <url>/2025/06/12/weixin_436495056/</url>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/-AVOp9Kw3ZRVj-7fr1QxFA">https://mp.weixin.qq.com/s/-AVOp9Kw3ZRVj-7fr1QxFA</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信公众号</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>mp.weixin.qq.com</tag>
+      
+      <tag>军哥网络安全读报</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>微软 Copilot 严重漏洞可能引发零点击攻击</title>
+    <link href="/2025/06/12/weixin_1952715498/"/>
+    <url>/2025/06/12/weixin_1952715498/</url>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/2Zkz5GexbTCn__B2EF9sHg">https://mp.weixin.qq.com/s/2Zkz5GexbTCn__B2EF9sHg</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信公众号</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>mp.weixin.qq.com</tag>
+      
+      <tag>军哥网络安全读报</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>【复现】契约锁远程代码执行漏洞风险通告</title>
+    <link href="/2025/06/12/weixin_54870527/"/>
+    <url>/2025/06/12/weixin_54870527/</url>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 赛博昆仑CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/ciwI3TAZR_bciiVXdkAJbg">https://mp.weixin.qq.com/s/ciwI3TAZR_bciiVXdkAJbg</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信公众号</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>mp.weixin.qq.com</tag>
+      
+      <tag>赛博昆仑CERT</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Fortinet FortiVoice AuthHash Overflow RCE</title>
     <link href="/2025/06/12/github_601298894/"/>
     <url>/2025/06/12/github_601298894/</url>
@@ -47,9 +155,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -155,9 +263,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -855,9 +963,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -1530,9 +1638,9 @@
     
     <tags>
       
-      <tag>eeeeeeeeee-code/POC:github commit</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>eeeeeeeeee-code/POC:github commit</tag>
       
     </tags>
     
@@ -3780,9 +3888,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>缓冲区溢出</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -5172,9 +5280,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>缓冲区溢出</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -5361,9 +5469,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2023:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -5496,9 +5604,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -6090,9 +6198,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -6279,9 +6387,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>缓冲区溢出</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -6306,9 +6414,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>缓冲区溢出</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -6360,9 +6468,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -6522,9 +6630,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2023:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -6954,9 +7062,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>缓冲区溢出</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -7465,9 +7573,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -7519,9 +7627,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -7681,9 +7789,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>跨站可执行脚本</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -7789,9 +7897,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -8275,9 +8383,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -8329,9 +8437,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>跨站可执行脚本</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -8464,9 +8572,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>缓冲区溢出</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -8545,9 +8653,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -8572,9 +8680,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>缓冲区溢出</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -8896,9 +9004,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -9112,9 +9220,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2023:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -9571,9 +9679,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -9598,9 +9706,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -10298,9 +10406,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -11316,9 +11424,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>缓冲区溢出</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -11636,9 +11744,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -11663,9 +11771,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2024:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -11844,9 +11952,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -11925,9 +12033,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>跨站可执行脚本</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -12085,9 +12193,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>缓冲区溢出</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
