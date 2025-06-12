@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Windows Disk Cleanup Tool Elevation of Privilege Vulnerability</title>
+    <link href="/2025/06/12/github_588732286/"/>
+    <url>/2025/06/12/github_588732286/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Windows Disk Cleanup Tool Elevation of Privilege Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-21420</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Windows Disk Cleanup Tool中存在一个权限提升漏洞，攻击者可以利用该漏洞通过特定的技术手段提升至SYSTEM权限。该漏洞涉及<code>cleanmgr.exe</code>文件的<code>SilentCleanup</code>任务，该任务以最高权限运行，且存在任意文件夹删除&#x2F;移动&#x2F;重命名漏洞，可以被重定向至<code>C:/Config.msi</code>文件夹，进而实现权限提升。</p><p><strong>产品厂商：</strong> Microsoft</p><p><strong>产品名称：</strong> Windows Disk Cleanup Tool</p><p><strong>来源：</strong> <a href="https://github.com/moiz-2x/CVE-2025-21420_POC">https://github.com/moiz-2x/CVE-2025-21420_POC</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2025-21420_POC.py</li><li>README.md</li><li>images</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h3 id="Diffing-cleanmgr-exe"><a href="#Diffing-cleanmgr-exe" class="headerlink" title="Diffing cleanmgr.exe"></a>Diffing cleanmgr.exe</h3><p>The new version of <code>cleanmgr.exe</code> includes a call to the <a href="https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-setprocessmitigationpolicy">SetProcessMitigationPolicy</a> function.</p><p><img src="/images/diff.png" alt="Diffing"><br><img src="/images/diff-ghidra.png" alt="Diffing"></p><p>With <code>MitigationPolicy</code> set to 16, corresponding to <strong>ProcessRedirectionTrustPolicy</strong>.</p><p><img src="/images/enum-PROCESS_MITIGATION_POLICY.png" alt="PROCESS_MITIGATION_POLICY"></p><p>Combined with Microsoft’s description of <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-21420">CWE-59: Improper Link Resolution Before File Access (‘Link Following’)</a>, we can infer that <code>cleanmgr.exe</code> has Redirection Guard enabled.</p><p>After reading two blog posts by <em>Simon Zuckerbraun</em> and <em>enigma0x3</em>:</p><ol><li><a href="https://www.zerodayinitiative.com/blog/2022/3/16/abusing-arbitrary-file-deletes-to-escalate-privilege-and-other-great-tricks">From Arbitrary Folder Delete&#x2F;Move&#x2F;Rename to SYSTEM EoP</a>  </li><li><a href="https://enigma0x3.net/2016/07/22/bypassing-uac-on-windows-10-using-disk-cleanup/">Bypass UAC</a></li></ol><p>The <code>SilentCleanup</code> task may have sufficient privileges to delete the <code>C:/Config.msi</code> folder, as mentioned by Simon Zuckerbraun. We only need to locate an <em>Arbitrary Folder Delete&#x2F;Move&#x2F;Rename</em> vulnerability inside the <code>SilentCleanup</code> task (which runs <code>cleanmgr.exe</code> with <strong>Run with highest priv</strong>) and redirect it to the <code>C:/Config.msi</code> folder.</p><h3 id="Observations-via-Procmon"><a href="#Observations-via-Procmon" class="headerlink" title="Observations via Procmon"></a>Observations via Procmon</h3><p>Run the <code>SilentCleanup</code> task and observe <code>cleanmgr.exe</code> behavior.</p><p><img src="/images/procmon1.png" alt="Procmon"></p><p>The process checks whether the listed folders exist (interestingly, it doesn’t verify if <code>C:\ESD</code> is a junction, but it does check <code>Windows</code> and <code>Download</code> — which we won’t dive into here).</p><p>Create the folders <code>C:\$Windows.~WS</code>, <code>C:\ESD\Windows</code>, <code>C:\ESD\Download</code>, drop some random files into them, rerun <code>SilentCleanup</code> and observe again.</p><p><img src="/images/procmon2.png" alt="Procmon"></p><p>We can see <code>SilentCleanup</code> deletes the contents within the <code>Windows</code> and <code>Download</code> folders. This can be leveraged using the technique described in <a href="https://www.zerodayinitiative.com/blog/2022/3/16/abusing-arbitrary-file-deletes-to-escalate-privilege-and-other-great-tricks">From Folder Contents Delete to SYSTEM EoP</a>.</p><h3 id="Exploit"><a href="#Exploit" class="headerlink" title="Exploit"></a>Exploit</h3><ol><li>Python script creates 3 folders: <code>C:\$Windows.~WS</code>, <code>C:\ESD\Windows</code>, <code>C:\ESD\Download</code>, inserts dummy <code>.txt</code> files and pauses.</li><li>Run <a href="https://github.com/thezdi/PoC/tree/main/FilesystemEoPs">FolderOrFileDeleteToSystem</a> to set up the <code>Config.msi</code>.</li><li>Run <a href="https://github.com/thezdi/PoC/tree/main/FilesystemEoPs">FolderContentsDeleteToFolderDelete</a> to redirect content cleanup from <code>C:\ESD\Windows</code> to <code>C:/Config.msi</code>.<br><strong>Note:</strong> Exclude these two processes in Defender as AV may detect this exploit technique.</li><li>Resume the Python script and run <code>SilentCleanup</code> to trigger content cleanup.</li><li>Run <code>osk.exe</code>, then hit Ctrl-Alt-Delete.</li></ol><p><img src="/images/exploit.mp4" alt="poc"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CVE-2025:github search</tag>
+      
+      <tag>权限提升</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Oracle Coherence 远程代码执行漏洞</title>
     <link href="/2025/06/12/github_1021674224/"/>
     <url>/2025/06/12/github_1021674224/</url>
@@ -7521,9 +7548,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>权限绕过</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
