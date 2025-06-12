@@ -4,6 +4,60 @@
   
   
   <entry>
+    <title>SpiderControl SCADA Web Server 文件上传漏洞</title>
+    <link href="/2025/06/12/github_4044651606/"/>
+    <url>/2025/06/12/github_4044651606/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> SpiderControl SCADA Web Server 文件上传漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-8232</li></ul><p><strong>漏洞类型：</strong> 文件上传</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> SpiderControl SCADA Web Server存在未经验证的任意文件上传漏洞，攻击者可上传恶意脚本（如Web Shell）并实现远程代码执行。</p><p><strong>产品厂商：</strong> iniNet Solutions GmbH</p><p><strong>产品名称：</strong> SpiderControl SCADA Web Server</p><p><strong>来源：</strong> <a href="https://github.com/z3usx01/CVE-2024-8232">https://github.com/z3usx01/CVE-2024-8232</a></p><p><strong>类型：</strong> CVE-2024:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>poc.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2024-8232-–-SpiderControl-SCADA-Web-Server-File-Upload-Vulnerability"><a href="#CVE-2024-8232-–-SpiderControl-SCADA-Web-Server-File-Upload-Vulnerability" class="headerlink" title="CVE-2024-8232 – SpiderControl SCADA Web Server File Upload Vulnerability"></a>CVE-2024-8232 – SpiderControl SCADA Web Server File Upload Vulnerability</h2><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>SpiderControl SCADA Web Server is vulnerable to unauthenticated arbitrary file uploads, allowing attackers to upload malicious scripts (e.g., web shells) and gain remote code execution.</p><ul><li><strong>CVE ID</strong>: CVE-2024-8232</li><li><strong>Vendor</strong>: iniNet Solutions GmbH</li><li><strong>Affected Product</strong>: SpiderControl SCADA Web Server</li><li><strong>Impact</strong>: Remote Code Execution</li><li><strong>Exploit Type</strong>: Unauthenticated File Upload</li></ul><h3 id="⚠-Disclaimer"><a href="#⚠-Disclaimer" class="headerlink" title="⚠ Disclaimer"></a>⚠ Disclaimer</h3><p>This proof of concept is for educational purposes <strong>only</strong>. Do not use against systems without explicit authorization.</p><h3 id="🛠️-Usage"><a href="#🛠️-Usage" class="headerlink" title="🛠️ Usage"></a>🛠️ Usage</h3><pre><code class="language-bash">python3 poc.py http://TARGET-IP upload.php shell.php</code></pre>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CVE-2024:github search</tag>
+      
+      <tag>文件上传</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>韩国线上书店与票务平台Yes24 遭勒索软件攻击导致停机</title>
+    <link href="/2025/06/12/weixin_3441928051/"/>
+    <url>/2025/06/12/weixin_3441928051/</url>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/v9FxmIn6kuw4HMYqoZjfHQ">https://mp.weixin.qq.com/s/v9FxmIn6kuw4HMYqoZjfHQ</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信公众号</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>mp.weixin.qq.com</tag>
+      
+      <tag>独眼情报</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Windows Server Password Expiry Setting Check Vulnerability</title>
     <link href="/2025/06/12/github_3624106781/"/>
     <url>/2025/06/12/github_3624106781/</url>

