@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Cisco IOS XE 远程代码执行漏洞</title>
+    <link href="/2025/06/12/github_2810106518/"/>
+    <url>/2025/06/12/github_2810106518/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Cisco IOS XE 远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-20198</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Cisco IOS XE存在一个远程代码执行漏洞，攻击者可以通过构造特定的HTTP或HTTPS请求来利用此漏洞。该漏洞的利用可能因访问协议（HTTP或HTTPS）的不同而有所差异，修改目标端点可能有助于检测或利用此漏洞。</p><p><strong>产品厂商：</strong> Cisco</p><p><strong>产品名称：</strong> Cisco IOS XE</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12324">https://github.com/projectdiscovery/nuclei-templates/issues/12324</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Template-IDs-or-paths"><a href="#Template-IDs-or-paths" class="headerlink" title="Template IDs or paths"></a>Template IDs or paths</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">http/cves/2023/CVE-2023-20198.yaml<br></code></pre></td></tr></table></figure><h4 id="Environment"><a href="#Environment" class="headerlink" title="Environment"></a>Environment</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">-</span> OS: Ubuntu 22.04<br><span class="hljs-bullet">-</span> Nuclei: v3.4.4<br><span class="hljs-bullet">-</span> Go: 1.23.0<br></code></pre></td></tr></table></figure><h4 id="Steps-To-Reproduce"><a href="#Steps-To-Reproduce" class="headerlink" title="Steps To Reproduce"></a>Steps To Reproduce</h4><ol><li>Run template against CVE-2023-20198 vulnerable target on https</li><li>False negative</li></ol><p>The issue is most likely caused by the target endpoint on Cisco differing depending whether access is via http or https. I could achieve detection by modifying the target endpoint on the template to &#x2F;%2577ebui_wsma_https</p><h4 id="Relevant-dumped-responses"><a href="#Relevant-dumped-responses" class="headerlink" title="Relevant dumped responses"></a>Relevant dumped responses</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">no detection (details below)<br></code></pre></td></tr></table></figure><h4 id="Anything-else"><a href="#Anything-else" class="headerlink" title="Anything else?"></a>Anything else?</h4><p><img src="https://github.com/user-attachments/assets/50ec96da-af54-4583-95f1-17abb0d7c031" alt="Image"></p><p>post endpoint modification:</p><p><img src="https://github.com/user-attachments/assets/76f2be0d-f7ae-4952-9925-da07051d6be4" alt="Image"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>命令执行</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Dahua IPC/VTH/VTO 认证绕过漏洞</title>
     <link href="/2025/06/12/github_1353949014/"/>
     <url>/2025/06/12/github_1353949014/</url>
