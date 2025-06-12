@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-12T17:45:17.001Z</updated>
+  <updated>2025-06-12T20:15:13.606Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Wordpress REST API Custom API Generator For Cross Platform And Import Export In WP 未授权访问漏洞</title>
+    <link href="http://example.com/2025/06/12/github_2089373541/"/>
+    <id>http://example.com/2025/06/12/github_2089373541/</id>
+    <published>2025-06-12T20:15:13.608Z</published>
+    <updated>2025-06-12T20:15:13.606Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Wordpress REST API Custom API Generator For Cross Platform And Import Export In WP 未授权访问漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-5288</li></ul><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> WordPress REST API Custom API Generator For Cross Platform And Import Export In WP 1.0.0 至 2.0.3 版本中存在未授权访问漏洞，允许未认证用户进行权限提升。</p><p><strong>产品厂商：</strong> WordPress</p><p><strong>产品名称：</strong> WordPress REST API Custom API Generator For Cross Platform And Import Export In WP</p><p><strong>影响版本：</strong> 1.0.0 &lt;&#x3D; version &lt;&#x3D; 2.0.3</p><p><strong>来源：</strong> <a href="https://github.com/Nxploited/CVE-2025-5288">https://github.com/Nxploited/CVE-2025-5288</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Wordpress REST API Custom API Generator</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows Disk Cleanup Tool Elevation of Privilege Vulnerability</title>
@@ -521,32 +547,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows Get Stored Credentials - cmdkey Vulnerability</title>
-    <link href="http://example.com/2025/06/12/github_281223188/"/>
-    <id>http://example.com/2025/06/12/github_281223188/</id>
-    <published>2025-06-12T10:45:23.433Z</published>
-    <updated>2025-06-12T10:45:23.428Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Windows Get Stored Credentials - cmdkey Vulnerability</p><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Windows中的cmdkey &#x2F;list命令用于列出系统上存储的所有凭据。这些凭据可能包括为网络资源、网站或远程计算机保存的用户名和密码，存在信息泄露的风险。</p><p><strong>产品厂商：</strong> Microsoft</p><p><strong>产品名称：</strong> Windows</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/697e27d60d3da75fc80782a72b85416fbd5f641d/code%2Fwindows%2Fget-stored-credentials-cmdkey.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/697e27d60d3da75fc80782a72b85416fbd5f641d/code%2Fwindows%2Fget-stored-credentials-cmdkey.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><br><span class="hljs-attribute">id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">get-stored-credentials-cmdkey</span><br><br><span class="hljs-attribute">info</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Get Stored Credentials - cmdkey</span><br>  <span class="hljs-attribute">author</span><span class="hljs-punctuation">:</span> <span class="hljs-string">pussycat0x</span><br>  <span class="hljs-attribute">severity</span><span class="hljs-punctuation">:</span> <span class="hljs-string">high</span><br>  <span class="hljs-attribute">description</span><span class="hljs-punctuation">:</span> <span class="hljs-string">|</span><br>    <span class="hljs-attribute">The cmdkey /list command in Windows is used to list all the stored credentials on the system. These credentials can include saved usernames and passwords for network resources, websites, or remote computers</span><br><span class="hljs-attribute">  tags</span><span class="hljs-punctuation">:</span> <span class="hljs-string">code,windows,privesc,ps,enum</span><br><br><span class="hljs-attribute">self-contained</span><span class="hljs-punctuation">:</span> <span class="hljs-string">true</span><br><span class="hljs-attribute">code</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">engine:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">powershell</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">powershell.exe</span><br>    <span class="hljs-attribute">args</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">-ExecutionPolicy</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">Bypass</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">-File</span><br>    <span class="hljs-attribute">pattern</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;*.ps1&quot;</span><br>    <span class="hljs-attribute">source</span><span class="hljs-punctuation">:</span> <span class="hljs-string">|</span><br>      <span class="hljs-attribute">cmdkey /list</span><br><span class="hljs-attribute"></span><br><span class="hljs-attribute">    extractors</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: dsl</span><br>        <span class="hljs-attribute">dsl</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">response</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Windows Get Stored Credentials - cmdkey</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
   </entry>
   

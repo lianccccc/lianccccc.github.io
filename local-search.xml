@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Wordpress REST API Custom API Generator For Cross Platform And Import Export In WP 未授权访问漏洞</title>
+    <link href="/2025/06/12/github_2089373541/"/>
+    <url>/2025/06/12/github_2089373541/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Wordpress REST API Custom API Generator For Cross Platform And Import Export In WP 未授权访问漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-5288</li></ul><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> WordPress REST API Custom API Generator For Cross Platform And Import Export In WP 1.0.0 至 2.0.3 版本中存在未授权访问漏洞，允许未认证用户进行权限提升。</p><p><strong>产品厂商：</strong> WordPress</p><p><strong>产品名称：</strong> WordPress REST API Custom API Generator For Cross Platform And Import Export In WP</p><p><strong>影响版本：</strong> 1.0.0 &lt;&#x3D; version &lt;&#x3D; 2.0.3</p><p><strong>来源：</strong> <a href="https://github.com/Nxploited/CVE-2025-5288">https://github.com/Nxploited/CVE-2025-5288</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CVE-2025:github search</tag>
+      
+      <tag>未授权访问</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Windows Disk Cleanup Tool Elevation of Privilege Vulnerability</title>
     <link href="/2025/06/12/github_588732286/"/>
     <url>/2025/06/12/github_588732286/</url>
@@ -7548,9 +7575,9 @@
     
     <tags>
       
-      <tag>权限绕过</tag>
-      
       <tag>rapid7/metasploit-framework:github issues</tag>
+      
+      <tag>权限绕过</tag>
       
     </tags>
     
