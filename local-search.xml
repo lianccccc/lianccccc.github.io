@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Roundcube Webmail 远程代码执行漏洞</title>
+    <link href="/2025/06/12/github_1453721768/"/>
+    <url>/2025/06/12/github_1453721768/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Roundcube Webmail 远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-49113</li></ul><p><strong>漏洞类型：</strong> 反序列化</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Roundcube Webmail 在 1.5.10 之前和 1.6.x 在 1.6.11 之前的版本中，允许经过身份验证的用户远程执行代码，因为 URL 中的_from 参数在 program&#x2F;actions&#x2F;settings&#x2F;upload.php 中没有经过验证，导致 PHP 对象反序列化。</p><p><strong>产品厂商：</strong> Roundcube</p><p><strong>产品名称：</strong> Roundcube Webmail</p><p><strong>影响版本：</strong> 1.5.10 之前和 1.6.x 在 1.6.11 之前</p><p><strong>搜索语法：</strong> “Roundcube Webmail” &amp;&amp; title&#x3D;&#x3D;”Roundcube Webmail :: 欢迎使用 Roundcube Webmail”</p><p><strong>来源：</strong> <a href="https://github.com/zan8in/afrog/blob/5bd85fe90d8510c704c973bdcc9df539813feef3/pocs%2Ftemp%2Fafrog-pocs%2Fcve%2FCVE-2025-49113.yaml">https://github.com/zan8in/afrog/blob/5bd85fe90d8510c704c973bdcc9df539813feef3/pocs%2Ftemp%2Fafrog-pocs%2Fcve%2FCVE-2025-49113.yaml</a></p><p><strong>类型：</strong> zan8in&#x2F;afrog:github commit</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><code class="hljs 1c"><br>id<span class="hljs-punctuation">:</span> CVE<span class="hljs-punctuation">-</span><span class="hljs-number">2025</span><span class="hljs-punctuation">-</span><span class="hljs-number">49113</span><br><br>info<span class="hljs-punctuation">:</span><br>  name<span class="hljs-punctuation">:</span> Roundcube Webmail <span class="hljs-punctuation">-</span> Remote Code Execution<br>  author<span class="hljs-punctuation">:</span> rxerium<br>  severity<span class="hljs-punctuation">:</span> critical<br>  verified<span class="hljs-punctuation">:</span> true<br>  description<span class="hljs-punctuation">:</span> <span class="hljs-string">|-</span><br>    Roundcube Webmail 在 <span class="hljs-number">1.5</span>.<span class="hljs-number">10</span> 之前和 <span class="hljs-number">1.6</span>.x 在 <span class="hljs-number">1.6</span>.<span class="hljs-number">11</span> 之前的版本中，允许经过身份验证的用户远程执行代码，因为 URL 中的_from 参数在 program/actions/settings/upload.php 中没有经过验证，导致 PHP 对象反序列化。<br>    fofa<span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Roundcube Webmail&quot;</span> <span class="hljs-meta">&amp;&amp; title==&quot;Roundcube Webmail :: 欢迎使用 Roundcube Webmail&quot;</span><br>  reference<span class="hljs-punctuation">:</span><br>    <span class="hljs-punctuation">-</span> https<span class="hljs-punctuation">:</span><span class="hljs-comment">//nvd.nist.gov/vuln/detail/CVE-2025-49113</span><br>  tags<span class="hljs-punctuation">:</span> roundcube<span class="hljs-punctuation">,</span>zeroday<br><br>rules<span class="hljs-punctuation">:</span><br>  r0<span class="hljs-punctuation">:</span><br>    request<span class="hljs-punctuation">:</span><br>      method<span class="hljs-punctuation">:</span> GET<br>      path<span class="hljs-punctuation">:</span> /<br>    expression<span class="hljs-punctuation">:</span> <span class="hljs-string">|</span><br>      response.status <span class="hljs-punctuation">=</span><span class="hljs-punctuation">=</span> <span class="hljs-number">200</span> <span class="hljs-meta">&amp;&amp;</span><br>      response.body.ibcontains<span class="hljs-punctuation">(</span>b&#x27;&lt;title&gt;Roundcube Webmail&#x27;<span class="hljs-punctuation">)</span> <span class="hljs-meta">&amp;&amp;</span><br>      <span class="hljs-punctuation">(</span>response.body.bcontains<span class="hljs-punctuation">(</span>b&#x27;&quot;rcversion&quot;:<span class="hljs-number">1050</span>0&#x27;<span class="hljs-punctuation">)</span> <span class="hljs-string">|| </span><br>      response.body.bcontains<span class="hljs-punctuation">(</span>b&#x27;&quot;rcversion&quot;:<span class="hljs-number">1050</span>1&#x27;<span class="hljs-punctuation">)</span> <span class="hljs-string">||</span><br>      response.body.bcontains<span class="hljs-punctuation">(</span>b&#x27;&quot;rcversion&quot;:<span class="hljs-number">1050</span>2&#x27;<span class="hljs-punctuation">)</span> <span class="hljs-string">||</span><br>      response.body.bcontains<span class="hljs-punctuation">(</span>b&#x27;&quot;rcversion&quot;:<span class="hljs-number">1050</span>3&#x27;<span class="hljs-punctuation">)</span> <span class="hljs-string">||</span><br>      response.body.bcontains<span class="hljs-punctuation">(</span>b&#x27;&quot;rcversion&quot;:<span class="hljs-number">1050</span>4&#x27;<span class="hljs-punctuation">)</span> <span class="hljs-string">||</span><br>      response.body.bcontains<span class="hljs-punctuation">(</span>b&#x27;&quot;rcversion&quot;:<span class="hljs-number">1050</span>5&#x27;<span class="hljs-punctuation">)</span> <span class="hljs-string">||</span><br>      response.body.bcontains<span class="hljs-punctuation">(</span>b&#x27;&quot;rcversion&quot;:<span class="hljs-number">1050</span>6&#x27;<span class="hljs-punctuation">)</span> <span class="hljs-string">||</span><br>      response.body.bcontains<span class="hljs-punctuation">(</span>b&#x27;&quot;rcversion&quot;:<span class="hljs-number">1050</span>7&#x27;<span class="hljs-punctuation">)</span> <span class="hljs-string">||</span><br>      response.body.bcontains<span class="hljs-punctuation">(</span>b&#x27;&quot;rcversion&quot;:<span class="hljs-number">1050</span>8&#x27;<span class="hljs-punctuation">)</span> <span class="hljs-string">||</span><br>      response.body.bcontains<span class="hljs-punctuation">(</span>b&#x27;&quot;rcversion&quot;:<span class="hljs-number">1050</span>9&#x27;<span class="hljs-punctuation">)</span> <span class="hljs-string">||</span><br>      response.body.bcontains<span class="hljs-punctuation">(</span>b&#x27;&quot;rcversion&quot;:<span class="hljs-number">1060</span>0&#x27;<span class="hljs-punctuation">)</span> <span class="hljs-string">||</span><br>      response.body.bcontains<span class="hljs-punctuation">(</span>b&#x27;&quot;rcversion&quot;:<span class="hljs-number">1060</span>1&#x27;<span class="hljs-punctuation">)</span> <span class="hljs-string">||</span><br>      response.body.bcontains<span class="hljs-punctuation">(</span>b&#x27;&quot;rcversion&quot;:<span class="hljs-number">1060</span>2&#x27;<span class="hljs-punctuation">)</span> <span class="hljs-string">||</span><br>      response.body.bcontains<span class="hljs-punctuation">(</span>b&#x27;&quot;rcversion&quot;:<span class="hljs-number">1060</span>3&#x27;<span class="hljs-punctuation">)</span> <span class="hljs-string">||</span><br>      response.body.bcontains<span class="hljs-punctuation">(</span>b&#x27;&quot;rcversion&quot;:<span class="hljs-number">1060</span>4&#x27;<span class="hljs-punctuation">)</span> <span class="hljs-string">||</span><br>      response.body.bcontains<span class="hljs-punctuation">(</span>b&#x27;&quot;rcversion&quot;:<span class="hljs-number">1060</span>5&#x27;<span class="hljs-punctuation">)</span> <span class="hljs-string">||</span><br>      response.body.bcontains<span class="hljs-punctuation">(</span>b&#x27;&quot;rcversion&quot;:<span class="hljs-number">1060</span>6&#x27;<span class="hljs-punctuation">)</span> <span class="hljs-string">||</span><br>      response.body.bcontains<span class="hljs-punctuation">(</span>b&#x27;&quot;rcversion&quot;:<span class="hljs-number">1060</span>7&#x27;<span class="hljs-punctuation">)</span> <span class="hljs-string">||</span><br>      response.body.bcontains<span class="hljs-punctuation">(</span>b&#x27;&quot;rcversion&quot;:<span class="hljs-number">1060</span>8&#x27;<span class="hljs-punctuation">)</span> <span class="hljs-string">||</span><br>      response.body.bcontains<span class="hljs-punctuation">(</span>b&#x27;&quot;rcversion&quot;:<span class="hljs-number">1060</span>9&#x27;<span class="hljs-punctuation">)</span> <span class="hljs-string">||</span><br>      response.body.bcontains<span class="hljs-punctuation">(</span>b&#x27;&quot;rcversion&quot;:<span class="hljs-number">1061</span>0&#x27;<span class="hljs-punctuation">)</span> <span class="hljs-punctuation">)</span><br>    extractors<span class="hljs-punctuation">:</span><br>      <span class="hljs-punctuation">-</span> type<span class="hljs-punctuation">:</span> regex<br>        extractor<span class="hljs-punctuation">:</span><br>          search<span class="hljs-punctuation">:</span> &#x27;&quot;\&quot;rcversion\&quot;:(?P&lt;webmail&gt;[0-9]&#123;5&#125;),&quot;.bsubmatch(response.body)&#x27;<br>          webmail<span class="hljs-punctuation">:</span> search[<span class="hljs-string">&quot;webmail&quot;</span>]<br>expression<span class="hljs-punctuation">:</span> r0<span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>反序列化</tag>
+      
+      <tag>zan8in/afrog:github commit</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>MeteoBridge 远程代码执行漏洞</title>
     <link href="/2025/06/12/github_2079400504/"/>
     <url>/2025/06/12/github_2079400504/</url>
@@ -1854,9 +1881,9 @@
     
     <tags>
       
-      <tag>eeeeeeeeee-code/POC:github commit</tag>
-      
       <tag>命令执行</tag>
+      
+      <tag>eeeeeeeeee-code/POC:github commit</tag>
       
     </tags>
     
@@ -4958,9 +4985,9 @@
     
     <tags>
       
-      <tag>服务器端请求伪造</tag>
-      
       <tag>zan8in/afrog:github commit</tag>
+      
+      <tag>服务器端请求伪造</tag>
       
     </tags>
     
@@ -4985,9 +5012,9 @@
     
     <tags>
       
-      <tag>文件上传</tag>
-      
       <tag>zan8in/afrog:github commit</tag>
+      
+      <tag>文件上传</tag>
       
     </tags>
     
