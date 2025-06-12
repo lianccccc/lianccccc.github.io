@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-12T09:45:17.180Z</updated>
+  <updated>2025-06-12T10:01:44.747Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,87 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>奇安信集团2025年06月补丁库更新通告-第一次更新</title>
+    <link href="http://example.com/2025/06/12/weixin_1178279796/"/>
+    <id>http://example.com/2025/06/12/weixin_1178279796/</id>
+    <published>2025-06-12T10:01:44.747Z</published>
+    <updated>2025-06-12T10:01:44.747Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 奇安信 CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/VZCo7kCj-vx42t5L-UGwaQ">https://mp.weixin.qq.com/s/VZCo7kCj-vx42t5L-UGwaQ</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 奇安信 CERT&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/VZCo7kCj-vx42t5L-UGwaQ&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="奇安信 CERT" scheme="http://example.com/tags/%E5%A5%87%E5%AE%89%E4%BF%A1-CERT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【已复现】契约锁电子签章系统远程代码执行漏洞(QVD-2025-23408)安全风险通告</title>
+    <link href="http://example.com/2025/06/12/weixin_1161446601/"/>
+    <id>http://example.com/2025/06/12/weixin_1161446601/</id>
+    <published>2025-06-12T10:01:44.396Z</published>
+    <updated>2025-06-12T10:01:44.395Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 奇安信 CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/gmfx97xH4OHtGSJ0UmgOKA">https://mp.weixin.qq.com/s/gmfx97xH4OHtGSJ0UmgOKA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 奇安信 CERT&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/gmfx97xH4OHtGSJ0UmgOKA&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="奇安信 CERT" scheme="http://example.com/tags/%E5%A5%87%E5%AE%89%E4%BF%A1-CERT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【漏洞预警】Apache Kafka Connect高危漏洞（CVE-2025-27817）可致任意文件读取,影响核心数据安全！</title>
+    <link href="http://example.com/2025/06/12/weixin_2610294895/"/>
+    <id>http://example.com/2025/06/12/weixin_2610294895/</id>
+    <published>2025-06-12T10:00:41.648Z</published>
+    <updated>2025-06-12T10:00:41.645Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> GobySec</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/z7Ppzv1k8flAXZiLQo9SSw">https://mp.weixin.qq.com/s/z7Ppzv1k8flAXZiLQo9SSw</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; GobySec&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/z7Ppzv1k8flAXZiLQo9SSw&quot;&gt;https://mp.weixin.q</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="GobySec" scheme="http://example.com/tags/GobySec/"/>
+    
+  </entry>
   
   <entry>
     <title>WordPress XStore Theme SQL Injection Vulnerability</title>
@@ -455,86 +536,6 @@
       
       
     <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Windows Server Autologon Function Contr</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="配置问题" scheme="http://example.com/tags/%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows Server RDS Removal Check Vulnerability</title>
-    <link href="http://example.com/2025/06/12/github_3411502479/"/>
-    <id>http://example.com/2025/06/12/github_3411502479/</id>
-    <published>2025-06-12T07:46:10.439Z</published>
-    <updated>2025-06-12T07:46:10.438Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Windows Server RDS Removal Check Vulnerability</p><p><strong>漏洞类型：</strong> 配置问题</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 验证是否移除了远程数据服务（RDS）或未配置以减轻拒绝服务攻击或远程执行管理命令的风险。如果IIS未使用、默认网站不包含&#x2F;msadc虚拟目录或与RDS相关的ADCLaunch注册表键不存在，则符合要求。如果RDS配置不当，攻击者可能利用它执行远程代码或拒绝服务攻击。</p><p><strong>产品厂商：</strong> Microsoft</p><p><strong>产品名称：</strong> Windows Server</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/1e36d6b3b08ade05445cddf071e5875652d79053/kisa%2FCloud_Vulnerability_Inspection_Guide_2024%2FWindow_Server%2Frds-removal-check.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/1e36d6b3b08ade05445cddf071e5875652d79053/kisa%2FCloud_Vulnerability_Inspection_Guide_2024%2FWindow_Server%2Frds-removal-check.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><br>id: rds<span class="hljs-literal">-removal-check</span><br><br>info:<br>  name: RDS Removal Check<br>  author: nukunga[<span class="hljs-type">SungHyunJeon</span>]<br>  severity: medium<br>  description: |<br>    Verify that Remote <span class="hljs-keyword">Data</span> Services (RDS) are removed or not configured to mitigate risks of denial<span class="hljs-literal">-of-service</span><br>    attacks or remote execution of administrative commands. Compliance is achieved <span class="hljs-keyword">if</span> any of the following conditions hold:<br>      - IIS is not <span class="hljs-keyword">in</span> use,<br>      - The default website does not contain the /msadc virtual directory, or<br>      - The ADCLaunch registry keys related to RDS <span class="hljs-keyword">do</span> not exist.<br>  impact: |<br>    <span class="hljs-keyword">If</span> RDS is improperly configured, attackers may exploit it to perform remote code execution or denial<span class="hljs-literal">-of-service</span> attacks.<br>  remediation: |<br>    Remove the /msadc virtual directory from the default website and delete the following registry keys:<br>      - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch\RDSServer.DataFactory<br>      - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch\AdvancedDataFactory<br>      - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch\VbBusObj.VbBusObjCls<br>  tags: rds,windows,windows,code,windows<span class="hljs-literal">-audit</span>,kisa<br><br>self<span class="hljs-literal">-contained</span>: true<br><br>code:<br>  - pre<span class="hljs-literal">-condition</span>: |<br>      IsWindows();<br>    engine:<br>      - powershell<br>      - powershell.exe<br>    args:<br>      - <span class="hljs-literal">-ExecutionPolicy</span><br>      - Bypass<br>    pattern: <span class="hljs-string">&quot;*.ps1&quot;</span><br>    source: |<br>      <span class="hljs-comment"># Check if IIS (W3SVC) service is present; if not, IIS is not used and RDS is implicitly compliant.</span><br>      <span class="hljs-variable">$iisService</span> = <span class="hljs-built_in">Get-Service</span> <span class="hljs-literal">-Name</span> W3SVC <span class="hljs-literal">-ErrorAction</span> SilentlyContinue<br>      <span class="hljs-keyword">if</span> (<span class="hljs-operator">-not</span> <span class="hljs-variable">$iisService</span>) &#123;<br>          <span class="hljs-built_in">Write-Output</span> <span class="hljs-string">&quot;RDS_COMPLIANT&quot;</span><br>          <span class="hljs-keyword">exit</span><br>      &#125;<br>      <span class="hljs-comment"># Check for the existence of the /msadc virtual directory in the Default Web Site.</span><br>      <span class="hljs-variable">$msadcExists</span> = <span class="hljs-variable">$false</span><br>      <span class="hljs-keyword">try</span> &#123;<br>          <span class="hljs-built_in">Import-Module</span> WebAdministration <span class="hljs-literal">-ErrorAction</span> SilentlyContinue<br>          <span class="hljs-variable">$vdirs</span> = <span class="hljs-built_in">Get-WebVirtualDirectory</span> <span class="hljs-literal">-Site</span> <span class="hljs-string">&quot;Default Web Site&quot;</span> <span class="hljs-literal">-ErrorAction</span> SilentlyContinue<br>          <span class="hljs-keyword">if</span> (<span class="hljs-variable">$vdirs</span>) &#123;<br>              <span class="hljs-keyword">foreach</span> (<span class="hljs-variable">$vdir</span> <span class="hljs-keyword">in</span> <span class="hljs-variable">$vdirs</span>) &#123;<br>                  <span class="hljs-keyword">if</span> (<span class="hljs-variable">$vdir</span>.Path <span class="hljs-operator">-eq</span> <span class="hljs-string">&quot;/msadc&quot;</span>) &#123;<br>                      <span class="hljs-variable">$msadcExists</span> = <span class="hljs-variable">$true</span><br>                      <span class="hljs-keyword">break</span><br>                  &#125;<br>              &#125;<br>          &#125;<br>      &#125; <span class="hljs-keyword">catch</span> &#123;&#125;<br>      <span class="hljs-comment"># Check for ADCLaunch registry keys related to RDS.</span><br>      <span class="hljs-variable">$adcLaunchPath</span> = <span class="hljs-string">&quot;HKLM:\SYSTEM\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch&quot;</span><br>      <span class="hljs-variable">$rdServerExists</span> = <span class="hljs-built_in">Test-Path</span> <span class="hljs-string">&quot;<span class="hljs-variable">$adcLaunchPath</span>\RDSServer.DataFactory&quot;</span><br>      <span class="hljs-variable">$advDataExists</span> = <span class="hljs-built_in">Test-Path</span> <span class="hljs-string">&quot;<span class="hljs-variable">$adcLaunchPath</span>\AdvancedDataFactory&quot;</span><br>      <span class="hljs-variable">$vbBusObjExists</span> = <span class="hljs-built_in">Test-Path</span> <span class="hljs-string">&quot;<span class="hljs-variable">$adcLaunchPath</span>\VbBusObj.VbBusObjCls&quot;</span><br>      <span class="hljs-comment"># Compliance is achieved if the /msadc virtual directory does not exist OR none of the registry keys exist.</span><br>      <span class="hljs-keyword">if</span> ((<span class="hljs-operator">-not</span> <span class="hljs-variable">$msadcExists</span>) <span class="hljs-operator">-or</span> (<span class="hljs-operator">-not</span> (<span class="hljs-variable">$rdServerExists</span> <span class="hljs-operator">-or</span> <span class="hljs-variable">$advDataExists</span> <span class="hljs-operator">-or</span> <span class="hljs-variable">$vbBusObjExists</span>))) &#123;<br>          <span class="hljs-built_in">Write-Output</span> <span class="hljs-string">&quot;RDS_COMPLIANT&quot;</span><br>      &#125; <span class="hljs-keyword">else</span> &#123;<br>          <span class="hljs-built_in">Write-Output</span> <span class="hljs-string">&quot;RDS_VULNERABLE&quot;</span><br>      &#125;<br><br>    matchers:<br>      - <span class="hljs-built_in">type</span>: word<br>        words:<br>          - <span class="hljs-string">&quot;RDS_VULNERABLE&quot;</span><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Windows Server RDS Removal Check Vulner</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="配置问题" scheme="http://example.com/tags/%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Next.JS-CVE-2025-29927</title>
-    <link href="http://example.com/2025/06/12/github_779395491/"/>
-    <id>http://example.com/2025/06/12/github_779395491/</id>
-    <published>2025-06-12T07:45:57.656Z</published>
-    <updated>2025-06-12T07:45:57.653Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Next.JS-CVE-2025-29927</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-29927</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>产品名称：</strong> Next.JS</p><p><strong>来源：</strong> <a href="https://github.com/amitlttwo/Next.JS-CVE-2025-29927">https://github.com/amitlttwo/Next.JS-CVE-2025-29927</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>nextjs-scanner.go</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="Next-JS-CVE-2025-29927"><a href="#Next-JS-CVE-2025-29927" class="headerlink" title="Next.JS-CVE-2025-29927"></a>Next.JS-CVE-2025-29927</h2>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Next.JS-CVE-2025-29927&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows Server 审计失败时关机策略检查</title>
-    <link href="http://example.com/2025/06/12/github_1882865188/"/>
-    <id>http://example.com/2025/06/12/github_1882865188/</id>
-    <published>2025-06-12T07:45:41.130Z</published>
-    <updated>2025-06-12T07:45:41.125Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Windows Server 审计失败时关机策略检查</p><p><strong>漏洞类型：</strong> 配置问题</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 验证“审计失败时关机”策略是否被禁用。该策略应设置为“4,0”，以便系统在无法记录安全审计时不会立即关机。如果策略设置为“4,1”，系统将关机，可能导致拒绝服务情况。如果策略启用（设置为“4,1”），系统在无法记录审计日志时可能会意外关机，中断服务并可能导致数据丢失。修复方法包括通过配置CrashOnAuditFail值为“4,0”来禁用策略，可以通过注册表编辑器或调整本地安全策略来实现。</p><p><strong>产品厂商：</strong> Microsoft</p><p><strong>产品名称：</strong> Windows Server</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/1e36d6b3b08ade05445cddf071e5875652d79053/kisa%2FCloud_Vulnerability_Inspection_Guide_2024%2FWindow_Server%2Fcrash-on-audit-fail.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/1e36d6b3b08ade05445cddf071e5875652d79053/kisa%2FCloud_Vulnerability_Inspection_Guide_2024%2FWindow_Server%2Fcrash-on-audit-fail.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><br>id: crash-on-audit-fail<br><br>info:<br>  name: Shutdown on Audit Failure Check<br>  author: nukunga[SungHyunJeon]<br>  severity: medium<br>  description: |<br>    Verify that the <span class="hljs-string">&quot;Shutdown on Audit Failure&quot;</span><span class="hljs-built_in"> policy </span>is disabled.<br>    The<span class="hljs-built_in"> policy </span>should be <span class="hljs-built_in">set</span> <span class="hljs-keyword">to</span> <span class="hljs-string">&quot;4,0&quot;</span> so that the<span class="hljs-built_in"> system </span>does <span class="hljs-keyword">not</span> shut down immediately <span class="hljs-keyword">if</span> it is unable <span class="hljs-keyword">to</span> log security audits.<br>    <span class="hljs-keyword">If</span> the<span class="hljs-built_in"> policy </span>is <span class="hljs-built_in">set</span> <span class="hljs-keyword">to</span> <span class="hljs-string">&quot;4,1&quot;</span>, the<span class="hljs-built_in"> system </span>will shut down, potentially leading <span class="hljs-keyword">to</span> a denial-of-service condition.<br>  impact: |<br>    <span class="hljs-keyword">If</span> the<span class="hljs-built_in"> policy </span>is enabled (<span class="hljs-built_in">set</span> <span class="hljs-keyword">to</span> <span class="hljs-string">&quot;4,1&quot;</span>), the<span class="hljs-built_in"> system </span>may shut down unexpectedly when audit logs cannot be recorded,<br>    disrupting services <span class="hljs-keyword">and</span> potentially causing data loss.<br>  remediation: |<br>    <span class="hljs-built_in">Disable</span> the<span class="hljs-built_in"> policy </span>by configuring the CrashOnAuditFail value <span class="hljs-keyword">to</span> <span class="hljs-string">&quot;4,0&quot;</span>. This can be done by:<br>      - Using the Registry Editor <span class="hljs-keyword">to</span> navigate <span class="hljs-keyword">to</span>:<br>        HKLM:\Software\Microsoft\Windows\CurrentVersion\policies\system<br>        <span class="hljs-keyword">and</span> setting CrashOnAuditFail <span class="hljs-keyword">to</span> <span class="hljs-string">&quot;4,0&quot;</span>.<br>      - Adjusting the local security<span class="hljs-built_in"> policy </span>(<span class="hljs-string">&quot;Audit: Shutdown the system if unable to log security audits&quot;</span>) <span class="hljs-keyword">to</span> Disabled.<br>  tags: account-management,code,windows-audit,kisa,policy<br><br>self-contained: <span class="hljs-literal">true</span><br><br>code:<br>  - pre-condition: |<br>      IsWindows();<br>    engine:<br>      - powershell<br>      - powershell.exe<br>    args:<br>      - -ExecutionPolicy<br>      - Bypass<br>    pattern: <span class="hljs-string">&quot;*.ps1&quot;</span><br>    source: |<br>      <span class="hljs-variable">$cfgPath</span> = <span class="hljs-string">&quot;C:\cfg.txt&quot;</span><br>      secedit /<span class="hljs-built_in">export</span> /cfg <span class="hljs-variable">$cfgPath</span> | Out-Null<br>      <span class="hljs-variable">$cfg</span> = Get-Content <span class="hljs-variable">$cfgPath</span> | Out-String<br>      <span class="hljs-keyword">if</span> (<span class="hljs-variable">$cfg</span> -match <span class="hljs-string">&quot;CrashOnAuditFail\s*=\s*(\S+)&quot;</span>) &#123;<br>          <span class="hljs-variable">$value</span> = <span class="hljs-variable">$Matches</span>[1].Trim()<br>          <span class="hljs-keyword">if</span> (<span class="hljs-variable">$value</span> -eq <span class="hljs-string">&quot;4,1&quot;</span>) &#123;<br>              <span class="hljs-string">&quot;CRASH_ON_AUDIT_FAIL_ENABLED&quot;</span><br>          &#125; <span class="hljs-keyword">else</span> &#123;<br>              <span class="hljs-string">&quot;CRASH_ON_AUDIT_FAIL_DISABLED&quot;</span><br>          &#125;<br>      &#125; <span class="hljs-keyword">else</span> &#123;<br>          <span class="hljs-string">&quot;CRASH_ON_AUDIT_FAIL_NOT_FOUND&quot;</span><br>      &#125;<br><br>    matchers:<br>      - type: word<br>        words:<br>          - <span class="hljs-string">&quot;CRASH_ON_AUDIT_FAIL_ENABLED&quot;</span><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Windows Server 审计失败时关机策略检查&lt;/p&gt;
-&lt;p&gt;&lt;stro</summary>
       
     
     
