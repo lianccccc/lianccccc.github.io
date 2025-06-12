@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Oracle Coherence 远程代码执行漏洞</title>
+    <link href="/2025/06/12/github_1021674224/"/>
+    <url>/2025/06/12/github_1021674224/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Oracle Coherence 远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2020-2555</li></ul><p><strong>漏洞类型：</strong> 反序列化</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Oracle Coherence是Oracle Fusion Middleware的一部分，受影响版本包括3.7.1.0、12.1.3.0.0、12.2.1.3.0和12.2.1.4.0。该漏洞允许未经身份验证的攻击者通过网络访问T3协议执行远程代码，从而完全控制受影响的系统。</p><p><strong>产品厂商：</strong> Oracle</p><p><strong>产品名称：</strong> Oracle Coherence</p><p><strong>影响版本：</strong> 3.7.1.0, 12.1.3.0.0, 12.2.1.3.0, 12.2.1.4.0</p><p><strong>搜索语法：</strong> http.title:”oracle access management”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12318">https://github.com/projectdiscovery/nuclei-templates/issues/12318</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Oracle Coherence of Oracle Fusion Middleware (versions 3.7.1.0, 12.1.3.0.0, 12.2.1.3.0, 12.2.1.4.0) contains a remote code execution caused by unauthenticated network access via T3, letting attackers compromise Oracle Coherence, exploit requires network access via T3.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="http://packetstormsecurity.com/files/157054/Oracle-Coherence-Fusion-Middleware-Remote-Code-Execution.html">http://packetstormsecurity.com/files/157054/Oracle-Coherence-Fusion-Middleware-Remote-Code-Execution.html</a></li><li><a href="http://packetstormsecurity.com/files/157207/Oracle-WebLogic-Server-12.2.1.4.0-Remote-Code-Execution.html">http://packetstormsecurity.com/files/157207/Oracle-WebLogic-Server-12.2.1.4.0-Remote-Code-Execution.html</a></li><li><a href="http://packetstormsecurity.com/files/157795/WebLogic-Server-Deserialization-Remote-Code-Execution.html">http://packetstormsecurity.com/files/157795/WebLogic-Server-Deserialization-Remote-Code-Execution.html</a></li><li><a href="https://github.com/Qynklee/POC_CVE-2020-2555">https://github.com/Qynklee/POC_CVE-2020-2555</a></li><li><a href="https://vulncheck.com/xdb/1003dc67ff34">https://vulncheck.com/xdb/1003dc67ff34</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:Qynklee&#x2F;POC_CVE-2020-2555.git</li><li><a href="https://vulncheck.com/xdb/6179b4e1d51c">https://vulncheck.com/xdb/6179b4e1d51c</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:Y4er&#x2F;WebLogic-Shiro-shell.git</li><li><a href="https://vulncheck.com/xdb/235a5c344d3f">https://vulncheck.com/xdb/235a5c344d3f</a></li><li>https&#x2F;&#x2F;&#x2F;gitee.com:chenjiew&#x2F;CVE-2020-2555.git</li><li><a href="https://vulncheck.com/xdb/322326255843">https://vulncheck.com/xdb/322326255843</a></li><li>https&#x2F;&#x2F;&#x2F;gitee.com:mstir&#x2F;CVE-2020-2555.git</li><li><a href="https://github.com/Maskhe/cve-2020-2555">https://github.com/Maskhe/cve-2020-2555</a></li><li><a href="https://github.com/Y4er/CVE-2020-2555">https://github.com/Y4er/CVE-2020-2555</a></li><li><a href="https://vulncheck.com/xdb/2c95cddac1b5">https://vulncheck.com/xdb/2c95cddac1b5</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:Y4er&#x2F;CVE-2020-2555.git</li><li><a href="https://github.com/wsfengfan/CVE-2020-2555">https://github.com/wsfengfan/CVE-2020-2555</a></li><li><a href="https://vulncheck.com/xdb/e667362e551e">https://vulncheck.com/xdb/e667362e551e</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:wsfengfan&#x2F;CVE-2020-2555.git</li><li><a href="https://github.com/Hu3sky/CVE-2020-2555">https://github.com/Hu3sky/CVE-2020-2555</a></li><li><a href="https://vulncheck.com/xdb/c9e0223955e2">https://vulncheck.com/xdb/c9e0223955e2</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:0xn0ne&#x2F;weblogicScanner.git</li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-http-title-oracle-access-management"><a href="#Shodan-Query-http-title-oracle-access-management" class="headerlink" title="Shodan Query: http.title:&quot;oracle access management&quot;"></a>Shodan Query: <code>http.title:&quot;oracle access management&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>反序列化</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Roundcube RCE 漏洞被迅速利用，超过 8 万台服务器受到影响</title>
     <link href="/2025/06/12/weixin_3958452419/"/>
     <url>/2025/06/12/weixin_3958452419/</url>
@@ -155,9 +182,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -263,9 +290,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -963,9 +990,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -1206,9 +1233,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>反序列化</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -1341,9 +1368,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>反序列化</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -1638,9 +1665,9 @@
     
     <tags>
       
-      <tag>命令执行</tag>
-      
       <tag>eeeeeeeeee-code/POC:github commit</tag>
+      
+      <tag>命令执行</tag>
       
     </tags>
     
@@ -3285,9 +3312,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>反序列化</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -3468,9 +3495,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>反序列化</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -3680,9 +3707,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>反序列化</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -3888,9 +3915,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -3969,9 +3996,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>反序列化</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -4050,9 +4077,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>反序列化</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -4985,9 +5012,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>反序列化</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -5093,9 +5120,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>反序列化</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -5120,9 +5147,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>反序列化</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -5280,9 +5307,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -5334,9 +5361,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>反序列化</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -5469,9 +5496,9 @@
     
     <tags>
       
-      <tag>CVE-2023:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2023:github search</tag>
       
     </tags>
     
@@ -5604,9 +5631,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -6198,9 +6225,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -6387,9 +6414,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -6414,9 +6441,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -6468,9 +6495,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -6630,9 +6657,9 @@
     
     <tags>
       
-      <tag>CVE-2023:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2023:github search</tag>
       
     </tags>
     
@@ -6954,9 +6981,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>反序列化</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -6981,9 +7008,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>反序列化</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -7008,9 +7035,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>反序列化</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -7062,9 +7089,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -7168,9 +7195,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>反序列化</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -7195,9 +7222,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>反序列化</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -7438,9 +7465,9 @@
     
     <tags>
       
-      <tag>rapid7/metasploit-framework:github issues</tag>
-      
       <tag>反序列化</tag>
+      
+      <tag>rapid7/metasploit-framework:github issues</tag>
       
     </tags>
     
@@ -7573,9 +7600,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -7627,9 +7654,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -7789,9 +7816,9 @@
     
     <tags>
       
-      <tag>跨站可执行脚本</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>跨站可执行脚本</tag>
       
     </tags>
     
@@ -7897,9 +7924,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -8275,9 +8302,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>反序列化</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -8383,9 +8410,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -8437,9 +8464,9 @@
     
     <tags>
       
-      <tag>跨站可执行脚本</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>跨站可执行脚本</tag>
       
     </tags>
     
@@ -8572,9 +8599,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -8653,9 +8680,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -8680,9 +8707,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -9004,9 +9031,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -9220,9 +9247,9 @@
     
     <tags>
       
-      <tag>CVE-2023:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2023:github search</tag>
       
     </tags>
     
@@ -9679,9 +9706,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -9706,9 +9733,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -10406,9 +10433,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -10836,9 +10863,9 @@
     
     <tags>
       
-      <tag>CVE-2025:github search</tag>
-      
       <tag>反序列化</tag>
+      
+      <tag>CVE-2025:github search</tag>
       
     </tags>
     
@@ -11424,9 +11451,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
@@ -11744,9 +11771,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -11771,9 +11798,9 @@
     
     <tags>
       
-      <tag>CVE-2024:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2024:github search</tag>
       
     </tags>
     
@@ -11952,9 +11979,9 @@
     
     <tags>
       
-      <tag>其他</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
       
     </tags>
     
@@ -12033,9 +12060,9 @@
     
     <tags>
       
-      <tag>跨站可执行脚本</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>跨站可执行脚本</tag>
       
     </tags>
     
@@ -12193,9 +12220,9 @@
     
     <tags>
       
-      <tag>缓冲区溢出</tag>
-      
       <tag>CVE-2025:github search</tag>
+      
+      <tag>缓冲区溢出</tag>
       
     </tags>
     
