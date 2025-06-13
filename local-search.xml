@@ -4,6 +4,60 @@
   
   
   <entry>
+    <title>Cisco IOS Smart Install Buffer Overflow Vulnerability</title>
+    <link href="/2025/06/13/github_1567481502/"/>
+    <url>/2025/06/13/github_1567481502/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Cisco IOS Smart Install Buffer Overflow Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2018-0171</li></ul><p><strong>漏洞类型：</strong> 缓冲区溢出</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Cisco IOS和IOS XE软件中的Smart Install功能存在缓冲区溢出漏洞，由于对Smart Install数据包的不当验证，未经身份验证的远程攻击者可通过发送特制的Smart Install消息（TCP端口4786）触发设备重新加载、执行任意代码或导致无限循环。</p><p><strong>产品厂商：</strong> Cisco</p><p><strong>产品名称：</strong> Cisco IOS and IOS XE Software</p><p><strong>搜索语法：</strong> cpe:”cpe:2.3:o:cisco:ios”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12325">https://github.com/projectdiscovery/nuclei-templates/issues/12325</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Cisco IOS and IOS XE Software contain a buffer overflow caused by improper validation of Smart Install packet data, letting unauthenticated remote attackers trigger device reload, execute arbitrary code, or cause indefinite loops, exploit requires sending crafted Smart Install message on TCP port 4786.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://vulncheck.com/xdb/6d4b443f23fc">https://vulncheck.com/xdb/6d4b443f23fc</a></li><li><a href="https://github.com/AlrikRr/Cisco-Smart-Exploit">https://github.com/AlrikRr/Cisco-Smart-Exploit</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:AlrikRr&#x2F;Cisco-Smart-Exploit.git</li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-cpe-cpe-2-3-o-cisco-ios"><a href="#Shodan-Query-cpe-cpe-2-3-o-cisco-ios" class="headerlink" title="Shodan Query: cpe:&quot;cpe:2.3:o:cisco:ios&quot;"></a>Shodan Query: <code>cpe:&quot;cpe:2.3:o:cisco:ios&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>缓冲区溢出</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>B-LINK AC1900 V102 命令执行漏洞</title>
+    <link href="/2025/06/13/weixin_482381960/"/>
+    <url>/2025/06/13/weixin_482381960/</url>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> Nday Poc</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/7lDV1YDhengIH3TBCW54Ug">https://mp.weixin.qq.com/s/7lDV1YDhengIH3TBCW54Ug</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信公众号</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>mp.weixin.qq.com</tag>
+      
+      <tag>Nday Poc</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Kubernetes Exposing Host&#39;s Docker Socket</title>
     <link href="/2025/06/13/github_2787999378/"/>
     <url>/2025/06/13/github_2787999378/</url>
