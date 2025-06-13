@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-12T23:00:17.160Z</updated>
+  <updated>2025-06-13T01:33:15.573Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,87 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GitLab 多个漏洞可导致攻击者完全接管账户</title>
+    <link href="http://example.com/2025/06/13/weixin_2047073814/"/>
+    <id>http://example.com/2025/06/13/weixin_2047073814/</id>
+    <published>2025-06-13T01:33:15.575Z</published>
+    <updated>2025-06-13T01:33:15.573Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/3qO0gEEUr9ievUj596flOw">https://mp.weixin.qq.com/s/3qO0gEEUr9ievUj596flOw</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/3qO0gEEUr9ievUj596flOw&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>“SmartAttack”攻击：利用智能手表窃取隔离网络数据</title>
+    <link href="http://example.com/2025/06/13/weixin_2112064326/"/>
+    <id>http://example.com/2025/06/13/weixin_2112064326/</id>
+    <published>2025-06-13T01:33:14.751Z</published>
+    <updated>2025-06-13T01:33:14.749Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/QkiY1fJKoL5fPjZZxA1oEA">https://mp.weixin.qq.com/s/QkiY1fJKoL5fPjZZxA1oEA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/QkiY1fJKoL5fPjZZxA1oEA&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>以色列间谍软件“Graphite”与最新款 iPhone 的零点击攻击有关</title>
+    <link href="http://example.com/2025/06/13/weixin_2137210451/"/>
+    <id>http://example.com/2025/06/13/weixin_2137210451/</id>
+    <published>2025-06-13T01:33:13.156Z</published>
+    <updated>2025-06-13T01:33:13.157Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/iexrQzNme2-JAgLSRDiTYQ">https://mp.weixin.qq.com/s/iexrQzNme2-JAgLSRDiTYQ</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/iexrQzNme2-JAgLSRDiTYQ&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>Cisco IOS XE 远程代码执行漏洞</title>
@@ -466,87 +547,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【已复现】GeoServer SSRF和XXE漏洞</title>
-    <link href="http://example.com/2025/06/12/weixin_2614393783/"/>
-    <id>http://example.com/2025/06/12/weixin_2614393783/</id>
-    <published>2025-06-12T11:59:05.265Z</published>
-    <updated>2025-06-12T11:59:05.260Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 长亭安全应急响应中心</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/KBDieGQ3mvQQnk8650ldtg">https://mp.weixin.qq.com/s/KBDieGQ3mvQQnk8650ldtg</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 长亭安全应急响应中心&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/KBDieGQ3mvQQnk8650ldtg&quot;&gt;https://mp.weixi</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="长亭安全应急响应中心" scheme="http://example.com/tags/%E9%95%BF%E4%BA%AD%E5%AE%89%E5%85%A8%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94%E4%B8%AD%E5%BF%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>微服务安全防护：分布式系统最佳实践</title>
-    <link href="http://example.com/2025/06/12/weixin_3250682586/"/>
-    <id>http://example.com/2025/06/12/weixin_3250682586/</id>
-    <published>2025-06-12T11:58:01.580Z</published>
-    <updated>2025-06-12T11:58:01.579Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/jckK--WIjklbSlB6-boy_g">https://mp.weixin.qq.com/s/jckK--WIjklbSlB6-boy_g</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/jckK--WIjklbSlB6-boy_g&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>微软Outlook路径遍历漏洞允许攻击者远程执行任意代码</title>
-    <link href="http://example.com/2025/06/12/weixin_2590820780/"/>
-    <id>http://example.com/2025/06/12/weixin_2590820780/</id>
-    <published>2025-06-12T11:58:01.239Z</published>
-    <updated>2025-06-12T11:58:01.239Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/7klIdOVZJR5Mj2reA_OfYg">https://mp.weixin.qq.com/s/7klIdOVZJR5Mj2reA_OfYg</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/7klIdOVZJR5Mj2reA_OfYg&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
     
   </entry>
   
