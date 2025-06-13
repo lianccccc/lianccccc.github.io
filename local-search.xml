@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>NTLM reflection SMB flaw</title>
+    <link href="/2025/06/13/github_1141400579/"/>
+    <url>/2025/06/13/github_1141400579/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> NTLM reflection SMB flaw</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-33073</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> PoC Exploit for the NTLM reflection SMB flaw.</p><p><strong>产品厂商：</strong> Microsoft</p><p><strong>来源：</strong> <a href="https://github.com/mverschu/CVE-2025-33073">https://github.com/mverschu/CVE-2025-33073</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2025-33073.py</li><li>README.md</li><li>dnstool.py</li><li>lib</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-33073"><a href="#CVE-2025-33073" class="headerlink" title="CVE-2025-33073"></a>CVE-2025-33073</h2><p>PoC Exploit for the NTLM reflection SMB flaw.</p><h4 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h4><ul><li>Netexec (NXC) - <a href="https://github.com/Pennyw0rth/NetExec">https://github.com/Pennyw0rth/NetExec</a></li><li>impacket-ntlmrelayx</li><li>dnstool.py (included in repo)</li><li>xterm</li></ul><h4 id="Example-usage"><a href="#Example-usage" class="headerlink" title="Example usage"></a>Example usage</h4><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">python3 CVE-<span class="hljs-number">2025</span>-<span class="hljs-number">33073</span><span class="hljs-selector-class">.py</span> -u <span class="hljs-string">&#x27;wintastic.local\mathijs&#x27;</span> -<span class="hljs-selector-tag">p</span> <span class="hljs-string">&#x27;password&#x27;</span> <span class="hljs-attr">--attacker-ip</span> <span class="hljs-number">192.168</span>.<span class="hljs-number">178.49</span> <span class="hljs-attr">--dns-ip</span> <span class="hljs-number">192.168</span>.<span class="hljs-number">178.138</span> <span class="hljs-attr">--dc-fqdn</span> DC01<span class="hljs-selector-class">.wintastic</span><span class="hljs-selector-class">.local</span> <span class="hljs-attr">--target</span> CLIENT01<span class="hljs-selector-class">.wintastic</span><span class="hljs-selector-class">.local</span> <span class="hljs-attr">--target-ip</span> <span class="hljs-number">192.168</span>.<span class="hljs-number">178.65</span><br></code></pre></td></tr></table></figure><p><img src="https://github.com/user-attachments/assets/304d7f1e-ac62-4c75-aba0-025df7f6e5c0" alt="image"></p><h5 id="Good-to-know"><a href="#Good-to-know" class="headerlink" title="Good to know"></a>Good to know</h5><p>xterm allows copying and pasting with the middle mouse button.</p><h5 id="How-to-fix"><a href="#How-to-fix" class="headerlink" title="How to fix"></a>How to fix</h5><p><a href="https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2025-33073">https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2025-33073</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CVE-2025:github search</tag>
+      
+      <tag>权限提升</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Remote code execution that allows unauthorized users to execute arbitrary code on the server</title>
     <link href="/2025/06/13/github_3964846209/"/>
     <url>/2025/06/13/github_3964846209/</url>
@@ -1229,9 +1256,9 @@
     
     <tags>
       
-      <tag>CVE-2024:github search</tag>
-      
       <tag>权限提升</tag>
+      
+      <tag>CVE-2024:github search</tag>
       
     </tags>
     
@@ -9727,9 +9754,9 @@
     
     <tags>
       
-      <tag>CVE-2024:github search</tag>
-      
       <tag>权限提升</tag>
+      
+      <tag>CVE-2024:github search</tag>
       
     </tags>
     
@@ -14619,9 +14646,9 @@
     
     <tags>
       
-      <tag>CVE-2024:github search</tag>
-      
       <tag>权限提升</tag>
+      
+      <tag>CVE-2024:github search</tag>
       
     </tags>
     
