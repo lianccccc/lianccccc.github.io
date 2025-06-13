@@ -4,6 +4,60 @@
   
   
   <entry>
+    <title>CVE-2025-4009 PoC/EXP</title>
+    <link href="/2025/06/13/github_2202226216/"/>
+    <url>/2025/06/13/github_2202226216/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CVE-2025-4009 PoC&#x2F;EXP</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-4009</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> CVE-2025-4009的PoC&#x2F;EXP</p><p><strong>来源：</strong> <a href="https://github.com/realcodeb0ss/CVE-2025-4009">https://github.com/realcodeb0ss/CVE-2025-4009</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2025-4009-EverTZ.zip</li><li>CVE-2025-4009.py</li><li>README.md</li><li>pytransform</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-4009"><a href="#CVE-2025-4009" class="headerlink" title="CVE-2025-4009"></a>CVE-2025-4009</h2><p>CVE-2025-4009 PoC&#x2F;EXP</p><p><img src="https://github.com/user-attachments/assets/d1cf4a58-a9c2-4915-b37d-f1576c711e83" alt="IMG_8883"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CVE-2025:github search</tag>
+      
+      <tag>其他</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Pulse Connect Secure Authentication Bypass Vulnerability</title>
+    <link href="/2025/06/13/github_495590215/"/>
+    <url>/2025/06/13/github_495590215/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Pulse Connect Secure Authentication Bypass Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2021-22893</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Pulse Connect Secure 9.0R3&#x2F;9.1R1及更高版本中存在认证绕过漏洞，该漏洞由Windows文件共享浏览器和Pulse Secure协作功能中的漏洞引起，允许未经认证的攻击者执行远程任意代码，利用此漏洞需要访问易受攻击的功能。</p><p><strong>产品厂商：</strong> Pulse Secure</p><p><strong>产品名称：</strong> Pulse Connect Secure</p><p><strong>影响版本：</strong> 9.0R3&#x2F;9.1R1 and higher</p><p><strong>搜索语法：</strong> http.title:”ivanti connect secure”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12129">https://github.com/projectdiscovery/nuclei-templates/issues/12129</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Pulse Connect Secure 9.0R3&#x2F;9.1R1 and higher contains an authentication bypass caused by vulnerabilities in Windows File Share Browser and Pulse Secure Collaboration features, letting unauthenticated attackers perform remote arbitrary code execution, exploit requires access to vulnerable features.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://github.com/orangmuda/CVE-2021-22893">https://github.com/orangmuda/CVE-2021-22893</a></li><li><a href="https://github.com/MRLEE123456/CVE-2021-22893">https://github.com/MRLEE123456/CVE-2021-22893</a></li><li><a href="https://github.com/ZephrFish/CVE-2021-22893_HoneyPoC2">https://github.com/ZephrFish/CVE-2021-22893_HoneyPoC2</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-http-title-ivanti-connect-secure"><a href="#Shodan-Query-http-title-ivanti-connect-secure" class="headerlink" title="Shodan Query: http.title:&quot;ivanti connect secure&quot;"></a>Shodan Query: <code>http.title:&quot;ivanti connect secure&quot;</code></h4>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>projectdiscovery/nuclei-templates:github issues</tag>
+      
+      <tag>权限绕过</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Joplin 3.3.3 Server - Privilege Escalation</title>
     <link href="/2025/06/13/github_549141038/"/>
     <url>/2025/06/13/github_549141038/</url>
@@ -116,7 +170,7 @@
     <link href="/2025/06/13/github_354932383/"/>
     <url>/2025/06/13/github_354932383/</url>
     
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Timetrax V1 (2025) 远程代码执行和权限提升漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-46157</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> 在Timetrax V1 (2025)中发现了一个严重漏洞，允许认证用户绕过文件上传限制并实现远程代码执行(RCE)。问题存在于考勤模块的请假请求表单中，服务器端验证薄弱，允许通过修改请求上传恶意的.asp web shell。进一步的利用允许通过滥用SeImpersonatePrivilege使用EfsPotato技术提升权限至SYSTEM。</p><p><strong>产品厂商：</strong> Timetrax</p><p><strong>产品名称：</strong> Timetrax V1</p><p><strong>影响版本：</strong> 2025</p><p><strong>来源：</strong> <a href="https://github.com/morphine009/CVE-2025-46157">https://github.com/morphine009/CVE-2025-46157</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-46157"><a href="#CVE-2025-46157" class="headerlink" title="CVE-2025-46157"></a>CVE-2025-46157</h2><h2 id="CVE-2025-46157-–-Timetrax-V1-2025-Remote-Code-Execution-and-Privilege-Escalation"><a href="#CVE-2025-46157-–-Timetrax-V1-2025-Remote-Code-Execution-and-Privilege-Escalation" class="headerlink" title="CVE-2025-46157 – Timetrax V1 (2025) Remote Code Execution and Privilege Escalation"></a>CVE-2025-46157 – Timetrax V1 (2025) Remote Code Execution and Privilege Escalation</h2><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>A critical vulnerability was discovered in <strong>Timetrax V1 (2025)</strong> that allows authenticated users to bypass file upload restrictions and achieve <strong>remote code execution (RCE)</strong>. The issue exists in the <strong>Leave Request form of the Attendance module</strong>, where weak server-side validation permits the upload of malicious <code>.asp</code> web shells via modified requests.</p><p>Further exploitation allows <strong>privilege escalation to SYSTEM</strong> using the <strong>EfsPotato</strong> technique by abusing the <code>SeImpersonatePrivilege</code>.</p><hr><h3 id="Vulnerability-Details"><a href="#Vulnerability-Details" class="headerlink" title="Vulnerability Details"></a>Vulnerability Details</h3><h4 id="✅-Remote-Code-Execution-RCE"><a href="#✅-Remote-Code-Execution-RCE" class="headerlink" title="✅ Remote Code Execution (RCE)"></a>✅ Remote Code Execution (RCE)</h4><ul><li><strong>Component:</strong> Leave Request form in Attendance module</li><li><strong>Cause:</strong> Insecure server-side file validation</li><li><strong>Attack Vector:</strong> Modify upload request to change <code>.txt</code> to <code>.asp</code></li><li><strong>Impact:</strong> Full command execution on the server</li></ul><h4 id="✅-Privilege-Escalation"><a href="#✅-Privilege-Escalation" class="headerlink" title="✅ Privilege Escalation"></a>✅ Privilege Escalation</h4><ul><li><strong>Technique:</strong> EfsPotato</li><li><strong>Privilege Misuse:</strong> <code>SeImpersonatePrivilege</code></li><li><strong>Result:</strong> SYSTEM-level access</li><li><strong>AV Evasion:</strong> Achieved using obfuscated payloads</li></ul><hr><h3 id="CVSS-v3-1-Score"><a href="#CVSS-v3-1-Score" class="headerlink" title="CVSS v3.1 Score"></a>CVSS v3.1 Score</h3><p><strong>Base Score:</strong> 9.9 (Critical)<br><strong>Vector String:</strong> <code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></p><hr><h3 id="Proof-of-Concept-PoC"><a href="#Proof-of-Concept-PoC" class="headerlink" title="Proof of Concept (PoC)"></a>Proof of Concept (PoC)</h3><h4 id="1-Remote-Code-Execution"><a href="#1-Remote-Code-Execution" class="headerlink" title="1. Remote Code Execution"></a>1. Remote Code Execution</h4><ol><li>Login to Timetrax with valid user credentials.</li><li>Go to the <strong>Leave Request form</strong> under the Attendance module.</li><li>Upload a <code>.txt</code> file, intercept the HTTP request using Burp Suite.</li><li>Modify the file extension in the request from <code>.txt</code> to <code>.asp</code>.</li><li>Forward the request. The server will return a URL to the uploaded file.</li><li>Visit the URL to trigger the malicious web shell.</li></ol><h4 id="2-Privilege-Escalation"><a href="#2-Privilege-Escalation" class="headerlink" title="2. Privilege Escalation"></a>2. Privilege Escalation</h4><ul><li>Use the <a href="https://github.com/zcgonvh/EfsPotato">EfsPotato</a> exploit to abuse <code>SeImpersonatePrivilege</code>.</li><li>Obfuscate the binary or payload to bypass AV detection.</li><li>Gain SYSTEM-level shell and create a new Administrator account as proof.</li></ul><hr><h3 id="Affected-Version"><a href="#Affected-Version" class="headerlink" title="Affected Version"></a>Affected Version</h3><ul><li><strong>Timetrax V1 (2025)</strong></li></ul><hr><h3 id="Mitigation"><a href="#Mitigation" class="headerlink" title="Mitigation"></a>Mitigation</h3><ul><li>Enforce strong password policies and enable MFA</li><li>Properly validate and sanitize uploaded files on the server</li><li>Restrict <code>SeImpersonatePrivilege</code> to required accounts only</li><li>Apply OS patches to mitigate EfsPotato</li><li>Disable EFS if not required</li></ul><hr><h3 id="Disclosure"><a href="#Disclosure" class="headerlink" title="Disclosure"></a>Disclosure</h3><ul><li><strong>Discovered by:</strong> Noman Azam  </li><li><strong>Email:</strong> <a href="mailto:&#x6e;&#x6f;&#109;&#97;&#110;&#x40;&#x74;&#x65;&#x63;&#x68;&#x6e;&#111;&#x62;&#x69;&#122;&#46;&#x63;&#111;&#109;&#46;&#x70;&#107;">noman@technobiz.com.pk</a>  </li><li><strong>CVE ID:</strong> CVE-2025-46157 (Reserved)</li></ul><hr><h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ul><li><a href="https://github.com/zcgonvh/EfsPotato">EfsPotato Exploit</a></li></ul><hr><blockquote><p>This repository is part of responsible disclosure and educational purposes only. Always follow ethical guidelines and coordinated disclosure policies.</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Timetrax V1 (2025) 远程代码执行和权限提升漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-46157</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> 在Timetrax V1 (2025)中发现了一个严重漏洞，允许认证用户绕过文件上传限制并实现远程代码执行(RCE)。问题存在于考勤模块的请假请求表单中，服务器端验证薄弱，允许通过修改请求上传恶意的.asp web shell。进一步的利用允许通过滥用SeImpersonatePrivilege使用EfsPotato技术提升权限至SYSTEM。</p><p><strong>产品厂商：</strong> Timetrax</p><p><strong>产品名称：</strong> Timetrax V1</p><p><strong>影响版本：</strong> 2025</p><p><strong>来源：</strong> <a href="https://github.com/morphine009/CVE-2025-46157">https://github.com/morphine009/CVE-2025-46157</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-46157"><a href="#CVE-2025-46157" class="headerlink" title="CVE-2025-46157"></a>CVE-2025-46157</h2><h2 id="CVE-2025-46157-–-Timetrax-V1-2025-Remote-Code-Execution-and-Privilege-Escalation"><a href="#CVE-2025-46157-–-Timetrax-V1-2025-Remote-Code-Execution-and-Privilege-Escalation" class="headerlink" title="CVE-2025-46157 – Timetrax V1 (2025) Remote Code Execution and Privilege Escalation"></a>CVE-2025-46157 – Timetrax V1 (2025) Remote Code Execution and Privilege Escalation</h2><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>A critical vulnerability was discovered in <strong>Timetrax V1 (2025)</strong> that allows authenticated users to bypass file upload restrictions and achieve <strong>remote code execution (RCE)</strong>. The issue exists in the <strong>Leave Request form of the Attendance module</strong>, where weak server-side validation permits the upload of malicious <code>.asp</code> web shells via modified requests.</p><p>Further exploitation allows <strong>privilege escalation to SYSTEM</strong> using the <strong>EfsPotato</strong> technique by abusing the <code>SeImpersonatePrivilege</code>.</p><hr><h3 id="Vulnerability-Details"><a href="#Vulnerability-Details" class="headerlink" title="Vulnerability Details"></a>Vulnerability Details</h3><h4 id="✅-Remote-Code-Execution-RCE"><a href="#✅-Remote-Code-Execution-RCE" class="headerlink" title="✅ Remote Code Execution (RCE)"></a>✅ Remote Code Execution (RCE)</h4><ul><li><strong>Component:</strong> Leave Request form in Attendance module</li><li><strong>Cause:</strong> Insecure server-side file validation</li><li><strong>Attack Vector:</strong> Modify upload request to change <code>.txt</code> to <code>.asp</code></li><li><strong>Impact:</strong> Full command execution on the server</li></ul><h4 id="✅-Privilege-Escalation"><a href="#✅-Privilege-Escalation" class="headerlink" title="✅ Privilege Escalation"></a>✅ Privilege Escalation</h4><ul><li><strong>Technique:</strong> EfsPotato</li><li><strong>Privilege Misuse:</strong> <code>SeImpersonatePrivilege</code></li><li><strong>Result:</strong> SYSTEM-level access</li><li><strong>AV Evasion:</strong> Achieved using obfuscated payloads</li></ul><hr><h3 id="CVSS-v3-1-Score"><a href="#CVSS-v3-1-Score" class="headerlink" title="CVSS v3.1 Score"></a>CVSS v3.1 Score</h3><p><strong>Base Score:</strong> 9.9 (Critical)<br><strong>Vector String:</strong> <code>CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H</code></p><hr><h3 id="Proof-of-Concept-PoC"><a href="#Proof-of-Concept-PoC" class="headerlink" title="Proof of Concept (PoC)"></a>Proof of Concept (PoC)</h3><h4 id="1-Remote-Code-Execution"><a href="#1-Remote-Code-Execution" class="headerlink" title="1. Remote Code Execution"></a>1. Remote Code Execution</h4><ol><li>Login to Timetrax with valid user credentials.</li><li>Go to the <strong>Leave Request form</strong> under the Attendance module.</li><li>Upload a <code>.txt</code> file, intercept the HTTP request using Burp Suite.</li><li>Modify the file extension in the request from <code>.txt</code> to <code>.asp</code>.</li><li>Forward the request. The server will return a URL to the uploaded file.</li><li>Visit the URL to trigger the malicious web shell.</li></ol><h4 id="2-Privilege-Escalation"><a href="#2-Privilege-Escalation" class="headerlink" title="2. Privilege Escalation"></a>2. Privilege Escalation</h4><ul><li>Use the <a href="https://github.com/zcgonvh/EfsPotato">EfsPotato</a> exploit to abuse <code>SeImpersonatePrivilege</code>.</li><li>Obfuscate the binary or payload to bypass AV detection.</li><li>Gain SYSTEM-level shell and create a new Administrator account as proof.</li></ul><hr><h3 id="Affected-Version"><a href="#Affected-Version" class="headerlink" title="Affected Version"></a>Affected Version</h3><ul><li><strong>Timetrax V1 (2025)</strong></li></ul><hr><h3 id="Mitigation"><a href="#Mitigation" class="headerlink" title="Mitigation"></a>Mitigation</h3><ul><li>Enforce strong password policies and enable MFA</li><li>Properly validate and sanitize uploaded files on the server</li><li>Restrict <code>SeImpersonatePrivilege</code> to required accounts only</li><li>Apply OS patches to mitigate EfsPotato</li><li>Disable EFS if not required</li></ul><hr><h3 id="Disclosure"><a href="#Disclosure" class="headerlink" title="Disclosure"></a>Disclosure</h3><ul><li><strong>Discovered by:</strong> Noman Azam  </li><li><strong>Email:</strong> <a href="mailto:&#110;&#111;&#109;&#x61;&#110;&#64;&#x74;&#101;&#x63;&#x68;&#110;&#x6f;&#98;&#105;&#x7a;&#46;&#x63;&#x6f;&#109;&#46;&#x70;&#x6b;">noman@technobiz.com.pk</a>  </li><li><strong>CVE ID:</strong> CVE-2025-46157 (Reserved)</li></ul><hr><h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ul><li><a href="https://github.com/zcgonvh/EfsPotato">EfsPotato Exploit</a></li></ul><hr><blockquote><p>This repository is part of responsible disclosure and educational purposes only. Always follow ethical guidelines and coordinated disclosure policies.</p></blockquote>]]></content>
     
     
     <categories>
@@ -826,9 +880,9 @@
     
     <tags>
       
-      <tag>CVE-2024:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2024:github search</tag>
       
     </tags>
     
@@ -14519,9 +14573,9 @@
     
     <tags>
       
-      <tag>CVE-2024:github search</tag>
-      
       <tag>其他</tag>
+      
+      <tag>CVE-2024:github search</tag>
       
     </tags>
     
