@@ -19,23 +19,23 @@
   <meta name="author" content="lianccc">
   <meta name="keywords" content="">
   
-    <meta name="description" content="公众号： 军哥网络安全读报 链接： https:&#x2F;&#x2F;mp.weixin.qq.com&#x2F;s&#x2F;3qO0gEEUr9ievUj596flOw">
+    <meta name="description" content="漏洞信息漏洞名称： Kubernetes Exposing Host’s Docker Socket 漏洞类型： 权限提升 漏洞等级： 高危 漏洞描述： 通过卷将主机的Docker套接字暴露给容器。此套接字的所有者是root。授予某人访问权限相当于授予对主机的无限制root访问权限。 产品厂商： Kubernetes 产品名称： Kubernetes 来源： https:&#x2F;&#x2F;github.com&#x2F;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="GitLab 多个漏洞可导致攻击者完全接管账户">
-<meta property="og:url" content="http://example.com/2025/06/13/weixin_2047073814/index.html">
+<meta property="og:title" content="Kubernetes Exposing Host&#39;s Docker Socket">
+<meta property="og:url" content="http://example.com/2025/06/13/github_2787999378/index.html">
 <meta property="og:site_name" content="liancc&#39; infos blog">
-<meta property="og:description" content="公众号： 军哥网络安全读报 链接： https:&#x2F;&#x2F;mp.weixin.qq.com&#x2F;s&#x2F;3qO0gEEUr9ievUj596flOw">
+<meta property="og:description" content="漏洞信息漏洞名称： Kubernetes Exposing Host’s Docker Socket 漏洞类型： 权限提升 漏洞等级： 高危 漏洞描述： 通过卷将主机的Docker套接字暴露给容器。此套接字的所有者是root。授予某人访问权限相当于授予对主机的无限制root访问权限。 产品厂商： Kubernetes 产品名称： Kubernetes 来源： https:&#x2F;&#x2F;github.com&#x2F;">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-06-13T01:33:15.575Z">
-<meta property="article:modified_time" content="2025-06-13T01:33:15.573Z">
+<meta property="article:published_time" content="2025-06-13T02:15:27.438Z">
+<meta property="article:modified_time" content="2025-06-13T02:15:27.432Z">
 <meta property="article:author" content="lianccc">
-<meta property="article:tag" content="mp.weixin.qq.com">
-<meta property="article:tag" content="军哥网络安全读报">
+<meta property="article:tag" content="projectdiscovery&#x2F;nuclei-templates:github issues">
+<meta property="article:tag" content="权限提升">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>GitLab 多个漏洞可导致攻击者完全接管账户 - liancc&#39; infos blog</title>
+  <title>Kubernetes Exposing Host&#39;s Docker Socket - liancc&#39; infos blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -202,7 +202,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="GitLab 多个漏洞可导致攻击者完全接管账户"></span>
+            <span id="subtitle" data-typed-text="Kubernetes Exposing Host&#39;s Docker Socket"></span>
           
         </div>
 
@@ -213,7 +213,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-06-13 01:33" pubdate>
+        <time datetime="2025-06-13 02:15" pubdate>
           2025年6月13日 凌晨
         </time>
       </span>
@@ -225,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          20 字
+          330 字
         
       </span>
     
@@ -236,7 +236,7 @@
         
         
         
-          1 分钟
+          3 分钟
         
       </span>
     
@@ -273,13 +273,21 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">GitLab 多个漏洞可导致攻击者完全接管账户</h1>
+            <h1 id="seo-header">Kubernetes Exposing Host&#39;s Docker Socket</h1>
             
             
               <div class="markdown-body">
                 
-                <p><strong>公众号：</strong> 军哥网络安全读报</p>
-<p><strong>链接：</strong> <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/3qO0gEEUr9ievUj596flOw">https://mp.weixin.qq.com/s/3qO0gEEUr9ievUj596flOw</a></p>
+                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Kubernetes Exposing Host’s Docker Socket</p>
+<p><strong>漏洞类型：</strong> 权限提升</p>
+<p><strong>漏洞等级：</strong> 高危</p>
+<p><strong>漏洞描述：</strong> 通过卷将主机的Docker套接字暴露给容器。此套接字的所有者是root。授予某人访问权限相当于授予对主机的无限制root访问权限。</p>
+<p><strong>产品厂商：</strong> Kubernetes</p>
+<p><strong>产品名称：</strong> Kubernetes</p>
+<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei-templates/blob/c873ea6b2aa6d07a99ef7854663a39965982eebd/cloud%2Fkubernetes%2Fkubernetes-exposing-docker-socket-hostpath.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/c873ea6b2aa6d07a99ef7854663a39965982eebd/cloud%2Fkubernetes%2Fkubernetes-exposing-docker-socket-hostpath.yaml</a></p>
+<p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p>
+<h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> kubernetes-exposing-docker-socket-hostpath<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Kubernetes Exposing Host&#x27;s Docker Socket<br>  <span class="hljs-params">author:</span> dwisiswant0<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> Exposing host&#x27;s Docker socket to containers via a volume.<br>  <span class="hljs-params">impact:</span> |<br>    The owner of this socket is root. Giving someone access to it is equivalent<br>    to giving unrestricted root access to your host.<br>  <span class="hljs-params">remediation:</span> Remove &#x27;docker.sock&#x27; from hostpath to prevent this.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>kubernetes.io<span class="hljs-operator">/</span>docs<span class="hljs-operator">/</span>concepts<span class="hljs-operator">/</span>storage<span class="hljs-operator">/</span>volumes<span class="hljs-operator">/</span><span class="hljs-comment">#hostpath</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>kubernetes.io<span class="hljs-operator">/</span>docs<span class="hljs-operator">/</span>concepts<span class="hljs-operator">/</span>policy<span class="hljs-operator">/</span>pod-security-policy<span class="hljs-operator">/</span><span class="hljs-comment">#volumes-and-file-systems</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>kubernetes.io<span class="hljs-operator">/</span>docs<span class="hljs-operator">/</span>tasks<span class="hljs-operator">/</span>configure-pod-container<span class="hljs-operator">/</span>security-context<span class="hljs-symbol">/</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>cheatsheetseries.owasp.org<span class="hljs-operator">/</span>cheatsheets<span class="hljs-operator">/</span>Docker_Security_Cheat_Sheet.html<span class="hljs-comment">#rule-1-do-not-expose-the-docker-daemon-socket-even-to-the-containers</span><br>  <span class="hljs-params">tags:</span> cloud,devops,kubernetes,k8s<br><br><span class="hljs-params">flow:</span> |<br>  code(<span class="hljs-number">1</span>);<br>  for (<span class="hljs-keyword">let</span> pod of template.items) &#123;<br>    <span class="hljs-attr">pod</span> <span class="hljs-operator">=</span> JSON.parse(pod);<br>    <span class="hljs-keyword">if</span> (<span class="hljs-operator">!</span>pod.spec.hasOwnProperty(&#x27;volumes&#x27;)) continue;<br>    for (const volume of pod.spec.volumes) &#123;<br>      <span class="hljs-keyword">if</span> (volume.hasOwnProperty(&#x27;hostPath&#x27;)) &#123;<br>        <span class="hljs-keyword">if</span> (<span class="hljs-operator">!</span>volume.hostPath.hasOwnProperty(&#x27;path&#x27;)) continue;<br>        const path <span class="hljs-operator">=</span> volume.hostPath.path;<br>        <span class="hljs-keyword">if</span> (path <span class="hljs-operator">&amp;&amp;</span> path <span class="hljs-operator">!=</span><span class="hljs-operator">=</span> &#x27;<span class="hljs-operator">/</span>var<span class="hljs-operator">/</span>run<span class="hljs-operator">/</span>docker.sock&#x27;) continue<br>      &#125;<br>      set(&#x27;volume&#x27;, JSON.stringify(volume));<br>      set(&#x27;pod&#x27;, pod.metadata.name);<br>      set(&#x27;namespace&#x27;, pod.metadata.namespace);<br>      code(<span class="hljs-number">2</span>)<br>    &#125;<br>  &#125;<br><br><span class="hljs-params">self-contained:</span> <span class="hljs-literal">true</span><br><span class="hljs-params">code:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">engine:</span><br>      <span class="hljs-operator">-</span> sh<br>      <span class="hljs-operator">-</span> bash<br>    <span class="hljs-params">source:</span> kubectl get pods <span class="hljs-operator">-</span>-all-namespaces <span class="hljs-operator">-</span>-output<span class="hljs-operator">=</span>json<br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> json<br>        <span class="hljs-params">name:</span> items<br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">json:</span><br>          <span class="hljs-operator">-</span> &#x27;.items[]&#x27;<br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">engine:</span><br>      <span class="hljs-operator">-</span> sh<br>      <span class="hljs-operator">-</span> bash<br>    <span class="hljs-params">source:</span> echo <span class="hljs-operator">-</span>e &#x27;$volume&#x27;<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;/var/run/docker.sock&quot;</span><br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;Exposed Docker socket via a volume in the &quot;</span> <span class="hljs-operator">+</span> pod <span class="hljs-operator">+</span> <span class="hljs-string">&quot; pod of &quot;</span> <span class="hljs-operator">+</span> namespace <span class="hljs-operator">+</span> <span class="hljs-string">&quot; namespace&quot;</span>&#x27;<br><span class="hljs-comment"># digest: 490a004630440220118723a85165514f59da64d85df3822f05a47ab5fc3e1e2a01ea0d06cb8d58110220147f70004616c4ee4b84fc2137e253c00a1908207be5e1cfb70b86cb586e0ba3:9e2dfd48464943e7ca3816f5f86e5507</span><br><br></code></pre></td></tr></table></figure>
+
 
                 
               </div>
@@ -298,7 +306,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/" class="category-chain-item">微信公众号</a>
+  <a href="/categories/Github-Poc/" class="category-chain-item">Github Poc</a>
   
   
 
@@ -313,9 +321,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/mp-weixin-qq-com/" class="print-no-link">#mp.weixin.qq.com</a>
+        <a href="/tags/projectdiscovery-nuclei-templates-github-issues/" class="print-no-link">#projectdiscovery/nuclei-templates:github issues</a>
       
-        <a href="/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/" class="print-no-link">#军哥网络安全读报</a>
+        <a href="/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/" class="print-no-link">#权限提升</a>
       
     </div>
   
@@ -327,8 +335,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>GitLab 多个漏洞可导致攻击者完全接管账户</div>
-      <div>http://example.com/2025/06/13/weixin_2047073814/</div>
+      <div>Kubernetes Exposing Host&#39;s Docker Socket</div>
+      <div>http://example.com/2025/06/13/github_2787999378/</div>
     </div>
     <div class="license-meta">
       
@@ -372,18 +380,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/13/github_4181782913/" title="Nagios Log Server 存储型跨站脚本漏洞（权限提升至管理员）">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Nagios Log Server 存储型跨站脚本漏洞（权限提升至管理员）</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/13/weixin_2112064326/" title="“SmartAttack”攻击：利用智能手表窃取隔离网络数据">
-                        <span class="hidden-mobile">“SmartAttack”攻击：利用智能手表窃取隔离网络数据</span>
+                      <a href="/2025/06/13/github_4181782913/" title="Nagios Log Server 存储型跨站脚本漏洞（权限提升至管理员）">
+                        <span class="hidden-mobile">Nagios Log Server 存储型跨站脚本漏洞（权限提升至管理员）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

