@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-13T09:45:34.831Z</updated>
+  <updated>2025-06-13T10:00:05.397Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Path traversal vulnerability exists in RICOH Streamline NX V3 PC Client versions 350 to 32420</title>
+    <link href="http://example.com/2025/06/13/github_2100722032/"/>
+    <id>http://example.com/2025/06/13/github_2100722032/</id>
+    <published>2025-06-13T10:00:05.400Z</published>
+    <updated>2025-06-13T10:00:05.397Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-925q-2ff6-6j9x">https://github.com/advisories/GHSA-925q-2ff6-6j9x</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-46783">https://nvd.nist.gov/vuln/detail/CVE-2025-46783</a></p></li><li><p><a href="https://jvn.jp/en/jp/JVN27937557">https://jvn.jp/en/jp/JVN27937557</a></p></li><li><p><a href="https://www.ricoh.com/products/security/vulnerabilities/vul?id=ricoh-2025-000005">https://www.ricoh.com/products/security/vulnerabilities/vul?id=ricoh-2025-000005</a></p></li><li><p><a href="https://github.com/advisories/GHSA-925q-2ff6-6j9x">https://github.com/advisories/GHSA-925q-2ff6-6j9x</a></p></li></ul><p><strong>描述：</strong></p><p>Path traversal vulnerability exists in RICOH Streamline NX V3 PC Client versions 3.5.0 to 3.242.0. If this vulnerability is exploited, arbitrary code may be executed on the PC where the product is running by tampering with specific files used on the product.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-925q-2ff6-6j9x&quot;&gt;https://github.com/advisories/GHSA-925q-2ff6-6j9x&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>Rocket LMS 默认登录凭证漏洞</title>
@@ -519,33 +543,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="缓冲区溢出" scheme="http://example.com/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>B-LINK AC1900 V102 命令执行漏洞</title>
-    <link href="http://example.com/2025/06/13/weixin_482381960/"/>
-    <id>http://example.com/2025/06/13/weixin_482381960/</id>
-    <published>2025-06-13T02:25:47.609Z</published>
-    <updated>2025-06-13T02:25:47.606Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> Nday Poc</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/7lDV1YDhengIH3TBCW54Ug">https://mp.weixin.qq.com/s/7lDV1YDhengIH3TBCW54Ug</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; Nday Poc&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/7lDV1YDhengIH3TBCW54Ug&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="Nday Poc" scheme="http://example.com/tags/Nday-Poc/"/>
     
   </entry>
   

@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>Path traversal vulnerability exists in RICOH Streamline NX V3 PC Client versions 350 to 32420</title>
+    <link href="/2025/06/13/github_2100722032/"/>
+    <url>/2025/06/13/github_2100722032/</url>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-925q-2ff6-6j9x">https://github.com/advisories/GHSA-925q-2ff6-6j9x</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-46783">https://nvd.nist.gov/vuln/detail/CVE-2025-46783</a></p></li><li><p><a href="https://jvn.jp/en/jp/JVN27937557">https://jvn.jp/en/jp/JVN27937557</a></p></li><li><p><a href="https://www.ricoh.com/products/security/vulnerabilities/vul?id=ricoh-2025-000005">https://www.ricoh.com/products/security/vulnerabilities/vul?id=ricoh-2025-000005</a></p></li><li><p><a href="https://github.com/advisories/GHSA-925q-2ff6-6j9x">https://github.com/advisories/GHSA-925q-2ff6-6j9x</a></p></li></ul><p><strong>描述：</strong></p><p>Path traversal vulnerability exists in RICOH Streamline NX V3 PC Client versions 3.5.0 to 3.242.0. If this vulnerability is exploited, arbitrary code may be executed on the PC where the product is running by tampering with specific files used on the product.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>安全公告</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Github Advisory</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Rocket LMS 默认登录凭证漏洞</title>
     <link href="/2025/06/13/github_915934160/"/>
     <url>/2025/06/13/github_915934160/</url>
