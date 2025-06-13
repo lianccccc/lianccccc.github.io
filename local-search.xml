@@ -4,6 +4,60 @@
   
   
   <entry>
+    <title>【高危漏洞预警】GeoServer未授权服务器端请求伪造(SSRF)漏洞</title>
+    <link href="/2025/06/13/weixin_2077666847/"/>
+    <url>/2025/06/13/weixin_2077666847/</url>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 飓风网络安全</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/SEOVxtD07cA92EgqxozJkw">https://mp.weixin.qq.com/s/SEOVxtD07cA92EgqxozJkw</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信公众号</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>mp.weixin.qq.com</tag>
+      
+      <tag>飓风网络安全</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Grafan存在url重定向&amp;服务端请求伪造漏洞CVE-2025-4123 附POC</title>
+    <link href="/2025/06/13/weixin_2753781346/"/>
+    <url>/2025/06/13/weixin_2753781346/</url>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 南风漏洞复现文库</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/5C8S4LRYL2KGJOjyl1iTOA">https://mp.weixin.qq.com/s/5C8S4LRYL2KGJOjyl1iTOA</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信公众号</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>mp.weixin.qq.com</tag>
+      
+      <tag>南风漏洞复现文库</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>UEditor PHP 任意文件上传漏洞</title>
     <link href="/2025/06/13/github_2053973950/"/>
     <url>/2025/06/13/github_2053973950/</url>
