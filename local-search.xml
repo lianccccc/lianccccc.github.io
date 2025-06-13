@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>Remote code execution that allows unauthorized users to execute arbitrary code on the server</title>
+    <link href="/2025/06/13/github_3964846209/"/>
+    <url>/2025/06/13/github_3964846209/</url>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-6q74-w498-7fc2">https://github.com/advisories/GHSA-6q74-w498-7fc2</a></p><p><strong>CVSS 评分：</strong> 10.0</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-29902">https://nvd.nist.gov/vuln/detail/CVE-2025-29902</a></p></li><li><p><a href="https://psirt.bosch.com/security-advisories/BOSCH-SA-992447.html">https://psirt.bosch.com/security-advisories/BOSCH-SA-992447.html</a></p></li><li><p><a href="https://github.com/advisories/GHSA-6q74-w498-7fc2">https://github.com/advisories/GHSA-6q74-w498-7fc2</a></p></li></ul><p><strong>描述：</strong></p><p>Remote code execution that allows unauthorized users to execute arbitrary code on the server machine.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>安全公告</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Github Advisory</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Tatsu Wordpress Plugin 远程代码执行漏洞</title>
     <link href="/2025/06/13/github_3285413858/"/>
     <url>/2025/06/13/github_3285413858/</url>
