@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-14T08:15:12.710Z</updated>
+  <updated>2025-06-14T08:30:13.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Microsoft SharePoint 远程代码执行漏洞</title>
+    <link href="http://example.com/2025/06/14/github_1571427780/"/>
+    <id>http://example.com/2025/06/14/github_1571427780/</id>
+    <published>2025-06-14T08:30:13.004Z</published>
+    <updated>2025-06-14T08:30:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Microsoft SharePoint 远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2019-0604</li></ul><p><strong>漏洞类型：</strong> 远程代码执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Microsoft SharePoint 存在一个远程代码执行漏洞，原因是未能检查应用程序包的源标记，允许远程攻击者通过发送恶意的应用程序包执行任意代码。</p><p><strong>产品厂商：</strong> Microsoft</p><p><strong>产品名称：</strong> SharePoint</p><p><strong>搜索语法：</strong> cpe:”cpe:2.3:a:microsoft:sharepoint_server”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12340">https://github.com/projectdiscovery/nuclei-templates/issues/12340</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Microsoft SharePoint contains a remote code execution caused by failure to check the source markup of an application package, letting remote attackers execute arbitrary code, exploit requires sending malicious application package.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://github.com/davidlebr1/cve-2019-0604-SP2010-netv3.5">https://github.com/davidlebr1/cve-2019-0604-SP2010-netv3.5</a></li><li><a href="https://vulncheck.com/xdb/b321302986c1">https://vulncheck.com/xdb/b321302986c1</a></li><li><a href="https://github.com/Gh0st0ne/weaponized-0604">https://github.com/Gh0st0ne/weaponized-0604</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:Gh0st0ne&#x2F;weaponized-0604.git</li><li><a href="https://github.com/boxhg/CVE-2019-0604">https://github.com/boxhg/CVE-2019-0604</a></li><li><a href="https://github.com/m5050/CVE-2019-0604">https://github.com/m5050/CVE-2019-0604</a></li><li><a href="https://vulncheck.com/xdb/cca6def6980c">https://vulncheck.com/xdb/cca6def6980c</a></li><li><a href="https://github.com/k8gege/CVE-2019-0604">https://github.com/k8gege/CVE-2019-0604</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:k8gege&#x2F;CVE-2019-0604.git</li><li><a href="https://github.com/likekabin/CVE-2019-0604_sharepoint_CVE">https://github.com/likekabin/CVE-2019-0604_sharepoint_CVE</a></li><li><a href="https://github.com/linhlhq/CVE-2019-0604">https://github.com/linhlhq/CVE-2019-0604</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-cpe-cpe-2-3-a-microsoft-sharepoint-server"><a href="#Shodan-Query-cpe-cpe-2-3-a-microsoft-sharepoint-server" class="headerlink" title="Shodan Query: cpe:&quot;cpe:2.3:a:microsoft:sharepoint_server&quot;"></a>Shodan Query: <code>cpe:&quot;cpe:2.3:a:microsoft:sharepoint_server&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Microsoft SharePoint 远程代码执行漏洞&lt;/p&gt;
+&lt;p&gt;&lt;s</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="远程代码执行" scheme="http://example.com/tags/%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C/"/>
+    
+  </entry>
   
   <entry>
     <title>CVE-2024-50379</title>
@@ -338,33 +365,6 @@
   </entry>
   
   <entry>
-    <title>Microsoft SharePoint 远程代码执行漏洞</title>
-    <link href="http://example.com/2025/06/14/github_1571427780/"/>
-    <id>http://example.com/2025/06/14/github_1571427780/</id>
-    <published>2025-06-14T02:30:13.170Z</published>
-    <updated>2025-06-14T02:30:13.167Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Microsoft SharePoint 远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2019-0604</li></ul><p><strong>漏洞类型：</strong> 远程代码执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Microsoft SharePoint 存在一个远程代码执行漏洞，原因是未能检查应用程序包的源标记，允许远程攻击者通过发送恶意的应用程序包执行任意代码。</p><p><strong>产品厂商：</strong> Microsoft</p><p><strong>产品名称：</strong> SharePoint</p><p><strong>搜索语法：</strong> cpe:”cpe:2.3:a:microsoft:sharepoint_server”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12340">https://github.com/projectdiscovery/nuclei-templates/issues/12340</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Microsoft SharePoint contains a remote code execution caused by failure to check the source markup of an application package, letting remote attackers execute arbitrary code, exploit requires sending malicious application package.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://github.com/davidlebr1/cve-2019-0604-SP2010-netv3.5">https://github.com/davidlebr1/cve-2019-0604-SP2010-netv3.5</a></li><li><a href="https://vulncheck.com/xdb/b321302986c1">https://vulncheck.com/xdb/b321302986c1</a></li><li><a href="https://github.com/Gh0st0ne/weaponized-0604">https://github.com/Gh0st0ne/weaponized-0604</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:Gh0st0ne&#x2F;weaponized-0604.git</li><li><a href="https://github.com/boxhg/CVE-2019-0604">https://github.com/boxhg/CVE-2019-0604</a></li><li><a href="https://github.com/m5050/CVE-2019-0604">https://github.com/m5050/CVE-2019-0604</a></li><li><a href="https://vulncheck.com/xdb/cca6def6980c">https://vulncheck.com/xdb/cca6def6980c</a></li><li><a href="https://github.com/k8gege/CVE-2019-0604">https://github.com/k8gege/CVE-2019-0604</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:k8gege&#x2F;CVE-2019-0604.git</li><li><a href="https://github.com/likekabin/CVE-2019-0604_sharepoint_CVE">https://github.com/likekabin/CVE-2019-0604_sharepoint_CVE</a></li><li><a href="https://github.com/linhlhq/CVE-2019-0604">https://github.com/linhlhq/CVE-2019-0604</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-cpe-cpe-2-3-a-microsoft-sharepoint-server"><a href="#Shodan-Query-cpe-cpe-2-3-a-microsoft-sharepoint-server" class="headerlink" title="Shodan Query: cpe:&quot;cpe:2.3:a:microsoft:sharepoint_server&quot;"></a>Shodan Query: <code>cpe:&quot;cpe:2.3:a:microsoft:sharepoint_server&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Microsoft SharePoint 远程代码执行漏洞&lt;/p&gt;
-&lt;p&gt;&lt;s</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="远程代码执行" scheme="http://example.com/tags/%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Chrome CVE-2025-5419 漏洞检查器</title>
     <link href="http://example.com/2025/06/14/github_535614405/"/>
     <id>http://example.com/2025/06/14/github_535614405/</id>
@@ -425,7 +425,7 @@
     <published>2025-06-13T22:30:05.638Z</published>
     <updated>2025-06-13T22:30:05.633Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-7f8r-222p-6f5g">https://github.com/advisories/GHSA-7f8r-222p-6f5g</a></p><p><strong>仓库 Star：</strong> 3997</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/modelcontextprotocol/inspector/security/advisories/GHSA-7f8r-222p-6f5g">https://github.com/modelcontextprotocol/inspector/security/advisories/GHSA-7f8r-222p-6f5g</a></p></li><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-49596">https://nvd.nist.gov/vuln/detail/CVE-2025-49596</a></p></li><li><p><a href="https://github.com/modelcontextprotocol/inspector/commit/50df0e1ec488f3983740b4d28d2a968f12eb8979">https://github.com/modelcontextprotocol/inspector/commit/50df0e1ec488f3983740b4d28d2a968f12eb8979</a></p></li><li><p><a href="https://github.com/advisories/GHSA-7f8r-222p-6f5g">https://github.com/advisories/GHSA-7f8r-222p-6f5g</a></p></li></ul><p><strong>描述：</strong></p><p>Versions of MCP Inspector below 0.14.1 are vulnerable to remote code execution due to lack of authentication between the Inspector client and proxy, allowing unauthenticated requests to launch MCP commands over stdio. Users should immediately upgrade to version 0.14.1 or later to address these vulnerabilities.</p><p>Credit: Rémy Marot <a href="mailto:&#98;&#117;&#103;&#x68;&#117;&#x6e;&#116;&#101;&#114;&#115;&#64;&#x74;&#101;&#110;&#x61;&#98;&#108;&#x65;&#46;&#x63;&#x6f;&#109;">bughunters@tenable.com</a></p>]]></content>
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-7f8r-222p-6f5g">https://github.com/advisories/GHSA-7f8r-222p-6f5g</a></p><p><strong>仓库 Star：</strong> 3997</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/modelcontextprotocol/inspector/security/advisories/GHSA-7f8r-222p-6f5g">https://github.com/modelcontextprotocol/inspector/security/advisories/GHSA-7f8r-222p-6f5g</a></p></li><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-49596">https://nvd.nist.gov/vuln/detail/CVE-2025-49596</a></p></li><li><p><a href="https://github.com/modelcontextprotocol/inspector/commit/50df0e1ec488f3983740b4d28d2a968f12eb8979">https://github.com/modelcontextprotocol/inspector/commit/50df0e1ec488f3983740b4d28d2a968f12eb8979</a></p></li><li><p><a href="https://github.com/advisories/GHSA-7f8r-222p-6f5g">https://github.com/advisories/GHSA-7f8r-222p-6f5g</a></p></li></ul><p><strong>描述：</strong></p><p>Versions of MCP Inspector below 0.14.1 are vulnerable to remote code execution due to lack of authentication between the Inspector client and proxy, allowing unauthenticated requests to launch MCP commands over stdio. Users should immediately upgrade to version 0.14.1 or later to address these vulnerabilities.</p><p>Credit: Rémy Marot <a href="mailto:&#x62;&#117;&#x67;&#x68;&#x75;&#x6e;&#116;&#101;&#114;&#x73;&#64;&#x74;&#x65;&#110;&#x61;&#x62;&#x6c;&#x65;&#46;&#x63;&#111;&#109;">bughunters@tenable.com</a></p>]]></content>
     
     
       
