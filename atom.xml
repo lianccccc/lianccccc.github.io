@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-14T15:15:11.115Z</updated>
+  <updated>2025-06-14T15:30:15.591Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Cisco IOS Smart Install Buffer Overflow Vulnerability</title>
+    <link href="http://example.com/2025/06/14/github_1567481502/"/>
+    <id>http://example.com/2025/06/14/github_1567481502/</id>
+    <published>2025-06-14T15:30:15.591Z</published>
+    <updated>2025-06-14T15:30:15.591Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Cisco IOS Smart Install Buffer Overflow Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2018-0171</li></ul><p><strong>漏洞类型：</strong> 缓冲区溢出</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Cisco IOS和IOS XE软件中的Smart Install功能存在缓冲区溢出漏洞，由于对Smart Install数据包数据的不当验证，未经认证的远程攻击者可以通过发送特制的Smart Install消息（TCP端口4786）触发设备重启、执行任意代码或导致无限循环。</p><p><strong>产品厂商：</strong> Cisco</p><p><strong>产品名称：</strong> Cisco IOS and IOS XE Software</p><p><strong>搜索语法：</strong> cpe:”cpe:2.3:o:cisco:ios”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12325">https://github.com/projectdiscovery/nuclei-templates/issues/12325</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Cisco IOS and IOS XE Software contain a buffer overflow caused by improper validation of Smart Install packet data, letting unauthenticated remote attackers trigger device reload, execute arbitrary code, or cause indefinite loops, exploit requires sending crafted Smart Install message on TCP port 4786.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://vulncheck.com/xdb/6d4b443f23fc">https://vulncheck.com/xdb/6d4b443f23fc</a></li><li><a href="https://github.com/AlrikRr/Cisco-Smart-Exploit">https://github.com/AlrikRr/Cisco-Smart-Exploit</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:AlrikRr&#x2F;Cisco-Smart-Exploit.git</li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-cpe-cpe-2-3-o-cisco-ios"><a href="#Shodan-Query-cpe-cpe-2-3-o-cisco-ios" class="headerlink" title="Shodan Query: cpe:&quot;cpe:2.3:o:cisco:ios&quot;"></a>Shodan Query: <code>cpe:&quot;cpe:2.3:o:cisco:ios&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Cisco IOS Smart Install Buffer Overflow</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="缓冲区溢出" scheme="http://example.com/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>CVE-2025-33073 0-Day Exploit and PoC with Golang</title>
@@ -211,7 +237,7 @@
     <published>2025-06-14T13:45:14.495Z</published>
     <updated>2025-06-14T13:45:14.495Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apple Safari Web Content Sandbox Bypass Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-24201</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Apple Safari Web Content Sandbox Bypass Vulnerability是一个严重的权限绕过漏洞，允许攻击者通过越界写入绕过Safari的Web内容沙箱。该漏洞的CVE ID为CVE-2025-24201，影响程度为严重，CVSS评分为8.8。目前尚无官方补丁可用。</p><p><strong>产品厂商：</strong> Apple</p><p><strong>产品名称：</strong> Safari</p><p><strong>来源：</strong> <a href="https://github.com/AvonBorn/CVE-2025-24201-Exploit">https://github.com/AvonBorn/CVE-2025-24201-Exploit</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-24201-Exploit"><a href="#CVE-2025-24201-Exploit" class="headerlink" title="CVE-2025-24201-Exploit"></a>CVE-2025-24201-Exploit</h2><h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>Out-of-Bounds Write Vulnerability in Apple Safari Web Content Sandbox Bypass</p><h3 id="Exploit"><a href="#Exploit" class="headerlink" title="Exploit:"></a>Exploit:</h3><h4 id="Download-here"><a href="#Download-here" class="headerlink" title="Download here"></a><a href="https://tinyurl.com/mw54dudy">Download here</a></h4><h3 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h3><ul><li><strong>CVE ID</strong>: CVE-2025-24201  <img align="right" alt="Enderman" width="180" src="https://github.com/AvonBorn/Profile/blob/9ff2d6ec8dbc3a47a18a7e121330828838a9cf38/enderman.gif" /></li><li><strong>Published</strong>: 03&#x2F;11&#x2F;2025</li><li><strong>Impact</strong>: Critical</li><li><strong>Exploit Availability</strong>: Not public, only private.</li><li><strong>CVSS</strong>: 8.8</li><li><strong>Patch Available:  (No official patch yet)</strong></li></ul><h3 id="Contact"><a href="#Contact" class="headerlink" title="Contact"></a>Contact</h3><ul><li><strong>For inquiries, please contact:<a href="mailto:&#97;&#118;&#x6f;&#x6e;&#98;&#x61;&#x73;&#101;&#50;&#x31;&#51;&#x40;&#111;&#117;&#x74;&#x6c;&#x6f;&#x6f;&#107;&#x2e;&#x63;&#111;&#109;">avonbase213@outlook.com</a></strong></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apple Safari Web Content Sandbox Bypass Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-24201</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Apple Safari Web Content Sandbox Bypass Vulnerability是一个严重的权限绕过漏洞，允许攻击者通过越界写入绕过Safari的Web内容沙箱。该漏洞的CVE ID为CVE-2025-24201，影响程度为严重，CVSS评分为8.8。目前尚无官方补丁可用。</p><p><strong>产品厂商：</strong> Apple</p><p><strong>产品名称：</strong> Safari</p><p><strong>来源：</strong> <a href="https://github.com/AvonBorn/CVE-2025-24201-Exploit">https://github.com/AvonBorn/CVE-2025-24201-Exploit</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-24201-Exploit"><a href="#CVE-2025-24201-Exploit" class="headerlink" title="CVE-2025-24201-Exploit"></a>CVE-2025-24201-Exploit</h2><h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>Out-of-Bounds Write Vulnerability in Apple Safari Web Content Sandbox Bypass</p><h3 id="Exploit"><a href="#Exploit" class="headerlink" title="Exploit:"></a>Exploit:</h3><h4 id="Download-here"><a href="#Download-here" class="headerlink" title="Download here"></a><a href="https://tinyurl.com/mw54dudy">Download here</a></h4><h3 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h3><ul><li><strong>CVE ID</strong>: CVE-2025-24201  <img align="right" alt="Enderman" width="180" src="https://github.com/AvonBorn/Profile/blob/9ff2d6ec8dbc3a47a18a7e121330828838a9cf38/enderman.gif" /></li><li><strong>Published</strong>: 03&#x2F;11&#x2F;2025</li><li><strong>Impact</strong>: Critical</li><li><strong>Exploit Availability</strong>: Not public, only private.</li><li><strong>CVSS</strong>: 8.8</li><li><strong>Patch Available:  (No official patch yet)</strong></li></ul><h3 id="Contact"><a href="#Contact" class="headerlink" title="Contact"></a>Contact</h3><ul><li><strong>For inquiries, please contact:<a href="mailto:&#97;&#118;&#x6f;&#110;&#x62;&#x61;&#115;&#x65;&#x32;&#49;&#51;&#64;&#111;&#x75;&#x74;&#108;&#111;&#111;&#107;&#x2e;&#x63;&#x6f;&#109;">avonbase213@outlook.com</a></strong></li></ul>]]></content>
     
     
       
@@ -519,33 +545,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BigAnt DataBase 安装页面暴露</title>
-    <link href="http://example.com/2025/06/14/github_1662023151/"/>
-    <id>http://example.com/2025/06/14/github_1662023151/</id>
-    <published>2025-06-14T10:15:20.283Z</published>
-    <updated>2025-06-14T10:15:20.276Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> BigAnt DataBase 安装页面暴露</p><p><strong>漏洞类型：</strong> 配置问题</p><p><strong>漏洞等级：</strong> 低危</p><p><strong>漏洞描述：</strong> 由于配置不当，BigAnt DataBase的安装页面被暴露，可能导致未授权的访问。</p><p><strong>产品厂商：</strong> BigAnt</p><p><strong>产品名称：</strong> BigAnt DataBase</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/81613ff7aea85a77f74f52f06e9f13e4975bc10b/http%2Fmisconfiguration%2Finstaller%2Fbigant-db-install.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/81613ff7aea85a77f74f52f06e9f13e4975bc10b/http%2Fmisconfiguration%2Finstaller%2Fbigant-db-install.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> bigant-db-install<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Bigant DataBase Exposed Installation<br>  <span class="hljs-params">author:</span> pussycat0x<br>  <span class="hljs-params">severity:</span> info<br>  <span class="hljs-params">description:</span> |<br>    Bigant DataBase Installation page exposure due to misconfiguration.<br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-params">tags:</span> misconfig,install,bigant,database<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET install<span class="hljs-symbol">/update.html</span>  HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;BigAnt Database Upgrade Wizard1&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;//DB-MS&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&lt;title&gt;BigAntSetup&quot;</span><br>        <span class="hljs-params">condition:</span> and<br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; BigAnt DataBase 安装页面暴露&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="配置问题" scheme="http://example.com/tags/%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/"/>
     
   </entry>
   
