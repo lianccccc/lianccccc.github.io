@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-14T14:45:13.061Z</updated>
+  <updated>2025-06-14T15:15:11.115Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CVE-2025-33073 0-Day Exploit and PoC with Golang</title>
+    <link href="http://example.com/2025/06/14/github_1898268296/"/>
+    <id>http://example.com/2025/06/14/github_1898268296/</id>
+    <published>2025-06-14T15:15:11.117Z</published>
+    <updated>2025-06-14T15:15:11.115Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CVE-2025-33073 0-Day Exploit and PoC with Golang</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-33073</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> CVE-2025-33073 0-Day Exploit和PoC，使用Golang编写。</p><p><strong>来源：</strong> <a href="https://github.com/yigitsql/CVE-2025-33073">https://github.com/yigitsql/CVE-2025-33073</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>.gitignore</li><li>LICENSE</li><li>README.md</li><li>clients</li><li>cmd</li><li>config</li><li>dns</li><li>go.mod</li><li>go.sum</li><li>kerberos</li><li>main.go</li><li>relay</li><li>servers</li><li>utils</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-33073"><a href="#CVE-2025-33073" class="headerlink" title="CVE-2025-33073"></a>CVE-2025-33073</h2><p>CVE-2025-33073  0-Day Exploit and PoC with Golang </p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CVE-2025-33073 0-Day Exploit and PoC wi</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+  </entry>
   
   <entry>
     <title>ISPConfig 代码注入漏洞</title>
@@ -185,7 +211,7 @@
     <published>2025-06-14T13:45:14.495Z</published>
     <updated>2025-06-14T13:45:14.495Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apple Safari Web Content Sandbox Bypass Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-24201</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Apple Safari Web Content Sandbox Bypass Vulnerability是一个严重的权限绕过漏洞，允许攻击者通过越界写入绕过Safari的Web内容沙箱。该漏洞的CVE ID为CVE-2025-24201，影响程度为严重，CVSS评分为8.8。目前尚无官方补丁可用。</p><p><strong>产品厂商：</strong> Apple</p><p><strong>产品名称：</strong> Safari</p><p><strong>来源：</strong> <a href="https://github.com/AvonBorn/CVE-2025-24201-Exploit">https://github.com/AvonBorn/CVE-2025-24201-Exploit</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-24201-Exploit"><a href="#CVE-2025-24201-Exploit" class="headerlink" title="CVE-2025-24201-Exploit"></a>CVE-2025-24201-Exploit</h2><h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>Out-of-Bounds Write Vulnerability in Apple Safari Web Content Sandbox Bypass</p><h3 id="Exploit"><a href="#Exploit" class="headerlink" title="Exploit:"></a>Exploit:</h3><h4 id="Download-here"><a href="#Download-here" class="headerlink" title="Download here"></a><a href="https://tinyurl.com/mw54dudy">Download here</a></h4><h3 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h3><ul><li><strong>CVE ID</strong>: CVE-2025-24201  <img align="right" alt="Enderman" width="180" src="https://github.com/AvonBorn/Profile/blob/9ff2d6ec8dbc3a47a18a7e121330828838a9cf38/enderman.gif" /></li><li><strong>Published</strong>: 03&#x2F;11&#x2F;2025</li><li><strong>Impact</strong>: Critical</li><li><strong>Exploit Availability</strong>: Not public, only private.</li><li><strong>CVSS</strong>: 8.8</li><li><strong>Patch Available:  (No official patch yet)</strong></li></ul><h3 id="Contact"><a href="#Contact" class="headerlink" title="Contact"></a>Contact</h3><ul><li><strong>For inquiries, please contact:<a href="mailto:&#97;&#118;&#111;&#x6e;&#x62;&#97;&#x73;&#x65;&#x32;&#x31;&#51;&#x40;&#111;&#117;&#116;&#108;&#111;&#x6f;&#x6b;&#x2e;&#99;&#111;&#109;">avonbase213@outlook.com</a></strong></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apple Safari Web Content Sandbox Bypass Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-24201</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Apple Safari Web Content Sandbox Bypass Vulnerability是一个严重的权限绕过漏洞，允许攻击者通过越界写入绕过Safari的Web内容沙箱。该漏洞的CVE ID为CVE-2025-24201，影响程度为严重，CVSS评分为8.8。目前尚无官方补丁可用。</p><p><strong>产品厂商：</strong> Apple</p><p><strong>产品名称：</strong> Safari</p><p><strong>来源：</strong> <a href="https://github.com/AvonBorn/CVE-2025-24201-Exploit">https://github.com/AvonBorn/CVE-2025-24201-Exploit</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-24201-Exploit"><a href="#CVE-2025-24201-Exploit" class="headerlink" title="CVE-2025-24201-Exploit"></a>CVE-2025-24201-Exploit</h2><h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>Out-of-Bounds Write Vulnerability in Apple Safari Web Content Sandbox Bypass</p><h3 id="Exploit"><a href="#Exploit" class="headerlink" title="Exploit:"></a>Exploit:</h3><h4 id="Download-here"><a href="#Download-here" class="headerlink" title="Download here"></a><a href="https://tinyurl.com/mw54dudy">Download here</a></h4><h3 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h3><ul><li><strong>CVE ID</strong>: CVE-2025-24201  <img align="right" alt="Enderman" width="180" src="https://github.com/AvonBorn/Profile/blob/9ff2d6ec8dbc3a47a18a7e121330828838a9cf38/enderman.gif" /></li><li><strong>Published</strong>: 03&#x2F;11&#x2F;2025</li><li><strong>Impact</strong>: Critical</li><li><strong>Exploit Availability</strong>: Not public, only private.</li><li><strong>CVSS</strong>: 8.8</li><li><strong>Patch Available:  (No official patch yet)</strong></li></ul><h3 id="Contact"><a href="#Contact" class="headerlink" title="Contact"></a>Contact</h3><ul><li><strong>For inquiries, please contact:<a href="mailto:&#97;&#118;&#x6f;&#x6e;&#98;&#x61;&#x73;&#101;&#50;&#x31;&#51;&#x40;&#111;&#117;&#x74;&#x6c;&#x6f;&#x6f;&#107;&#x2e;&#x63;&#111;&#109;">avonbase213@outlook.com</a></strong></li></ul>]]></content>
     
     
       
@@ -518,32 +544,6 @@
     
     
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="配置问题" scheme="http://example.com/tags/%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Apache HTTP Server SSL/TLS证书验证绕过漏洞</title>
-    <link href="http://example.com/2025/06/14/github_1656456169/"/>
-    <id>http://example.com/2025/06/14/github_1656456169/</id>
-    <published>2025-06-14T10:15:13.376Z</published>
-    <updated>2025-06-14T10:15:13.372Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache HTTP Server SSL&#x2F;TLS证书验证绕过漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-40898</li></ul><p><strong>漏洞类型：</strong> 配置问题</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Apache HTTP Server中存在一个严重的SSL&#x2F;TLS证书验证绕过漏洞（CVE-2024-40898），在某些错误配置下可能允许绕过SSL&#x2F;TLS证书验证。该漏洞通过向目标服务器发起SSL连接并发送HEAD请求来检测。如果响应表明SSL证书验证处理不当，则服务器可能易受攻击。</p><p><strong>产品厂商：</strong> Apache</p><p><strong>产品名称：</strong> Apache HTTP Server</p><p><strong>来源：</strong> <a href="https://github.com/anilpatel199n/CVE-2024-40898">https://github.com/anilpatel199n/CVE-2024-40898</a></p><p><strong>类型：</strong> CVE-2024:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2024-40898 .py</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2024-40898"><a href="#CVE-2024-40898" class="headerlink" title="CVE-2024-40898"></a>CVE-2024-40898</h2><p>This Python script checks for the presence of CVE-2024-40898, a critical vulnerability in Apache HTTP Server that may allow SSL&#x2F;TLS certificate verification bypass under certain misconfigurations.  It initiates an SSL connection to the target server and sends a HEAD request.</p><p>It initiates an SSL connection to the target server and sends a HEAD request. If the response suggests that SSL certificate verification is improperly handled, the server might be vulnerable.</p><p>🚀 Features<br>✅ Supports full URLs or plain IPs with optional ports</p><p>✅ Automatically parses and defaults to port 443 if not specified</p><p>✅ Ignores SSL certificate errors (for test purposes)</p><p>✅ Minimal and fast detection logic</p><p>✅ Clear output indicating possible vulnerability</p><p>🛠 Usage<br>python CVE-2024-40898.py -u <a href="https://192.168.1.1/">https://192.168.1.1:443</a><br>You can also just pass an IP:</p><p>python CVE-2024-40898.py -u 192.168.1.1<br>⚠️ Disclaimer<br>This script is for educational and authorized security testing only. Do not use on systems you do not own or have explicit permission to test.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Apache HTTP Server SSL&amp;#x2F;TLS证书验证绕过漏洞</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
     
     <category term="配置问题" scheme="http://example.com/tags/%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/"/>
     
