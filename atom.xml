@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-14T10:15:20.276Z</updated>
+  <updated>2025-06-14T10:55:55.750Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,87 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>新型SmartAttack攻击通过智能手表窃取敏感数据</title>
+    <link href="http://example.com/2025/06/14/weixin_2009726445/"/>
+    <id>http://example.com/2025/06/14/weixin_2009726445/</id>
+    <published>2025-06-14T10:55:55.753Z</published>
+    <updated>2025-06-14T10:55:55.750Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/5R7pum6U_2oZJ7M1Ch6GEQ">https://mp.weixin.qq.com/s/5R7pum6U_2oZJ7M1Ch6GEQ</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/5R7pum6U_2oZJ7M1Ch6GEQ&quot;&gt;https://mp.weixin.q</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FreeBuf周报  Meta暗中追踪数十亿安卓用户；GitLab 曝高危漏洞组合</title>
+    <link href="http://example.com/2025/06/14/weixin_2034397637/"/>
+    <id>http://example.com/2025/06/14/weixin_2034397637/</id>
+    <published>2025-06-14T10:55:54.951Z</published>
+    <updated>2025-06-14T10:55:54.950Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/dSd9su1Vr9cPJ81sbENmQA">https://mp.weixin.qq.com/s/dSd9su1Vr9cPJ81sbENmQA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/dSd9su1Vr9cPJ81sbENmQA&quot;&gt;https://mp.weixin.q</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows磁盘清理工具权限提升漏洞PoC利用代码公开</title>
+    <link href="http://example.com/2025/06/14/weixin_4109759857/"/>
+    <id>http://example.com/2025/06/14/weixin_4109759857/</id>
+    <published>2025-06-14T10:55:53.493Z</published>
+    <updated>2025-06-14T10:55:53.490Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/z4sr75sppZuMAXCBEANmvg">https://mp.weixin.qq.com/s/z4sr75sppZuMAXCBEANmvg</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/z4sr75sppZuMAXCBEANmvg&quot;&gt;https://mp.weixin.q</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
+    
+  </entry>
   
   <entry>
     <title>BigAnt DataBase 安装页面暴露</title>
@@ -465,87 +546,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Telegram与俄罗斯联邦安全局（FSB）关系及用户隐私风险分析</title>
-    <link href="http://example.com/2025/06/14/weixin_3025102285/"/>
-    <id>http://example.com/2025/06/14/weixin_3025102285/</id>
-    <published>2025-06-14T03:10:38.027Z</published>
-    <updated>2025-06-14T03:10:38.025Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/gqVWqV3OBVPQXebowdu0HA">https://mp.weixin.qq.com/s/gqVWqV3OBVPQXebowdu0HA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/gqVWqV3OBVPQXebowdu0HA&quot;&gt;https://mp.weixin.qq.c</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Apache Airflow v3 Default Login</title>
-    <link href="http://example.com/2025/06/14/github_712554913/"/>
-    <id>http://example.com/2025/06/14/github_712554913/</id>
-    <published>2025-06-14T02:30:19.336Z</published>
-    <updated>2025-06-14T02:30:19.335Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache Airflow v3 Default Login</p><p><strong>漏洞类型：</strong> 弱口令</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Apache Airflow v3默认登录凭证被发现。</p><p><strong>产品厂商：</strong> apache</p><p><strong>产品名称：</strong> airflow</p><p><strong>搜索语法：</strong> title:”Airflow”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/287e5b082dbaabf1a058c1999184d8da06511f38/http%2Fdefault-logins%2Fapache%2Fairflow-v3-default-login.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/287e5b082dbaabf1a058c1999184d8da06511f38/http%2Fdefault-logins%2Fapache%2Fairflow-v3-default-login.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> airflow-v3-default-login<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Apache Airflow v3 Default Login<br>  <span class="hljs-params">author:</span> pdteam<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> Apache Airflow v3 default login credentials were discovered.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//airflow.apache.org/docs/apache-airflow/stable/start/docker.html</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.0</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:C<span class="hljs-operator">/</span>C:L<span class="hljs-operator">/</span>I:L<span class="hljs-operator">/</span>A:L<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">8.3</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">522</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">product:</span> airflow<br>    <span class="hljs-params">vendor:</span> apache<br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">2</span><br>    <span class="hljs-params">shodan-query:</span> title:<span class="hljs-string">&quot;Airflow&quot;</span><br>  <span class="hljs-params">tags:</span> airflow,default-login,apache<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-operator">/</span>auth<span class="hljs-operator">/</span>login<span class="hljs-symbol">/</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Origin:</span> &#123;&#123;BaseURL&#125;&#125;<br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-operator">/</span>auth<span class="hljs-operator">/</span>login<span class="hljs-symbol">/</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Origin:</span> &#123;&#123;BaseURL&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br>        <span class="hljs-params">Referer:</span> &#123;&#123;BaseURL&#125;&#125;<span class="hljs-symbol">/auth/login</span><br><br>        <span class="hljs-attr">username</span><span class="hljs-operator">=</span>&#123;&#123;username&#125;&#125;&amp;password<span class="hljs-operator">=</span>&#123;&#123;password&#125;&#125;&amp;_csrf_token<span class="hljs-operator">=</span>&#123;&#123;csrf_token&#125;&#125;<br><br>    <span class="hljs-params">attack:</span> pitchfork<br>    <span class="hljs-params">payloads:</span><br>      <span class="hljs-params">username:</span><br>        <span class="hljs-operator">-</span> airflow<br>      <span class="hljs-params">password:</span><br>        <span class="hljs-operator">-</span> airflow<br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">name:</span> csrf_token<br>        <span class="hljs-params">group:</span> <span class="hljs-number">1</span><br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> type<span class="hljs-operator">=</span><span class="hljs-string">&quot;hidden&quot;</span> value<span class="hljs-operator">=</span><span class="hljs-string">&quot;(.*?)&quot;</span><span class="hljs-operator">&gt;</span><br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> &#x27;contains(body_1, <span class="hljs-string">&quot;Airflow&quot;</span>)&#x27;<br>          <span class="hljs-operator">-</span> &#x27;contains(body_1, <span class="hljs-string">&quot;csrf_token&quot;</span>)&#x27;<br>          <span class="hljs-operator">-</span> &#x27;status_code_2 <span class="hljs-operator">==</span> <span class="hljs-number">302</span>&#x27;<br>          <span class="hljs-operator">-</span> &#x27;contains(header_2, <span class="hljs-string">&quot;session=&quot;</span>)&#x27;<br>        <span class="hljs-params">condition:</span> and<br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> &#x27;You should be redirected automatically&#x27;<br><span class="hljs-comment"># digest: 490a0046304402210096cf86afcc6da7a459ff7282c249845a9d3b65788c3ba773d82042d9c580ac49021f45477719cf33c6ae7eb8b46c995163eb0e96b527744259ce53812242579328:922c64590222798bb761d5b6d8e72950</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Apache Airflow v3 Default Login&lt;/p&gt;
-&lt;p&gt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="弱口令" scheme="http://example.com/tags/%E5%BC%B1%E5%8F%A3%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Chrome CVE-2025-5419 漏洞检查器</title>
-    <link href="http://example.com/2025/06/14/github_535614405/"/>
-    <id>http://example.com/2025/06/14/github_535614405/</id>
-    <published>2025-06-14T02:15:09.397Z</published>
-    <updated>2025-06-14T02:15:09.394Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Chrome CVE-2025-5419 漏洞检查器</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-5419</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 该工具用于检查Chrome浏览器是否受到CVE-2025-5419漏洞的影响。此漏洞允许恶意网站在用户机器上执行有害代码，及时更新Chrome可以保护用户安全。</p><p><strong>产品厂商：</strong> Google</p><p><strong>产品名称：</strong> Chrome</p><p><strong>来源：</strong> <a href="https://github.com/itsShotgun/chrome_cve-2025-5419_checker">https://github.com/itsShotgun/chrome_cve-2025-5419_checker</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>check.js</li><li>index.html</li><li>readme.md</li><li>style.css</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><p><strong>How to use</strong></p><ul><li>Open <code>index.html</code> in Chrome </li><li>The page will detect your Chrome version and tell you if you’re vulnerable.</li><li>If vulnerable, it’ll show a link to update Chrome immediately.</li></ul><p><strong>Why</strong></p><ul><li>This zero-day lets malicious websites run baaaaaaad code on your machine</li><li>Keeping Chrome updated protects you.</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Chrome CVE-2025-5419 漏洞检查器&lt;/p&gt;
-&lt;p&gt;&lt;stro</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
     
   </entry>
   
