@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-14T11:46:29.086Z</updated>
+  <updated>2025-06-14T12:15:10.681Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WebDAV Path Handling Vulnerability</title>
+    <link href="http://example.com/2025/06/14/github_4199236137/"/>
+    <id>http://example.com/2025/06/14/github_4199236137/</id>
+    <published>2025-06-14T12:15:10.685Z</published>
+    <updated>2025-06-14T12:15:10.681Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> WebDAV Path Handling Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-33053</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> CVE-2025-33053 – WebDAV路径处理漏洞</p><p><strong>来源：</strong> <a href="https://github.com/detectrespondrepeat/CVE-2025-33053">https://github.com/detectrespondrepeat/CVE-2025-33053</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-33053"><a href="#CVE-2025-33053" class="headerlink" title="CVE-2025-33053"></a>CVE-2025-33053</h2><p>CVE-2025-33053 – WebDAV Path Handling Vulnerability 🔍</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; WebDAV Path Handling Vulnerability&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+  </entry>
   
   <entry>
     <title>Raisecom Multi-Service Intelligent Gateway 远程命令执行漏洞</title>
@@ -516,33 +543,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="远程代码执行" scheme="http://example.com/tags/%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Pulse Connect Secure 认证绕过漏洞</title>
-    <link href="http://example.com/2025/06/14/github_495590215/"/>
-    <id>http://example.com/2025/06/14/github_495590215/</id>
-    <published>2025-06-14T04:00:15.265Z</published>
-    <updated>2025-06-14T04:00:15.262Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Pulse Connect Secure 认证绕过漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2021-22893</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Pulse Connect Secure 9.0R3&#x2F;9.1R1及更高版本中的Windows文件共享浏览器和Pulse Secure协作功能存在认证绕过漏洞，允许未认证的攻击者执行远程任意代码，利用需要访问易受攻击的功能。</p><p><strong>产品厂商：</strong> Pulse Secure</p><p><strong>产品名称：</strong> Pulse Connect Secure</p><p><strong>影响版本：</strong> 9.0R3&#x2F;9.1R1 and higher</p><p><strong>搜索语法：</strong> http.title:”ivanti connect secure”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12129">https://github.com/projectdiscovery/nuclei-templates/issues/12129</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Pulse Connect Secure 9.0R3&#x2F;9.1R1 and higher contains an authentication bypass caused by vulnerabilities in Windows File Share Browser and Pulse Secure Collaboration features, letting unauthenticated attackers perform remote arbitrary code execution, exploit requires access to vulnerable features.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://github.com/orangmuda/CVE-2021-22893">https://github.com/orangmuda/CVE-2021-22893</a></li><li><a href="https://github.com/MRLEE123456/CVE-2021-22893">https://github.com/MRLEE123456/CVE-2021-22893</a></li><li><a href="https://github.com/ZephrFish/CVE-2021-22893_HoneyPoC2">https://github.com/ZephrFish/CVE-2021-22893_HoneyPoC2</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-http-title-ivanti-connect-secure"><a href="#Shodan-Query-http-title-ivanti-connect-secure" class="headerlink" title="Shodan Query: http.title:&quot;ivanti connect secure&quot;"></a>Shodan Query: <code>http.title:&quot;ivanti connect secure&quot;</code></h4>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Pulse Connect Secure 认证绕过漏洞&lt;/p&gt;
-&lt;p&gt;&lt;str</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
     
   </entry>
   
