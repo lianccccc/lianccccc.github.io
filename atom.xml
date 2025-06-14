@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-14T08:30:13.000Z</updated>
+  <updated>2025-06-14T08:43:37.614Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>以色列袭击前五角大楼附近的活动激增</title>
+    <link href="http://example.com/2025/06/14/weixin_1260415628/"/>
+    <id>http://example.com/2025/06/14/weixin_1260415628/</id>
+    <published>2025-06-14T08:43:37.617Z</published>
+    <updated>2025-06-14T08:43:37.614Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/5Zxg0p7sH0gtzN4mVI3z9A">https://mp.weixin.qq.com/s/5Zxg0p7sH0gtzN4mVI3z9A</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/5Zxg0p7sH0gtzN4mVI3z9A&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WIFISKY-7层流控路由器 命令执行漏洞</title>
+    <link href="http://example.com/2025/06/14/weixin_44633056/"/>
+    <id>http://example.com/2025/06/14/weixin_44633056/</id>
+    <published>2025-06-14T08:43:06.441Z</published>
+    <updated>2025-06-14T08:43:06.437Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> Nday Poc</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/UkS08Oqpj_vvLwb1a3Phiw">https://mp.weixin.qq.com/s/UkS08Oqpj_vvLwb1a3Phiw</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; Nday Poc&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/UkS08Oqpj_vvLwb1a3Phiw&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="Nday Poc" scheme="http://example.com/tags/Nday-Poc/"/>
+    
+  </entry>
   
   <entry>
     <title>Microsoft SharePoint 远程代码执行漏洞</title>
@@ -425,7 +479,7 @@
     <published>2025-06-13T22:30:05.638Z</published>
     <updated>2025-06-13T22:30:05.633Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-7f8r-222p-6f5g">https://github.com/advisories/GHSA-7f8r-222p-6f5g</a></p><p><strong>仓库 Star：</strong> 3997</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/modelcontextprotocol/inspector/security/advisories/GHSA-7f8r-222p-6f5g">https://github.com/modelcontextprotocol/inspector/security/advisories/GHSA-7f8r-222p-6f5g</a></p></li><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-49596">https://nvd.nist.gov/vuln/detail/CVE-2025-49596</a></p></li><li><p><a href="https://github.com/modelcontextprotocol/inspector/commit/50df0e1ec488f3983740b4d28d2a968f12eb8979">https://github.com/modelcontextprotocol/inspector/commit/50df0e1ec488f3983740b4d28d2a968f12eb8979</a></p></li><li><p><a href="https://github.com/advisories/GHSA-7f8r-222p-6f5g">https://github.com/advisories/GHSA-7f8r-222p-6f5g</a></p></li></ul><p><strong>描述：</strong></p><p>Versions of MCP Inspector below 0.14.1 are vulnerable to remote code execution due to lack of authentication between the Inspector client and proxy, allowing unauthenticated requests to launch MCP commands over stdio. Users should immediately upgrade to version 0.14.1 or later to address these vulnerabilities.</p><p>Credit: Rémy Marot <a href="mailto:&#x62;&#117;&#x67;&#x68;&#x75;&#x6e;&#116;&#101;&#114;&#x73;&#64;&#x74;&#x65;&#110;&#x61;&#x62;&#x6c;&#x65;&#46;&#x63;&#111;&#109;">bughunters@tenable.com</a></p>]]></content>
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-7f8r-222p-6f5g">https://github.com/advisories/GHSA-7f8r-222p-6f5g</a></p><p><strong>仓库 Star：</strong> 3997</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/modelcontextprotocol/inspector/security/advisories/GHSA-7f8r-222p-6f5g">https://github.com/modelcontextprotocol/inspector/security/advisories/GHSA-7f8r-222p-6f5g</a></p></li><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-49596">https://nvd.nist.gov/vuln/detail/CVE-2025-49596</a></p></li><li><p><a href="https://github.com/modelcontextprotocol/inspector/commit/50df0e1ec488f3983740b4d28d2a968f12eb8979">https://github.com/modelcontextprotocol/inspector/commit/50df0e1ec488f3983740b4d28d2a968f12eb8979</a></p></li><li><p><a href="https://github.com/advisories/GHSA-7f8r-222p-6f5g">https://github.com/advisories/GHSA-7f8r-222p-6f5g</a></p></li></ul><p><strong>描述：</strong></p><p>Versions of MCP Inspector below 0.14.1 are vulnerable to remote code execution due to lack of authentication between the Inspector client and proxy, allowing unauthenticated requests to launch MCP commands over stdio. Users should immediately upgrade to version 0.14.1 or later to address these vulnerabilities.</p><p>Credit: Rémy Marot <a href="mailto:&#x62;&#x75;&#103;&#104;&#117;&#x6e;&#116;&#101;&#x72;&#x73;&#64;&#x74;&#x65;&#110;&#x61;&#98;&#x6c;&#x65;&#46;&#x63;&#x6f;&#109;">bughunters@tenable.com</a></p>]]></content>
     
     
       
@@ -493,57 +547,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="安恒信息CERT" scheme="http://example.com/tags/%E5%AE%89%E6%81%92%E4%BF%A1%E6%81%AFCERT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CVE-2025-3263 Regular expression Denial of Service - ReDoS</title>
-    <link href="http://example.com/2025/06/13/other_3072945733/"/>
-    <id>http://example.com/2025/06/13/other_3072945733/</id>
-    <published>2025-06-13T20:00:18.146Z</published>
-    <updated>2025-06-13T20:00:18.142Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://huntr.com/bounties/c7a69150-54f8-4e81-8094-791e7a2a0f29">https://huntr.com/bounties/c7a69150-54f8-4e81-8094-791e7a2a0f29</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://huntr.com/bounties/c7a69150-54f8-4e81-8094-791e7a2a0f29&quot;&gt;https://huntr.com/bounties/c7a69150-54f8-4</summary>
-      
-    
-    
-    
-    <category term="其他" scheme="http://example.com/categories/%E5%85%B6%E4%BB%96/"/>
-    
-    
-    <category term="huntr.com" scheme="http://example.com/tags/huntr-com/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CVE-2025-4009 PoC/EXP</title>
-    <link href="http://example.com/2025/06/13/github_2202226216/"/>
-    <id>http://example.com/2025/06/13/github_2202226216/</id>
-    <published>2025-06-13T19:45:26.012Z</published>
-    <updated>2025-06-13T19:45:26.009Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CVE-2025-4009 PoC&#x2F;EXP</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-4009</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> CVE-2025-4009的PoC&#x2F;EXP</p><p><strong>来源：</strong> <a href="https://github.com/realcodeb0ss/CVE-2025-4009">https://github.com/realcodeb0ss/CVE-2025-4009</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2025-4009-EverTZ.zip</li><li>CVE-2025-4009.py</li><li>README.md</li><li>pytransform</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-4009"><a href="#CVE-2025-4009" class="headerlink" title="CVE-2025-4009"></a>CVE-2025-4009</h2><p>CVE-2025-4009 PoC&#x2F;EXP</p><p><img src="https://github.com/user-attachments/assets/d1cf4a58-a9c2-4915-b37d-f1576c711e83" alt="IMG_8883"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CVE-2025-4009 PoC&amp;#x2F;EXP&lt;/p&gt;
-&lt;p&gt;&lt;stro</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
     
   </entry>
   
