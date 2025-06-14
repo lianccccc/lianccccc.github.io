@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-14T10:00:06.458Z</updated>
+  <updated>2025-06-14T10:15:20.276Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BigAnt DataBase 安装页面暴露</title>
+    <link href="http://example.com/2025/06/14/github_1662023151/"/>
+    <id>http://example.com/2025/06/14/github_1662023151/</id>
+    <published>2025-06-14T10:15:20.283Z</published>
+    <updated>2025-06-14T10:15:20.276Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> BigAnt DataBase 安装页面暴露</p><p><strong>漏洞类型：</strong> 配置问题</p><p><strong>漏洞等级：</strong> 低危</p><p><strong>漏洞描述：</strong> 由于配置不当，BigAnt DataBase的安装页面被暴露，可能导致未授权的访问。</p><p><strong>产品厂商：</strong> BigAnt</p><p><strong>产品名称：</strong> BigAnt DataBase</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/81613ff7aea85a77f74f52f06e9f13e4975bc10b/http%2Fmisconfiguration%2Finstaller%2Fbigant-db-install.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/81613ff7aea85a77f74f52f06e9f13e4975bc10b/http%2Fmisconfiguration%2Finstaller%2Fbigant-db-install.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> bigant-db-install<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Bigant DataBase Exposed Installation<br>  <span class="hljs-params">author:</span> pussycat0x<br>  <span class="hljs-params">severity:</span> info<br>  <span class="hljs-params">description:</span> |<br>    Bigant DataBase Installation page exposure due to misconfiguration.<br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-params">tags:</span> misconfig,install,bigant,database<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET install<span class="hljs-symbol">/update.html</span>  HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;BigAnt Database Upgrade Wizard1&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;//DB-MS&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&lt;title&gt;BigAntSetup&quot;</span><br>        <span class="hljs-params">condition:</span> and<br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; BigAnt DataBase 安装页面暴露&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="配置问题" scheme="http://example.com/tags/%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Apache HTTP Server SSL/TLS证书验证绕过漏洞</title>
+    <link href="http://example.com/2025/06/14/github_1656456169/"/>
+    <id>http://example.com/2025/06/14/github_1656456169/</id>
+    <published>2025-06-14T10:15:13.376Z</published>
+    <updated>2025-06-14T10:15:13.372Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache HTTP Server SSL&#x2F;TLS证书验证绕过漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-40898</li></ul><p><strong>漏洞类型：</strong> 配置问题</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Apache HTTP Server中存在一个严重的SSL&#x2F;TLS证书验证绕过漏洞（CVE-2024-40898），在某些错误配置下可能允许绕过SSL&#x2F;TLS证书验证。该漏洞通过向目标服务器发起SSL连接并发送HEAD请求来检测。如果响应表明SSL证书验证处理不当，则服务器可能易受攻击。</p><p><strong>产品厂商：</strong> Apache</p><p><strong>产品名称：</strong> Apache HTTP Server</p><p><strong>来源：</strong> <a href="https://github.com/anilpatel199n/CVE-2024-40898">https://github.com/anilpatel199n/CVE-2024-40898</a></p><p><strong>类型：</strong> CVE-2024:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2024-40898 .py</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2024-40898"><a href="#CVE-2024-40898" class="headerlink" title="CVE-2024-40898"></a>CVE-2024-40898</h2><p>This Python script checks for the presence of CVE-2024-40898, a critical vulnerability in Apache HTTP Server that may allow SSL&#x2F;TLS certificate verification bypass under certain misconfigurations.  It initiates an SSL connection to the target server and sends a HEAD request.</p><p>It initiates an SSL connection to the target server and sends a HEAD request. If the response suggests that SSL certificate verification is improperly handled, the server might be vulnerable.</p><p>🚀 Features<br>✅ Supports full URLs or plain IPs with optional ports</p><p>✅ Automatically parses and defaults to port 443 if not specified</p><p>✅ Ignores SSL certificate errors (for test purposes)</p><p>✅ Minimal and fast detection logic</p><p>✅ Clear output indicating possible vulnerability</p><p>🛠 Usage<br>python CVE-2024-40898.py -u <a href="https://192.168.1.1/">https://192.168.1.1:443</a><br>You can also just pass an IP:</p><p>python CVE-2024-40898.py -u 192.168.1.1<br>⚠️ Disclaimer<br>This script is for educational and authorized security testing only. Do not use on systems you do not own or have explicit permission to test.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Apache HTTP Server SSL&amp;#x2F;TLS证书验证绕过漏洞</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
+    
+    <category term="配置问题" scheme="http://example.com/tags/%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>The Image Resizer On The Fly plugin for WordPress is vulnerable to arbitrary file deletion due to</title>
@@ -493,57 +546,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Optilink管理系统genephp接口存在远程命令执行漏洞 附POC</title>
-    <link href="http://example.com/2025/06/14/weixin_605976721/"/>
-    <id>http://example.com/2025/06/14/weixin_605976721/</id>
-    <published>2025-06-14T02:11:37.314Z</published>
-    <updated>2025-06-14T02:11:37.313Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 南风漏洞复现文库</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/pGzo6fW4ObIPUy3uXXbl8A">https://mp.weixin.qq.com/s/pGzo6fW4ObIPUy3uXXbl8A</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 南风漏洞复现文库&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/pGzo6fW4ObIPUy3uXXbl8A&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="南风漏洞复现文库" scheme="http://example.com/tags/%E5%8D%97%E9%A3%8E%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%E6%96%87%E5%BA%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MCP Inspector proxy server lacks authentication between the Inspector client and proxy</title>
-    <link href="http://example.com/2025/06/13/github_3862121657/"/>
-    <id>http://example.com/2025/06/13/github_3862121657/</id>
-    <published>2025-06-13T22:30:05.638Z</published>
-    <updated>2025-06-13T22:30:05.633Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-7f8r-222p-6f5g">https://github.com/advisories/GHSA-7f8r-222p-6f5g</a></p><p><strong>仓库 Star：</strong> 3997</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/modelcontextprotocol/inspector/security/advisories/GHSA-7f8r-222p-6f5g">https://github.com/modelcontextprotocol/inspector/security/advisories/GHSA-7f8r-222p-6f5g</a></p></li><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-49596">https://nvd.nist.gov/vuln/detail/CVE-2025-49596</a></p></li><li><p><a href="https://github.com/modelcontextprotocol/inspector/commit/50df0e1ec488f3983740b4d28d2a968f12eb8979">https://github.com/modelcontextprotocol/inspector/commit/50df0e1ec488f3983740b4d28d2a968f12eb8979</a></p></li><li><p><a href="https://github.com/advisories/GHSA-7f8r-222p-6f5g">https://github.com/advisories/GHSA-7f8r-222p-6f5g</a></p></li></ul><p><strong>描述：</strong></p><p>Versions of MCP Inspector below 0.14.1 are vulnerable to remote code execution due to lack of authentication between the Inspector client and proxy, allowing unauthenticated requests to launch MCP commands over stdio. Users should immediately upgrade to version 0.14.1 or later to address these vulnerabilities.</p><p>Credit: Rémy Marot <a href="mailto:&#98;&#x75;&#x67;&#x68;&#x75;&#x6e;&#116;&#101;&#114;&#115;&#x40;&#x74;&#101;&#x6e;&#x61;&#98;&#108;&#101;&#46;&#x63;&#x6f;&#x6d;">bughunters@tenable.com</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-7f8r-222p-6f5g&quot;&gt;https://github.com/advisories/GHSA-7f8r-222p-6f5g&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
     
   </entry>
   
