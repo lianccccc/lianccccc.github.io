@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-14T14:30:49.497Z</updated>
+  <updated>2025-06-14T14:45:13.061Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ISPConfig 代码注入漏洞</title>
+    <link href="http://example.com/2025/06/14/github_758704659/"/>
+    <id>http://example.com/2025/06/14/github_758704659/</id>
+    <published>2025-06-14T14:45:13.063Z</published>
+    <updated>2025-06-14T14:45:13.061Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> ISPConfig 代码注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-46818</li></ul><p><strong>漏洞类型：</strong> 代码注入</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 在ISPConfig 3.2.11p1之前版本中发现了一个问题。如果启用了admin_allow_langedit，管理员可以通过语言文件编辑器实现PHP代码注入。</p><p><strong>产品厂商：</strong> ISPConfig</p><p><strong>产品名称：</strong> ISPConfig</p><p><strong>影响版本：</strong> version &lt;&#x3D; 3.2.11</p><p><strong>来源：</strong> <a href="https://github.com/z7Akane/CVE-2023-46818">https://github.com/z7Akane/CVE-2023-46818</a></p><p><strong>类型：</strong> CVE-2023:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>.gitignore</li><li>CVE-2023-46818.py</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><p><img src="https://imgur.com/oNIWBFV.png" alt="Banner"></p><hr><h1 align="center">CVE-2023-46818</h1><p>An issue was discovered in ISPConfig before 3.2.11p1. PHP code injection can be achieved in the language file editor by an admin if admin_allow_langedit is enabled. </p><h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs vim">❯ <span class="hljs-keyword">python3</span> CVE-<span class="hljs-number">2023</span>-<span class="hljs-number">46818</span>.<span class="hljs-keyword">py</span><br>Usage: <span class="hljs-keyword">python3</span> CVE-<span class="hljs-number">2023</span>-<span class="hljs-number">46818</span>.<span class="hljs-keyword">py</span> <span class="hljs-symbol">&lt;URL&gt;</span> <span class="hljs-symbol">&lt;username&gt;</span> <span class="hljs-symbol">&lt;password&gt;</span><br><br>Poc of CVE-<span class="hljs-number">2023</span>-<span class="hljs-number">46818</span> ISPConfig &lt;= <span class="hljs-number">3.2</span>.<span class="hljs-number">11</span> - Code Injection Vulnerability by z7Akane<br></code></pre></td></tr></table></figure><h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ul><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2023-46818">https://nvd.nist.gov/vuln/detail/CVE-2023-46818</a></li><li><a href="https://www.ispconfig.org/blog/ispconfig-3-2-11p1-released">https://www.ispconfig.org/blog/ispconfig-3-2-11p1-released</a></li><li><a href="https://seclists.org/fulldisclosure/2023/Dec/2">https://seclists.org/fulldisclosure/2023/Dec/2</a></li></ul><h3 id="Credit"><a href="#Credit" class="headerlink" title="Credit"></a>Credit</h3><p>If you found this project useful or interesting, consider supporting it by giving a ⭐ to the repository!</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; ISPConfig 代码注入漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2023:github search" scheme="http://example.com/tags/CVE-2023-github-search/"/>
+    
+    <category term="代码注入" scheme="http://example.com/tags/%E4%BB%A3%E7%A0%81%E6%B3%A8%E5%85%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>要赢人先要赢自己</title>
@@ -158,7 +185,7 @@
     <published>2025-06-14T13:45:14.495Z</published>
     <updated>2025-06-14T13:45:14.495Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apple Safari Web Content Sandbox Bypass Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-24201</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Apple Safari Web Content Sandbox Bypass Vulnerability是一个严重的权限绕过漏洞，允许攻击者通过越界写入绕过Safari的Web内容沙箱。该漏洞的CVE ID为CVE-2025-24201，影响程度为严重，CVSS评分为8.8。目前尚无官方补丁可用。</p><p><strong>产品厂商：</strong> Apple</p><p><strong>产品名称：</strong> Safari</p><p><strong>来源：</strong> <a href="https://github.com/AvonBorn/CVE-2025-24201-Exploit">https://github.com/AvonBorn/CVE-2025-24201-Exploit</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-24201-Exploit"><a href="#CVE-2025-24201-Exploit" class="headerlink" title="CVE-2025-24201-Exploit"></a>CVE-2025-24201-Exploit</h2><h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>Out-of-Bounds Write Vulnerability in Apple Safari Web Content Sandbox Bypass</p><h3 id="Exploit"><a href="#Exploit" class="headerlink" title="Exploit:"></a>Exploit:</h3><h4 id="Download-here"><a href="#Download-here" class="headerlink" title="Download here"></a><a href="https://tinyurl.com/mw54dudy">Download here</a></h4><h3 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h3><ul><li><strong>CVE ID</strong>: CVE-2025-24201  <img align="right" alt="Enderman" width="180" src="https://github.com/AvonBorn/Profile/blob/9ff2d6ec8dbc3a47a18a7e121330828838a9cf38/enderman.gif" /></li><li><strong>Published</strong>: 03&#x2F;11&#x2F;2025</li><li><strong>Impact</strong>: Critical</li><li><strong>Exploit Availability</strong>: Not public, only private.</li><li><strong>CVSS</strong>: 8.8</li><li><strong>Patch Available:  (No official patch yet)</strong></li></ul><h3 id="Contact"><a href="#Contact" class="headerlink" title="Contact"></a>Contact</h3><ul><li><strong>For inquiries, please contact:<a href="mailto:&#x61;&#118;&#x6f;&#110;&#98;&#x61;&#115;&#x65;&#50;&#x31;&#x33;&#x40;&#111;&#117;&#x74;&#x6c;&#111;&#x6f;&#107;&#x2e;&#x63;&#111;&#x6d;">avonbase213@outlook.com</a></strong></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apple Safari Web Content Sandbox Bypass Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-24201</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Apple Safari Web Content Sandbox Bypass Vulnerability是一个严重的权限绕过漏洞，允许攻击者通过越界写入绕过Safari的Web内容沙箱。该漏洞的CVE ID为CVE-2025-24201，影响程度为严重，CVSS评分为8.8。目前尚无官方补丁可用。</p><p><strong>产品厂商：</strong> Apple</p><p><strong>产品名称：</strong> Safari</p><p><strong>来源：</strong> <a href="https://github.com/AvonBorn/CVE-2025-24201-Exploit">https://github.com/AvonBorn/CVE-2025-24201-Exploit</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-24201-Exploit"><a href="#CVE-2025-24201-Exploit" class="headerlink" title="CVE-2025-24201-Exploit"></a>CVE-2025-24201-Exploit</h2><h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>Out-of-Bounds Write Vulnerability in Apple Safari Web Content Sandbox Bypass</p><h3 id="Exploit"><a href="#Exploit" class="headerlink" title="Exploit:"></a>Exploit:</h3><h4 id="Download-here"><a href="#Download-here" class="headerlink" title="Download here"></a><a href="https://tinyurl.com/mw54dudy">Download here</a></h4><h3 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h3><ul><li><strong>CVE ID</strong>: CVE-2025-24201  <img align="right" alt="Enderman" width="180" src="https://github.com/AvonBorn/Profile/blob/9ff2d6ec8dbc3a47a18a7e121330828838a9cf38/enderman.gif" /></li><li><strong>Published</strong>: 03&#x2F;11&#x2F;2025</li><li><strong>Impact</strong>: Critical</li><li><strong>Exploit Availability</strong>: Not public, only private.</li><li><strong>CVSS</strong>: 8.8</li><li><strong>Patch Available:  (No official patch yet)</strong></li></ul><h3 id="Contact"><a href="#Contact" class="headerlink" title="Contact"></a>Contact</h3><ul><li><strong>For inquiries, please contact:<a href="mailto:&#97;&#118;&#111;&#x6e;&#x62;&#97;&#x73;&#x65;&#x32;&#x31;&#51;&#x40;&#111;&#117;&#116;&#108;&#111;&#x6f;&#x6b;&#x2e;&#99;&#111;&#109;">avonbase213@outlook.com</a></strong></li></ul>]]></content>
     
     
       
@@ -519,30 +546,6 @@
     <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
     
     <category term="配置问题" scheme="http://example.com/tags/%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>The Image Resizer On The Fly plugin for WordPress is vulnerable to arbitrary file deletion due to</title>
-    <link href="http://example.com/2025/06/14/github_4133973639/"/>
-    <id>http://example.com/2025/06/14/github_4133973639/</id>
-    <published>2025-06-14T10:00:06.461Z</published>
-    <updated>2025-06-14T10:00:06.458Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-gxqj-2gvr-3p2f">https://github.com/advisories/GHSA-gxqj-2gvr-3p2f</a></p><p><strong>CVSS 评分：</strong> 9.1</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6065">https://nvd.nist.gov/vuln/detail/CVE-2025-6065</a></p></li><li><p><a href="https://plugins.trac.wordpress.org/browser/image-resizer-on-the-fly/trunk/image-resizer-on-the-fly.php#L25">https://plugins.trac.wordpress.org/browser/image-resizer-on-the-fly/trunk/image-resizer-on-the-fly.php#L25</a></p></li><li><p><a href="https://wordpress.org/plugins/image-resizer-on-the-fly">https://wordpress.org/plugins/image-resizer-on-the-fly</a></p></li><li><p><a href="https://www.wordfence.com/threat-intel/vulnerabilities/id/14877ff6-e393-41a3-91c1-fe7f477297cc?source=cve">https://www.wordfence.com/threat-intel/vulnerabilities/id/14877ff6-e393-41a3-91c1-fe7f477297cc?source=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-gxqj-2gvr-3p2f">https://github.com/advisories/GHSA-gxqj-2gvr-3p2f</a></p></li></ul><p><strong>描述：</strong></p><p>The Image Resizer On The Fly plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the ‘delete’ task in all versions up to, and including, 1.1. This makes it possible for unauthenticated attackers to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php).</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-gxqj-2gvr-3p2f&quot;&gt;https://github.com/advisories/GHSA-gxqj-2gvr-3p2f&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
     
   </entry>
   
