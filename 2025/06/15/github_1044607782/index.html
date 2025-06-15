@@ -1,0 +1,751 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=light>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="lianccc">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="漏洞信息漏洞名称： Next.js Middleware Bypass Vulnerability 漏洞编号：  CVE： CVE-2025-29927  漏洞类型： 权限绕过 漏洞等级： 严重 漏洞描述： Next.js中存在一个严重漏洞（CVE-2025-29927），允许攻击者通过操纵内部标头x-middleware-subrequest来绕过中间件的安全检查，从而获得对受保护路由的未授权访">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Next.js Middleware Bypass Vulnerability">
+<meta property="og:url" content="http://example.com/2025/06/15/github_1044607782/index.html">
+<meta property="og:site_name" content="liancc&#39; infos blog">
+<meta property="og:description" content="漏洞信息漏洞名称： Next.js Middleware Bypass Vulnerability 漏洞编号：  CVE： CVE-2025-29927  漏洞类型： 权限绕过 漏洞等级： 严重 漏洞描述： Next.js中存在一个严重漏洞（CVE-2025-29927），允许攻击者通过操纵内部标头x-middleware-subrequest来绕过中间件的安全检查，从而获得对受保护路由的未授权访">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-06-15T15:45:18.182Z">
+<meta property="article:modified_time" content="2025-06-15T15:45:18.178Z">
+<meta property="article:author" content="lianccc">
+<meta property="article:tag" content="CVE-2025:github search">
+<meta property="article:tag" content="权限绕过">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>Next.js Middleware Bypass Vulnerability - liancc&#39; infos blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="liancc' infos blog" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Craw Info</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Next.js Middleware Bypass Vulnerability"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-06-15 15:45" pubdate>
+          2025年6月15日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          350 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          3 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Next.js Middleware Bypass Vulnerability</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Next.js Middleware Bypass Vulnerability</p>
+<p><strong>漏洞编号：</strong></p>
+<ul>
+<li><strong>CVE：</strong> CVE-2025-29927</li>
+</ul>
+<p><strong>漏洞类型：</strong> 权限绕过</p>
+<p><strong>漏洞等级：</strong> 严重</p>
+<p><strong>漏洞描述：</strong> Next.js中存在一个严重漏洞（CVE-2025-29927），允许攻击者通过操纵内部标头<code>x-middleware-subrequest</code>来绕过中间件的安全检查，从而获得对受保护路由的未授权访问。影响版本包括11.1.4至12.3.4、13.0.0至13.5.8、14.0.0至14.2.24和15.0.0至15.2.2。建议用户更新到修复版本或实施二次验证以防止此漏洞。</p>
+<p><strong>产品厂商：</strong> Next.js</p>
+<p><strong>产品名称：</strong> Next.js</p>
+<p><strong>影响版本：</strong> 11.1.4 - 12.3.4, 13.0.0 - 13.5.8, 14.0.0 - 14.2.24, 15.0.0 - 15.2.2</p>
+<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/KamalideenAK/poc-cve-2025-29927">https://github.com/KamalideenAK/poc-cve-2025-29927</a></p>
+<p><strong>类型：</strong> CVE-2025:github search</p>
+<h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul>
+<li>.eslintrc.json</li>
+<li>.gitignore</li>
+<li>README.md</li>
+<li>app</li>
+<li>exploit.js</li>
+<li>middleware.ts</li>
+<li>next.config.js</li>
+<li>package-lock.json</li>
+<li>package.json</li>
+<li>public</li>
+<li>tailwind.config.ts</li>
+<li>tsconfig.json</li>
+</ul>
+<h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="Next-js-Middleware-Bypass-CVE-2025-29927-Proof-of-Concept"><a href="#Next-js-Middleware-Bypass-CVE-2025-29927-Proof-of-Concept" class="headerlink" title="Next.js Middleware Bypass (CVE-2025-29927) Proof of Concept"></a>Next.js Middleware Bypass (CVE-2025-29927) Proof of Concept</h2><p>This repository contains a <strong>proof of concept (POC)</strong> for <strong>CVE-2025-29927</strong>, a critical vulnerability in <strong>Next.js</strong> that allows attackers to bypass authorization checks implemented in middleware.</p>
+<h3 id="📋-Table-of-Contents"><a href="#📋-Table-of-Contents" class="headerlink" title="📋 Table of Contents"></a>📋 Table of Contents</h3><ol>
+<li><a href="#running-the-poc-application">Running the POC Application</a></li>
+<li><a href="#using-the-exploit-script">Using the Exploit Script</a></li>
+<li><a href="#how-to-fix-the-vulnerability">How to Fix the Vulnerability</a></li>
+<li><a href="#vulnerability-details">Vulnerability Details</a></li>
+</ol>
+<hr>
+<h3 id="Running-the-POC-Application"><a href="#Running-the-POC-Application" class="headerlink" title="Running the POC Application"></a>Running the POC Application</h3><p>This Next.js application demonstrates the vulnerability with a protected dashboard route.</p>
+<h4 id="Setup-Instructions"><a href="#Setup-Instructions" class="headerlink" title="Setup Instructions"></a>Setup Instructions</h4><ol>
+<li>Clone the repository</li>
+<li>Install and run: <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install<br>npm run build<br>npm run start<br></code></pre></td></tr></table></figure></li>
+<li>Access <a target="_blank" rel="noopener" href="http://localhost:3000/">http://localhost:3000</a> in your browser</li>
+<li>Try accessing the protected dashboard at &#x2F;dashboard</li>
+</ol>
+<hr>
+<h3 id="Using-the-Exploit-Script"><a href="#Using-the-Exploit-Script" class="headerlink" title="Using the Exploit Script"></a>Using the Exploit Script</h3><p>The exploit script can test any Next.js application for this vulnerability.</p>
+<h4 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm run exploit &lt;target-url&gt;<br></code></pre></td></tr></table></figure>
+
+<h4 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm run exploit http://localhost:3000/dashboard<br></code></pre></td></tr></table></figure>
+
+<h4 id="How-it-Works"><a href="#How-it-Works" class="headerlink" title="How it Works"></a>How it Works</h4><p>The exploit tool:</p>
+<ol>
+<li>Takes a target URL as input</li>
+<li>Makes a normal request to check if the route is protected</li>
+<li>Attempts to bypass middleware using the <code>x-middleware-subrequest</code> header</li>
+<li>Compares responses to determine vulnerability</li>
+</ol>
+<h4 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash">=== Next.js CVE-2025-29927 Middleware Bypass Tester ===<br>Target: http://localhost:3000/dashboard<br><br>Testing vulnerability...<br>Normal request status: 307<br>Bypass request status: 200<br><br>⚠️  VULNERABLE<br>The route is protected but accessible with the bypass header<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="How-to-Fix-the-Vulnerability"><a href="#How-to-Fix-the-Vulnerability" class="headerlink" title="How to Fix the Vulnerability"></a>How to Fix the Vulnerability</h3><p>A fix implementation is available in the <a target="_blank" rel="noopener" href="https://github.com/kOaDT/poc-cve-2025-29927/tree/how-to-fix">how-to-fix branch</a>.</p>
+<h4 id="Quick-Fixes"><a href="#Quick-Fixes" class="headerlink" title="Quick Fixes"></a>Quick Fixes</h4><ol>
+<li><p><strong>Update Next.js Version</strong> (Recommended)</p>
+<ul>
+<li>Update to one of these patched versions:<ul>
+<li>Next.js 15.x → <strong>15.2.3</strong></li>
+<li>Next.js 14.x → <strong>14.2.25</strong></li>
+<li>Next.js 13.x → <strong>13.5.9</strong></li>
+<li>Next.js 12.x → <strong>12.3.5</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Implement Secondary Validation</strong></p>
+<ul>
+<li>Add authentication checks in your API routes&#x2F;pages</li>
+<li>Don’t rely solely on middleware for security</li>
+</ul>
+</li>
+</ol>
+<h4 id="Sample-Output-1"><a href="#Sample-Output-1" class="headerlink" title="Sample Output"></a>Sample Output</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs bash">=== Next.js CVE-2025-29927 Middleware Bypass Tester ===<br><br>Target: http://localhost:3000/dashboard<br><br>Testing vulnerability...<br>Making request without bypass header...<br>Making request with bypass header...<br>Normal request status: 307<br>Bypass request status: 307<br><br>✓ NOT VULNERABLE - Protected Route<br>The route is protected and the bypass attempt was unsuccessful<br>Normal request redirected to: /<br>Bypass request redirected to: /<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="Vulnerability-Details"><a href="#Vulnerability-Details" class="headerlink" title="Vulnerability Details"></a>Vulnerability Details</h3><h4 id="CVE-Information"><a href="#CVE-Information" class="headerlink" title="CVE Information"></a>CVE Information</h4><ul>
+<li><strong>CVE ID</strong>: CVE-2025-29927</li>
+<li><strong>Affected Versions</strong>:<ul>
+<li>13.0.0 - 13.5.8</li>
+<li>14.0.0 - 14.2.24</li>
+<li>15.0.0 - 15.2.2</li>
+<li>11.1.4 - 12.3.4</li>
+</ul>
+</li>
+</ul>
+<h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>Next.js uses an internal header <code>x-middleware-subrequest</code> to prevent recursive requests. This vulnerability allows attackers to <strong>bypass middleware security checks</strong> by manipulating this header.</p>
+<h4 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h4><ul>
+<li>Unauthorized access to protected routes</li>
+<li>Bypass of authentication checks</li>
+<li>Circumvention of security middleware</li>
+</ul>
+<h4 id="Affected-Environments"><a href="#Affected-Environments" class="headerlink" title="Affected Environments"></a>Affected Environments</h4><ul>
+<li>Self-hosted Next.js applications using Middleware</li>
+</ul>
+<h4 id="References"><a href="#References" class="headerlink" title="References"></a>References</h4><ul>
+<li><a target="_blank" rel="noopener" href="https://nextjs.org/blog/cve-2025-29927">Next.js Security Advisory</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/advisories/GHSA-f82v-jwr5-mffw">GitHub Security Advisory</a></li>
+</ul>
+<hr>
+<h3 id="Disclaimer"><a href="#Disclaimer" class="headerlink" title="Disclaimer"></a>Disclaimer</h3><p>This tool is provided for educational and testing purposes only. Only use this tool on systems you own or have explicit permission to test.</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Github-Poc/" class="category-chain-item">Github Poc</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/CVE-2025-github-search/" class="print-no-link">#CVE-2025:github search</a>
+      
+        <a href="/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/" class="print-no-link">#权限绕过</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Next.js Middleware Bypass Vulnerability</div>
+      <div>http://example.com/2025/06/15/github_1044607782/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>lianccc</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年6月15日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/06/15/github_2581266026/" title="Roundcube Webmail 反序列化漏洞">
+                        <span class="hidden-mobile">Roundcube Webmail 反序列化漏洞</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
