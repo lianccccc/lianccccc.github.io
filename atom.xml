@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-15T02:00:15.821Z</updated>
+  <updated>2025-06-15T02:30:13.570Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>QTS &amp; QuTS Command Injection Vulnerability</title>
+    <link href="http://example.com/2025/06/15/github_3595880860/"/>
+    <id>http://example.com/2025/06/15/github_3595880860/</id>
+    <published>2025-06-15T02:30:13.574Z</published>
+    <updated>2025-06-15T02:30:13.570Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> QTS &amp; QuTS Command Injection Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2020-2509</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> QTS和QuTS hero因应用程序中的输入处理不当而包含命令注入漏洞，允许攻击者执行任意命令。攻击者需要发送特制的输入来利用此漏洞。</p><p><strong>产品厂商：</strong> QNAP</p><p><strong>产品名称：</strong> QTS &amp; QuTS hero</p><p><strong>搜索语法：</strong> product:”qnap”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12355">https://github.com/projectdiscovery/nuclei-templates/issues/12355</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>QTS and QuTS hero contain a command injection caused by improper input handling in the application, letting attackers execute arbitrary commands, exploit requires attacker to send crafted input.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://github.com/jbaines-r7/overkill">https://github.com/jbaines-r7/overkill</a></li><li><a href="https://vulncheck.com/xdb/533b5e83b1eb">https://vulncheck.com/xdb/533b5e83b1eb</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:jbaines-r7&#x2F;overkill.git</li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-product-qnap"><a href="#Shodan-Query-product-qnap" class="headerlink" title="Shodan Query: product:&quot;qnap&quot;"></a>Shodan Query: <code>product:&quot;qnap&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; QTS &amp;amp; QuTS Command Injection Vulner</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+  </entry>
   
   <entry>
     <title>Pulse Connect Secure Remote Code Execution Vulnerability</title>
@@ -510,33 +536,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 网安独行侠&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/AO8JpphqIWD04evcCAjP4A&quot;&gt;https://mp.weixin.qq.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="网安独行侠" scheme="http://example.com/tags/%E7%BD%91%E5%AE%89%E7%8B%AC%E8%A1%8C%E4%BE%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《How Can I Save Him》和童年的自己对话</title>
-    <link href="http://example.com/2025/06/14/weixin_2857371538/"/>
-    <id>http://example.com/2025/06/14/weixin_2857371538/</id>
-    <published>2025-06-14T14:30:48.858Z</published>
-    <updated>2025-06-14T14:30:48.853Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 网安独行侠</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/zqnUe-t6_CHF182lVIQYFA">https://mp.weixin.qq.com/s/zqnUe-t6_CHF182lVIQYFA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 网安独行侠&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/zqnUe-t6_CHF182lVIQYFA&quot;&gt;https://mp.weixin.qq.</summary>
       
     
     
