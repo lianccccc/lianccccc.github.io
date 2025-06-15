@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-15T02:30:13.570Z</updated>
+  <updated>2025-06-15T03:45:08.954Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HOD401-CVE-2023-38286</title>
+    <link href="http://example.com/2025/06/15/github_351106554/"/>
+    <id>http://example.com/2025/06/15/github_351106554/</id>
+    <published>2025-06-15T03:45:08.955Z</published>
+    <updated>2025-06-15T03:45:08.954Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> HOD401-CVE-2023-38286</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-38286</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>产品名称：</strong> HOD401</p><p><strong>来源：</strong> <a href="https://github.com/BeeChill-16/HOD401-CVE-2023-38286">https://github.com/BeeChill-16/HOD401-CVE-2023-38286</a></p><p><strong>类型：</strong> CVE-2023:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="HOD401-CVE-2023-38286"><a href="#HOD401-CVE-2023-38286" class="headerlink" title="HOD401-CVE-2023-38286"></a>HOD401-CVE-2023-38286</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; HOD401-CVE-2023-38286&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+    <category term="CVE-2023:github search" scheme="http://example.com/tags/CVE-2023-github-search/"/>
+    
+  </entry>
   
   <entry>
     <title>QTS &amp; QuTS Command Injection Vulnerability</title>
@@ -509,33 +536,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 网安独行侠&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/COJC0Mxp1O7Hs-sQU8qCag&quot;&gt;https://mp.weixin.qq.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="网安独行侠" scheme="http://example.com/tags/%E7%BD%91%E5%AE%89%E7%8B%AC%E8%A1%8C%E4%BE%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>被害的加害者，加害的被害者，人们何时开始如此彼此对待着？</title>
-    <link href="http://example.com/2025/06/14/weixin_1277037503/"/>
-    <id>http://example.com/2025/06/14/weixin_1277037503/</id>
-    <published>2025-06-14T14:30:49.174Z</published>
-    <updated>2025-06-14T14:30:49.169Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 网安独行侠</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/AO8JpphqIWD04evcCAjP4A">https://mp.weixin.qq.com/s/AO8JpphqIWD04evcCAjP4A</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 网安独行侠&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/AO8JpphqIWD04evcCAjP4A&quot;&gt;https://mp.weixin.qq.</summary>
       
     
     
