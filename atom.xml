@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-16T12:45:11.767Z</updated>
+  <updated>2025-06-16T13:00:06.656Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>A vulnerability, which was classified as critical, has been found in D-Link DIR-632 FW103B08</title>
+    <link href="http://example.com/2025/06/16/github_1624170755/"/>
+    <id>http://example.com/2025/06/16/github_1624170755/</id>
+    <published>2025-06-16T13:00:06.655Z</published>
+    <updated>2025-06-16T13:00:06.656Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-3gvh-jvc6-266h">https://github.com/advisories/GHSA-3gvh-jvc6-266h</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6121">https://nvd.nist.gov/vuln/detail/CVE-2025-6121</a></p></li><li><p><a href="https://github.com/xiaobor123/vul-finds/tree/main/vul-find-dir632-dlink-get_pure_content">https://github.com/xiaobor123/vul-finds/tree/main/vul-find-dir632-dlink-get_pure_content</a></p></li><li><p><a href="https://github.com/xiaobor123/vul-finds/tree/main/vul-find-dir632-dlink-get_pure_content#poc">https://github.com/xiaobor123/vul-finds/tree/main/vul-find-dir632-dlink-get_pure_content#poc</a></p></li><li><p><a href="https://vuldb.com/?ctiid.312590">https://vuldb.com/?ctiid.312590</a></p></li><li><p><a href="https://vuldb.com/?id.312590">https://vuldb.com/?id.312590</a></p></li><li><p><a href="https://vuldb.com/?submit.592574">https://vuldb.com/?submit.592574</a></p></li><li><p><a href="https://www.dlink.com/">https://www.dlink.com</a></p></li><li><p><a href="https://github.com/advisories/GHSA-3gvh-jvc6-266h">https://github.com/advisories/GHSA-3gvh-jvc6-266h</a></p></li></ul><p><strong>描述：</strong></p><p>A vulnerability, which was classified as critical, has been found in D-Link DIR-632 FW103B08. Affected by this issue is the function get_pure_content of the component HTTP POST Request Handler. The manipulation of the argument Content-Length leads to stack-based buffer overflow. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. This vulnerability only affects products that are no longer supported by the maintainer.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-3gvh-jvc6-266h&quot;&gt;https://github.com/advisories/GHSA-3gvh-jvc6-266h&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>Mitel MiCollab Unified Communications Server (UCS) 版本信息泄露漏洞</title>
@@ -509,33 +533,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 安恒信息CERT&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/Tm0Q8ei0C4XL6YgDIz-3kg&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="安恒信息CERT" scheme="http://example.com/tags/%E5%AE%89%E6%81%92%E4%BF%A1%E6%81%AFCERT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>小心“银狐”！别让财务人员成为银狐病毒的“突破口 ”</title>
-    <link href="http://example.com/2025/06/16/weixin_3422375941/"/>
-    <id>http://example.com/2025/06/16/weixin_3422375941/</id>
-    <published>2025-06-16T08:07:25.365Z</published>
-    <updated>2025-06-16T08:07:25.360Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 安恒信息CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/2H2Dwn51L2dINaCGlQKsuA">https://mp.weixin.qq.com/s/2H2Dwn51L2dINaCGlQKsuA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 安恒信息CERT&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/2H2Dwn51L2dINaCGlQKsuA&quot;&gt;https://mp.weixin.</summary>
       
     
     
