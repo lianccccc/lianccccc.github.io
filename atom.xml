@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-16T22:15:11.642Z</updated>
+  <updated>2025-06-16T22:45:14.031Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WordPress Likes and Dislikes Plugin SQL注入漏洞</title>
+    <link href="http://example.com/2025/06/16/github_733013338/"/>
+    <id>http://example.com/2025/06/16/github_733013338/</id>
+    <published>2025-06-16T22:45:14.032Z</published>
+    <updated>2025-06-16T22:45:14.031Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> WordPress Likes and Dislikes Plugin SQL注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-5287</li></ul><p><strong>漏洞类型：</strong> SQL注入</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> WordPress Likes and Dislikes Plugin ≤ 1.0.0版本中存在一个未认证的SQL注入漏洞，攻击者可以通过<code>my_likes_dislikes_action</code> AJAX动作中的<code>post</code>参数进行基于时间的盲注，可能导致敏感数据泄露或进一步的利用。</p><p><strong>产品厂商：</strong> WordPress</p><p><strong>产品名称：</strong> WordPress Likes and Dislikes Plugin</p><p><strong>影响版本：</strong> ≤ 1.0.0</p><p><strong>搜索语法：</strong> body&#x3D;”&#x2F;wp-admin&#x2F;admin-ajax.php” or body&#x3D;”my_likes_dislikes_action”</p><p><strong>来源：</strong> <a href="https://github.com/RootHarpy/CVE-2025-5287">https://github.com/RootHarpy/CVE-2025-5287</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2025-5287.py</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-5287-PoC"><a href="#CVE-2025-5287-PoC" class="headerlink" title="CVE-2025-5287 PoC"></a>CVE-2025-5287 PoC</h2><p>Unauthenticated SQL Injection exploit for <strong>WordPress Likes and Dislikes Plugin ≤ 1.0.0</strong></p><hr><h3 id="📖-Description"><a href="#📖-Description" class="headerlink" title="📖 Description"></a>📖 Description</h3><p>This Python script is a proof-of-concept (PoC) exploit for <strong>CVE-2025-5287</strong>, targeting a vulnerability in the <strong>WordPress Likes and Dislikes Plugin ≤ 1.0.0</strong>.<br>The vulnerability allows unauthenticated attackers to perform time-based blind SQL injection via the <code>post</code> parameter in the <code>my_likes_dislikes_action</code> AJAX action, potentially leading to sensitive data exposure or further exploitation.</p><hr><h3 id="📌-Usage"><a href="#📌-Usage" class="headerlink" title="📌 Usage"></a>📌 Usage</h3><h4 id="▶️-Requirements"><a href="#▶️-Requirements" class="headerlink" title="▶️ Requirements:"></a>▶️ Requirements:</h4><ul><li>Python 3</li><li><code>requests</code> library</li></ul><p>Install required libraries:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install requests<br></code></pre></td></tr></table></figure><hr><p><strong>Arguments:</strong></p><ul><li><code>--url</code> &#x2F; <code>-u</code> : Target WordPress site URL (with HTTP&#x2F;HTTPS)</li><li><code>--sleep</code> &#x2F; <code>-s</code> : Sleep time (seconds) for detecting SQL delay (default: 5)</li></ul><hr><h4 id="▶️-Run-the-Exploit"><a href="#▶️-Run-the-Exploit" class="headerlink" title="▶️ Run the Exploit:"></a>▶️ Run the Exploit:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 CVE-2025-5287-poc.py --url http://target.com<br></code></pre></td></tr></table></figure><p>Or with a custom sleep time:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 CVE-2025-5287-poc.py --url http://target.com --<span class="hljs-built_in">sleep</span> 7<br></code></pre></td></tr></table></figure><hr><h3 id="🔍-Finding-Targets"><a href="#🔍-Finding-Targets" class="headerlink" title="🔍 Finding Targets"></a>🔍 Finding Targets</h3><p>You can use <strong>Fofa</strong> to discover potentially vulnerable WordPress installations running the plugin.</p><p><strong>Fofa Dork:</strong></p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">body=&quot;/wp-admin/admin-ajax.php&quot;<br></code></pre></td></tr></table></figure><p>Or to narrow down plugin-specific references:</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">body=&quot;my_likes_dislikes_action&quot;<br></code></pre></td></tr></table></figure><p>Search on: <a href="https://fofa.info/">https://fofa.info</a></p><hr><h3 id="👨‍💻-Author"><a href="#👨‍💻-Author" class="headerlink" title="👨‍💻 Author"></a>👨‍💻 Author</h3><p><strong>Md Shoriful Islam (RootHarpy)</strong></p><hr><h3 id="📜-Disclaimer"><a href="#📜-Disclaimer" class="headerlink" title="📜 Disclaimer"></a>📜 Disclaimer</h3><p>This tool is created for educational and authorized penetration testing purposes only. Unauthorized use of this tool against systems without explicit permission is illegal.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; WordPress Likes and Dislikes Plugin SQL</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="SQL注入" scheme="http://example.com/tags/SQL%E6%B3%A8%E5%85%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>Roundcube 反序列化漏洞</title>
@@ -521,30 +547,6 @@
     <category term="CVE-2023:github search" scheme="http://example.com/tags/CVE-2023-github-search/"/>
     
     <category term="目录穿越" scheme="http://example.com/tags/%E7%9B%AE%E5%BD%95%E7%A9%BF%E8%B6%8A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>A vulnerability, which was classified as critical, has been found in D-Link DIR-632 FW103B08</title>
-    <link href="http://example.com/2025/06/16/github_1624170755/"/>
-    <id>http://example.com/2025/06/16/github_1624170755/</id>
-    <published>2025-06-16T13:00:06.655Z</published>
-    <updated>2025-06-16T13:00:06.656Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-3gvh-jvc6-266h">https://github.com/advisories/GHSA-3gvh-jvc6-266h</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6121">https://nvd.nist.gov/vuln/detail/CVE-2025-6121</a></p></li><li><p><a href="https://github.com/xiaobor123/vul-finds/tree/main/vul-find-dir632-dlink-get_pure_content">https://github.com/xiaobor123/vul-finds/tree/main/vul-find-dir632-dlink-get_pure_content</a></p></li><li><p><a href="https://github.com/xiaobor123/vul-finds/tree/main/vul-find-dir632-dlink-get_pure_content#poc">https://github.com/xiaobor123/vul-finds/tree/main/vul-find-dir632-dlink-get_pure_content#poc</a></p></li><li><p><a href="https://vuldb.com/?ctiid.312590">https://vuldb.com/?ctiid.312590</a></p></li><li><p><a href="https://vuldb.com/?id.312590">https://vuldb.com/?id.312590</a></p></li><li><p><a href="https://vuldb.com/?submit.592574">https://vuldb.com/?submit.592574</a></p></li><li><p><a href="https://www.dlink.com/">https://www.dlink.com</a></p></li><li><p><a href="https://github.com/advisories/GHSA-3gvh-jvc6-266h">https://github.com/advisories/GHSA-3gvh-jvc6-266h</a></p></li></ul><p><strong>描述：</strong></p><p>A vulnerability, which was classified as critical, has been found in D-Link DIR-632 FW103B08. Affected by this issue is the function get_pure_content of the component HTTP POST Request Handler. The manipulation of the argument Content-Length leads to stack-based buffer overflow. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. This vulnerability only affects products that are no longer supported by the maintainer.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-3gvh-jvc6-266h&quot;&gt;https://github.com/advisories/GHSA-3gvh-jvc6-266h&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
     
   </entry>
   
