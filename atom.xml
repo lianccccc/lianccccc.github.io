@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-16T10:15:05.712Z</updated>
+  <updated>2025-06-16T10:51:29.015Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>美国空军加油机舰队刚刚部署到大西洋东部，引发猜测</title>
+    <link href="http://example.com/2025/06/16/weixin_1803357679/"/>
+    <id>http://example.com/2025/06/16/weixin_1803357679/</id>
+    <published>2025-06-16T10:51:29.016Z</published>
+    <updated>2025-06-16T10:51:29.015Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/nNarYp8tZHYVCPOT_1zRSA">https://mp.weixin.qq.com/s/nNarYp8tZHYVCPOT_1zRSA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/nNarYp8tZHYVCPOT_1zRSA&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>伊朗和以色列境内的遇袭地点地理位置</title>
+    <link href="http://example.com/2025/06/16/weixin_3104237671/"/>
+    <id>http://example.com/2025/06/16/weixin_3104237671/</id>
+    <published>2025-06-16T10:51:27.786Z</published>
+    <updated>2025-06-16T10:51:27.783Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/d43HXYi77Jxrw501MeZcig">https://mp.weixin.qq.com/s/d43HXYi77Jxrw501MeZcig</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/d43HXYi77Jxrw501MeZcig&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>谷歌应用商店暗藏隐患，新型钓鱼应用绕过审核防线</title>
@@ -478,59 +532,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; Nday Poc&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/4eYZgI-wOYtSirBG40lSDg&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="Nday Poc" scheme="http://example.com/tags/Nday-Poc/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>FlexPaper Remote Code Execution Vulnerability</title>
-    <link href="http://example.com/2025/06/16/github_3559610032/"/>
-    <id>http://example.com/2025/06/16/github_3559610032/</id>
-    <published>2025-06-16T02:30:16.127Z</published>
-    <updated>2025-06-16T02:30:16.127Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> FlexPaper Remote Code Execution Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2018-11686</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> FlexPaper (FlowPaper) 2.3.6 版本中的 setup.php 和 change_config.php 文件存在不安全处理，导致远程攻击者可以执行任意代码。利用此漏洞需要能够访问这些脚本。</p><p><strong>产品厂商：</strong> FlexPaper</p><p><strong>产品名称：</strong> FlexPaper (FlowPaper)</p><p><strong>影响版本：</strong> 2.3.6</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12369">https://github.com/projectdiscovery/nuclei-templates/issues/12369</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>FlexPaper (FlowPaper) 2.3.6 contains a remote code execution caused by insecure handling in setup.php and change_config.php, letting remote attackers execute arbitrary code, exploit requires access to these scripts.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://redtimmysec.wordpress.com/2019/03/07/flexpaper-remote-code-execution">https://redtimmysec.wordpress.com/2019/03/07/flexpaper-remote-code-execution</a></li><li><a href="https://vulncheck.com/xdb/b67f601a7711">https://vulncheck.com/xdb/b67f601a7711</a></li><li><a href="https://github.com/mpgn/CVE-2018-11686">https://github.com/mpgn/CVE-2018-11686</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:mpgn&#x2F;CVE-2018-11686.git</li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-NA"><a href="#Shodan-Query-NA" class="headerlink" title="Shodan Query: NA"></a>Shodan Query: <code>NA</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; FlexPaper Remote Code Execution Vulnera</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>神州数码 DCME-320出口网关 black_listphp 任意文件读取漏洞</title>
-    <link href="http://example.com/2025/06/16/weixin_1172692726/"/>
-    <id>http://example.com/2025/06/16/weixin_1172692726/</id>
-    <published>2025-06-16T02:27:44.668Z</published>
-    <updated>2025-06-16T02:27:44.664Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> Nday Poc</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/XaIsDrs0mvSQGJgkB8x8mA">https://mp.weixin.qq.com/s/XaIsDrs0mvSQGJgkB8x8mA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; Nday Poc&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/XaIsDrs0mvSQGJgkB8x8mA&quot;&gt;https://mp.weixin.</summary>
       
     
     
