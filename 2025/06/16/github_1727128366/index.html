@@ -19,26 +19,26 @@
   <meta name="author" content="lianccc">
   <meta name="keywords" content="">
   
-    <meta name="description" content="漏洞信息漏洞名称： Roundcube 反序列化漏洞 漏洞编号：  CVE： CVE-2025-49113  漏洞类型： 反序列化 漏洞等级： 高危 漏洞描述： Roundcube邮件系统中存在一个反序列化漏洞，允许攻击者在登录后执行远程命令。该漏洞影响版本1.5.10及以下和1.6.10及以下。攻击者可以通过构造恶意的_from参数，利用session-&gt;append()函数的不当使用，实">
+    <meta name="description" content="漏洞信息漏洞名称： Roundcube 反序列化漏洞 漏洞编号：  CVE： CVE-2025-49113  漏洞类型： 反序列化 漏洞等级： 高危 漏洞描述： Roundcube邮件系统中存在一个反序列化漏洞，允许攻击者在登录后执行远程命令。受影响的版本包括1.5.10及以下和1.6.10及以下。漏洞源于program&#x2F;actions&#x2F;settings&#x2F;upload.php文件中对_from参数">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Roundcube 反序列化漏洞">
-<meta property="og:url" content="http://example.com/2025/06/16/github_1978749913/index.html">
+<meta property="og:url" content="http://example.com/2025/06/16/github_1727128366/index.html">
 <meta property="og:site_name" content="liancc&#39; infos blog">
-<meta property="og:description" content="漏洞信息漏洞名称： Roundcube 反序列化漏洞 漏洞编号：  CVE： CVE-2025-49113  漏洞类型： 反序列化 漏洞等级： 高危 漏洞描述： Roundcube邮件系统中存在一个反序列化漏洞，允许攻击者在登录后执行远程命令。该漏洞影响版本1.5.10及以下和1.6.10及以下。攻击者可以通过构造恶意的_from参数，利用session-&gt;append()函数的不当使用，实">
+<meta property="og:description" content="漏洞信息漏洞名称： Roundcube 反序列化漏洞 漏洞编号：  CVE： CVE-2025-49113  漏洞类型： 反序列化 漏洞等级： 高危 漏洞描述： Roundcube邮件系统中存在一个反序列化漏洞，允许攻击者在登录后执行远程命令。受影响的版本包括1.5.10及以下和1.6.10及以下。漏洞源于program&#x2F;actions&#x2F;settings&#x2F;upload.php文件中对_from参数">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/Pastedimage20250616175835.png">
-<meta property="og:image" content="http://example.com/Pastedimage20250616180500.png">
-<meta property="og:image" content="http://example.com/Pastedimage20250616180745.png">
-<meta property="og:image" content="http://example.com/Pastedimage20250616180844.png">
-<meta property="og:image" content="http://example.com/Pastedimage20250616181115.png">
-<meta property="og:image" content="http://example.com/Pastedimage20250616181246.png">
-<meta property="article:published_time" content="2025-06-16T21:45:22.158Z">
-<meta property="article:modified_time" content="2025-06-16T21:45:22.160Z">
+<meta property="og:image" content="http://example.com/images/Pastedimage20250616175835.png">
+<meta property="og:image" content="http://example.com/images/Pastedimage20250616180500.png">
+<meta property="og:image" content="http://example.com/images/Pastedimage20250616180745.png">
+<meta property="og:image" content="http://example.com/images/Pastedimage20250616180844.png">
+<meta property="og:image" content="http://example.com/images/Pastedimage20250616181115.png">
+<meta property="og:image" content="http://example.com/images/Pastedimage20250616181246.png">
+<meta property="article:published_time" content="2025-06-16T22:15:11.645Z">
+<meta property="article:modified_time" content="2025-06-16T22:15:11.642Z">
 <meta property="article:author" content="lianccc">
 <meta property="article:tag" content="反序列化">
 <meta property="article:tag" content="CVE-2025:github search">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/Pastedimage20250616175835.png">
+<meta name="twitter:image" content="http://example.com/images/Pastedimage20250616175835.png">
   
   
   
@@ -220,7 +220,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-06-16 21:45" pubdate>
+        <time datetime="2025-06-16 22:15" pubdate>
           2025年6月16日 晚上
         </time>
       </span>
@@ -232,7 +232,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          512 字
+          515 字
         
       </span>
     
@@ -292,20 +292,15 @@
 </ul>
 <p><strong>漏洞类型：</strong> 反序列化</p>
 <p><strong>漏洞等级：</strong> 高危</p>
-<p><strong>漏洞描述：</strong> Roundcube邮件系统中存在一个反序列化漏洞，允许攻击者在登录后执行远程命令。该漏洞影响版本1.5.10及以下和1.6.10及以下。攻击者可以通过构造恶意的_from参数，利用session-&gt;append()函数的不当使用，实现远程代码执行。</p>
+<p><strong>漏洞描述：</strong> Roundcube邮件系统中存在一个反序列化漏洞，允许攻击者在登录后执行远程命令。受影响的版本包括1.5.10及以下和1.6.10及以下。漏洞源于<code>program/actions/settings/upload.php</code>文件中对<code>_from</code>参数的处理不当，导致攻击者可以通过构造特定的请求执行任意代码。</p>
 <p><strong>产品厂商：</strong> Roundcube</p>
 <p><strong>产品名称：</strong> Roundcube</p>
 <p><strong>影响版本：</strong> ≤ 1.5.10 &#x2F; 1.6.10</p>
-<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/5kr1pt/CVE-2025-49113">https://github.com/5kr1pt/CVE-2025-49113</a></p>
+<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/5kr1pt/WriteUp-Roundcube_CVE-2025-49113">https://github.com/5kr1pt/WriteUp-Roundcube_CVE-2025-49113</a></p>
 <p><strong>类型：</strong> CVE-2025:github search</p>
 <h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul>
-<li>Pastedimage20250616175835.png</li>
-<li>Pastedimage20250616180500.png</li>
-<li>Pastedimage20250616180745.png</li>
-<li>Pastedimage20250616180844.png</li>
-<li>Pastedimage20250616181115.png</li>
-<li>Pastedimage20250616181246.png</li>
 <li>README.md</li>
+<li>images</li>
 </ul>
 <h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-49113-–-dez-anos-“em-silencio”-ate-virar-RCE-no-Roundcube"><a href="#CVE-2025-49113-–-dez-anos-“em-silencio”-ate-virar-RCE-no-Roundcube" class="headerlink" title="CVE-2025-49113 – dez anos “em silêncio” até virar RCE no Roundcube"></a>CVE-2025-49113 – dez anos “em silêncio” até virar RCE no Roundcube</h2><blockquote>
 <p><strong>Impacto</strong>: execução remota de comandos pós-login (CVSS 9.9)<br><strong>Versões afetadas</strong>: ≤ 1.5.10 &#x2F; 1.6.10<br><strong>Patched</strong>: 1.5.11 e 1.6.11</p>
@@ -364,14 +359,14 @@
 <li><p>Acessar <code>http://MACHINE_IP/roundcube</code> com:</p>
 <p> <code>usuário: ellieptic</code><br> <code>senha: ChangeMe123</code></p>
 <p> Isso vai funcionar e vai logar normalmente:</p>
-<p><img src="/Pastedimage20250616175835.png" srcset="/img/loading.gif" lazyload alt="Tela de login"></p>
+<p><img src="/images/Pastedimage20250616175835.png" srcset="/img/loading.gif" lazyload alt="Tela de login"></p>
 </li>
 </ol>
 <hr>
 <h5 id="2-Montar-o-exploit"><a href="#2-Montar-o-exploit" class="headerlink" title="2. Montar o exploit"></a>2. Montar o exploit</h5><p>Após verificar que está tudo up, vamos executar o exploit, para isso vamos acessar a PoC postada no github informada anteriormente e fazer um gitclone:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span> tmp<br><span class="hljs-built_in">cd</span> tmp<br>git <span class="hljs-built_in">clone</span> https://github.com/fearsoff-org/CVE-2025-49113<br><span class="hljs-built_in">cd</span> CVE-2025-49113<br></code></pre></td></tr></table></figure>
 
-<p><img src="/Pastedimage20250616180500.png" srcset="/img/loading.gif" lazyload alt="exploit"> </p>
+<p><img src="/images/Pastedimage20250616180500.png" srcset="/img/loading.gif" lazyload alt="exploit"> </p>
 <hr>
 <h5 id="3-Preparar-o-payload"><a href="#3-Preparar-o-payload" class="headerlink" title="3. Preparar o payload"></a>3. Preparar o payload</h5><p>O uso do payload é simples, basta criar o bind shell e apontar para uma porta com o file .php seguindo o usage abaixo:</p>
 <p>php CVE-2025-49113.php &lt;<code>site</code>&gt; &lt;<code>user</code>&gt; &lt;<code>senha</code>&gt; “&lt;<code>bind shell</code>&gt;”</p>
@@ -380,23 +375,22 @@
 <blockquote>
 <p>Às vezes ele mostra erro de CSRF; ignore e siga para o próximo passo,<br>porque o comando costuma ter sido executado mesmo assim.</p>
 </blockquote>
-<p><img src="/Pastedimage20250616180745.png" srcset="/img/loading.gif" lazyload alt="exploit"> </p>
+<p><img src="/images/Pastedimage20250616180745.png" srcset="/img/loading.gif" lazyload alt="exploit"> </p>
 <hr>
 <h5 id="4-Conectar-na-shell"><a href="#4-Conectar-na-shell" class="headerlink" title="4. Conectar na shell"></a>4. Conectar na shell</h5><p>Se a bind shell deu certo, ela ta escutando na porta 1337 que passamos, so fazermos a conexão nela agora:</p>
 <p><code>nc MACHINE_IP 1337</code></p>
 <p>Shell obtida.</p>
-<p><img src="/Pastedimage20250616180844.png" srcset="/img/loading.gif" lazyload alt="shell"> </p>
+<p><img src="/images/Pastedimage20250616180844.png" srcset="/img/loading.gif" lazyload alt="shell"> </p>
 <hr>
 <h5 id="5-Respondendo-as-questoes"><a href="#5-Respondendo-as-questoes" class="headerlink" title="5. Respondendo as questões"></a>5. Respondendo as questões</h5><h4 id="Questoes-e-respostas"><a href="#Questoes-e-respostas" class="headerlink" title="Questões e respostas"></a>Questões e respostas</h4><ol>
 <li><strong>Usuário Maggie</strong><br> <em>Pergunta:</em> Um dos usuários tem o primeiro nome <strong>Maggie</strong>. Qual é o sobrenome dela?<br> <em>Resposta:</em> <code>Byte</code></li>
 </ol>
 <p>Para resolver essa questão podiamos dar um cat em &#x2F;etc&#x2F;passwd grepando o usuário da maggie, ou simplesmente dando um <code>ls</code>em <code>/home</code></p>
-<p><img src="/Pastedimage20250616181115.png" srcset="/img/loading.gif" lazyload alt="1"> </p>
+<p>   <img src="/images/Pastedimage20250616181115.png" srcset="/img/loading.gif" lazyload alt="1">    </p>
 <ol start="2">
-<li><p><strong>Flag em &#x2F;etc</strong><br> <em>Pergunta:</em> Qual é o valor do sinalizador salvo em <code>/etc</code>?<br> <em>Resposta:</em> <code>THM&#123;ICE_CUBE_DESERIALISATION&#125;</code><br> Para resolver isso, dei um <code>cat /etc/flag*</code> e por sorte o nome do arquivo era flag e com isso conseguimos capturar.</p>
-<p> <img src="/Pastedimage20250616181246.png" srcset="/img/loading.gif" lazyload alt="2"></p>
-</li>
+<li><strong>Flag em &#x2F;etc</strong><br> <em>Pergunta:</em> Qual é o valor do sinalizador salvo em <code>/etc</code>?<br> <em>Resposta:</em> <code>THM&#123;ICE_CUBE_DESERIALISATION&#125;</code></li>
 </ol>
+<p>Para resolver isso, dei um <code>cat /etc/flag*</code> e por sorte o nome do arquivo era flag e com isso conseguimos capturar.<br>	<br>  <img src="/images/Pastedimage20250616181246.png" srcset="/img/loading.gif" lazyload alt="2"> </p>
 <hr>
 <h3 id="7-–-Referencias"><a href="#7-–-Referencias" class="headerlink" title="7 – Referências"></a>7 – Referências</h3><ul>
 <li><p>Commit 1.6.11 – <a target="_blank" rel="noopener" href="https://github.com/roundcube/roundcubemail/commit/0376f69e958a8fef7f6f09e352c541b4e7729c4d">https://github.com/roundcube/roundcubemail/commit/0376f69e958a8fef7f6f09e352c541b4e7729c4d</a></p>
@@ -460,7 +454,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>Roundcube 反序列化漏洞</div>
-      <div>http://example.com/2025/06/16/github_1978749913/</div>
+      <div>http://example.com/2025/06/16/github_1727128366/</div>
     </div>
     <div class="license-meta">
       
@@ -504,18 +498,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/16/github_1727128366/" title="Roundcube 反序列化漏洞">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Roundcube 反序列化漏洞</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/16/github_4228570268/" title="BigAnt Office Messenger SQL注入漏洞">
-                        <span class="hidden-mobile">BigAnt Office Messenger SQL注入漏洞</span>
+                      <a href="/2025/06/16/github_1978749913/" title="Roundcube 反序列化漏洞">
+                        <span class="hidden-mobile">Roundcube 反序列化漏洞</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
