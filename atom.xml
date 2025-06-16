@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-16T03:24:07.147Z</updated>
+  <updated>2025-06-16T04:00:06.725Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>A vulnerability was found in UTT 进取 750W up to 50 It has been classified as critical This</title>
+    <link href="http://example.com/2025/06/16/github_175417679/"/>
+    <id>http://example.com/2025/06/16/github_175417679/</id>
+    <published>2025-06-16T04:00:06.728Z</published>
+    <updated>2025-06-16T04:00:06.725Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-h6wp-g6vw-fx8q">https://github.com/advisories/GHSA-h6wp-g6vw-fx8q</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6098">https://nvd.nist.gov/vuln/detail/CVE-2025-6098</a></p></li><li><p><a href="https://github.com/newym/cve/blob/main/utt1.md">https://github.com/newym/cve/blob/main/utt1.md</a></p></li><li><p><a href="https://github.com/newym/cve/blob/main/utt1.md#poc">https://github.com/newym/cve/blob/main/utt1.md#poc</a></p></li><li><p><a href="https://vuldb.com/?ctiid.312567">https://vuldb.com/?ctiid.312567</a></p></li><li><p><a href="https://vuldb.com/?id.312567">https://vuldb.com/?id.312567</a></p></li><li><p><a href="https://vuldb.com/?submit.589437">https://vuldb.com/?submit.589437</a></p></li><li><p><a href="https://github.com/advisories/GHSA-h6wp-g6vw-fx8q">https://github.com/advisories/GHSA-h6wp-g6vw-fx8q</a></p></li></ul><p><strong>描述：</strong></p><p>A vulnerability was found in UTT 进取 750W up to 5.0. It has been classified as critical. This affects the function strcpy of the file &#x2F;goform&#x2F;setSysAdm of the component API. The manipulation of the argument passwd1 leads to buffer overflow. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-h6wp-g6vw-fx8q&quot;&gt;https://github.com/advisories/GHSA-h6wp-g6vw-fx8q&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>金华迪加 现场大屏互动系统 redpacketphp SQL注入漏洞</title>
@@ -514,33 +538,6 @@
     
     
     <category term="huntr.com" scheme="http://example.com/tags/huntr-com/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>无题</title>
-    <link href="http://example.com/2025/06/15/weixin_3779608204/"/>
-    <id>http://example.com/2025/06/15/weixin_3779608204/</id>
-    <published>2025-06-15T16:24:29.783Z</published>
-    <updated>2025-06-15T16:24:29.780Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/-lc155m2wbD84nYmnhiVkw">https://mp.weixin.qq.com/s/-lc155m2wbD84nYmnhiVkw</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/-lc155m2wbD84nYmnhiVkw&quot;&gt;https://mp.weixin.qq.c</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
     
   </entry>
   
