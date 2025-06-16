@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-16T13:15:19.918Z</updated>
+  <updated>2025-06-16T13:45:26.247Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【AI高危漏洞】MCP Inspector未授权访问致代码执行漏洞（CVE-2025-49596）</title>
+    <link href="http://example.com/2025/06/16/weixin_3643922419/"/>
+    <id>http://example.com/2025/06/16/weixin_3643922419/</id>
+    <published>2025-06-16T13:45:26.247Z</published>
+    <updated>2025-06-16T13:45:26.247Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 飓风网络安全</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/FZ4lQ2g8l9sbY-L0rDoQ0w">https://mp.weixin.qq.com/s/FZ4lQ2g8l9sbY-L0rDoQ0w</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 飓风网络安全&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/FZ4lQ2g8l9sbY-L0rDoQ0w&quot;&gt;https://mp.weixin.qq</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="飓风网络安全" scheme="http://example.com/tags/%E9%A3%93%E9%A3%8E%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【漏洞预警】Grafana访问控制不当漏洞</title>
+    <link href="http://example.com/2025/06/16/weixin_1466866623/"/>
+    <id>http://example.com/2025/06/16/weixin_1466866623/</id>
+    <published>2025-06-16T13:45:25.518Z</published>
+    <updated>2025-06-16T13:45:25.515Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 飓风网络安全</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/nQddKPgNj3mBa0soGpZWfw">https://mp.weixin.qq.com/s/nQddKPgNj3mBa0soGpZWfw</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 飓风网络安全&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/nQddKPgNj3mBa0soGpZWfw&quot;&gt;https://mp.weixin.qq</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="飓风网络安全" scheme="http://example.com/tags/%E9%A3%93%E9%A3%8E%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>Zimbra UnRAR Path Traversal Vulnerability</title>
@@ -489,59 +543,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="奇安信 CERT" scheme="http://example.com/tags/%E5%A5%87%E5%AE%89%E4%BF%A1-CERT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【已复现】Windows SMB 权限提升漏洞(CVE-2025-33073)安全风险通告</title>
-    <link href="http://example.com/2025/06/16/weixin_3691462217/"/>
-    <id>http://example.com/2025/06/16/weixin_3691462217/</id>
-    <published>2025-06-16T09:02:50.410Z</published>
-    <updated>2025-06-16T09:02:50.406Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 奇安信 CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/V4ZZRkZnvk0KKMmgRcD6aw">https://mp.weixin.qq.com/s/V4ZZRkZnvk0KKMmgRcD6aw</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 奇安信 CERT&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/V4ZZRkZnvk0KKMmgRcD6aw&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="奇安信 CERT" scheme="http://example.com/tags/%E5%A5%87%E5%AE%89%E4%BF%A1-CERT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Cisco ISE RCE and Authorization Bypass Vulnerability</title>
-    <link href="http://example.com/2025/06/16/github_109439477/"/>
-    <id>http://example.com/2025/06/16/github_109439477/</id>
-    <published>2025-06-16T08:15:14.849Z</published>
-    <updated>2025-06-16T08:15:14.847Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Cisco ISE RCE and Authorization Bypass Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-20124, CVE-2025-20125</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Cisco ISE 存在远程代码执行（RCE）和授权绕过漏洞，攻击者可以通过发送特制的请求执行任意命令或绕过身份验证。利用这些漏洞需要管理员登录权限。</p><p><strong>产品厂商：</strong> Cisco</p><p><strong>产品名称：</strong> Cisco ISE</p><p><strong>来源：</strong> <a href="https://github.com/Yuri08loveElaina/CVE-2025-20124_and_CVE-2025-20125">https://github.com/Yuri08loveElaina/CVE-2025-20124_and_CVE-2025-20125</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>Exploit.py</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h3 id="🗒️-How-to-use"><a href="#🗒️-How-to-use" class="headerlink" title="🗒️ How to use"></a>🗒️ How to use</h3><ul><li><h2 id="cve‑20124-RCE"><a href="#cve‑20124-RCE" class="headerlink" title="cve‑20124 (RCE):"></a>cve‑20124 (RCE):</h2></li></ul><blockquote><p>python3 Exploit.py –url <a href="https://ise.example.com/">https://ise.example.com</a><br>–Session your_ISE_Session_Token –DESER-CMD “Touch &#x2F;TMP &#x2F;PWWNED”</p></blockquote><ul><li><h2 id="cve‑20125-authorized-bypass"><a href="#cve‑20125-authorized-bypass" class="headerlink" title="cve‑20125 (authorized bypass):"></a>cve‑20125 (authorized bypass):</h2></li></ul><blockquote><p>python3 Exploit.py –url <a href="https://ise.example.com/">https://ise.example.com</a><br>–Session your_ISE_Session_Token –Bbypass</p></blockquote><ul><li><p>⚠️ Important note<br>Both drive require an ISE administrator to log in (the administrator only read is enough)</p></li><li><p>This is only an example; In the actual  you need:</p></li></ul><blockquote><p>The Java utility chain is true to sequentially self -transparent CVE‑201224.</p></blockquote><blockquote><p>Final score authentication (using assumption&#x2F;API&#x2F;V1&#x2F;Admin&#x2F;*).</p></blockquote><p>🔍 Reference source<br>Cisco ADVISORY CVE‑20124 &amp; Cve‑20125 - Receive RCE level &amp; ignore the required authentication.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Cisco ISE RCE and Authorization Bypass </summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
   </entry>
   
