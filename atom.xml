@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-16T00:15:12.465Z</updated>
+  <updated>2025-06-16T00:45:10.644Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Motive eSIM Secure Connect Panel 信息泄露</title>
+    <link href="http://example.com/2025/06/16/github_3323862845/"/>
+    <id>http://example.com/2025/06/16/github_3323862845/</id>
+    <published>2025-06-16T00:45:10.649Z</published>
+    <updated>2025-06-16T00:45:10.644Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Motive eSIM Secure Connect Panel 信息泄露</p><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 检测到Motive eSIM Secure Connect Panel，可能存在信息泄露漏洞。</p><p><strong>产品厂商：</strong> motive_software_solutions</p><p><strong>产品名称：</strong> motive_esim</p><p><strong>搜索语法：</strong> inurl:”bulk-profile-operation” OR inurl:”eid-management” OR inurl:”eid-management-new”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/c2810863fe1087bc78e47d15bed9ea101eff28e5/http%2Fexposed-panels%2Fmotive-eim-panel.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/c2810863fe1087bc78e47d15bed9ea101eff28e5/http%2Fexposed-panels%2Fmotive-eim-panel.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><br><span class="hljs-attribute">id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">motive-eim-panel</span><br><br><span class="hljs-attribute">info</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Motive eSIM Secure Connect Panel - Detect</span><br>  <span class="hljs-attribute">author</span><span class="hljs-punctuation">:</span> <span class="hljs-string">miguelse</span><br>  <span class="hljs-attribute">severity</span><span class="hljs-punctuation">:</span> <span class="hljs-string">high</span><br>  <span class="hljs-attribute">description</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Motive eSIM Secure Connect Panel was detected.</span><br>  <span class="hljs-attribute">classification</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">cvss-metrics</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L</span><br>    <span class="hljs-attribute">cvss-score</span><span class="hljs-punctuation">:</span> <span class="hljs-string">8.6</span><br>    <span class="hljs-attribute">cwe-id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CWE-200</span><br>  <span class="hljs-attribute">reference</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://motive.com/eim</span><br>  <span class="hljs-attribute">metadata</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">verified</span><span class="hljs-punctuation">:</span> <span class="hljs-string">true</span><br>    <span class="hljs-attribute">max-request</span><span class="hljs-punctuation">:</span> <span class="hljs-string">1</span><br>    <span class="hljs-attribute">vendor</span><span class="hljs-punctuation">:</span> <span class="hljs-string">motive_software_solutions</span><br>    <span class="hljs-attribute">product</span><span class="hljs-punctuation">:</span> <span class="hljs-string">motive_esim</span><br>    <span class="hljs-attribute">google-query</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">inurl:&quot;bulk-profile-operation&quot;</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">inurl:&quot;eid-management&quot;</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">inurl:&quot;eid-management-new&quot;</span><br>  <span class="hljs-attribute">tags</span><span class="hljs-punctuation">:</span> <span class="hljs-string">panel,motive,eim,esim,iot</span><br><br><span class="hljs-attribute">http</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">method: GET</span><br>    <span class="hljs-attribute">path</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;&#123;&#123;BaseURL&#125;&#125;/eIMConfiguration&#x27;</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;&#123;&#123;BaseURL&#125;&#125;/eid-management&#x27;</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;&#123;&#123;BaseURL&#125;&#125;/eid-management-new&#x27;</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;&#123;&#123;BaseURL&#125;&#125;/bulk-profile-operation&#x27;</span><br><br>    <span class="hljs-attribute">stop-at-first-match</span><span class="hljs-punctuation">:</span> <span class="hljs-string">true</span><br>    <span class="hljs-attribute">matchers-condition</span><span class="hljs-punctuation">:</span> <span class="hljs-string">and</span><br>    <span class="hljs-attribute">matchers</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: word</span><br>        <span class="hljs-attribute">part</span><span class="hljs-punctuation">:</span> <span class="hljs-string">body</span><br>        <span class="hljs-attribute">words</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&lt;title&gt;EIM&lt;/title&gt;</span><br><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: status</span><br>        <span class="hljs-attribute">status</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">200</span><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Motive eSIM Secure Connect Panel 信息泄露&lt;/</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>Google Chrome 沙盒逃逸漏洞</title>
@@ -515,33 +541,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Fortra GoAnywhere MFT 认证绕过漏洞</title>
-    <link href="http://example.com/2025/06/15/github_4145886955/"/>
-    <id>http://example.com/2025/06/15/github_4145886955/</id>
-    <published>2025-06-15T11:16:34.366Z</published>
-    <updated>2025-06-15T11:16:34.360Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Fortra GoAnywhere MFT 认证绕过漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-0204</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Fortra GoAnywhere MFT 7.4.1版本中存在认证绕过漏洞，攻击者可能利用此漏洞绕过认证机制，未授权访问系统资源。</p><p><strong>产品厂商：</strong> Fortra</p><p><strong>产品名称：</strong> GoAnywhere MFT</p><p><strong>影响版本：</strong> 7.4.1</p><p><strong>来源：</strong> <a href="https://github.com/ibrahmsql/CVE-2024-0204">https://github.com/ibrahmsql/CVE-2024-0204</a></p><p><strong>类型：</strong> CVE-2024:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2024-0204.py</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2024-0204"><a href="#CVE-2024-0204" class="headerlink" title="CVE-2024-0204"></a>CVE-2024-0204</h2><p>Fortra GoAnywhere MFT 7.4.1 - Authentication Bypass</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Fortra GoAnywhere MFT 认证绕过漏洞&lt;/p&gt;
-&lt;p&gt;&lt;st</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
-    
-    <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
     
   </entry>
   
