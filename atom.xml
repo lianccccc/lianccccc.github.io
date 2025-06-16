@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-16T02:15:11.906Z</updated>
+  <updated>2025-06-16T02:30:16.127Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>FlexPaper Remote Code Execution Vulnerability</title>
+    <link href="http://example.com/2025/06/16/github_3559610032/"/>
+    <id>http://example.com/2025/06/16/github_3559610032/</id>
+    <published>2025-06-16T02:30:16.127Z</published>
+    <updated>2025-06-16T02:30:16.127Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> FlexPaper Remote Code Execution Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2018-11686</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> FlexPaper (FlowPaper) 2.3.6 版本中的 setup.php 和 change_config.php 文件存在不安全处理，导致远程攻击者可以执行任意代码。利用此漏洞需要能够访问这些脚本。</p><p><strong>产品厂商：</strong> FlexPaper</p><p><strong>产品名称：</strong> FlexPaper (FlowPaper)</p><p><strong>影响版本：</strong> 2.3.6</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12369">https://github.com/projectdiscovery/nuclei-templates/issues/12369</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>FlexPaper (FlowPaper) 2.3.6 contains a remote code execution caused by insecure handling in setup.php and change_config.php, letting remote attackers execute arbitrary code, exploit requires access to these scripts.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://redtimmysec.wordpress.com/2019/03/07/flexpaper-remote-code-execution">https://redtimmysec.wordpress.com/2019/03/07/flexpaper-remote-code-execution</a></li><li><a href="https://vulncheck.com/xdb/b67f601a7711">https://vulncheck.com/xdb/b67f601a7711</a></li><li><a href="https://github.com/mpgn/CVE-2018-11686">https://github.com/mpgn/CVE-2018-11686</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:mpgn&#x2F;CVE-2018-11686.git</li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-NA"><a href="#Shodan-Query-NA" class="headerlink" title="Shodan Query: NA"></a>Shodan Query: <code>NA</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; FlexPaper Remote Code Execution Vulnera</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>神州数码 DCME-320出口网关 black_listphp 任意文件读取漏洞</title>
+    <link href="http://example.com/2025/06/16/weixin_1172692726/"/>
+    <id>http://example.com/2025/06/16/weixin_1172692726/</id>
+    <published>2025-06-16T02:27:44.668Z</published>
+    <updated>2025-06-16T02:27:44.664Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> Nday Poc</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/XaIsDrs0mvSQGJgkB8x8mA">https://mp.weixin.qq.com/s/XaIsDrs0mvSQGJgkB8x8mA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; Nday Poc&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/XaIsDrs0mvSQGJgkB8x8mA&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="Nday Poc" scheme="http://example.com/tags/Nday-Poc/"/>
+    
+  </entry>
   
   <entry>
     <title>Plesk Obsidian Login Panel - Detect</title>
@@ -487,59 +540,6 @@
     <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
     
     <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Next.js Middleware Bypass Vulnerability</title>
-    <link href="http://example.com/2025/06/15/github_1044607782/"/>
-    <id>http://example.com/2025/06/15/github_1044607782/</id>
-    <published>2025-06-15T15:45:18.182Z</published>
-    <updated>2025-06-15T15:45:18.178Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Next.js Middleware Bypass Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-29927</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Next.js中存在一个严重漏洞（CVE-2025-29927），允许攻击者通过操纵内部标头<code>x-middleware-subrequest</code>来绕过中间件的安全检查，从而获得对受保护路由的未授权访问。影响版本包括11.1.4至12.3.4、13.0.0至13.5.8、14.0.0至14.2.24和15.0.0至15.2.2。建议用户更新到修复版本或实施二次验证以防止此漏洞。</p><p><strong>产品厂商：</strong> Next.js</p><p><strong>产品名称：</strong> Next.js</p><p><strong>影响版本：</strong> 11.1.4 - 12.3.4, 13.0.0 - 13.5.8, 14.0.0 - 14.2.24, 15.0.0 - 15.2.2</p><p><strong>来源：</strong> <a href="https://github.com/KamalideenAK/poc-cve-2025-29927">https://github.com/KamalideenAK/poc-cve-2025-29927</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>.eslintrc.json</li><li>.gitignore</li><li>README.md</li><li>app</li><li>exploit.js</li><li>middleware.ts</li><li>next.config.js</li><li>package-lock.json</li><li>package.json</li><li>public</li><li>tailwind.config.ts</li><li>tsconfig.json</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="Next-js-Middleware-Bypass-CVE-2025-29927-Proof-of-Concept"><a href="#Next-js-Middleware-Bypass-CVE-2025-29927-Proof-of-Concept" class="headerlink" title="Next.js Middleware Bypass (CVE-2025-29927) Proof of Concept"></a>Next.js Middleware Bypass (CVE-2025-29927) Proof of Concept</h2><p>This repository contains a <strong>proof of concept (POC)</strong> for <strong>CVE-2025-29927</strong>, a critical vulnerability in <strong>Next.js</strong> that allows attackers to bypass authorization checks implemented in middleware.</p><h3 id="📋-Table-of-Contents"><a href="#📋-Table-of-Contents" class="headerlink" title="📋 Table of Contents"></a>📋 Table of Contents</h3><ol><li><a href="#running-the-poc-application">Running the POC Application</a></li><li><a href="#using-the-exploit-script">Using the Exploit Script</a></li><li><a href="#how-to-fix-the-vulnerability">How to Fix the Vulnerability</a></li><li><a href="#vulnerability-details">Vulnerability Details</a></li></ol><hr><h3 id="Running-the-POC-Application"><a href="#Running-the-POC-Application" class="headerlink" title="Running the POC Application"></a>Running the POC Application</h3><p>This Next.js application demonstrates the vulnerability with a protected dashboard route.</p><h4 id="Setup-Instructions"><a href="#Setup-Instructions" class="headerlink" title="Setup Instructions"></a>Setup Instructions</h4><ol><li>Clone the repository</li><li>Install and run: <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install<br>npm run build<br>npm run start<br></code></pre></td></tr></table></figure></li><li>Access <a href="http://localhost:3000/">http://localhost:3000</a> in your browser</li><li>Try accessing the protected dashboard at &#x2F;dashboard</li></ol><hr><h3 id="Using-the-Exploit-Script"><a href="#Using-the-Exploit-Script" class="headerlink" title="Using the Exploit Script"></a>Using the Exploit Script</h3><p>The exploit script can test any Next.js application for this vulnerability.</p><h4 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm run exploit &lt;target-url&gt;<br></code></pre></td></tr></table></figure><h4 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm run exploit http://localhost:3000/dashboard<br></code></pre></td></tr></table></figure><h4 id="How-it-Works"><a href="#How-it-Works" class="headerlink" title="How it Works"></a>How it Works</h4><p>The exploit tool:</p><ol><li>Takes a target URL as input</li><li>Makes a normal request to check if the route is protected</li><li>Attempts to bypass middleware using the <code>x-middleware-subrequest</code> header</li><li>Compares responses to determine vulnerability</li></ol><h4 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash">=== Next.js CVE-2025-29927 Middleware Bypass Tester ===<br>Target: http://localhost:3000/dashboard<br><br>Testing vulnerability...<br>Normal request status: 307<br>Bypass request status: 200<br><br>⚠️  VULNERABLE<br>The route is protected but accessible with the bypass header<br></code></pre></td></tr></table></figure><hr><h3 id="How-to-Fix-the-Vulnerability"><a href="#How-to-Fix-the-Vulnerability" class="headerlink" title="How to Fix the Vulnerability"></a>How to Fix the Vulnerability</h3><p>A fix implementation is available in the <a href="https://github.com/kOaDT/poc-cve-2025-29927/tree/how-to-fix">how-to-fix branch</a>.</p><h4 id="Quick-Fixes"><a href="#Quick-Fixes" class="headerlink" title="Quick Fixes"></a>Quick Fixes</h4><ol><li><p><strong>Update Next.js Version</strong> (Recommended)</p><ul><li>Update to one of these patched versions:<ul><li>Next.js 15.x → <strong>15.2.3</strong></li><li>Next.js 14.x → <strong>14.2.25</strong></li><li>Next.js 13.x → <strong>13.5.9</strong></li><li>Next.js 12.x → <strong>12.3.5</strong></li></ul></li></ul></li><li><p><strong>Implement Secondary Validation</strong></p><ul><li>Add authentication checks in your API routes&#x2F;pages</li><li>Don’t rely solely on middleware for security</li></ul></li></ol><h4 id="Sample-Output-1"><a href="#Sample-Output-1" class="headerlink" title="Sample Output"></a>Sample Output</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs bash">=== Next.js CVE-2025-29927 Middleware Bypass Tester ===<br><br>Target: http://localhost:3000/dashboard<br><br>Testing vulnerability...<br>Making request without bypass header...<br>Making request with bypass header...<br>Normal request status: 307<br>Bypass request status: 307<br><br>✓ NOT VULNERABLE - Protected Route<br>The route is protected and the bypass attempt was unsuccessful<br>Normal request redirected to: /<br>Bypass request redirected to: /<br></code></pre></td></tr></table></figure><hr><h3 id="Vulnerability-Details"><a href="#Vulnerability-Details" class="headerlink" title="Vulnerability Details"></a>Vulnerability Details</h3><h4 id="CVE-Information"><a href="#CVE-Information" class="headerlink" title="CVE Information"></a>CVE Information</h4><ul><li><strong>CVE ID</strong>: CVE-2025-29927</li><li><strong>Affected Versions</strong>:<ul><li>13.0.0 - 13.5.8</li><li>14.0.0 - 14.2.24</li><li>15.0.0 - 15.2.2</li><li>11.1.4 - 12.3.4</li></ul></li></ul><h4 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h4><p>Next.js uses an internal header <code>x-middleware-subrequest</code> to prevent recursive requests. This vulnerability allows attackers to <strong>bypass middleware security checks</strong> by manipulating this header.</p><h4 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h4><ul><li>Unauthorized access to protected routes</li><li>Bypass of authentication checks</li><li>Circumvention of security middleware</li></ul><h4 id="Affected-Environments"><a href="#Affected-Environments" class="headerlink" title="Affected Environments"></a>Affected Environments</h4><ul><li>Self-hosted Next.js applications using Middleware</li></ul><h4 id="References"><a href="#References" class="headerlink" title="References"></a>References</h4><ul><li><a href="https://nextjs.org/blog/cve-2025-29927">Next.js Security Advisory</a></li><li><a href="https://github.com/advisories/GHSA-f82v-jwr5-mffw">GitHub Security Advisory</a></li></ul><hr><h3 id="Disclaimer"><a href="#Disclaimer" class="headerlink" title="Disclaimer"></a>Disclaimer</h3><p>This tool is provided for educational and testing purposes only. Only use this tool on systems you own or have explicit permission to test.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Next.js Middleware Bypass Vulnerability</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Roundcube Webmail 反序列化漏洞</title>
-    <link href="http://example.com/2025/06/15/github_2581266026/"/>
-    <id>http://example.com/2025/06/15/github_2581266026/</id>
-    <published>2025-06-15T14:15:14.936Z</published>
-    <updated>2025-06-15T14:15:14.933Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Roundcube Webmail 反序列化漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-49113</li></ul><p><strong>漏洞类型：</strong> 反序列化</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Roundcube Webmail在1.5.10之前和1.6.x在1.6.11之前的版本中，由于program&#x2F;actions&#x2F;settings&#x2F;upload.php中的_from参数未经验证，导致认证用户可以通过PHP对象反序列化执行远程代码。</p><p><strong>产品厂商：</strong> Roundcube</p><p><strong>产品名称：</strong> Roundcube Webmail</p><p><strong>影响版本：</strong> 1.5.x &lt; 1.5.10, 1.6.x &lt; 1.6.11</p><p><strong>来源：</strong> <a href="https://github.com/Yuri08loveElaina/CVE-2025-49113">https://github.com/Yuri08loveElaina/CVE-2025-49113</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>exploit.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h3 id="VIETNAMESE"><a href="#VIETNAMESE" class="headerlink" title="VIETNAMESE"></a>VIETNAMESE</h3><ul><li><h2 id="✅-Tinh-nang"><a href="#✅-Tinh-nang" class="headerlink" title="✅ Tính năng:"></a>✅ Tính năng:</h2></li></ul><blockquote><p>Hỗ trợ upload payload.phar</p></blockquote><blockquote><p>Tự động đoán path nếu không biết chính xác</p></blockquote><blockquote><p>Cho phép sử dụng phar:&#x2F;&#x2F; path tùy chọn</p></blockquote><blockquote><p>Có tùy chọn –upload-payload, –auto-path, –direct-path</p></blockquote><ul><li><h2 id="🧪-Cach-dung"><a href="#🧪-Cach-dung" class="headerlink" title="🧪 Cách dùng:"></a>🧪 Cách dùng:</h2></li><li><ol><li>Tạo payload:</li></ol></li></ul><blockquote><p>phpggc monolog&#x2F;rce1 system ‘id’ -p phar -o payload.phar</p></blockquote><ul><li><ol start="2"><li>Upload và khai thác tự động:</li></ol></li></ul><blockquote><p>python3 exploit.py <a href="https://target.com/">https://target.com</a>  SESSIONID  –upload-payload payload.phar –auto-path</p></blockquote><ul><li><ol start="3"><li>Upload và tự nhập path nếu biết chính xác đường dẫn :</li></ol></li></ul><blockquote><p>python3 exploit.py <a href="https://target.com/">https://target.com</a>  SESSIONID  –upload-payload payload.phar –direct-path &#x2F;var&#x2F;www&#x2F;html&#x2F;temp&#x2F;payload.phar</p></blockquote><ul><li><ol start="4"><li>Không upload, chỉ khai thác:</li></ol></li></ul><blockquote><p>python3 exploit.py <a href="https://target.com/">https://target.com</a>  SESSIONID  –direct-path &#x2F;var&#x2F;www&#x2F;html&#x2F;temp&#x2F;payload.phar</p></blockquote><blockquote><p>✅ Bạn có thể thay  SESSIONID  bằng session hợp lệ của Roundcube.</p></blockquote><h3 id="ENGLISH"><a href="#ENGLISH" class="headerlink" title="ENGLISH"></a>ENGLISH</h3><ul><li><h2 id="✅-Features"><a href="#✅-Features" class="headerlink" title="✅ Features:"></a>✅ Features:</h2></li></ul><blockquote><p>Support uploading payload.phar</p></blockquote><blockquote><p>Automatically guess the path if not exactly known</p></blockquote><blockquote><p>Allow the use of phar:&#x2F;&#x2F; path option</p></blockquote><blockquote><p>There are options –upload-payload, –auto-path, –direct-path</p></blockquote><ul><li><h2 id="🧪-How-to-use"><a href="#🧪-How-to-use" class="headerlink" title="🧪 How to use:"></a>🧪 How to use:</h2></li><li><ol><li>Create payload:</li></ol></li></ul><blockquote><p>phpggc monolog&#x2F;rce1 system ‘id’ -p phar -o payload.phar</p></blockquote><ul><li><ol start="2"><li>Upload and exploit automatically:</li></ol></li></ul><blockquote><p>python3 exploit.py <a href="https://target.com/">https://target.com</a> SESSIONID –upload-payload payload.phar –auto-path</p></blockquote><ul><li><ol start="3"><li>Upload and enter the path yourself if you know the exact path:</li></ol></li></ul><blockquote><p>python3 exploit.py <a href="https://target.com/">https://target.com</a> SESSIONID –upload-payload payload.phar –direct-path &#x2F;var&#x2F;www&#x2F;html&#x2F;temp&#x2F;payload.phar</p></blockquote><ul><li><ol start="4"><li>Do not upload, just exploit:</li></ol></li></ul><blockquote><p>python3 exploit.py <a href="https://target.com/">https://target.com</a> SESSIONID –direct-path &#x2F;var&#x2F;www&#x2F;html&#x2F;temp&#x2F;payload.phar</p></blockquote><ul><li>✅ You can replace SESSIONID with a valid Roundcube session.</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Roundcube Webmail 反序列化漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
   </entry>
   
