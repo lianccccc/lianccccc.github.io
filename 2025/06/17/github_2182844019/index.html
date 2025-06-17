@@ -19,23 +19,23 @@
   <meta name="author" content="lianccc">
   <meta name="keywords" content="">
   
-    <meta name="description" content="漏洞信息漏洞名称： Kubernetes Exposing Host’s Docker Socket 漏洞类型： 权限提升 漏洞等级： 高危 漏洞描述： 通过卷将主机的Docker套接字暴露给容器。此套接字的所有者是root。授予某人访问权限相当于授予对主机的无限制root访问权限。 产品厂商： Kubernetes 产品名称： Kubernetes 来源： https:&#x2F;&#x2F;github.com&#x2F;">
+    <meta name="description" content="漏洞信息漏洞名称： GreatPages.com.br 域名接管漏洞 漏洞类型： 未授权访问 漏洞等级： 高危 漏洞描述： 检测指向greatpages.com.br服务的域名存在潜在的域名接管漏洞。当DNS记录指向cname.greatpages.com.br但返回HTTP 404时，表明该域名未被认领，可以被接管。 产品厂商： greatpages.com.br 产品名称： GreatPage">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Kubernetes Exposing Host&#39;s Docker Socket">
-<meta property="og:url" content="http://example.com/2025/06/13/github_2787999378/index.html">
+<meta property="og:title" content="GreatPages.com.br 域名接管漏洞">
+<meta property="og:url" content="http://example.com/2025/06/17/github_2182844019/index.html">
 <meta property="og:site_name" content="liancc&#39; infos blog">
-<meta property="og:description" content="漏洞信息漏洞名称： Kubernetes Exposing Host’s Docker Socket 漏洞类型： 权限提升 漏洞等级： 高危 漏洞描述： 通过卷将主机的Docker套接字暴露给容器。此套接字的所有者是root。授予某人访问权限相当于授予对主机的无限制root访问权限。 产品厂商： Kubernetes 产品名称： Kubernetes 来源： https:&#x2F;&#x2F;github.com&#x2F;">
+<meta property="og:description" content="漏洞信息漏洞名称： GreatPages.com.br 域名接管漏洞 漏洞类型： 未授权访问 漏洞等级： 高危 漏洞描述： 检测指向greatpages.com.br服务的域名存在潜在的域名接管漏洞。当DNS记录指向cname.greatpages.com.br但返回HTTP 404时，表明该域名未被认领，可以被接管。 产品厂商： greatpages.com.br 产品名称： GreatPage">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-06-13T02:15:27.438Z">
-<meta property="article:modified_time" content="2025-06-13T02:15:27.432Z">
+<meta property="article:published_time" content="2025-06-17T17:15:25.291Z">
+<meta property="article:modified_time" content="2025-06-17T17:15:25.288Z">
 <meta property="article:author" content="lianccc">
 <meta property="article:tag" content="projectdiscovery&#x2F;nuclei-templates:github issues">
-<meta property="article:tag" content="权限提升">
+<meta property="article:tag" content="未授权访问">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Kubernetes Exposing Host&#39;s Docker Socket - liancc&#39; infos blog</title>
+  <title>GreatPages.com.br 域名接管漏洞 - liancc&#39; infos blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -202,7 +202,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Kubernetes Exposing Host&#39;s Docker Socket"></span>
+            <span id="subtitle" data-typed-text="GreatPages.com.br 域名接管漏洞"></span>
           
         </div>
 
@@ -213,8 +213,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-06-13 02:15" pubdate>
-          2025年6月13日 凌晨
+        <time datetime="2025-06-17 17:15" pubdate>
+          2025年6月17日 下午
         </time>
       </span>
     
@@ -225,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          330 字
+          279 字
         
       </span>
     
@@ -273,20 +273,21 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Kubernetes Exposing Host&#39;s Docker Socket</h1>
+            <h1 id="seo-header">GreatPages.com.br 域名接管漏洞</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Kubernetes Exposing Host’s Docker Socket</p>
-<p><strong>漏洞类型：</strong> 权限提升</p>
+                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> GreatPages.com.br 域名接管漏洞</p>
+<p><strong>漏洞类型：</strong> 未授权访问</p>
 <p><strong>漏洞等级：</strong> 高危</p>
-<p><strong>漏洞描述：</strong> 通过卷将主机的Docker套接字暴露给容器。此套接字的所有者是root。授予某人访问权限相当于授予对主机的无限制root访问权限。</p>
-<p><strong>产品厂商：</strong> Kubernetes</p>
-<p><strong>产品名称：</strong> Kubernetes</p>
-<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei-templates/blob/c873ea6b2aa6d07a99ef7854663a39965982eebd/cloud%2Fkubernetes%2Fkubernetes-exposing-docker-socket-hostpath.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/c873ea6b2aa6d07a99ef7854663a39965982eebd/cloud%2Fkubernetes%2Fkubernetes-exposing-docker-socket-hostpath.yaml</a></p>
+<p><strong>漏洞描述：</strong> 检测指向greatpages.com.br服务的域名存在潜在的域名接管漏洞。当DNS记录指向cname.greatpages.com.br但返回HTTP 404时，表明该域名未被认领，可以被接管。</p>
+<p><strong>产品厂商：</strong> greatpages.com.br</p>
+<p><strong>产品名称：</strong> GreatPages.com.br</p>
+<p><strong>搜索语法：</strong> cname&#x3D;”cname.greatpages.com.br”</p>
+<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei-templates/blob/11794a683af2f6f261d87fa3b3b5a8c4fa037f76/http%2Ftakeovers%2Fgreatpages-takeover.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/11794a683af2f6f261d87fa3b3b5a8c4fa037f76/http%2Ftakeovers%2Fgreatpages-takeover.yaml</a></p>
 <p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p>
-<h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> kubernetes-exposing-docker-socket-hostpath<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Kubernetes Exposing Host&#x27;s Docker Socket<br>  <span class="hljs-params">author:</span> dwisiswant0<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> Exposing host&#x27;s Docker socket to containers via a volume.<br>  <span class="hljs-params">impact:</span> |<br>    The owner of this socket is root. Giving someone access to it is equivalent<br>    to giving unrestricted root access to your host.<br>  <span class="hljs-params">remediation:</span> Remove &#x27;docker.sock&#x27; from hostpath to prevent this.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>kubernetes.io<span class="hljs-operator">/</span>docs<span class="hljs-operator">/</span>concepts<span class="hljs-operator">/</span>storage<span class="hljs-operator">/</span>volumes<span class="hljs-operator">/</span><span class="hljs-comment">#hostpath</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>kubernetes.io<span class="hljs-operator">/</span>docs<span class="hljs-operator">/</span>concepts<span class="hljs-operator">/</span>policy<span class="hljs-operator">/</span>pod-security-policy<span class="hljs-operator">/</span><span class="hljs-comment">#volumes-and-file-systems</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>kubernetes.io<span class="hljs-operator">/</span>docs<span class="hljs-operator">/</span>tasks<span class="hljs-operator">/</span>configure-pod-container<span class="hljs-operator">/</span>security-context<span class="hljs-symbol">/</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>cheatsheetseries.owasp.org<span class="hljs-operator">/</span>cheatsheets<span class="hljs-operator">/</span>Docker_Security_Cheat_Sheet.html<span class="hljs-comment">#rule-1-do-not-expose-the-docker-daemon-socket-even-to-the-containers</span><br>  <span class="hljs-params">tags:</span> cloud,devops,kubernetes,k8s<br><br><span class="hljs-params">flow:</span> |<br>  code(<span class="hljs-number">1</span>);<br>  for (<span class="hljs-keyword">let</span> pod of template.items) &#123;<br>    <span class="hljs-attr">pod</span> <span class="hljs-operator">=</span> JSON.parse(pod);<br>    <span class="hljs-keyword">if</span> (<span class="hljs-operator">!</span>pod.spec.hasOwnProperty(&#x27;volumes&#x27;)) continue;<br>    for (const volume of pod.spec.volumes) &#123;<br>      <span class="hljs-keyword">if</span> (volume.hasOwnProperty(&#x27;hostPath&#x27;)) &#123;<br>        <span class="hljs-keyword">if</span> (<span class="hljs-operator">!</span>volume.hostPath.hasOwnProperty(&#x27;path&#x27;)) continue;<br>        const path <span class="hljs-operator">=</span> volume.hostPath.path;<br>        <span class="hljs-keyword">if</span> (path <span class="hljs-operator">&amp;&amp;</span> path <span class="hljs-operator">!=</span><span class="hljs-operator">=</span> &#x27;<span class="hljs-operator">/</span>var<span class="hljs-operator">/</span>run<span class="hljs-operator">/</span>docker.sock&#x27;) continue<br>      &#125;<br>      set(&#x27;volume&#x27;, JSON.stringify(volume));<br>      set(&#x27;pod&#x27;, pod.metadata.name);<br>      set(&#x27;namespace&#x27;, pod.metadata.namespace);<br>      code(<span class="hljs-number">2</span>)<br>    &#125;<br>  &#125;<br><br><span class="hljs-params">self-contained:</span> <span class="hljs-literal">true</span><br><span class="hljs-params">code:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">engine:</span><br>      <span class="hljs-operator">-</span> sh<br>      <span class="hljs-operator">-</span> bash<br>    <span class="hljs-params">source:</span> kubectl get pods <span class="hljs-operator">-</span>-all-namespaces <span class="hljs-operator">-</span>-output<span class="hljs-operator">=</span>json<br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> json<br>        <span class="hljs-params">name:</span> items<br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">json:</span><br>          <span class="hljs-operator">-</span> &#x27;.items[]&#x27;<br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">engine:</span><br>      <span class="hljs-operator">-</span> sh<br>      <span class="hljs-operator">-</span> bash<br>    <span class="hljs-params">source:</span> echo <span class="hljs-operator">-</span>e &#x27;$volume&#x27;<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;/var/run/docker.sock&quot;</span><br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;Exposed Docker socket via a volume in the &quot;</span> <span class="hljs-operator">+</span> pod <span class="hljs-operator">+</span> <span class="hljs-string">&quot; pod of &quot;</span> <span class="hljs-operator">+</span> namespace <span class="hljs-operator">+</span> <span class="hljs-string">&quot; namespace&quot;</span>&#x27;<br><span class="hljs-comment"># digest: 490a004630440220118723a85165514f59da64d85df3822f05a47ab5fc3e1e2a01ea0d06cb8d58110220147f70004616c4ee4b84fc2137e253c00a1908207be5e1cfb70b86cb586e0ba3:9e2dfd48464943e7ca3816f5f86e5507</span><br><br></code></pre></td></tr></table></figure>
+<h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> greatpages-takeover<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> GreatPages.com.br <span class="hljs-operator">-</span> Takeover Detection<br>  <span class="hljs-params">author:</span> juliosmelo<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> |<br>    Detects potential domain takeover vulnerability for domains pointing to greatpages.com.br service.<br>    The vulnerability occurs when a DNS record points to cname.greatpages.com.br but returns HTTP <span class="hljs-number">404</span>,<br>    indicating the domain is unclaimed and can be taken over.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/EdOverflow/can-i-take-over-xyz</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:C<span class="hljs-operator">/</span>C:L<span class="hljs-operator">/</span>I:L<span class="hljs-operator">/</span>A:N<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">7.2</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">284</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">fofa-query:</span> &#x27;cname<span class="hljs-operator">=</span><span class="hljs-string">&quot;cname.greatpages.com.br&quot;</span>&#x27;<br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">2</span><br>  <span class="hljs-params">tags:</span> takeover,dns,greatpages<br><br><span class="hljs-params">dns:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">name:</span> <span class="hljs-string">&quot;&#123;&#123;FQDN&#125;&#125;&quot;</span><br>    <span class="hljs-params">type:</span> CNAME<br>    <span class="hljs-params">class:</span> IN<br>    <span class="hljs-params">recursion:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">retries:</span> <span class="hljs-number">3</span><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;cname.greatpages.com.br&quot;</span><br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;&quot;</span><br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">404</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;404&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;not found&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;page not found&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;não encontrada&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;página não encontrada&quot;</span><br>        <span class="hljs-params">condition:</span> <span class="hljs-keyword">or</span><br>        <span class="hljs-params">case-insensitive:</span> <span class="hljs-literal">true</span><br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> &#x27;host&#x27;<br>          <span class="hljs-operator">-</span> &#x27;status_code&#x27;<br>          <span class="hljs-operator">-</span> &#x27;len(body)&#x27;<br><br><br></code></pre></td></tr></table></figure>
 
 
                 
@@ -323,7 +324,7 @@
       
         <a href="/tags/projectdiscovery-nuclei-templates-github-issues/" class="print-no-link">#projectdiscovery/nuclei-templates:github issues</a>
       
-        <a href="/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/" class="print-no-link">#权限提升</a>
+        <a href="/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/" class="print-no-link">#未授权访问</a>
       
     </div>
   
@@ -335,8 +336,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Kubernetes Exposing Host&#39;s Docker Socket</div>
-      <div>http://example.com/2025/06/13/github_2787999378/</div>
+      <div>GreatPages.com.br 域名接管漏洞</div>
+      <div>http://example.com/2025/06/17/github_2182844019/</div>
     </div>
     <div class="license-meta">
       
@@ -348,7 +349,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年6月13日</div>
+          <div>2025年6月17日</div>
         </div>
       
       
@@ -380,9 +381,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/13/weixin_482381960/" title="B-LINK AC1900 V102 命令执行漏洞">
+                      <a href="/2025/06/17/github_3016610101/" title="Fastjson 反序列化漏洞">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">B-LINK AC1900 V102 命令执行漏洞</span>
+                        <span class="hidden-mobile">Fastjson 反序列化漏洞</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -390,8 +391,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/13/github_4181782913/" title="Nagios Log Server 存储型跨站脚本漏洞（权限提升至管理员）">
-                        <span class="hidden-mobile">Nagios Log Server 存储型跨站脚本漏洞（权限提升至管理员）</span>
+                      <a href="/2025/06/17/github_2787999378/" title="Kubernetes Exposing Host&#39;s Docker Socket">
+                        <span class="hidden-mobile">Kubernetes Exposing Host&#39;s Docker Socket</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

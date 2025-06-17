@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-17T16:45:22.754Z</updated>
+  <updated>2025-06-17T17:15:34.508Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,86 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Fastjson 反序列化漏洞</title>
+    <link href="http://example.com/2025/06/17/github_3016610101/"/>
+    <id>http://example.com/2025/06/17/github_3016610101/</id>
+    <published>2025-06-17T17:15:34.514Z</published>
+    <updated>2025-06-17T17:15:34.508Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Fastjson 反序列化漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2017-18349</li></ul><p><strong>漏洞类型：</strong> 反序列化</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Fastjson 1.2.25之前的版本存在远程代码执行漏洞，由于parseObject中的不安全反序列化，远程攻击者可以通过发送恶意的JSON数据到&#x2F;json端点来执行任意代码。</p><p><strong>产品名称：</strong> Fastjson</p><p><strong>影响版本：</strong> version &lt; 1.2.25</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12387">https://github.com/projectdiscovery/nuclei-templates/issues/12387</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Fastjson before 1.2.25 contains a remote code execution caused by unsafe deserialization in parseObject, letting remote attackers execute arbitrary code via crafted JSON data, exploit requires sending malicious JSON payload to &#x2F;json endpoint.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://github.com/pippo-java/pippo/issues/466">https://github.com/pippo-java/pippo/issues/466</a></li><li><a href="https://github.com/h0cksr/Fastjson--CVE-2017-18349-">https://github.com/h0cksr/Fastjson--CVE-2017-18349-</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-NA"><a href="#Shodan-Query-NA" class="headerlink" title="Shodan Query: NA"></a>Shodan Query: <code>NA</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Fastjson 反序列化漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/s</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GreatPages.com.br 域名接管漏洞</title>
+    <link href="http://example.com/2025/06/17/github_2182844019/"/>
+    <id>http://example.com/2025/06/17/github_2182844019/</id>
+    <published>2025-06-17T17:15:25.291Z</published>
+    <updated>2025-06-17T17:15:25.288Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> GreatPages.com.br 域名接管漏洞</p><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 检测指向greatpages.com.br服务的域名存在潜在的域名接管漏洞。当DNS记录指向cname.greatpages.com.br但返回HTTP 404时，表明该域名未被认领，可以被接管。</p><p><strong>产品厂商：</strong> greatpages.com.br</p><p><strong>产品名称：</strong> GreatPages.com.br</p><p><strong>搜索语法：</strong> cname&#x3D;”cname.greatpages.com.br”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/11794a683af2f6f261d87fa3b3b5a8c4fa037f76/http%2Ftakeovers%2Fgreatpages-takeover.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/11794a683af2f6f261d87fa3b3b5a8c4fa037f76/http%2Ftakeovers%2Fgreatpages-takeover.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> greatpages-takeover<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> GreatPages.com.br <span class="hljs-operator">-</span> Takeover Detection<br>  <span class="hljs-params">author:</span> juliosmelo<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> |<br>    Detects potential domain takeover vulnerability for domains pointing to greatpages.com.br service.<br>    The vulnerability occurs when a DNS record points to cname.greatpages.com.br but returns HTTP <span class="hljs-number">404</span>,<br>    indicating the domain is unclaimed and can be taken over.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/EdOverflow/can-i-take-over-xyz</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:C<span class="hljs-operator">/</span>C:L<span class="hljs-operator">/</span>I:L<span class="hljs-operator">/</span>A:N<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">7.2</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">284</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">fofa-query:</span> &#x27;cname<span class="hljs-operator">=</span><span class="hljs-string">&quot;cname.greatpages.com.br&quot;</span>&#x27;<br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">2</span><br>  <span class="hljs-params">tags:</span> takeover,dns,greatpages<br><br><span class="hljs-params">dns:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">name:</span> <span class="hljs-string">&quot;&#123;&#123;FQDN&#125;&#125;&quot;</span><br>    <span class="hljs-params">type:</span> CNAME<br>    <span class="hljs-params">class:</span> IN<br>    <span class="hljs-params">recursion:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">retries:</span> <span class="hljs-number">3</span><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;cname.greatpages.com.br&quot;</span><br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;&quot;</span><br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">404</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;404&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;not found&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;page not found&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;não encontrada&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;página não encontrada&quot;</span><br>        <span class="hljs-params">condition:</span> <span class="hljs-keyword">or</span><br>        <span class="hljs-params">case-insensitive:</span> <span class="hljs-literal">true</span><br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> &#x27;host&#x27;<br>          <span class="hljs-operator">-</span> &#x27;status_code&#x27;<br>          <span class="hljs-operator">-</span> &#x27;len(body)&#x27;<br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; GreatPages.com.br 域名接管漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Kubernetes Exposing Host&#39;s Docker Socket</title>
+    <link href="http://example.com/2025/06/17/github_2787999378/"/>
+    <id>http://example.com/2025/06/17/github_2787999378/</id>
+    <published>2025-06-17T17:15:15.440Z</published>
+    <updated>2025-06-17T17:15:15.440Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Kubernetes Exposing Host’s Docker Socket</p><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 通过卷将主机的Docker套接字暴露给容器。此套接字的所有者是root。给予某人访问权限等同于给予对主机的无限制root访问权限。</p><p><strong>产品厂商：</strong> Kubernetes</p><p><strong>产品名称：</strong> Kubernetes</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/c873ea6b2aa6d07a99ef7854663a39965982eebd/cloud%2Fkubernetes%2Fkubernetes-exposing-docker-socket-hostpath.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/c873ea6b2aa6d07a99ef7854663a39965982eebd/cloud%2Fkubernetes%2Fkubernetes-exposing-docker-socket-hostpath.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> kubernetes-exposing-docker-socket-hostpath<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Kubernetes Exposing Host&#x27;s Docker Socket<br>  <span class="hljs-params">author:</span> dwisiswant0<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> Exposing host&#x27;s Docker socket to containers via a volume.<br>  <span class="hljs-params">impact:</span> |<br>    The owner of this socket is root. Giving someone access to it is equivalent<br>    to giving unrestricted root access to your host.<br>  <span class="hljs-params">remediation:</span> Remove &#x27;docker.sock&#x27; from hostpath to prevent this.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>kubernetes.io<span class="hljs-operator">/</span>docs<span class="hljs-operator">/</span>concepts<span class="hljs-operator">/</span>storage<span class="hljs-operator">/</span>volumes<span class="hljs-operator">/</span><span class="hljs-comment">#hostpath</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>kubernetes.io<span class="hljs-operator">/</span>docs<span class="hljs-operator">/</span>concepts<span class="hljs-operator">/</span>policy<span class="hljs-operator">/</span>pod-security-policy<span class="hljs-operator">/</span><span class="hljs-comment">#volumes-and-file-systems</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>kubernetes.io<span class="hljs-operator">/</span>docs<span class="hljs-operator">/</span>tasks<span class="hljs-operator">/</span>configure-pod-container<span class="hljs-operator">/</span>security-context<span class="hljs-symbol">/</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>cheatsheetseries.owasp.org<span class="hljs-operator">/</span>cheatsheets<span class="hljs-operator">/</span>Docker_Security_Cheat_Sheet.html<span class="hljs-comment">#rule-1-do-not-expose-the-docker-daemon-socket-even-to-the-containers</span><br>  <span class="hljs-params">tags:</span> cloud,devops,kubernetes,k8s<br><br><span class="hljs-params">flow:</span> |<br>  code(<span class="hljs-number">1</span>);<br>  for (<span class="hljs-keyword">let</span> pod of template.items) &#123;<br>    <span class="hljs-attr">pod</span> <span class="hljs-operator">=</span> JSON.parse(pod);<br>    <span class="hljs-keyword">if</span> (<span class="hljs-operator">!</span>pod.spec.hasOwnProperty(&#x27;volumes&#x27;)) continue;<br>    for (const volume of pod.spec.volumes) &#123;<br>      <span class="hljs-keyword">if</span> (volume.hasOwnProperty(&#x27;hostPath&#x27;)) &#123;<br>        <span class="hljs-keyword">if</span> (<span class="hljs-operator">!</span>volume.hostPath.hasOwnProperty(&#x27;path&#x27;)) continue;<br>        const path <span class="hljs-operator">=</span> volume.hostPath.path;<br>        <span class="hljs-keyword">if</span> (path <span class="hljs-operator">&amp;&amp;</span> path <span class="hljs-operator">!=</span><span class="hljs-operator">=</span> &#x27;<span class="hljs-operator">/</span>var<span class="hljs-operator">/</span>run<span class="hljs-operator">/</span>docker.sock&#x27;) continue<br>      &#125;<br>      set(&#x27;volume&#x27;, JSON.stringify(volume));<br>      set(&#x27;pod&#x27;, pod.metadata.name);<br>      set(&#x27;namespace&#x27;, pod.metadata.namespace);<br>      code(<span class="hljs-number">2</span>)<br>    &#125;<br>  &#125;<br><br><span class="hljs-params">self-contained:</span> <span class="hljs-literal">true</span><br><span class="hljs-params">code:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">engine:</span><br>      <span class="hljs-operator">-</span> sh<br>      <span class="hljs-operator">-</span> bash<br>    <span class="hljs-params">source:</span> kubectl get pods <span class="hljs-operator">-</span>-all-namespaces <span class="hljs-operator">-</span>-output<span class="hljs-operator">=</span>json<br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> json<br>        <span class="hljs-params">name:</span> items<br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">json:</span><br>          <span class="hljs-operator">-</span> &#x27;.items[]&#x27;<br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">engine:</span><br>      <span class="hljs-operator">-</span> sh<br>      <span class="hljs-operator">-</span> bash<br>    <span class="hljs-params">source:</span> echo <span class="hljs-operator">-</span>e &#x27;$volume&#x27;<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;/var/run/docker.sock&quot;</span><br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;Exposed Docker socket via a volume in the &quot;</span> <span class="hljs-operator">+</span> pod <span class="hljs-operator">+</span> <span class="hljs-string">&quot; pod of &quot;</span> <span class="hljs-operator">+</span> namespace <span class="hljs-operator">+</span> <span class="hljs-string">&quot; namespace&quot;</span>&#x27;<br><span class="hljs-comment"># digest: 490a004630440220118723a85165514f59da64d85df3822f05a47ab5fc3e1e2a01ea0d06cb8d58110220147f70004616c4ee4b84fc2137e253c00a1908207be5e1cfb70b86cb586e0ba3:9e2dfd48464943e7ca3816f5f86e5507</span><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Kubernetes Exposing Host’s Docker Socke</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
+    
+  </entry>
   
   <entry>
     <title>QNAP Photo Station 预认证远程代码执行漏洞</title>
@@ -448,85 +528,6 @@
     <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
     
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>伊朗 Handala 黑客组织全面剖析</title>
-    <link href="http://example.com/2025/06/17/weixin_2219383365/"/>
-    <id>http://example.com/2025/06/17/weixin_2219383365/</id>
-    <published>2025-06-17T14:39:11.926Z</published>
-    <updated>2025-06-17T14:39:11.921Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/kKbFRlHNGwyQghbcRNjoag">https://mp.weixin.qq.com/s/kKbFRlHNGwyQghbcRNjoag</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/kKbFRlHNGwyQghbcRNjoag&quot;&gt;https://mp.weixin.qq.c</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Fastjson 反序列化漏洞</title>
-    <link href="http://example.com/2025/06/17/github_3016610101/"/>
-    <id>http://example.com/2025/06/17/github_3016610101/</id>
-    <published>2025-06-17T14:00:17.491Z</published>
-    <updated>2025-06-17T14:00:17.490Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Fastjson 反序列化漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2017-18349</li></ul><p><strong>漏洞类型：</strong> 反序列化</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Fastjson 1.2.25之前的版本存在远程代码执行漏洞，由于parseObject中的不安全反序列化导致，远程攻击者可以通过发送恶意的JSON数据到&#x2F;json端点来执行任意代码。</p><p><strong>产品厂商：</strong> Fastjson</p><p><strong>产品名称：</strong> Fastjson</p><p><strong>影响版本：</strong> version &lt; 1.2.25</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12387">https://github.com/projectdiscovery/nuclei-templates/issues/12387</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Fastjson before 1.2.25 contains a remote code execution caused by unsafe deserialization in parseObject, letting remote attackers execute arbitrary code via crafted JSON data, exploit requires sending malicious JSON payload to &#x2F;json endpoint.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://github.com/pippo-java/pippo/issues/466">https://github.com/pippo-java/pippo/issues/466</a></li><li><a href="https://github.com/h0cksr/Fastjson--CVE-2017-18349-">https://github.com/h0cksr/Fastjson--CVE-2017-18349-</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-NA"><a href="#Shodan-Query-NA" class="headerlink" title="Shodan Query: NA"></a>Shodan Query: <code>NA</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Fastjson 反序列化漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/s</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Horizon3Attack twitter update</title>
-    <link href="http://example.com/2025/06/17/twitter_1361933596/"/>
-    <id>http://example.com/2025/06/17/twitter_1361933596/</id>
-    <published>2025-06-17T14:00:15.750Z</published>
-    <updated>2025-06-17T14:00:15.746Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> Horizon3Attack</p><p><strong>推文：</strong> 查看我们关于CVE-2025-34508的深度解析——#ZendTo中的一个路径遍历漏洞。<br><a href="https://t.co/2NY1YdWiks">https://t.co/2NY1YdWiks</a> <a href="https://t.co/TQcctHUups">https://t.co/TQcctHUups</a></p><p><strong>链接：</strong> <a href="https://x.com/Horizon3Attack/status/1934971046425178448">https://x.com/Horizon3Attack/status/1934971046425178448</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; Horizon3Attack&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 查看我们关于CVE-2025-34508的深度解析——#ZendTo中的一个路径遍历漏洞。&lt;br&gt;&lt;a href=&quot;https://t.co/2N</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="Horizon3Attack" scheme="http://example.com/tags/Horizon3Attack/"/>
     
   </entry>
   
