@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-17T16:00:12.546Z</updated>
+  <updated>2025-06-17T16:21:19.032Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AstrBot get_file接口存在任意文件读取漏洞CVE-2025-48957 附POC</title>
+    <link href="http://example.com/2025/06/17/weixin_4291254676/"/>
+    <id>http://example.com/2025/06/17/weixin_4291254676/</id>
+    <published>2025-06-17T16:21:19.036Z</published>
+    <updated>2025-06-17T16:21:19.032Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 南风漏洞复现文库</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/Lv4OXUPLZHVUBtUcr2mRdw">https://mp.weixin.qq.com/s/Lv4OXUPLZHVUBtUcr2mRdw</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 南风漏洞复现文库&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/Lv4OXUPLZHVUBtUcr2mRdw&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="南风漏洞复现文库" scheme="http://example.com/tags/%E5%8D%97%E9%A3%8E%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%E6%96%87%E5%BA%93/"/>
+    
+  </entry>
   
   <entry>
     <title>Unrestricted Upload of File with Dangerous Type vulnerability in RomanCode MapSVG allows Upload a</title>
@@ -500,33 +527,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="安恒信息CERT" scheme="http://example.com/tags/%E5%AE%89%E6%81%92%E4%BF%A1%E6%81%AFCERT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Roundcube Webmail PHP对象反序列化漏洞</title>
-    <link href="http://example.com/2025/06/17/github_2727862507/"/>
-    <id>http://example.com/2025/06/17/github_2727862507/</id>
-    <published>2025-06-17T13:45:13.691Z</published>
-    <updated>2025-06-17T13:45:13.688Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Roundcube Webmail PHP对象反序列化漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-49113</li></ul><p><strong>漏洞类型：</strong> 反序列化</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Roundcube Webmail在1.5.10之前和1.6.x在1.6.11之前的版本中，由于program&#x2F;actions&#x2F;settings&#x2F;upload.php中的_from参数未经验证，导致认证用户可以通过PHP对象反序列化执行远程代码。</p><p><strong>产品厂商：</strong> Roundcube</p><p><strong>产品名称：</strong> Roundcube Webmail</p><p><strong>影响版本：</strong> version &lt; 1.5.10, version &lt; 1.6.11</p><p><strong>来源：</strong> <a href="https://github.com/B1ack4sh/Blackash-CVE-2025-49113">https://github.com/B1ack4sh/Blackash-CVE-2025-49113</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2025-49113.php</li><li>README.md</li><li>install.sh</li><li>template.yaml</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE‑2025‑49113-–-Post‑Auth-Remote-Code-Execution-in-Roundcube-via-PHP-Object-Deserialization"><a href="#CVE‑2025‑49113-–-Post‑Auth-Remote-Code-Execution-in-Roundcube-via-PHP-Object-Deserialization" class="headerlink" title="CVE‑2025‑49113 – Post‑Auth Remote Code Execution in Roundcube via PHP Object Deserialization"></a>CVE‑2025‑49113 – Post‑Auth Remote Code Execution in Roundcube via PHP Object Deserialization</h2><h2 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h2><p>Roundcube Webmail before 1.5.10 and 1.6.x before 1.6.11 allows remote code execution by authenticated users because the _from parameter in a URL is not validated in program&#x2F;actions&#x2F;settings&#x2F;upload.php, leading to PHP Object Deserialization.</p><h2 id="Metrics"><a href="#Metrics" class="headerlink" title="Metrics:"></a>Metrics:</h2><ul><li>CVE ID: CVE-2025-49113</li><li>Severity: Critical</li><li>CVSS Score: 9.9 (CVSS:3.1&#x2F;AV:N&#x2F;AC:L&#x2F;PR:L&#x2F;UI:N&#x2F;S:C&#x2F;C:H&#x2F;I:H&#x2F;A:H)</li><li>EPSS Score: 0.00661</li><li>EPSS Percentile: %70 (Likely to be exploited)</li><li>Published: June 1, 2025</li><li>Affected Versions: All versions prior to 1.5.10, 1.6.11</li><li>Patched Versions: 1.5.10, 1.6.11</li></ul><h2 id="🐳-Quick-Installation-via-Docker"><a href="#🐳-Quick-Installation-via-Docker" class="headerlink" title="🐳 Quick Installation (via Docker):"></a>🐳 Quick Installation (via Docker):</h2><p>This will install Ubuntu <code>24.04</code>, Roundcube, and all necessary dependencies inside a Docker container:</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">docker</span> run --name ubuntu24 <span class="hljs-punctuation">\</span><br><span class="hljs-punctuation"></span>  -p <span class="hljs-number">9876</span>:<span class="hljs-number">80</span> <span class="hljs-punctuation">\</span><br><span class="hljs-punctuation"></span>  -v <span class="hljs-string">&quot;$PWD/install.sh&quot;</span>:/root/install.sh <span class="hljs-punctuation">\</span><br><span class="hljs-punctuation"></span>  -it ubuntu:<span class="hljs-number">24</span>.<span class="hljs-number">04</span> <span class="hljs-punctuation">\</span><br><span class="hljs-punctuation"></span>  bash -c <span class="hljs-string">&quot;chmod +x /root/install.sh &amp;&amp; /root/install.sh &amp;&amp; exec bash&quot;</span><br></code></pre></td></tr></table></figure><p>⚠️ Note: Use only in isolated environments. Do not expose vulnerable instances to the public internet.</p><h2 id="⚠️-Disclaimer"><a href="#⚠️-Disclaimer" class="headerlink" title="⚠️ Disclaimer:"></a>⚠️ Disclaimer:</h2><p>This proof-of-concept code is provided for educational and research purposes only. The author and contributors assume no responsibility for any misuse or damage resulting from the use of this code. Unauthorized use on systems you do not own or have explicit permission to test is illegal and strictly prohibited.</p><h2 id="Exploit"><a href="#Exploit" class="headerlink" title="Exploit:"></a>Exploit:</h2><p>Make sure you have php installed on the system</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">php</span> CVE-<span class="hljs-number">2025</span>-<span class="hljs-number">49113</span>.php http://<span class="hljs-number">127.0.0.1:9876</span>/ roundcube fearsoff.org <span class="hljs-string">&quot;cat /etc/passwd &gt; /tmp/pwned&quot;</span><br></code></pre></td></tr></table></figure><h2 id="🛡️-Mitigation"><a href="#🛡️-Mitigation" class="headerlink" title="🛡️ Mitigation:"></a>🛡️ Mitigation:</h2><p>If you’re running Roundcube ≤ 1.6.10, update to the latest patched version immediately to eliminate this vulnerability.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Roundcube Webmail PHP对象反序列化漏洞&lt;/p&gt;
-&lt;p&gt;&lt;s</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
   </entry>
   
