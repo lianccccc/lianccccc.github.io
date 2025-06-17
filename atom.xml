@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-17T02:15:15.512Z</updated>
+  <updated>2025-06-17T02:45:36.698Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,112 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Fastjson 反序列化漏洞</title>
+    <link href="http://example.com/2025/06/17/github_3016610101/"/>
+    <id>http://example.com/2025/06/17/github_3016610101/</id>
+    <published>2025-06-17T02:45:36.701Z</published>
+    <updated>2025-06-17T02:45:36.698Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Fastjson 反序列化漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2017-18349</li></ul><p><strong>漏洞类型：</strong> 反序列化</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Fastjson在1.2.25之前的版本中存在远程代码执行漏洞，由于parseObject中的不安全反序列化导致，远程攻击者可以通过发送恶意的JSON数据到&#x2F;json端点执行任意代码。</p><p><strong>产品厂商：</strong> Fastjson</p><p><strong>产品名称：</strong> Fastjson</p><p><strong>影响版本：</strong> version &lt; 1.2.25</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12387">https://github.com/projectdiscovery/nuclei-templates/issues/12387</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Fastjson before 1.2.25 contains a remote code execution caused by unsafe deserialization in parseObject, letting remote attackers execute arbitrary code via crafted JSON data, exploit requires sending malicious JSON payload to &#x2F;json endpoint.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://github.com/pippo-java/pippo/issues/466">https://github.com/pippo-java/pippo/issues/466</a></li><li><a href="https://github.com/h0cksr/Fastjson--CVE-2017-18349-">https://github.com/h0cksr/Fastjson--CVE-2017-18349-</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-NA"><a href="#Shodan-Query-NA" class="headerlink" title="Shodan Query: NA"></a>Shodan Query: <code>NA</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Fastjson 反序列化漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/s</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Microsoft .NET Framework Remote Code Execution Vulnerability</title>
+    <link href="http://example.com/2025/06/17/github_1408488851/"/>
+    <id>http://example.com/2025/06/17/github_1408488851/</id>
+    <published>2025-06-17T02:45:28.429Z</published>
+    <updated>2025-06-17T02:45:28.426Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Microsoft .NET Framework Remote Code Execution Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2020-0646</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Microsoft .NET Framework 存在一个由于输入验证不当导致的远程代码执行漏洞，允许远程攻击者通过向系统发送恶意输入来执行任意代码。</p><p><strong>产品厂商：</strong> Microsoft</p><p><strong>产品名称：</strong> .NET Framework</p><p><strong>搜索语法：</strong> server: ms .net remoting</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12210">https://github.com/projectdiscovery/nuclei-templates/issues/12210</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Microsoft .NET Framework contains a remote code execution caused by improper input validation, letting remote attackers execute arbitrary code, exploit requires sending malicious input to the system.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="http://packetstormsecurity.com/files/156930/SharePoint-Workflows-XOML-Injection.html">http://packetstormsecurity.com/files/156930/SharePoint-Workflows-XOML-Injection.html</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-server-ms-net-remoting"><a href="#Shodan-Query-server-ms-net-remoting" class="headerlink" title="Shodan Query: server: ms .net remoting"></a>Shodan Query: <code>server: ms .net remoting</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Microsoft .NET Framework Remote Code Ex</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Teleport Authentication Bypass Vulnerability</title>
+    <link href="http://example.com/2025/06/17/github_1020063229/"/>
+    <id>http://example.com/2025/06/17/github_1020063229/</id>
+    <published>2025-06-17T02:45:19.659Z</published>
+    <updated>2025-06-17T02:45:19.658Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Teleport Authentication Bypass Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-49825</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 检测到Teleport web登录界面暴露在&#x2F;web&#x2F;login，以及从&#x2F;webapi&#x2F;ping获取的版本信息。</p><p><strong>产品厂商：</strong> gravitational</p><p><strong>产品名称：</strong> Teleport</p><p><strong>搜索语法：</strong> http.favicon.hash:544208100</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/d9e0f46245393c1bf27c4b8ba1e59e31c3027a59/http%2Fexposed-panels%2Fteleport-login-panel.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/d9e0f46245393c1bf27c4b8ba1e59e31c3027a59/http%2Fexposed-panels%2Fteleport-login-panel.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> teleport-login-panel<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Teleport Login Panel <span class="hljs-operator">-</span> Detect<br>  <span class="hljs-params">author:</span> pdteam,mahmoud0x00<br>  <span class="hljs-params">severity:</span> info<br>  <span class="hljs-params">description:</span> |<br>    Detects Teleport web login interface exposed at <span class="hljs-symbol">/web/login</span> and version information from <span class="hljs-symbol">/webapi/ping</span><br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/gravitational/teleport</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">shodan-query:</span> http.favicon.hash:<span class="hljs-number">544208100</span><br>  <span class="hljs-params">tags:</span> panel,teleport,login,oss<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/webapi/ping&quot;</span><br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;server_version&quot;</span>\s<span class="hljs-operator">*</span>:\s<span class="hljs-operator">*</span><span class="hljs-string">&quot;<span class="hljs-char escape_">\d</span>+<span class="hljs-char escape_">\.</span><span class="hljs-char escape_">\d</span>+<span class="hljs-char escape_">\.</span><span class="hljs-char escape_">\d</span>+&quot;</span>&#x27;<br>          <span class="hljs-operator">-</span> &#x27;teleport&#x27;<br>        <span class="hljs-params">condition:</span> and<br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> json<br>        <span class="hljs-params">json:</span><br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;Version: &quot;</span> <span class="hljs-operator">+</span>.server_version&#x27;<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Teleport Authentication Bypass Vulnerab</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Teleport 认证绕过漏洞</title>
+    <link href="http://example.com/2025/06/17/github_1844486948/"/>
+    <id>http://example.com/2025/06/17/github_1844486948/</id>
+    <published>2025-06-17T02:45:11.975Z</published>
+    <updated>2025-06-17T02:45:11.973Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Teleport 认证绕过漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-49825</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Teleport 17.5.2之前的版本存在远程认证绕过漏洞，攻击者可利用此漏洞未经授权访问受影响系统。</p><p><strong>产品厂商：</strong> gravitational</p><p><strong>产品名称：</strong> Teleport</p><p><strong>影响版本：</strong> version &lt; 17.5.2</p><p><strong>搜索语法：</strong> http.favicon.hash:544208100</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/d9e0f46245393c1bf27c4b8ba1e59e31c3027a59/http%2Fcves%2F2025%2FCVE-2025-49825.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/d9e0f46245393c1bf27c4b8ba1e59e31c3027a59/http%2Fcves%2F2025%2FCVE-2025-49825.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">49825</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Teleport <span class="hljs-operator">-</span> Authentication Bypass<br>  <span class="hljs-params">author:</span> pdteam<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    Teleport versions prior to <span class="hljs-number">17.5</span>.<span class="hljs-number">2</span> are vulnerable to a remote authentication bypass vulnerability. This issue allows attackers to gain unauthorized access to affected systems.<br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">49825</span><br>    <span class="hljs-params">cvss-metrics:</span> <span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">9.8</span><br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/gravitational/teleport/security/advisories/GHSA-8cqv-pj7f-pwpc</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">shodan-query:</span> http.favicon.hash:<span class="hljs-number">544208100</span><br>  <span class="hljs-params">tags:</span> cve,cve2025,teleport<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/webapi/ping&quot;</span><br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> json<br>        <span class="hljs-params">name:</span> version<br>        <span class="hljs-params">json:</span><br>          <span class="hljs-operator">-</span> .server_version<br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> json<br>        <span class="hljs-params">json:</span><br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;Teleport Version: &quot;</span><span class="hljs-operator">+</span> .server_version&#x27;<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">name:</span> version_check<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> compare_versions(version, &#x27;<span class="hljs-operator">&lt;</span> <span class="hljs-number">17.5</span>.<span class="hljs-number">2</span>&#x27;)<br>          <span class="hljs-operator">-</span> contains_all(body, <span class="hljs-string">&quot;server_version&quot;</span>, <span class="hljs-string">&quot;teleport&quot;</span>)<br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-operator">!</span>contains_any(version, <span class="hljs-string">&quot;16.5.12&quot;</span>, <span class="hljs-string">&quot;15.5.3&quot;</span>, <span class="hljs-string">&quot;14.4.1&quot;</span>, <span class="hljs-string">&quot;13.4.27&quot;</span>, <span class="hljs-string">&quot;12.4.35&quot;</span>)&#x27;<br>        <span class="hljs-params">condition:</span> and<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Teleport 认证绕过漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/s</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
+    
+  </entry>
   
   <entry>
     <title>FlexPaper Remote Code Execution Vulnerability</title>
@@ -431,113 +537,6 @@
       
     <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; NUUO NVR 默认登录凭证漏洞&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;漏洞类型：&lt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="弱口令" scheme="http://example.com/tags/%E5%BC%B1%E5%8F%A3%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PhotoPrism 未授权访问漏洞</title>
-    <link href="http://example.com/2025/06/16/github_2579903784/"/>
-    <id>http://example.com/2025/06/16/github_2579903784/</id>
-    <published>2025-06-16T17:17:55.361Z</published>
-    <updated>2025-06-16T17:17:55.357Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> PhotoPrism 未授权访问漏洞</p><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> PhotoPrism是一个AI驱动的去中心化网络照片应用。此模板检测到无需认证即可访问的实例，可能会暴露敏感的用户数据和照片。</p><p><strong>产品厂商：</strong> PhotoPrism</p><p><strong>产品名称：</strong> PhotoPrism</p><p><strong>搜索语法：</strong> title:”PhotoPrism”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/0a5dd2115cdbea3236ad02bc9d9b5365aac46e61/http%2Fmisconfiguration%2Fphotoprism-unauth.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/0a5dd2115cdbea3236ad02bc9d9b5365aac46e61/http%2Fmisconfiguration%2Fphotoprism-unauth.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> photoprism-unauth<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> PhotoPrism <span class="hljs-operator">-</span> Unauth Access<br>  <span class="hljs-params">author:</span> ritikchaddha<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> |<br>    PhotoPrism is an AI-powered photos app for the decentralized web. This template detects instances that are accessible without authentication, potentially exposing sensitive user data and photos.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>docs.photoprism.app<span class="hljs-operator">/</span>getting-started<span class="hljs-symbol">/</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">shodan-query:</span> title:<span class="hljs-string">&quot;PhotoPrism&quot;</span><br>    <span class="hljs-params">fofa-query:</span> title<span class="hljs-operator">=</span><span class="hljs-string">&quot;PhotoPrism&quot;</span><br>  <span class="hljs-params">tags:</span> photoprism,misconfig,unauth<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-symbol">/api/v1/config</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> &#x27;status_code <span class="hljs-operator">==</span> <span class="hljs-number">200</span>&#x27;<br>          <span class="hljs-operator">-</span> &#x27;contains_all(body, <span class="hljs-string">&quot;mode<span class="hljs-char escape_">\&quot;</span>:<span class="hljs-char escape_">\&quot;</span>user&quot;</span>, <span class="hljs-string">&quot;PhotoPrism&quot;</span>)&#x27;<br>          <span class="hljs-operator">-</span> &#x27;contains(content_type, <span class="hljs-string">&quot;application/json&quot;</span>)&#x27;<br>        <span class="hljs-params">condition:</span> and<br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; PhotoPrism 未授权访问漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞类型：</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>OpenSearch Dashboard 未授权访问漏洞</title>
-    <link href="http://example.com/2025/06/16/github_1156430075/"/>
-    <id>http://example.com/2025/06/16/github_1156430075/</id>
-    <published>2025-06-16T17:17:17.072Z</published>
-    <updated>2025-06-16T17:17:17.068Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> OpenSearch Dashboard 未授权访问漏洞</p><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> OpenSearch Dashboard是OpenSearch的可视化和管理工具。此模板检测到无需认证即可访问的实例，可能会暴露敏感数据和系统信息。</p><p><strong>产品厂商：</strong> OpenSearch</p><p><strong>产品名称：</strong> OpenSearch Dashboard</p><p><strong>搜索语法：</strong> title:”OpenSearch”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/a4fb6109664027306d0144bf4bb4beb445ea17f3/http%2Fmisconfiguration%2Fopensearch-dashboard-unauth.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/a4fb6109664027306d0144bf4bb4beb445ea17f3/http%2Fmisconfiguration%2Fopensearch-dashboard-unauth.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> opensearch-dashboard-unauth<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> OpenSearch Dashboard <span class="hljs-operator">-</span> Unauth Access<br>  <span class="hljs-params">author:</span> ritikchaddha<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> |<br>    OpenSearch Dashboard is a visualization and management tool for OpenSearch. This template detects instances that are accessible without authentication, potentially exposing sensitive data and system information.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>opensearch.org<span class="hljs-operator">/</span>docs<span class="hljs-operator">/</span>latest<span class="hljs-operator">/</span>dashboards<span class="hljs-operator">/</span>index<span class="hljs-symbol">/</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">shodan-query:</span> title:<span class="hljs-string">&quot;OpenSearch&quot;</span><br>    <span class="hljs-params">fofa-query:</span> title<span class="hljs-operator">=</span><span class="hljs-string">&quot;OpenSearch&quot;</span><br>  <span class="hljs-params">tags:</span> opensearch,dashboard,misconfig,unauth<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-operator">/</span>app<span class="hljs-operator">/</span>home<span class="hljs-comment">#/ HTTP/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;/ui/fonts/source_sans_3/SourceSans3&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;font-family: &#x27;Source Code Pro&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;OpenSearch&quot;</span><br>        <span class="hljs-params">condition:</span> and<br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; OpenSearch Dashboard 未授权访问漏洞&lt;/p&gt;
-&lt;p&gt;&lt;st</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CVE-2025-49125 Authentication Bypass</title>
-    <link href="http://example.com/2025/06/16/github_2268809225/"/>
-    <id>http://example.com/2025/06/16/github_2268809225/</id>
-    <published>2025-06-16T17:16:37.151Z</published>
-    <updated>2025-06-16T17:16:37.151Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CVE-2025-49125 Authentication Bypass</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-49125</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 通过替代路径绕过认证的漏洞（CWE-288）</p><p><strong>来源：</strong> <a href="https://github.com/detectrespondrepeat/CVE-2025-49125-Authentication-Bypass">https://github.com/detectrespondrepeat/CVE-2025-49125-Authentication-Bypass</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>LICENSE</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-49125-Authentication-Bypass"><a href="#CVE-2025-49125-Authentication-Bypass" class="headerlink" title="CVE-2025-49125-Authentication-Bypass"></a>CVE-2025-49125-Authentication-Bypass</h2><p>Authentication Bypass via Alternate Path Vulnerability (CWE-288)</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CVE-2025-49125 Authentication Bypass&lt;/p</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>OpenSearch Dashboard 默认登录凭证漏洞</title>
-    <link href="http://example.com/2025/06/16/github_3373530550/"/>
-    <id>http://example.com/2025/06/16/github_3373530550/</id>
-    <published>2025-06-16T17:15:34.716Z</published>
-    <updated>2025-06-16T17:15:34.713Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> OpenSearch Dashboard 默认登录凭证漏洞</p><p><strong>漏洞类型：</strong> 弱口令</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> OpenSearch Dashboard是一个社区驱动的开源搜索和分析套件。此模板检测使用默认凭证（admin:admin）的实例。</p><p><strong>产品厂商：</strong> OpenSearch</p><p><strong>产品名称：</strong> OpenSearch Dashboard</p><p><strong>搜索语法：</strong> title:”OpenSearch”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/c3c3bdfe77a3b240fa2f704e3b999788e7824e65/http%2Fdefault-logins%2Fopensearch-default-login.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/c3c3bdfe77a3b240fa2f704e3b999788e7824e65/http%2Fdefault-logins%2Fopensearch-default-login.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> opensearch-dashboard-default-login<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> OpenSearch Dashboard <span class="hljs-operator">-</span> Default Login<br>  <span class="hljs-params">author:</span> ritikchaddha<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> |<br>    OpenSearch Dashboard is a community-driven, open source search and analytics suite. This template detects instances using default credentials (admin:admin).<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>opensearch.org<span class="hljs-operator">/</span>docs<span class="hljs-operator">/</span>latest<span class="hljs-operator">/</span>security<span class="hljs-operator">/</span>access-control<span class="hljs-operator">/</span>users-roles<span class="hljs-symbol">/</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/opensearch-project/OpenSearch-Dashboards</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">shodan-query:</span> title:<span class="hljs-string">&quot;OpenSearch&quot;</span><br>    <span class="hljs-params">fofa-query:</span> title<span class="hljs-operator">=</span><span class="hljs-string">&quot;OpenSearch&quot;</span><br>  <span class="hljs-params">tags:</span> opensearch,default-login,misconfig<br><br><span class="hljs-params">variables:</span><br>  <span class="hljs-params">username:</span> admin<br>  <span class="hljs-params">password:</span> admin<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-symbol">/auth/login</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">osd-xsrf:</span> osd-fetch<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/json</span><br><br>        &#123;<span class="hljs-string">&quot;username&quot;</span>:<span class="hljs-string">&quot;&#123;&#123;username&#125;&#125;&quot;</span>,<span class="hljs-string">&quot;password&quot;</span>:<span class="hljs-string">&quot;&#123;&#123;password&#125;&#125;&quot;</span>&#125;<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> &#x27;status_code <span class="hljs-operator">==</span> <span class="hljs-number">200</span>&#x27;<br>          <span class="hljs-operator">-</span> &#x27;contains_all(body, <span class="hljs-string">&quot;username<span class="hljs-char escape_">\&quot;</span>:&quot;</span>, <span class="hljs-string">&quot;roles<span class="hljs-char escape_">\&quot;</span>:&quot;</span>)&#x27;<br>          <span class="hljs-operator">-</span> &#x27;contains(content_type, <span class="hljs-string">&quot;application/json&quot;</span>)&#x27;<br>        <span class="hljs-params">condition:</span> and<br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; OpenSearch Dashboard 默认登录凭证漏洞&lt;/p&gt;
-&lt;p&gt;&lt;s</summary>
       
     
     
