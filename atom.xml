@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-17T10:15:54.702Z</updated>
+  <updated>2025-06-17T10:30:06.382Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Is b For Backdoor? Pre-Auth RCE Chain In Sitecore Experience Platform</title>
+    <link href="http://example.com/2025/06/17/blog_2658481578/"/>
+    <id>http://example.com/2025/06/17/blog_2658481578/</id>
+    <published>2025-06-17T10:30:06.386Z</published>
+    <updated>2025-06-17T10:30:06.382Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>描述：</strong> Welcome to June! We’re back—this time, we’re exploring Sitecore’s Experience Platform (XP), demonstrating a pre-auth RCE chain that we reported to Sitecore in February 2025.</p><p>We’ve spent a bit of time recently looking at CMS’s given the basic fact that they represent attractive</p><p><strong>链接：</strong> <a href="https://labs.watchtowr.com/is-b-for-backdoor-pre-auth-rce-chain-in-sitecore-experience-platform/">https://labs.watchtowr.com/is-b-for-backdoor-pre-auth-rce-chain-in-sitecore-experience-platform/</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;描述：&lt;/strong&gt; Welcome to June! We’re back—this time, we’re exploring Sitecore’s Experience Platform (XP), demonstrating a pre-auth</summary>
+      
+    
+    
+    
+    <category term="安全博客" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+    <category term="labs.watchtowr.com" scheme="http://example.com/tags/labs-watchtowr-com/"/>
+    
+  </entry>
   
   <entry>
     <title>【已复现】泛微 E-cology SQL注入漏洞</title>
@@ -221,9 +245,9 @@
     <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
     
     
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
     <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
   </entry>
   
@@ -518,33 +542,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="OSINT情报分析师" scheme="http://example.com/tags/OSINT%E6%83%85%E6%8A%A5%E5%88%86%E6%9E%90%E5%B8%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GEO ssrf漏洞 (CVE-2024-29198)</title>
-    <link href="http://example.com/2025/06/17/weixin_622939162/"/>
-    <id>http://example.com/2025/06/17/weixin_622939162/</id>
-    <published>2025-06-17T03:27:59.212Z</published>
-    <updated>2025-06-17T03:27:59.209Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> Nday Poc</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/TXVVEfdeu1FuULUQXxiKCg">https://mp.weixin.qq.com/s/TXVVEfdeu1FuULUQXxiKCg</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; Nday Poc&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/TXVVEfdeu1FuULUQXxiKCg&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="Nday Poc" scheme="http://example.com/tags/Nday-Poc/"/>
     
   </entry>
   
