@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-18T18:45:27.757Z</updated>
+  <updated>2025-06-18T19:45:18.685Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Langflow AI 远程代码执行漏洞</title>
+    <link href="http://example.com/2025/06/18/github_4251818308/"/>
+    <id>http://example.com/2025/06/18/github_4251818308/</id>
+    <published>2025-06-18T19:45:18.687Z</published>
+    <updated>2025-06-18T19:45:18.685Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Langflow AI 远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-3248</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Langflow AI 存在远程代码执行漏洞，攻击者无需认证即可利用此漏洞执行任意代码。</p><p><strong>产品名称：</strong> Langflow AI</p><p><strong>来源：</strong> <a href="https://github.com/0xgh057r3c0n/CVE-2025-3248">https://github.com/0xgh057r3c0n/CVE-2025-3248</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>.gitignore</li><li>LICENSE</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-3248"><a href="#CVE-2025-3248" class="headerlink" title="CVE-2025-3248"></a>CVE-2025-3248</h2><p>Exploit for Langflow AI Remote Code Execution (Unauthenticated)</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Langflow AI 远程代码执行漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Roundcube CVE-2025-49113</title>
+    <link href="http://example.com/2025/06/18/github_3103835017/"/>
+    <id>http://example.com/2025/06/18/github_3103835017/</id>
+    <published>2025-06-18T19:45:10.660Z</published>
+    <updated>2025-06-18T19:45:10.657Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Roundcube CVE-2025-49113</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-49113</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>产品名称：</strong> Roundcube</p><p><strong>来源：</strong> <a href="https://github.com/punitdarji/roundcube-cve-2025-49113">https://github.com/punitdarji/roundcube-cve-2025-49113</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2025-49113.php</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Roundcube CVE-2025-49113&lt;/p&gt;
+&lt;p&gt;&lt;strong</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+  </entry>
   
   <entry>
     <title>JEHC-BPM 远程代码执行漏洞</title>
@@ -50,7 +104,7 @@
     <published>2025-06-18T18:45:12.830Z</published>
     <updated>2025-06-18T18:45:12.825Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CloudClassroom-PHP-Project SQL注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-26198</li></ul><p><strong>漏洞类型：</strong> SQL注入</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> CloudClassroom-PHP-Project v1.0中的loginlinkadmin.php端点存在一个严重的SQL注入漏洞。未经过滤的用户输入直接嵌入到SQL查询中，允许攻击者操纵查询逻辑，绕过认证，并获得未授权访问。此漏洞已被分配标识符CVE-2025-26198。在披露时没有可用的补丁。</p><p><strong>产品厂商：</strong> Independent (mathurvishal)</p><p><strong>产品名称：</strong> CloudClassroom-PHP-Project</p><p><strong>影响版本：</strong> 1.0</p><p><strong>来源：</strong> <a href="https://github.com/tansique-17/CVE-2025-26198">https://github.com/tansique-17/CVE-2025-26198</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="🛡️-CVE-Disclosure-CVE-2025-26198-—-SQL-Injection-Vulnerability-in-CloudClassroom-PHP-Project"><a href="#🛡️-CVE-Disclosure-CVE-2025-26198-—-SQL-Injection-Vulnerability-in-CloudClassroom-PHP-Project" class="headerlink" title="🛡️ CVE Disclosure: [CVE-2025-26198] — SQL Injection Vulnerability in CloudClassroom-PHP-Project"></a>🛡️ CVE Disclosure: [CVE-2025-26198] — SQL Injection Vulnerability in CloudClassroom-PHP-Project</h2><p><strong>Date of Public Disclosure</strong>: <em>18 June 2025</em></p><hr><h3 id="🧩-Summary"><a href="#🧩-Summary" class="headerlink" title="🧩 Summary"></a>🧩 Summary</h3><p>A critical SQL Injection vulnerability exists in <strong>CloudClassroom-PHP-Project v1.0</strong>, specifically within the <code>loginlinkadmin.php</code> endpoint. Unsanitized input directly embedded into SQL queries allows attackers to manipulate query logic, bypass authentication, and gain unauthorized access.</p><p>The issue has been assigned the identifier <strong>CVE-2025-26198</strong>. No patch was available at the time of disclosure.</p><hr><h3 id="🛠️-Affected-Product"><a href="#🛠️-Affected-Product" class="headerlink" title="🛠️ Affected Product"></a>🛠️ Affected Product</h3><ul><li><strong>Vendor</strong>: Independent (mathurvishal)</li><li><strong>Product</strong>: CloudClassroom-PHP-Project</li><li><strong>Version</strong>: 1.0  </li><li><strong>Repository</strong>: <a href="https://github.com/mathurvishal/CloudClassroom-PHP-Project">https://github.com/mathurvishal/CloudClassroom-PHP-Project</a></li></ul><hr><h3 id="📂-Vulnerable-Component"><a href="#📂-Vulnerable-Component" class="headerlink" title="📂 Vulnerable Component"></a>📂 Vulnerable Component</h3><ul><li><strong>File</strong>: <code>loginlinkadmin.php</code></li><li><strong>Endpoint</strong>:<br><code>http://localhost/CloudClassroom-PHP-Project-master/loginlinkadmin.php</code></li></ul><hr><h3 id="📄-Vulnerability-Details"><a href="#📄-Vulnerability-Details" class="headerlink" title="📄 Vulnerability Details"></a>📄 Vulnerability Details</h3><p>The admin login form directly uses unsanitized user input in a dynamic SQL query. This allows an attacker to inject arbitrary SQL logic and successfully bypass authentication mechanisms.</p><hr><h3 id="🧩-CWE-1-Total"><a href="#🧩-CWE-1-Total" class="headerlink" title="🧩 CWE 1 Total"></a>🧩 CWE 1 Total</h3><p><strong>Learn more</strong>  </p><table><thead><tr><th>CWE ID</th><th>Title</th></tr></thead><tbody><tr><td><a href="https://cwe.mitre.org/data/definitions/89.html">CWE-89</a></td><td>Improper Neutralization of Special Elements used in an SQL Command (‘SQL Injection’)</td></tr></tbody></table><hr><h3 id="📊-CVSS-1-Total"><a href="#📊-CVSS-1-Total" class="headerlink" title="📊 CVSS 1 Total"></a>📊 CVSS 1 Total</h3><p><strong>Learn more</strong>  </p><table><thead><tr><th>Score</th><th>Severity</th><th>Version</th><th>Vector String</th></tr></thead><tbody><tr><td>9.8</td><td>CRITICAL</td><td>3.1</td><td>CVSS:3.1&#x2F;AV:N&#x2F;AC:L&#x2F;PR:N&#x2F;UI:N&#x2F;S:U&#x2F;C:H&#x2F;I:H&#x2F;A:H</td></tr></tbody></table><hr><h3 id="💥-Impact"><a href="#💥-Impact" class="headerlink" title="💥 Impact"></a>💥 Impact</h3><p>A successful exploitation can result in:</p><ul><li><strong>Authentication bypass</strong></li><li><strong>Access to admin dashboard and privileged functionality</strong></li><li><strong>Leakage of sensitive data via UNION-based SQL injection</strong></li><li><strong>Potential full compromise of backend data</strong></li></ul><hr><h3 id="🧪-Steps-to-Reproduce"><a href="#🧪-Steps-to-Reproduce" class="headerlink" title="🧪 Steps to Reproduce"></a>🧪 Steps to Reproduce</h3><ol><li><p><strong>Clone the Repository</strong>:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/mathurvishal/CloudClassroom-PHP-Project.git<br></code></pre></td></tr></table></figure></li><li><p><strong>Host the Application</strong>:<br>Use a local server stack (e.g., <strong>XAMPP</strong> or <strong>LAMP</strong>) and navigate to:</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">http:<span class="hljs-regexp">//</span>localhost<span class="hljs-regexp">/CloudClassroom-PHP-Project-master/</span>loginlinkadmin.php<br></code></pre></td></tr></table></figure></li><li><p><strong>Inject Payload</strong>:</p><ul><li><strong>Username</strong>: <code>&#39; OR &#39;1&#39;=&#39;1</code></li><li><strong>Password</strong>: <em>(any value or leave blank)</em></li></ul></li><li><p><strong>Submit</strong>:<br>You will be logged in as <strong>admin</strong>, confirming a successful SQL injection.</p></li></ol><hr><h3 id="🔧-Recommendations"><a href="#🔧-Recommendations" class="headerlink" title="🔧 Recommendations"></a>🔧 Recommendations</h3><ul><li>Replace raw SQL queries with <strong>parameterized statements</strong> (e.g., <code>mysqli_prepare()</code> or <strong>PDO</strong>).</li><li>Validate and sanitize <strong>all user inputs</strong> before query execution.</li><li>Apply <strong>WAF (Web Application Firewall)</strong> rules to detect and block SQLi patterns.</li><li>Conduct <strong>regular code audits</strong> and <strong>penetration testing</strong> to identify future vulnerabilities.</li></ul><hr><h3 id="📅-Timeline"><a href="#📅-Timeline" class="headerlink" title="📅 Timeline"></a>📅 Timeline</h3><table><thead><tr><th>Event</th><th>Date</th></tr></thead><tbody><tr><td>Vulnerability Discovered</td><td>14 June 2025</td></tr><tr><td>Public Disclosure</td><td>18 June 2025</td></tr><tr><td>Patch Available</td><td><em>No patch as of disclosure</em></td></tr></tbody></table><hr><h3 id="🧑‍💻-Credit"><a href="#🧑‍💻-Credit" class="headerlink" title="🧑‍💻 Credit"></a>🧑‍💻 Credit</h3><p>This vulnerability was discovered and responsibly disclosed by:</p><ul><li><strong>Tansique Dasari</strong></li></ul><hr><h3 id="🔗-References"><a href="#🔗-References" class="headerlink" title="🔗 References"></a>🔗 References</h3><ul><li><a href="https://owasp.org/www-community/attacks/SQL_Injection">OWASP - SQL Injection</a></li><li><a href="https://portswigger.net/web-security/sql-injection">PortSwigger - SQL Injection</a></li><li><a href="https://github.com/mathurvishal/CloudClassroom-PHP-Project">CloudClassroom GitHub Repository</a></li></ul><hr><h3 id="📬-Contact"><a href="#📬-Contact" class="headerlink" title="📬 Contact"></a>📬 Contact</h3><p>For questions, coordination, or further information, please contact:</p><p>✉️ <strong>Tansique Dasari</strong> — <a href="mailto:&#x74;&#x61;&#x6e;&#115;&#105;&#113;&#117;&#x65;&#x2e;&#x64;&#x40;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#x6d;">tansique.d@gmail.com</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CloudClassroom-PHP-Project SQL注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-26198</li></ul><p><strong>漏洞类型：</strong> SQL注入</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> CloudClassroom-PHP-Project v1.0中的loginlinkadmin.php端点存在一个严重的SQL注入漏洞。未经过滤的用户输入直接嵌入到SQL查询中，允许攻击者操纵查询逻辑，绕过认证，并获得未授权访问。此漏洞已被分配标识符CVE-2025-26198。在披露时没有可用的补丁。</p><p><strong>产品厂商：</strong> Independent (mathurvishal)</p><p><strong>产品名称：</strong> CloudClassroom-PHP-Project</p><p><strong>影响版本：</strong> 1.0</p><p><strong>来源：</strong> <a href="https://github.com/tansique-17/CVE-2025-26198">https://github.com/tansique-17/CVE-2025-26198</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="🛡️-CVE-Disclosure-CVE-2025-26198-—-SQL-Injection-Vulnerability-in-CloudClassroom-PHP-Project"><a href="#🛡️-CVE-Disclosure-CVE-2025-26198-—-SQL-Injection-Vulnerability-in-CloudClassroom-PHP-Project" class="headerlink" title="🛡️ CVE Disclosure: [CVE-2025-26198] — SQL Injection Vulnerability in CloudClassroom-PHP-Project"></a>🛡️ CVE Disclosure: [CVE-2025-26198] — SQL Injection Vulnerability in CloudClassroom-PHP-Project</h2><p><strong>Date of Public Disclosure</strong>: <em>18 June 2025</em></p><hr><h3 id="🧩-Summary"><a href="#🧩-Summary" class="headerlink" title="🧩 Summary"></a>🧩 Summary</h3><p>A critical SQL Injection vulnerability exists in <strong>CloudClassroom-PHP-Project v1.0</strong>, specifically within the <code>loginlinkadmin.php</code> endpoint. Unsanitized input directly embedded into SQL queries allows attackers to manipulate query logic, bypass authentication, and gain unauthorized access.</p><p>The issue has been assigned the identifier <strong>CVE-2025-26198</strong>. No patch was available at the time of disclosure.</p><hr><h3 id="🛠️-Affected-Product"><a href="#🛠️-Affected-Product" class="headerlink" title="🛠️ Affected Product"></a>🛠️ Affected Product</h3><ul><li><strong>Vendor</strong>: Independent (mathurvishal)</li><li><strong>Product</strong>: CloudClassroom-PHP-Project</li><li><strong>Version</strong>: 1.0  </li><li><strong>Repository</strong>: <a href="https://github.com/mathurvishal/CloudClassroom-PHP-Project">https://github.com/mathurvishal/CloudClassroom-PHP-Project</a></li></ul><hr><h3 id="📂-Vulnerable-Component"><a href="#📂-Vulnerable-Component" class="headerlink" title="📂 Vulnerable Component"></a>📂 Vulnerable Component</h3><ul><li><strong>File</strong>: <code>loginlinkadmin.php</code></li><li><strong>Endpoint</strong>:<br><code>http://localhost/CloudClassroom-PHP-Project-master/loginlinkadmin.php</code></li></ul><hr><h3 id="📄-Vulnerability-Details"><a href="#📄-Vulnerability-Details" class="headerlink" title="📄 Vulnerability Details"></a>📄 Vulnerability Details</h3><p>The admin login form directly uses unsanitized user input in a dynamic SQL query. This allows an attacker to inject arbitrary SQL logic and successfully bypass authentication mechanisms.</p><hr><h3 id="🧩-CWE-1-Total"><a href="#🧩-CWE-1-Total" class="headerlink" title="🧩 CWE 1 Total"></a>🧩 CWE 1 Total</h3><p><strong>Learn more</strong>  </p><table><thead><tr><th>CWE ID</th><th>Title</th></tr></thead><tbody><tr><td><a href="https://cwe.mitre.org/data/definitions/89.html">CWE-89</a></td><td>Improper Neutralization of Special Elements used in an SQL Command (‘SQL Injection’)</td></tr></tbody></table><hr><h3 id="📊-CVSS-1-Total"><a href="#📊-CVSS-1-Total" class="headerlink" title="📊 CVSS 1 Total"></a>📊 CVSS 1 Total</h3><p><strong>Learn more</strong>  </p><table><thead><tr><th>Score</th><th>Severity</th><th>Version</th><th>Vector String</th></tr></thead><tbody><tr><td>9.8</td><td>CRITICAL</td><td>3.1</td><td>CVSS:3.1&#x2F;AV:N&#x2F;AC:L&#x2F;PR:N&#x2F;UI:N&#x2F;S:U&#x2F;C:H&#x2F;I:H&#x2F;A:H</td></tr></tbody></table><hr><h3 id="💥-Impact"><a href="#💥-Impact" class="headerlink" title="💥 Impact"></a>💥 Impact</h3><p>A successful exploitation can result in:</p><ul><li><strong>Authentication bypass</strong></li><li><strong>Access to admin dashboard and privileged functionality</strong></li><li><strong>Leakage of sensitive data via UNION-based SQL injection</strong></li><li><strong>Potential full compromise of backend data</strong></li></ul><hr><h3 id="🧪-Steps-to-Reproduce"><a href="#🧪-Steps-to-Reproduce" class="headerlink" title="🧪 Steps to Reproduce"></a>🧪 Steps to Reproduce</h3><ol><li><p><strong>Clone the Repository</strong>:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/mathurvishal/CloudClassroom-PHP-Project.git<br></code></pre></td></tr></table></figure></li><li><p><strong>Host the Application</strong>:<br>Use a local server stack (e.g., <strong>XAMPP</strong> or <strong>LAMP</strong>) and navigate to:</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">http:<span class="hljs-regexp">//</span>localhost<span class="hljs-regexp">/CloudClassroom-PHP-Project-master/</span>loginlinkadmin.php<br></code></pre></td></tr></table></figure></li><li><p><strong>Inject Payload</strong>:</p><ul><li><strong>Username</strong>: <code>&#39; OR &#39;1&#39;=&#39;1</code></li><li><strong>Password</strong>: <em>(any value or leave blank)</em></li></ul></li><li><p><strong>Submit</strong>:<br>You will be logged in as <strong>admin</strong>, confirming a successful SQL injection.</p></li></ol><hr><h3 id="🔧-Recommendations"><a href="#🔧-Recommendations" class="headerlink" title="🔧 Recommendations"></a>🔧 Recommendations</h3><ul><li>Replace raw SQL queries with <strong>parameterized statements</strong> (e.g., <code>mysqli_prepare()</code> or <strong>PDO</strong>).</li><li>Validate and sanitize <strong>all user inputs</strong> before query execution.</li><li>Apply <strong>WAF (Web Application Firewall)</strong> rules to detect and block SQLi patterns.</li><li>Conduct <strong>regular code audits</strong> and <strong>penetration testing</strong> to identify future vulnerabilities.</li></ul><hr><h3 id="📅-Timeline"><a href="#📅-Timeline" class="headerlink" title="📅 Timeline"></a>📅 Timeline</h3><table><thead><tr><th>Event</th><th>Date</th></tr></thead><tbody><tr><td>Vulnerability Discovered</td><td>14 June 2025</td></tr><tr><td>Public Disclosure</td><td>18 June 2025</td></tr><tr><td>Patch Available</td><td><em>No patch as of disclosure</em></td></tr></tbody></table><hr><h3 id="🧑‍💻-Credit"><a href="#🧑‍💻-Credit" class="headerlink" title="🧑‍💻 Credit"></a>🧑‍💻 Credit</h3><p>This vulnerability was discovered and responsibly disclosed by:</p><ul><li><strong>Tansique Dasari</strong></li></ul><hr><h3 id="🔗-References"><a href="#🔗-References" class="headerlink" title="🔗 References"></a>🔗 References</h3><ul><li><a href="https://owasp.org/www-community/attacks/SQL_Injection">OWASP - SQL Injection</a></li><li><a href="https://portswigger.net/web-security/sql-injection">PortSwigger - SQL Injection</a></li><li><a href="https://github.com/mathurvishal/CloudClassroom-PHP-Project">CloudClassroom GitHub Repository</a></li></ul><hr><h3 id="📬-Contact"><a href="#📬-Contact" class="headerlink" title="📬 Contact"></a>📬 Contact</h3><p>For questions, coordination, or further information, please contact:</p><p>✉️ <strong>Tansique Dasari</strong> — <a href="mailto:&#x74;&#x61;&#x6e;&#115;&#105;&#x71;&#117;&#101;&#46;&#100;&#64;&#x67;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#109;">tansique.d@gmail.com</a></p>]]></content>
     
     
       
@@ -489,60 +543,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【已复现】泛微E-cology9 SQL注入漏洞(QVD-2025-23834)安全风险通告</title>
-    <link href="http://example.com/2025/06/18/weixin_4167237290/"/>
-    <id>http://example.com/2025/06/18/weixin_4167237290/</id>
-    <published>2025-06-18T10:48:41.331Z</published>
-    <updated>2025-06-18T10:48:41.328Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 奇安信 CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/EN9wgHsRRcqIGLCJjddasw">https://mp.weixin.qq.com/s/EN9wgHsRRcqIGLCJjddasw</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 奇安信 CERT&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/EN9wgHsRRcqIGLCJjddasw&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="奇安信 CERT" scheme="http://example.com/tags/%E5%A5%87%E5%AE%89%E4%BF%A1-CERT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Palo Alto GlobalProtect 反射型跨站脚本漏洞</title>
-    <link href="http://example.com/2025/06/18/github_1733963723/"/>
-    <id>http://example.com/2025/06/18/github_1733963723/</id>
-    <published>2025-06-18T10:45:24.264Z</published>
-    <updated>2025-06-18T10:45:24.263Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Palo Alto GlobalProtect 反射型跨站脚本漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-0133</li></ul><p><strong>漏洞类型：</strong> 跨站可执行脚本</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 这是一个针对CVE-2025-0133的POC，仅适用于启用了GlobalProtect网关或门户的PAN-OS防火墙配置。它通过多线程检查多个URL中的问题，并允许设置超时和将结果输出到文件中。</p><p><strong>产品厂商：</strong> Palo Alto</p><p><strong>产品名称：</strong> GlobalProtect</p><p><strong>来源：</strong> <a href="https://github.com/wiseep/CVE-2025-0133">https://github.com/wiseep/CVE-2025-0133</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2025-0133.py</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><p><strong>Description:</strong></p><p>It is a POC for CVE-2025-0133 that is applicable only to PAN-OS firewall configurations with an enabled GlobalProtect gateway or portal.<br>It checks issue on multiple URLs that accepts from file, with custom thread. You can also set you timeout and get results in a file.</p><p><strong>Example usage:</strong></p><p>MacBook-Wiseep-Dev:github root# python3.9 CVE-2025-0133.py -h</p><p>usage: CVE-2025-0133.py [-h] –file FILE [–thread THREAD] [–timeout TIMEOUT] –output OUTPUT</p><p>Palo Alto GlobalProtect XSS Scanner</p><p>optional arguments:<br>  -h, –help         show this help message and exit</p><p>  –file FILE        Input file containing URLs</p><p>  –thread THREAD    Number of threads</p><p>  –timeout TIMEOUT  Timeout in seconds</p><p>  –output OUTPUT    Output file for results</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Palo Alto GlobalProtect 反射型跨站脚本漏洞&lt;/p&gt;
-&lt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="跨站可执行脚本" scheme="http://example.com/tags/%E8%B7%A8%E7%AB%99%E5%8F%AF%E6%89%A7%E8%A1%8C%E8%84%9A%E6%9C%AC/"/>
     
   </entry>
   
