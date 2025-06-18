@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-18T10:00:07.879Z</updated>
+  <updated>2025-06-18T10:45:24.263Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Palo Alto GlobalProtect 反射型跨站脚本漏洞</title>
+    <link href="http://example.com/2025/06/18/github_1733963723/"/>
+    <id>http://example.com/2025/06/18/github_1733963723/</id>
+    <published>2025-06-18T10:45:24.264Z</published>
+    <updated>2025-06-18T10:45:24.263Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Palo Alto GlobalProtect 反射型跨站脚本漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-0133</li></ul><p><strong>漏洞类型：</strong> 跨站可执行脚本</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 这是一个针对CVE-2025-0133的POC，仅适用于启用了GlobalProtect网关或门户的PAN-OS防火墙配置。它通过多线程检查多个URL中的问题，并允许设置超时和将结果输出到文件中。</p><p><strong>产品厂商：</strong> Palo Alto</p><p><strong>产品名称：</strong> GlobalProtect</p><p><strong>来源：</strong> <a href="https://github.com/wiseep/CVE-2025-0133">https://github.com/wiseep/CVE-2025-0133</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2025-0133.py</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><p><strong>Description:</strong></p><p>It is a POC for CVE-2025-0133 that is applicable only to PAN-OS firewall configurations with an enabled GlobalProtect gateway or portal.<br>It checks issue on multiple URLs that accepts from file, with custom thread. You can also set you timeout and get results in a file.</p><p><strong>Example usage:</strong></p><p>MacBook-Wiseep-Dev:github root# python3.9 CVE-2025-0133.py -h</p><p>usage: CVE-2025-0133.py [-h] –file FILE [–thread THREAD] [–timeout TIMEOUT] –output OUTPUT</p><p>Palo Alto GlobalProtect XSS Scanner</p><p>optional arguments:<br>  -h, –help         show this help message and exit</p><p>  –file FILE        Input file containing URLs</p><p>  –thread THREAD    Number of threads</p><p>  –timeout TIMEOUT  Timeout in seconds</p><p>  –output OUTPUT    Output file for results</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Palo Alto GlobalProtect 反射型跨站脚本漏洞&lt;/p&gt;
+&lt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="跨站可执行脚本" scheme="http://example.com/tags/%E8%B7%A8%E7%AB%99%E5%8F%AF%E6%89%A7%E8%A1%8C%E8%84%9A%E6%9C%AC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows WebDAV Remote Code Execution Vulnerability</title>
+    <link href="http://example.com/2025/06/18/github_3691022743/"/>
+    <id>http://example.com/2025/06/18/github_3691022743/</id>
+    <published>2025-06-18T10:45:14.948Z</published>
+    <updated>2025-06-18T10:45:14.947Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Windows WebDAV Remote Code Execution Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-33053</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> CVE-2025-33053是一个严重的WebDAV相关远程代码执行（RCE）漏洞，允许攻击者通过指向远程WebDAV共享的恶意.LNK快捷方式文件执行任意代码。利用此漏洞需要目标系统上的WebClient服务存在并运行，以及通过WebDAV的UNC路径处理处于活动状态。此检查器实时验证这些利用条件，适用于蓝队、系统管理员和漏洞审计人员。</p><p><strong>产品厂商：</strong> Microsoft</p><p><strong>产品名称：</strong> Windows</p><p><strong>来源：</strong> <a href="https://github.com/TheTorjanCaptain/CVE-2025-33053-Checker-PoC">https://github.com/TheTorjanCaptain/CVE-2025-33053-Checker-PoC</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2025-33053_checker.ps1</li><li>LICENSE</li><li>README.md</li><li>misc</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-33053-Simple-Vulnerability-Checker-PowerShell"><a href="#CVE-2025-33053-Simple-Vulnerability-Checker-PowerShell" class="headerlink" title="CVE-2025-33053 Simple Vulnerability Checker (PowerShell)"></a>CVE-2025-33053 Simple Vulnerability Checker (PowerShell)</h2><p>A lightweight PowerShell script to detect if a Windows system is potentially vulnerable to <strong>CVE-2025-33053</strong> — a critical WebDAV-related Remote Code Execution (RCE) vulnerability.</p><hr><h3 id="🛡️-About-CVE-2025-33053"><a href="#🛡️-About-CVE-2025-33053" class="headerlink" title="🛡️ About CVE-2025-33053"></a>🛡️ About CVE-2025-33053</h3><p>This vulnerability allows attackers to execute malicious <code>.LNK</code> shortcut files that point to remote WebDAV shares, resulting in arbitrary code execution.</p><p>The exploit requires the following conditions to be true on the target system:</p><ol><li><strong>WebClient service</strong> is present and running.</li><li><strong>UNC path handling</strong> via WebDAV is active.</li></ol><p>This checker tests for both these real-world preconditions.</p><hr><h3 id="✅-What-This-Checker-Does-Real-Time-Verification"><a href="#✅-What-This-Checker-Does-Real-Time-Verification" class="headerlink" title="✅ What This Checker Does (Real-Time Verification)"></a>✅ What This Checker Does (Real-Time Verification)</h3><table><thead><tr><th>Check</th><th>Purpose</th></tr></thead><tbody><tr><td>🔍 WebClient Service Status</td><td>Confirms if WebDAV support is active on the system.</td></tr><tr><td>🔍 UNC Path Handling via <code>Test-Path</code></td><td>Checks if the system tries to resolve remote WebDAV UNC paths (core to CVE exploitation).</td></tr></tbody></table><p>If both checks pass — the system <strong>is potentially exploitable via CVE-2025-33053</strong>.</p><hr><h3 id="🖥️-How-to-Run-Usage"><a href="#🖥️-How-to-Run-Usage" class="headerlink" title="🖥️ How to Run (Usage)"></a>🖥️ How to Run (Usage)</h3><ol><li><p><strong>Save the above PowerShell script</strong> as <code>checker.ps1</code>.</p></li><li><p><strong>Open PowerShell as Administrator.</strong></p></li><li><p>If script execution is restricted, temporarily allow running scripts:</p></li></ol><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">Set-ExecutionPolicy</span> <span class="hljs-literal">-Scope</span> <span class="hljs-keyword">Process</span> <span class="hljs-literal">-ExecutionPolicy</span> Bypass<br></code></pre></td></tr></table></figure><ol start="4"><li>Run the script: .\CVE-2025-33053_checker.ps1</li></ol><hr><h3 id="🔍-Why-is-this-a-Real-Time-Checker"><a href="#🔍-Why-is-this-a-Real-Time-Checker" class="headerlink" title="🔍 Why is this a Real-Time Checker?"></a>🔍 Why is this a Real-Time Checker?</h3><p>✔️ WebClient Service Status is checked live — no assumptions.<br>✔️ UNC Path Handling uses actual OS calls (Test-Path) — which triggers real UNC resolution logic the same way a .LNK exploit would do.</p><p>✅ If UNC handling resolves (even for non-existent paths), this reflects the exact behavior that enables exploitation — thus <strong>this is not theoretical, but a direct simulation</strong> of CVE exploitation preconditions.</p><hr><h3 id="⚠️-Notes"><a href="#⚠️-Notes" class="headerlink" title="⚠️ Notes"></a>⚠️ Notes</h3><p>This script does not exploit the vulnerability.<br>It is a safe, read-only checker for determining potential exposure.<br>Suitable for blue teams, sysadmins, vulnerability auditors.<br><strong>Only for educational purposes. Do not run on systems you are not authorised to run.</strong></p><hr><h3 id="🧩-Related-PoC-Development"><a href="#🧩-Related-PoC-Development" class="headerlink" title="🧩 Related PoC Development"></a>🧩 Related PoC Development</h3><p>A full Proof-of-Concept (PoC) exploiting CVE-2025-33053 is under development in this repository.</p><hr><h3 id="🏷️-License"><a href="#🏷️-License" class="headerlink" title="🏷️ License"></a>🏷️ License</h3><p>MIT License — free to use for educational and defensive purposes.</p><hr><h3 id="🤝-Contributing"><a href="#🤝-Contributing" class="headerlink" title="🤝 Contributing"></a>🤝 Contributing</h3><p>Pull requests welcome!<br>Feel free to suggest improvements or raise issues.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Windows WebDAV Remote Code Execution Vu</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+  </entry>
   
   <entry>
     <title>The Recover WooCommerce Cart Abandonment, Newsletter, Email Marketing, Marketing Automation By</title>
@@ -483,60 +536,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/R98hqPn8z0BpprmKaK5Pyw&quot;&gt;https://mp.weixin.qq.c</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>五角大楼向OpenAI授予2亿美元合同，为美国国防部提供AI能力</title>
-    <link href="http://example.com/2025/06/18/weixin_1076227357/"/>
-    <id>http://example.com/2025/06/18/weixin_1076227357/</id>
-    <published>2025-06-18T06:05:11.206Z</published>
-    <updated>2025-06-18T06:05:11.201Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/O0qH9DvT6Q2Xf_mpAT96uA">https://mp.weixin.qq.com/s/O0qH9DvT6Q2Xf_mpAT96uA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/O0qH9DvT6Q2Xf_mpAT96uA&quot;&gt;https://mp.weixin.qq.c</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GitHub 现已提供免费 AI 编码安全规则</title>
-    <link href="http://example.com/2025/06/18/weixin_3764993403/"/>
-    <id>http://example.com/2025/06/18/weixin_3764993403/</id>
-    <published>2025-06-18T06:05:10.870Z</published>
-    <updated>2025-06-18T06:05:10.865Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/zFS8I91DRhGohOrBnWweuA">https://mp.weixin.qq.com/s/zFS8I91DRhGohOrBnWweuA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/zFS8I91DRhGohOrBnWweuA&quot;&gt;https://mp.weixin.qq.c</summary>
       
     
     
