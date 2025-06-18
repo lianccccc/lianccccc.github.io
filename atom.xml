@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-18T09:51:25.725Z</updated>
+  <updated>2025-06-18T10:00:07.879Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>The Recover WooCommerce Cart Abandonment, Newsletter, Email Marketing, Marketing Automation By</title>
+    <link href="http://example.com/2025/06/18/github_1501742656/"/>
+    <id>http://example.com/2025/06/18/github_1501742656/</id>
+    <published>2025-06-18T10:00:07.880Z</published>
+    <updated>2025-06-18T10:00:07.879Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-rr4m-6xx9-f2wg">https://github.com/advisories/GHSA-rr4m-6xx9-f2wg</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-1562">https://nvd.nist.gov/vuln/detail/CVE-2025-1562</a></p></li><li><p><a href="https://plugins.trac.wordpress.org/browser/wp-marketing-automations/tags/2.5.0/includes/api/plugin_status/class-bwfan-api-install-and-activate-plugin.php">https://plugins.trac.wordpress.org/browser/wp-marketing-automations/tags/2.5.0/includes/api/plugin_status/class-bwfan-api-install-and-activate-plugin.php</a></p></li><li><p><a href="https://plugins.trac.wordpress.org/browser/wp-marketing-automations/tags/2.5.0/includes/class-bwfan-db.php#L153">https://plugins.trac.wordpress.org/browser/wp-marketing-automations/tags/2.5.0/includes/class-bwfan-db.php#L153</a></p></li><li><p><a href="https://plugins.trac.wordpress.org/changeset/3305437/wp-marketing-automations/trunk/admin/class-bwfan-admin.php">https://plugins.trac.wordpress.org/changeset/3305437/wp-marketing-automations/trunk/admin/class-bwfan-admin.php</a></p></li><li><p><a href="https://plugins.trac.wordpress.org/changeset/3305437/wp-marketing-automations/trunk/includes/abstracts/class-bwfan-api-base.php">https://plugins.trac.wordpress.org/changeset/3305437/wp-marketing-automations/trunk/includes/abstracts/class-bwfan-api-base.php</a></p></li><li><p><a href="https://plugins.trac.wordpress.org/changeset/3305437/wp-marketing-automations/trunk/includes/class-bwfan-api-loader.php">https://plugins.trac.wordpress.org/changeset/3305437/wp-marketing-automations/trunk/includes/class-bwfan-api-loader.php</a></p></li><li><p><a href="https://www.wordfence.com/threat-intel/vulnerabilities/id/094972e6-7e02-4060-b069-e39c8cde9331?source=cve">https://www.wordfence.com/threat-intel/vulnerabilities/id/094972e6-7e02-4060-b069-e39c8cde9331?source=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-rr4m-6xx9-f2wg">https://github.com/advisories/GHSA-rr4m-6xx9-f2wg</a></p></li></ul><p><strong>描述：</strong></p><p>The Recover WooCommerce Cart Abandonment, Newsletter, Email Marketing, Marketing Automation By FunnelKit plugin for WordPress is vulnerable to unauthorized arbitrary plugin installation due to a missing capability check on the install_or_activate_addon_plugins() function and a weak nonce hash in all versions up to, and including, 3.5.3. This makes it possible for unauthenticated attackers to install arbitrary plugins on the site that can be leveraged to further infect a vulnerable site.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-rr4m-6xx9-f2wg&quot;&gt;https://github.com/advisories/GHSA-rr4m-6xx9-f2wg&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>网络安全信息与动态周报2025年第24期（6月9日-6月15日）</title>
@@ -513,33 +537,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/zFS8I91DRhGohOrBnWweuA&quot;&gt;https://mp.weixin.qq.c</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>免费且开源威胁情报源终极列表</title>
-    <link href="http://example.com/2025/06/18/weixin_2744205860/"/>
-    <id>http://example.com/2025/06/18/weixin_2744205860/</id>
-    <published>2025-06-18T06:05:10.529Z</published>
-    <updated>2025-06-18T06:05:10.525Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/uLNO8nqwAJ9qyIrG-HxD0g">https://mp.weixin.qq.com/s/uLNO8nqwAJ9qyIrG-HxD0g</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/uLNO8nqwAJ9qyIrG-HxD0g&quot;&gt;https://mp.weixin.qq.c</summary>
       
     
     
