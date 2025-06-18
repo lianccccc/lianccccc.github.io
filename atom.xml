@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-18T07:15:19.796Z</updated>
+  <updated>2025-06-18T07:45:14.185Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>tough-cookie 原型污染漏洞</title>
+    <link href="http://example.com/2025/06/18/github_3273310081/"/>
+    <id>http://example.com/2025/06/18/github_3273310081/</id>
+    <published>2025-06-18T07:45:14.191Z</published>
+    <updated>2025-06-18T07:45:14.185Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> tough-cookie 原型污染漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-26136</li></ul><p><strong>漏洞类型：</strong> 原型污染</p><p><strong>漏洞描述：</strong> tough-cookie 2.5.0版本中存在原型污染漏洞，CVE编号为CVE-2023-26136。该漏洞允许攻击者通过构造恶意数据污染对象的原型链，可能导致拒绝服务或进一步的安全问题。已发布安全补丁修复此漏洞并保持向后兼容性。</p><p><strong>产品名称：</strong> tough-cookie</p><p><strong>影响版本：</strong> 2.5.0</p><p><strong>来源：</strong> <a href="https://github.com/uriyahav/tough-cookie-2.5.0-cve-2023-26136-fix">https://github.com/uriyahav/tough-cookie-2.5.0-cve-2023-26136-fix</a></p><p><strong>类型：</strong> CVE-2023:github search</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; tough-cookie 原型污染漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2023:github search" scheme="http://example.com/tags/CVE-2023-github-search/"/>
+    
+    <category term="原型污染" scheme="http://example.com/tags/%E5%8E%9F%E5%9E%8B%E6%B1%A1%E6%9F%93/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows Remote Desktop Services 远程代码执行漏洞</title>
@@ -520,33 +547,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="缓冲区溢出" scheme="http://example.com/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>黑客冒充美国政府入侵英国研究俄罗斯问题的学者</title>
-    <link href="http://example.com/2025/06/18/weixin_646854353/"/>
-    <id>http://example.com/2025/06/18/weixin_646854353/</id>
-    <published>2025-06-18T01:17:53.309Z</published>
-    <updated>2025-06-18T01:17:53.305Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/iu0oaxhLgYuuVl2Pslz5TQ">https://mp.weixin.qq.com/s/iu0oaxhLgYuuVl2Pslz5TQ</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/iu0oaxhLgYuuVl2Pslz5TQ&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
     
   </entry>
   
