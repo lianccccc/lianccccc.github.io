@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-18T06:45:47.271Z</updated>
+  <updated>2025-06-18T07:15:19.796Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows Remote Desktop Services 远程代码执行漏洞</title>
+    <link href="http://example.com/2025/06/18/github_1117802435/"/>
+    <id>http://example.com/2025/06/18/github_1117802435/</id>
+    <published>2025-06-18T07:15:19.794Z</published>
+    <updated>2025-06-18T07:15:19.796Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Windows Remote Desktop Services 远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-32710</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Windows Remote Desktop Services存在一个远程代码执行漏洞，允许攻击者通过特定的利用工具自动创建管理员账户、激活RDP服务并验证访问权限。此漏洞严重威胁系统安全，需立即修补。</p><p><strong>产品厂商：</strong> Microsoft</p><p><strong>产品名称：</strong> Windows Remote Desktop Services</p><p><strong>来源：</strong> <a href="https://github.com/Sincan2/RCE-CVE-2025-32710">https://github.com/Sincan2/RCE-CVE-2025-32710</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>my_rdp.py</li><li>run.sh</li><li>sodok.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="RCE-CVE-2025-32710"><a href="#RCE-CVE-2025-32710" class="headerlink" title="RCE-CVE-2025-32710"></a>RCE-CVE-2025-32710</h2><p>Windows Remote Desktop Services Vulnerability Allows Remote Code Execution</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-section">## 💥 RDP Auto-Pwn (RCE-CVE-2025-32710)</span><br><br><span class="hljs-quote">&gt; <span class="hljs-strong">**Eksploitasi Otomatis untuk Layanan RDP yang Rentan (BlueKeep &amp; Beyond)**</span>  </span><br><span class="hljs-quote">&gt; 🔓 Membuat akun admin • 🪟 Mengaktifkan RDP • 📶 Verifikasi akses otomatis</span><br><br>---<br><br><span class="hljs-section">### ⚠️ Peringatan Penting &amp; Disclaimer</span><br><br><span class="hljs-quote">&gt; 🚨 <span class="hljs-strong">**PERINGATAN:**</span>  </span><br><span class="hljs-quote">&gt; Alat ini hanya untuk <span class="hljs-strong">**penelitian keamanan**</span>, <span class="hljs-strong">**pembelajaran**</span>, dan <span class="hljs-strong">**pengujian penetrasi yang sah**</span>.  </span><br><span class="hljs-quote">&gt; Menggunakan alat ini tanpa izin eksplisit dari pemilik sistem adalah <span class="hljs-strong">**ilegal**</span> dan melanggar hukum.  </span><br><span class="hljs-quote">&gt; Penulis tidak bertanggung jawab atas segala penyalahgunaan.  </span><br><span class="hljs-quote">&gt; 🛑 <span class="hljs-strong">**Gunakan dengan risiko Anda sendiri.**</span></span><br><br>---<br><br><span class="hljs-section">### ✨ Fitur Utama</span><br><br>✅ <span class="hljs-strong">**Menu Interaktif:**</span> UI terminal berwarna &amp; ramah pengguna  <br>🔐 <span class="hljs-strong">**Payload Kustom:**</span> Membuat akun <span class="hljs-code">`sincan2:koped123`</span> dengan hak admin  <br>🧩 <span class="hljs-strong">**Aktivasi RDP Otomatis:**</span> Modifikasi registry &amp; firewall secara otomatis  <br>🔎 <span class="hljs-strong">**RDP Scanner Canggih:**</span> Pakai Nmap + NSE + -sV untuk mendeteksi port RDP  <br>📡 <span class="hljs-strong">**Verifikasi Otomatis:**</span> Gunakan <span class="hljs-code">`xfreerdp`</span> untuk cek apakah exploit sukses  <br>⚡ <span class="hljs-strong">**Full Auto Mode:**</span> Sekali klik untuk menjalankan semua tahapan  <br>📄 <span class="hljs-strong">**Manajemen Laporan:**</span> Otomatis menyimpan hasil ke <span class="hljs-code">`cok.txt`</span> dan <span class="hljs-code">`scan_lengkap.txt`</span><br><br>---<br><br><span class="hljs-section">### ⚙️ Prasyarat &amp; Dependensi</span><br><br>💻 Direkomendasikan OS: <span class="hljs-strong">**Kali Linux / Ubuntu / Debian**</span>  <br>🔧 Perangkat lunak wajib:<br><br><span class="hljs-bullet">-</span> Python 3<br><span class="hljs-bullet">-</span> Nmap<br><span class="hljs-bullet">-</span> FreeRDP (<span class="hljs-code">`xfreerdp`</span>)<br><br>---<br><br><span class="hljs-section">### 🚀 Instalasi &amp; Setup</span><br><br><span class="hljs-bullet">1.</span> 🔽 <span class="hljs-strong">**Clone Repositori**</span><br><br><span class="hljs-code">```bash</span><br><span class="hljs-code">git clone https://github.com/Sincan2/RCE-CVE-2025-32710.git</span><br><span class="hljs-code">cd RCE-CVE-2025-32710</span><br></code></pre></td></tr></table></figure><ol start="2"><li>📦 <strong>Install Dependensi</strong></li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt update &amp;&amp; <span class="hljs-built_in">sudo</span> apt install python3 nmap freerdp2-x11 -y<br></code></pre></td></tr></table></figure><ol start="3"><li>🔓 <strong>Beri Izin Eksekusi</strong></li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">chmod</span> +x run.sh<br></code></pre></td></tr></table></figure><hr><h3 id="🛠️-Cara-Penggunaan"><a href="#🛠️-Cara-Penggunaan" class="headerlink" title="🛠️ Cara Penggunaan"></a>🛠️ Cara Penggunaan</h3><p>▶️ Jalankan skrip:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">./run.sh<br></code></pre></td></tr></table></figure><p>Anda akan melihat menu utama. Pilih sesuai kebutuhan:</p><h4 id="🎯-Opsi-1-Serang-Target-Tunggal"><a href="#🎯-Opsi-1-Serang-Target-Tunggal" class="headerlink" title="🎯 Opsi 1: Serang Target Tunggal"></a>🎯 Opsi 1: Serang Target Tunggal</h4><p>🔹 Masukkan IP:PORT → eksploitasi langsung → tawarkan verifikasi</p><h4 id="📋-Opsi-2-Serang-Massal-berhasil-txt"><a href="#📋-Opsi-2-Serang-Massal-berhasil-txt" class="headerlink" title="📋 Opsi 2: Serang Massal (berhasil.txt)"></a>📋 Opsi 2: Serang Massal (berhasil.txt)</h4><p>🔹 Gunakan hasil dari Opsi 3 → eksploitasi per target → verifikasi otomatis</p><h4 id="🔍-Opsi-3-Scan-RDP-Canggih"><a href="#🔍-Opsi-3-Scan-RDP-Canggih" class="headerlink" title="🔍 Opsi 3: Scan RDP Canggih"></a>🔍 Opsi 3: Scan RDP Canggih</h4><p>🔹 Masukkan IP Range → hasil ke <code>scan_lengkap.txt</code> &amp; <code>berhasil.txt</code></p><h4 id="🔥-Opsi-4-Scan-Serang-Otomatis"><a href="#🔥-Opsi-4-Scan-Serang-Otomatis" class="headerlink" title="🔥 Opsi 4: Scan &amp; Serang Otomatis"></a>🔥 Opsi 4: Scan &amp; Serang Otomatis</h4><p>🔹 Full otomatis: <code>Scan -&gt; Attack -&gt; Verify -&gt; Save -&gt; Cleanup</code></p><h4 id="🚪-Opsi-0-Keluar"><a href="#🚪-Opsi-0-Keluar" class="headerlink" title="🚪 Opsi 0: Keluar"></a>🚪 Opsi 0: Keluar</h4><p>🔹 Keluar dari aplikasi</p><hr><h3 id="📂-Struktur-File-Output"><a href="#📂-Struktur-File-Output" class="headerlink" title="📂 Struktur File Output"></a>📂 Struktur File Output</h3><table><thead><tr><th>File</th><th>Keterangan</th></tr></thead><tbody><tr><td><code>berhasil.txt</code></td><td>💠 Target potensial hasil scan</td></tr><tr><td><code>scan_lengkap.txt</code></td><td>📄 Output mentah dari Nmap</td></tr><tr><td><code>cok.txt</code></td><td>🏆 Daftar target yang berhasil dieksploitasi &amp; diverifikasi</td></tr></tbody></table><hr><h3 id="💡-Contoh-Alur-Kerja-Workflow"><a href="#💡-Contoh-Alur-Kerja-Workflow" class="headerlink" title="💡 Contoh Alur Kerja (Workflow)"></a>💡 Contoh Alur Kerja (Workflow)</h3><p>🎯 <strong>Target:</strong> Eksploitasi otomatis semua server RDP di <code>10.10.0.0/16</code></p><ol><li>Jalankan: <code>./run.sh</code></li><li>Pilih: <strong>Opsi 4: Full Auto</strong></li><li>Masukkan range IP: <code>10.10.0.0/16</code></li><li>Tunggu proses <code>scan → exploit → verifikasi</code></li><li>Periksa hasil di file: <code>cok.txt</code> ✅</li></ol><hr><h3 id="🧠-Catatan-Tambahan"><a href="#🧠-Catatan-Tambahan" class="headerlink" title="🧠 Catatan Tambahan"></a>🧠 Catatan Tambahan</h3><ul><li>Anda dapat memodifikasi payload untuk tujuan spesifik di file <code>sodok.py</code></li><li>Disarankan menggunakan VPS yang tidak terkait identitas Anda untuk pengujian</li><li>Untuk bypass antivirus, pertimbangkan obfuscation payload</li></ul><hr><h3 id="📫-Kontak"><a href="#📫-Kontak" class="headerlink" title="📫 Kontak"></a>📫 Kontak</h3><p>👤 Author: <a href="https://github.com/Sincan2">Sincan2</a></p><hr><h3 id="⭐-Dukung-Beri-Bintang"><a href="#⭐-Dukung-Beri-Bintang" class="headerlink" title="⭐ Dukung &amp; Beri Bintang!"></a>⭐ Dukung &amp; Beri Bintang!</h3><p>Jika Anda merasa proyek ini bermanfaat, jangan lupa beri ⭐ di <a href="https://github.com/Sincan2/RCE-CVE-2025-32710">GitHub Repo</a> untuk mendukung pengembangan lebih lanjut.</p><pre><code class="hljs"></code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Windows Remote Desktop Services 远程代码执行漏</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+  </entry>
   
   <entry>
     <title>Pulse Connect Secure Remote Code Execution Vulnerability</title>
@@ -511,33 +537,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/iu0oaxhLgYuuVl2Pslz5TQ&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Team46 APT组织积极利用 Chrome 0day漏洞（CVE-2025-2783）针对俄罗斯目标</title>
-    <link href="http://example.com/2025/06/18/weixin_3454521970/"/>
-    <id>http://example.com/2025/06/18/weixin_3454521970/</id>
-    <published>2025-06-18T01:17:52.552Z</published>
-    <updated>2025-06-18T01:17:52.549Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/eAX8nVlu0279dn9DTNF7WA">https://mp.weixin.qq.com/s/eAX8nVlu0279dn9DTNF7WA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/eAX8nVlu0279dn9DTNF7WA&quot;&gt;https://mp.weixin.</summary>
       
     
     
