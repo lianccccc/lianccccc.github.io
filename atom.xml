@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-18T10:45:24.263Z</updated>
+  <updated>2025-06-18T10:51:26.769Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,87 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>人工智能代理时代的安全、风险与合规治理</title>
+    <link href="http://example.com/2025/06/18/weixin_3131356546/"/>
+    <id>http://example.com/2025/06/18/weixin_3131356546/</id>
+    <published>2025-06-18T10:51:26.772Z</published>
+    <updated>2025-06-18T10:51:26.769Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/6XBXGDEdkqlf0ULUwkBArA">https://mp.weixin.qq.com/s/6XBXGDEdkqlf0ULUwkBArA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/6XBXGDEdkqlf0ULUwkBArA&quot;&gt;https://mp.weixin.q</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>当AI列车全速前进，谁来系紧“技术狂欢”的安全带？</title>
+    <link href="http://example.com/2025/06/18/weixin_909531789/"/>
+    <id>http://example.com/2025/06/18/weixin_909531789/</id>
+    <published>2025-06-18T10:51:25.810Z</published>
+    <updated>2025-06-18T10:51:25.805Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/J7fwFqIl2vqYnLpAqYrO5w">https://mp.weixin.qq.com/s/J7fwFqIl2vqYnLpAqYrO5w</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/J7fwFqIl2vqYnLpAqYrO5w&quot;&gt;https://mp.weixin.q</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【已复现】泛微E-cology9 SQL注入漏洞(QVD-2025-23834)安全风险通告</title>
+    <link href="http://example.com/2025/06/18/weixin_4167237290/"/>
+    <id>http://example.com/2025/06/18/weixin_4167237290/</id>
+    <published>2025-06-18T10:48:41.331Z</published>
+    <updated>2025-06-18T10:48:41.328Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 奇安信 CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/EN9wgHsRRcqIGLCJjddasw">https://mp.weixin.qq.com/s/EN9wgHsRRcqIGLCJjddasw</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 奇安信 CERT&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/EN9wgHsRRcqIGLCJjddasw&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="奇安信 CERT" scheme="http://example.com/tags/%E5%A5%87%E5%AE%89%E4%BF%A1-CERT/"/>
+    
+  </entry>
   
   <entry>
     <title>Palo Alto GlobalProtect 反射型跨站脚本漏洞</title>
@@ -455,87 +536,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/FHdIbyc9vJhgvaR9iLU4-Q&quot;&gt;https://mp.weixin.qq.c</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>以色列-伊朗冲突可能只会持续到他们的导弹耗尽</title>
-    <link href="http://example.com/2025/06/18/weixin_2013536418/"/>
-    <id>http://example.com/2025/06/18/weixin_2013536418/</id>
-    <published>2025-06-18T06:05:12.458Z</published>
-    <updated>2025-06-18T06:05:12.453Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/j_lcU-4nt4-x149DxVxzxQ">https://mp.weixin.qq.com/s/j_lcU-4nt4-x149DxVxzxQ</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/j_lcU-4nt4-x149DxVxzxQ&quot;&gt;https://mp.weixin.qq.c</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Apple：多个操作系统中的安全漏洞正遭受攻击</title>
-    <link href="http://example.com/2025/06/18/weixin_629678621/"/>
-    <id>http://example.com/2025/06/18/weixin_629678621/</id>
-    <published>2025-06-18T06:05:11.881Z</published>
-    <updated>2025-06-18T06:05:11.877Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/tADyndui707pUoo6-9A7Vw">https://mp.weixin.qq.com/s/tADyndui707pUoo6-9A7Vw</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/tADyndui707pUoo6-9A7Vw&quot;&gt;https://mp.weixin.qq.c</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>亲以色列黑客组织&quot;掠食麻雀&quot;声称攻击伊朗萨帕银行并致其瘫痪</title>
-    <link href="http://example.com/2025/06/18/weixin_2580649496/"/>
-    <id>http://example.com/2025/06/18/weixin_2580649496/</id>
-    <published>2025-06-18T06:05:11.537Z</published>
-    <updated>2025-06-18T06:05:11.533Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/R98hqPn8z0BpprmKaK5Pyw">https://mp.weixin.qq.com/s/R98hqPn8z0BpprmKaK5Pyw</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/R98hqPn8z0BpprmKaK5Pyw&quot;&gt;https://mp.weixin.qq.c</summary>
       
     
     
