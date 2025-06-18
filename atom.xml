@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-18T15:45:20.621Z</updated>
+  <updated>2025-06-18T16:00:09.520Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>An issue in EfroTech Time Trax v10 allows a remote attacker to execute arbitrary code via the</title>
+    <link href="http://example.com/2025/06/18/github_3194175179/"/>
+    <id>http://example.com/2025/06/18/github_3194175179/</id>
+    <published>2025-06-18T16:00:09.527Z</published>
+    <updated>2025-06-18T16:00:09.520Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-rhhr-cx2r-jpwf">https://github.com/advisories/GHSA-rhhr-cx2r-jpwf</a></p><p><strong>CVSS 评分：</strong> 10.0</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-46157">https://nvd.nist.gov/vuln/detail/CVE-2025-46157</a></p></li><li><p><a href="https://github.com/morphine009/CVE-2025-46157">https://github.com/morphine009/CVE-2025-46157</a></p></li><li><p><a href="http://efrotech.com/">http://efrotech.com</a></p></li><li><p><a href="http://timetrax.com/">http://timetrax.com</a></p></li><li><p><a href="https://github.com/advisories/GHSA-rhhr-cx2r-jpwf">https://github.com/advisories/GHSA-rhhr-cx2r-jpwf</a></p></li></ul><p><strong>描述：</strong></p><p>An issue in EfroTech Time Trax v.1.0 allows a remote attacker to execute arbitrary code via the file attachment function in the leave request form</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-rhhr-cx2r-jpwf&quot;&gt;https://github.com/advisories/GHSA-rhhr-cx2r-jpwf&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>D-Link DPH-400S/SE VoIP Phone v101 contains hardcoded provisioning variables, including</title>
+    <link href="http://example.com/2025/06/18/github_1811162252/"/>
+    <id>http://example.com/2025/06/18/github_1811162252/</id>
+    <published>2025-06-18T16:00:07.981Z</published>
+    <updated>2025-06-18T16:00:07.980Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-jwww-fv33-3qg5">https://github.com/advisories/GHSA-jwww-fv33-3qg5</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-45784">https://nvd.nist.gov/vuln/detail/CVE-2025-45784</a></p></li><li><p><a href="https://cybermaya.in/posts/Post-37">https://cybermaya.in/posts/Post-37</a></p></li><li><p><a href="https://www.dlink.com/en/security-bulletin">https://www.dlink.com/en/security-bulletin</a></p></li><li><p><a href="https://github.com/advisories/GHSA-jwww-fv33-3qg5">https://github.com/advisories/GHSA-jwww-fv33-3qg5</a></p></li></ul><p><strong>描述：</strong></p><p>D-Link DPH-400S&#x2F;SE VoIP Phone v1.01 contains hardcoded provisioning variables, including PROVIS_USER_PASSWORD, which may expose sensitive user credentials. An attacker with access to the firmware image can extract these credentials using static analysis tools such as strings or xxd, potentially leading to unauthorized access to device functions or user accounts. This vulnerability exists due to insecure storage of sensitive information in the firmware binary.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-jwww-fv33-3qg5&quot;&gt;https://github.com/advisories/GHSA-jwww-fv33-3qg5&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>CVE-2025-1094</title>
@@ -492,60 +540,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【高危漏洞预警】Windows SMB 权限提升漏洞(CVE-2025-33073)</title>
-    <link href="http://example.com/2025/06/18/weixin_2906810034/"/>
-    <id>http://example.com/2025/06/18/weixin_2906810034/</id>
-    <published>2025-06-18T09:35:46.982Z</published>
-    <updated>2025-06-18T09:35:46.978Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 飓风网络安全</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/pWPTkT8K9ZuaI_-nYrm89A">https://mp.weixin.qq.com/s/pWPTkT8K9ZuaI_-nYrm89A</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 飓风网络安全&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/pWPTkT8K9ZuaI_-nYrm89A&quot;&gt;https://mp.weixin.qq</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="飓风网络安全" scheme="http://example.com/tags/%E9%A3%93%E9%A3%8E%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【高危漏洞预警】泛微E-cology9 远程代码执行漏洞</title>
-    <link href="http://example.com/2025/06/18/weixin_2779470576/"/>
-    <id>http://example.com/2025/06/18/weixin_2779470576/</id>
-    <published>2025-06-18T09:35:45.426Z</published>
-    <updated>2025-06-18T09:35:45.426Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 飓风网络安全</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/fAQmV16XBQQPdwteeREOPQ">https://mp.weixin.qq.com/s/fAQmV16XBQQPdwteeREOPQ</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 飓风网络安全&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/fAQmV16XBQQPdwteeREOPQ&quot;&gt;https://mp.weixin.qq</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="飓风网络安全" scheme="http://example.com/tags/%E9%A3%93%E9%A3%8E%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
     
   </entry>
   
