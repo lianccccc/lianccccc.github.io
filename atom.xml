@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-19T15:15:42.818Z</updated>
+  <updated>2025-06-19T16:00:04.882Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;)</title>
+    <link href="http://example.com/2025/06/19/github_26949062/"/>
+    <id>http://example.com/2025/06/19/github_26949062/</id>
+    <published>2025-06-19T16:00:04.884Z</published>
+    <updated>2025-06-19T16:00:04.882Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-mrq3-267c-9c65">https://github.com/advisories/GHSA-mrq3-267c-9c65</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-4738">https://nvd.nist.gov/vuln/detail/CVE-2025-4738</a></p></li><li><p><a href="https://www.usom.gov.tr/bildirim/tr-25-0132">https://www.usom.gov.tr/bildirim/tr-25-0132</a></p></li><li><p><a href="https://github.com/advisories/GHSA-mrq3-267c-9c65">https://github.com/advisories/GHSA-mrq3-267c-9c65</a></p></li></ul><p><strong>描述：</strong></p><p>Improper Neutralization of Special Elements used in an SQL Command (‘SQL Injection’) vulnerability in Yirmibes Software MY ERP allows SQL Injection.This issue affects MY ERP: before 1.170.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-mrq3-267c-9c65&quot;&gt;https://github.com/advisories/GHSA-mrq3-267c-9c65&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>Apache ActiveMQ Artemis Console Default Login</title>
@@ -517,32 +541,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="弱口令" scheme="http://example.com/tags/%E5%BC%B1%E5%8F%A3%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>FTP Directory Access Permission Check</title>
-    <link href="http://example.com/2025/06/19/github_2134597759/"/>
-    <id>http://example.com/2025/06/19/github_2134597759/</id>
-    <published>2025-06-19T13:46:56.188Z</published>
-    <updated>2025-06-19T13:46:56.185Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> FTP Directory Access Permission Check</p><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 确保FTP主目录的访问权限中不包含“Everyone”组。授予该组访问权限可能导致未经授权的用户查看、修改或篡改FTP文件。</p><p><strong>产品名称：</strong> FTP</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/21a7ee22a4fd01cae6da56c657acf0a11b7ed46f/kisa%2FCloud_Vulnerability_Inspection_Guide_2024%2FWindow_Server%2Fftp-directory-permission-check.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/21a7ee22a4fd01cae6da56c657acf0a11b7ed46f/kisa%2FCloud_Vulnerability_Inspection_Guide_2024%2FWindow_Server%2Fftp-directory-permission-check.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> ftp-directory-permission-check<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> FTP Directory Access Permission Check<br>  <span class="hljs-params">author:</span> nukunga[SungHyunJeon]<br>  <span class="hljs-params">severity:</span> medium<br>  <span class="hljs-params">description:</span> |<br>    Ensure that the FTP home directory does not include the <span class="hljs-string">&quot;Everyone&quot;</span> group <span class="hljs-keyword">in</span> its access permissions. Granting access to this group may allow unauthorized users to view, modify, <span class="hljs-keyword">or</span> tamper <span class="hljs-keyword">with</span> FTP files.<br>  <span class="hljs-params">impact:</span> |<br>    Assigning access to the <span class="hljs-string">&quot;Everyone&quot;</span> group for the FTP home directory can result <span class="hljs-keyword">in</span> information exposure, file tampering, <span class="hljs-keyword">or</span> unauthorized changes.<br>  <span class="hljs-params">remediation:</span> |<br>    Remove the <span class="hljs-string">&quot;Everyone&quot;</span> group from FTP home directory permissions using the following <span class="hljs-params">methods:</span><br>    <span class="hljs-operator">-</span> IIS <span class="hljs-params">Manager:</span> Review and adjust the FTP site&#x27;s home directory settings.<br>    <span class="hljs-operator">-</span> File <span class="hljs-params">Explorer:</span> Right-click the directory, select <span class="hljs-string">&quot;Properties&quot;</span> → go to the <span class="hljs-string">&quot;Security&quot;</span> tab, and remove the <span class="hljs-string">&quot;Everyone&quot;</span> group.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>isms.kisa.<span class="hljs-keyword">or</span>.kr<span class="hljs-operator">/</span>main<span class="hljs-operator">/</span>csap<span class="hljs-operator">/</span>notice<span class="hljs-operator">/</span><span class="hljs-operator">?</span>boardId<span class="hljs-operator">=</span>bbs_0000000000000004&amp;mode<span class="hljs-operator">=</span>view&amp;cntId<span class="hljs-operator">=</span><span class="hljs-number">85</span><br>  <span class="hljs-params">tags:</span> ftp,iis,security,windows,code,windows-audit,kisa<br><br><span class="hljs-params">self-contained:</span> <span class="hljs-literal">true</span><br><br><span class="hljs-params">code:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">pre-condition:</span> |<br>      IsWindows();<br>    <span class="hljs-params">engine:</span><br>      <span class="hljs-operator">-</span> powershell<br>      <span class="hljs-operator">-</span> powershell.exe<br>    <span class="hljs-params">args:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-operator">-</span>ExecutionPolicy<br>      <span class="hljs-operator">-</span> Bypass<br>    <span class="hljs-params">pattern:</span> <span class="hljs-string">&quot;*.ps1&quot;</span><br>    <span class="hljs-params">source:</span> |<br>      <span class="hljs-comment"># Define the FTP home directory path (adjust if necessary)</span><br>      $ftpHome <span class="hljs-operator">=</span> <span class="hljs-string">&quot;C:<span class="hljs-char escape_">\i</span>netpub<span class="hljs-char escape_">\f</span>tproot&quot;</span><br>      <span class="hljs-keyword">if</span> (<span class="hljs-operator">!</span>(Test-Path $ftpHome)) &#123;<br>          <span class="hljs-string">&quot;FTP_HOME_DIRECTORY_NOT_FOUND&quot;</span><br>          exit<br>      &#125;<br>      <span class="hljs-comment"># Retrieve the ACL for the FTP home directory</span><br>      $acl <span class="hljs-operator">=</span> Get-Acl $ftpHome<br>      $vulnerable <span class="hljs-operator">=</span> $<span class="hljs-literal">false</span><br>      foreach ($ace <span class="hljs-keyword">in</span> $acl.Access) &#123;<br>          <span class="hljs-keyword">if</span> ($ace.IdentityReference.ToString() <span class="hljs-operator">-</span>like <span class="hljs-string">&quot;*Everyone*&quot;</span>) &#123;<br>              $vulnerable <span class="hljs-operator">=</span> $<span class="hljs-literal">true</span><br>              break<br>          &#125;<br>      &#125;<br>      <span class="hljs-keyword">if</span> ($vulnerable) &#123;<br>          <span class="hljs-string">&quot;FTP_HOME_DIRECTORY_EVERYONE_FOUND&quot;</span><br>      &#125; <span class="hljs-keyword">else</span> &#123;<br>          <span class="hljs-string">&quot;FTP_HOME_DIRECTORY_NO_EVERYONE&quot;</span><br>      &#125;<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;FTP_HOME_DIRECTORY_EVERYONE_FOUND&quot;</span><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; FTP Directory Access Permission Check&lt;/</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
     
   </entry>
   
