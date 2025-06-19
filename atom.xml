@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-19T18:15:10.265Z</updated>
+  <updated>2025-06-19T20:00:06.602Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Pterodactyl Panel Allows Unauthenticated Arbitrary Remote Code Execution</title>
+    <link href="http://example.com/2025/06/19/github_2959343682/"/>
+    <id>http://example.com/2025/06/19/github_2959343682/</id>
+    <published>2025-06-19T20:00:06.606Z</published>
+    <updated>2025-06-19T20:00:06.602Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-24wv-6c99-f843">https://github.com/advisories/GHSA-24wv-6c99-f843</a></p><p><strong>仓库 Star：</strong> 7708</p><p><strong>CVSS 评分：</strong> 10.0</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/pterodactyl/panel/security/advisories/GHSA-24wv-6c99-f843">https://github.com/pterodactyl/panel/security/advisories/GHSA-24wv-6c99-f843</a></p></li><li><p><a href="https://github.com/pterodactyl/panel/commit/24c82b0e335fb5d7a844226b08abf9f176e592f0">https://github.com/pterodactyl/panel/commit/24c82b0e335fb5d7a844226b08abf9f176e592f0</a></p></li><li><p><a href="https://github.com/pterodactyl/panel/releases/tag/v1.11.11">https://github.com/pterodactyl/panel/releases/tag/v1.11.11</a></p></li><li><p><a href="https://github.com/advisories/GHSA-24wv-6c99-f843">https://github.com/advisories/GHSA-24wv-6c99-f843</a></p></li></ul><p><strong>描述：</strong></p><h2 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h2><p>Using the <code>/locales/locale.json</code> with the <code>locale</code> and <code>namespace</code> query parameters, a malicious actor is able to execute arbitrary code, without being authenticated.</p><p>With the ability to execute arbitrary code, this vulnerability can be exploited in an infinite number of ways.  It could be used to gain access to the Panel’s server, read credentials from the Panel’s config (<code>.env</code> or otherwise), extract sensitive information from the database (such as user details [username, email, first and last name, hashed password, ip addresses, etc]), access files of servers managed by the panel, etc.</p><h2 id="Patches"><a href="#Patches" class="headerlink" title="Patches"></a>Patches</h2><p>This vulnerability was patched by <a href="https://github.com/pterodactyl/panel/commit/24c82b0e335fb5d7a844226b08abf9f176e592f0">https://github.com/pterodactyl/panel/commit/24c82b0e335fb5d7a844226b08abf9f176e592f0</a> and was released under the <a href="https://github.com/pterodactyl/panel/releases/tag/v1.11.11"><code>v1.11.11</code></a> tag without any other code modifications compared to <code>v1.11.10</code>.</p><p>For those who need to patch their installations in-place or apply it on top of other code modifications, a patch file can be retrieved from <a href="https://github.com/pterodactyl/panel/commit/24c82b0e335fb5d7a844226b08abf9f176e592f0.patch">https://github.com/pterodactyl/panel/commit/24c82b0e335fb5d7a844226b08abf9f176e592f0.patch</a> and applied using <code>git apply</code>.</p><h2 id="Workarounds"><a href="#Workarounds" class="headerlink" title="Workarounds"></a>Workarounds</h2><p>Other than patching the software, there is no workaround in this software.  Disabling the <code>/locales/locale.json</code> endpoint at the webserver level is possible, but would break the localization feature wherever it is used.</p><p>The only other workaround relies on an external Web Application Firewall (WAF), such as Cloudflare’s WAF with their default ruleset (requires Pro plan or above, Free doesn’t have the proper ruleset) to mitigate this attack.</p><p>Updating to <a href="https://github.com/pterodactyl/panel/releases/tag/v1.11.11"><code>v1.11.11</code></a> or manually patching the software are the only recommended ways to completely mitigate this vulnerability.</p><h2 id="User-Notice"><a href="#User-Notice" class="headerlink" title="User Notice"></a>User Notice</h2><p>Shortly after the <a href="https://github.com/pterodactyl/panel/releases/tag/v1.11.11"><code>v1.11.11</code></a>release and it’s announcement, security researchers and malicious actors have been attempting to exploit this vulnerability.  While there hasn’t been any official confirmations of breaches or successful exploits of the vulnerability in the wild, it is only a matter of time for those who remain on unpatched versions without any workarounds in place.</p><p>The scope of this vulnerability cannot be fully described, anything is possible.  It is of utmost importance that anyone running a vulnerable version of this software, patch it or update to the latest available version <strong>immediately</strong>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-24wv-6c99-f843&quot;&gt;https://github.com/advisories/GHSA-24wv-6c99-f843&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>Apache ActiveMQ Artemis Console Default Login Vulnerability</title>
@@ -506,32 +530,6 @@
       
       
     <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Windows Server Shutdown on Audit Failur</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="配置问题" scheme="http://example.com/tags/%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows Server Shutdown Without Logon Vulnerability</title>
-    <link href="http://example.com/2025/06/19/github_373877954/"/>
-    <id>http://example.com/2025/06/19/github_373877954/</id>
-    <published>2025-06-19T13:47:17.813Z</published>
-    <updated>2025-06-19T13:47:17.809Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Windows Server Shutdown Without Logon Vulnerability</p><p><strong>漏洞类型：</strong> 配置问题</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 该漏洞允许未授权用户从登录屏幕关闭系统，可能导致服务中断。通过将注册表值ShutdownWithoutLogon设置为0可以禁用此策略。</p><p><strong>产品厂商：</strong> Microsoft</p><p><strong>产品名称：</strong> Windows Server</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/21a7ee22a4fd01cae6da56c657acf0a11b7ed46f/kisa%2FCloud_Vulnerability_Inspection_Guide_2024%2FWindow_Server%2Fshutdown-without-logon.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/21a7ee22a4fd01cae6da56c657acf0a11b7ed46f/kisa%2FCloud_Vulnerability_Inspection_Guide_2024%2FWindow_Server%2Fshutdown-without-logon.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> shutdown-without-logon<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Shutdown Without Logon Check<br>  <span class="hljs-params">author:</span> nukunga[SungHyunJeon]<br>  <span class="hljs-params">severity:</span> medium<br>  <span class="hljs-params">description:</span> |<br>    Ensure the <span class="hljs-string">&quot;Shutdown Without Logon&quot;</span> policy is disabled by confirming that the ShutdownWithoutLogon registry value is set to <span class="hljs-number">0</span>. If enabled, the system permits shutdown from the logon screen, increasing the risk of unauthorized shutdowns.<br>  <span class="hljs-params">impact:</span> |<br>    When enabled, this setting permits unauthorized users to shut down the system without logging <span class="hljs-keyword">in</span>, which can lead to service interruptions.<br>  <span class="hljs-params">remediation:</span> |<br>    Disable this policy by setting the ShutdownWithoutLogon registry value to <span class="hljs-number">0</span> <span class="hljs-params">at:</span><br>    <span class="hljs-operator">-</span> HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System<br>    <span class="hljs-operator">-</span> Alternatively, configure the setting through the Local Security Policy.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>isms.kisa.<span class="hljs-keyword">or</span>.kr<span class="hljs-operator">/</span>main<span class="hljs-operator">/</span>csap<span class="hljs-operator">/</span>notice<span class="hljs-operator">/</span><span class="hljs-operator">?</span>boardId<span class="hljs-operator">=</span>bbs_0000000000000004&amp;mode<span class="hljs-operator">=</span>view&amp;cntId<span class="hljs-operator">=</span><span class="hljs-number">85</span><br>  <span class="hljs-params">tags:</span> code,windows-audit,kisa,registry<br><br><span class="hljs-params">self-contained:</span> <span class="hljs-literal">true</span><br><br><span class="hljs-params">code:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">pre-condition:</span> |<br>      IsWindows();<br>    <span class="hljs-params">engine:</span><br>      <span class="hljs-operator">-</span> powershell<br>      <span class="hljs-operator">-</span> powershell.exe<br>    <span class="hljs-params">args:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-operator">-</span>ExecutionPolicy<br>      <span class="hljs-operator">-</span> Bypass<br>    <span class="hljs-params">pattern:</span> <span class="hljs-string">&quot;*.ps1&quot;</span><br>    <span class="hljs-params">source:</span> |<br>      $regPath <span class="hljs-operator">=</span> <span class="hljs-string">&quot;HKLM:<span class="hljs-char escape_">\S</span>oftware<span class="hljs-char escape_">\M</span>icrosoft<span class="hljs-char escape_">\W</span>indows<span class="hljs-char escape_">\C</span>urrentVersion<span class="hljs-char escape_">\p</span>olicies<span class="hljs-char escape_">\s</span>ystem&quot;</span><br>      $shutdownValue <span class="hljs-operator">=</span> (Get-ItemProperty <span class="hljs-operator">-</span>Path $regPath <span class="hljs-operator">-</span>Name ShutdownWithoutLogon <span class="hljs-operator">-</span>ErrorAction SilentlyContinue).ShutdownWithoutLogon<br>      <span class="hljs-keyword">if</span> ($shutdownValue <span class="hljs-operator">-</span>eq <span class="hljs-number">0</span>) &#123;<br>          <span class="hljs-string">&quot;SHUTDOWN_WITHOUT_LOGON_DISABLED&quot;</span><br>      &#125; <span class="hljs-keyword">else</span> &#123;<br>          <span class="hljs-string">&quot;SHUTDOWN_WITHOUT_LOGON_ENABLED&quot;</span><br>      &#125;<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;SHUTDOWN_WITHOUT_LOGON_ENABLED&quot;</span><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Windows Server Shutdown Without Logon V</summary>
       
     
     
