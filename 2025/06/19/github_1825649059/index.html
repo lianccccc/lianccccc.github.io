@@ -19,15 +19,15 @@
   <meta name="author" content="lianccc">
   <meta name="keywords" content="">
   
-    <meta name="description" content="漏洞信息漏洞名称： FTP Access Control Check 漏洞类型： 配置问题 漏洞等级： 中危 漏洞描述： 确保通过配置IP地址过滤器来限制FTP访问。没有这些限制，未经授权的网络可能会访问FTP服务，增加了数据泄露和其他安全威胁的风险。 产品厂商： Microsoft 产品名称： IIS FTP Service 来源： https:&#x2F;&#x2F;github.com&#x2F;projectdisco">
+    <meta name="description" content="漏洞信息漏洞名称： FTP Access Control Check 漏洞类型： 配置问题 漏洞等级： 中危 漏洞描述： 确保通过配置IP地址过滤器限制FTP访问。没有这些限制，未经授权的网络可能访问FTP服务，增加了数据泄露和其他安全威胁的风险。 产品厂商： Microsoft 产品名称： IIS 来源： https:&#x2F;&#x2F;github.com&#x2F;projectdiscovery&#x2F;nuclei-te">
 <meta property="og:type" content="article">
 <meta property="og:title" content="FTP Access Control Check">
 <meta property="og:url" content="http://example.com/2025/06/19/github_1825649059/index.html">
 <meta property="og:site_name" content="liancc&#39; infos blog">
-<meta property="og:description" content="漏洞信息漏洞名称： FTP Access Control Check 漏洞类型： 配置问题 漏洞等级： 中危 漏洞描述： 确保通过配置IP地址过滤器来限制FTP访问。没有这些限制，未经授权的网络可能会访问FTP服务，增加了数据泄露和其他安全威胁的风险。 产品厂商： Microsoft 产品名称： IIS FTP Service 来源： https:&#x2F;&#x2F;github.com&#x2F;projectdisco">
+<meta property="og:description" content="漏洞信息漏洞名称： FTP Access Control Check 漏洞类型： 配置问题 漏洞等级： 中危 漏洞描述： 确保通过配置IP地址过滤器限制FTP访问。没有这些限制，未经授权的网络可能访问FTP服务，增加了数据泄露和其他安全威胁的风险。 产品厂商： Microsoft 产品名称： IIS 来源： https:&#x2F;&#x2F;github.com&#x2F;projectdiscovery&#x2F;nuclei-te">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-06-19T13:15:58.060Z">
-<meta property="article:modified_time" content="2025-06-19T13:15:58.058Z">
+<meta property="article:published_time" content="2025-06-19T13:45:51.647Z">
+<meta property="article:modified_time" content="2025-06-19T13:45:51.643Z">
 <meta property="article:author" content="lianccc">
 <meta property="article:tag" content="projectdiscovery&#x2F;nuclei-templates:github issues">
 <meta property="article:tag" content="配置问题">
@@ -213,7 +213,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-06-19 13:15" pubdate>
+        <time datetime="2025-06-19 13:45" pubdate>
           2025年6月19日 下午
         </time>
       </span>
@@ -225,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          262 字
+          260 字
         
       </span>
     
@@ -281,9 +281,9 @@
                 <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> FTP Access Control Check</p>
 <p><strong>漏洞类型：</strong> 配置问题</p>
 <p><strong>漏洞等级：</strong> 中危</p>
-<p><strong>漏洞描述：</strong> 确保通过配置IP地址过滤器来限制FTP访问。没有这些限制，未经授权的网络可能会访问FTP服务，增加了数据泄露和其他安全威胁的风险。</p>
+<p><strong>漏洞描述：</strong> 确保通过配置IP地址过滤器限制FTP访问。没有这些限制，未经授权的网络可能访问FTP服务，增加了数据泄露和其他安全威胁的风险。</p>
 <p><strong>产品厂商：</strong> Microsoft</p>
-<p><strong>产品名称：</strong> IIS FTP Service</p>
+<p><strong>产品名称：</strong> IIS</p>
 <p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei-templates/blob/21a7ee22a4fd01cae6da56c657acf0a11b7ed46f/kisa%2FCloud_Vulnerability_Inspection_Guide_2024%2FWindow_Server%2Fftp-access-control-check.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/21a7ee22a4fd01cae6da56c657acf0a11b7ed46f/kisa%2FCloud_Vulnerability_Inspection_Guide_2024%2FWindow_Server%2Fftp-access-control-check.yaml</a></p>
 <p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p>
 <h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><br>id: ftp<span class="hljs-literal">-access-control-check</span><br><br>info:<br>  name: FTP Access Control Check<br>  author: nukunga[<span class="hljs-type">SungHyunJeon</span>]<br>  severity: medium<br>  description: |<br>    Ensure FTP access is restricted by configuring IP address filters. Without these restrictions, unauthorized networks could potentially access FTP services.<br>  impact: |<br>    Lack of proper IP<span class="hljs-literal">-based</span> access control allows FTP services to be accessed by unauthorized networks, heightening the risk of <span class="hljs-keyword">data</span> breaches and other security threats.<br>  remediation: |<br>    <span class="hljs-built_in">Set</span> up IP address restrictions <span class="hljs-keyword">using</span> IIS Manager:<br>    - Open IIS Manager.<br>    - Go to the FTP site → FTP IP Address and Domain Restrictions.<br>    - Add the allowed IP addresses and configure suitable deny rules.<br>  reference:<br>    - https://isms.kisa.or.kr/main/csap/notice/?boardId=bbs_0000000000000004&amp;mode=view&amp;cntId=<span class="hljs-number">85</span><br>  tags: ftp,iis,security,windows,code,windows<span class="hljs-literal">-audit</span>,kisa<br><br>self<span class="hljs-literal">-contained</span>: true<br><br>code:<br>  - pre<span class="hljs-literal">-condition</span>: |<br>      IsWindows();<br>    engine:<br>      - powershell<br>      - powershell.exe<br>    args:<br>      - <span class="hljs-literal">-ExecutionPolicy</span><br>      - Bypass<br>    pattern: <span class="hljs-string">&quot;*.ps1&quot;</span><br>    source: |<br>      <span class="hljs-built_in">Import-Module</span> WebAdministration <span class="hljs-literal">-ErrorAction</span> SilentlyContinue<br>      <span class="hljs-variable">$ftpSites</span> = <span class="hljs-built_in">Get-ChildItem</span> IIS:\Sites | <span class="hljs-built_in">Where-Object</span> &#123; <span class="hljs-variable">$_</span>.Bindings.Collection.Protocol <span class="hljs-operator">-eq</span> <span class="hljs-string">&quot;ftp&quot;</span> &#125;<br>      <span class="hljs-variable">$vulnerable</span> = <span class="hljs-variable">$false</span><br>      <span class="hljs-keyword">foreach</span> (<span class="hljs-variable">$site</span> <span class="hljs-keyword">in</span> <span class="hljs-variable">$ftpSites</span>) &#123;<br>          <span class="hljs-variable">$ipSecurity</span> = <span class="hljs-built_in">Get-WebConfigurationProperty</span> <span class="hljs-literal">-pspath</span> <span class="hljs-string">&quot;MACHINE/WEBROOT/APPHOST/<span class="hljs-variable">$</span>(<span class="hljs-variable">$site</span>.Name)&quot;</span> <span class="hljs-literal">-filter</span> <span class="hljs-string">&quot;system.ftpServer/security/ipSecurity&quot;</span> <span class="hljs-literal">-name</span> <span class="hljs-string">&quot;allowUnlisted&quot;</span> <span class="hljs-literal">-ErrorAction</span> SilentlyContinue<br>          <span class="hljs-comment"># If allowUnlisted is true, FTP access is open to unlisted IPs (i.e., no proper IP restriction is applied)</span><br>          <span class="hljs-keyword">if</span> (<span class="hljs-variable">$ipSecurity</span> <span class="hljs-operator">-eq</span> <span class="hljs-variable">$true</span>) &#123;<br>              <span class="hljs-variable">$vulnerable</span> = <span class="hljs-variable">$true</span><br>              <span class="hljs-keyword">break</span><br>          &#125;<br>      &#125;<br>      <span class="hljs-keyword">if</span> (<span class="hljs-variable">$vulnerable</span>) &#123;<br>          <span class="hljs-string">&quot;FTP_IP_ACCESS_CONTROL_NOT_CONFIGURED&quot;</span><br>      &#125; <span class="hljs-keyword">else</span> &#123;<br>          <span class="hljs-string">&quot;FTP_IP_ACCESS_CONTROL_CONFIGURED&quot;</span><br>      &#125;<br><br>    matchers:<br>      - <span class="hljs-built_in">type</span>: word<br>        words:<br>          - <span class="hljs-string">&quot;FTP_IP_ACCESS_CONTROL_NOT_CONFIGURED&quot;</span><br><br></code></pre></td></tr></table></figure>
@@ -390,8 +390,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/19/github_1859238891/" title="CVE-2025-33053 Exploit via Malicious URL File and WebDAV">
-                        <span class="hidden-mobile">CVE-2025-33053 Exploit via Malicious URL File and WebDAV</span>
+                      <a href="/2025/06/19/github_1857872544/" title="Windows Server 默认共享漏洞">
+                        <span class="hidden-mobile">Windows Server 默认共享漏洞</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

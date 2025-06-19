@@ -19,15 +19,15 @@
   <meta name="author" content="lianccc">
   <meta name="keywords" content="">
   
-    <meta name="description" content="漏洞信息漏洞名称： Windows Server 远程注册表访问检查 漏洞类型： 配置问题 漏洞等级： 中危 漏洞描述： 确保远程注册表服务已禁用，以阻止对Windows注册表的远程访问。允许远程注册表访问可能导致未经授权的更改，并构成严重的安全风险。如果远程注册表服务启用，具有管理员权限的攻击者可以远程访问和修改注册表设置，增加系统被攻陷的风险。 产品厂商： Microsoft 产品名称： Wi">
+    <meta name="description" content="漏洞信息漏洞名称： Windows Server 远程注册表访问检查 漏洞类型： 配置问题 漏洞等级： 中危 漏洞描述： 确保远程注册表服务被禁用，以阻止对Windows注册表的远程访问。允许远程注册表访问可能导致未经授权的更改，构成严重的安全风险。如果远程注册表服务被启用，具有管理员权限的攻击者可以远程访问和修改注册表设置，增加系统被攻陷的风险。 产品厂商： Microsoft 产品名称： Wi">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Windows Server 远程注册表访问检查">
 <meta property="og:url" content="http://example.com/2025/06/19/github_3494048568/index.html">
 <meta property="og:site_name" content="liancc&#39; infos blog">
-<meta property="og:description" content="漏洞信息漏洞名称： Windows Server 远程注册表访问检查 漏洞类型： 配置问题 漏洞等级： 中危 漏洞描述： 确保远程注册表服务已禁用，以阻止对Windows注册表的远程访问。允许远程注册表访问可能导致未经授权的更改，并构成严重的安全风险。如果远程注册表服务启用，具有管理员权限的攻击者可以远程访问和修改注册表设置，增加系统被攻陷的风险。 产品厂商： Microsoft 产品名称： Wi">
+<meta property="og:description" content="漏洞信息漏洞名称： Windows Server 远程注册表访问检查 漏洞类型： 配置问题 漏洞等级： 中危 漏洞描述： 确保远程注册表服务被禁用，以阻止对Windows注册表的远程访问。允许远程注册表访问可能导致未经授权的更改，构成严重的安全风险。如果远程注册表服务被启用，具有管理员权限的攻击者可以远程访问和修改注册表设置，增加系统被攻陷的风险。 产品厂商： Microsoft 产品名称： Wi">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-06-19T13:15:13.134Z">
-<meta property="article:modified_time" content="2025-06-19T13:15:13.129Z">
+<meta property="article:published_time" content="2025-06-19T13:45:14.096Z">
+<meta property="article:modified_time" content="2025-06-19T13:45:14.094Z">
 <meta property="article:author" content="lianccc">
 <meta property="article:tag" content="projectdiscovery&#x2F;nuclei-templates:github issues">
 <meta property="article:tag" content="配置问题">
@@ -213,7 +213,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-06-19 13:15" pubdate>
+        <time datetime="2025-06-19 13:45" pubdate>
           2025年6月19日 下午
         </time>
       </span>
@@ -281,7 +281,7 @@
                 <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Windows Server 远程注册表访问检查</p>
 <p><strong>漏洞类型：</strong> 配置问题</p>
 <p><strong>漏洞等级：</strong> 中危</p>
-<p><strong>漏洞描述：</strong> 确保远程注册表服务已禁用，以阻止对Windows注册表的远程访问。允许远程注册表访问可能导致未经授权的更改，并构成严重的安全风险。如果远程注册表服务启用，具有管理员权限的攻击者可以远程访问和修改注册表设置，增加系统被攻陷的风险。</p>
+<p><strong>漏洞描述：</strong> 确保远程注册表服务被禁用，以阻止对Windows注册表的远程访问。允许远程注册表访问可能导致未经授权的更改，构成严重的安全风险。如果远程注册表服务被启用，具有管理员权限的攻击者可以远程访问和修改注册表设置，增加系统被攻陷的风险。</p>
 <p><strong>产品厂商：</strong> Microsoft</p>
 <p><strong>产品名称：</strong> Windows Server</p>
 <p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei-templates/blob/21a7ee22a4fd01cae6da56c657acf0a11b7ed46f/kisa%2FCloud_Vulnerability_Inspection_Guide_2024%2FWindow_Server%2Fremote-registry-access-check.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/21a7ee22a4fd01cae6da56c657acf0a11b7ed46f/kisa%2FCloud_Vulnerability_Inspection_Guide_2024%2FWindow_Server%2Fremote-registry-access-check.yaml</a></p>
@@ -380,9 +380,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/19/github_617750637/" title="SAM File Access Control Check">
+                      <a href="/2025/06/19/github_617750637/" title="SAM File Access Control Vulnerability">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">SAM File Access Control Check</span>
+                        <span class="hidden-mobile">SAM File Access Control Vulnerability</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -390,8 +390,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/19/github_1495692784/" title="Blackash-CVE-2025-0108">
-                        <span class="hidden-mobile">Blackash-CVE-2025-0108</span>
+                      <a href="/2025/06/19/github_1859238891/" title="CVE-2025-33053 Exploit via Malicious URL File and WebDAV">
+                        <span class="hidden-mobile">CVE-2025-33053 Exploit via Malicious URL File and WebDAV</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

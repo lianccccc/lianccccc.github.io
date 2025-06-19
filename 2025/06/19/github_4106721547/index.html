@@ -19,15 +19,15 @@
   <meta name="author" content="lianccc">
   <meta name="keywords" content="">
   
-    <meta name="description" content="漏洞信息漏洞名称： DNS Zone Transfer Vulnerability 漏洞类型： 信息泄露 漏洞等级： 中危 漏洞描述： DNS区域传输未正确限制可能导致敏感域名信息泄露，攻击者可以利用这些信息映射网络基础设施。通过验证所有活动区域的SecureSecondaries注册表值是否设置为2，可以确保DNS区域传输受到限制。 产品厂商： Microsoft 产品名称： Windows S">
+    <meta name="description" content="漏洞信息漏洞名称： DNS Zone Transfer Check 漏洞类型： 信息泄露 漏洞等级： 中危 漏洞描述： 确保DNS区域传输受到限制，通过验证所有活动区域的SecureSecondaries注册表值是否设置为2。未受限制的区域传输可能会暴露敏感的域信息，帮助攻击者映射网络基础设施。如果DNS区域传输未正确限制，攻击者可能访问域和区域详细信息，这可能有助于规划和发起针对网络基础设施的进">
 <meta property="og:type" content="article">
-<meta property="og:title" content="DNS Zone Transfer Vulnerability">
+<meta property="og:title" content="DNS Zone Transfer Check">
 <meta property="og:url" content="http://example.com/2025/06/19/github_4106721547/index.html">
 <meta property="og:site_name" content="liancc&#39; infos blog">
-<meta property="og:description" content="漏洞信息漏洞名称： DNS Zone Transfer Vulnerability 漏洞类型： 信息泄露 漏洞等级： 中危 漏洞描述： DNS区域传输未正确限制可能导致敏感域名信息泄露，攻击者可以利用这些信息映射网络基础设施。通过验证所有活动区域的SecureSecondaries注册表值是否设置为2，可以确保DNS区域传输受到限制。 产品厂商： Microsoft 产品名称： Windows S">
+<meta property="og:description" content="漏洞信息漏洞名称： DNS Zone Transfer Check 漏洞类型： 信息泄露 漏洞等级： 中危 漏洞描述： 确保DNS区域传输受到限制，通过验证所有活动区域的SecureSecondaries注册表值是否设置为2。未受限制的区域传输可能会暴露敏感的域信息，帮助攻击者映射网络基础设施。如果DNS区域传输未正确限制，攻击者可能访问域和区域详细信息，这可能有助于规划和发起针对网络基础设施的进">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-06-19T13:16:32.392Z">
-<meta property="article:modified_time" content="2025-06-19T13:16:32.391Z">
+<meta property="article:published_time" content="2025-06-19T13:46:28.522Z">
+<meta property="article:modified_time" content="2025-06-19T13:46:28.520Z">
 <meta property="article:author" content="lianccc">
 <meta property="article:tag" content="projectdiscovery&#x2F;nuclei-templates:github issues">
 <meta property="article:tag" content="信息泄露">
@@ -35,7 +35,7 @@
   
   
   
-  <title>DNS Zone Transfer Vulnerability - liancc&#39; infos blog</title>
+  <title>DNS Zone Transfer Check - liancc&#39; infos blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -202,7 +202,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="DNS Zone Transfer Vulnerability"></span>
+            <span id="subtitle" data-typed-text="DNS Zone Transfer Check"></span>
           
         </div>
 
@@ -213,7 +213,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-06-19 13:16" pubdate>
+        <time datetime="2025-06-19 13:46" pubdate>
           2025年6月19日 下午
         </time>
       </span>
@@ -225,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          262 字
+          304 字
         
       </span>
     
@@ -273,15 +273,15 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">DNS Zone Transfer Vulnerability</h1>
+            <h1 id="seo-header">DNS Zone Transfer Check</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> DNS Zone Transfer Vulnerability</p>
+                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> DNS Zone Transfer Check</p>
 <p><strong>漏洞类型：</strong> 信息泄露</p>
 <p><strong>漏洞等级：</strong> 中危</p>
-<p><strong>漏洞描述：</strong> DNS区域传输未正确限制可能导致敏感域名信息泄露，攻击者可以利用这些信息映射网络基础设施。通过验证所有活动区域的SecureSecondaries注册表值是否设置为2，可以确保DNS区域传输受到限制。</p>
+<p><strong>漏洞描述：</strong> 确保DNS区域传输受到限制，通过验证所有活动区域的SecureSecondaries注册表值是否设置为2。未受限制的区域传输可能会暴露敏感的域信息，帮助攻击者映射网络基础设施。如果DNS区域传输未正确限制，攻击者可能访问域和区域详细信息，这可能有助于规划和发起针对网络基础设施的进一步攻击。</p>
 <p><strong>产品厂商：</strong> Microsoft</p>
 <p><strong>产品名称：</strong> Windows Server DNS</p>
 <p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei-templates/blob/21a7ee22a4fd01cae6da56c657acf0a11b7ed46f/kisa%2FCloud_Vulnerability_Inspection_Guide_2024%2FWindow_Server%2Fdns-zone-transfer-check.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/21a7ee22a4fd01cae6da56c657acf0a11b7ed46f/kisa%2FCloud_Vulnerability_Inspection_Guide_2024%2FWindow_Server%2Fdns-zone-transfer-check.yaml</a></p>
@@ -335,7 +335,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>DNS Zone Transfer Vulnerability</div>
+      <div>DNS Zone Transfer Check</div>
       <div>http://example.com/2025/06/19/github_4106721547/</div>
     </div>
     <div class="license-meta">
@@ -380,9 +380,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/19/github_3513511160/" title="FTP 匿名认证漏洞">
+                      <a href="/2025/06/19/github_3513511160/" title="FTP匿名认证漏洞">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">FTP 匿名认证漏洞</span>
+                        <span class="hidden-mobile">FTP匿名认证漏洞</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     

@@ -19,15 +19,15 @@
   <meta name="author" content="lianccc">
   <meta name="keywords" content="">
   
-    <meta name="description" content="漏洞信息漏洞名称： Windows Server 审计失败时关闭系统漏洞 漏洞类型： 配置问题 漏洞等级： 中危 漏洞描述： 确保禁用“审计失败时关闭系统”策略。注册表值应设置为“4,0”，以防止系统在无法记录安全审计事件时关闭。如果设置为“4,1”，系统将在审计失败时关闭，这可能导致拒绝服务情况。启用此策略（值设置为“4,1”）可能会导致系统在无法写入审计日志时意外关闭，可能中断服务并导致数据丢">
+    <meta name="description" content="漏洞信息漏洞名称： Windows Server Shutdown on Audit Failure Vulnerability 漏洞类型： 配置问题 漏洞等级： 中危 漏洞描述： 确保禁用“Shutdown on Audit Failure”策略。注册表值应设置为“4,0”，以防止系统在无法记录安全审计事件时关闭。如果设置为“4,1”，系统将在审计失败时关闭，这可能导致拒绝服务情况。启用此策略（">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Windows Server 审计失败时关闭系统漏洞">
+<meta property="og:title" content="Windows Server Shutdown on Audit Failure Vulnerability">
 <meta property="og:url" content="http://example.com/2025/06/19/github_239256302/index.html">
 <meta property="og:site_name" content="liancc&#39; infos blog">
-<meta property="og:description" content="漏洞信息漏洞名称： Windows Server 审计失败时关闭系统漏洞 漏洞类型： 配置问题 漏洞等级： 中危 漏洞描述： 确保禁用“审计失败时关闭系统”策略。注册表值应设置为“4,0”，以防止系统在无法记录安全审计事件时关闭。如果设置为“4,1”，系统将在审计失败时关闭，这可能导致拒绝服务情况。启用此策略（值设置为“4,1”）可能会导致系统在无法写入审计日志时意外关闭，可能中断服务并导致数据丢">
+<meta property="og:description" content="漏洞信息漏洞名称： Windows Server Shutdown on Audit Failure Vulnerability 漏洞类型： 配置问题 漏洞等级： 中危 漏洞描述： 确保禁用“Shutdown on Audit Failure”策略。注册表值应设置为“4,0”，以防止系统在无法记录安全审计事件时关闭。如果设置为“4,1”，系统将在审计失败时关闭，这可能导致拒绝服务情况。启用此策略（">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-06-19T13:17:30.971Z">
-<meta property="article:modified_time" content="2025-06-19T13:17:30.964Z">
+<meta property="article:published_time" content="2025-06-19T13:47:29.648Z">
+<meta property="article:modified_time" content="2025-06-19T13:47:29.645Z">
 <meta property="article:author" content="lianccc">
 <meta property="article:tag" content="projectdiscovery&#x2F;nuclei-templates:github issues">
 <meta property="article:tag" content="配置问题">
@@ -35,7 +35,7 @@
   
   
   
-  <title>Windows Server 审计失败时关闭系统漏洞 - liancc&#39; infos blog</title>
+  <title>Windows Server Shutdown on Audit Failure Vulnerability - liancc&#39; infos blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -202,7 +202,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Windows Server 审计失败时关闭系统漏洞"></span>
+            <span id="subtitle" data-typed-text="Windows Server Shutdown on Audit Failure Vulnerability"></span>
           
         </div>
 
@@ -213,7 +213,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-06-19 13:17" pubdate>
+        <time datetime="2025-06-19 13:47" pubdate>
           2025年6月19日 下午
         </time>
       </span>
@@ -225,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          404 字
+          384 字
         
       </span>
     
@@ -273,15 +273,15 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Windows Server 审计失败时关闭系统漏洞</h1>
+            <h1 id="seo-header">Windows Server Shutdown on Audit Failure Vulnerability</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Windows Server 审计失败时关闭系统漏洞</p>
+                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Windows Server Shutdown on Audit Failure Vulnerability</p>
 <p><strong>漏洞类型：</strong> 配置问题</p>
 <p><strong>漏洞等级：</strong> 中危</p>
-<p><strong>漏洞描述：</strong> 确保禁用“审计失败时关闭系统”策略。注册表值应设置为“4,0”，以防止系统在无法记录安全审计事件时关闭。如果设置为“4,1”，系统将在审计失败时关闭，这可能导致拒绝服务情况。启用此策略（值设置为“4,1”）可能会导致系统在无法写入审计日志时意外关闭，可能中断服务并导致数据丢失的风险。修复方法包括通过将CrashOnAuditFail值设置为“4,0”来禁用策略，可以通过注册表编辑器或本地安全策略进行设置。</p>
+<p><strong>漏洞描述：</strong> 确保禁用“Shutdown on Audit Failure”策略。注册表值应设置为“4,0”，以防止系统在无法记录安全审计事件时关闭。如果设置为“4,1”，系统将在审计失败时关闭，这可能导致拒绝服务情况。启用此策略（值设置为“4,1”）可能会导致系统在无法写入审计日志时意外关闭，可能会中断服务并导致数据丢失的风险。通过将CrashOnAuditFail值设置为“4,0”来禁用策略。这可以通过使用注册表编辑器或通过本地安全策略来完成。</p>
 <p><strong>产品厂商：</strong> Microsoft</p>
 <p><strong>产品名称：</strong> Windows Server</p>
 <p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei-templates/blob/21a7ee22a4fd01cae6da56c657acf0a11b7ed46f/kisa%2FCloud_Vulnerability_Inspection_Guide_2024%2FWindow_Server%2Fcrash-on-audit-fail.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/21a7ee22a4fd01cae6da56c657acf0a11b7ed46f/kisa%2FCloud_Vulnerability_Inspection_Guide_2024%2FWindow_Server%2Fcrash-on-audit-fail.yaml</a></p>
@@ -335,7 +335,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Windows Server 审计失败时关闭系统漏洞</div>
+      <div>Windows Server Shutdown on Audit Failure Vulnerability</div>
       <div>http://example.com/2025/06/19/github_239256302/</div>
     </div>
     <div class="license-meta">
@@ -390,8 +390,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/19/github_373877954/" title="Window Server Shutdown Without Logon Check Vulnerability">
-                        <span class="hidden-mobile">Window Server Shutdown Without Logon Check Vulnerability</span>
+                      <a href="/2025/06/19/github_373877954/" title="Windows Server Shutdown Without Logon Vulnerability">
+                        <span class="hidden-mobile">Windows Server Shutdown Without Logon Vulnerability</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

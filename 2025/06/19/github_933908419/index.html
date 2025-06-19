@@ -19,15 +19,15 @@
   <meta name="author" content="lianccc">
   <meta name="keywords" content="">
   
-    <meta name="description" content="漏洞信息漏洞名称： RDS Removal Check 漏洞类型： 配置问题 漏洞等级： 中危 漏洞描述： 确保远程数据服务（RDS）被移除或未配置，以减少拒绝服务攻击或远程执行管理命令的风险。如果满足以下任一条件，则符合合规性：- IIS未安装或未使用，- 默认网站不包含&#x2F;msadc虚拟目录，或- 与RDS相关的ADCLaunch注册表键不存在。配置不当的RDS可能被攻击者利用来执行远">
+    <meta name="description" content="漏洞信息漏洞名称： RDS Removal Check 漏洞类型： 配置问题 漏洞等级： 中危 漏洞描述： 确保远程数据服务（RDS）被移除或未配置，以减少拒绝服务攻击或远程执行管理命令的风险。如果满足以下任一条件，则认为符合要求：未安装或未使用IIS，默认网站不包含&#x2F;msadc虚拟目录，或与RDS相关的ADCLaunch注册表键不存在。不当配置的RDS可能被攻击者利用来执行远程代码或发">
 <meta property="og:type" content="article">
 <meta property="og:title" content="RDS Removal Check">
 <meta property="og:url" content="http://example.com/2025/06/19/github_933908419/index.html">
 <meta property="og:site_name" content="liancc&#39; infos blog">
-<meta property="og:description" content="漏洞信息漏洞名称： RDS Removal Check 漏洞类型： 配置问题 漏洞等级： 中危 漏洞描述： 确保远程数据服务（RDS）被移除或未配置，以减少拒绝服务攻击或远程执行管理命令的风险。如果满足以下任一条件，则符合合规性：- IIS未安装或未使用，- 默认网站不包含&#x2F;msadc虚拟目录，或- 与RDS相关的ADCLaunch注册表键不存在。配置不当的RDS可能被攻击者利用来执行远">
+<meta property="og:description" content="漏洞信息漏洞名称： RDS Removal Check 漏洞类型： 配置问题 漏洞等级： 中危 漏洞描述： 确保远程数据服务（RDS）被移除或未配置，以减少拒绝服务攻击或远程执行管理命令的风险。如果满足以下任一条件，则认为符合要求：未安装或未使用IIS，默认网站不包含&#x2F;msadc虚拟目录，或与RDS相关的ADCLaunch注册表键不存在。不当配置的RDS可能被攻击者利用来执行远程代码或发">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-06-19T13:16:22.961Z">
-<meta property="article:modified_time" content="2025-06-19T13:16:22.959Z">
+<meta property="article:published_time" content="2025-06-19T13:46:18.403Z">
+<meta property="article:modified_time" content="2025-06-19T13:46:18.404Z">
 <meta property="article:author" content="lianccc">
 <meta property="article:tag" content="projectdiscovery&#x2F;nuclei-templates:github issues">
 <meta property="article:tag" content="配置问题">
@@ -213,7 +213,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-06-19 13:16" pubdate>
+        <time datetime="2025-06-19 13:46" pubdate>
           2025年6月19日 下午
         </time>
       </span>
@@ -225,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          395 字
+          396 字
         
       </span>
     
@@ -281,7 +281,7 @@
                 <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> RDS Removal Check</p>
 <p><strong>漏洞类型：</strong> 配置问题</p>
 <p><strong>漏洞等级：</strong> 中危</p>
-<p><strong>漏洞描述：</strong> 确保远程数据服务（RDS）被移除或未配置，以减少拒绝服务攻击或远程执行管理命令的风险。如果满足以下任一条件，则符合合规性：- IIS未安装或未使用，- 默认网站不包含&#x2F;msadc虚拟目录，或- 与RDS相关的ADCLaunch注册表键不存在。配置不当的RDS可能被攻击者利用来执行远程代码或发起拒绝服务攻击。</p>
+<p><strong>漏洞描述：</strong> 确保远程数据服务（RDS）被移除或未配置，以减少拒绝服务攻击或远程执行管理命令的风险。如果满足以下任一条件，则认为符合要求：未安装或未使用IIS，默认网站不包含&#x2F;msadc虚拟目录，或与RDS相关的ADCLaunch注册表键不存在。不当配置的RDS可能被攻击者利用来执行远程代码或发起拒绝服务攻击。</p>
 <p><strong>产品名称：</strong> Remote Data Services (RDS)</p>
 <p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei-templates/blob/21a7ee22a4fd01cae6da56c657acf0a11b7ed46f/kisa%2FCloud_Vulnerability_Inspection_Guide_2024%2FWindow_Server%2Frds-removal-check.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/21a7ee22a4fd01cae6da56c657acf0a11b7ed46f/kisa%2FCloud_Vulnerability_Inspection_Guide_2024%2FWindow_Server%2Frds-removal-check.yaml</a></p>
 <p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p>
@@ -379,9 +379,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/19/github_4106721547/" title="DNS Zone Transfer Vulnerability">
+                      <a href="/2025/06/19/github_4106721547/" title="DNS Zone Transfer Check">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">DNS Zone Transfer Vulnerability</span>
+                        <span class="hidden-mobile">DNS Zone Transfer Check</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
