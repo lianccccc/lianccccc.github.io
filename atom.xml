@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-20T06:15:30.570Z</updated>
+  <updated>2025-06-20T06:45:34.285Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,86 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Emlog dataphp Background SQL Injection Vulnerability</title>
+    <link href="http://example.com/2025/06/20/github_2968410829/"/>
+    <id>http://example.com/2025/06/20/github_2968410829/</id>
+    <published>2025-06-20T06:45:34.288Z</published>
+    <updated>2025-06-20T06:45:34.285Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Emlog data.php Background SQL Injection Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-39121</li></ul><p><strong>漏洞类型：</strong> SQL注入</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Emlog是一个开源博客系统。此漏洞存在于数据备份&#x2F;恢复功能中，由于输入验证不当，攻击者可以通过特制的备份文件执行任意SQL语句。</p><p><strong>产品厂商：</strong> Emlog</p><p><strong>产品名称：</strong> Emlog</p><p><strong>影响版本：</strong> 2.1.9</p><p><strong>来源：</strong> <a href="https://github.com/vulhub/vulhub/blob/7dc653ab2ca56f7652900a83108527a192cdb11e/emlog%2FCVE-2023-39121%2FREADME.md">https://github.com/vulhub/vulhub/blob/7dc653ab2ca56f7652900a83108527a192cdb11e/emlog%2FCVE-2023-39121%2FREADME.md</a></p><p><strong>类型：</strong> vulhub&#x2F;vulhub:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="Emlog-data-php-Background-SQL-Injection-Vulnerability-CVE-2023-39121"><a href="#Emlog-data-php-Background-SQL-Injection-Vulnerability-CVE-2023-39121" class="headerlink" title="Emlog data.php Background SQL Injection Vulnerability (CVE-2023-39121)"></a>Emlog data.php Background SQL Injection Vulnerability (CVE-2023-39121)</h2><p>Emlog is an open-source blog system. This vulnerability exists in the data backup&#x2F;restore functionality where improper input validation allows attackers to execute arbitrary SQL statements through specially crafted backup files.</p><p>Reference Links:</p><ul><li><a href="https://github.com/safe-b/CVE/issues/1#issue-1817133689">https://github.com/safe-b/CVE/issues/1#issue-1817133689</a></li><li><a href="https://www.emlog.net/docs/install/install_docker/">https://www.emlog.net/docs/install/install_docker/</a></li><li><a href="https://hub.docker.com/layers/emlog/emlog/pro-latest-php7.4-apache/images/sha256-55bcc4861e1cc99ad79505be05ca3f3e5d9bb5dd16b8f2edc6ae62f7315cb8df">https://hub.docker.com/layers/emlog/emlog/pro-latest-php7.4-apache/images/sha256-55bcc4861e1cc99ad79505be05ca3f3e5d9bb5dd16b8f2edc6ae62f7315cb8df</a></li></ul><h3 id="Vulnerability-Environment"><a href="#Vulnerability-Environment" class="headerlink" title="Vulnerability Environment"></a>Vulnerability Environment</h3><p>Execute the following command to start an Emlog 2.1.9 server:</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">docker compose up -d</span><br></code></pre></td></tr></table></figure><p>After the environment starts, accessing <code>http://your-ip/install.php</code> will redirect to the installation page. Register a username and password, then complete the installation. After completion, log in to the admin management interface.</p><h3 id="Exploit-Steps"><a href="#Exploit-Steps" class="headerlink" title="Exploit Steps"></a>Exploit Steps</h3><ol><li><p>Click: System → Data → Start Backup<br><img src="https://github.com/vulhub/vulhub/emlog/CVE-2023-39121/1.png" alt="Backup Start"></p></li><li><p>A SQL file will be downloaded<br><img src="https://github.com/vulhub/vulhub/emlog/CVE-2023-39121/2.png" alt="Downloaded SQL File"></p></li><li><p>Open the SQL file and add a malicious SQL statement (example: inserting a new user)</p><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs n1ql"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> emlog_user <span class="hljs-keyword">VALUES</span>(<span class="hljs-string">&#x27;110&#x27;</span>,<span class="hljs-string">&#x27;&#x27;</span>,<span class="hljs-string">&#x27;$P$BnTaZnToynOoAVP6T/MiTsZc9ZAQNg.&#x27;</span>,(<span class="hljs-keyword">select</span> <span class="hljs-keyword">user</span>()),<span class="hljs-string">&#x27;writer&#x27;</span>,<span class="hljs-string">&#x27;n&#x27;</span>,<span class="hljs-string">&#x27;&#x27;</span>,<span class="hljs-string">&#x27;123@qq.com&#x27;</span>,<span class="hljs-string">&#x27;&#x27;</span>,<span class="hljs-string">&#x27;&#x27;</span>,<span class="hljs-string">&#x27;0&#x27;</span>,<span class="hljs-string">&#x27;1687261845&#x27;</span>,<span class="hljs-string">&#x27;1687261845&#x27;</span>);<br></code></pre></td></tr></table></figure><p><img src="https://github.com/vulhub/vulhub/emlog/CVE-2023-39121/3.png" alt="Modified SQL File"></p></li><li><p>Import the modified SQL file<br><img src="https://github.com/vulhub/vulhub/emlog/CVE-2023-39121/4.png" alt="SQL Import"></p></li><li><p>A new user appears, confirming successful SQL injection<br><img src="https://github.com/vulhub/vulhub/emlog/CVE-2023-39121/5.png" alt="New User Created"></p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Emlog data.php Background SQL Injection</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="SQL注入" scheme="http://example.com/tags/SQL%E6%B3%A8%E5%85%A5/"/>
+    
+    <category term="vulhub/vulhub:github issues" scheme="http://example.com/tags/vulhub-vulhub-github-issues/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Emlog dataphp 后台SQL注入漏洞</title>
+    <link href="http://example.com/2025/06/20/github_55619981/"/>
+    <id>http://example.com/2025/06/20/github_55619981/</id>
+    <published>2025-06-20T06:45:24.654Z</published>
+    <updated>2025-06-20T06:45:24.648Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Emlog data.php 后台SQL注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-39121</li></ul><p><strong>漏洞类型：</strong> SQL注入</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Emlog 2.1.9版本中的data.php文件存在SQL注入漏洞，攻击者可以利用该漏洞在后台执行任意SQL命令，可能导致数据泄露或其他恶意操作。</p><p><strong>产品厂商：</strong> Emlog</p><p><strong>产品名称：</strong> Emlog</p><p><strong>影响版本：</strong> 2.1.9</p><p><strong>来源：</strong> <a href="https://github.com/vulhub/vulhub/blob/7dc653ab2ca56f7652900a83108527a192cdb11e/emlog%2FCVE-2023-39121%2Fdocker-compose.yml">https://github.com/vulhub/vulhub/blob/7dc653ab2ca56f7652900a83108527a192cdb11e/emlog%2FCVE-2023-39121%2Fdocker-compose.yml</a></p><p><strong>类型：</strong> vulhub&#x2F;vulhub:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><br><span class="hljs-attribute">version</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&#x27;3&#x27;</span><br><span class="hljs-attribute">services</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">mysql</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">image</span><span class="hljs-punctuation">:</span> <span class="hljs-string">mysql/mysql-server:5.6</span><br>    <span class="hljs-attribute">container_name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">mysql56</span><br>    <span class="hljs-attribute">command</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">--default_authentication_plugin=mysql_native_password</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">--character-set-server=utf8mb4</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">--collation-server=utf8mb4_unicode_ci</span><br>    <span class="hljs-attribute">volumes</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">./db_data/mysql:/var/lib/mysql</span><br>    <span class="hljs-attribute">ports</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;3306:3306&quot;</span><br>    <span class="hljs-attribute">restart</span><span class="hljs-punctuation">:</span> <span class="hljs-string">always</span><br>    <span class="hljs-attribute">environment</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-attribute">MYSQL_DATABASE</span><span class="hljs-punctuation">:</span> <span class="hljs-string">emlog</span><br>      <span class="hljs-attribute">MYSQL_USER</span><span class="hljs-punctuation">:</span> <span class="hljs-string">emlog</span><br>      <span class="hljs-attribute">MYSQL_PASSWORD</span><span class="hljs-punctuation">:</span> <span class="hljs-string">emlog</span><br>    <span class="hljs-attribute">networks</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">emlog_network</span><br>  <span class="hljs-attribute">emlog</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">image</span><span class="hljs-punctuation">:</span> <span class="hljs-string">vulhub/emlog:2.1.9</span><br>    <span class="hljs-attribute">container_name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">emlog-pro</span><br>    <span class="hljs-attribute">restart</span><span class="hljs-punctuation">:</span> <span class="hljs-string">always</span><br>    <span class="hljs-attribute">environment</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">EMLOG_DB_HOST=mysql</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">EMLOG_DB_NAME=emlog</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">EMLOG_DB_USER=emlog</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">EMLOG_DB_PASSWORD=emlog</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">EMLOG_DOMAIN_NAME=localhost</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">MAX_POST_BODY=50m</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">MAX_EXECUTION_TIME=300</span><br>    <span class="hljs-attribute">ports</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">80:80</span><br>    <span class="hljs-attribute">networks</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">emlog_network</span><br>    <span class="hljs-attribute">volumes</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">./data:/app</span><br>    <span class="hljs-attribute">labels</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-attribute">createdBy</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Apps&quot;</span><br><span class="hljs-attribute">networks</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">emlog_network</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">external</span><span class="hljs-punctuation">:</span> <span class="hljs-string">true</span><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Emlog data.php 后台SQL注入漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="SQL注入" scheme="http://example.com/tags/SQL%E6%B3%A8%E5%85%A5/"/>
+    
+    <category term="vulhub/vulhub:github issues" scheme="http://example.com/tags/vulhub-vulhub-github-issues/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Emlog dataphp 后台SQL注入漏洞</title>
+    <link href="http://example.com/2025/06/20/github_1196500617/"/>
+    <id>http://example.com/2025/06/20/github_1196500617/</id>
+    <published>2025-06-20T06:45:14.568Z</published>
+    <updated>2025-06-20T06:45:14.568Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Emlog data.php 后台SQL注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-39121</li></ul><p><strong>漏洞类型：</strong> SQL注入</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Emlog 是一款开源博客系统。该漏洞存在于数据备份&#x2F;恢复功能中，由于输入验证不充分，攻击者可通过特制的备份文件执行任意 SQL 语句。</p><p><strong>产品厂商：</strong> Emlog</p><p><strong>产品名称：</strong> Emlog</p><p><strong>来源：</strong> <a href="https://github.com/vulhub/vulhub/blob/7dc653ab2ca56f7652900a83108527a192cdb11e/emlog%2FCVE-2023-39121%2FREADME.zh-cn.md">https://github.com/vulhub/vulhub/blob/7dc653ab2ca56f7652900a83108527a192cdb11e/emlog%2FCVE-2023-39121%2FREADME.zh-cn.md</a></p><p><strong>类型：</strong> vulhub&#x2F;vulhub:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="Emlog-data-php-后台SQL注入漏洞（CVE-2023-39121）"><a href="#Emlog-data-php-后台SQL注入漏洞（CVE-2023-39121）" class="headerlink" title="Emlog data.php 后台SQL注入漏洞（CVE-2023-39121）"></a>Emlog data.php 后台SQL注入漏洞（CVE-2023-39121）</h2><p>Emlog 是一款开源博客系统。该漏洞存在于数据备份&#x2F;恢复功能中，由于输入验证不充分，攻击者可通过特制的备份文件执行任意 SQL 语句。</p><p>参考链接：</p><ul><li><a href="https://github.com/safe-b/CVE/issues/1#issue-1817133689">https://github.com/safe-b/CVE/issues/1#issue-1817133689</a></li><li><a href="https://www.emlog.net/docs/install/install_docker/">https://www.emlog.net/docs/install/install_docker/</a></li><li><a href="https://hub.docker.com/layers/emlog/emlog/pro-latest-php7.4-apache/images/sha256-55bcc4861e1cc99ad79505be05ca3f3e5d9bb5dd16b8f2edc6ae62f7315cb8df">https://hub.docker.com/layers/emlog/emlog/pro-latest-php7.4-apache/images/sha256-55bcc4861e1cc99ad79505be05ca3f3e5d9bb5dd16b8f2edc6ae62f7315cb8df</a></li></ul><h3 id="漏洞环境"><a href="#漏洞环境" class="headerlink" title="漏洞环境"></a>漏洞环境</h3><p>执行如下命令启动一个emlog2.1.9版本服务器：</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">docker compose up -d</span><br></code></pre></td></tr></table></figure><p>环境启动后，访问<code>http://your-ip/install.php</code>会跳转到安装页面。注册一个用户名、密码，然后安装。完成之后，登录后台管理界面：</p><h3 id="漏洞利用"><a href="#漏洞利用" class="headerlink" title="漏洞利用"></a>漏洞利用</h3><ol><li><p>点击系统-&gt;数据-&gt;开始备份</p><p><img src="https://github.com/vulhub/vulhub/emlog/CVE-2023-39121/1.png" alt="image-20250620130109114"></p></li><li><p>发现下载了一个sql文件</p><p><img src="https://github.com/vulhub/vulhub/emlog/CVE-2023-39121/2.png" alt="image-20250620130800739"></p></li><li><p>打开sql文件，添加一条sql语句（插入一个用户为例）</p><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs n1ql"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> emlog_user <span class="hljs-keyword">VALUES</span>(<span class="hljs-string">&#x27;110&#x27;</span>,<span class="hljs-string">&#x27;&#x27;</span>,<span class="hljs-string">&#x27;$P$BnTaZnToynOoAVP6T/MiTsZc9ZAQNg.&#x27;</span>,(<span class="hljs-keyword">select</span> <span class="hljs-keyword">user</span>()),<span class="hljs-string">&#x27;writer&#x27;</span>,<span class="hljs-string">&#x27;n&#x27;</span>,<span class="hljs-string">&#x27;&#x27;</span>,<span class="hljs-string">&#x27;123@qq.com&#x27;</span>,<span class="hljs-string">&#x27;&#x27;</span>,<span class="hljs-string">&#x27;&#x27;</span>,<span class="hljs-string">&#x27;0&#x27;</span>,<span class="hljs-string">&#x27;1687261845&#x27;</span>,<span class="hljs-string">&#x27;1687261845&#x27;</span>);<br></code></pre></td></tr></table></figure><p><img src="https://github.com/vulhub/vulhub/emlog/CVE-2023-39121/3.png" alt="image-20250620131017485"></p></li><li><p>将刚才修改的sql文件导入</p><p><img src="https://github.com/vulhub/vulhub/emlog/CVE-2023-39121/4.png" alt="image-20250620131122459"></p></li><li><p>发现新增了一个用户，说明sql注入成功</p><p><img src="https://github.com/vulhub/vulhub/emlog/CVE-2023-39121/5.png" alt="image-20250620131307794"></p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Emlog data.php 后台SQL注入漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="SQL注入" scheme="http://example.com/tags/SQL%E6%B3%A8%E5%85%A5/"/>
+    
+    <category term="vulhub/vulhub:github issues" scheme="http://example.com/tags/vulhub-vulhub-github-issues/"/>
+    
+  </entry>
   
   <entry>
     <title>Emlog dataphp Background SQL Injection Vulnerability</title>
@@ -460,86 +540,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="硬编码凭证" scheme="http://example.com/tags/%E7%A1%AC%E7%BC%96%E7%A0%81%E5%87%AD%E8%AF%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>TOTOLINK Installer - Exposure</title>
-    <link href="http://example.com/2025/06/19/github_4016740825/"/>
-    <id>http://example.com/2025/06/19/github_4016740825/</id>
-    <published>2025-06-19T15:15:11.835Z</published>
-    <updated>2025-06-19T15:15:11.830Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> TOTOLINK Installer - Exposure</p><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 检测到TOTOLINK路由器设置页面在&#x2F;wizardset.htm和&#x2F;easy_setup.htm的存在。</p><p><strong>产品厂商：</strong> TOTOLINK</p><p><strong>产品名称：</strong> TOTOLINK router</p><p><strong>搜索语法：</strong> title:”TOTOLINK”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/f62b44f0427bdd0408b0bd1e852f889688b09686/http%2Fmisconfiguration%2Finstaller%2Ftotolink-installer.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/f62b44f0427bdd0408b0bd1e852f889688b09686/http%2Fmisconfiguration%2Finstaller%2Ftotolink-installer.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> totolink-installer<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> TOTOLINK Installer <span class="hljs-operator">-</span> Exposure<br>  <span class="hljs-params">author:</span> ritikchaddha<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> |<br>    Detects the presence of TOTOLINK router setup pages at <span class="hljs-symbol">/wizardset.htm</span> and <span class="hljs-symbol">/easy_setup.htm.</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">product:</span> TOTOLINK<br>    <span class="hljs-params">shodan-query:</span> title:<span class="hljs-string">&quot;TOTOLINK&quot;</span><br>    <span class="hljs-params">fofa-query:</span> title<span class="hljs-operator">=</span><span class="hljs-string">&quot;TOTOLINK&quot;</span><br>  <span class="hljs-params">tags:</span> totolink,router,setup,exposure,installer<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/wizardset.htm&quot;</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/easy_setup.htm&quot;</span><br><br>    <span class="hljs-params">stop-at-first-match:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> &#x27;status_code<span class="hljs-operator">==</span><span class="hljs-number">200</span>&#x27;<br>          <span class="hljs-operator">-</span> &#x27;contains(tolower(body), <span class="hljs-string">&quot;totolink&quot;</span>)&#x27;<br>          <span class="hljs-operator">-</span> &#x27;contains_any(body, <span class="hljs-string">&quot;SRC=<span class="hljs-char escape_">\&quot;</span>easy_setup.htm&quot;</span>, <span class="hljs-string">&quot;value=<span class="hljs-char escape_">\&quot;</span>Advanced Setup&quot;</span>, <span class="hljs-string">&quot;show_wapi_settings&quot;</span>)&#x27;<br>        <span class="hljs-params">condition:</span> and<br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; TOTOLINK Installer - Exposure&lt;/p&gt;
-&lt;p&gt;&lt;s</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Weblogic Remote Command Execution (RCE) Vulnerability</title>
-    <link href="http://example.com/2025/06/19/github_1591674901/"/>
-    <id>http://example.com/2025/06/19/github_1591674901/</id>
-    <published>2025-06-19T14:46:25.661Z</published>
-    <updated>2025-06-19T14:46:25.657Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Weblogic Remote Command Execution (RCE) Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2020-14644</li></ul><p><strong>漏洞类型：</strong> 反序列化</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Weblogic版本12.2.1.3.0、12.2.1.4.0和14.1.1.0.0由于对序列化对象的处理不当，存在远程代码执行（RCE）漏洞。此模板利用CVE-2020-14644实现RCE。</p><p><strong>产品厂商：</strong> Oracle</p><p><strong>产品名称：</strong> Weblogic</p><p><strong>影响版本：</strong> 12.2.1.3.0, 12.2.1.4.0, 14.1.1.0.0</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12428">https://github.com/projectdiscovery/nuclei-templates/issues/12428</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Is-there-an-existing-template-for-this"><a href="#Is-there-an-existing-template-for-this" class="headerlink" title="Is there an existing template for this?"></a>Is there an existing template for this?</h4><ul><li><input checked="" disabled="" type="checkbox"> I have searched the existing templates.</li></ul><h4 id="Template-requests"><a href="#Template-requests" class="headerlink" title="Template requests"></a>Template requests</h4><ul><li>…</li></ul><p>id: CVE-2020-14644</p><p>info:<br>  name: Weblogic Remote Command Execution (RCE) Vulnerability<br>  author: MuhammadWaseem<br>  severity: critical<br>  description: |<br>    Weblogic versions 12.2.1.3.0, 12.2.1.4.0, and 14.1.1.0.0 are vulnerable<br>    to remote code execution (RCE) due to improper handling of serialized<br>    objects. This template exploits CVE-2020-14644 to achieve RCE.<br>  tags: weblogic,rce,cve2020,java</p><p>http:</p><ul><li><table><thead><tr><th>raw:</th></tr></thead></table><pre><code class="hljs">POST /wls-wsat/CoordinatorPortType HTTP/1.1Host: &#123;&#123;Hostname&#125;&#125;Content-Type: text/xmlConnection: close&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;  &lt;soapenv:Header&gt;    &lt;wsa:Action&gt;&quot;http://schemas.xmlsoap.org/ws/2004/09/transfer/Create&quot;&lt;/wsa:Action&gt;  &lt;/soapenv:Header&gt;  &lt;soapenv:Body&gt;    &lt;test&gt;Exploit Payload&lt;/test&gt;  &lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</code></pre>matchers-condition: and<br>matchers:<ul><li>type: status<br>status:<ul><li>500</li></ul></li><li>type: word<br>part: body<br>words:<ul><li>“weblogic.wsee.jaxws.WsLoggingInterceptor”</li></ul></li></ul></li></ul><h4 id="Anything-else"><a href="#Anything-else" class="headerlink" title="Anything else?"></a>Anything else?</h4><p>id: CVE-2020-14644</p><p>info:<br>  name: Weblogic Remote Command Execution (RCE) Vulnerability<br>  author: MuhammadWaseem<br>  severity: critical<br>  description: |<br>    Weblogic versions 12.2.1.3.0, 12.2.1.4.0, and 14.1.1.0.0 are vulnerable<br>    to remote code execution (RCE) due to improper handling of serialized<br>    objects. This template exploits CVE-2020-14644 to achieve RCE.<br>  tags: weblogic,rce,cve2020,java</p><p>http:</p><ul><li><table><thead><tr><th>raw:</th></tr></thead></table><pre><code class="hljs">POST /wls-wsat/CoordinatorPortType HTTP/1.1Host: &#123;&#123;Hostname&#125;&#125;Content-Type: text/xmlConnection: close&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;  &lt;soapenv:Header&gt;    &lt;wsa:Action&gt;&quot;http://schemas.xmlsoap.org/ws/2004/09/transfer/Create&quot;&lt;/wsa:Action&gt;  &lt;/soapenv:Header&gt;  &lt;soapenv:Body&gt;    &lt;test&gt;Exploit Payload&lt;/test&gt;  &lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</code></pre>matchers-condition: and<br>matchers:<ul><li>type: status<br>status:<ul><li>500</li></ul></li><li>type: word<br>part: body<br>words:<ul><li>“weblogic.wsee.jaxws.WsLoggingInterceptor”</li></ul></li></ul></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Weblogic Remote Command Execution (RCE)</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>TOTOLINK Installer - Exposure</title>
-    <link href="http://example.com/2025/06/19/github_3616251881/"/>
-    <id>http://example.com/2025/06/19/github_3616251881/</id>
-    <published>2025-06-19T14:45:54.886Z</published>
-    <updated>2025-06-19T14:45:54.880Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> TOTOLINK Installer - Exposure</p><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 检测到TOTOLINK路由器设置页面在&#x2F;wizardset.htm和&#x2F;easy_setup.htm的存在，可能导致未授权访问。</p><p><strong>产品厂商：</strong> TOTOLINK</p><p><strong>产品名称：</strong> TOTOLINK router</p><p><strong>搜索语法：</strong> title:”TOTOLINK”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/2733090686294afa8408954820ba9e606cb393c7/http%2Fmisconfiguration%2Finstaller%2Ftotolink-installer.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/2733090686294afa8408954820ba9e606cb393c7/http%2Fmisconfiguration%2Finstaller%2Ftotolink-installer.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> totolink-installer<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> TOTOLINK Installer <span class="hljs-operator">-</span> Exposure <br>  <span class="hljs-params">author:</span> ritikchaddha<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> |<br>    Detects the presence of TOTOLINK router setup pages at <span class="hljs-symbol">/wizardset.htm</span> and <span class="hljs-symbol">/easy_setup.htm.</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">product:</span> TOTOLINK<br>    <span class="hljs-params">shodan-query:</span> title:<span class="hljs-string">&quot;TOTOLINK&quot;</span><br>    <span class="hljs-params">fofa-query:</span> title<span class="hljs-operator">=</span><span class="hljs-string">&quot;TOTOLINK&quot;</span><br>  <span class="hljs-params">tags:</span> totolink,router,setup,exposure,installer<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/wizardset.htm&quot;</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/easy_setup.htm&quot;</span><br><br>    <span class="hljs-params">stop-at-first-match:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> &#x27;status_code<span class="hljs-operator">==</span><span class="hljs-number">200</span>&#x27;<br>          <span class="hljs-operator">-</span> &#x27;contains(tolower(body), <span class="hljs-string">&quot;totolink&quot;</span>)&#x27;<br>          <span class="hljs-operator">-</span> &#x27;contains_any(body, <span class="hljs-string">&quot;SRC=<span class="hljs-char escape_">\&quot;</span>easy_setup.htm&quot;</span>, <span class="hljs-string">&quot;value=<span class="hljs-char escape_">\&quot;</span>Advanced Setup&quot;</span>, <span class="hljs-string">&quot;show_wapi_settings&quot;</span>)&#x27;<br>        <span class="hljs-params">condition:</span> and<br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; TOTOLINK Installer - Exposure&lt;/p&gt;
-&lt;p&gt;&lt;s</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
     
   </entry>
   
