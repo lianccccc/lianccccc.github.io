@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-21T17:30:18.714Z</updated>
+  <updated>2025-06-21T19:15:12.493Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Wowza Streaming Engine 版本泄露漏洞</title>
+    <link href="http://example.com/2025/06/21/github_3523828741/"/>
+    <id>http://example.com/2025/06/21/github_3523828741/</id>
+    <published>2025-06-21T19:15:12.494Z</published>
+    <updated>2025-06-21T19:15:12.493Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Wowza Streaming Engine 版本泄露漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-52053</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 检测到Wowza Streaming Engine通过端口1935上的&#x2F;ServerVersion使用明文HTTP泄露版本信息。如果提取的版本≤4.9.0，则该实例可能易受CVE-2024-52053的影响。</p><p><strong>产品厂商：</strong> Wowza</p><p><strong>产品名称：</strong> Wowza Streaming Engine</p><p><strong>影响版本：</strong> version &lt;&#x3D; 4.9.0</p><p><strong>搜索语法：</strong> http.title:”Wowza Streaming Engine”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/7090dd30af6b6c537e0d030b7bd241f0b629d4ee/http%2Fcves%2F2024%2FCVE-2024-52053.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/7090dd30af6b6c537e0d030b7bd241f0b629d4ee/http%2Fcves%2F2024%2FCVE-2024-52053.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> wowza-version-cve-<span class="hljs-number">202</span>4-<span class="hljs-number">52053</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Wowza Streaming Engine ≤ <span class="hljs-number">4.9</span>.<span class="hljs-number">0</span> <span class="hljs-operator">-</span> Version Disclosure &amp; CVE-<span class="hljs-number">202</span>4-<span class="hljs-number">52053</span> Detection<br>  <span class="hljs-params">author:</span> ddiax @ https:<span class="hljs-symbol">//github.com/jrgdiaz</span><br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> |<br>    Detects Wowza Streaming Engine version disclosure via <span class="hljs-symbol">/ServerVersion</span> on port <span class="hljs-number">1935</span> using plain HTTP.<br>    If the extracted version is ≤ <span class="hljs-number">4.9</span>.<span class="hljs-number">0</span>, the instance is likely vulnerable to CVE-<span class="hljs-number">202</span>4-<span class="hljs-number">52053</span>.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>www.rapid7.com<span class="hljs-operator">/</span>blog<span class="hljs-operator">/</span>post<span class="hljs-operator">/</span><span class="hljs-number">2024</span><span class="hljs-operator">/</span><span class="hljs-number">11</span><span class="hljs-operator">/</span><span class="hljs-number">20</span><span class="hljs-operator">/</span>multiple-vulnerabilities-<span class="hljs-keyword">in</span>-wowza-streaming-engine-fixed<span class="hljs-symbol">/</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>www.wowza.com<span class="hljs-operator">/</span>docs<span class="hljs-operator">/</span>wowza-streaming-engine-<span class="hljs-number">4</span><span class="hljs-operator">-</span><span class="hljs-number">9</span><span class="hljs-operator">-</span><span class="hljs-number">1</span><span class="hljs-operator">-</span>release-notes<span class="hljs-comment">#detailed-list-of-changes-in-wowza-streaming-engine-4-9-1</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//www.wiz.io/vulnerability-database/cve/cve-2024-52053</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">shodan-query:</span> http.title:<span class="hljs-string">&quot;Wowza Streaming Engine&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2024,wowza,version-disclosure,xss<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> http:<span class="hljs-operator">//</span>&#123;&#123;Hostname&#125;&#125;:<span class="hljs-number">1935</span><span class="hljs-symbol">/ServerVersion</span><br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">name:</span> version<br>        <span class="hljs-params">group:</span> <span class="hljs-number">1</span><br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Wowza Streaming Engine.*?([0-9]+<span class="hljs-char escape_">\\</span>.[0-9]+<span class="hljs-char escape_">\\</span>.[0-9]+)&quot;</span><br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">name:</span> vulnerable<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Wowza Streaming Engine.*?(4<span class="hljs-char escape_">\\</span>.[0-9]<span class="hljs-char escape_">\\</span>.[0-9]+|3<span class="hljs-char escape_">\\</span>.[0-9]<span class="hljs-char escape_">\\</span>.[0-9]+)&quot;</span><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Wowza Streaming Engine 版本泄露漏洞&lt;/p&gt;
+&lt;p&gt;&lt;s</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>CVE-2025-6386 Timing attacks to guess password in lollms_authenticationpy</title>
@@ -522,33 +549,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sqli Tips：一条很好的sql注入探测语句</title>
-    <link href="http://example.com/2025/06/21/weixin_2148318600/"/>
-    <id>http://example.com/2025/06/21/weixin_2148318600/</id>
-    <published>2025-06-21T12:13:40.369Z</published>
-    <updated>2025-06-21T12:13:40.366Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> Z1Sec</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/XP1ER_5zW6ueM8BewABTBA">https://mp.weixin.qq.com/s/XP1ER_5zW6ueM8BewABTBA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; Z1Sec&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/XP1ER_5zW6ueM8BewABTBA&quot;&gt;https://mp.weixin.qq.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="Z1Sec" scheme="http://example.com/tags/Z1Sec/"/>
     
   </entry>
   
