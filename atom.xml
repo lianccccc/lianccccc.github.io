@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-21T17:15:16.264Z</updated>
+  <updated>2025-06-21T17:30:18.714Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CVE-2025-6386 Timing attacks to guess password in lollms_authenticationpy</title>
+    <link href="http://example.com/2025/06/21/other_2708537184/"/>
+    <id>http://example.com/2025/06/21/other_2708537184/</id>
+    <published>2025-06-21T17:30:18.715Z</published>
+    <updated>2025-06-21T17:30:18.714Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://huntr.com/bounties/6da05485-d219-4f18-9ffc-991053524b67">https://huntr.com/bounties/6da05485-d219-4f18-9ffc-991053524b67</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://huntr.com/bounties/6da05485-d219-4f18-9ffc-991053524b67&quot;&gt;https://huntr.com/bounties/6da05485-d219-4</summary>
+      
+    
+    
+    
+    <category term="其他" scheme="http://example.com/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+    <category term="huntr.com" scheme="http://example.com/tags/huntr-com/"/>
+    
+  </entry>
   
   <entry>
     <title>Fastjson 反序列化远程代码执行漏洞</title>
@@ -515,33 +539,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; Z1Sec&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/XP1ER_5zW6ueM8BewABTBA&quot;&gt;https://mp.weixin.qq.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="Z1Sec" scheme="http://example.com/tags/Z1Sec/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Seekr：一款开源的OSINT（开源情报）自动化收集工具</title>
-    <link href="http://example.com/2025/06/21/weixin_2415888430/"/>
-    <id>http://example.com/2025/06/21/weixin_2415888430/</id>
-    <published>2025-06-21T12:13:40.039Z</published>
-    <updated>2025-06-21T12:13:40.034Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> Z1Sec</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/hEk-SWX-CFcbKrL2jE4HTQ">https://mp.weixin.qq.com/s/hEk-SWX-CFcbKrL2jE4HTQ</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; Z1Sec&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/hEk-SWX-CFcbKrL2jE4HTQ&quot;&gt;https://mp.weixin.qq.</summary>
       
     
     
