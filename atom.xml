@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-21T20:45:10.787Z</updated>
+  <updated>2025-06-21T22:00:17.257Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Apache HTTP Server mod_proxy_uwsgi 信息泄露与远程代码执行漏洞</title>
+    <link href="http://example.com/2025/06/21/github_2105330856/"/>
+    <id>http://example.com/2025/06/21/github_2105330856/</id>
+    <published>2025-06-21T22:00:17.250Z</published>
+    <updated>2025-06-21T22:00:17.257Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache HTTP Server mod_proxy_uwsgi 信息泄露与远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2020-11984</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Apache HTTP Server 2.4.32至2.4.44版本中的mod_proxy_uwsgi模块存在信息泄露及可能的远程代码执行漏洞。远程攻击者可通过发送特制请求访问敏感信息并可能执行任意代码。</p><p><strong>产品厂商：</strong> Apache</p><p><strong>产品名称：</strong> Apache HTTP Server</p><p><strong>影响版本：</strong> 2.4.32 &lt;&#x3D; version &lt;&#x3D; 2.4.44</p><p><strong>搜索语法：</strong> cpe:”cpe:2.3:a:apache:http_server”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12266">https://github.com/projectdiscovery/nuclei-templates/issues/12266</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Apache HTTP Server 2.4.32 to 2.4.44 contains an info disclosure and possible remote code execution caused by a vulnerability in mod_proxy_uwsgi, letting remote attackers access sensitive information and potentially execute arbitrary code, exploit requires sending crafted requests.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="http://packetstormsecurity.com/files/159009/Apache2-mod_proxy_uwsgi-Incorrect-Request-Handling.html">http://packetstormsecurity.com/files/159009/Apache2-mod_proxy_uwsgi-Incorrect-Request-Handling.html</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-cpe-cpe-2-3-a-apache-http-server"><a href="#Shodan-Query-cpe-cpe-2-3-a-apache-http-server" class="headerlink" title="Shodan Query: cpe:&quot;cpe:2.3:a:apache:http_server&quot;"></a>Shodan Query: <code>cpe:&quot;cpe:2.3:a:apache:http_server&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Apache HTTP Server mod_proxy_uwsgi 信息泄露</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>Github Poc</title>
@@ -522,32 +548,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PX4 Military UAV Autopilot Stack Buffer Overflow Vulnerability</title>
-    <link href="http://example.com/2025/06/21/github_4183613685/"/>
-    <id>http://example.com/2025/06/21/github_4183613685/</id>
-    <published>2025-06-21T12:15:26.961Z</published>
-    <updated>2025-06-21T12:15:26.956Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> PX4 Military UAV Autopilot Stack Buffer Overflow Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-5640</li></ul><p><strong>漏洞类型：</strong> 缓冲区溢出</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> PX4 Military UAV Autopilot版本&lt;&#x3D;1.12.3中存在一个基于栈的缓冲区溢出漏洞。该漏洞在处理类型为<code>TRAJECTORY_REPRESENTATION_WAYPOINTS</code>的畸形MAVLink消息时触发。攻击者通过访问MAVLink通信通道发送特制数据包可能导致自动驾驶仪崩溃，从而可能中断军事无人机操作。此漏洞可用于拒绝服务攻击。</p><p><strong>产品厂商：</strong> PX4</p><p><strong>产品名称：</strong> PX4 Military UAV Autopilot</p><p><strong>影响版本：</strong> &lt;&#x3D;1.12.3</p><p><strong>来源：</strong> <a href="https://github.com/mbanyamer/PX4-Military-UAV-Autopilot-1.12.3-Stack-Buffer-Overflow-Exploit-CVE-2025-5640-">https://github.com/mbanyamer/PX4-Military-UAV-Autopilot-1.12.3-Stack-Buffer-Overflow-Exploit-CVE-2025-5640-</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>LICENSE</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="PX4-Military-UAV-Autopilot"><a href="#PX4-Military-UAV-Autopilot" class="headerlink" title="PX4 Military UAV Autopilot &lt;&#x3D;1.12.3 Stack Buffer Overflow Exploit (CVE-2025-5640)"></a>PX4 Military UAV Autopilot &lt;&#x3D;1.12.3 Stack Buffer Overflow Exploit (CVE-2025-5640)</h2><p><strong>Author:</strong> Mohammed Idrees Banyamer (@banyamer_security)<br><strong>GitHub:</strong> <a href="https://github.com/mbanyamer">https://github.com/mbanyamer</a><br><strong>Date:</strong> 2025-06-21<br><strong>Tested on:</strong> Ubuntu 20.04 LTS + PX4 SITL (jMAVSim)<br><strong>CVE:</strong> CVE-2025-5640<br><strong>Type:</strong> Denial of Service (DoS) via Stack Buffer Overflow<br><strong>Platform:</strong> Cross-platform (Military UAVs &#x2F; PX4 SITL &#x2F; Linux-based autopilot ground station)<br><strong>Author Country:</strong> Jordan</p><hr><h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>A stack-based buffer overflow vulnerability exists in PX4 Military UAV Autopilot versions &lt;&#x3D; 1.12.3.<br>The vulnerability is triggered when handling a malformed MAVLink message of type <code>TRAJECTORY_REPRESENTATION_WAYPOINTS</code>.<br>An attacker with access to the MAVLink communication channel can send a crafted packet to crash the autopilot, potentially disrupting military UAV operations.</p><p>This repository contains a proof-of-concept (PoC) exploit that sends a malicious MAVLink UDP packet to trigger the vulnerability and cause a denial of service (crash) in the PX4 autopilot.</p><hr><h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage:"></a>Usage:</h3><pre><code class="hljs">python3 px4_military_exploit.py [OPTIONS]</code></pre><h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples:"></a>Examples:</h3><pre><code class="hljs"># Run DoS attack on default PX4 SITLpython3 px4_military_exploit.py --mode dos# Test connectivity to a real dronepython3 px4_military_exploit.py --mode check --ip 192.168.10.10 --port 14550</code></pre><p>Options:<br>    –ip        Target IP address (default: 127.0.0.1)<br>    –port      Target UDP port (default: 14540)<br>    –mode      Mode of operation: dos (default), check<br>    –timeout   Timeout in seconds for heartbeat (default: 5)<br>    –verbose   Enable verbose output</p><h3 id="Disclaimer"><a href="#Disclaimer" class="headerlink" title="Disclaimer:"></a>Disclaimer:</h3><pre><code class="hljs">This PoC exploit is provided for educational and research purposes only.Unauthorized use against systems without permission is illegal and unethical.Use responsibly and ensure you have explicit authorization before testing.</code></pre><p>“””</p><h3 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h3><ul><li>Python 3.x  </li><li><a href="https://github.com/ArduPilot/pymavlink">pymavlink</a> library</li></ul><p>Install pymavlink via pip:</p><pre><code class="language-bash">pip install pymavlink</code></pre>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; PX4 Military UAV Autopilot Stack Buffer</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="缓冲区溢出" scheme="http://example.com/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/"/>
     
   </entry>
   
