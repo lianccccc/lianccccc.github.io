@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-22T20:15:14.451Z</updated>
+  <updated>2025-06-22T21:45:12.873Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Drag and Drop Multiple File Upload for Contact Form 7 文件上传漏洞</title>
+    <link href="http://example.com/2025/06/22/github_3759803007/"/>
+    <id>http://example.com/2025/06/22/github_3759803007/</id>
+    <published>2025-06-22T21:45:12.875Z</published>
+    <updated>2025-06-22T21:45:12.873Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Drag and Drop Multiple File Upload for Contact Form 7 文件上传漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-3515</li></ul><p><strong>漏洞类型：</strong> 文件上传</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Drag and Drop Multiple File Upload for Contact Form 7 版本1.3.8.9及之前版本存在文件上传漏洞，允许通过上传.phar文件导致远程代码执行，特别是在Apache+mod_php环境下。该漏洞的CVSS v3.1评分为8.1（高危）。</p><p><strong>产品名称：</strong> Drag and Drop Multiple File Upload for Contact Form 7</p><p><strong>影响版本：</strong> ≤1.3.8.9</p><p><strong>来源：</strong> <a href="https://github.com/Professor6T9/CVE-2025-3515">https://github.com/Professor6T9/CVE-2025-3515</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>checker.py</li><li>exploit.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-3515"><a href="#CVE-2025-3515" class="headerlink" title="CVE-2025-3515"></a>CVE-2025-3515</h2><p>CVE‑2025‑3515 — Drag and Drop Multiple File Upload for Contact Form 7</p><ul><li><strong>Description:</strong> Arbitrary file uploads via <code>drag‑and‑drop‑multiple‑file‑upload-contact‑form‑7</code> ≤1.3.8.9 allow upload of <code>.phar</code> files, leading to remote code execution in Apache+mod_php :contentReference[oaicite:29]{index&#x3D;29}.  </li><li><strong>CVSS (v3.1):</strong> 8.1 (High) :contentReference[oaicite:30]{index&#x3D;30}  </li><li><strong>Patch:</strong> Updated to ≥1.3.9.0 :contentReference[oaicite:31]{index&#x3D;31}  </li><li><strong>References:</strong><ul><li>NVD: CVE‑2025‑3515 :contentReference[oaicite:32]{index&#x3D;32}  </li><li>Wiz, feedly, GitHub advisory, Wordfence, WordPress Trac links above</li></ul></li></ul><p>The tool coded in python version 3 use checker for detect the existing plugin then use the exploit<br>Telegram: <a href="https://t.me/Professor6T9">https://t.me/Professor6T9</a><br>Team Telegram: <a href="https://t.me/TeamAnonForce6T9">https://t.me/TeamAnonForce6T9</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Drag and Drop Multiple File Upload for </summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="文件上传" scheme="http://example.com/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>TP-Link TL-WR940N/TL-WR841N 命令注入漏洞</title>
@@ -519,33 +545,6 @@
     
     
     <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux 权限提升漏洞 (OtterRoot)</title>
-    <link href="http://example.com/2025/06/21/github_313443657/"/>
-    <id>http://example.com/2025/06/21/github_313443657/</id>
-    <published>2025-06-21T20:30:15.370Z</published>
-    <updated>2025-06-21T20:30:15.370Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Linux 权限提升漏洞 (OtterRoot)</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-26809</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Linux系统中发现一个权限提升漏洞（CVE-2024-26809），被称为OtterRoot。该漏洞允许攻击者在受影响的系统上提升权限。漏洞利用代码为一个单一的exploit.c文件，具有超便携性。</p><p><strong>产品名称：</strong> Linux</p><p><strong>来源：</strong> <a href="https://github.com/rapid7/metasploit-framework/issues/19863">https://github.com/rapid7/metasploit-framework/issues/19863</a></p><p><strong>类型：</strong> rapid7&#x2F;metasploit-framework:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><!--  To make it easier for us to help you, please include as much useful information as possible.  Useful Links:  - Wiki: https://docs.metasploit.com/  Before opening a new issue, please search existing issues https://github.com/rapid7/metasploit-framework/issues--><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Offset-less Linux LPE (CVE-2024-26809)</p><h4 id="Basic-example"><a href="#Basic-example" class="headerlink" title="Basic example"></a>Basic example</h4><p><img src="https://github.com/user-attachments/assets/f77f9608-d343-4039-80a8-51fb1bd64716" alt="Image"></p><ul><li><a href="https://osec.io/blog/2024-11-25-netfilter-universal-root-1-day/">https://osec.io/blog/2024-11-25-netfilter-universal-root-1-day/</a></li><li><a href="https://github.com/otter-sec/OtterRoot/tree/master">https://github.com/otter-sec/OtterRoot/tree/master</a></li></ul><h4 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h4><p>Self-contained (a single exploit.c file) ultra-portable Linux exploit.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Linux 权限提升漏洞 (OtterRoot)&lt;/p&gt;
-&lt;p&gt;&lt;strong</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
-    
-    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
     
   </entry>
   
