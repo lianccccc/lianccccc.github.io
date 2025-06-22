@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-22T09:45:31.787Z</updated>
+  <updated>2025-06-22T10:00:16.397Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Apache Dubbo 反序列化漏洞</title>
+    <link href="http://example.com/2025/06/22/github_3489987082/"/>
+    <id>http://example.com/2025/06/22/github_3489987082/</id>
+    <published>2025-06-22T10:00:16.398Z</published>
+    <updated>2025-06-22T10:00:16.397Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache Dubbo 反序列化漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2019-17564</li></ul><p><strong>漏洞类型：</strong> 反序列化</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Apache Dubbo 2.7.0至2.7.4版本、2.6.0至2.6.7版本以及所有2.5.x版本中存在反序列化漏洞，由于在HTTP POST请求中接受不受信任的Java对象，攻击者可以通过发送恶意的Java对象完全控制Provider实例，前提是HTTP被启用。</p><p><strong>产品厂商：</strong> Apache</p><p><strong>产品名称：</strong> Dubbo</p><p><strong>影响版本：</strong> 2.5.x, 2.6.0 &lt;&#x3D; version &lt;&#x3D; 2.6.7, 2.7.0 &lt;&#x3D; version &lt;&#x3D; 2.7.4</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12444">https://github.com/projectdiscovery/nuclei-templates/issues/12444</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Apache Dubbo versions 2.7.0 to 2.7.4, 2.6.0 to 2.6.7, and all 2.5.x versions contain an insecure deserialization caused by accepting untrusted Java objects in HTTP POST requests, letting attackers fully compromise a Provider instance if HTTP is enabled, exploit requires attacker to send malicious Java object.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://github.com/fairyming/CVE-2019-17564">https://github.com/fairyming/CVE-2019-17564</a></li><li><a href="https://github.com/Dor-Tumarkin/CVE-2019-17564-FastJson-Gadget">https://github.com/Dor-Tumarkin/CVE-2019-17564-FastJson-Gadget</a></li><li><a href="https://github.com/Exploit-3389/CVE-2019-17564">https://github.com/Exploit-3389/CVE-2019-17564</a></li><li><a href="https://github.com/Hu3sky/CVE-2019-17564">https://github.com/Hu3sky/CVE-2019-17564</a></li><li><a href="https://github.com/Jaky5155/CVE-2019-17564">https://github.com/Jaky5155/CVE-2019-17564</a></li><li><a href="https://github.com/r00t4dm/CVE-2019-17564">https://github.com/r00t4dm/CVE-2019-17564</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-NA"><a href="#Shodan-Query-NA" class="headerlink" title="Shodan Query: NA"></a>Shodan Query: <code>NA</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Apache Dubbo 反序列化漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
+    
+  </entry>
   
   <entry>
     <title>Anyscale Ray 远程代码执行漏洞</title>
@@ -508,33 +535,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/CN5yWaIglU4UmSio_wvZ0A&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2025网安行业优质播客精选集⑦</title>
-    <link href="http://example.com/2025/06/21/weixin_1593777628/"/>
-    <id>http://example.com/2025/06/21/weixin_1593777628/</id>
-    <published>2025-06-21T12:18:08.702Z</published>
-    <updated>2025-06-21T12:18:08.696Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/v-1PplxirewVSHbPs1c5Iw">https://mp.weixin.qq.com/s/v-1PplxirewVSHbPs1c5Iw</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/v-1PplxirewVSHbPs1c5Iw&quot;&gt;https://mp.weixin.q</summary>
       
     
     
