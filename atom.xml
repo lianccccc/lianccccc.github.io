@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-22T16:45:15.846Z</updated>
+  <updated>2025-06-22T17:15:13.892Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Langflow 远程代码执行漏洞</title>
+    <link href="http://example.com/2025/06/22/github_3886107624/"/>
+    <id>http://example.com/2025/06/22/github_3886107624/</id>
+    <published>2025-06-22T17:15:13.894Z</published>
+    <updated>2025-06-22T17:15:13.892Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Langflow 远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> 2025-3248</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Langflow的<code>/api/v1/validate/code</code>端点不安全地执行用户提供的代码，使用Python的<code>exec()</code>函数，无需认证或沙箱保护。这使得远程攻击者能够执行任意的Python代码。</p><p><strong>产品厂商：</strong> Langflow</p><p><strong>产品名称：</strong> Langflow</p><p><strong>影响版本：</strong> &lt; 1.3.0</p><p><strong>来源：</strong> <a href="https://github.com/issamjr/CVE-2025-3248-Scanner">https://github.com/issamjr/CVE-2025-3248-Scanner</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>requirements.txt</li><li>scanner.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-3248-Langflow-RCE-Scanner"><a href="#CVE-2025-3248-Langflow-RCE-Scanner" class="headerlink" title="CVE-2025-3248 Langflow RCE Scanner"></a>CVE-2025-3248 Langflow RCE Scanner</h2><h3 id="🔍-Description"><a href="#🔍-Description" class="headerlink" title="🔍 Description"></a>🔍 Description</h3><p>A powerful, unauthenticated RCE scanner for CVE-2025-3248 in vulnerable Langflow instances.</p><ul><li><strong>CVE</strong>: 2025-3248  </li><li><strong>Type</strong>: Remote Code Execution (Unauthenticated)  </li><li><strong>Affected</strong>: Langflow &lt; 1.3.0  </li><li><strong>Author</strong>: Issam Junior (<a href="https://t.me/issamiso">@issamiso</a>)</li></ul><hr><h3 id="💥-Vulnerability-Overview"><a href="#💥-Vulnerability-Overview" class="headerlink" title="💥 Vulnerability Overview"></a>💥 Vulnerability Overview</h3><p>Langflow’s <code>/api/v1/validate/code</code> endpoint insecurely executes user-supplied code using Python <code>exec()</code>, without authentication or sandboxing. This enables remote attackers to execute arbitrary Python code.</p><hr><h3 id="✅-Protection"><a href="#✅-Protection" class="headerlink" title="✅ Protection"></a>✅ Protection</h3><ul><li>Upgrade to Langflow <strong>1.3.0 or newer</strong></li><li>Block access to <code>/api/v1/validate/code</code></li><li>Use proper code sandboxing (e.g., Pyodide, Docker, restricted ASTs)</li></ul><hr><h3 id="⚙️-Usage"><a href="#⚙️-Usage" class="headerlink" title="⚙️ Usage"></a>⚙️ Usage</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/issamjr/CVE-2025-3248-Scanner.git<br><span class="hljs-built_in">cd</span> CVE-2025-3248-Scanner<br>pip install -r requirements.txt<br>python3 scanner.py --url http://example.com/<br>python3 scanner.py --list targets.txt<br></code></pre></td></tr></table></figure><hr><h3 id="🔐-Disclaimer"><a href="#🔐-Disclaimer" class="headerlink" title="🔐 Disclaimer"></a>🔐 Disclaimer</h3><p>This tool is for <strong>authorized security research</strong> only. Misuse is prohibited.</p><hr><h3 id="🛠️-Contact"><a href="#🛠️-Contact" class="headerlink" title="🛠️ Contact"></a>🛠️ Contact</h3><p>Developer: <strong>Issam Junior</strong><br>Telegram: <a href="https://t.me/issamiso">@issamiso</a><br>GitHub: <a href="https://github.com/issamjr">github.com&#x2F;issamjr</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Langflow 远程代码执行漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+  </entry>
   
   <entry>
     <title>Roundcube Webmail 反序列化漏洞</title>
@@ -520,30 +547,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CVE-2025-6386 Timing attacks to guess password in lollms_authenticationpy</title>
-    <link href="http://example.com/2025/06/21/other_2708537184/"/>
-    <id>http://example.com/2025/06/21/other_2708537184/</id>
-    <published>2025-06-21T17:30:18.715Z</published>
-    <updated>2025-06-21T17:30:18.714Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://huntr.com/bounties/6da05485-d219-4f18-9ffc-991053524b67">https://huntr.com/bounties/6da05485-d219-4f18-9ffc-991053524b67</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://huntr.com/bounties/6da05485-d219-4f18-9ffc-991053524b67&quot;&gt;https://huntr.com/bounties/6da05485-d219-4</summary>
-      
-    
-    
-    
-    <category term="其他" scheme="http://example.com/categories/%E5%85%B6%E4%BB%96/"/>
-    
-    
-    <category term="huntr.com" scheme="http://example.com/tags/huntr-com/"/>
     
   </entry>
   
