@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-22T07:45:14.414Z</updated>
+  <updated>2025-06-22T09:15:09.429Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Github Poc</title>
+    <link href="http://example.com/2025/06/22/github_1932287641/"/>
+    <id>http://example.com/2025/06/22/github_1932287641/</id>
+    <published>2025-06-22T09:15:09.434Z</published>
+    <updated>2025-06-22T09:15:09.429Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> </p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-30401</li></ul><p><strong>来源：</strong> <a href="https://github.com/allinsthon/CVE-2025-30401">https://github.com/allinsthon/CVE-2025-30401</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-30401"><a href="#CVE-2025-30401" class="headerlink" title="CVE-2025-30401"></a>CVE-2025-30401</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+  </entry>
   
   <entry>
     <title>Xorcom CompletePBX Authenticated Command Injection via Task Scheduler</title>
@@ -509,33 +535,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/ii7gCU56pm_t2auVXNh54Q&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>检测隐蔽信标流量，反制C2隐藏——抖动陷阱（Jitter-Trap）</title>
-    <link href="http://example.com/2025/06/21/weixin_2679762769/"/>
-    <id>http://example.com/2025/06/21/weixin_2679762769/</id>
-    <published>2025-06-21T12:18:07.760Z</published>
-    <updated>2025-06-21T12:18:07.756Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/y02-jLXhq3CfK2Bb2DXmNQ">https://mp.weixin.qq.com/s/y02-jLXhq3CfK2Bb2DXmNQ</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/y02-jLXhq3CfK2Bb2DXmNQ&quot;&gt;https://mp.weixin.q</summary>
       
     
     
