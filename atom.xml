@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-21T22:00:17.257Z</updated>
+  <updated>2025-06-21T23:49:15.826Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CVE-2025-27817 Apache Kafka Connect 任意文件读取漏洞分析与复现</title>
+    <link href="http://example.com/2025/06/21/weixin_574596012/"/>
+    <id>http://example.com/2025/06/21/weixin_574596012/</id>
+    <published>2025-06-21T23:49:15.826Z</published>
+    <updated>2025-06-21T23:49:15.826Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 自在安全</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/TsoGZk-Clll7R1ot9mTpbA">https://mp.weixin.qq.com/s/TsoGZk-Clll7R1ot9mTpbA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 自在安全&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/TsoGZk-Clll7R1ot9mTpbA&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="自在安全" scheme="http://example.com/tags/%E8%87%AA%E5%9C%A8%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>Apache HTTP Server mod_proxy_uwsgi 信息泄露与远程代码执行漏洞</title>
@@ -511,33 +538,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/voI5cC3GkV45M7SZmIX_tw&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>史上最大规模DDoS攻击：45秒内峰值达73Tbps，总流量374TB</title>
-    <link href="http://example.com/2025/06/21/weixin_133298449/"/>
-    <id>http://example.com/2025/06/21/weixin_133298449/</id>
-    <published>2025-06-21T12:18:05.109Z</published>
-    <updated>2025-06-21T12:18:05.112Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/R-tTrAlIKKJcEDB0MfZ30Q">https://mp.weixin.qq.com/s/R-tTrAlIKKJcEDB0MfZ30Q</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/R-tTrAlIKKJcEDB0MfZ30Q&quot;&gt;https://mp.weixin.q</summary>
       
     
     
