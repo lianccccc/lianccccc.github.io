@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-22T10:00:16.397Z</updated>
+  <updated>2025-06-22T13:45:11.486Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Pterodactyl panel 凭证泄露漏洞</title>
+    <link href="http://example.com/2025/06/22/github_1302419377/"/>
+    <id>http://example.com/2025/06/22/github_1302419377/</id>
+    <published>2025-06-22T13:45:11.490Z</published>
+    <updated>2025-06-22T13:45:11.486Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Pterodactyl panel 凭证泄露漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-49132</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 一个脚本，用于获取易受CVE-2025-49132漏洞影响的Pterodactyl面板的凭证。</p><p><strong>产品名称：</strong> Pterodactyl panel</p><p><strong>来源：</strong> <a href="https://github.com/Zen-kun04/CVE-2025-49132">https://github.com/Zen-kun04/CVE-2025-49132</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Pterodactyl panel 凭证泄露漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+  </entry>
   
   <entry>
     <title>Apache Dubbo 反序列化漏洞</title>
@@ -508,33 +535,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/WLW9M9f8_hsKDzff8UJjAA&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux两大漏洞可串联，无需特殊手段即可获取root权限</title>
-    <link href="http://example.com/2025/06/21/weixin_596809756/"/>
-    <id>http://example.com/2025/06/21/weixin_596809756/</id>
-    <published>2025-06-21T12:18:09.032Z</published>
-    <updated>2025-06-21T12:18:09.028Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/CN5yWaIglU4UmSio_wvZ0A">https://mp.weixin.qq.com/s/CN5yWaIglU4UmSio_wvZ0A</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/CN5yWaIglU4UmSio_wvZ0A&quot;&gt;https://mp.weixin.q</summary>
       
     
     
