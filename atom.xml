@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-23T13:16:04.815Z</updated>
+  <updated>2025-06-23T13:45:15.948Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>OpenSSH 内存和CPU耗尽拒绝服务漏洞</title>
+    <link href="http://example.com/2025/06/23/github_3821769427/"/>
+    <id>http://example.com/2025/06/23/github_3821769427/</id>
+    <published>2025-06-23T13:45:15.950Z</published>
+    <updated>2025-06-23T13:45:15.948Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> OpenSSH 内存和CPU耗尽拒绝服务漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-26466</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> OpenSSH（版本9.5p1至9.9p1）存在一个内存和CPU耗尽的拒绝服务漏洞，攻击者可以通过发送重复的SSH2_MSG_PING数据包（类型192）来利用此漏洞。这种情况发生在认证之前，可能导致服务器由于队列&#x2F;缓冲区处理不当而锁定。</p><p><strong>产品厂商：</strong> OpenSSH</p><p><strong>产品名称：</strong> OpenSSH</p><p><strong>影响版本：</strong> 9.5p1 &lt;&#x3D; version &lt;&#x3D; 9.9p1</p><p><strong>来源：</strong> <a href="https://github.com/mrowkoob/CVE-2025-26466-msf">https://github.com/mrowkoob/CVE-2025-26466-msf</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>ping_dos.rb</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-26466-Metasploit-module"><a href="#CVE-2025-26466-Metasploit-module" class="headerlink" title="CVE-2025-26466 (Metasploit module)"></a>CVE-2025-26466 (Metasploit module)</h2><p>OpenSSH (versions 9.5p1 to 9.9p1) is vulnerable to a memory and CPU exhaustion DoS Attack by sending repeated SSH2_MSG_PING packets (type 192).<br>This occurs before authentication, and can result in server lockup due to poor queue&#x2F;buffer handling.</p><h3 id="More-information-about-that-CVE"><a href="#More-information-about-that-CVE" class="headerlink" title="More information about that CVE:"></a>More information about that CVE:</h3><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">https</span>://nvd.nist.gov/vuln/detail/CVE-<span class="hljs-number">2025</span>-<span class="hljs-number">26466</span><br></code></pre></td></tr></table></figure><h2 id="How-do-I-run-this-script"><a href="#How-do-I-run-this-script" class="headerlink" title="How do I run this script?"></a>How do I run this script?</h2><p>Copy .rb file into your ‘modules’ folder, f.e.</p><p><code>/usr/share/metasploit-framework/modules/auxiliary/dos/ssh</code></p><p>Run Metasploit console and search for the module.</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">msfconsole</span><br><span class="hljs-attribute">search ping_dos</span><br></code></pre></td></tr></table></figure><h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ul><li><a href="https://blog.qualys.com/vulnerabilities-threat-research/2025/02/18/qualys-tru-discovers-two-vulnerabilities-in-openssh-cve-2025-26465-cve-2025-26466">https://blog.qualys.com/vulnerabilities-threat-research/2025/02/18/qualys-tru-discovers-two-vulnerabilities-in-openssh-cve-2025-26465-cve-2025-26466</a></li></ul><h3 id="Disclaimer"><a href="#Disclaimer" class="headerlink" title="Disclaimer"></a>Disclaimer</h3><p>I am sharing this just for educational purposes, you shall not use it on infrastructure you are not authorized to.</p><h3 id="Issues"><a href="#Issues" class="headerlink" title="Issues"></a>Issues</h3><p>That’s my first project shared on GitHub. Feel free to leave comments about it, so I can learn and make it better.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; OpenSSH 内存和CPU耗尽拒绝服务漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+  </entry>
   
   <entry>
     <title>Xorcom CompletePBX Authenticated Command Injection via Task Scheduler</title>
@@ -518,33 +545,6 @@
     <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
     
     <category term="Threekiii/Awesome-POC:github commit" scheme="http://example.com/tags/Threekiii-Awesome-POC-github-commit/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Pterodactyl Panel 漏洞检查与利用工具</title>
-    <link href="http://example.com/2025/06/23/github_1203158234/"/>
-    <id>http://example.com/2025/06/23/github_1203158234/</id>
-    <published>2025-06-23T01:15:11.585Z</published>
-    <updated>2025-06-23T01:15:11.582Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Pterodactyl Panel 漏洞检查与利用工具</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-49132</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 一个Python脚本，用于自动化发现和利用配置不当的Pterodactyl面板中的漏洞。包括发现敏感配置文件的暴露、提取MySQL数据库的凭证、自动创建具有完全访问权限的管理员用户以及检测并跳过受Cloudflare保护的面板。</p><p><strong>产品厂商：</strong> Pterodactyl</p><p><strong>产品名称：</strong> Pterodactyl Panel</p><p><strong>来源：</strong> <a href="https://github.com/nfoltc/CVE-2025-49132">https://github.com/nfoltc/CVE-2025-49132</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>cve.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h1 align="center">🛡️ Pterodactyl Panel Vulnerability Checker & Exploit Tool</h1><p align="center">  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=24&pause=1500&color=00FF94&center=true&width=600&lines=Pentest+Tool+for+Pterodactyl;OSINT+%7C+Exploit+%7C+Automation" alt="Typing SVG" /></p><p align="center">  <a href="https://github.com/nfoltc/pterodactyl-exploit/stargazers">    <img alt="GitHub stars" src="https://img.shields.io/github/stars/nfoltc/CVE-2025-49132?style=for-the-badge" />  </a>  <a href="https://github.com/nfoltc/pterodactyl-exploit/issues">    <img alt="GitHub issues" src="https://img.shields.io/github/issues/nfoltc/CVE-2025-49132?style=for-the-badge" />  </a>  <a href="https://github.com/nfoltc/pterodactyl-exploit/network/members">    <img alt="GitHub forks" src="https://img.shields.io/github/forks/nfoltc/CVE-2025-49132?style=for-the-badge" />  </a>  <a href="https://github.com/nfoltc/pterodactyl-exploit/blob/main/LICENSE">    <img alt="GitHub license" src="https://img.shields.io/github/license/nfoltc/CVE-2025-49132?style=for-the-badge" />  </a></p><hr><h3 id="✨-Sobre"><a href="#✨-Sobre" class="headerlink" title="✨ Sobre"></a>✨ Sobre</h3><p>Um <strong>script Python</strong> que automatiza a descoberta e exploração de vulnerabilidades em painéis <strong>Pterodactyl</strong> mal configurados.</p><ul><li>🔍 Descobre exposição da configuração sensível (arquivo <code>locale.json</code>).  </li><li>🔑 Extrai credenciais do banco MySQL.  </li><li>👑 Cria usuário admin automaticamente com acesso total.  </li><li>☁️ Detecta e pula painéis protegidos por Cloudflare.</li></ul><hr><h3 id="⚙️-Tecnologias-e-Dependencias"><a href="#⚙️-Tecnologias-e-Dependencias" class="headerlink" title="⚙️ Tecnologias e Dependências"></a>⚙️ Tecnologias e Dependências</h3><p align="center">  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />  <img src="https://img.shields.io/badge/Requests-5282B8?style=for-the-badge&logo=python-requests&logoColor=white" />  <img src="https://img.shields.io/badge/Colorama-FE7E02?style=for-the-badge&logo=python&logoColor=white" />  <img src="https://img.shields.io/badge/PyMySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />  <img src="https://img.shields.io/badge/Bcrypt-002D72?style=for-the-badge&logo=python&logoColor=white" /></p><hr><h3 id="🚀-Como-usar"><a href="#🚀-Como-usar" class="headerlink" title="🚀 Como usar"></a>🚀 Como usar</h3><ol><li><p>Crie um arquivo <code>list.txt</code> com URLs dos painéis alvo (um por linha).</p></li><li><p>Execute:</p></li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 main.py list.txt<br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Pterodactyl Panel 漏洞检查与利用工具&lt;/p&gt;
-&lt;p&gt;&lt;str</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
   </entry>
   
