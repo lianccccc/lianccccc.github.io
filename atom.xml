@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-23T15:45:12.861Z</updated>
+  <updated>2025-06-23T16:00:06.777Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>On a client with a non-admin user, a script can be integrated into a report The reports could</title>
+    <link href="http://example.com/2025/06/23/github_1290012002/"/>
+    <id>http://example.com/2025/06/23/github_1290012002/</id>
+    <published>2025-06-23T16:00:06.782Z</published>
+    <updated>2025-06-23T16:00:06.777Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-hfr2-mw2v-5fh3">https://github.com/advisories/GHSA-hfr2-mw2v-5fh3</a></p><p><strong>CVSS 评分：</strong> 10.0</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6512">https://nvd.nist.gov/vuln/detail/CVE-2025-6512</a></p></li><li><p><a href="https://www.bizerba.com/downloads/global/information-security/2025/bizerba-sa-2025-0004.pdf">https://www.bizerba.com/downloads/global/information-security/2025/bizerba-sa-2025-0004.pdf</a></p></li><li><p><a href="https://github.com/advisories/GHSA-hfr2-mw2v-5fh3">https://github.com/advisories/GHSA-hfr2-mw2v-5fh3</a></p></li></ul><p><strong>描述：</strong></p><p>On a client with a non-admin user, a script can be integrated into a report. The reports could later be executed on the BRAIN2 server with administrator rights.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-hfr2-mw2v-5fh3&quot;&gt;https://github.com/advisories/GHSA-hfr2-mw2v-5fh3&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>I Librarian Server Side Request Forgery Vulnerability</title>
@@ -518,32 +542,6 @@
     <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
     
     <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Langflow Remote Code Execution Vulnerability</title>
-    <link href="http://example.com/2025/06/23/github_2859514945/"/>
-    <id>http://example.com/2025/06/23/github_2859514945/</id>
-    <published>2025-06-23T01:45:11.366Z</published>
-    <updated>2025-06-23T01:45:11.362Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Langflow Remote Code Execution Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-3248</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Langflow存在远程代码执行漏洞，攻击者可以利用此漏洞在目标系统上执行任意代码。</p><p><strong>产品名称：</strong> Langflow</p><p><strong>来源：</strong> <a href="https://github.com/0-d3y/langflow-rce-exploit">https://github.com/0-d3y/langflow-rce-exploit</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>exploit.py</li><li>requirements.txt</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Langflow Remote Code Execution Vulnerab</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
   </entry>
   
