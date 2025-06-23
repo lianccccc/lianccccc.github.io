@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-23T16:00:06.777Z</updated>
+  <updated>2025-06-23T17:15:12.149Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AutoGPT 042 漏洞利用</title>
+    <link href="http://example.com/2025/06/23/github_33745501/"/>
+    <id>http://example.com/2025/06/23/github_33745501/</id>
+    <published>2025-06-23T17:15:12.151Z</published>
+    <updated>2025-06-23T17:15:12.149Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> AutoGPT 0.4.2 漏洞利用</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-37273</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> 该站点包含用于演示CVE-2023-37273的有用信息。</p><p><strong>产品名称：</strong> AutoGPT</p><p><strong>影响版本：</strong> 0.4.2</p><p><strong>来源：</strong> <a href="https://github.com/gdesantis01/exploit-autogpt-0.4.2-site">https://github.com/gdesantis01/exploit-autogpt-0.4.2-site</a></p><p><strong>类型：</strong> CVE-2023:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>index.html</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="exploit-autogpt-0-4-2-site"><a href="#exploit-autogpt-0-4-2-site" class="headerlink" title="exploit-autogpt-0.4.2-site"></a>exploit-autogpt-0.4.2-site</h2><p>Site containing info useful for demonstrate CVE-2023-37273</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; AutoGPT 0.4.2 漏洞利用&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+    <category term="CVE-2023:github search" scheme="http://example.com/tags/CVE-2023-github-search/"/>
+    
+  </entry>
   
   <entry>
     <title>On a client with a non-admin user, a script can be integrated into a report The reports could</title>
@@ -505,33 +532,6 @@
       
     <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; cve_2024_32002_rce&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;漏洞编号：</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-    <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PHP CGI CVE-2024-4577 Exploit</title>
-    <link href="http://example.com/2025/06/23/github_1131437811/"/>
-    <id>http://example.com/2025/06/23/github_1131437811/</id>
-    <published>2025-06-23T05:45:12.101Z</published>
-    <updated>2025-06-23T05:45:12.097Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> PHP CGI CVE-2024-4577 Exploit</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-4577</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> CVE-2024-4577是针对PHP CGI的一个命令执行漏洞，允许攻击者通过特定构造的请求执行任意命令。</p><p><strong>产品厂商：</strong> PHP</p><p><strong>产品名称：</strong> PHP CGI</p><p><strong>来源：</strong> <a href="https://github.com/byteReaper77/CVE-2024-4577">https://github.com/byteReaper77/CVE-2024-4577</a></p><p><strong>类型：</strong> CVE-2024:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>LICENSE</li><li>exploit.c</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; PHP CGI CVE-2024-4577 Exploit&lt;/p&gt;
-&lt;p&gt;&lt;s</summary>
       
     
     
