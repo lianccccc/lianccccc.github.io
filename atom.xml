@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-23T01:15:30.334Z</updated>
+  <updated>2025-06-23T01:45:11.362Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Langflow Remote Code Execution Vulnerability</title>
+    <link href="http://example.com/2025/06/23/github_2859514945/"/>
+    <id>http://example.com/2025/06/23/github_2859514945/</id>
+    <published>2025-06-23T01:45:11.366Z</published>
+    <updated>2025-06-23T01:45:11.362Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Langflow Remote Code Execution Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-3248</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Langflow存在远程代码执行漏洞，攻击者可以利用此漏洞在目标系统上执行任意代码。</p><p><strong>产品名称：</strong> Langflow</p><p><strong>来源：</strong> <a href="https://github.com/0-d3y/langflow-rce-exploit">https://github.com/0-d3y/langflow-rce-exploit</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>exploit.py</li><li>requirements.txt</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Langflow Remote Code Execution Vulnerab</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows 文件资源管理器欺骗漏洞</title>
@@ -520,32 +546,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Apache HTTP Server mod_proxy_uwsgi 信息泄露与远程代码执行漏洞</title>
-    <link href="http://example.com/2025/06/22/github_2105330856/"/>
-    <id>http://example.com/2025/06/22/github_2105330856/</id>
-    <published>2025-06-22T02:45:27.671Z</published>
-    <updated>2025-06-22T02:45:27.672Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache HTTP Server mod_proxy_uwsgi 信息泄露与远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2020-11984</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Apache HTTP Server 2.4.32至2.4.44版本中的mod_proxy_uwsgi模块存在信息泄露及可能的远程代码执行漏洞，允许远程攻击者通过发送特制请求访问敏感信息并可能执行任意代码。</p><p><strong>产品厂商：</strong> Apache</p><p><strong>产品名称：</strong> HTTP Server</p><p><strong>影响版本：</strong> 2.4.32 &lt;&#x3D; version &lt;&#x3D; 2.4.44</p><p><strong>搜索语法：</strong> cpe:”cpe:2.3:a:apache:http_server”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12266">https://github.com/projectdiscovery/nuclei-templates/issues/12266</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Apache HTTP Server 2.4.32 to 2.4.44 contains an info disclosure and possible remote code execution caused by a vulnerability in mod_proxy_uwsgi, letting remote attackers access sensitive information and potentially execute arbitrary code, exploit requires sending crafted requests.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="http://packetstormsecurity.com/files/159009/Apache2-mod_proxy_uwsgi-Incorrect-Request-Handling.html">http://packetstormsecurity.com/files/159009/Apache2-mod_proxy_uwsgi-Incorrect-Request-Handling.html</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-cpe-cpe-2-3-a-apache-http-server"><a href="#Shodan-Query-cpe-cpe-2-3-a-apache-http-server" class="headerlink" title="Shodan Query: cpe:&quot;cpe:2.3:a:apache:http_server&quot;"></a>Shodan Query: <code>cpe:&quot;cpe:2.3:a:apache:http_server&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Apache HTTP Server mod_proxy_uwsgi 信息泄露</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
     
   </entry>
   
