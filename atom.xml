@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-23T23:00:19.743Z</updated>
+  <updated>2025-06-23T23:15:15.481Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>TP-Link TL-WR940N/841N 命令注入漏洞</title>
+    <link href="http://example.com/2025/06/23/github_1007102895/"/>
+    <id>http://example.com/2025/06/23/github_1007102895/</id>
+    <published>2025-06-23T23:15:15.486Z</published>
+    <updated>2025-06-23T23:15:15.481Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> TP-Link TL-WR940N&#x2F;841N 命令注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-33538</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> TP-Link TL-WR940N V2&#x2F;V4和TL-WR841N V8&#x2F;V10路由器中存在一个认证后的命令注入漏洞。该漏洞位于<code>WlanNetworkRpm.htm</code>中的<code>ssid1</code>参数，允许注入任意shell命令。攻击成功时，攻击者可以在设备上执行任意命令。</p><p><strong>产品厂商：</strong> TP-Link</p><p><strong>产品名称：</strong> TP-Link TL-WR940N&#x2F;TL-WR841N</p><p><strong>影响版本：</strong> TL-WR940N V2&#x2F;V4, TL-WR841N V8&#x2F;V10</p><p><strong>来源：</strong> <a href="https://github.com/mrowkoob/CVE-2023-33538-msf">https://github.com/mrowkoob/CVE-2023-33538-msf</a></p><p><strong>类型：</strong> CVE-2023:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>tplink_ssid1_rce.rb</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2023-33538-–-TP-Link-TL-WR940N-841N-Command-Injection-Metasploit-module"><a href="#CVE-2023-33538-–-TP-Link-TL-WR940N-841N-Command-Injection-Metasploit-module" class="headerlink" title="CVE-2023-33538 – TP-Link TL-WR940N&#x2F;841N Command Injection (Metasploit module)"></a>CVE-2023-33538 – TP-Link TL-WR940N&#x2F;841N Command Injection (Metasploit module)</h2><p>This Metasploit <strong>auxiliary module</strong> targets an authenticated <strong>command injection vulnerability</strong> in TP-Link TL-WR940N V2&#x2F;V4 and TL-WR841N V8&#x2F;V10 routers.<br>The issue lies in the vulnerable <code>ssid1</code> parameter used in <code>WlanNetworkRpm.htm</code>, which allows injection of arbitrary shell commands.</p><p>When successful, it allows the attacker to execute arbitrary commands on the device.</p><p>More information about the CVE:<br><a href="https://nvd.nist.gov/vuln/detail/CVE-2023-33538">https://nvd.nist.gov/vuln/detail/CVE-2023-33538</a></p><hr><h3 id="How-to-run-this-module"><a href="#How-to-run-this-module" class="headerlink" title="How to run this module?"></a>How to run this module?</h3><ol><li>Copy the <code>.rb</code> file into your Metasploit modules folder, for example:</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cp</span> tplink_ssid1_rce.rb /usr/share/metasploit-framework/modules/auxiliary/admin/http/<br></code></pre></td></tr></table></figure><ol start="2"><li>Start Metasploit console:</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">msfconsole<br></code></pre></td></tr></table></figure><ol start="3"><li>Search and use the module:</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">search tplink<br>use auxiliary/admin/http/tplink_ssid1_rce.rb<br></code></pre></td></tr></table></figure><ol start="4"><li>Set required options:</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">set</span> RHOSTS 192.168.0.1<br><span class="hljs-built_in">set</span> RPORT 80<br><span class="hljs-built_in">set</span> AUTHCOOKIE Basic%20YWRtaW46YWRtaW4%3D<br><span class="hljs-built_in">set</span> SESSIONPATH /ABCD1234/<br><span class="hljs-built_in">set</span> CMD reboot<br>run<br></code></pre></td></tr></table></figure><p> The module <strong>does not</strong> perform authentication. You must manually extract the <code>Authorization</code> cookie and session prefix from a successful login to the router’s web interface.</p><hr><h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ul><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2023-33538">https://nvd.nist.gov/vuln/detail/CVE-2023-33538</a>  </li><li><a href="https://web.archive.org/web/20230609111043/https://github.com/a101e-IoTvul/iotvul/blob/main/tp-link/3/TL-WR940N_TL-WR841N_userRpm_WlanNetworkRpm_Command_Injection.md">https://web.archive.org/web/20230609111043/https://github.com/a101e-IoTvul/iotvul/blob/main/tp-link/3/TL-WR940N_TL-WR841N_userRpm_WlanNetworkRpm_Command_Injection.md</a></li></ul><hr><h3 id="Disclaimer"><a href="#Disclaimer" class="headerlink" title="Disclaimer"></a>Disclaimer</h3><p>This module is intended <strong>for educational purposes only</strong>.<br><strong>Do not use this code against devices or infrastructure you do not own or have explicit permission to test.</strong></p><hr><h3 id="Issues"><a href="#Issues" class="headerlink" title="Issues"></a>Issues</h3><p>If you find bugs, or have ideas for improvements – feel free to open an issue or leave a comment. Let’s make it better together.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; TP-Link TL-WR940N&amp;#x2F;841N 命令注入漏洞&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="CVE-2023:github search" scheme="http://example.com/tags/CVE-2023-github-search/"/>
+    
+  </entry>
   
   <entry>
     <title>FortiOS SSL-VPN 堆缓冲区溢出漏洞</title>
@@ -91,9 +118,9 @@
     <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
     
     
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
     <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
   </entry>
   
@@ -191,9 +218,9 @@
     <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
     
     
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
     <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
   </entry>
   
@@ -377,9 +404,9 @@
     <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
     
     
-    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
-    
     <category term="CVE-2023:github search" scheme="http://example.com/tags/CVE-2023-github-search/"/>
+    
+    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
     
   </entry>
   
@@ -510,33 +537,6 @@
     <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
     
     <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>OpenSSH 内存和CPU耗尽拒绝服务漏洞</title>
-    <link href="http://example.com/2025/06/23/github_3821769427/"/>
-    <id>http://example.com/2025/06/23/github_3821769427/</id>
-    <published>2025-06-23T13:45:15.950Z</published>
-    <updated>2025-06-23T13:45:15.948Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> OpenSSH 内存和CPU耗尽拒绝服务漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-26466</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> OpenSSH（版本9.5p1至9.9p1）存在一个内存和CPU耗尽的拒绝服务漏洞，攻击者可以通过发送重复的SSH2_MSG_PING数据包（类型192）来利用此漏洞。这种情况发生在认证之前，可能导致服务器由于队列&#x2F;缓冲区处理不当而锁定。</p><p><strong>产品厂商：</strong> OpenSSH</p><p><strong>产品名称：</strong> OpenSSH</p><p><strong>影响版本：</strong> 9.5p1 &lt;&#x3D; version &lt;&#x3D; 9.9p1</p><p><strong>来源：</strong> <a href="https://github.com/mrowkoob/CVE-2025-26466-msf">https://github.com/mrowkoob/CVE-2025-26466-msf</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>ping_dos.rb</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-26466-Metasploit-module"><a href="#CVE-2025-26466-Metasploit-module" class="headerlink" title="CVE-2025-26466 (Metasploit module)"></a>CVE-2025-26466 (Metasploit module)</h2><p>OpenSSH (versions 9.5p1 to 9.9p1) is vulnerable to a memory and CPU exhaustion DoS Attack by sending repeated SSH2_MSG_PING packets (type 192).<br>This occurs before authentication, and can result in server lockup due to poor queue&#x2F;buffer handling.</p><h3 id="More-information-about-that-CVE"><a href="#More-information-about-that-CVE" class="headerlink" title="More information about that CVE:"></a>More information about that CVE:</h3><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">https</span>://nvd.nist.gov/vuln/detail/CVE-<span class="hljs-number">2025</span>-<span class="hljs-number">26466</span><br></code></pre></td></tr></table></figure><h2 id="How-do-I-run-this-script"><a href="#How-do-I-run-this-script" class="headerlink" title="How do I run this script?"></a>How do I run this script?</h2><p>Copy .rb file into your ‘modules’ folder, f.e.</p><p><code>/usr/share/metasploit-framework/modules/auxiliary/dos/ssh</code></p><p>Run Metasploit console and search for the module.</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">msfconsole</span><br><span class="hljs-attribute">search ping_dos</span><br></code></pre></td></tr></table></figure><h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ul><li><a href="https://blog.qualys.com/vulnerabilities-threat-research/2025/02/18/qualys-tru-discovers-two-vulnerabilities-in-openssh-cve-2025-26465-cve-2025-26466">https://blog.qualys.com/vulnerabilities-threat-research/2025/02/18/qualys-tru-discovers-two-vulnerabilities-in-openssh-cve-2025-26465-cve-2025-26466</a></li></ul><h3 id="Disclaimer"><a href="#Disclaimer" class="headerlink" title="Disclaimer"></a>Disclaimer</h3><p>I am sharing this just for educational purposes, you shall not use it on infrastructure you are not authorized to.</p><h3 id="Issues"><a href="#Issues" class="headerlink" title="Issues"></a>Issues</h3><p>That’s my first project shared on GitHub. Feel free to leave comments about it, so I can learn and make it better.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; OpenSSH 内存和CPU耗尽拒绝服务漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
     
   </entry>
   
