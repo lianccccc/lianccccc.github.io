@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-23T08:45:13.202Z</updated>
+  <updated>2025-06-23T10:15:20.259Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Github Poc</title>
+    <link href="http://example.com/2025/06/23/github_4076247266/"/>
+    <id>http://example.com/2025/06/23/github_4076247266/</id>
+    <published>2025-06-23T10:15:20.262Z</published>
+    <updated>2025-06-23T10:15:20.259Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> </p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-3248</li></ul><p><strong>来源：</strong> <a href="https://github.com/dennisec/CVE-2025-3248">https://github.com/dennisec/CVE-2025-3248</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Langflow Remote Code Execution Vulnerability</title>
+    <link href="http://example.com/2025/06/23/github_3125321446/"/>
+    <id>http://example.com/2025/06/23/github_3125321446/</id>
+    <published>2025-06-23T10:15:13.738Z</published>
+    <updated>2025-06-23T10:15:13.735Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Langflow Remote Code Execution Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-3248</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Langflow 1.3.0之前版本中的<code>/api/v1/validate/code</code>端点存在远程代码执行漏洞（CVE-2025-3248），该漏洞允许未经认证的用户执行任意代码，因为用户提供的代码在没有适当沙箱保护的情况下被执行。</p><p><strong>产品厂商：</strong> Langflow</p><p><strong>产品名称：</strong> Langflow</p><p><strong>影响版本：</strong> version &lt; 1.3.0</p><p><strong>来源：</strong> <a href="https://github.com/dennisec/Mass-CVE-2025-3248">https://github.com/dennisec/Mass-CVE-2025-3248</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>Mass-CVE-2025-3248.py</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="Langflow-CVE-2025-3248-Exploit-Tool"><a href="#Langflow-CVE-2025-3248-Exploit-Tool" class="headerlink" title="Langflow CVE-2025-3248 Exploit Tool"></a>Langflow CVE-2025-3248 Exploit Tool</h2><p><img src="https://img.shields.io/badge/Severity-Critical-red" alt="Severity"><br><img src="https://img.shields.io/badge/CVSS-9.8-yellow" alt="CVSS"></p><h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>This tool exploits the critical Remote Code Execution (RCE) vulnerability <strong>CVE-2025-3248</strong> found in Langflow versions prior to 1.3.0.<br>The vulnerability exists in the <code>/api/v1/validate/code</code> endpoint which improperly executes user-supplied code without authentication or sandboxing.</p><blockquote><p>⚠️ <strong>Warning:</strong> Use this tool only on systems you own or have explicit permission to test. Unauthorized use is illegal and unethical.</p></blockquote><hr><h3 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h3><ul><li>Test if a Langflow instance is vulnerable to CVE-2025-3248  </li><li>Demonstrate remote code execution by executing arbitrary payloads  </li><li>Simple CLI interface with customizable target URL</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Langflow Remote Code Execution Vulnerab</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+  </entry>
   
   <entry>
     <title>Skyvern SSTI Remote Code Execution</title>
@@ -495,60 +547,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="SQL注入" scheme="http://example.com/tags/SQL%E6%B3%A8%E5%85%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Pterodactyl panel 凭证泄露漏洞</title>
-    <link href="http://example.com/2025/06/22/github_1302419377/"/>
-    <id>http://example.com/2025/06/22/github_1302419377/</id>
-    <published>2025-06-22T13:45:11.490Z</published>
-    <updated>2025-06-22T13:45:11.486Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Pterodactyl panel 凭证泄露漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-49132</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 一个脚本，用于获取易受CVE-2025-49132漏洞影响的Pterodactyl面板的凭证。</p><p><strong>产品名称：</strong> Pterodactyl panel</p><p><strong>来源：</strong> <a href="https://github.com/Zen-kun04/CVE-2025-49132">https://github.com/Zen-kun04/CVE-2025-49132</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Pterodactyl panel 凭证泄露漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Apache Dubbo 反序列化漏洞</title>
-    <link href="http://example.com/2025/06/22/github_3489987082/"/>
-    <id>http://example.com/2025/06/22/github_3489987082/</id>
-    <published>2025-06-22T10:00:16.398Z</published>
-    <updated>2025-06-22T10:00:16.397Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache Dubbo 反序列化漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2019-17564</li></ul><p><strong>漏洞类型：</strong> 反序列化</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Apache Dubbo 2.7.0至2.7.4版本、2.6.0至2.6.7版本以及所有2.5.x版本中存在反序列化漏洞，由于在HTTP POST请求中接受不受信任的Java对象，攻击者可以通过发送恶意的Java对象完全控制Provider实例，前提是HTTP被启用。</p><p><strong>产品厂商：</strong> Apache</p><p><strong>产品名称：</strong> Dubbo</p><p><strong>影响版本：</strong> 2.5.x, 2.6.0 &lt;&#x3D; version &lt;&#x3D; 2.6.7, 2.7.0 &lt;&#x3D; version &lt;&#x3D; 2.7.4</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12444">https://github.com/projectdiscovery/nuclei-templates/issues/12444</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Apache Dubbo versions 2.7.0 to 2.7.4, 2.6.0 to 2.6.7, and all 2.5.x versions contain an insecure deserialization caused by accepting untrusted Java objects in HTTP POST requests, letting attackers fully compromise a Provider instance if HTTP is enabled, exploit requires attacker to send malicious Java object.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://github.com/fairyming/CVE-2019-17564">https://github.com/fairyming/CVE-2019-17564</a></li><li><a href="https://github.com/Dor-Tumarkin/CVE-2019-17564-FastJson-Gadget">https://github.com/Dor-Tumarkin/CVE-2019-17564-FastJson-Gadget</a></li><li><a href="https://github.com/Exploit-3389/CVE-2019-17564">https://github.com/Exploit-3389/CVE-2019-17564</a></li><li><a href="https://github.com/Hu3sky/CVE-2019-17564">https://github.com/Hu3sky/CVE-2019-17564</a></li><li><a href="https://github.com/Jaky5155/CVE-2019-17564">https://github.com/Jaky5155/CVE-2019-17564</a></li><li><a href="https://github.com/r00t4dm/CVE-2019-17564">https://github.com/r00t4dm/CVE-2019-17564</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-NA"><a href="#Shodan-Query-NA" class="headerlink" title="Shodan Query: NA"></a>Shodan Query: <code>NA</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Apache Dubbo 反序列化漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
     
   </entry>
   
