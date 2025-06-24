@@ -19,15 +19,15 @@
   <meta name="author" content="lianccc">
   <meta name="keywords" content="">
   
-    <meta name="description" content="漏洞信息漏洞名称： Microsoft SMBv3 远程代码执行漏洞 漏洞编号：  CVE： CVE-2020-0796  漏洞类型： 命令执行 漏洞等级： 严重 漏洞描述： Microsoft SMBv3 存在一个漏洞（CVE-2020-0796），由于对压缩数据处理不当，可能导致远程代码执行（RCE）。 产品厂商： Microsoft 产品名称： Microsoft SMBv3 来源： htt">
+    <meta name="description" content="漏洞信息漏洞名称： Microsoft SMBv3 远程代码执行漏洞 漏洞编号：  CVE： CVE-2020-0796  漏洞类型： 命令执行 漏洞等级： 严重 漏洞描述： Microsoft SMBv3 存在一个漏洞（CVE-2020-0796），由于对压缩数据处理不当，可能导致远程代码执行（RCE）。 产品厂商： Microsoft 产品名称： SMBv3 来源： https:&#x2F;&#x2F;githu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Microsoft SMBv3 远程代码执行漏洞">
-<meta property="og:url" content="http://example.com/2025/06/23/github_1493930459/index.html">
+<meta property="og:url" content="http://example.com/2025/06/24/github_1493930459/index.html">
 <meta property="og:site_name" content="liancc&#39; infos blog">
-<meta property="og:description" content="漏洞信息漏洞名称： Microsoft SMBv3 远程代码执行漏洞 漏洞编号：  CVE： CVE-2020-0796  漏洞类型： 命令执行 漏洞等级： 严重 漏洞描述： Microsoft SMBv3 存在一个漏洞（CVE-2020-0796），由于对压缩数据处理不当，可能导致远程代码执行（RCE）。 产品厂商： Microsoft 产品名称： Microsoft SMBv3 来源： htt">
+<meta property="og:description" content="漏洞信息漏洞名称： Microsoft SMBv3 远程代码执行漏洞 漏洞编号：  CVE： CVE-2020-0796  漏洞类型： 命令执行 漏洞等级： 严重 漏洞描述： Microsoft SMBv3 存在一个漏洞（CVE-2020-0796），由于对压缩数据处理不当，可能导致远程代码执行（RCE）。 产品厂商： Microsoft 产品名称： SMBv3 来源： https:&#x2F;&#x2F;githu">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-06-23T21:45:25.478Z">
-<meta property="article:modified_time" content="2025-06-23T21:45:25.474Z">
+<meta property="article:published_time" content="2025-06-24T00:30:28.928Z">
+<meta property="article:modified_time" content="2025-06-24T00:30:28.925Z">
 <meta property="article:author" content="lianccc">
 <meta property="article:tag" content="命令执行">
 <meta property="article:tag" content="projectdiscovery&#x2F;nuclei-templates:github issues">
@@ -213,8 +213,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-06-23 21:45" pubdate>
-          2025年6月23日 晚上
+        <time datetime="2025-06-24 00:30" pubdate>
+          2025年6月24日 凌晨
         </time>
       </span>
     
@@ -287,7 +287,7 @@
 <p><strong>漏洞等级：</strong> 严重</p>
 <p><strong>漏洞描述：</strong> Microsoft SMBv3 存在一个漏洞（CVE-2020-0796），由于对压缩数据处理不当，可能导致远程代码执行（RCE）。</p>
 <p><strong>产品厂商：</strong> Microsoft</p>
-<p><strong>产品名称：</strong> Microsoft SMBv3</p>
+<p><strong>产品名称：</strong> SMBv3</p>
 <p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei-templates/blob/1e58f804ad3d7bc3e9c9e9555a8c862b05aa9f81/network%2Fcves%2F2020%2FCVE-2020-0796.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/1e58f804ad3d7bc3e9c9e9555a8c862b05aa9f81/network%2Fcves%2F2020%2FCVE-2020-0796.yaml</a></p>
 <p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p>
 <h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>0-<span class="hljs-number">0796</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> CVE-<span class="hljs-number">202</span>0-<span class="hljs-number">0796</span> <span class="hljs-operator">-</span> Microsoft SMBv3 <span class="hljs-operator">-</span> Remote Code Execution<br>  <span class="hljs-params">author:</span> Yusuf Amr<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    Microsoft SMBv3 contains a vulnerability (CVE-<span class="hljs-number">202</span>0-<span class="hljs-number">0796</span>) due to improper handling of compressed data, leading to potential remote code execution (RCE).<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>cve.mitre.org<span class="hljs-operator">/</span>cgi-bin<span class="hljs-operator">/</span>cvename.cgi<span class="hljs-operator">?</span>name<span class="hljs-operator">=</span>CVE-<span class="hljs-number">202</span>0-<span class="hljs-number">0796</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0796</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/tdevworks/CVE-2020-0796-SMBGhost-Exploit-Demo</span><br>  <span class="hljs-params">tags:</span> smb, smbv3, rce, cve, cve2020, smbghost, network<br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">10.0</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>0-<span class="hljs-number">0796</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">787</span><br><br><span class="hljs-params">network:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">host:</span> [<span class="hljs-string">&quot;&#123;&#123;Hostname&#125;&#125;&quot;</span>]<br>    <span class="hljs-params">port:</span> <span class="hljs-number">445</span><br>    <span class="hljs-params">inputs:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">data:</span> <span class="hljs-string">&quot;&#123;&#123;hex_decode(<span class="hljs-char escape_">\&quot;</span>000000c2fe534d4240000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000024000800000000007f0000000102abcd0102abcd0102abcd0102abcd7800000002000000020210022202240200030203100311030000000001002600000000000100200001000000000000000000000000000000000000000000000000000000000000000000000003000a0000000000010000000100000001000000000000000000<span class="hljs-char escape_">\&quot;</span>)&#125;&#125;&quot;</span><br>        <span class="hljs-params">read:</span> <span class="hljs-number">8192</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">data:</span> <span class="hljs-string">&quot;&#123;&#123;hex_decode(<span class="hljs-char escape_">\&quot;</span>000000a0fc534d42ffffffff0100000080000000fe534d424000000000000000010000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000001900000200000000000000005800280000000000000000004e544c4d5353500001000000329088e2000000002800000000000000280000000601b11d0000000f00000000000000000000000000000000<span class="hljs-char escape_">\&quot;</span>)&#125;&#125;&quot;</span><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> binary<br>        <span class="hljs-params">part:</span> data<br>        <span class="hljs-params">encoding:</span> hex<br>        <span class="hljs-params">binary:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;fc534d4248000000&quot;</span>  <br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;0d0000c0&quot;</span>          <br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;1000602d00&quot;</span>        <br>        <span class="hljs-params">condition:</span> <span class="hljs-keyword">or</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> binary<br>        <span class="hljs-params">part:</span> data<br>        <span class="hljs-params">encoding:</span> hex<br>        <span class="hljs-params">binary:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;00000031fc534d424800000001000000000000001eb000fe534d4240000000c00d0000c00100011000602d00100103301e28090442&quot;</span><br><br></code></pre></td></tr></table></figure>
@@ -340,7 +340,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>Microsoft SMBv3 远程代码执行漏洞</div>
-      <div>http://example.com/2025/06/23/github_1493930459/</div>
+      <div>http://example.com/2025/06/24/github_1493930459/</div>
     </div>
     <div class="license-meta">
       
@@ -352,7 +352,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年6月23日</div>
+          <div>2025年6月24日</div>
         </div>
       
       
@@ -384,18 +384,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/23/github_2978041448/" title="Microsoft SMBv3 远程代码执行漏洞">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Microsoft SMBv3 远程代码执行漏洞</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/23/github_2861772919/" title="Motors WordPress Theme 未经身份验证的权限提升漏洞">
-                        <span class="hidden-mobile">Motors WordPress Theme 未经身份验证的权限提升漏洞</span>
+                      <a href="/2025/06/24/github_2742528851/" title="FortiOS SSL-VPN 堆缓冲区溢出漏洞">
+                        <span class="hidden-mobile">FortiOS SSL-VPN 堆缓冲区溢出漏洞</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
