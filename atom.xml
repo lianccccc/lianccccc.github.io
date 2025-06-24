@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-24T13:15:33.365Z</updated>
+  <updated>2025-06-24T13:30:15.425Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CVE-2025-3466 unsanitised Input in code node</title>
+    <link href="http://example.com/2025/06/24/other_2960334139/"/>
+    <id>http://example.com/2025/06/24/other_2960334139/</id>
+    <published>2025-06-24T13:30:15.428Z</published>
+    <updated>2025-06-24T13:30:15.425Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://huntr.com/bounties/f8dc17a3-5536-4944-a680-24070903cd2d">https://huntr.com/bounties/f8dc17a3-5536-4944-a680-24070903cd2d</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://huntr.com/bounties/f8dc17a3-5536-4944-a680-24070903cd2d&quot;&gt;https://huntr.com/bounties/f8dc17a3-5536-4</summary>
+      
+    
+    
+    
+    <category term="其他" scheme="http://example.com/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+    <category term="huntr.com" scheme="http://example.com/tags/huntr-com/"/>
+    
+  </entry>
   
   <entry>
     <title>OpenPLC v3 Authenticated RCE (CVE-2021-31630) - Passive Check</title>
@@ -519,32 +543,6 @@
     <category term="zan8in/afrog:github commit" scheme="http://example.com/tags/zan8in-afrog-github-commit/"/>
     
     <category term="XML实体注入" scheme="http://example.com/tags/XML%E5%AE%9E%E4%BD%93%E6%B3%A8%E5%85%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Github Poc</title>
-    <link href="http://example.com/2025/06/24/github_1425288584/"/>
-    <id>http://example.com/2025/06/24/github_1425288584/</id>
-    <published>2025-06-24T07:15:11.302Z</published>
-    <updated>2025-06-24T07:15:11.298Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> </p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-45467</li></ul><p><strong>来源：</strong> <a href="https://github.com/zgsnj123/CVE-2025-45467">https://github.com/zgsnj123/CVE-2025-45467</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-45467"><a href="#CVE-2025-45467" class="headerlink" title="CVE-2025-45467"></a>CVE-2025-45467</h2>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
   </entry>
   
