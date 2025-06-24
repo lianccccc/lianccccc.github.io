@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-24T06:45:14.232Z</updated>
+  <updated>2025-06-24T07:15:11.298Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Github Poc</title>
+    <link href="http://example.com/2025/06/24/github_1425288584/"/>
+    <id>http://example.com/2025/06/24/github_1425288584/</id>
+    <published>2025-06-24T07:15:11.302Z</published>
+    <updated>2025-06-24T07:15:11.298Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> </p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-45467</li></ul><p><strong>来源：</strong> <a href="https://github.com/zgsnj123/CVE-2025-45467">https://github.com/zgsnj123/CVE-2025-45467</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-45467"><a href="#CVE-2025-45467" class="headerlink" title="CVE-2025-45467"></a>CVE-2025-45467</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+  </entry>
   
   <entry>
     <title>CVE-2025-45466</title>
@@ -521,32 +547,6 @@
     <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
     
     <category term="CVE-2023:github search" scheme="http://example.com/tags/CVE-2023-github-search/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Motors WordPress Theme 未经身份验证的权限提升漏洞</title>
-    <link href="http://example.com/2025/06/23/github_2861772919/"/>
-    <id>http://example.com/2025/06/23/github_2861772919/</id>
-    <published>2025-06-23T21:45:16.272Z</published>
-    <updated>2025-06-23T21:45:16.269Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Motors WordPress Theme 未经身份验证的权限提升漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-4322</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> WordPress的Motors主题在所有版本（包括5.6.67）中存在通过密码更新“账户接管”导致的未经身份验证的权限提升漏洞。这是由于主题在更新用户密码之前没有正确验证用户的身份。这使得未经身份验证的攻击者可以更改任意用户的密码，包括管理员，并利用这一点获得对其账户的访问权限。</p><p><strong>产品厂商：</strong> WordPress</p><p><strong>产品名称：</strong> Motors WordPress Theme</p><p><strong>影响版本：</strong> &lt;&#x3D; 5.6.67</p><p><strong>来源：</strong> <a href="https://github.com/B1ack4sh/Blackash-CVE-2025-4322">https://github.com/B1ack4sh/Blackash-CVE-2025-4322</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2025-4322.py</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-4322-Unauthenticated-Privilege-Escalation-via-Password-Update-“Account-Takeover-🔥”"><a href="#CVE-2025-4322-Unauthenticated-Privilege-Escalation-via-Password-Update-“Account-Takeover-🔥”" class="headerlink" title="CVE-2025-4322 : Unauthenticated Privilege Escalation via Password Update “Account Takeover 🔥”"></a>CVE-2025-4322 : Unauthenticated Privilege Escalation via Password Update “Account Takeover 🔥”</h2><h2 id="Description"><a href="#Description" class="headerlink" title="Description :"></a>Description :</h2><p>The Motors theme for WordPress is vulnerable to privilege escalation via account takeover in all versions up to, and including, <code>5.6.67</code>. This is due to the theme not properly validating a user’s identity prior to updating their password. This makes it possible for unauthenticated attackers to change arbitrary user passwords, including those of administrators, and leverage that to gain access to their account.</p><h2 id="Metrics"><a href="#Metrics" class="headerlink" title="Metrics :"></a>Metrics :</h2><p>CNA: <code>Wordfence</code> Base Score: 9.8 ⚫ CRITICAL Vector:  CVSS:3.1&#x2F;AV:N&#x2F;AC:L&#x2F;PR:N&#x2F;UI:N&#x2F;S:U&#x2F;C:H&#x2F;I:H&#x2F;A:H</p><h2 id="📌-Themes-Information"><a href="#📌-Themes-Information" class="headerlink" title="📌 Themes Information:"></a>📌 Themes Information:</h2><ul><li>Plugin: Motors &lt;&#x3D; <code>5.6.67</code> - Unauthenticated Privilege Escalation via Password Update&#x2F;Account Takeover</li><li>Vulnerable Version: &lt;&#x3D; <code>5.6.67</code></li><li>CVE: CVE-2025-4322</li><li>Severity: 9.8 (Critical)</li><li>CWE ID: CWE-620</li><li>CWE Name: Unverified Password Change</li><li>Patched: ✅ Yes</li><li>Patch Priority: ⚫ Critical</li><li>Date Published: May 19, 2025</li></ul><h2 id="⚠️-Summary-of-the-Vulnerability"><a href="#⚠️-Summary-of-the-Vulnerability" class="headerlink" title="⚠️ Summary of the Vulnerability:"></a>⚠️ Summary of the Vulnerability:</h2><ul><li><p>The Motors WordPress theme (up to and including version 5.6.67) contains a critical authentication flaw in its password reset functionality.</p></li><li><p>It provides a front-end password update mechanism via endpoints, but fails to properly validate user identity or authorization before processi+ ng password changes.</p></li><li><p>As a result, unauthenticated attackers can send crafted HTTP requests that supply a user_id, an arbitrary hash_check, and a new password (stm_new_password) to reset any user’s password — including administrators.</p></li></ul><p><code>If exploited, this allows attackers to:</code></p><ul><li><p>Gain administrative access,</p></li><li><p>Take over the entire site,</p></li><li><p>Deploy persistent backdoors or malicious plugins.</p></li></ul><h2 id="🧪-Proof-of-Concept-PoC"><a href="#🧪-Proof-of-Concept-PoC" class="headerlink" title="🧪 Proof of Concept (PoC):"></a>🧪 Proof of Concept (PoC):</h2><h3 id="📥-Request-e-g-via-curl"><a href="#📥-Request-e-g-via-curl" class="headerlink" title="📥 Request (e.g., via curl):"></a>📥 Request (e.g., via curl):</h3><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">curl</span> <span class="hljs-string">&quot;https://local.ization/loginregister/?user_id=2&amp;hash_check=%C0&quot;</span> --data <span class="hljs-string">&quot;stm_new_password=randomizer&quot;</span> -XPOST -v -H &#x27;User-Agent: Mozilla/<span class="hljs-number">5</span>.<span class="hljs-number">0</span> (Linux; Android <span class="hljs-number">6</span>.<span class="hljs-number">0</span>; Nexus <span class="hljs-number">5</span> Build/MRA58N) AppleWebKit/<span class="hljs-number">537</span>.<span class="hljs-number">36</span> (KHTML, like Gecko) Chrome/<span class="hljs-number">136.0.0.0</span> Mobile Safari/<span class="hljs-number">537</span>.<span class="hljs-number">36</span>&#x27;<br></code></pre></td></tr></table></figure><h2 id="🛠️-Where’s-the-flaw"><a href="#🛠️-Where’s-the-flaw" class="headerlink" title="🛠️ Where’s the flaw?"></a>🛠️ Where’s the flaw?</h2><ul><li>The Motors theme exposes a front-end password reset handler via endpoints like &#x2F;login, &#x2F;register, &#x2F;loginregister, etc</li><li>This handler accepts user_id, hash_check, and stm_new_password via unauthenticated HTTP POST requests</li><li>The theme fails to verify the identity or authenticity of the requester</li><li>As long as an attacker supplies a valid or bypassable hash_check, the system processes password changes blindly</li><li>There is no authentication, nonce validation, or ownership check before updating user credentials</li></ul><h2 id="🔐-Recommendation"><a href="#🔐-Recommendation" class="headerlink" title="🔐 Recommendation"></a>🔐 Recommendation</h2><ul><li>Disable or restrict access to the &#x2F;loginregister&#x2F; or similar front-end endpoints if not in use</li><li>Implement strict identity validation before processing password reset requests (e.g., logged-in user check, secure token validation)</li><li>Avoid relying on client-supplied user_id or hash_check without server-side verification</li><li>Apply updates to the latest version of the Motors theme, or use virtual patching (e.g., via WAF) to block unauthorized POST requests</li><li>Regularly audit public-facing endpoints for unexpected or undocumented behavior</li></ul><h2 id="⚠️-Disclaimer"><a href="#⚠️-Disclaimer" class="headerlink" title="⚠️ Disclaimer"></a>⚠️ Disclaimer</h2><p>This report is for educational and authorized security testing purposes only.<br>Exploitation of this vulnerability without permission may violate legal and ethical boundaries.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Motors WordPress Theme 未经身份验证的权限提升漏洞&lt;/p</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
     
   </entry>
   
