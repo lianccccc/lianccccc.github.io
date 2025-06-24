@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-24T06:15:13.420Z</updated>
+  <updated>2025-06-24T06:45:14.232Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CVE-2025-45466</title>
+    <link href="http://example.com/2025/06/24/github_3797010379/"/>
+    <id>http://example.com/2025/06/24/github_3797010379/</id>
+    <published>2025-06-24T06:45:14.232Z</published>
+    <updated>2025-06-24T06:45:14.232Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CVE-2025-45466</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-45466</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> 这是CVE-2025-45466的详细信息。</p><p><strong>来源：</strong> <a href="https://github.com/zgsnj123/CVE-2025-45466">https://github.com/zgsnj123/CVE-2025-45466</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-45466"><a href="#CVE-2025-45466" class="headerlink" title="CVE-2025-45466"></a>CVE-2025-45466</h2><p>It is the details of CVE-2025-45466</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CVE-2025-45466&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/st</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+  </entry>
   
   <entry>
     <title>Dahua IPC/VTH/VTO 身份认证绕过漏洞</title>
@@ -520,30 +547,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Claude Code Improper Authorization via websocket connections from arbitrary origins</title>
-    <link href="http://example.com/2025/06/23/github_665728493/"/>
-    <id>http://example.com/2025/06/23/github_665728493/</id>
-    <published>2025-06-23T21:30:05.010Z</published>
-    <updated>2025-06-23T21:30:05.008Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-9f65-56v6-gxw7">https://github.com/advisories/GHSA-9f65-56v6-gxw7</a></p><p><strong>仓库 Star：</strong> 14811</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/anthropics/claude-code/security/advisories/GHSA-9f65-56v6-gxw7">https://github.com/anthropics/claude-code/security/advisories/GHSA-9f65-56v6-gxw7</a></p></li><li><p><a href="https://github.com/advisories/GHSA-9f65-56v6-gxw7">https://github.com/advisories/GHSA-9f65-56v6-gxw7</a></p></li></ul><p><strong>描述：</strong></p><p>Claude Code extensions in VSCode and forks (e.g., Cursor, Windsurf, and VSCodium) and JetBrains IDEs (e.g., IntelliJ, Pycharm, and Android Studio) are vulnerable to unauthorized websocket connections from an attacker when visiting attacker-controlled webpages. Claude Code for VSCode IDE extensions versions 0.2.116 through 1.0.23 are vulnerable. For Jetbrains IDE plugins, Claude Code [beta] versions 0.1.1 through 0.1.8 are vulnerable.  </p><p>In VSCode (and forks), exploitation would allow an attacker to read arbitrary files, see the list of files open in the IDE, get selection and diagnostics events from the IDE, or execute code in limited situations where a user has an open Jupyter Notebook and accepts a malicious prompt. In JetBrains IDEs, an attacker could get selection events, a list of open files, and a list of syntax errors.</p><p><strong>Remediation</strong></p><p>We released a patch for this issue on June 13th, 2025. Although Claude Code auto-updates when you launch it and auto-updates the extensions, you should take the following steps (the exact steps depend on your IDE).</p><p><strong>VSCode, Cursor, Windsurf, VSCodium, and other VSCode forks</strong><br>Extension Name: Claude Code for VSCode</p><p>Instructions:</p><ol><li>Open the list of Extensions (View-&gt;Extensions)</li><li>Look for Claude Code for VSCode among installed extensions</li><li>If you have a version &lt; 1.0.24, click “Update” (or “Uninstall”)</li><li>Restart the IDE</li></ol><p><strong>All JetBrains IDEs including IntelliJ, PyCharm, and Android Studio</strong><br>Plugin name: Claude Code [Beta]</p><p>Instructions:</p><ol><li>Open the Plugins list</li><li>Look for Claude Code [Beta] among installed extensions</li><li>Update (or Uninstall) the plugin if the version is &lt; 0.1.9</li><li>Restart the IDE</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-9f65-56v6-gxw7&quot;&gt;https://github.com/advisories/GHSA-9f65-56v6-gxw7&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
     
   </entry>
   
