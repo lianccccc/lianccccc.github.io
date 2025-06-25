@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-25T19:15:42.011Z</updated>
+  <updated>2025-06-25T19:30:20.459Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ivanti Buffer Overflow Vulnerability</title>
+    <link href="http://example.com/2025/06/25/github_2121782117/"/>
+    <id>http://example.com/2025/06/25/github_2121782117/</id>
+    <published>2025-06-25T19:30:20.459Z</published>
+    <updated>2025-06-25T19:30:20.459Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Ivanti Buffer Overflow Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-0282</li></ul><p><strong>漏洞类型：</strong> 缓冲区溢出</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Ivanti Connect Secure &lt; 22.7R2.5、Ivanti Policy Secure &lt; 22.7R1.2以及Ivanti Neurons for ZTA gateways &lt; 22.7R2.3中存在一个基于栈的缓冲区溢出漏洞，该漏洞由不当的输入处理引起，允许远程未认证的攻击者执行任意代码。利用此漏洞需要发送精心构造的请求。</p><p><strong>产品厂商：</strong> Ivanti</p><p><strong>产品名称：</strong> Ivanti Connect Secure, Ivanti Policy Secure, Ivanti Neurons for ZTA gateways</p><p><strong>影响版本：</strong> Ivanti Connect Secure &lt; 22.7R2.5, Ivanti Policy Secure &lt; 22.7R1.2, Ivanti Neurons for ZTA gateways &lt; 22.7R2.3</p><p><strong>搜索语法：</strong> http.title:”ivanti connect secure”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12130">https://github.com/projectdiscovery/nuclei-templates/issues/12130</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Ivanti Connect Secure &lt; 22.7R2.5, Ivanti Policy Secure &lt; 22.7R1.2, and Ivanti Neurons for ZTA gateways &lt; 22.7R2.3 contain a stack-based buffer overflow caused by improper input handling, letting remote unauthenticated attackers execute arbitrary code, exploit requires sending crafted requests.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://cloud.google.com/blog/topics/threat-intelligence/ivanti-connect-secure-vpn-zero-day">https://cloud.google.com/blog/topics/threat-intelligence/ivanti-connect-secure-vpn-zero-day</a></li><li><a href="https://github.com/sfewer-r7/CVE-2025-0282">https://github.com/sfewer-r7/CVE-2025-0282</a></li><li><a href="https://labs.watchtowr.com/exploitation-walkthrough-and-techniques-ivanti-connect-secure-rce-cve-2025-0282/">https://labs.watchtowr.com/exploitation-walkthrough-and-techniques-ivanti-connect-secure-rce-cve-2025-0282/</a></li><li><a href="https://github.com/punitdarji/Ivanti-CVE-2025-0282">https://github.com/punitdarji/Ivanti-CVE-2025-0282</a></li><li><a href="https://vulncheck.com/xdb/043030d6caa4">https://vulncheck.com/xdb/043030d6caa4</a></li><li><a href="https://github.com/44xo/CVE-2025-0282">https://github.com/44xo/CVE-2025-0282</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:44xo&#x2F;CVE-2025-0282.git</li><li><a href="https://github.com/AdaniKamal/CVE-2025-0282">https://github.com/AdaniKamal/CVE-2025-0282</a></li><li><a href="https://vulncheck.com/xdb/858b463ecabe">https://vulncheck.com/xdb/858b463ecabe</a></li><li><a href="https://github.com/almanatra/CVE-2025-0282">https://github.com/almanatra/CVE-2025-0282</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:almanatra&#x2F;CVE-2025-0282.git</li><li><a href="https://github.com/Hexastrike/Ivanti-Connect-Secure-Logs-Parser">https://github.com/Hexastrike/Ivanti-Connect-Secure-Logs-Parser</a></li><li><a href="https://vulncheck.com/xdb/d343e6784986">https://vulncheck.com/xdb/d343e6784986</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:sfewer-r7&#x2F;CVE-2025-0282.git</li><li><a href="https://github.com/watchtowrlabs/CVE-2025-0282">https://github.com/watchtowrlabs/CVE-2025-0282</a></li><li><a href="https://github.com/rxwx/pulse-meter">https://github.com/rxwx/pulse-meter</a></li><li><a href="https://github.com/AnonStorks/CVE-2025-0282-Full-version">https://github.com/AnonStorks/CVE-2025-0282-Full-version</a></li><li><a href="https://github.com/absholi7ly/CVE-2025-0282-Ivanti-exploit">https://github.com/absholi7ly/CVE-2025-0282-Ivanti-exploit</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-http-title-ivanti-connect-secure"><a href="#Shodan-Query-http-title-ivanti-connect-secure" class="headerlink" title="Shodan Query: http.title:&quot;ivanti connect secure&quot;"></a>Shodan Query: <code>http.title:&quot;ivanti connect secure&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Ivanti Buffer Overflow Vulnerability&lt;/p</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="缓冲区溢出" scheme="http://example.com/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>Achat 0150 beta7 Buffer Overflow Vulnerability</title>
@@ -66,33 +92,6 @@
     <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
     
     <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ivanti Connect Secure 缓冲区溢出漏洞</title>
-    <link href="http://example.com/2025/06/25/github_2121782117/"/>
-    <id>http://example.com/2025/06/25/github_2121782117/</id>
-    <published>2025-06-25T19:15:20.185Z</published>
-    <updated>2025-06-25T19:15:20.182Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Ivanti Connect Secure 缓冲区溢出漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-0282</li></ul><p><strong>漏洞类型：</strong> 缓冲区溢出</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Ivanti Connect Secure &lt; 22.7R2.5、Ivanti Policy Secure &lt; 22.7R1.2以及Ivanti Neurons for ZTA gateways &lt; 22.7R2.3中存在一个栈基缓冲区溢出漏洞，这是由于不当的输入处理导致的，允许远程未认证攻击者通过发送特制请求执行任意代码。</p><p><strong>产品厂商：</strong> Ivanti</p><p><strong>产品名称：</strong> Ivanti Connect Secure, Ivanti Policy Secure, Ivanti Neurons for ZTA gateways</p><p><strong>影响版本：</strong> Ivanti Connect Secure &lt; 22.7R2.5, Ivanti Policy Secure &lt; 22.7R1.2, Ivanti Neurons for ZTA gateways &lt; 22.7R2.3</p><p><strong>搜索语法：</strong> http.title:”ivanti connect secure”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12130">https://github.com/projectdiscovery/nuclei-templates/issues/12130</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Ivanti Connect Secure &lt; 22.7R2.5, Ivanti Policy Secure &lt; 22.7R1.2, and Ivanti Neurons for ZTA gateways &lt; 22.7R2.3 contain a stack-based buffer overflow caused by improper input handling, letting remote unauthenticated attackers execute arbitrary code, exploit requires sending crafted requests.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://cloud.google.com/blog/topics/threat-intelligence/ivanti-connect-secure-vpn-zero-day">https://cloud.google.com/blog/topics/threat-intelligence/ivanti-connect-secure-vpn-zero-day</a></li><li><a href="https://github.com/sfewer-r7/CVE-2025-0282">https://github.com/sfewer-r7/CVE-2025-0282</a></li><li><a href="https://labs.watchtowr.com/exploitation-walkthrough-and-techniques-ivanti-connect-secure-rce-cve-2025-0282/">https://labs.watchtowr.com/exploitation-walkthrough-and-techniques-ivanti-connect-secure-rce-cve-2025-0282/</a></li><li><a href="https://github.com/punitdarji/Ivanti-CVE-2025-0282">https://github.com/punitdarji/Ivanti-CVE-2025-0282</a></li><li><a href="https://vulncheck.com/xdb/043030d6caa4">https://vulncheck.com/xdb/043030d6caa4</a></li><li><a href="https://github.com/44xo/CVE-2025-0282">https://github.com/44xo/CVE-2025-0282</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:44xo&#x2F;CVE-2025-0282.git</li><li><a href="https://github.com/AdaniKamal/CVE-2025-0282">https://github.com/AdaniKamal/CVE-2025-0282</a></li><li><a href="https://vulncheck.com/xdb/858b463ecabe">https://vulncheck.com/xdb/858b463ecabe</a></li><li><a href="https://github.com/almanatra/CVE-2025-0282">https://github.com/almanatra/CVE-2025-0282</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:almanatra&#x2F;CVE-2025-0282.git</li><li><a href="https://github.com/Hexastrike/Ivanti-Connect-Secure-Logs-Parser">https://github.com/Hexastrike/Ivanti-Connect-Secure-Logs-Parser</a></li><li><a href="https://vulncheck.com/xdb/d343e6784986">https://vulncheck.com/xdb/d343e6784986</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:sfewer-r7&#x2F;CVE-2025-0282.git</li><li><a href="https://github.com/watchtowrlabs/CVE-2025-0282">https://github.com/watchtowrlabs/CVE-2025-0282</a></li><li><a href="https://github.com/rxwx/pulse-meter">https://github.com/rxwx/pulse-meter</a></li><li><a href="https://github.com/AnonStorks/CVE-2025-0282-Full-version">https://github.com/AnonStorks/CVE-2025-0282-Full-version</a></li><li><a href="https://github.com/absholi7ly/CVE-2025-0282-Ivanti-exploit">https://github.com/absholi7ly/CVE-2025-0282-Ivanti-exploit</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-http-title-ivanti-connect-secure"><a href="#Shodan-Query-http-title-ivanti-connect-secure" class="headerlink" title="Shodan Query: http.title:&quot;ivanti connect secure&quot;"></a>Shodan Query: <code>http.title:&quot;ivanti connect secure&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Ivanti Connect Secure 缓冲区溢出漏洞&lt;/p&gt;
-&lt;p&gt;&lt;s</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="缓冲区溢出" scheme="http://example.com/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/"/>
     
   </entry>
   
