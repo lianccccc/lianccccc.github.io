@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-25T14:30:17.522Z</updated>
+  <updated>2025-06-25T15:24:00.518Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【已复现】Gogs 远程命令执行漏洞</title>
+    <link href="http://example.com/2025/06/25/weixin_199558595/"/>
+    <id>http://example.com/2025/06/25/weixin_199558595/</id>
+    <published>2025-06-25T15:24:00.522Z</published>
+    <updated>2025-06-25T15:24:00.518Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 长亭安全应急响应中心</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/9DotwPXIOVI_Ooy9wqBdjg">https://mp.weixin.qq.com/s/9DotwPXIOVI_Ooy9wqBdjg</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 长亭安全应急响应中心&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/9DotwPXIOVI_Ooy9wqBdjg&quot;&gt;https://mp.weixi</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="长亭安全应急响应中心" scheme="http://example.com/tags/%E9%95%BF%E4%BA%AD%E5%AE%89%E5%85%A8%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94%E4%B8%AD%E5%BF%83/"/>
+    
+  </entry>
   
   <entry>
     <title>CentOS Web Panel 未授权远程代码执行漏洞</title>
@@ -507,33 +534,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 飓风网络安全&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/pUJjIAJDyd3r1kV-WbQGUA&quot;&gt;https://mp.weixin.qq</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="飓风网络安全" scheme="http://example.com/tags/%E9%A3%93%E9%A3%8E%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【高危漏洞预警】 Gogs内部文件删除致远程命令注入漏洞</title>
-    <link href="http://example.com/2025/06/25/weixin_2204491623/"/>
-    <id>http://example.com/2025/06/25/weixin_2204491623/</id>
-    <published>2025-06-25T09:43:09.838Z</published>
-    <updated>2025-06-25T09:43:09.835Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 飓风网络安全</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/NoEos95najM7GolqppR4-g">https://mp.weixin.qq.com/s/NoEos95najM7GolqppR4-g</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 飓风网络安全&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/NoEos95najM7GolqppR4-g&quot;&gt;https://mp.weixin.qq</summary>
       
     
     
