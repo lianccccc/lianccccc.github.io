@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-25T19:30:20.459Z</updated>
+  <updated>2025-06-25T19:45:35.640Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CVE-2025-49144 PoC</title>
+    <link href="http://example.com/2025/06/25/github_2000073445/"/>
+    <id>http://example.com/2025/06/25/github_2000073445/</id>
+    <published>2025-06-25T19:45:35.644Z</published>
+    <updated>2025-06-25T19:45:35.640Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CVE-2025-49144 PoC</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-49144</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> CVE-2025-49144 PoC供安全研究人员测试和尝试。</p><p><strong>来源：</strong> <a href="https://github.com/TheTorjanCaptain/CVE-2025-49144_PoC">https://github.com/TheTorjanCaptain/CVE-2025-49144_PoC</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>LICENSE</li><li>README.md</li><li>regsvr32_loader.c</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-49144-PoC"><a href="#CVE-2025-49144-PoC" class="headerlink" title="CVE-2025-49144_PoC"></a>CVE-2025-49144_PoC</h2><p>CVE-2025-49144 PoC for security researchers to test and try.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CVE-2025-49144 PoC&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vite Arbitrary File Read Vulnerability</title>
+    <link href="http://example.com/2025/06/25/github_2359697087/"/>
+    <id>http://example.com/2025/06/25/github_2359697087/</id>
+    <published>2025-06-25T19:45:21.223Z</published>
+    <updated>2025-06-25T19:45:21.224Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Vite Arbitrary File Read Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-30208</li></ul><p><strong>漏洞类型：</strong> 文件读取</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> CVE-2025-30208是Vite开发服务器中的一个中等严重性的任意文件读取漏洞。该漏洞允许通过特制的HTTP请求绕过路径访问限制，暴露任意文件（如系统或源文件）。影响版本包括4.5.0至4.5.9、5.0.0至5.4.14和6.0.0至6.2.2。建议升级到修复版本（4.5.10、5.4.15、6.0.12、6.1.2或6.2.3）并避免将开发服务器暴露在公共网络中。</p><p><strong>产品厂商：</strong> Vite</p><p><strong>产品名称：</strong> Vite</p><p><strong>影响版本：</strong> 4.5.0 – 4.5.9, 5.0.0 – 5.4.14, 6.0.0 – 6.2.2</p><p><strong>来源：</strong> <a href="https://github.com/B1ack4sh/Blackash-CVE-2025-30208">https://github.com/B1ack4sh/Blackash-CVE-2025-30208</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2025-30208.py</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-30208-Vite-Arbitrary-File-Read-vulnerability-🌌"><a href="#CVE-2025-30208-Vite-Arbitrary-File-Read-vulnerability-🌌" class="headerlink" title="CVE-2025-30208 Vite Arbitrary File Read vulnerability 🌌"></a>CVE-2025-30208 Vite Arbitrary File Read vulnerability 🌌</h2><p>Here’s a detailed overview of <strong>CVE‑2025‑30208</strong>, a medium-severity arbitrary file‑read vulnerability in Vite’s dev server:</p><hr><h3 id="🛠️-What-is-it"><a href="#🛠️-What-is-it" class="headerlink" title="🛠️ What is it?"></a>🛠️ What is it?</h3><ul><li>Vite’s <code>@fs</code> module allows static file access in development mode with path allowances controlled by <code>server.fs.allow</code>.</li><li>Versions <strong>before</strong> 6.2.3, 6.1.2, 6.0.12, 5.4.15, and 4.5.10 contain a flaw: URLs crafted with trailing query markers like <code>?raw??</code> or <code>?import&amp;raw??</code> can bypass access restrictions and expose arbitrary files (e.g., system or source files) (<a href="https://nvd.nist.gov/vuln/detail/CVE-2025-30208?utm_source=chatgpt.com" title="CVE-2025-30208 Detail - NVD">nvd.nist.gov</a>).</li></ul><hr><h3 id="🔍-Who’s-affected"><a href="#🔍-Who’s-affected" class="headerlink" title="🔍 Who’s affected?"></a>🔍 Who’s affected?</h3><ul><li><p>Vite dev‑servers explicitly <strong>exposed to the network</strong>, enabled via <code>--host</code> or <code>server.host</code>.</p></li><li><p>Vulnerable version ranges:</p><ul><li>4.5.0 – 4.5.9</li><li>5.0.0 – 5.4.14</li><li>6.0.0 – 6.2.2 (with sub-versions as detailed) (<a href="https://nsfocusglobal.com/vite-arbitrary-file-read-vulnerability-cve-2025-30208/?utm_source=chatgpt.com" title="Vite Arbitrary File Read vulnerability (CVE-2025-30208) - NSFocus">nsfocusglobal.com</a>).</li></ul></li></ul><hr><h3 id="⚠️-Severity-Impact"><a href="#⚠️-Severity-Impact" class="headerlink" title="⚠️ Severity &amp; Impact"></a>⚠️ Severity &amp; Impact</h3><ul><li><strong>CVSS 3.1 score: 5.3 (Medium 🟠)</strong>: Network attack, no privileges, high confidentiality impact (<a href="https://www.wiz.io/vulnerability-database/cve/cve-2025-30208?utm_source=chatgpt.com" title="CVE-2025-30208 Impact, Exploitability, and Mitigation Steps | Wiz">wiz.io</a>).</li><li>Exploitability: straightforward via crafted HTTP requests out of development servers (<a href="https://www.wiz.io/vulnerability-database/cve/cve-2025-30208?utm_source=chatgpt.com" title="CVE-2025-30208 Impact, Exploitability, and Mitigation Steps | Wiz">wiz.io</a>).</li><li>Public PoC is available, including scripts demonstrating <code>/etc/passwd</code> leaks (<a href="https://security.snyk.io/vuln/SNYK-JS-VITE-9512410?utm_source=chatgpt.com" title="Incorrect Authorization in vite | CVE-2025-30208 | Snyk">github.com</a>).</li></ul><hr><h3 id="🛡️-Mitigation-Response"><a href="#🛡️-Mitigation-Response" class="headerlink" title="🛡️ Mitigation &amp; Response"></a>🛡️ Mitigation &amp; Response</h3><ul><li><p><strong>Upgrade Vite</strong> to one of the patched versions:</p><ul><li><strong>6.2.3</strong>, <strong>6.1.2</strong>, <strong>6.0.12</strong>, <strong>5.4.15</strong>, or <strong>4.5.10</strong> (<a href="https://nvd.nist.gov/vuln/detail/CVE-2025-30208?utm_source=chatgpt.com" title="CVE-2025-30208 Detail - NVD">nvd.nist.gov</a>).</li></ul></li><li><p><strong>Avoid exposing</strong> dev servers to public networks; limit with <code>localhost</code> or firewall rules (<a href="https://www.wiz.io/vulnerability-database/cve/cve-2025-30208?utm_source=chatgpt.com" title="CVE-2025-30208 Impact, Exploitability, and Mitigation Steps | Wiz">wiz.io</a>).</p></li><li><p>Additional scanning tools (e.g., NSFocus EZ, Sangfor, Tenable) support detection (<a href="https://nsfocusglobal.com/vite-arbitrary-file-read-vulnerability-cve-2025-30208/?utm_source=chatgpt.com" title="Vite Arbitrary File Read vulnerability (CVE-2025-30208) - NSFocus">nsfocusglobal.com</a>).</p></li></ul><hr><h3 id="✅-Summary-Table"><a href="#✅-Summary-Table" class="headerlink" title="✅ Summary Table"></a>✅ Summary Table</h3><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs gherkin">|<span class="hljs-string"> Aspect             </span>|<span class="hljs-string"> Details                                                    </span>|<br>|<span class="hljs-string"> ------------------ </span>|<span class="hljs-string"> ---------------------------------------------------------- </span>|<br>|<span class="hljs-string"> **Flaw**           </span>|<span class="hljs-string"> `@fs` path filter bypass via malformed query strings       </span>|<br>|<span class="hljs-string"> **Versions**       </span>|<span class="hljs-string"> &lt;4.5.10, &lt;5.4.15, &lt;6.0.12, &lt;6.1.2, &lt;6.2.3                  </span>|<br>|<span class="hljs-string"> **Severity**       </span>|<span class="hljs-string"> Medium (CVSS 5.3), network exploit, confidentiality impact </span>|<br>|<span class="hljs-string"> **Exploitability** </span>|<span class="hljs-string"> Easy; PoC exists                                           </span>|<br>|<span class="hljs-string"> **Patched in**     </span>|<span class="hljs-string"> Vite 4.5.10, 5.4.15, 6.0.12, 6.1.2, 6.2.3                  </span>|<br>|<span class="hljs-string"> **Mitigation**     </span>|<span class="hljs-string"> Upgrade + avoid exposing dev server                        </span>|<br></code></pre></td></tr></table></figure><hr><h3 id="🔗-References-Sources"><a href="#🔗-References-Sources" class="headerlink" title="🔗 References &amp; Sources"></a>🔗 References &amp; Sources</h3><ul><li>NVD &#x2F; GitHub Advisory (Mar 24 2025) (<a href="https://nvd.nist.gov/vuln/detail/CVE-2025-30208?utm_source=chatgpt.com" title="CVE-2025-30208 Detail - NVD">nvd.nist.gov</a>, <a href="https://www.wiz.io/vulnerability-database/cve/cve-2025-30208?utm_source=chatgpt.com" title="CVE-2025-30208 Impact, Exploitability, and Mitigation Steps | Wiz">wiz.io</a>, <a href="https://www.recordedfuture.com/vulnerability-database/CVE-2025-30208?utm_source=chatgpt.com" title="CVE-2025-30208 Description, Impact and Technical Details">security.snyk.io</a>, [recordedfuture.com][6])</li><li>Technical writeups: NSFocus, Sangfor, Snyk, Recorded Future&#x20;</li></ul><hr><h3 id="✅-Recommended-Next-Steps"><a href="#✅-Recommended-Next-Steps" class="headerlink" title="✅ Recommended Next Steps"></a>✅ Recommended Next Steps</h3><ol><li><strong>Audit your Vite versions</strong> in development environments, especially any exposed externally.</li><li><strong>Upgrade</strong> immediately to a fixed version.</li><li><strong>Restrict access</strong> to development servers—bind to <code>localhost</code>, use VPNs or firewalls.</li><li><strong>Run security scans&#x2F;tools</strong> to detect CVE‑2025‑30208 in your infrastructure.</li><li><strong>Monitor your logs</strong> for suspicious <code>/@fs/...?...?</code> requests.</li></ol><p>Let me know if you’d like help implementing fixes, crafting firewall rules, or assessing exposure!</p><h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples:"></a>Examples:</h3><p>1- Single target exploitation:</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">python3</span> cve-<span class="hljs-number">2025</span>-<span class="hljs-number">30208</span>.py -u example.com:<span class="hljs-number">5173</span><br></code></pre></td></tr></table></figure><p>2- Single target with custom LFI path to leak the file we want:</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">python3 cve-<span class="hljs-number">2025</span>-<span class="hljs-number">30208</span><span class="hljs-selector-class">.py</span> -u example<span class="hljs-selector-class">.com</span>:<span class="hljs-number">5173</span> -<span class="hljs-selector-tag">p</span> <span class="hljs-string">&#x27;/root/.ssh/id_rsa&#x27;</span><br></code></pre></td></tr></table></figure><p>3- Batch exploitation with multiple targets:</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">python3</span> cve-<span class="hljs-number">2025</span>-<span class="hljs-number">30208</span>.py -f targets.txt<br></code></pre></td></tr></table></figure><p>4- Custom bypass query:</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">python3</span> cve-<span class="hljs-number">2025</span>-<span class="hljs-number">30208</span>.py -u example.com:<span class="hljs-number">5173</span> -b <span class="hljs-string">&quot;?raw&amp;url&quot;</span><br></code></pre></td></tr></table></figure><p>5- Using a proxy (e.g. Burp Suite):</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">python3</span> cve-<span class="hljs-number">2025</span>-<span class="hljs-number">30208</span>.py -u example.com:<span class="hljs-number">5173</span> --proxy http://<span class="hljs-number">127.0.0.1:8080</span><br></code></pre></td></tr></table></figure><p>6- Custom output directory:</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">python3</span> cve-<span class="hljs-number">2025</span>-<span class="hljs-number">30208</span>.py -u example.com:<span class="hljs-number">5173</span> -o ./loot<br></code></pre></td></tr></table></figure><p>7- Increase thread count in batch mode:</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">python3</span> cve-<span class="hljs-number">2025</span>-<span class="hljs-number">30208</span>.py -f targets.txt -t <span class="hljs-number">50</span><br></code></pre></td></tr></table></figure><h3 id="⚠️-Disclaimer"><a href="#⚠️-Disclaimer" class="headerlink" title="⚠️ Disclaimer"></a>⚠️ Disclaimer</h3><p>This project is created for <strong>educational and research purposes only</strong>. The author is not responsible for any misuse of this tool or information provided herein.</p><p>Using this software against systems without explicit permission is <strong>illegal</strong> and strictly prohibited. Always ensure you have <strong>written authorization</strong> before performing any security testing.</p><p>By using this repository, you agree to comply with all applicable local, state, national, and international laws.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Vite Arbitrary File Read Vulnerability&lt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="文件读取" scheme="http://example.com/tags/%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96/"/>
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+  </entry>
   
   <entry>
     <title>Ivanti Buffer Overflow Vulnerability</title>
@@ -488,60 +541,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="XML实体注入" scheme="http://example.com/tags/XML%E5%AE%9E%E4%BD%93%E6%B3%A8%E5%85%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Apache Kyuubi 配置暴露漏洞</title>
-    <link href="http://example.com/2025/06/25/github_4123779536/"/>
-    <id>http://example.com/2025/06/25/github_4123779536/</id>
-    <published>2025-06-25T13:15:18.077Z</published>
-    <updated>2025-06-25T13:15:18.075Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache Kyuubi 配置暴露漏洞</p><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 检测Apache Kyuubi web应用程序的路径Appconfigs是否暴露，获取有关配置的内部信息。</p><p><strong>产品厂商：</strong> apache</p><p><strong>产品名称：</strong> kyuubi</p><p><strong>影响版本：</strong> *</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/ada5ee3a04158d711026de45047c0ba38c64a90a/http%2Fexposures%2Fconfigs%2Fapache-kyuubi-config.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/ada5ee3a04158d711026de45047c0ba38c64a90a/http%2Fexposures%2Fconfigs%2Fapache-kyuubi-config.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><br><span class="hljs-attribute">id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">apache-kyuubi-config</span><br><br><span class="hljs-attribute">info</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Apache Kyuubi - Configuration Exposure</span><br>  <span class="hljs-attribute">author</span><span class="hljs-punctuation">:</span> <span class="hljs-string">icarot</span><br>  <span class="hljs-attribute">severity</span><span class="hljs-punctuation">:</span> <span class="hljs-string">medium</span><br>  <span class="hljs-attribute">description</span><span class="hljs-punctuation">:</span> <span class="hljs-string">|</span><br>    <span class="hljs-attribute">Detects if path Appconfigs of Apache Kyuubi web application is exposed, getting internal information about the configuration made.</span><br><span class="hljs-attribute">  classification</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">cpe</span><span class="hljs-punctuation">:</span> <span class="hljs-string">cpe:2.3:a:apache:kyuubi:*:*:*:*:*:*:*:*</span><br>  <span class="hljs-attribute">metadata</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">max-request</span><span class="hljs-punctuation">:</span> <span class="hljs-string">1</span><br>    <span class="hljs-attribute">vendor</span><span class="hljs-punctuation">:</span> <span class="hljs-string">apache</span><br>    <span class="hljs-attribute">product</span><span class="hljs-punctuation">:</span> <span class="hljs-string">kyuubi</span><br>  <span class="hljs-attribute">tags</span><span class="hljs-punctuation">:</span> <span class="hljs-string">config,exposure,kyuubi,apache</span><br><br><span class="hljs-attribute">http</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">method: GET</span><br>    <span class="hljs-attribute">path</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/engine-ui/0.0.0.0:4040/environment/&quot;</span><br><br>    <span class="hljs-attribute">matchers-condition</span><span class="hljs-punctuation">:</span> <span class="hljs-string">and</span><br>    <span class="hljs-attribute">matchers</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: word</span><br>        <span class="hljs-attribute">words</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;Environment&lt;/title&gt;&#x27;</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;kyuubi&#x27;</span><br>        <span class="hljs-attribute">condition</span><span class="hljs-punctuation">:</span> <span class="hljs-string">and</span><br><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: status</span><br>        <span class="hljs-attribute">status</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">200</span><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Apache Kyuubi 配置暴露漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞类</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>中东网络战升级，GPS欺骗、虚假警报等事件曝光</title>
-    <link href="http://example.com/2025/06/25/weixin_3547032569/"/>
-    <id>http://example.com/2025/06/25/weixin_3547032569/</id>
-    <published>2025-06-25T11:50:35.132Z</published>
-    <updated>2025-06-25T11:50:35.132Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/F4ehvyG8W_NZuuqC3GlXVQ">https://mp.weixin.qq.com/s/F4ehvyG8W_NZuuqC3GlXVQ</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/F4ehvyG8W_NZuuqC3GlXVQ&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
     
   </entry>
   

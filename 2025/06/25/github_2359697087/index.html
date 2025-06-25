@@ -1,0 +1,738 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=light>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="lianccc">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="漏洞信息漏洞名称： Vite Arbitrary File Read Vulnerability 漏洞编号：  CVE： CVE-2025-30208  漏洞类型： 文件读取 漏洞等级： 中危 漏洞描述： CVE-2025-30208是Vite开发服务器中的一个中等严重性的任意文件读取漏洞。该漏洞允许通过特制的HTTP请求绕过路径访问限制，暴露任意文件（如系统或源文件）。影响版本包括4.5.0至4">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vite Arbitrary File Read Vulnerability">
+<meta property="og:url" content="http://example.com/2025/06/25/github_2359697087/index.html">
+<meta property="og:site_name" content="liancc&#39; infos blog">
+<meta property="og:description" content="漏洞信息漏洞名称： Vite Arbitrary File Read Vulnerability 漏洞编号：  CVE： CVE-2025-30208  漏洞类型： 文件读取 漏洞等级： 中危 漏洞描述： CVE-2025-30208是Vite开发服务器中的一个中等严重性的任意文件读取漏洞。该漏洞允许通过特制的HTTP请求绕过路径访问限制，暴露任意文件（如系统或源文件）。影响版本包括4.5.0至4">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-06-25T19:45:21.223Z">
+<meta property="article:modified_time" content="2025-06-25T19:45:21.224Z">
+<meta property="article:author" content="lianccc">
+<meta property="article:tag" content="文件读取">
+<meta property="article:tag" content="CVE-2025:github search">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>Vite Arbitrary File Read Vulnerability - liancc&#39; infos blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="liancc' infos blog" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Craw Info</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Vite Arbitrary File Read Vulnerability"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-06-25 19:45" pubdate>
+          2025年6月25日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          535 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          5 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Vite Arbitrary File Read Vulnerability</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Vite Arbitrary File Read Vulnerability</p>
+<p><strong>漏洞编号：</strong></p>
+<ul>
+<li><strong>CVE：</strong> CVE-2025-30208</li>
+</ul>
+<p><strong>漏洞类型：</strong> 文件读取</p>
+<p><strong>漏洞等级：</strong> 中危</p>
+<p><strong>漏洞描述：</strong> CVE-2025-30208是Vite开发服务器中的一个中等严重性的任意文件读取漏洞。该漏洞允许通过特制的HTTP请求绕过路径访问限制，暴露任意文件（如系统或源文件）。影响版本包括4.5.0至4.5.9、5.0.0至5.4.14和6.0.0至6.2.2。建议升级到修复版本（4.5.10、5.4.15、6.0.12、6.1.2或6.2.3）并避免将开发服务器暴露在公共网络中。</p>
+<p><strong>产品厂商：</strong> Vite</p>
+<p><strong>产品名称：</strong> Vite</p>
+<p><strong>影响版本：</strong> 4.5.0 – 4.5.9, 5.0.0 – 5.4.14, 6.0.0 – 6.2.2</p>
+<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/B1ack4sh/Blackash-CVE-2025-30208">https://github.com/B1ack4sh/Blackash-CVE-2025-30208</a></p>
+<p><strong>类型：</strong> CVE-2025:github search</p>
+<h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul>
+<li>CVE-2025-30208.py</li>
+<li>README.md</li>
+</ul>
+<h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-30208-Vite-Arbitrary-File-Read-vulnerability-🌌"><a href="#CVE-2025-30208-Vite-Arbitrary-File-Read-vulnerability-🌌" class="headerlink" title="CVE-2025-30208 Vite Arbitrary File Read vulnerability 🌌"></a>CVE-2025-30208 Vite Arbitrary File Read vulnerability 🌌</h2><p>Here’s a detailed overview of <strong>CVE‑2025‑30208</strong>, a medium-severity arbitrary file‑read vulnerability in Vite’s dev server:</p>
+<hr>
+<h3 id="🛠️-What-is-it"><a href="#🛠️-What-is-it" class="headerlink" title="🛠️ What is it?"></a>🛠️ What is it?</h3><ul>
+<li>Vite’s <code>@fs</code> module allows static file access in development mode with path allowances controlled by <code>server.fs.allow</code>.</li>
+<li>Versions <strong>before</strong> 6.2.3, 6.1.2, 6.0.12, 5.4.15, and 4.5.10 contain a flaw: URLs crafted with trailing query markers like <code>?raw??</code> or <code>?import&amp;raw??</code> can bypass access restrictions and expose arbitrary files (e.g., system or source files) (<a target="_blank" rel="noopener" href="https://nvd.nist.gov/vuln/detail/CVE-2025-30208?utm_source=chatgpt.com" title="CVE-2025-30208 Detail - NVD">nvd.nist.gov</a>).</li>
+</ul>
+<hr>
+<h3 id="🔍-Who’s-affected"><a href="#🔍-Who’s-affected" class="headerlink" title="🔍 Who’s affected?"></a>🔍 Who’s affected?</h3><ul>
+<li><p>Vite dev‑servers explicitly <strong>exposed to the network</strong>, enabled via <code>--host</code> or <code>server.host</code>.</p>
+</li>
+<li><p>Vulnerable version ranges:</p>
+<ul>
+<li>4.5.0 – 4.5.9</li>
+<li>5.0.0 – 5.4.14</li>
+<li>6.0.0 – 6.2.2 (with sub-versions as detailed) (<a target="_blank" rel="noopener" href="https://nsfocusglobal.com/vite-arbitrary-file-read-vulnerability-cve-2025-30208/?utm_source=chatgpt.com" title="Vite Arbitrary File Read vulnerability (CVE-2025-30208) - NSFocus">nsfocusglobal.com</a>).</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="⚠️-Severity-Impact"><a href="#⚠️-Severity-Impact" class="headerlink" title="⚠️ Severity &amp; Impact"></a>⚠️ Severity &amp; Impact</h3><ul>
+<li><strong>CVSS 3.1 score: 5.3 (Medium 🟠)</strong>: Network attack, no privileges, high confidentiality impact (<a target="_blank" rel="noopener" href="https://www.wiz.io/vulnerability-database/cve/cve-2025-30208?utm_source=chatgpt.com" title="CVE-2025-30208 Impact, Exploitability, and Mitigation Steps | Wiz">wiz.io</a>).</li>
+<li>Exploitability: straightforward via crafted HTTP requests out of development servers (<a target="_blank" rel="noopener" href="https://www.wiz.io/vulnerability-database/cve/cve-2025-30208?utm_source=chatgpt.com" title="CVE-2025-30208 Impact, Exploitability, and Mitigation Steps | Wiz">wiz.io</a>).</li>
+<li>Public PoC is available, including scripts demonstrating <code>/etc/passwd</code> leaks (<a target="_blank" rel="noopener" href="https://security.snyk.io/vuln/SNYK-JS-VITE-9512410?utm_source=chatgpt.com" title="Incorrect Authorization in vite | CVE-2025-30208 | Snyk">github.com</a>).</li>
+</ul>
+<hr>
+<h3 id="🛡️-Mitigation-Response"><a href="#🛡️-Mitigation-Response" class="headerlink" title="🛡️ Mitigation &amp; Response"></a>🛡️ Mitigation &amp; Response</h3><ul>
+<li><p><strong>Upgrade Vite</strong> to one of the patched versions:</p>
+<ul>
+<li><strong>6.2.3</strong>, <strong>6.1.2</strong>, <strong>6.0.12</strong>, <strong>5.4.15</strong>, or <strong>4.5.10</strong> (<a target="_blank" rel="noopener" href="https://nvd.nist.gov/vuln/detail/CVE-2025-30208?utm_source=chatgpt.com" title="CVE-2025-30208 Detail - NVD">nvd.nist.gov</a>).</li>
+</ul>
+</li>
+<li><p><strong>Avoid exposing</strong> dev servers to public networks; limit with <code>localhost</code> or firewall rules (<a target="_blank" rel="noopener" href="https://www.wiz.io/vulnerability-database/cve/cve-2025-30208?utm_source=chatgpt.com" title="CVE-2025-30208 Impact, Exploitability, and Mitigation Steps | Wiz">wiz.io</a>).</p>
+</li>
+<li><p>Additional scanning tools (e.g., NSFocus EZ, Sangfor, Tenable) support detection (<a target="_blank" rel="noopener" href="https://nsfocusglobal.com/vite-arbitrary-file-read-vulnerability-cve-2025-30208/?utm_source=chatgpt.com" title="Vite Arbitrary File Read vulnerability (CVE-2025-30208) - NSFocus">nsfocusglobal.com</a>).</p>
+</li>
+</ul>
+<hr>
+<h3 id="✅-Summary-Table"><a href="#✅-Summary-Table" class="headerlink" title="✅ Summary Table"></a>✅ Summary Table</h3><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs gherkin">|<span class="hljs-string"> Aspect             </span>|<span class="hljs-string"> Details                                                    </span>|<br>|<span class="hljs-string"> ------------------ </span>|<span class="hljs-string"> ---------------------------------------------------------- </span>|<br>|<span class="hljs-string"> **Flaw**           </span>|<span class="hljs-string"> `@fs` path filter bypass via malformed query strings       </span>|<br>|<span class="hljs-string"> **Versions**       </span>|<span class="hljs-string"> &lt;4.5.10, &lt;5.4.15, &lt;6.0.12, &lt;6.1.2, &lt;6.2.3                  </span>|<br>|<span class="hljs-string"> **Severity**       </span>|<span class="hljs-string"> Medium (CVSS 5.3), network exploit, confidentiality impact </span>|<br>|<span class="hljs-string"> **Exploitability** </span>|<span class="hljs-string"> Easy; PoC exists                                           </span>|<br>|<span class="hljs-string"> **Patched in**     </span>|<span class="hljs-string"> Vite 4.5.10, 5.4.15, 6.0.12, 6.1.2, 6.2.3                  </span>|<br>|<span class="hljs-string"> **Mitigation**     </span>|<span class="hljs-string"> Upgrade + avoid exposing dev server                        </span>|<br></code></pre></td></tr></table></figure>
+<hr>
+<h3 id="🔗-References-Sources"><a href="#🔗-References-Sources" class="headerlink" title="🔗 References &amp; Sources"></a>🔗 References &amp; Sources</h3><ul>
+<li>NVD &#x2F; GitHub Advisory (Mar 24 2025) (<a target="_blank" rel="noopener" href="https://nvd.nist.gov/vuln/detail/CVE-2025-30208?utm_source=chatgpt.com" title="CVE-2025-30208 Detail - NVD">nvd.nist.gov</a>, <a target="_blank" rel="noopener" href="https://www.wiz.io/vulnerability-database/cve/cve-2025-30208?utm_source=chatgpt.com" title="CVE-2025-30208 Impact, Exploitability, and Mitigation Steps | Wiz">wiz.io</a>, <a target="_blank" rel="noopener" href="https://www.recordedfuture.com/vulnerability-database/CVE-2025-30208?utm_source=chatgpt.com" title="CVE-2025-30208 Description, Impact and Technical Details">security.snyk.io</a>, [recordedfuture.com][6])</li>
+<li>Technical writeups: NSFocus, Sangfor, Snyk, Recorded Future&#x20;</li>
+</ul>
+<hr>
+<h3 id="✅-Recommended-Next-Steps"><a href="#✅-Recommended-Next-Steps" class="headerlink" title="✅ Recommended Next Steps"></a>✅ Recommended Next Steps</h3><ol>
+<li><strong>Audit your Vite versions</strong> in development environments, especially any exposed externally.</li>
+<li><strong>Upgrade</strong> immediately to a fixed version.</li>
+<li><strong>Restrict access</strong> to development servers—bind to <code>localhost</code>, use VPNs or firewalls.</li>
+<li><strong>Run security scans&#x2F;tools</strong> to detect CVE‑2025‑30208 in your infrastructure.</li>
+<li><strong>Monitor your logs</strong> for suspicious <code>/@fs/...?...?</code> requests.</li>
+</ol>
+<p>Let me know if you’d like help implementing fixes, crafting firewall rules, or assessing exposure!</p>
+<h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples:"></a>Examples:</h3><p>1- Single target exploitation:</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">python3</span> cve-<span class="hljs-number">2025</span>-<span class="hljs-number">30208</span>.py -u example.com:<span class="hljs-number">5173</span><br></code></pre></td></tr></table></figure>
+<p>2- Single target with custom LFI path to leak the file we want:</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">python3 cve-<span class="hljs-number">2025</span>-<span class="hljs-number">30208</span><span class="hljs-selector-class">.py</span> -u example<span class="hljs-selector-class">.com</span>:<span class="hljs-number">5173</span> -<span class="hljs-selector-tag">p</span> <span class="hljs-string">&#x27;/root/.ssh/id_rsa&#x27;</span><br></code></pre></td></tr></table></figure>
+<p>3- Batch exploitation with multiple targets:</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">python3</span> cve-<span class="hljs-number">2025</span>-<span class="hljs-number">30208</span>.py -f targets.txt<br></code></pre></td></tr></table></figure>
+<p>4- Custom bypass query:</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">python3</span> cve-<span class="hljs-number">2025</span>-<span class="hljs-number">30208</span>.py -u example.com:<span class="hljs-number">5173</span> -b <span class="hljs-string">&quot;?raw&amp;url&quot;</span><br></code></pre></td></tr></table></figure>
+<p>5- Using a proxy (e.g. Burp Suite):</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">python3</span> cve-<span class="hljs-number">2025</span>-<span class="hljs-number">30208</span>.py -u example.com:<span class="hljs-number">5173</span> --proxy http://<span class="hljs-number">127.0.0.1:8080</span><br></code></pre></td></tr></table></figure>
+<p>6- Custom output directory:</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">python3</span> cve-<span class="hljs-number">2025</span>-<span class="hljs-number">30208</span>.py -u example.com:<span class="hljs-number">5173</span> -o ./loot<br></code></pre></td></tr></table></figure>
+<p>7- Increase thread count in batch mode:</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">python3</span> cve-<span class="hljs-number">2025</span>-<span class="hljs-number">30208</span>.py -f targets.txt -t <span class="hljs-number">50</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="⚠️-Disclaimer"><a href="#⚠️-Disclaimer" class="headerlink" title="⚠️ Disclaimer"></a>⚠️ Disclaimer</h3><p>This project is created for <strong>educational and research purposes only</strong>. The author is not responsible for any misuse of this tool or information provided herein.</p>
+<p>Using this software against systems without explicit permission is <strong>illegal</strong> and strictly prohibited. Always ensure you have <strong>written authorization</strong> before performing any security testing.</p>
+<p>By using this repository, you agree to comply with all applicable local, state, national, and international laws.</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Github-Poc/" class="category-chain-item">Github Poc</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96/" class="print-no-link">#文件读取</a>
+      
+        <a href="/tags/CVE-2025-github-search/" class="print-no-link">#CVE-2025:github search</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Vite Arbitrary File Read Vulnerability</div>
+      <div>http://example.com/2025/06/25/github_2359697087/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>lianccc</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年6月25日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/06/25/github_2000073445/" title="CVE-2025-49144 PoC">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">CVE-2025-49144 PoC</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/06/25/github_2121782117/" title="Ivanti Buffer Overflow Vulnerability">
+                        <span class="hidden-mobile">Ivanti Buffer Overflow Vulnerability</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
