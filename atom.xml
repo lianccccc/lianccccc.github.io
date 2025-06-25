@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-25T20:15:43.426Z</updated>
+  <updated>2025-06-25T20:45:18.443Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vBulletin Remote Code Execution Vulnerability</title>
+    <link href="http://example.com/2025/06/25/github_172225911/"/>
+    <id>http://example.com/2025/06/25/github_172225911/</id>
+    <published>2025-06-25T20:45:18.445Z</published>
+    <updated>2025-06-25T20:45:18.443Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> vBulletin Remote Code Execution Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-48828</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 此Python工具自动化检测vBulletin中通过<code>replaceAdTemplate</code>利用向量的未认证远程代码执行漏洞。基于EgiX的原始概念验证，此版本支持批量扫描、多线程，并将确认易受攻击的目标记录到<code>vuln.txt</code>。漏洞影响使用<code>ajax/api/ad/replaceAdTemplate</code>路由的vBulletin易受攻击版本，导致未认证远程代码执行。</p><p><strong>产品厂商：</strong> vBulletin</p><p><strong>产品名称：</strong> vBulletin</p><p><strong>来源：</strong> <a href="https://github.com/ill-deed/vBulletin-CVE-2025-48828-Multi-target">https://github.com/ill-deed/vBulletin-CVE-2025-48828-Multi-target</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>LICENSE</li><li>README.md</li><li>scanner.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="💥-vBulletin-Remote-Code-Execution-Scanner-replaceAdTemplate"><a href="#💥-vBulletin-Remote-Code-Execution-Scanner-replaceAdTemplate" class="headerlink" title="💥 vBulletin Remote Code Execution Scanner (replaceAdTemplate)"></a>💥 vBulletin Remote Code Execution Scanner (replaceAdTemplate)</h2><p>This Python tool automates the detection of <strong>unauthenticated RCE</strong> vulnerabilities in <strong>vBulletin</strong> via the <code>replaceAdTemplate</code> exploit vector. Based on the original proof-of-concept by <strong>EgiX</strong>, this version supports <strong>batch scanning</strong>, <strong>multithreading</strong>, and logs confirmed vulnerable targets to <code>vuln.txt</code>.</p><h3 id="🔥-Vulnerability-Details"><a href="#🔥-Vulnerability-Details" class="headerlink" title="🔥 Vulnerability Details"></a>🔥 Vulnerability Details</h3><ul><li><strong>Exploit Name</strong>: <code>replaceAdTemplate</code> RCE</li><li><strong>CVE</strong>: CVE-2025-48828</li><li><strong>Affected</strong>: Vulnerable versions of vBulletin using the <code>ajax/api/ad/replaceAdTemplate</code> route</li><li><strong>Impact</strong>: Remote Code Execution (unauthenticated)</li></ul><h3 id="⚙️-Features"><a href="#⚙️-Features" class="headerlink" title="⚙️ Features"></a>⚙️ Features</h3><ul><li>🧠 Automatic command execution (<code>id</code>) to confirm RCE</li><li>🔎 Batch scan from a file (<code>targets.txt</code>)</li><li>⚡ Fast, multi-threaded scanner</li><li>🧾 Logs vulnerable targets and their output to <code>vuln.txt</code></li><li>💬 Clean, modular codebase</li></ul><h3 id="📦-Requirements"><a href="#📦-Requirements" class="headerlink" title="📦 Requirements"></a>📦 Requirements</h3><ul><li>Python 3.x</li><li><code>requests</code> module</li></ul><p>Install dependencies (if not already installed):</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install requests<br></code></pre></td></tr></table></figure><h3 id="📂-Usage"><a href="#📂-Usage" class="headerlink" title="📂 Usage"></a>📂 Usage</h3><ol><li>Prepare your target list<br>Create a file named targets.txt and add one target URL per line:</li></ol><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs accesslog">http://example.com/vb/<br>https://target.net/forum/<br><span class="hljs-number">192.168.1.100:8080</span>/vb/<br></code></pre></td></tr></table></figure><ol start="2"><li>Run the scanner:</li></ol><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vim"><span class="hljs-keyword">python3</span> scanner.<span class="hljs-keyword">py</span><br></code></pre></td></tr></table></figure><ol start="3"><li>Check vuln.txt for results:</li></ol><figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs haskell"><span class="hljs-title">http</span>://victim.com/vb | uid=<span class="hljs-number">33</span>(www-<span class="hljs-class"><span class="hljs-keyword">data</span>) gid=33(<span class="hljs-title">www</span>-<span class="hljs-title">data</span>) groups=33(<span class="hljs-title">www</span>-<span class="hljs-title">data</span>)</span><br></code></pre></td></tr></table></figure><h3 id="⚙️-Configuration"><a href="#⚙️-Configuration" class="headerlink" title="⚙️ Configuration"></a>⚙️ Configuration</h3><p>You can change these settings in the script:</p><p>COMMAND: Shell command to execute (default: id)</p><p>EXPECTED_OUTPUT: Expected substring to confirm execution (default: uid&#x3D;)</p><p>THREADS: Number of concurrent scans (default: 20)</p><p>TARGET_FILE: Input file of domains (default: targets.txt)</p><p>OUTPUT_FILE: Output log file (default: vuln.txt)</p><h3 id="⚠️-Disclaimer"><a href="#⚠️-Disclaimer" class="headerlink" title="⚠️ Disclaimer"></a>⚠️ Disclaimer</h3><p>This code is provided for educational and authorized security testing purposes only. Unauthorized use against systems without permission is illegal. The author and contributors are not responsible for misuse or damage caused by this software.</p><h3 id="🙏-Credits"><a href="#🙏-Credits" class="headerlink" title="🙏 Credits"></a>🙏 Credits</h3><p>Original exploit author: EgiX</p><p>Python adaptation &amp; batch scanner: ill deed</p><h3 id="📄-License"><a href="#📄-License" class="headerlink" title="📄 License"></a>📄 License</h3><p>MIT License – use responsibly.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; vBulletin Remote Code Execution Vulnera</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+  </entry>
   
   <entry>
     <title>TI WooCommerce Wishlist 文件上传漏洞</title>
@@ -518,30 +544,6 @@
     <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
     
     <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Allure Report allows Improper XXE Restriction via DocumentBuilderFactory</title>
-    <link href="http://example.com/2025/06/25/github_342469145/"/>
-    <id>http://example.com/2025/06/25/github_342469145/</id>
-    <published>2025-06-25T14:30:05.616Z</published>
-    <updated>2025-06-25T14:30:05.614Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-h7qf-qmf3-85qg">https://github.com/advisories/GHSA-h7qf-qmf3-85qg</a></p><p><strong>仓库 Star：</strong> 4689</p><p><strong>CVSS 评分：</strong> 7.5</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/allure-framework/allure2/security/advisories/GHSA-h7qf-qmf3-85qg">https://github.com/allure-framework/allure2/security/advisories/GHSA-h7qf-qmf3-85qg</a></p></li><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-52888">https://nvd.nist.gov/vuln/detail/CVE-2025-52888</a></p></li><li><p><a href="https://github.com/allure-framework/allure2/commit/cbcb33719851ff70adce85d38e15d20fc58d4eb7">https://github.com/allure-framework/allure2/commit/cbcb33719851ff70adce85d38e15d20fc58d4eb7</a></p></li><li><p><a href="https://github.com/advisories/GHSA-h7qf-qmf3-85qg">https://github.com/advisories/GHSA-h7qf-qmf3-85qg</a></p></li></ul><p><strong>描述：</strong></p><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>A critical XML External Entity (XXE) vulnerability exists in the xunit-xml-plugin used by Allure 2. The plugin fails to securely configure the XML parser (<code>DocumentBuilderFactory</code>) and allows external entity expansion when processing test result .xml files. This allows attackers to read arbitrary files from the file system and potentially trigger server-side request forgery (SSRF).</p><h3 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h3><p>In <code>\allure2-main\plugins\xunit-xml-plugin\src\main\java\io\qameta\allure\xunitxml\XunitXmlPlugin.java</code> the application uses <code>DocumentBuilderFactory</code> without disabling DTDs or external entities. By generating a report with a malicious xml file within it, an attacker can perform XXE to leverage SSRF, or to read system files.</p><h3 id="PoC"><a href="#PoC" class="headerlink" title="PoC"></a>PoC</h3><p>To recreate this vulnerability, you need to install allure for command-line (In my POC I used a Windows 11 Machine). </p><ol><li>Create a folder called <code>allure</code>, and within it, create a malicious XML file. I will attach my SSRF and file reading payloads, however, for the rest of the POC, I will focus on reading system files for better screenshots.</li></ol><p>##SSRF (replace webhook link with your own)<br><img src="https://github.com/user-attachments/assets/a1a9a438-b6f1-4675-973f-a43847a84519" alt="image"></p><p>##Reading System Files<br><img src="https://github.com/user-attachments/assets/eb0e1e60-1f76-42e7-b68d-2137bed62fe9" alt="image"></p><ol start="2"><li>Put the malicious .xml file into the <code>allure</code> directory created previously</li><li>Run the following command to run the report <code>allure generate C:\path\to\directory\allure -o report --clean</code></li><li>To view and confirm the executed payload, run <code>allure open report</code></li><li>When the report opens, confirm the payload executedby going to <code>Categories &gt; Product defects &gt; &lt;payload response&gt;</code><br><img src="https://github.com/user-attachments/assets/e7244550-2e9f-4066-b282-86f1eb8cf5e4" alt="image"></li></ol><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>The explained XXE vulnerability can lead to Arbitrary File Disclosure and Server-Side Request Forgery. This exploitation can also be carried out silently, meaning it can be carried out without user interaction if the tool is automated within an application, and can go undetected with a carefully crafted payload. This could allow a malicious actor to view other source codes which may contain API or product keys, internal application URLs, or other secret items. This makes it an especially high risk when ran within a CI&#x2F;CD platform.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-h7qf-qmf3-85qg&quot;&gt;https://github.com/advisories/GHSA-h7qf-qmf3-85qg&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
     
   </entry>
   
