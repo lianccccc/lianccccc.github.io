@@ -1,0 +1,786 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=light>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="lianccc">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="漏洞信息漏洞名称： CVE-2025-49132 Standalone Vulnerability Scanner 漏洞编号：  CVE： CVE-2025-49132  漏洞类型： 信息泄露 漏洞等级： 高危 漏洞描述： CVE-2025-49132 Standalone Vulnerability Scanner是一个无需Docker依赖的Python实现的漏洞扫描工具，能够检测数据库配置暴露">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CVE-2025-49132 Standalone Vulnerability Scanner">
+<meta property="og:url" content="http://example.com/2025/06/25/github_1524724713/index.html">
+<meta property="og:site_name" content="liancc&#39; infos blog">
+<meta property="og:description" content="漏洞信息漏洞名称： CVE-2025-49132 Standalone Vulnerability Scanner 漏洞编号：  CVE： CVE-2025-49132  漏洞类型： 信息泄露 漏洞等级： 高危 漏洞描述： CVE-2025-49132 Standalone Vulnerability Scanner是一个无需Docker依赖的Python实现的漏洞扫描工具，能够检测数据库配置暴露">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-06-25T18:45:16.656Z">
+<meta property="article:modified_time" content="2025-06-25T18:45:16.653Z">
+<meta property="article:author" content="lianccc">
+<meta property="article:tag" content="信息泄露">
+<meta property="article:tag" content="CVE-2025:github search">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>CVE-2025-49132 Standalone Vulnerability Scanner - liancc&#39; infos blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="liancc' infos blog" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Craw Info</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="CVE-2025-49132 Standalone Vulnerability Scanner"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-06-25 18:45" pubdate>
+          2025年6月25日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          369 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          4 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">CVE-2025-49132 Standalone Vulnerability Scanner</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CVE-2025-49132 Standalone Vulnerability Scanner</p>
+<p><strong>漏洞编号：</strong></p>
+<ul>
+<li><strong>CVE：</strong> CVE-2025-49132</li>
+</ul>
+<p><strong>漏洞类型：</strong> 信息泄露</p>
+<p><strong>漏洞等级：</strong> 高危</p>
+<p><strong>漏洞描述：</strong> CVE-2025-49132 Standalone Vulnerability Scanner是一个无需Docker依赖的Python实现的漏洞扫描工具，能够检测数据库配置暴露、应用配置、加密密钥和环境变量等敏感信息泄露。该工具支持单目标扫描、批量处理、交互模式等多种执行方式，并生成结构化的JSON格式输出。技术特点包括跨平台兼容性、实时扫描进度监控、异常管理和安全警报等。</p>
+<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/melonlonmeo/CVE-2025-49132">https://github.com/melonlonmeo/CVE-2025-49132</a></p>
+<p><strong>类型：</strong> CVE-2025:github search</p>
+<h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul>
+<li>README.md</li>
+<li>requirements-standalone.txt</li>
+<li>standalone_scanner.py</li>
+</ul>
+<h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-49132-Standalone-Vulnerability-Scanner"><a href="#CVE-2025-49132-Standalone-Vulnerability-Scanner" class="headerlink" title="CVE-2025-49132 Standalone Vulnerability Scanner"></a>CVE-2025-49132 Standalone Vulnerability Scanner</h2><h3 id="Non-Docker-Implementation"><a href="#Non-Docker-Implementation" class="headerlink" title="Non-Docker Implementation"></a>Non-Docker Implementation</h3><p>This scanner operates directly on Python without Docker dependencies, suitable for environments where Docker is not available or preferred.</p>
+<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install -r requirements-standalone.txt<br></code></pre></td></tr></table></figure>
+
+<p>Manual installation:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install requests urllib3<br></code></pre></td></tr></table></figure>
+
+<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><h4 id="1-Single-Target-Scanning"><a href="#1-Single-Target-Scanning" class="headerlink" title="1. Single Target Scanning"></a>1. Single Target Scanning</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python standalone_scanner.py scan http://localhost/<br></code></pre></td></tr></table></figure>
+
+<h4 id="2-Batch-Scanning-from-File"><a href="#2-Batch-Scanning-from-File" class="headerlink" title="2. Batch Scanning from File"></a>2. Batch Scanning from File</h4><p>Create <code>targets.txt</code>:</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">http:</span><span class="hljs-comment">//localhost/</span><br><span class="hljs-symbol">http:</span><span class="hljs-comment">//localhost:8080</span><br><span class="hljs-symbol">http:</span><span class="hljs-comment">//localhost:3000</span><br></code></pre></td></tr></table></figure>
+
+<p>Execute batch scan:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python standalone_scanner.py batch --file targets.txt<br></code></pre></td></tr></table></figure>
+
+<h4 id="3-Output-Persistence"><a href="#3-Output-Persistence" class="headerlink" title="3. Output Persistence"></a>3. Output Persistence</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python standalone_scanner.py batch --file targets.txt --output results.json<br></code></pre></td></tr></table></figure>
+
+<h4 id="4-Interactive-Mode"><a href="#4-Interactive-Mode" class="headerlink" title="4. Interactive Mode"></a>4. Interactive Mode</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python standalone_scanner.py interactive<br></code></pre></td></tr></table></figure>
+
+<h3 id="Output-Examples"><a href="#Output-Examples" class="headerlink" title="Output Examples"></a>Output Examples</h3><h4 id="Vulnerable-Target"><a href="#Vulnerable-Target" class="headerlink" title="Vulnerable Target:"></a>Vulnerable Target:</h4><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs nix">🔍 <span class="hljs-params">Scanning:</span> http:<span class="hljs-operator">//</span>localhost<span class="hljs-symbol">/</span><br>⏰ <span class="hljs-params">Time:</span> <span class="hljs-number">202</span>5-<span class="hljs-number">0</span>1-<span class="hljs-number">27</span> <span class="hljs-number">15</span>:<span class="hljs-number">30</span>:<span class="hljs-number">45</span><br><span class="hljs-operator">-</span>-----------------------------------------------------------<br>✅ VULNERABLE <span class="hljs-operator">-</span> Database credentials found<span class="hljs-operator">!</span><br>📊 Database <span class="hljs-params">Info:</span><br>   <span class="hljs-params">Host:</span> localhost<br>   <span class="hljs-params">Port:</span> <span class="hljs-number">3306</span><br>   <span class="hljs-params">Database:</span> root<br>   <span class="hljs-params">Username:</span> root<br>   <span class="hljs-params">Password:</span> secret123<br>🔗 Connection <span class="hljs-params">String:</span> root:secret123@localhost:<span class="hljs-number">3306</span><span class="hljs-symbol">/root</span><br><br>✅ VULNERABLE <span class="hljs-operator">-</span> App configuration found<span class="hljs-operator">!</span><br>📊 App <span class="hljs-params">Config:</span><br>   App <span class="hljs-params">Key:</span> base64:your_secret_key_here<br>   <span class="hljs-params">Cipher:</span> AES-<span class="hljs-number">25</span>6-CBC<br>   <span class="hljs-params">Debug:</span> <span class="hljs-literal">false</span><br>   <span class="hljs-params">Environment:</span> production<br>   App <span class="hljs-params">Name:</span> Pterodactyl<br>   App <span class="hljs-params">URL:</span> http:<span class="hljs-symbol">//localhost</span><br>   <span class="hljs-params">Timezone:</span> UTC<br>   <span class="hljs-params">Locale:</span> en<br><br>🔔 SECURITY <span class="hljs-params">WARNING:</span> APP_KEY exposed<span class="hljs-operator">!</span><br>   This key is used for encryption<span class="hljs-symbol">/decryption</span><br>   Can be used to decrypt sensitive data<br></code></pre></td></tr></table></figure>
+
+<h4 id="Safe-Target"><a href="#Safe-Target" class="headerlink" title="Safe Target:"></a>Safe Target:</h4><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc">🔍 Scanning: http://localhost/<br><span class="hljs-section">⏰ Time: 2025-01-27 15:30:45</span><br><span class="hljs-section">------------------------------------------------------------</span><br>❌ NOT VULNERABLE (Status: 404)<br></code></pre></td></tr></table></figure>
+
+<h3 id="Technical-Features"><a href="#Technical-Features" class="headerlink" title="Technical Features"></a>Technical Features</h3><ul>
+<li>✅ <strong>Docker-free Operation</strong>: Direct Python execution</li>
+<li>✅ <strong>Cross-platform Compatibility</strong>: Windows, Linux, macOS</li>
+<li>✅ <strong>Multiple Execution Modes</strong>: Single target, batch processing, interactive</li>
+<li>✅ <strong>Structured Output</strong>: JSON format for data persistence</li>
+<li>✅ <strong>Robust Error Handling</strong>: Comprehensive exception management</li>
+<li>✅ <strong>Progress Monitoring</strong>: Real-time scanning progress</li>
+<li>✅ <strong>Analytical Reports</strong>: Statistical summary generation</li>
+<li>✅ <strong>Cryptographic Detection</strong>: APP_KEY and cipher identification</li>
+<li>✅ <strong>Security Alerts</strong>: Automated vulnerability notifications</li>
+</ul>
+<h3 id="Comparative-Analysis"><a href="#Comparative-Analysis" class="headerlink" title="Comparative Analysis"></a>Comparative Analysis</h3><table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Standalone</th>
+<th>Container</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Setup Complexity</td>
+<td>Minimal</td>
+<td>Docker-dependent</td>
+</tr>
+<tr>
+<td>Dependencies</td>
+<td>Python packages</td>
+<td>Docker + Python</td>
+</tr>
+<tr>
+<td>Performance</td>
+<td>Optimized</td>
+<td>Comparable</td>
+</tr>
+<tr>
+<td>Process Isolation</td>
+<td>None</td>
+<td>Full isolation</td>
+</tr>
+<tr>
+<td>Deployment Portability</td>
+<td>High</td>
+<td>Medium</td>
+</tr>
+</tbody></table>
+<h3 id="Technical-Specifications"><a href="#Technical-Specifications" class="headerlink" title="Technical Specifications"></a>Technical Specifications</h3><h4 id="Network-Configuration"><a href="#Network-Configuration" class="headerlink" title="Network Configuration"></a>Network Configuration</h4><ul>
+<li><strong>Timeout</strong>: 10 seconds (configurable)</li>
+<li><strong>SSL Verification</strong>: Disabled for compatibility</li>
+<li><strong>User-Agent</strong>: Standard browser simulation</li>
+<li><strong>Request Method</strong>: GET only (non-intrusive)</li>
+</ul>
+<h4 id="Vulnerability-Detection"><a href="#Vulnerability-Detection" class="headerlink" title="Vulnerability Detection"></a>Vulnerability Detection</h4><ul>
+<li><strong>Database Configuration Exposure</strong>: MySQL&#x2F;PostgreSQL credentials</li>
+<li><strong>Application Configuration</strong>: Laravel&#x2F;PHP settings</li>
+<li><strong>Cryptographic Keys</strong>: APP_KEY identification</li>
+<li><strong>Environment Variables</strong>: Production&#x2F;development settings</li>
+</ul>
+<h3 id="Troubleshooting"><a href="#Troubleshooting" class="headerlink" title="Troubleshooting"></a>Troubleshooting</h3><h4 id="Module-Import-Errors"><a href="#Module-Import-Errors" class="headerlink" title="Module Import Errors:"></a>Module Import Errors:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install requests<br></code></pre></td></tr></table></figure>
+
+<h4 id="SSL-Certificate-Issues"><a href="#SSL-Certificate-Issues" class="headerlink" title="SSL Certificate Issues:"></a>SSL Certificate Issues:</h4><p>SSL warnings are automatically suppressed. No additional configuration required.</p>
+<h4 id="Connection-Timeout"><a href="#Connection-Timeout" class="headerlink" title="Connection Timeout:"></a>Connection Timeout:</h4><p>Default timeout is 10 seconds. Modify <code>timeout</code> parameter in source code if needed.</p>
+<h3 id="Security-Considerations"><a href="#Security-Considerations" class="headerlink" title="Security Considerations"></a>Security Considerations</h3><h4 id="Scanner-Behavior"><a href="#Scanner-Behavior" class="headerlink" title="Scanner Behavior"></a>Scanner Behavior</h4><ul>
+<li><strong>Non-intrusive</strong>: Only performs GET requests</li>
+<li><strong>Data Handling</strong>: No sensitive data persistence</li>
+<li><strong>Detection Scope</strong>: Configuration file exposure</li>
+<li><strong>Exploitation</strong>: No active exploitation performed</li>
+</ul>
+<h4 id="Risk-Assessment"><a href="#Risk-Assessment" class="headerlink" title="Risk Assessment"></a>Risk Assessment</h4><ul>
+<li><strong>Database Credentials</strong>: Direct database access potential</li>
+<li><strong>Application Keys</strong>: Encryption&#x2F;decryption capability exposure</li>
+<li><strong>Environment Variables</strong>: Configuration disclosure</li>
+<li><strong>Attack Surface</strong>: Increased vulnerability footprint</li>
+</ul>
+<h3 id="Quick-Start-Guide"><a href="#Quick-Start-Guide" class="headerlink" title="Quick Start Guide"></a>Quick Start Guide</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">## Install dependencies</span><br>pip install requests urllib3<br><br><span class="hljs-comment">## Perform test scan</span><br>python standalone_scanner.py scan http://localhost/<br><br><span class="hljs-comment">## Execute batch analysis</span><br>python standalone_scanner.py batch --file targets.txt --output results.json<br></code></pre></td></tr></table></figure>
+
+<h3 id="Technical-Architecture"><a href="#Technical-Architecture" class="headerlink" title="Technical Architecture"></a>Technical Architecture</h3><h4 id="Core-Components"><a href="#Core-Components" class="headerlink" title="Core Components"></a>Core Components</h4><ol>
+<li><strong>Scanner Engine</strong>: HTTP request processing</li>
+<li><strong>Parser Module</strong>: Response analysis and extraction</li>
+<li><strong>Vulnerability Detector</strong>: Pattern matching and validation</li>
+<li><strong>Output Formatter</strong>: Structured data presentation</li>
+<li><strong>Error Handler</strong>: Exception management and recovery</li>
+</ol>
+<h4 id="Data-Flow"><a href="#Data-Flow" class="headerlink" title="Data Flow"></a>Data Flow</h4><figure class="highlight sas"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sas">Target <span class="hljs-keyword">Input</span> → HTTP Request → Response Analysis → Vulnerability Detection → <span class="hljs-keyword">Output</span> Generation<br></code></pre></td></tr></table></figure>
+
+<h3 id="Performance-Metrics"><a href="#Performance-Metrics" class="headerlink" title="Performance Metrics"></a>Performance Metrics</h3><ul>
+<li><strong>Scan Speed</strong>: ~1-3 seconds per target</li>
+<li><strong>Memory Usage</strong>: Minimal footprint</li>
+<li><strong>Network Overhead</strong>: Single GET request per target</li>
+<li><strong>CPU Utilization</strong>: Low computational requirements</li>
+</ul>
+<h3 id="Compliance-and-Ethics"><a href="#Compliance-and-Ethics" class="headerlink" title="Compliance and Ethics"></a>Compliance and Ethics</h3><p>This tool is designed for:</p>
+<ul>
+<li><strong>Security Research</strong>: Vulnerability assessment</li>
+<li><strong>Penetration Testing</strong>: Authorized security testing</li>
+<li><strong>Educational Purposes</strong>: Security awareness training</li>
+<li><strong>Compliance Auditing</strong>: Security posture evaluation</li>
+</ul>
+<p><strong>Note</strong>: Always obtain proper authorization before scanning any target systems.</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Github-Poc/" class="category-chain-item">Github Poc</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/" class="print-no-link">#信息泄露</a>
+      
+        <a href="/tags/CVE-2025-github-search/" class="print-no-link">#CVE-2025:github search</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>CVE-2025-49132 Standalone Vulnerability Scanner</div>
+      <div>http://example.com/2025/06/25/github_1524724713/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>lianccc</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年6月25日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/06/25/github_3793711139/" title="ISPConfig language_editphp PHP代码注入漏洞">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">ISPConfig language_editphp PHP代码注入漏洞</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/06/25/github_2558243243/" title="SourceCodester Online Student Clearance System 10 文件上传漏洞">
+                        <span class="hidden-mobile">SourceCodester Online Student Clearance System 10 文件上传漏洞</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
