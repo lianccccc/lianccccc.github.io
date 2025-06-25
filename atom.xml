@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-25T10:15:46.453Z</updated>
+  <updated>2025-06-25T10:45:12.591Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux Image CVE-2025-27558 Vulnerability</title>
+    <link href="http://example.com/2025/06/25/github_3833107409/"/>
+    <id>http://example.com/2025/06/25/github_3833107409/</id>
+    <published>2025-06-25T10:45:12.594Z</published>
+    <updated>2025-06-25T10:45:12.591Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Linux Image CVE-2025-27558 Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-27558</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> 修补影响Linux镜像的CVE-2025-27558漏洞。</p><p><strong>产品名称：</strong> Linux Image</p><p><strong>来源：</strong> <a href="https://github.com/Atlas-ghostshell/CVE-2025-27558_Patching">https://github.com/Atlas-ghostshell/CVE-2025-27558_Patching</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>Incident_Responce.md</li><li>LICENSE</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-27558-Patching"><a href="#CVE-2025-27558-Patching" class="headerlink" title="CVE-2025-27558_Patching"></a>CVE-2025-27558_Patching</h2><p>Patching CVE-2025-27558 vulnerability that had affected my linux image.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Linux Image CVE-2025-27558 Vulnerabilit</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+  </entry>
   
   <entry>
     <title>CentOS Web Panel 未授权远程代码执行漏洞</title>
@@ -522,33 +548,6 @@
     <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
     
     <category term="目录遍历" scheme="http://example.com/tags/%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>App Store 和 Play Store 上的 SparkKitty 间谍软件，窃取照片以获取加密货币</title>
-    <link href="http://example.com/2025/06/25/weixin_1366209598/"/>
-    <id>http://example.com/2025/06/25/weixin_1366209598/</id>
-    <published>2025-06-25T06:00:04.283Z</published>
-    <updated>2025-06-25T06:00:04.278Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/wZ9T9DDeZ_9jR3sZQJzXWg">https://mp.weixin.qq.com/s/wZ9T9DDeZ_9jR3sZQJzXWg</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/wZ9T9DDeZ_9jR3sZQJzXWg&quot;&gt;https://mp.weixin.qq.c</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
     
   </entry>
   
