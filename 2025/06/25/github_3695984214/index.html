@@ -19,15 +19,15 @@
   <meta name="author" content="lianccc">
   <meta name="keywords" content="">
   
-    <meta name="description" content="漏洞信息漏洞名称： Internet Shortcut UNC路径漏洞利用 漏洞编号：  CVE： CVE-2025-33053  漏洞类型： 命令执行 漏洞等级： 高危 漏洞描述： 该模块通过生成恶意的.URL文件，利用CVE-2025-33053漏洞，指向一个受信任的LOLBAS二进制文件，参数设计用于触发意外行为。可选地，在指定的WebDAV目录上生成并托管有效载荷。当受害者打开快捷方式时，">
+    <meta name="description" content="漏洞信息漏洞名称： Internet Shortcut UNC路径漏洞 漏洞编号：  CVE： CVE-2025-33053  漏洞类型： 命令执行 漏洞等级： 高危 漏洞描述： 该漏洞利用恶意.URL文件和WebDAV，通过生成指向受信任的LOLBAS二进制文件的恶意.URL文件，设计参数以触发意外行为。当受害者打开快捷方式时，它将尝试访问WebDAV路径，可能导致通过受信任的二进制文件实现远程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Internet Shortcut UNC路径漏洞利用">
-<meta property="og:url" content="http://example.com/2025/06/24/github_3695984214/index.html">
+<meta property="og:title" content="Internet Shortcut UNC路径漏洞">
+<meta property="og:url" content="http://example.com/2025/06/25/github_3695984214/index.html">
 <meta property="og:site_name" content="liancc&#39; infos blog">
-<meta property="og:description" content="漏洞信息漏洞名称： Internet Shortcut UNC路径漏洞利用 漏洞编号：  CVE： CVE-2025-33053  漏洞类型： 命令执行 漏洞等级： 高危 漏洞描述： 该模块通过生成恶意的.URL文件，利用CVE-2025-33053漏洞，指向一个受信任的LOLBAS二进制文件，参数设计用于触发意外行为。可选地，在指定的WebDAV目录上生成并托管有效载荷。当受害者打开快捷方式时，">
+<meta property="og:description" content="漏洞信息漏洞名称： Internet Shortcut UNC路径漏洞 漏洞编号：  CVE： CVE-2025-33053  漏洞类型： 命令执行 漏洞等级： 高危 漏洞描述： 该漏洞利用恶意.URL文件和WebDAV，通过生成指向受信任的LOLBAS二进制文件的恶意.URL文件，设计参数以触发意外行为。当受害者打开快捷方式时，它将尝试访问WebDAV路径，可能导致通过受信任的二进制文件实现远程">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-06-24T15:15:15.569Z">
-<meta property="article:modified_time" content="2025-06-24T15:15:15.564Z">
+<meta property="article:published_time" content="2025-06-25T09:15:24.935Z">
+<meta property="article:modified_time" content="2025-06-25T09:15:24.931Z">
 <meta property="article:author" content="lianccc">
 <meta property="article:tag" content="命令执行">
 <meta property="article:tag" content="rapid7&#x2F;metasploit-framework:github issues">
@@ -35,7 +35,7 @@
   
   
   
-  <title>Internet Shortcut UNC路径漏洞利用 - liancc&#39; infos blog</title>
+  <title>Internet Shortcut UNC路径漏洞 - liancc&#39; infos blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -202,7 +202,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Internet Shortcut UNC路径漏洞利用"></span>
+            <span id="subtitle" data-typed-text="Internet Shortcut UNC路径漏洞"></span>
           
         </div>
 
@@ -213,8 +213,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-06-24 15:15" pubdate>
-          2025年6月24日 下午
+        <time datetime="2025-06-25 09:15" pubdate>
+          2025年6月25日 上午
         </time>
       </span>
     
@@ -225,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          506 字
+          484 字
         
       </span>
     
@@ -273,19 +273,19 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Internet Shortcut UNC路径漏洞利用</h1>
+            <h1 id="seo-header">Internet Shortcut UNC路径漏洞</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Internet Shortcut UNC路径漏洞利用</p>
+                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Internet Shortcut UNC路径漏洞</p>
 <p><strong>漏洞编号：</strong></p>
 <ul>
 <li><strong>CVE：</strong> CVE-2025-33053</li>
 </ul>
 <p><strong>漏洞类型：</strong> 命令执行</p>
 <p><strong>漏洞等级：</strong> 高危</p>
-<p><strong>漏洞描述：</strong> 该模块通过生成恶意的.URL文件，利用CVE-2025-33053漏洞，指向一个受信任的LOLBAS二进制文件，参数设计用于触发意外行为。可选地，在指定的WebDAV目录上生成并托管有效载荷。当受害者打开快捷方式时，它将尝试访问WebDAV路径，可能通过受信任的二进制文件导致远程代码执行。</p>
+<p><strong>漏洞描述：</strong> 该漏洞利用恶意.URL文件和WebDAV，通过生成指向受信任的LOLBAS二进制文件的恶意.URL文件，设计参数以触发意外行为。当受害者打开快捷方式时，它将尝试访问WebDAV路径，可能导致通过受信任的二进制文件实现远程代码执行。</p>
 <p><strong>产品厂商：</strong> Microsoft</p>
 <p><strong>产品名称：</strong> Windows</p>
 <p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/rapid7/metasploit-framework/blob/e198cf635f04904d41e868aca9daafc6609bf149/modules%2Fexploits%2Fwindows%2Ffileformat%2Func_url_cve_2025_33053.rb">https://github.com/rapid7/metasploit-framework/blob/e198cf635f04904d41e868aca9daafc6609bf149/modules%2Fexploits%2Fwindows%2Ffileformat%2Func_url_cve_2025_33053.rb</a></p>
@@ -339,8 +339,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Internet Shortcut UNC路径漏洞利用</div>
-      <div>http://example.com/2025/06/24/github_3695984214/</div>
+      <div>Internet Shortcut UNC路径漏洞</div>
+      <div>http://example.com/2025/06/25/github_3695984214/</div>
     </div>
     <div class="license-meta">
       
@@ -352,7 +352,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年6月24日</div>
+          <div>2025年6月25日</div>
         </div>
       
       
@@ -384,18 +384,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/24/github_2878399069/" title="Apache HTTP Server 远程代码执行漏洞">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Apache HTTP Server 远程代码执行漏洞</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/24/github_3905508985/" title="Internet Shortcut UNC path Vulnerability">
-                        <span class="hidden-mobile">Internet Shortcut UNC path Vulnerability</span>
+                      <a href="/2025/06/25/github_2737513062/" title="Tatsu Wordpress Plugin 远程代码执行漏洞">
+                        <span class="hidden-mobile">Tatsu Wordpress Plugin 远程代码执行漏洞</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
