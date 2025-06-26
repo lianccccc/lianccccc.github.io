@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-26T21:30:04.819Z</updated>
+  <updated>2025-06-26T22:00:07.187Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,126 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>A vulnerability in a specific API of Cisco ISE and Cisco ISE-PIC could allow an unauthenticated,</title>
+    <link href="http://example.com/2025/06/26/github_3198141753/"/>
+    <id>http://example.com/2025/06/26/github_3198141753/</id>
+    <published>2025-06-26T22:00:07.189Z</published>
+    <updated>2025-06-26T22:00:07.187Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-rc4f-42xm-hvjw">https://github.com/advisories/GHSA-rc4f-42xm-hvjw</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-20281">https://nvd.nist.gov/vuln/detail/CVE-2025-20281</a></p></li><li><p><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-unauth-rce-ZAd2GnJ6">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-unauth-rce-ZAd2GnJ6</a></p></li><li><p><a href="https://github.com/advisories/GHSA-rc4f-42xm-hvjw">https://github.com/advisories/GHSA-rc4f-42xm-hvjw</a></p></li></ul><p><strong>描述：</strong></p><p>A vulnerability in a specific API of Cisco ISE and Cisco ISE-PIC could allow an unauthenticated, remote attacker to execute arbitrary code on the underlying operating system as root. The attacker does not require any valid credentials to exploit this vulnerability.</p><p>This vulnerability is due to insufficient validation of user-supplied input. An attacker could exploit this vulnerability by submitting a crafted API request. A successful exploit could allow the attacker to obtain root privileges on an affected device.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-rc4f-42xm-hvjw&quot;&gt;https://github.com/advisories/GHSA-rc4f-42xm-hvjw&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>A vulnerability in an internal API of Cisco ISE and Cisco ISE-PIC could allow an unauthenticated,</title>
+    <link href="http://example.com/2025/06/26/github_2524818057/"/>
+    <id>http://example.com/2025/06/26/github_2524818057/</id>
+    <published>2025-06-26T22:00:06.833Z</published>
+    <updated>2025-06-26T22:00:06.831Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-w8p2-wjjr-hr24">https://github.com/advisories/GHSA-w8p2-wjjr-hr24</a></p><p><strong>CVSS 评分：</strong> 10.0</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-20282">https://nvd.nist.gov/vuln/detail/CVE-2025-20282</a></p></li><li><p><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-unauth-rce-ZAd2GnJ6">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-unauth-rce-ZAd2GnJ6</a></p></li><li><p><a href="https://github.com/advisories/GHSA-w8p2-wjjr-hr24">https://github.com/advisories/GHSA-w8p2-wjjr-hr24</a></p></li></ul><p><strong>描述：</strong></p><p>A vulnerability in an internal API of Cisco ISE and Cisco ISE-PIC could allow an unauthenticated, remote attacker to upload arbitrary files to an affected device and then execute those files on the underlying operating system as root.</p><p>This vulnerability is due a lack of file validation checks that would prevent uploaded files from being placed in privileged directories on an affected system. An attacker could exploit this vulnerability by uploading a crafted file to the affected device. A successful exploit could allow the attacker to store malicious files on the affected system and then execute arbitrary code or obtain root privileges on the system.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-w8p2-wjjr-hr24&quot;&gt;https://github.com/advisories/GHSA-w8p2-wjjr-hr24&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MICROSENS NMP Web+could allow an unauthenticated attacker to overwrite files and execute</title>
+    <link href="http://example.com/2025/06/26/github_380367216/"/>
+    <id>http://example.com/2025/06/26/github_380367216/</id>
+    <published>2025-06-26T22:00:06.488Z</published>
+    <updated>2025-06-26T22:00:06.487Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-j5hw-6f92-5gw9">https://github.com/advisories/GHSA-j5hw-6f92-5gw9</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-49153">https://nvd.nist.gov/vuln/detail/CVE-2025-49153</a></p></li><li><p><a href="https://www.cisa.gov/news-events/ics-advisories/icsa-25-175-07">https://www.cisa.gov/news-events/ics-advisories/icsa-25-175-07</a></p></li><li><p><a href="https://www.microsens.com/support/downloads/nmp">https://www.microsens.com/support/downloads/nmp</a></p></li><li><p><a href="https://github.com/advisories/GHSA-j5hw-6f92-5gw9">https://github.com/advisories/GHSA-j5hw-6f92-5gw9</a></p></li></ul><p><strong>描述：</strong></p><p>MICROSENS NMP Web+</p><p>could allow an unauthenticated attacker to overwrite files and execute arbitrary code.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-j5hw-6f92-5gw9&quot;&gt;https://github.com/advisories/GHSA-j5hw-6f92-5gw9&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IBM WebSphere Application Server 85 and 90 could allow a remote attacker to execute arbitrary</title>
+    <link href="http://example.com/2025/06/26/github_2041971239/"/>
+    <id>http://example.com/2025/06/26/github_2041971239/</id>
+    <published>2025-06-26T22:00:06.174Z</published>
+    <updated>2025-06-26T22:00:06.171Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-g9q6-26jf-g5cj">https://github.com/advisories/GHSA-g9q6-26jf-g5cj</a></p><p><strong>CVSS 评分：</strong> 9.1</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-36038">https://nvd.nist.gov/vuln/detail/CVE-2025-36038</a></p></li><li><p><a href="https://www.ibm.com/support/pages/node/7237967">https://www.ibm.com/support/pages/node/7237967</a></p></li><li><p><a href="https://github.com/advisories/GHSA-g9q6-26jf-g5cj">https://github.com/advisories/GHSA-g9q6-26jf-g5cj</a></p></li></ul><p><strong>描述：</strong></p><p>IBM WebSphere Application Server 8.5 and 9.0 could allow a remote attacker to execute arbitrary code on the system with a specially crafted sequence of serialized objects.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-g9q6-26jf-g5cj&quot;&gt;https://github.com/advisories/GHSA-g9q6-26jf-g5cj&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>The Simple User Registration plugin for WordPress is vulnerable to Privilege Escalation in all</title>
+    <link href="http://example.com/2025/06/26/github_2980316439/"/>
+    <id>http://example.com/2025/06/26/github_2980316439/</id>
+    <published>2025-06-26T22:00:05.440Z</published>
+    <updated>2025-06-26T22:00:05.439Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-6hwf-c64w-jxc6">https://github.com/advisories/GHSA-6hwf-c64w-jxc6</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-4334">https://nvd.nist.gov/vuln/detail/CVE-2025-4334</a></p></li><li><p><a href="https://plugins.trac.wordpress.org/browser/wp-registration/trunk/inc/classes/class.register.php#L135">https://plugins.trac.wordpress.org/browser/wp-registration/trunk/inc/classes/class.register.php#L135</a></p></li><li><p><a href="https://www.wordfence.com/threat-intel/vulnerabilities/id/c211e0c0-3086-43d2-853c-489f9c42b0ab?source=cve">https://www.wordfence.com/threat-intel/vulnerabilities/id/c211e0c0-3086-43d2-853c-489f9c42b0ab?source=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-6hwf-c64w-jxc6">https://github.com/advisories/GHSA-6hwf-c64w-jxc6</a></p></li></ul><p><strong>描述：</strong></p><p>The Simple User Registration plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 6.3. This is due to insufficient restrictions on user meta values that can be supplied during registration. This makes it possible for unauthenticated attackers to register as an administrator.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-6hwf-c64w-jxc6&quot;&gt;https://github.com/advisories/GHSA-6hwf-c64w-jxc6&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>OpenBao allows cancellation of root rekey and recovery rekey operations without authentication</title>
@@ -408,139 +528,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="远程代码执行" scheme="http://example.com/tags/%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows Server 可逆加密存储密码漏洞</title>
-    <link href="http://example.com/2025/06/26/github_2912032414/"/>
-    <id>http://example.com/2025/06/26/github_2912032414/</id>
-    <published>2025-06-26T11:18:29.041Z</published>
-    <updated>2025-06-26T11:18:29.037Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Windows Server 可逆加密存储密码漏洞</p><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 确保“使用可逆加密存储密码”策略设置为禁用。如果启用，它可能允许以明文形式检索存储的密码，构成严重的安全风险。如果此设置启用，攻击者可能恢复用户密码，导致未经授权的访问和网络资源的泄露。</p><p><strong>产品厂商：</strong> Microsoft</p><p><strong>产品名称：</strong> Windows Server</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/b740ee6791c0a6d36cac233d23a096ba91d2f060/code%2Fwindows%2Faudit%2Fkisa%2Fpassword-cleartext-encryption.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/b740ee6791c0a6d36cac233d23a096ba91d2f060/code%2Fwindows%2Faudit%2Fkisa%2Fpassword-cleartext-encryption.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> password-cleartext-encryption<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Store Passwords Using Reversible Encryption Check<br>  <span class="hljs-params">author:</span> nukunga[SungHyunJeon]<br>  <span class="hljs-params">severity:</span> medium<br>  <span class="hljs-params">description:</span> |<br>    Ensure the <span class="hljs-string">&quot;Store passwords using reversible encryption&quot;</span> policy is set to Disabled. If enabled, it can allow stored passwords to be retrieved <span class="hljs-keyword">in</span> plaintext, posing a serious security risk.<br>  <span class="hljs-params">impact:</span> |<br>    If this setting is enabled, attackers could potentially recover user passwords, leading to unauthorized access and compromise of network resources.<br>  <span class="hljs-params">remediation:</span> |<br>    Disable this policy using one of the following <span class="hljs-params">methods:</span><br>    <span class="hljs-operator">-</span> Command <span class="hljs-params">Line:</span> Export the security configuration, set ClearTextPassword<span class="hljs-operator">=</span><span class="hljs-number">0</span>, and reapply it using secedit.<br>    <span class="hljs-operator">-</span> <span class="hljs-params">GUI:</span> Open Local Security Policy → Account Policies → Password Policy → <span class="hljs-string">&quot;Store passwords using reversible encryption&quot;</span> and set it to Disabled.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>isms.kisa.<span class="hljs-keyword">or</span>.kr<span class="hljs-operator">/</span>main<span class="hljs-operator">/</span>csap<span class="hljs-operator">/</span>notice<span class="hljs-operator">/</span><span class="hljs-operator">?</span>boardId<span class="hljs-operator">=</span>bbs_0000000000000004&amp;mode<span class="hljs-operator">=</span>view&amp;cntId<span class="hljs-operator">=</span><span class="hljs-number">85</span><br>  <span class="hljs-params">tags:</span> code,windows-audit,kisa,account-management,password-policy<br><br><span class="hljs-params">self-contained:</span> <span class="hljs-literal">true</span><br><br><span class="hljs-params">code:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">pre-condition:</span> |<br>      IsWindows();<br>    <span class="hljs-params">engine:</span><br>      <span class="hljs-operator">-</span> powershell<br>      <span class="hljs-operator">-</span> powershell.exe<br>    <span class="hljs-params">args:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-operator">-</span>ExecutionPolicy<br>      <span class="hljs-operator">-</span> Bypass<br>    <span class="hljs-params">pattern:</span> <span class="hljs-string">&quot;*.ps1&quot;</span><br>    <span class="hljs-params">source:</span> |<br>      <span class="hljs-comment"># Export security settings to a configuration file</span><br>      secedit <span class="hljs-symbol">/export</span> <span class="hljs-symbol">/cfg</span> C:\cfg.txt | Out-Null<br>      $cfg <span class="hljs-operator">=</span> Get-Content C:\cfg.txt | Out-String<br>      <span class="hljs-keyword">if</span> ($cfg <span class="hljs-operator">-</span>match <span class="hljs-string">&quot;ClearTextPassword<span class="hljs-char escape_">\s</span>*=<span class="hljs-char escape_">\s</span>*(<span class="hljs-char escape_">\d</span>)&quot;</span>) &#123;<br>          $value <span class="hljs-operator">=</span> $Matches[<span class="hljs-number">1</span>]<br>          <span class="hljs-keyword">if</span> ($value <span class="hljs-operator">-</span>eq <span class="hljs-string">&quot;1&quot;</span>) &#123;<br>              <span class="hljs-string">&quot;CLEAR_TEXT_PASSWORD_ENABLED&quot;</span><br>          &#125; <span class="hljs-keyword">else</span> &#123;<br>              <span class="hljs-string">&quot;CLEAR_TEXT_PASSWORD_DISABLED&quot;</span><br>          &#125;<br>      &#125; <span class="hljs-keyword">else</span> &#123;<br>          <span class="hljs-string">&quot;CLEAR_TEXT_PASSWORD_NOT_FOUND&quot;</span><br>      &#125;<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;CLEAR_TEXT_PASSWORD_ENABLED&quot;</span><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Windows Server 可逆加密存储密码漏洞&lt;/p&gt;
-&lt;p&gt;&lt;stron</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RDS Removal Check</title>
-    <link href="http://example.com/2025/06/26/github_3876170482/"/>
-    <id>http://example.com/2025/06/26/github_3876170482/</id>
-    <published>2025-06-26T11:18:17.168Z</published>
-    <updated>2025-06-26T11:18:17.165Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> RDS Removal Check</p><p><strong>漏洞类型：</strong> 配置问题</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 确保远程数据服务（RDS）被移除或未配置，以减少拒绝服务攻击或远程执行管理命令的风险。如果满足以下任一条件，则符合合规性：未安装或未使用IIS，默认网站不包含&#x2F;msadc虚拟目录，或与RDS相关的ADCLaunch注册表键不存在。不当配置的RDS可能被攻击者利用来执行远程代码或发起拒绝服务攻击。</p><p><strong>产品名称：</strong> IIS</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/b740ee6791c0a6d36cac233d23a096ba91d2f060/code%2Fwindows%2Faudit%2Fkisa%2Frds-removal-check.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/b740ee6791c0a6d36cac233d23a096ba91d2f060/code%2Fwindows%2Faudit%2Fkisa%2Frds-removal-check.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> rds-removal-check<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> RDS Removal Check<br>  <span class="hljs-params">author:</span> nukunga[SungHyunJeon]<br>  <span class="hljs-params">severity:</span> medium<br>  <span class="hljs-params">description:</span> |<br>    Ensure that Remote Data Services (RDS) are either removed <span class="hljs-keyword">or</span> not configured to reduce the risk of denial-of-service attacks <span class="hljs-keyword">or</span> remote execution of administrative commands.<br>    Compliance is met <span class="hljs-keyword">if</span> any of the following conditions are <span class="hljs-params">true:</span><br>    <span class="hljs-operator">-</span> IIS is not installed <span class="hljs-keyword">or</span> <span class="hljs-keyword">in</span> use,<br>    <span class="hljs-operator">-</span> The default website does not include the <span class="hljs-symbol">/msadc</span> virtual directory, <span class="hljs-keyword">or</span><br>    <span class="hljs-operator">-</span> The relevant ADCLaunch registry keys associated <span class="hljs-keyword">with</span> RDS are not present.<br>  <span class="hljs-params">impact:</span> |<br>    Improperly configured RDS can be exploited by attackers to execute remote code <span class="hljs-keyword">or</span> launch denial-of-service attacks.<br>  <span class="hljs-params">remediation:</span> |<br>    To mitigate RDS-related risks, take the following <span class="hljs-params">actions:</span><br>      <span class="hljs-operator">-</span> Remove the <span class="hljs-symbol">/msadc</span> virtual directory from the default website.<br>      <span class="hljs-operator">-</span> Delete these registry <span class="hljs-params">keys:</span><br>        <span class="hljs-operator">-</span> HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch\RDSServer.DataFactory<br>        <span class="hljs-operator">-</span> HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch\AdvancedDataFactory<br>        <span class="hljs-operator">-</span> HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch\VbBusObj.VbBusObjCls<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>isms.kisa.<span class="hljs-keyword">or</span>.kr<span class="hljs-operator">/</span>main<span class="hljs-operator">/</span>csap<span class="hljs-operator">/</span>notice<span class="hljs-operator">/</span><span class="hljs-operator">?</span>boardId<span class="hljs-operator">=</span>bbs_0000000000000004&amp;mode<span class="hljs-operator">=</span>view&amp;cntId<span class="hljs-operator">=</span><span class="hljs-number">85</span><br>  <span class="hljs-params">tags:</span> rds,code,windows-audit,kisa<br><br><span class="hljs-params">self-contained:</span> <span class="hljs-literal">true</span><br><br><span class="hljs-params">code:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">pre-condition:</span> |<br>      IsWindows();<br><br>    <span class="hljs-params">engine:</span><br>      <span class="hljs-operator">-</span> powershell<br>      <span class="hljs-operator">-</span> powershell.exe<br><br>    <span class="hljs-params">args:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-operator">-</span>ExecutionPolicy<br>      <span class="hljs-operator">-</span> Bypass<br><br>    <span class="hljs-params">pattern:</span> <span class="hljs-string">&quot;*.ps1&quot;</span><br><br>    <span class="hljs-params">source:</span> |<br>      <span class="hljs-comment"># Check if IIS (W3SVC) service is present; if not, IIS is not used and RDS is implicitly compliant.</span><br>      $iisService <span class="hljs-operator">=</span> Get-Service <span class="hljs-operator">-</span>Name W3SVC <span class="hljs-operator">-</span>ErrorAction SilentlyContinue<br>      <span class="hljs-keyword">if</span> (-not $iisService) &#123;<br>          Write-Output <span class="hljs-string">&quot;RDS_COMPLIANT&quot;</span><br>          exit<br>      &#125;<br>      <span class="hljs-comment"># Check for the existence of the /msadc virtual directory in the Default Web Site.</span><br>      $msadcExists <span class="hljs-operator">=</span> $<span class="hljs-literal">false</span><br>      try &#123;<br>          Import-Module WebAdministration <span class="hljs-operator">-</span>ErrorAction SilentlyContinue<br>          $vdirs <span class="hljs-operator">=</span> Get-WebVirtualDirectory <span class="hljs-operator">-</span>Site <span class="hljs-string">&quot;Default Web Site&quot;</span> <span class="hljs-operator">-</span>ErrorAction SilentlyContinue<br>          <span class="hljs-keyword">if</span> ($vdirs) &#123;<br>              foreach ($vdir <span class="hljs-keyword">in</span> $vdirs) &#123;<br>                  <span class="hljs-keyword">if</span> ($vdir.Path <span class="hljs-operator">-</span>eq <span class="hljs-string">&quot;/msadc&quot;</span>) &#123;<br>                      $msadcExists <span class="hljs-operator">=</span> $<span class="hljs-literal">true</span><br>                      break<br>                  &#125;<br>              &#125;<br>          &#125;<br>      &#125; catch &#123;&#125;<br>      <span class="hljs-comment"># Check for ADCLaunch registry keys related to RDS.</span><br>      $adcLaunchPath <span class="hljs-operator">=</span> <span class="hljs-string">&quot;HKLM:<span class="hljs-char escape_">\S</span>YSTEM<span class="hljs-char escape_">\C</span>urrentControlSet<span class="hljs-char escape_">\S</span>ervices<span class="hljs-char escape_">\W</span>3SVC<span class="hljs-char escape_">\P</span>arameters<span class="hljs-char escape_">\A</span>DCLaunch&quot;</span><br>      $rdServerExists <span class="hljs-operator">=</span> Test-Path <span class="hljs-string">&quot;$adcLaunchPath<span class="hljs-char escape_">\R</span>DSServer.DataFactory&quot;</span><br>      $advDataExists <span class="hljs-operator">=</span> Test-Path <span class="hljs-string">&quot;$adcLaunchPath<span class="hljs-char escape_">\A</span>dvancedDataFactory&quot;</span><br>      $vbBusObjExists <span class="hljs-operator">=</span> Test-Path <span class="hljs-string">&quot;$adcLaunchPath<span class="hljs-char escape_">\V</span>bBusObj.VbBusObjCls&quot;</span><br>      <span class="hljs-comment"># Compliance is achieved if the /msadc virtual directory does not exist OR none of the registry keys exist.</span><br>      <span class="hljs-keyword">if</span> ((-not $msadcExists) <span class="hljs-operator">-</span><span class="hljs-keyword">or</span> (-not ($rdServerExists <span class="hljs-operator">-</span><span class="hljs-keyword">or</span> $advDataExists <span class="hljs-operator">-</span><span class="hljs-keyword">or</span> $vbBusObjExists))) &#123;<br>          Write-Output <span class="hljs-string">&quot;RDS_COMPLIANT&quot;</span><br>      &#125; <span class="hljs-keyword">else</span> &#123;<br>          Write-Output <span class="hljs-string">&quot;RDS_VULNERABLE&quot;</span><br>      &#125;<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;RDS_VULNERABLE&quot;</span><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; RDS Removal Check&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞类型：&lt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="配置问题" scheme="http://example.com/tags/%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows Server Shutdown on Audit Failure Vulnerability</title>
-    <link href="http://example.com/2025/06/26/github_3900911015/"/>
-    <id>http://example.com/2025/06/26/github_3900911015/</id>
-    <published>2025-06-26T11:17:58.594Z</published>
-    <updated>2025-06-26T11:17:58.588Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Windows Server Shutdown on Audit Failure Vulnerability</p><p><strong>漏洞类型：</strong> 配置问题</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 确保禁用“Shutdown on Audit Failure”策略。注册表值应设置为“4,0”，以防止系统在无法记录安全审计事件时关闭。如果设置为“4,1”，系统将在审计失败时关闭，这可能导致拒绝服务情况。启用此策略（值设置为“4,1”）可能会导致系统在无法写入审计日志时意外关闭，可能中断服务并导致数据丢失的风险。</p><p><strong>产品厂商：</strong> Microsoft</p><p><strong>产品名称：</strong> Windows Server</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/b740ee6791c0a6d36cac233d23a096ba91d2f060/code%2Fwindows%2Faudit%2Fkisa%2Fcrash-on-audit-fail.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/b740ee6791c0a6d36cac233d23a096ba91d2f060/code%2Fwindows%2Faudit%2Fkisa%2Fcrash-on-audit-fail.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> crash-on-audit-fail<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Shutdown on Audit Failure Check<br>  <span class="hljs-params">author:</span> nukunga[SungHyunJeon]<br>  <span class="hljs-params">severity:</span> medium<br>  <span class="hljs-params">description:</span> |<br>    Ensure the <span class="hljs-string">&quot;Shutdown on Audit Failure&quot;</span> policy is disabled.<br>    The registry value should be set to <span class="hljs-string">&quot;4,0&quot;</span> to prevent the system from shutting down <span class="hljs-keyword">if</span> it cannot log security audit events.<br>    If set to <span class="hljs-string">&quot;4,1&quot;</span>, the system will shut down on audit failure, which could result <span class="hljs-keyword">in</span> a denial-of-service condition.<br>  <span class="hljs-params">impact:</span> |<br>    Enabling this policy (value set to <span class="hljs-string">&quot;4,1&quot;</span>) may cause the system to shut down unexpectedly <span class="hljs-keyword">if</span> audit logs cannot be written, potentially disrupting services and risking data loss.<br>  <span class="hljs-params">remediation:</span> |<br>    Disable the policy by setting the CrashOnAuditFail value to <span class="hljs-string">&quot;4,0&quot;</span>. This can be done <span class="hljs-params">by:</span><br>    <span class="hljs-operator">-</span> Using the Registry <span class="hljs-params">Editor:</span> Navigate to HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System and set CrashOnAuditFail to <span class="hljs-string">&quot;4,0&quot;</span>.<br>    <span class="hljs-operator">-</span> Through Local Security <span class="hljs-params">Policy:</span> Set <span class="hljs-string">&quot;Audit: Shut down system immediately if unable to log security audits&quot;</span> to Disabled.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>isms.kisa.<span class="hljs-keyword">or</span>.kr<span class="hljs-operator">/</span>main<span class="hljs-operator">/</span>csap<span class="hljs-operator">/</span>notice<span class="hljs-operator">/</span><span class="hljs-operator">?</span>boardId<span class="hljs-operator">=</span>bbs_0000000000000004&amp;mode<span class="hljs-operator">=</span>view&amp;cntId<span class="hljs-operator">=</span><span class="hljs-number">85</span><br>  <span class="hljs-params">tags:</span> account-management,code,windows-audit,kisa,policy<br><br><span class="hljs-params">self-contained:</span> <span class="hljs-literal">true</span><br><br><span class="hljs-params">code:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">pre-condition:</span> |<br>      IsWindows();<br>    <span class="hljs-params">engine:</span><br>      <span class="hljs-operator">-</span> powershell<br>      <span class="hljs-operator">-</span> powershell.exe<br>    <span class="hljs-params">args:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-operator">-</span>ExecutionPolicy<br>      <span class="hljs-operator">-</span> Bypass<br>    <span class="hljs-params">pattern:</span> <span class="hljs-string">&quot;*.ps1&quot;</span><br>    <span class="hljs-params">source:</span> |<br>      $cfgPath <span class="hljs-operator">=</span> <span class="hljs-string">&quot;C:<span class="hljs-char escape_">\c</span>fg.txt&quot;</span><br>      secedit <span class="hljs-symbol">/export</span> <span class="hljs-symbol">/cfg</span> $cfgPath | Out-Null<br>      $cfg <span class="hljs-operator">=</span> Get-Content $cfgPath | Out-String<br>      <span class="hljs-keyword">if</span> ($cfg <span class="hljs-operator">-</span>match <span class="hljs-string">&quot;CrashOnAuditFail<span class="hljs-char escape_">\s</span>*=<span class="hljs-char escape_">\s</span>*(<span class="hljs-char escape_">\S</span>+)&quot;</span>) &#123;<br>          $value <span class="hljs-operator">=</span> $Matches[<span class="hljs-number">1</span>].Trim()<br>          <span class="hljs-keyword">if</span> ($value <span class="hljs-operator">-</span>eq <span class="hljs-string">&quot;4,1&quot;</span>) &#123;<br>              <span class="hljs-string">&quot;CRASH_ON_AUDIT_FAIL_ENABLED&quot;</span><br>          &#125; <span class="hljs-keyword">else</span> &#123;<br>              <span class="hljs-string">&quot;CRASH_ON_AUDIT_FAIL_DISABLED&quot;</span><br>          &#125;<br>      &#125; <span class="hljs-keyword">else</span> &#123;<br>          <span class="hljs-string">&quot;CRASH_ON_AUDIT_FAIL_NOT_FOUND&quot;</span><br>      &#125;<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;CRASH_ON_AUDIT_FAIL_ENABLED&quot;</span><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Windows Server Shutdown on Audit Failur</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="配置问题" scheme="http://example.com/tags/%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Zoho ManageEngine OpManager 反序列化漏洞</title>
-    <link href="http://example.com/2025/06/26/github_4254263973/"/>
-    <id>http://example.com/2025/06/26/github_4254263973/</id>
-    <published>2025-06-26T11:17:39.912Z</published>
-    <updated>2025-06-26T11:17:39.912Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Zoho ManageEngine OpManager 反序列化漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2021-3287</li></ul><p><strong>漏洞类型：</strong> 反序列化</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Zoho ManageEngine OpManager在12.5.329之前的版本中，由于反序列化类的通用绕过，允许未经身份验证的远程代码执行。</p><p><strong>产品厂商：</strong> Zoho</p><p><strong>产品名称：</strong> ManageEngine OpManager</p><p><strong>影响版本：</strong> version &lt; 12.5.329</p><p><strong>搜索语法：</strong> http.title:”opmanager”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12474">https://github.com/projectdiscovery/nuclei-templates/issues/12474</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Zoho ManageEngine OpManager before 12.5.329 allows unauthenticated Remote Code Execution due to a general bypass in the deserialization class.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="http://packetstormsecurity.com/files/164231/ManageEngine-OpManager-SumPDU-Java-Deserialization.html">http://packetstormsecurity.com/files/164231/ManageEngine-OpManager-SumPDU-Java-Deserialization.html</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-http-title-opmanager"><a href="#Shodan-Query-http-title-opmanager" class="headerlink" title="Shodan Query: http.title:&quot;opmanager&quot;"></a>Shodan Query: <code>http.title:&quot;opmanager&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Zoho ManageEngine OpManager 反序列化漏洞&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Remote System Forced Shutdown Privilege Check</title>
-    <link href="http://example.com/2025/06/26/github_3759353471/"/>
-    <id>http://example.com/2025/06/26/github_3759353471/</id>
-    <published>2025-06-26T11:17:24.236Z</published>
-    <updated>2025-06-26T11:17:24.236Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Remote System Forced Shutdown Privilege Check</p><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 确保“从远程系统强制关机”策略（SeRemoteShutdownPrivilege）仅分配给管理员组（SID: S-1-5-32-544）。将此权限授予未经授权的账户可能允许攻击者远程关闭系统，构成重大风险。</p><p><strong>产品名称：</strong> Windows Server</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/b740ee6791c0a6d36cac233d23a096ba91d2f060/code%2Fwindows%2Faudit%2Fkisa%2Fremote-system-shutdown.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/b740ee6791c0a6d36cac233d23a096ba91d2f060/code%2Fwindows%2Faudit%2Fkisa%2Fremote-system-shutdown.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> remote-system-shutdown<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Remote System Forced Shutdown Privilege Check<br>  <span class="hljs-params">author:</span> nukunga[SungHyunJeon]<br>  <span class="hljs-params">severity:</span> medium<br>  <span class="hljs-params">description:</span> |<br>    Ensure the <span class="hljs-string">&quot;Force shutdown from a remote system&quot;</span> policy (SeRemoteShutdownPrivilege) is assigned only to the Administrators group (<span class="hljs-params">SID:</span> S-<span class="hljs-number">1</span><span class="hljs-operator">-</span><span class="hljs-number">5</span><span class="hljs-operator">-</span><span class="hljs-number">3</span>2-<span class="hljs-number">544</span>). Granting this privilege to unauthorized accounts can allow attackers to remotely shut down the system, posing a significant risk.<br>  <span class="hljs-params">impact:</span> |<br>    Granting this privilege to accounts <span class="hljs-keyword">or</span> groups other than Administrators can be exploited to carry out unauthorized remote shutdowns, resulting <span class="hljs-keyword">in</span> service disruptions <span class="hljs-keyword">or</span> denial-of-service conditions.<br>  <span class="hljs-params">remediation:</span> |<br>    Configure the policy to grant the SeRemoteShutdownPrivilege exclusively to the Administrators group by setting its value to S-<span class="hljs-number">1</span><span class="hljs-operator">-</span><span class="hljs-number">5</span><span class="hljs-operator">-</span><span class="hljs-number">3</span>2-<span class="hljs-number">544</span> only.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>isms.kisa.<span class="hljs-keyword">or</span>.kr<span class="hljs-operator">/</span>main<span class="hljs-operator">/</span>csap<span class="hljs-operator">/</span>notice<span class="hljs-operator">/</span><span class="hljs-operator">?</span>boardId<span class="hljs-operator">=</span>bbs_0000000000000004&amp;mode<span class="hljs-operator">=</span>view&amp;cntId<span class="hljs-operator">=</span><span class="hljs-number">85</span><br>  <span class="hljs-params">tags:</span> policy,code,windows-audit,kisa<br><br><span class="hljs-params">self-contained:</span> <span class="hljs-literal">true</span><br><br><span class="hljs-params">code:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">pre-condition:</span> |<br>      IsWindows();<br>    <span class="hljs-params">engine:</span><br>      <span class="hljs-operator">-</span> powershell<br>      <span class="hljs-operator">-</span> powershell.exe<br>    <span class="hljs-params">args:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-operator">-</span>ExecutionPolicy<br>      <span class="hljs-operator">-</span> Bypass<br>    <span class="hljs-params">pattern:</span> <span class="hljs-string">&quot;*.ps1&quot;</span><br>    <span class="hljs-params">source:</span> |<br>      <span class="hljs-comment"># Export the current security settings to a configuration file.</span><br>      $cfgPath <span class="hljs-operator">=</span> <span class="hljs-string">&quot;C:<span class="hljs-char escape_">\c</span>fg.txt&quot;</span><br>      secedit <span class="hljs-symbol">/export</span> <span class="hljs-symbol">/cfg</span> $cfgPath | Out-Null<br>      <span class="hljs-comment"># Read the exported configuration file.</span><br>      $cfg <span class="hljs-operator">=</span> Get-Content $cfgPath | Out-String<br>      <span class="hljs-comment"># Extract the SeRemoteShutdownPrivilege value.</span><br>      <span class="hljs-keyword">if</span> ($cfg <span class="hljs-operator">-</span>match <span class="hljs-string">&quot;SeRemoteShutdownPrivilege<span class="hljs-char escape_">\s</span>*=<span class="hljs-char escape_">\s</span>*(.*)&quot;</span>) &#123;<br>          $privs <span class="hljs-operator">=</span> $Matches[<span class="hljs-number">1</span>].Trim()<br>          <span class="hljs-comment"># Check if only the Administrators SID (S-1-5-32-544) is present.</span><br>          <span class="hljs-keyword">if</span> ($privs <span class="hljs-operator">-</span>eq <span class="hljs-string">&quot;S-1-5-32-544&quot;</span>) &#123;<br>              <span class="hljs-string">&quot;REMOTE_SHUTDOWN_PRIVILEGE_COMPLIANT&quot;</span><br>          &#125; <span class="hljs-keyword">else</span> &#123;<br>              <span class="hljs-string">&quot;REMOTE_SHUTDOWN_PRIVILEGE_VULNERABLE&quot;</span><br>          &#125;<br>      &#125; <span class="hljs-keyword">else</span> &#123;<br>          <span class="hljs-string">&quot;REMOTE_SHUTDOWN_PRIVILEGE_NOT_FOUND&quot;</span><br>      &#125;<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;REMOTE_SHUTDOWN_PRIVILEGE_VULNERABLE&quot;</span><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Remote System Forced Shutdown Privilege</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
     
   </entry>
   
