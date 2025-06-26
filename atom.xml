@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-26T21:15:20.959Z</updated>
+  <updated>2025-06-26T21:30:04.819Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>OpenBao allows cancellation of root rekey and recovery rekey operations without authentication</title>
+    <link href="http://example.com/2025/06/26/github_517646360/"/>
+    <id>http://example.com/2025/06/26/github_517646360/</id>
+    <published>2025-06-26T21:30:04.822Z</published>
+    <updated>2025-06-26T21:30:04.819Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-prpj-rchp-9j5h">https://github.com/advisories/GHSA-prpj-rchp-9j5h</a></p><p><strong>仓库 Star：</strong> 3998</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/openbao/openbao/security/advisories/GHSA-prpj-rchp-9j5h">https://github.com/openbao/openbao/security/advisories/GHSA-prpj-rchp-9j5h</a></p></li><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-52894">https://nvd.nist.gov/vuln/detail/CVE-2025-52894</a></p></li><li><p><a href="https://github.com/openbao/openbao/commit/fe75468822a22a88318c6079425357a02ae5b77b">https://github.com/openbao/openbao/commit/fe75468822a22a88318c6079425357a02ae5b77b</a></p></li><li><p><a href="https://github.com/openbao/openbao/releases/tag/v2.3.1">https://github.com/openbao/openbao/releases/tag/v2.3.1</a></p></li><li><p><a href="https://github.com/advisories/GHSA-prpj-rchp-9j5h">https://github.com/advisories/GHSA-prpj-rchp-9j5h</a></p></li></ul><p><strong>描述：</strong></p><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>OpenBao and HashiCorp Vault allowed an attacker to perform unauthenticated, unaudited cancellation of root rekey and recovery rekey operations, effecting a denial of service.</p><h3 id="Patches"><a href="#Patches" class="headerlink" title="Patches"></a>Patches</h3><p>In OpenBao v2.2.2 and later, manually setting the configuration option <code>disable_unauthed_rekey_endpoints=true</code> allows an operator to deny these rarely-used endpoints on global listeners.</p><p>In a future OpenBao release <a href="https://openbao.org/docs/deprecation/">communicated on our website</a>, we will set this to <code>true</code> for all users and provide an authenticated alternative.</p><p>This vulnerability has been disclosed to HashiCorp; see their website for more information. </p><h3 id="Workarounds"><a href="#Workarounds" class="headerlink" title="Workarounds"></a>Workarounds</h3><p>If an active proxy or load balancer sits in front of OpenBao, an operator can deny requests to these endpoints from unauthorized IP ranges.</p><h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><p>See the <a href="https://openbao.org/docs/deprecation/unauthed-rekey/">deprecation notice</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-prpj-rchp-9j5h&quot;&gt;https://github.com/advisories/GHSA-prpj-rchp-9j5h&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>CVE-2025-49144-Test</title>
@@ -517,32 +541,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IIS Anonymous FTP Authentication Vulnerability</title>
-    <link href="http://example.com/2025/06/26/github_1048629150/"/>
-    <id>http://example.com/2025/06/26/github_1048629150/</id>
-    <published>2025-06-26T11:17:12.558Z</published>
-    <updated>2025-06-26T11:17:12.555Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> IIS Anonymous FTP Authentication Vulnerability</p><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 确保在所有FTP站点上禁用匿名FTP认证。允许匿名访问允许未经认证的用户连接，这可能导致严重的安全漏洞。如果启用了匿名FTP，攻击者可以绕过认证，可能获得对FTP资源的未授权访问，构成重大安全风险。</p><p><strong>产品厂商：</strong> Microsoft</p><p><strong>产品名称：</strong> IIS</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/b740ee6791c0a6d36cac233d23a096ba91d2f060/code%2Fwindows%2Faudit%2Fkisa%2Fftp-anonymous-check.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/b740ee6791c0a6d36cac233d23a096ba91d2f060/code%2Fwindows%2Faudit%2Fkisa%2Fftp-anonymous-check.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><br>id: ftp<span class="hljs-literal">-anonymous-check</span><br><br>info:<br>  name: Anonymous FTP Disabled Check<br>  author: nukunga[<span class="hljs-type">SungHyunJeon</span>]<br>  severity: medium<br>  description: |<br>    Ensure that anonymous FTP authentication is disabled on all FTP sites. Allowing anonymous access permits unauthenticated users to connect, which can lead to serious security vulnerabilities.<br>  impact: |<br>    <span class="hljs-keyword">If</span> anonymous FTP is enabled, attackers can bypass authentication and potentially gain unauthorized access to FTP resources, posing a significant security risk.<br>  remediation: |<br>    Disable anonymous FTP authentication <span class="hljs-keyword">using</span> IIS Manager:<br>    - Open IIS Manager.<br>    - Navigate to the FTP site → FTP Authentication.<br>    - <span class="hljs-built_in">Set</span> <span class="hljs-string">&quot;Anonymous Authentication&quot;</span> to Disabled.<br>  reference:<br>    - https://isms.kisa.or.kr/main/csap/notice/?boardId=bbs_0000000000000004&amp;mode=view&amp;cntId=<span class="hljs-number">85</span><br>  tags: ftp,iis,security,code,windows<span class="hljs-literal">-audit</span>,kisa<br><br>self<span class="hljs-literal">-contained</span>: true<br><br>code:<br>  - pre<span class="hljs-literal">-condition</span>: |<br>      IsWindows();<br>    engine:<br>      - powershell<br>      - powershell.exe<br>    args:<br>      - <span class="hljs-literal">-ExecutionPolicy</span><br>      - Bypass<br>    pattern: <span class="hljs-string">&quot;*.ps1&quot;</span><br>    source: |<br>      <span class="hljs-built_in">Import-Module</span> WebAdministration <span class="hljs-literal">-ErrorAction</span> SilentlyContinue<br>      <span class="hljs-variable">$ftpSites</span> = <span class="hljs-built_in">Get-ChildItem</span> IIS:\Sites | <span class="hljs-built_in">Where-Object</span> &#123; <span class="hljs-variable">$_</span>.Bindings.Collection.Protocol <span class="hljs-operator">-eq</span> <span class="hljs-string">&quot;ftp&quot;</span> &#125;<br>      <span class="hljs-variable">$vulnerable</span> = <span class="hljs-variable">$false</span><br>      <span class="hljs-keyword">foreach</span> (<span class="hljs-variable">$site</span> <span class="hljs-keyword">in</span> <span class="hljs-variable">$ftpSites</span>) &#123;<br>          <span class="hljs-variable">$anonAuth</span> = <span class="hljs-built_in">Get-WebConfigurationProperty</span> <span class="hljs-literal">-pspath</span> <span class="hljs-string">&quot;MACHINE/WEBROOT/APPHOST/<span class="hljs-variable">$</span>(<span class="hljs-variable">$site</span>.Name)&quot;</span> <span class="hljs-literal">-filter</span> <span class="hljs-string">&quot;system.ftpServer/security/authentication/anonymousAuthentication&quot;</span> <span class="hljs-literal">-name</span> <span class="hljs-string">&quot;enabled&quot;</span> <span class="hljs-literal">-ErrorAction</span> SilentlyContinue<br>          <span class="hljs-keyword">if</span> (<span class="hljs-variable">$anonAuth</span> <span class="hljs-operator">-eq</span> <span class="hljs-variable">$true</span>) &#123;<br>              <span class="hljs-variable">$vulnerable</span> = <span class="hljs-variable">$true</span><br>              <span class="hljs-keyword">break</span><br>          &#125;<br>      &#125;<br>      <span class="hljs-keyword">if</span> (<span class="hljs-variable">$vulnerable</span>) &#123;<br>          <span class="hljs-string">&quot;ANONYMOUS_FTP_ENABLED&quot;</span><br>      &#125; <span class="hljs-keyword">else</span> &#123;<br>          <span class="hljs-string">&quot;ANONYMOUS_FTP_DISABLED&quot;</span><br>      &#125;<br><br>    matchers:<br>      - <span class="hljs-built_in">type</span>: word<br>        words:<br>          - <span class="hljs-string">&quot;ANONYMOUS_FTP_ENABLED&quot;</span><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; IIS Anonymous FTP Authentication Vulner</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
     
   </entry>
   
