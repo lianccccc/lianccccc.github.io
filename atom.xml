@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-27T10:00:29.715Z</updated>
+  <updated>2025-06-27T10:45:18.112Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vite 任意文件读取漏洞</title>
+    <link href="http://example.com/2025/06/27/github_623277203/"/>
+    <id>http://example.com/2025/06/27/github_623277203/</id>
+    <published>2025-06-27T10:45:18.115Z</published>
+    <updated>2025-06-27T10:45:18.112Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Vite 任意文件读取漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-30208</li></ul><p><strong>漏洞类型：</strong> 文件读取</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> CVE-2025-30208是Vite开发服务器中的一个中危任意文件读取漏洞。远程攻击者可以通过发送特制的HTTP请求读取服务器上的任何文件，前提是Vite开发服务器暴露在网络中（例如使用<code>--host</code>或配置<code>server.host</code>）。此漏洞可能导致敏感文件如<code>/etc/passwd</code>、<code>.env</code>、源代码或配置文件被读取，进而引发凭证盗窃、信息泄露或其他进一步攻击。</p><p><strong>产品厂商：</strong> Vite</p><p><strong>产品名称：</strong> Vite Development Server</p><p><strong>影响版本：</strong> 6.2.0 &lt;&#x3D; Vite &lt;&#x3D; 6.2.2, 6.1.0 &lt;&#x3D; Vite &lt;&#x3D; 6.1.1, 6.0.0 &lt;&#x3D; Vite &lt;&#x3D; 6.0.11, 5.0.0 &lt;&#x3D; Vite &lt;&#x3D; 5.4.14, Vite &lt;&#x3D; 4.5.9</p><p><strong>来源：</strong> <a href="https://github.com/ThemeHackers/CVE-2025-30208">https://github.com/ThemeHackers/CVE-2025-30208</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2025-30208.py</li><li>README.md</li><li>requirements.txt</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-30208"><a href="#CVE-2025-30208" class="headerlink" title="CVE-2025-30208"></a>CVE-2025-30208</h2><p><img src="https://img.shields.io/badge/Vulnerability-Arbitrary%20File%20Read-red" alt="Vulnerability"><br><img src="https://img.shields.io/badge/Vite-5.x%2C%206.x-blue" alt="Vite"><br><img src="https://img.shields.io/badge/Status-Exploit%20PoC-brightgreen" alt="Status"></p><hr><blockquote><p><strong>CVE-2025-30208</strong> — Vite Arbitrary File Read Vulnerability</p></blockquote><hr><h3 id="📑-Table-of-Contents"><a href="#📑-Table-of-Contents" class="headerlink" title="📑 Table of Contents"></a>📑 Table of Contents</h3><ul><li><a href="#overview">Overview</a></li><li><a href="#impact">Impact</a></li><li><a href="#affected-versions">Affected Versions</a></li><li><a href="#patched-versions">Patched Versions</a></li><li><a href="#how-to-test">How to Test</a></li><li><a href="#example-usage">Example Usage</a></li><li><a href="#mitigation">Mitigation</a></li><li><a href="#references">References</a></li></ul><hr><h3 id="📝-Overview"><a href="#📝-Overview" class="headerlink" title="📝 Overview"></a>📝 Overview</h3><p><strong>CVE-2025-30208</strong> is an <strong>Arbitrary File Read</strong> vulnerability in multiple versions of the Vite Development Server. Remote attackers can read any file on the server by sending specially crafted HTTP requests, if the Vite dev server is exposed to the network (e.g., using <code>--host</code> or configuring <code>server.host</code>).</p><blockquote><p><strong>Type:</strong> Arbitrary File Read<br><strong>CVE:</strong> CVE-2025-30208<br><strong>Component:</strong> Vite Dev Server</p></blockquote><hr><h3 id="🚨-Impact"><a href="#🚨-Impact" class="headerlink" title="🚨 Impact"></a>🚨 Impact</h3><ul><li>Read sensitive files such as <code>/etc/passwd</code>, <code>.env</code>, source code, or configuration files.</li><li>May lead to credential theft, information disclosure, or further attacks.</li></ul><hr><h3 id="📦-Affected-Versions"><a href="#📦-Affected-Versions" class="headerlink" title="📦 Affected Versions"></a>📦 Affected Versions</h3><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">6</span>.<span class="hljs-number">2</span>.<span class="hljs-number">0</span> &lt;= Vite &lt;= <span class="hljs-number">6</span>.<span class="hljs-number">2</span>.<span class="hljs-number">2</span><br><span class="hljs-attribute">6</span>.<span class="hljs-number">1</span>.<span class="hljs-number">0</span> &lt;= Vite &lt;= <span class="hljs-number">6</span>.<span class="hljs-number">1</span>.<span class="hljs-number">1</span><br><span class="hljs-attribute">6</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span> &lt;= Vite &lt;= <span class="hljs-number">6</span>.<span class="hljs-number">0</span>.<span class="hljs-number">11</span><br><span class="hljs-attribute">5</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span> &lt;= Vite &lt;= <span class="hljs-number">5</span>.<span class="hljs-number">4</span>.<span class="hljs-number">14</span><br><span class="hljs-attribute">Vite</span> &lt;= <span class="hljs-number">4</span>.<span class="hljs-number">5</span>.<span class="hljs-number">9</span><br></code></pre></td></tr></table></figure><blockquote><p>⚠️ <strong>Note:</strong> Exploitable only if the Vite dev server is accessible from the network (e.g., started with <code>vite --host</code>).</p></blockquote><hr><h3 id="🛡️-Patched-Versions"><a href="#🛡️-Patched-Versions" class="headerlink" title="🛡️ Patched Versions"></a>🛡️ Patched Versions</h3><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">Vite</span> &gt;= <span class="hljs-number">6</span>.<span class="hljs-number">2</span>.<span class="hljs-number">3</span><br><span class="hljs-attribute">6</span>.<span class="hljs-number">1</span>.<span class="hljs-number">2</span> &lt;= Vite &lt; <span class="hljs-number">6</span>.<span class="hljs-number">2</span>.<span class="hljs-number">0</span><br><span class="hljs-attribute">6</span>.<span class="hljs-number">0</span>.<span class="hljs-number">12</span> &lt;= Vite &lt; <span class="hljs-number">6</span>.<span class="hljs-number">1</span>.<span class="hljs-number">0</span><br><span class="hljs-attribute">5</span>.<span class="hljs-number">4</span>.<span class="hljs-number">15</span> &lt;= Vite &lt; <span class="hljs-number">6</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span><br><span class="hljs-attribute">4</span>.<span class="hljs-number">5</span>.<span class="hljs-number">10</span> &lt;= Vite &lt; <span class="hljs-number">5</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span><br></code></pre></td></tr></table></figure><hr><h3 id="🧪-How-to-Test"><a href="#🧪-How-to-Test" class="headerlink" title="🧪 How to Test"></a>🧪 How to Test</h3><p>This repository provides a script (<code>CVE-2025-30208.py</code>) to test if a target Vite server is vulnerable.</p><h4 id="1-Install-Dependencies"><a href="#1-Install-Dependencies" class="headerlink" title="1. Install Dependencies"></a>1. Install Dependencies</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip3 install -r requirements.txt<br></code></pre></td></tr></table></figure><h4 id="2-Run-the-Script"><a href="#2-Run-the-Script" class="headerlink" title="2. Run the Script"></a>2. Run the Script</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 CVE-2025-30208.py<br></code></pre></td></tr></table></figure><h4 id="3-Set-Target-Options"><a href="#3-Set-Target-Options" class="headerlink" title="3. Set Target Options"></a>3. Set Target Options</h4><ul><li><code>set RHOST &lt;target IP or domain&gt;</code></li><li><code>set RPORT &lt;Vite dev server port&gt;</code></li><li><code>set COMMAND &lt;file path to read, e.g., etc/passwd&gt;</code></li></ul><h4 id="4-Run-the-Exploit"><a href="#4-Run-the-Exploit" class="headerlink" title="4. Run the Exploit"></a>4. Run the Exploit</h4><ul><li>Use the <code>run</code> or <code>exploit</code> command to test the target.</li><li>If vulnerable content is found, use the <code>pull</code> command to save the leaked data as HTML or JSON.</li></ul><hr><h3 id="💻-Example-Usage"><a href="#💻-Example-Usage" class="headerlink" title="💻 Example Usage"></a>💻 Example Usage</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs shell">CVE-2025-30208 &gt; set RHOST 192.168.1.100<br>CVE-2025-30208 &gt; set RPORT 5173<br>CVE-2025-30208 &gt; set COMMAND etc/passwd<br>CVE-2025-30208 &gt; run<br>CVE-2025-30208 &gt; pull<br></code></pre></td></tr></table></figure><hr><h3 id="🛡️-Mitigation"><a href="#🛡️-Mitigation" class="headerlink" title="🛡️ Mitigation"></a>🛡️ Mitigation</h3><ul><li><strong>Upgrade</strong> Vite to a patched version as listed above.</li><li><strong>Do not expose</strong> the Vite dev server to public or untrusted networks.</li><li><strong>Restrict access</strong> using firewalls or reverse proxies.</li></ul><hr><h3 id="📚-References"><a href="#📚-References" class="headerlink" title="📚 References"></a>📚 References</h3><ul><li><a href="https://github.com/vitejs/vite">Vite Official Repository</a></li><li><a href="https://nvd.nist.gov/">National Vulnerability Database (NVD)</a></li><li><a href="https://github.com/advisories">GitHub Advisory Database</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Vite 任意文件读取漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/str</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="文件读取" scheme="http://example.com/tags/%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96/"/>
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+  </entry>
   
   <entry>
     <title>offsectraining twitter update</title>
@@ -495,33 +522,6 @@
     
     
     <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CVE-2025-49144-Test</title>
-    <link href="http://example.com/2025/06/26/github_1961244886/"/>
-    <id>http://example.com/2025/06/26/github_1961244886/</id>
-    <published>2025-06-26T21:15:20.960Z</published>
-    <updated>2025-06-26T21:15:20.959Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CVE-2025-49144-Test</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-49144</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> CVE-2025-49144的测试攻击</p><p><strong>来源：</strong> <a href="https://github.com/tristanvandermeer/CVE-2025-49144-Test">https://github.com/tristanvandermeer/CVE-2025-49144-Test</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>LICENSE</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-49144-Test"><a href="#CVE-2025-49144-Test" class="headerlink" title="CVE-2025-49144-Test"></a>CVE-2025-49144-Test</h2><p>A test attack for CVE-2025-49144</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CVE-2025-49144-Test&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
     
   </entry>
   
