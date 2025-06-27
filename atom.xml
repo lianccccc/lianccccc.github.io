@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-27T17:00:26.991Z</updated>
+  <updated>2025-06-27T17:45:12.252Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CVE-2024-3094-analysis</title>
+    <link href="http://example.com/2025/06/27/github_3779369659/"/>
+    <id>http://example.com/2025/06/27/github_3779369659/</id>
+    <published>2025-06-27T17:45:12.259Z</published>
+    <updated>2025-06-27T17:45:12.252Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CVE-2024-3094-analysis</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-3094</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> 安全分析项目：现实世界CVE分解</p><p><strong>来源：</strong> <a href="https://github.com/Ikram124/CVE-2024-3094-analysis">https://github.com/Ikram124/CVE-2024-3094-analysis</a></p><p><strong>类型：</strong> CVE-2024:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2024-3094-analysis"><a href="#CVE-2024-3094-analysis" class="headerlink" title="CVE-2024-3094-analysis"></a>CVE-2024-3094-analysis</h2><p>Security analysis project: Real-world CVE breakdown</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CVE-2024-3094-analysis&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
+    
+    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+  </entry>
   
   <entry>
     <title>BlackHatEvents twitter update</title>
@@ -478,30 +505,6 @@
       
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-gvc8-gf46-mjvf&quot;&gt;https://github.com/advisories/GHSA-gvc8-gf46-mjvf&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Deserialization of Untrusted Data vulnerability in BoldThemes Amwerk allows Object Injection</title>
-    <link href="http://example.com/2025/06/27/github_3361787495/"/>
-    <id>http://example.com/2025/06/27/github_3361787495/</id>
-    <published>2025-06-27T13:00:10.928Z</published>
-    <updated>2025-06-27T13:00:10.928Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-p7qf-74jx-f6jj">https://github.com/advisories/GHSA-p7qf-74jx-f6jj</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-52724">https://nvd.nist.gov/vuln/detail/CVE-2025-52724</a></p></li><li><p><a href="https://patchstack.com/database/wordpress/theme/amwerk/vulnerability/wordpress-amwerk-1-2-0-php-object-injection-vulnerability?_s_id=cve">https://patchstack.com/database/wordpress/theme/amwerk/vulnerability/wordpress-amwerk-1-2-0-php-object-injection-vulnerability?_s_id=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-p7qf-74jx-f6jj">https://github.com/advisories/GHSA-p7qf-74jx-f6jj</a></p></li></ul><p><strong>描述：</strong></p><p>Deserialization of Untrusted Data vulnerability in BoldThemes Amwerk allows Object Injection. This issue affects Amwerk: from n&#x2F;a through 1.2.0.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-p7qf-74jx-f6jj&quot;&gt;https://github.com/advisories/GHSA-p7qf-74jx-f6jj&lt;/a&gt;&lt;/p</summary>
       
     
     
