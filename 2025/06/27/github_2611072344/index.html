@@ -1,0 +1,824 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=light>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="lianccc">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="漏洞信息漏洞名称： Microsoft 365 Copilot LLM Scope Violation &#x2F; AI Command Injection Vulnerability 漏洞编号：  CVE： CVE-2025-32711  漏洞类型： 代码注入 漏洞等级： 严重 漏洞描述： CVE-2025-32711，绰号”EchoLeak”，是Microsoft 365 Copilot中的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Microsoft 365 Copilot LLM Scope Violation &#x2F; AI Command Injection Vulnerability">
+<meta property="og:url" content="http://example.com/2025/06/27/github_2611072344/index.html">
+<meta property="og:site_name" content="liancc&#39; infos blog">
+<meta property="og:description" content="漏洞信息漏洞名称： Microsoft 365 Copilot LLM Scope Violation &#x2F; AI Command Injection Vulnerability 漏洞编号：  CVE： CVE-2025-32711  漏洞类型： 代码注入 漏洞等级： 严重 漏洞描述： CVE-2025-32711，绰号”EchoLeak”，是Microsoft 365 Copilot中的">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-06-27T22:45:15.521Z">
+<meta property="article:modified_time" content="2025-06-27T22:45:15.517Z">
+<meta property="article:author" content="lianccc">
+<meta property="article:tag" content="CVE-2025:github search">
+<meta property="article:tag" content="代码注入">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>Microsoft 365 Copilot LLM Scope Violation / AI Command Injection Vulnerability - liancc&#39; infos blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="liancc' infos blog" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Craw Info</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Microsoft 365 Copilot LLM Scope Violation / AI Command Injection Vulnerability"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-06-27 22:45" pubdate>
+          2025年6月27日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          374 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          4 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Microsoft 365 Copilot LLM Scope Violation / AI Command Injection Vulnerability</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Microsoft 365 Copilot LLM Scope Violation &#x2F; AI Command Injection Vulnerability</p>
+<p><strong>漏洞编号：</strong></p>
+<ul>
+<li><strong>CVE：</strong> CVE-2025-32711</li>
+</ul>
+<p><strong>漏洞类型：</strong> 代码注入</p>
+<p><strong>漏洞等级：</strong> 严重</p>
+<p><strong>漏洞描述：</strong> CVE-2025-32711，绰号”EchoLeak”，是Microsoft 365 Copilot中的一个关键零点击漏洞，允许攻击者无需任何用户交互即可窃取敏感的组织数据。此漏洞利用了Microsoft 365 Copilot处理和检索数据的方式，通过特制的电子邮件绕过安全措施，执行隐藏指令，从而无声地泄露Copilot上下文中的敏感数据（如电子邮件、OneDrive、SharePoint、Teams）。</p>
+<p><strong>产品厂商：</strong> Microsoft</p>
+<p><strong>产品名称：</strong> Microsoft 365 Copilot</p>
+<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/daryllundy/cve-2025-32711">https://github.com/daryllundy/cve-2025-32711</a></p>
+<p><strong>类型：</strong> CVE-2025:github search</p>
+<h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul>
+<li>.gitignore</li>
+<li>LICENSE</li>
+<li>README.md</li>
+<li>detect.ps1</li>
+<li>remediate.ps1</li>
+<li>tests</li>
+</ul>
+<h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-32711-EchoLeak-Detection-Tool"><a href="#CVE-2025-32711-EchoLeak-Detection-Tool" class="headerlink" title="CVE-2025-32711 (EchoLeak) Detection Tool"></a>CVE-2025-32711 (EchoLeak) Detection Tool</h2><h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>CVE-2025-32711, nicknamed “EchoLeak,” is a critical zero-click vulnerability in Microsoft 365 Copilot that allowed attackers to exfiltrate sensitive organizational data without any user interaction. This repository contains detection and remediation tools to help organizations assess their exposure and implement protective measures.</p>
+<h4 id="Vulnerability-Details"><a href="#Vulnerability-Details" class="headerlink" title="Vulnerability Details"></a>Vulnerability Details</h4><ul>
+<li><strong>CVE ID</strong>: CVE-2025-32711</li>
+<li><strong>Nickname</strong>: EchoLeak</li>
+<li><strong>CVSS Score</strong>: 9.3 (Critical)</li>
+<li><strong>Type</strong>: LLM Scope Violation &#x2F; AI Command Injection</li>
+<li><strong>Affected Product</strong>: Microsoft 365 Copilot</li>
+<li><strong>Status</strong>: Patched server-side by Microsoft in May 2025</li>
+<li><strong>User Action Required</strong>: None (server-side patch applied)</li>
+</ul>
+<h4 id="Attack-Mechanism"><a href="#Attack-Mechanism" class="headerlink" title="Attack Mechanism"></a>Attack Mechanism</h4><p>The vulnerability exploits how Microsoft 365 Copilot processes and retrieves data:</p>
+<ol>
+<li><strong>Zero-Click Attack</strong>: Attacker sends a specially crafted email containing hidden prompt injections</li>
+<li><strong>Bypass Security</strong>: The email bypasses XPIA (Cross-Prompt Injection Attack) classifiers by appearing as user instructions</li>
+<li><strong>Data Exfiltration</strong>: When Copilot processes any query, it accesses the malicious email and executes the hidden instructions</li>
+<li><strong>Silent Leakage</strong>: Sensitive data from Copilot’s context (emails, OneDrive, SharePoint, Teams) is sent to attacker-controlled servers</li>
+</ol>
+<h3 id="Repository-Structure"><a href="#Repository-Structure" class="headerlink" title="Repository Structure"></a>Repository Structure</h3><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs nix">cve-<span class="hljs-number">202</span>5-<span class="hljs-number">3271</span>1-detection<span class="hljs-symbol">/</span><br>├── README.md                    <span class="hljs-comment"># This file</span><br>├── detect.ps1                   <span class="hljs-comment"># PowerShell detection script</span><br>├── remediate.ps1                <span class="hljs-comment"># PowerShell remediation script</span><br>├── tests<span class="hljs-symbol">/</span><br>│   ├── test_detection.ps1       <span class="hljs-comment"># Detection script test suite</span><br>│   └── test_remediation.ps1     <span class="hljs-comment"># Remediation script test suite</span><br>└── logs<span class="hljs-symbol">/</span>                        <span class="hljs-comment"># Directory for log files</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h3><ul>
+<li>Windows PowerShell 5.1 or PowerShell 7+</li>
+<li>Administrative privileges on the system</li>
+<li>Microsoft 365 PowerShell modules:<ul>
+<li><code>ExchangeOnlineManagement</code></li>
+<li><code>Microsoft.Graph</code></li>
+<li><code>AzureAD</code> or <code>AzureAD.Standard.Preview</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><ol>
+<li>Clone this repository:</li>
+</ol>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs powershell">git clone https://github.com/daryllundy/cve<span class="hljs-literal">-2025-32711</span>.git<br><span class="hljs-built_in">cd</span> cve<span class="hljs-literal">-2025-32711-detection</span><br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>Install required PowerShell modules:</li>
+</ol>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">Install-Module</span> <span class="hljs-literal">-Name</span> ExchangeOnlineManagement <span class="hljs-literal">-Force</span><br><span class="hljs-built_in">Install-Module</span> <span class="hljs-literal">-Name</span> Microsoft.Graph <span class="hljs-literal">-Force</span><br><span class="hljs-built_in">Install-Module</span> <span class="hljs-literal">-Name</span> AzureAD <span class="hljs-literal">-Force</span><br></code></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>Connect to Microsoft 365:</li>
+</ol>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">Connect-ExchangeOnline</span><br><span class="hljs-built_in">Connect-MgGraph</span> <span class="hljs-literal">-Scopes</span> <span class="hljs-string">&quot;User.Read.All&quot;</span>, <span class="hljs-string">&quot;Directory.Read.All&quot;</span>, <span class="hljs-string">&quot;SecurityEvents.Read.All&quot;</span><br><span class="hljs-built_in">Connect-AzureAD</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><h4 id="Detection-Script"><a href="#Detection-Script" class="headerlink" title="Detection Script"></a>Detection Script</h4><p>The detection script checks for:</p>
+<ul>
+<li>Microsoft 365 Copilot deployment status</li>
+<li>Suspicious email patterns indicating prompt injection attempts</li>
+<li>Security configuration vulnerabilities</li>
+<li>Audit log anomalies</li>
+</ul>
+<p>Run the detection script:</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">.\detect.ps1 <span class="hljs-literal">-OutputPath</span> <span class="hljs-string">&quot;.\logs\detection_report.json&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>Parameters:</p>
+<ul>
+<li><code>-OutputPath</code>: Path for the detection report (default: <code>.\logs\detection_report.json</code>)</li>
+<li><code>-IncludeEmailAnalysis</code>: Perform deep email analysis (may take longer)</li>
+<li><code>-Days</code>: Number of days to look back in audit logs (default: 30)</li>
+</ul>
+<h4 id="Remediation-Script"><a href="#Remediation-Script" class="headerlink" title="Remediation Script"></a>Remediation Script</h4><p>The remediation script implements:</p>
+<ul>
+<li>Enhanced email filtering rules</li>
+<li>DLP policies for prompt injection detection</li>
+<li>Audit logging improvements</li>
+<li>Security configuration hardening</li>
+</ul>
+<p>Run the remediation script:</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell">.\remediate.ps1 <span class="hljs-literal">-ConfigPath</span> <span class="hljs-string">&quot;.\config\remediation_config.json&quot;</span> <span class="hljs-literal">-WhatIf</span><br></code></pre></td></tr></table></figure>
+
+<p>Parameters:</p>
+<ul>
+<li><code>-ConfigPath</code>: Path to remediation configuration file</li>
+<li><code>-WhatIf</code>: Preview changes without applying them</li>
+<li><code>-Force</code>: Apply changes without confirmation prompts</li>
+</ul>
+<h4 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h4><p>Run the test suites to verify script functionality:</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-comment">## Test detection capabilities</span><br>.\tests\test_detection.ps1<br><br><span class="hljs-comment">## Test remediation functions</span><br>.\tests\test_remediation.ps1<br></code></pre></td></tr></table></figure>
+
+<h3 id="Detection-Indicators"><a href="#Detection-Indicators" class="headerlink" title="Detection Indicators"></a>Detection Indicators</h3><p>The tool looks for the following indicators of potential exploitation:</p>
+<ol>
+<li><p><strong>Email Patterns</strong>:</p>
+<ul>
+<li>Emails containing markdown-style links with excessive query parameters</li>
+<li>Messages with hidden instructions targeting AI assistants</li>
+<li>Reference-style markdown links that bypass standard filters</li>
+</ul>
+</li>
+<li><p><strong>Behavioral Anomalies</strong>:</p>
+<ul>
+<li>Unusual data access patterns by Copilot service accounts</li>
+<li>Spike in external data transfers</li>
+<li>Suspicious audit log entries related to AI operations</li>
+</ul>
+</li>
+<li><p><strong>Configuration Weaknesses</strong>:</p>
+<ul>
+<li>Missing or misconfigured DLP policies</li>
+<li>Inadequate email filtering rules</li>
+<li>Disabled audit logging for AI operations</li>
+</ul>
+</li>
+</ol>
+<h3 id="Remediation-Actions"><a href="#Remediation-Actions" class="headerlink" title="Remediation Actions"></a>Remediation Actions</h3><p>The remediation script performs the following actions:</p>
+<ol>
+<li><p><strong>Email Security</strong>:</p>
+<ul>
+<li>Creates mail flow rules to detect prompt injection patterns</li>
+<li>Implements content filtering for AI-specific threats</li>
+<li>Blocks suspicious markdown patterns in emails</li>
+</ul>
+</li>
+<li><p><strong>Data Loss Prevention</strong>:</p>
+<ul>
+<li>Creates DLP policies for AI prompt injection detection</li>
+<li>Monitors for data exfiltration patterns</li>
+<li>Alerts on suspicious content combinations</li>
+</ul>
+</li>
+<li><p><strong>Audit and Monitoring</strong>:</p>
+<ul>
+<li>Enables comprehensive audit logging</li>
+<li>Creates alert policies for AI-related anomalies</li>
+<li>Configures retention policies for security logs</li>
+</ul>
+</li>
+<li><p><strong>Access Controls</strong>:</p>
+<ul>
+<li>Reviews and restricts Copilot data access permissions</li>
+<li>Implements conditional access policies</li>
+<li>Enforces principle of least privilege</li>
+</ul>
+</li>
+</ol>
+<h3 id="Best-Practices"><a href="#Best-Practices" class="headerlink" title="Best Practices"></a>Best Practices</h3><ol>
+<li><strong>Regular Monitoring</strong>: Run the detection script weekly to identify new threats</li>
+<li><strong>Update Patterns</strong>: Keep detection patterns updated as new attack variants emerge</li>
+<li><strong>Test Thoroughly</strong>: Always use <code>-WhatIf</code> parameter before applying remediation</li>
+<li><strong>Document Changes</strong>: Maintain logs of all security configurations applied</li>
+<li><strong>Stay Informed</strong>: Monitor Microsoft security advisories for updates</li>
+</ol>
+<h3 id="Limitations"><a href="#Limitations" class="headerlink" title="Limitations"></a>Limitations</h3><ul>
+<li>This tool cannot detect past exploitation if audit logs have been purged</li>
+<li>Server-side patches by Microsoft have already addressed the core vulnerability</li>
+<li>Detection patterns may need updates as attack techniques evolve</li>
+<li>Some remediation actions require specific Microsoft 365 licensing</li>
+</ul>
+<h3 id="Support"><a href="#Support" class="headerlink" title="Support"></a>Support</h3><p>For issues, questions, or contributions:</p>
+<ul>
+<li>Open an issue in this repository</li>
+<li>Consult Microsoft’s official documentation</li>
+<li>Review the Microsoft Security Response Center advisory</li>
+</ul>
+<h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-32711">Microsoft Security Advisory</a></li>
+<li><a target="_blank" rel="noopener" href="https://nvd.nist.gov/vuln/detail/CVE-2025-32711">NVD Database Entry</a></li>
+<li><a target="_blank" rel="noopener" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-32711">MITRE CVE Entry</a></li>
+</ul>
+<h3 id="License"><a href="#License" class="headerlink" title="License"></a>License</h3><p>This tool is provided as-is for security assessment purposes. Use at your own risk and ensure compliance with your organization’s security policies.</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Github-Poc/" class="category-chain-item">Github Poc</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/CVE-2025-github-search/" class="print-no-link">#CVE-2025:github search</a>
+      
+        <a href="/tags/%E4%BB%A3%E7%A0%81%E6%B3%A8%E5%85%A5/" class="print-no-link">#代码注入</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Microsoft 365 Copilot LLM Scope Violation / AI Command Injection Vulnerability</div>
+      <div>http://example.com/2025/06/27/github_2611072344/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>lianccc</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年6月27日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/06/27/github_1283017263/" title="Brother 信息泄露漏洞">
+                        <span class="hidden-mobile">Brother 信息泄露漏洞</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
