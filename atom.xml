@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-27T11:00:29.428Z</updated>
+  <updated>2025-06-27T12:00:07.440Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CVE-2025-6543 Zero Day Exploitation of NetScaler ADC and NetScaler Gateway</title>
+    <link href="http://example.com/2025/06/27/blog_1122878314/"/>
+    <id>http://example.com/2025/06/27/blog_1122878314/</id>
+    <published>2025-06-27T12:00:07.441Z</published>
+    <updated>2025-06-27T12:00:07.440Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-netscaler-adc-and-netscaler-gateway/">https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-netscaler-adc-and-netscaler-gateway/</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-netscaler-adc-and-netscaler-gateway/&quot;&gt;https:/</summary>
+      
+    
+    
+    
+    <category term="安全博客" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+    <category term="www.rapid7.com" scheme="http://example.com/tags/www-rapid7-com/"/>
+    
+  </entry>
   
   <entry>
     <title>fofabot twitter update</title>
@@ -491,30 +515,6 @@
       
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-j5hw-6f92-5gw9&quot;&gt;https://github.com/advisories/GHSA-j5hw-6f92-5gw9&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IBM WebSphere Application Server 85 and 90 could allow a remote attacker to execute arbitrary</title>
-    <link href="http://example.com/2025/06/26/github_2041971239/"/>
-    <id>http://example.com/2025/06/26/github_2041971239/</id>
-    <published>2025-06-26T22:00:06.174Z</published>
-    <updated>2025-06-26T22:00:06.171Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-g9q6-26jf-g5cj">https://github.com/advisories/GHSA-g9q6-26jf-g5cj</a></p><p><strong>CVSS 评分：</strong> 9.1</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-36038">https://nvd.nist.gov/vuln/detail/CVE-2025-36038</a></p></li><li><p><a href="https://www.ibm.com/support/pages/node/7237967">https://www.ibm.com/support/pages/node/7237967</a></p></li><li><p><a href="https://github.com/advisories/GHSA-g9q6-26jf-g5cj">https://github.com/advisories/GHSA-g9q6-26jf-g5cj</a></p></li></ul><p><strong>描述：</strong></p><p>IBM WebSphere Application Server 8.5 and 9.0 could allow a remote attacker to execute arbitrary code on the system with a specially crafted sequence of serialized objects.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-g9q6-26jf-g5cj&quot;&gt;https://github.com/advisories/GHSA-g9q6-26jf-g5cj&lt;/a&gt;&lt;/p</summary>
       
     
     
