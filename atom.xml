@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-27T15:45:37.272Z</updated>
+  <updated>2025-06-27T16:00:09.117Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Cross-Site Request Forgery (CSRF) vulnerability in sh1zen WP Optimizer allows SQL Injection This</title>
+    <link href="http://example.com/2025/06/27/github_1839345868/"/>
+    <id>http://example.com/2025/06/27/github_1839345868/</id>
+    <published>2025-06-27T16:00:09.121Z</published>
+    <updated>2025-06-27T16:00:09.117Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-c3jv-8q67-qj5f">https://github.com/advisories/GHSA-c3jv-8q67-qj5f</a></p><p><strong>CVSS 评分：</strong> 9.6</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-53314">https://nvd.nist.gov/vuln/detail/CVE-2025-53314</a></p></li><li><p><a href="https://patchstack.com/database/wordpress/plugin/wp-optimizer/vulnerability/wordpress-wp-optimizer-plugin-2-3-6-cross-site-request-forgery-csrf-vulnerability?_s_id=cve">https://patchstack.com/database/wordpress/plugin/wp-optimizer/vulnerability/wordpress-wp-optimizer-plugin-2-3-6-cross-site-request-forgery-csrf-vulnerability?_s_id=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-c3jv-8q67-qj5f">https://github.com/advisories/GHSA-c3jv-8q67-qj5f</a></p></li></ul><p><strong>描述：</strong></p><p>Cross-Site Request Forgery (CSRF) vulnerability in sh1zen WP Optimizer allows SQL Injection. This issue affects WP Optimizer: from n&#x2F;a through 2.3.6.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-c3jv-8q67-qj5f&quot;&gt;https://github.com/advisories/GHSA-c3jv-8q67-qj5f&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>QNAP Photo Station 远程代码执行漏洞</title>
@@ -477,30 +501,6 @@
       
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-cf6j-797q-26f6&quot;&gt;https://github.com/advisories/GHSA-cf6j-797q-26f6&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Unrestricted Upload of File with Dangerous Type vulnerability in HaruTheme Drag and Drop Multiple</title>
-    <link href="http://example.com/2025/06/27/github_2593956258/"/>
-    <id>http://example.com/2025/06/27/github_2593956258/</id>
-    <published>2025-06-27T13:00:08.095Z</published>
-    <updated>2025-06-27T13:00:08.092Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-gv3g-5wrh-3x24">https://github.com/advisories/GHSA-gv3g-5wrh-3x24</a></p><p><strong>CVSS 评分：</strong> 10.0</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-49885">https://nvd.nist.gov/vuln/detail/CVE-2025-49885</a></p></li><li><p><a href="https://patchstack.com/database/wordpress/plugin/drag-and-drop-file-upload-wc-pro/vulnerability/wordpress-drag-and-drop-multiple-file-upload-pro-woocommerce-5-0-6-arbitrary-file-upload-vulnerability?_s_id=cve">https://patchstack.com/database/wordpress/plugin/drag-and-drop-file-upload-wc-pro/vulnerability/wordpress-drag-and-drop-multiple-file-upload-pro-woocommerce-5-0-6-arbitrary-file-upload-vulnerability?_s_id=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-gv3g-5wrh-3x24">https://github.com/advisories/GHSA-gv3g-5wrh-3x24</a></p></li></ul><p><strong>描述：</strong></p><p>Unrestricted Upload of File with Dangerous Type vulnerability in HaruTheme Drag and Drop Multiple File Upload (Pro) - WooCommerce allows Upload a Web Shell to a Web Server. This issue affects Drag and Drop Multiple File Upload (Pro) - WooCommerce: from n&#x2F;a through 5.0.6.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-gv3g-5wrh-3x24&quot;&gt;https://github.com/advisories/GHSA-gv3g-5wrh-3x24&lt;/a&gt;&lt;/p</summary>
       
     
     
