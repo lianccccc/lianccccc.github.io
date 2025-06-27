@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-27T19:00:11.781Z</updated>
+  <updated>2025-06-27T19:00:28.970Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BlackHatEvents twitter update</title>
+    <link href="http://example.com/2025/06/27/twitter_822151334/"/>
+    <id>http://example.com/2025/06/27/twitter_822151334/</id>
+    <published>2025-06-27T19:00:28.973Z</published>
+    <updated>2025-06-27T19:00:28.970Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> 加入我们的#BHUSA简报会，主题为“从提示到攻击：利用与保护AI代理”，我们的专家演讲者将深入探讨由代理AI系统带来的迷人而复杂的安全挑战。通过他们展示的引人入胜的内部评估、概念验证攻击等内容，亲身体验这一变革性转变的深远影响！不要错过这个深化理解的机会，立即抢占席位 &gt;&gt; <a href="https://t.co/l07r2CGzFc">https://t.co/l07r2CGzFc</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1938673458826620930">https://x.com/BlackHatEvents/status/1938673458826620930</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 加入我们的#BHUSA简报会，主题为“从提示到攻击：利用与保护AI代理”，我们的专家演讲者将深入探讨由代理AI系统带来的迷人而复杂的安全挑战。通过</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
+    
+  </entry>
   
   <entry>
     <title>Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;)</title>
@@ -483,30 +508,6 @@
     
     
     <category term="attackerkb.com" scheme="http://example.com/tags/attackerkb-com/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>n8n allows open redirects via the /signin endpoint</title>
-    <link href="http://example.com/2025/06/27/github_2818764525/"/>
-    <id>http://example.com/2025/06/27/github_2818764525/</id>
-    <published>2025-06-27T14:30:05.997Z</published>
-    <updated>2025-06-27T14:30:05.992Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-5vj6-wjr7-5v9f">https://github.com/advisories/GHSA-5vj6-wjr7-5v9f</a></p><p><strong>仓库 Star：</strong> 112641</p><p><strong>CVSS 评分：</strong> 4.6</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/n8n-io/n8n/security/advisories/GHSA-5vj6-wjr7-5v9f">https://github.com/n8n-io/n8n/security/advisories/GHSA-5vj6-wjr7-5v9f</a></p></li><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-49592">https://nvd.nist.gov/vuln/detail/CVE-2025-49592</a></p></li><li><p><a href="https://github.com/n8n-io/n8n/pull/16034">https://github.com/n8n-io/n8n/pull/16034</a></p></li><li><p><a href="https://github.com/n8n-io/n8n/commit/4865d1e360a0fe7b045e295b5e1a29daad12314e">https://github.com/n8n-io/n8n/commit/4865d1e360a0fe7b045e295b5e1a29daad12314e</a></p></li><li><p><a href="https://github.com/n8n-io/n8n/releases/tag/n8n%401.98.0">https://github.com/n8n-io/n8n/releases/tag/n8n%401.98.0</a></p></li><li><p><a href="https://github.com/advisories/GHSA-5vj6-wjr7-5v9f">https://github.com/advisories/GHSA-5vj6-wjr7-5v9f</a></p></li></ul><p><strong>描述：</strong></p><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>This is an Open Redirect (CWE-601) vulnerability in the login flow of n8n. Authenticated users can be redirected to untrusted, attacker-controlled domains after logging in, by crafting malicious URLs with a misleading redirect query parameter.</p><p>This may lead to:</p><ul><li>Phishing attacks by impersonating the n8n UI on lookalike domains (e.g., n8n.local.evil.com)</li><li>Credential or 2FA theft if users are tricked into re-entering sensitive information</li><li>Reputation risk due to the visual similarity between attacker-controlled domains and trusted ones</li></ul><p>The vulnerability affects anyone hosting n8n and exposing the <code>/signin</code> endpoint to users.</p><h3 id="Patches"><a href="#Patches" class="headerlink" title="Patches"></a>Patches</h3><p>The issue has been patched in <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%401.98.0">1.98.0</a>.<br>All users should upgrade to this version or later.</p><p>The fix introduces strict origin validation for redirect URLs, ensuring only same-origin or relative paths are allowed after login.</p><p>Patch commit: <a href="https://github.com/n8n-io/n8n/pull/16034">https://github.com/n8n-io/n8n/pull/16034</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-5vj6-wjr7-5v9f&quot;&gt;https://github.com/advisories/GHSA-5vj6-wjr7-5v9f&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
     
   </entry>
   
