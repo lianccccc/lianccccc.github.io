@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-27T11:00:07.184Z</updated>
+  <updated>2025-06-27T11:00:29.428Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>fofabot twitter update</title>
+    <link href="http://example.com/2025/06/27/twitter_2716605998/"/>
+    <id>http://example.com/2025/06/27/twitter_2716605998/</id>
+    <published>2025-06-27T11:00:29.430Z</published>
+    <updated>2025-06-27T11:00:29.428Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> fofabot</p><p><strong>推文：</strong> ⚠️⚠️ CVE-2025-36038（CVSS 9.0）此漏洞可能允许通过恶意构造的序列化负载进行未认证的远程代码执行（RCE），对企业级Java应用构成严重威胁。<br>🎯在<a href="https://t.co/uLIbgJcaq5%E4%B8%8A%E5%8F%91%E7%8E%B0%E8%BF%91%E4%B8%80%E5%B9%B4%E5%86%85%E6%9C%8916k+%E7%BB%93%E6%9E%9C%E3%80%82">https://t.co/uLIbgJcaq5上发现近一年内有16k+结果。</a><br>🔗FOFA链接: <a href="https://t.co/IUBf1jrFGY">https://t.co/IUBf1jrFGY</a><br>FOFA查询:app&#x3D;”WebSphere-App-Server”<br>🔖参考: <a href="https://t.co/IBN87DgvTd">https://t.co/IBN87DgvTd</a><br>#OSINT #FOFA #网络安全 #漏洞</p><p><strong>链接：</strong> <a href="https://x.com/fofabot/status/1938545240996196580">https://x.com/fofabot/status/1938545240996196580</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; fofabot&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; ⚠️⚠️ CVE-2025-36038（CVSS 9.0）此漏洞可能允许通过恶意构造的序列化负载进行未认证的远程代码执行（RCE），对企业级Java应用构成严重</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="fofabot" scheme="http://example.com/tags/fofabot/"/>
+    
+  </entry>
   
   <entry>
     <title>CVE-2021-25094</title>
@@ -490,30 +515,6 @@
       
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-g9q6-26jf-g5cj&quot;&gt;https://github.com/advisories/GHSA-g9q6-26jf-g5cj&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>The Simple User Registration plugin for WordPress is vulnerable to Privilege Escalation in all</title>
-    <link href="http://example.com/2025/06/26/github_2980316439/"/>
-    <id>http://example.com/2025/06/26/github_2980316439/</id>
-    <published>2025-06-26T22:00:05.440Z</published>
-    <updated>2025-06-26T22:00:05.439Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-6hwf-c64w-jxc6">https://github.com/advisories/GHSA-6hwf-c64w-jxc6</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-4334">https://nvd.nist.gov/vuln/detail/CVE-2025-4334</a></p></li><li><p><a href="https://plugins.trac.wordpress.org/browser/wp-registration/trunk/inc/classes/class.register.php#L135">https://plugins.trac.wordpress.org/browser/wp-registration/trunk/inc/classes/class.register.php#L135</a></p></li><li><p><a href="https://www.wordfence.com/threat-intel/vulnerabilities/id/c211e0c0-3086-43d2-853c-489f9c42b0ab?source=cve">https://www.wordfence.com/threat-intel/vulnerabilities/id/c211e0c0-3086-43d2-853c-489f9c42b0ab?source=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-6hwf-c64w-jxc6">https://github.com/advisories/GHSA-6hwf-c64w-jxc6</a></p></li></ul><p><strong>描述：</strong></p><p>The Simple User Registration plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 6.3. This is due to insufficient restrictions on user meta values that can be supplied during registration. This makes it possible for unauthenticated attackers to register as an administrator.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-6hwf-c64w-jxc6&quot;&gt;https://github.com/advisories/GHSA-6hwf-c64w-jxc6&lt;/a&gt;&lt;/p</summary>
       
     
     
