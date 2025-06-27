@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-27T14:00:29.779Z</updated>
+  <updated>2025-06-27T14:15:10.323Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Github Poc</title>
+    <link href="http://example.com/2025/06/27/github_1015208117/"/>
+    <id>http://example.com/2025/06/27/github_1015208117/</id>
+    <published>2025-06-27T14:15:10.325Z</published>
+    <updated>2025-06-27T14:15:10.323Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> </p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-27388</li></ul><p><strong>来源：</strong> <a href="https://github.com/Mahesh-970/CVE-2024-27388_afterpatch">https://github.com/Mahesh-970/CVE-2024-27388_afterpatch</a></p><p><strong>类型：</strong> CVE-2024:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>.whitesource</li><li>gss_rpc_xdr.c</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
+    
+  </entry>
   
   <entry>
     <title>BlackHatEvents twitter update</title>
@@ -488,31 +514,6 @@
     <category term="文件读取" scheme="http://example.com/tags/%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96/"/>
     
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>offsectraining twitter update</title>
-    <link href="http://example.com/2025/06/27/twitter_2082538927/"/>
-    <id>http://example.com/2025/06/27/twitter_2082538927/</id>
-    <published>2025-06-27T10:00:29.715Z</published>
-    <updated>2025-06-27T10:00:29.715Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> offsectraining</p><p><strong>推文：</strong> 我们将在7月1日至3日前往马来西亚吉隆坡参加CYDES 2025。来153a展位与我们的团队见面吧！🇲🇾 #OffSec #CYDES2025 #网络安全 #网络防御 @CYDESMY</p><p><strong>链接：</strong> <a href="https://x.com/offsectraining/status/1938537787621335239">https://x.com/offsectraining/status/1938537787621335239</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; offsectraining&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 我们将在7月1日至3日前往马来西亚吉隆坡参加CYDES 2025。来153a展位与我们的团队见面吧！🇲🇾 #OffSec #CYDES2025</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="offsectraining" scheme="http://example.com/tags/offsectraining/"/>
     
   </entry>
   
