@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-27T14:45:15.815Z</updated>
+  <updated>2025-06-27T15:00:07.114Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>filebrowser Sets Insecure File Permissions</title>
+    <link href="http://example.com/2025/06/27/github_2109110443/"/>
+    <id>http://example.com/2025/06/27/github_2109110443/</id>
+    <published>2025-06-27T15:00:07.118Z</published>
+    <updated>2025-06-27T15:00:07.114Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-jj2r-455p-5gvf">https://github.com/advisories/GHSA-jj2r-455p-5gvf</a></p><p><strong>仓库 Star：</strong> 29896</p><p><strong>CVSS 评分：</strong> 5.5</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/filebrowser/filebrowser/security/advisories/GHSA-jj2r-455p-5gvf">https://github.com/filebrowser/filebrowser/security/advisories/GHSA-jj2r-455p-5gvf</a></p></li><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-52900">https://nvd.nist.gov/vuln/detail/CVE-2025-52900</a></p></li><li><p><a href="https://github.com/filebrowser/filebrowser/commit/ca86f916216620365c0f81629c0934ce02574d76">https://github.com/filebrowser/filebrowser/commit/ca86f916216620365c0f81629c0934ce02574d76</a></p></li><li><p><a href="https://github.com/advisories/GHSA-jj2r-455p-5gvf">https://github.com/advisories/GHSA-jj2r-455p-5gvf</a></p></li></ul><p><strong>描述：</strong></p><h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>The file access permissions for files uploaded to or created from File Browser are never explicitly set by the application.<br>The same is true for the database used by File Browser. On standard servers where the <em>umask</em> configuration has not been hardened before, this makes all the stated files readable by any operating system account.</p><h2 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h2><p>The default permissions for new files on a standard Linux system are <code>0644</code>, making them world-readable.<br>That means that at least the following parties have full read access to all files managed by the Filebrowser from all <em>scopes</em>, as well as its database (including the password hashes stored in there):</p><ul><li>All OS accounts on the server</li><li>All other applications running on the same server</li><li>Any Filebrowser user with <em>Command Execution</em> privileges having access to a command that allows reading a file’s content</li></ul><h2 id="Vulnerability-Description"><a href="#Vulnerability-Description" class="headerlink" title="Vulnerability Description"></a>Vulnerability Description</h2><p>On a Linux system, the file access permissions of new files are designated by the system wide <em>umask</em> setting, unless they are configured manually.<br>Most distributions set this value to <code>022</code> by default which gives every account on the system read permissions on the file.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ <span class="hljs-built_in">umask</span><br>022<br>$ <span class="hljs-built_in">touch</span> foo<br>$ <span class="hljs-built_in">ls</span> -l foo<br>-rw-r--r-- 1 sba sba 0 31. Mär 15:08 foo<br></code></pre></td></tr></table></figure><h2 id="Proof-of-Concept"><a href="#Proof-of-Concept" class="headerlink" title="Proof of Concept"></a>Proof of Concept</h2><p>Upload or create a file in the Filebrowser GUI and list the directory contents from a shell:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ <span class="hljs-built_in">ls</span> -l /srv/filebrowser/testdir<br>total 12<br>-rw-r--r-- 1 sba sba 7703 Mar 25 16:07 dummy1.pdf<br>-rw-r--r-- 1 sba sba    3 Mar 25 15:46 testfile.txt<br></code></pre></td></tr></table></figure><p>The same can be validated for Docker based deployments within the container:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ docker <span class="hljs-built_in">exec</span> -it e0f075082a2c <span class="hljs-built_in">ls</span> /srv/testdir -l<br>total 12<br>-rw-r--r--    1 1000     1000          7703 Mar 25 15:07 dummy1.pdf<br>-rw-r--r--    1 1000     1000             3 Mar 25 14:46 testfile.txt<br></code></pre></td></tr></table></figure><p>Furthermore, the database used by the Filebrowser application is readable by any account:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ <span class="hljs-built_in">ls</span> -l /srv/filebrowser/filebrowser.db <br>-rw-rw-r-- 1 sba sba 65536 Mar 25 09:58 /srv/filebrowser/filebrowser.db<br></code></pre></td></tr></table></figure><h2 id="Recommended-Countermeasures"><a href="#Recommended-Countermeasures" class="headerlink" title="Recommended Countermeasures"></a>Recommended Countermeasures</h2><p>Since the system’s <em>umask</em> configuration cannot be controlled by the Filebrowser, the application needs to set the permissions of all new files manually upon creation.<br>No permissions should be given to the <em>other</em> category.</p><p>Implementing this won’t fix the permissions for active instances after an update, so site administrators will need to fix the permissions manually:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ <span class="hljs-built_in">chmod</span> o-rwx -R /srv/filebrowser/datadir<br></code></pre></td></tr></table></figure><h2 id="Timeline"><a href="#Timeline" class="headerlink" title="Timeline"></a>Timeline</h2><ul><li><code>2025-03-25</code> Identified the vulnerability in version 2.32.0</li><li><code>2025-04-11</code> Contacted the project</li><li><code>2025-04-18</code> Vulnerability disclosed to the project</li><li><code>2025-06-25</code> Uploaded advisories to the project’s GitHub repository</li><li><code>2025-06-26</code> CVE ID assigned by GitHub</li><li><code>2025-06-26</code> Fix released with version 2.33.7</li></ul><h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul><li><a href="https://cwe.mitre.org/data/definitions/276.html">CWE-276: Incorrect Default Permissions</a></li><li><a href="https://www.cyberciti.biz/tips/understanding-linux-unix-umask-value-usage.html">What is Umask and How To Setup Default umask Under Linux?</a></li></ul><h2 id="Credits"><a href="#Credits" class="headerlink" title="Credits"></a>Credits</h2><ul><li>Mathias Tausig (<a href="https://www.sba-research.org/">SBA Research</a>)</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-jj2r-455p-5gvf&quot;&gt;https://github.com/advisories/GHSA-jj2r-455p-5gvf&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>ISPConfig language_editphp PHP代码注入</title>
@@ -488,30 +512,6 @@
     
     
     <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CVE-2025-6543 Zero Day Exploitation of NetScaler ADC and NetScaler Gateway</title>
-    <link href="http://example.com/2025/06/27/blog_1122878314/"/>
-    <id>http://example.com/2025/06/27/blog_1122878314/</id>
-    <published>2025-06-27T12:00:07.441Z</published>
-    <updated>2025-06-27T12:00:07.440Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-netscaler-adc-and-netscaler-gateway/">https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-netscaler-adc-and-netscaler-gateway/</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-netscaler-adc-and-netscaler-gateway/&quot;&gt;https:/</summary>
-      
-    
-    
-    
-    <category term="安全博客" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%8D%9A%E5%AE%A2/"/>
-    
-    
-    <category term="www.rapid7.com" scheme="http://example.com/tags/www-rapid7-com/"/>
     
   </entry>
   
