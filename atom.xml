@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-27T12:00:07.440Z</updated>
+  <updated>2025-06-27T12:00:26.240Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BlackHatEvents twitter update</title>
+    <link href="http://example.com/2025/06/27/twitter_4102502433/"/>
+    <id>http://example.com/2025/06/27/twitter_4102502433/</id>
+    <published>2025-06-27T12:00:26.241Z</published>
+    <updated>2025-06-27T12:00:26.240Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> #BHEU工具征集现已开放！加入我们，2025年12月10日至11日在伦敦的开源工具演示区Arsenal，研究人员和开发者可以在这里展示他们的创新项目。不要错过这个连接、合作并提升你工作的机会！📩 立即提交你的项目 &gt;&gt; <a href="https://t.co/ybLPcp5gaN">https://t.co/ybLPcp5gaN</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1938557694564016582">https://x.com/BlackHatEvents/status/1938557694564016582</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; #BHEU工具征集现已开放！加入我们，2025年12月10日至11日在伦敦的开源工具演示区Arsenal，研究人员和开发者可以在这里展示他们的创新</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
+    
+  </entry>
   
   <entry>
     <title>CVE-2025-6543 Zero Day Exploitation of NetScaler ADC and NetScaler Gateway</title>
@@ -491,30 +516,6 @@
       
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-w8p2-wjjr-hr24&quot;&gt;https://github.com/advisories/GHSA-w8p2-wjjr-hr24&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MICROSENS NMP Web+could allow an unauthenticated attacker to overwrite files and execute</title>
-    <link href="http://example.com/2025/06/26/github_380367216/"/>
-    <id>http://example.com/2025/06/26/github_380367216/</id>
-    <published>2025-06-26T22:00:06.488Z</published>
-    <updated>2025-06-26T22:00:06.487Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-j5hw-6f92-5gw9">https://github.com/advisories/GHSA-j5hw-6f92-5gw9</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-49153">https://nvd.nist.gov/vuln/detail/CVE-2025-49153</a></p></li><li><p><a href="https://www.cisa.gov/news-events/ics-advisories/icsa-25-175-07">https://www.cisa.gov/news-events/ics-advisories/icsa-25-175-07</a></p></li><li><p><a href="https://www.microsens.com/support/downloads/nmp">https://www.microsens.com/support/downloads/nmp</a></p></li><li><p><a href="https://github.com/advisories/GHSA-j5hw-6f92-5gw9">https://github.com/advisories/GHSA-j5hw-6f92-5gw9</a></p></li></ul><p><strong>描述：</strong></p><p>MICROSENS NMP Web+</p><p>could allow an unauthenticated attacker to overwrite files and execute arbitrary code.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-j5hw-6f92-5gw9&quot;&gt;https://github.com/advisories/GHSA-j5hw-6f92-5gw9&lt;/a&gt;&lt;/p</summary>
       
     
     
