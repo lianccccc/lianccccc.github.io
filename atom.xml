@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-27T10:45:18.112Z</updated>
+  <updated>2025-06-27T11:00:07.184Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CVE-2021-25094</title>
+    <link href="http://example.com/2025/06/27/other_568340431/"/>
+    <id>http://example.com/2025/06/27/other_568340431/</id>
+    <published>2025-06-27T11:00:07.187Z</published>
+    <updated>2025-06-27T11:00:07.184Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>描述：</strong> The Tatsu WordPress plugin before 3.3.12 add_custom_font action can be used without prior authentication to upload a rogue zip file which is uncompressed under the WordPress’s upload directory. By adding a PHP shell with a filename starting with a dot “.”, this can bypass extension control implemented in the plugin. Moreover, there is a race condition in the zip extraction process which makes the shell file live long enough on the filesystem to be callable by an attacker.</p><hr><p>Based on <a href="https://darkpills.com/wordpress-tatsu-builder-preauth-rce-cve-2021-25094/">technical analysis</a>, the <code>Attacker Value</code> of the vulnerability is <strong>high</strong> because it’s a popular WordPress plugin that has been exploited in the wild. Although it is an older vulnerability, we’ve added a <a href="https://github.com/rapid7/metasploit-framework/pull/20301">module</a> for it, as it may still be relevant to the older, unpatched version of Tatsu. The exploitability is marked as <strong>easy</strong> because all the attacker needs is a malicious <code>zip</code> file with a hidden PHP payload. It should also be noted that the exploitation does not require any credentials, and attackers can weaponize this vulnerability.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;描述：&lt;/strong&gt; The Tatsu WordPress plugin before 3.3.12 add_custom_font action can be used without prior authentication to upload a</summary>
+      
+    
+    
+    
+    <category term="其他" scheme="http://example.com/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+    <category term="attackerkb.com" scheme="http://example.com/tags/attackerkb-com/"/>
+    
+  </entry>
   
   <entry>
     <title>Vite 任意文件读取漏洞</title>
@@ -490,30 +514,6 @@
       
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-6hwf-c64w-jxc6&quot;&gt;https://github.com/advisories/GHSA-6hwf-c64w-jxc6&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>OpenBao allows cancellation of root rekey and recovery rekey operations without authentication</title>
-    <link href="http://example.com/2025/06/26/github_517646360/"/>
-    <id>http://example.com/2025/06/26/github_517646360/</id>
-    <published>2025-06-26T21:30:04.822Z</published>
-    <updated>2025-06-26T21:30:04.819Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-prpj-rchp-9j5h">https://github.com/advisories/GHSA-prpj-rchp-9j5h</a></p><p><strong>仓库 Star：</strong> 3998</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/openbao/openbao/security/advisories/GHSA-prpj-rchp-9j5h">https://github.com/openbao/openbao/security/advisories/GHSA-prpj-rchp-9j5h</a></p></li><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-52894">https://nvd.nist.gov/vuln/detail/CVE-2025-52894</a></p></li><li><p><a href="https://github.com/openbao/openbao/commit/fe75468822a22a88318c6079425357a02ae5b77b">https://github.com/openbao/openbao/commit/fe75468822a22a88318c6079425357a02ae5b77b</a></p></li><li><p><a href="https://github.com/openbao/openbao/releases/tag/v2.3.1">https://github.com/openbao/openbao/releases/tag/v2.3.1</a></p></li><li><p><a href="https://github.com/advisories/GHSA-prpj-rchp-9j5h">https://github.com/advisories/GHSA-prpj-rchp-9j5h</a></p></li></ul><p><strong>描述：</strong></p><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>OpenBao and HashiCorp Vault allowed an attacker to perform unauthenticated, unaudited cancellation of root rekey and recovery rekey operations, effecting a denial of service.</p><h3 id="Patches"><a href="#Patches" class="headerlink" title="Patches"></a>Patches</h3><p>In OpenBao v2.2.2 and later, manually setting the configuration option <code>disable_unauthed_rekey_endpoints=true</code> allows an operator to deny these rarely-used endpoints on global listeners.</p><p>In a future OpenBao release <a href="https://openbao.org/docs/deprecation/">communicated on our website</a>, we will set this to <code>true</code> for all users and provide an authenticated alternative.</p><p>This vulnerability has been disclosed to HashiCorp; see their website for more information. </p><h3 id="Workarounds"><a href="#Workarounds" class="headerlink" title="Workarounds"></a>Workarounds</h3><p>If an active proxy or load balancer sits in front of OpenBao, an operator can deny requests to these endpoints from unauthorized IP ranges.</p><h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><p>See the <a href="https://openbao.org/docs/deprecation/unauthed-rekey/">deprecation notice</a>.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-prpj-rchp-9j5h&quot;&gt;https://github.com/advisories/GHSA-prpj-rchp-9j5h&lt;/a&gt;&lt;/p</summary>
       
     
     
