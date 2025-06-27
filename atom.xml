@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-27T16:45:13.472Z</updated>
+  <updated>2025-06-27T17:00:26.991Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BlackHatEvents twitter update</title>
+    <link href="http://example.com/2025/06/27/twitter_2802384069/"/>
+    <id>http://example.com/2025/06/27/twitter_2802384069/</id>
+    <published>2025-06-27T17:00:26.992Z</published>
+    <updated>2025-06-27T17:00:26.991Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> 今天就锁定你在#sectorca的位置！准备好与顶尖行业领袖和充满活力的加拿大#网络安全社区一起，享受一场充满创新与灵感的难忘体验吧！别再等待——立即注册，加入这场激动人心的活动🎉 &gt;&gt; <a href="https://t.co/ooUGDuqosV">https://t.co/ooUGDuqosV</a> <a href="https://t.co/BO8Q10N3EM">https://t.co/BO8Q10N3EM</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1938637723071398179">https://x.com/BlackHatEvents/status/1938637723071398179</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 今天就锁定你在#sectorca的位置！准备好与顶尖行业领袖和充满活力的加拿大#网络安全社区一起，享受一场充满创新与灵感的难忘体验吧！别再等待——</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
+    
+  </entry>
   
   <entry>
     <title>ISPConfig language_editphp PHP代码注入漏洞</title>
@@ -477,30 +502,6 @@
       
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-p7qf-74jx-f6jj&quot;&gt;https://github.com/advisories/GHSA-p7qf-74jx-f6jj&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Deserialization of Untrusted Data vulnerability in pebas CouponXxL allows Object Injection This</title>
-    <link href="http://example.com/2025/06/27/github_1319416698/"/>
-    <id>http://example.com/2025/06/27/github_1319416698/</id>
-    <published>2025-06-27T13:00:09.468Z</published>
-    <updated>2025-06-27T13:00:09.468Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-cf6j-797q-26f6">https://github.com/advisories/GHSA-cf6j-797q-26f6</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-52725">https://nvd.nist.gov/vuln/detail/CVE-2025-52725</a></p></li><li><p><a href="https://patchstack.com/database/wordpress/theme/couponxxl/vulnerability/wordpress-couponxxl-3-0-0-php-object-injection-vulnerability?_s_id=cve">https://patchstack.com/database/wordpress/theme/couponxxl/vulnerability/wordpress-couponxxl-3-0-0-php-object-injection-vulnerability?_s_id=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-cf6j-797q-26f6">https://github.com/advisories/GHSA-cf6j-797q-26f6</a></p></li></ul><p><strong>描述：</strong></p><p>Deserialization of Untrusted Data vulnerability in pebas CouponXxL allows Object Injection. This issue affects CouponXxL: from n&#x2F;a through 3.0.0.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-cf6j-797q-26f6&quot;&gt;https://github.com/advisories/GHSA-cf6j-797q-26f6&lt;/a&gt;&lt;/p</summary>
       
     
     
