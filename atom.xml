@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-29T12:15:10.623Z</updated>
+  <updated>2025-06-29T15:00:27.480Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BlackHatEvents twitter update</title>
+    <link href="http://example.com/2025/06/29/twitter_1544577045/"/>
+    <id>http://example.com/2025/06/29/twitter_1544577045/</id>
+    <published>2025-06-29T15:00:27.482Z</published>
+    <updated>2025-06-29T15:00:27.480Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> 加入#BHUSA简报会“集群故障点——攻击Windows服务器故障转移集群”，我们的演讲者将向您展示攻击者是如何攻破Windows服务器故障转移集群的——以及如何阻止他们！不要错过这次对#网络安全领域的深入探讨，立即注册&gt;&gt; <a href="https://t.co/a75k2jgaEC">https://t.co/a75k2jgaEC</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1939333055195332723">https://x.com/BlackHatEvents/status/1939333055195332723</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 加入#BHUSA简报会“集群故障点——攻击Windows服务器故障转移集群”，我们的演讲者将向您展示攻击者是如何攻破Windows服务器故障转移集</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
+    
+  </entry>
   
   <entry>
     <title>CVE-2025-6019 Exploit</title>
@@ -512,31 +537,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BlackHatEvents twitter update</title>
-    <link href="http://example.com/2025/06/29/twitter_1253086645/"/>
-    <id>http://example.com/2025/06/29/twitter_1253086645/</id>
-    <published>2025-06-29T00:00:26.720Z</published>
-    <updated>2025-06-29T00:00:26.717Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> #sectorca云安全峰会是加拿大领先的云安全活动，特邀主题演讲嘉宾、小组讨论及提供交流机会。这一天的活动为每一位安全专业人士提供了与领导者互动并探讨云安全未来发展的宝贵机会。立即注册 &gt;&gt; <a href="https://t.co/FlVBXW1acF">https://t.co/FlVBXW1acF</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1939106309447483699">https://x.com/BlackHatEvents/status/1939106309447483699</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; #sectorca云安全峰会是加拿大领先的云安全活动，特邀主题演讲嘉宾、小组讨论及提供交流机会。这一天的活动为每一位安全专业人士提供了与领导者互动</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
     
   </entry>
   
