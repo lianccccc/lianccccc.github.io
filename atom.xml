@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-29T15:15:10.922Z</updated>
+  <updated>2025-06-29T16:00:26.941Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BlackHatEvents twitter update</title>
+    <link href="http://example.com/2025/06/29/twitter_2444827669/"/>
+    <id>http://example.com/2025/06/29/twitter_2444827669/</id>
+    <published>2025-06-29T16:00:26.943Z</published>
+    <updated>2025-06-29T16:00:26.941Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> 🚨 所有#网络安全专家注意了！🚨 别错过在7月18日价格上涨前抢购#BHUSA席位的机会！深入探讨激动人心的简报，与行业精英建立联系，开启一个充满机遇的世界！🌟 立即注册，确保你在网络安全领域的未来 &gt;&gt; <a href="https://t.co/8NohWna3sl">https://t.co/8NohWna3sl</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1939343371773923457">https://x.com/BlackHatEvents/status/1939343371773923457</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🚨 所有#网络安全专家注意了！🚨 别错过在7月18日价格上涨前抢购#BHUSA席位的机会！深入探讨激动人心的简报，与行业精英建立联系，开启一个</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
+    
+  </entry>
   
   <entry>
     <title>Github Poc</title>
@@ -512,30 +537,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>The Debian zuluPolkit/CMakeListstxt file for zuluCrypt through the zulucrypt_620-1 package has</title>
-    <link href="http://example.com/2025/06/29/github_879972018/"/>
-    <id>http://example.com/2025/06/29/github_879972018/</id>
-    <published>2025-06-29T01:00:04.607Z</published>
-    <updated>2025-06-29T01:00:04.601Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-33qm-768m-wx8p">https://github.com/advisories/GHSA-33qm-768m-wx8p</a></p><p><strong>CVSS 评分：</strong> 9.4</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-53391">https://nvd.nist.gov/vuln/detail/CVE-2025-53391</a></p></li><li><p><a href="https://bugs.debian.org/1108288">https://bugs.debian.org/1108288</a></p></li><li><p><a href="https://deb.debian.org/debian/pool/main/z/zulucrypt/zulucrypt_6.2.0-1.dsc">https://deb.debian.org/debian/pool/main/z/zulucrypt/zulucrypt_6.2.0-1.dsc</a></p></li><li><p><a href="https://salsa.debian.org/debian/zulucrypt/-/blob/9d661c9f384c4d889d3387944e14ac70cfb9684b/debian/patches/fix_zulupolkit_policy.patch">https://salsa.debian.org/debian/zulucrypt/-/blob/9d661c9f384c4d889d3387944e14ac70cfb9684b/debian/patches/fix_zulupolkit_policy.patch</a></p></li><li><p><a href="https://github.com/advisories/GHSA-33qm-768m-wx8p">https://github.com/advisories/GHSA-33qm-768m-wx8p</a></p></li></ul><p><strong>描述：</strong></p><p>The Debian zuluPolkit&#x2F;CMakeLists.txt file for zuluCrypt through the zulucrypt_6.2.0-1 package has insecure PolicyKit allow_any&#x2F;allow_inactive&#x2F;allow_active settings that allow a local user to escalate their privileges to root.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-33qm-768m-wx8p&quot;&gt;https://github.com/advisories/GHSA-33qm-768m-wx8p&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
     
   </entry>
   
