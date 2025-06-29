@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-29T02:45:22.422Z</updated>
+  <updated>2025-06-29T04:15:22.557Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,13 +17,13 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Mitel MiCollab and MiVoice Business Express TP-240 信息泄露与拒绝服务漏洞</title>
+    <title>Mitel MiCollab and MiVoice Business Express TP-240 信息泄露和拒绝服务漏洞</title>
     <link href="http://example.com/2025/06/29/github_823656353/"/>
     <id>http://example.com/2025/06/29/github_823656353/</id>
-    <published>2025-06-29T02:45:22.427Z</published>
-    <updated>2025-06-29T02:45:22.422Z</updated>
+    <published>2025-06-29T04:15:22.562Z</published>
+    <updated>2025-06-29T04:15:22.557Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Mitel MiCollab and MiVoice Business Express TP-240 信息泄露与拒绝服务漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2022-26143</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Mitel MiCollab和MiVoice Business Express中的TP-240组件（也称为tp240dvr）在9.4 SP1 FP1之前的MiCollab版本和8.1及之前的MiVoice Business Express版本中存在漏洞，允许远程攻击者获取敏感信息并导致拒绝服务（性能下降和过多的出站流量）。此漏洞在2022年2月和3月被利用于TP240PhoneHome DDoS攻击。</p><p><strong>产品厂商：</strong> Mitel</p><p><strong>产品名称：</strong> MiCollab, MiVoice Business Express</p><p><strong>影响版本：</strong> MiCollab before 9.4 SP1 FP1, MiVoice Business Express through 8.1</p><p><strong>搜索语法：</strong> http.favicon.hash:”-1922044295”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12494">https://github.com/projectdiscovery/nuclei-templates/issues/12494</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>The TP-240 (aka tp240dvr) component in Mitel MiCollab before 9.4 SP1 FP1 and MiVoice Business Express through 8.1 allows remote attackers to obtain sensitive information and cause a denial of service (performance degradation and excessive outbound traffic). This was exploited in the wild in February and March 2022 for the TP240PhoneHome DDoS attack.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://arstechnica.com/information-technology/2022/03/ddosers-use-new-method-capable-of-amplifying-traffic-by-a-factor-of-4-billion/">https://arstechnica.com/information-technology/2022/03/ddosers-use-new-method-capable-of-amplifying-traffic-by-a-factor-of-4-billion/</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-http-favicon-hash-1922044295"><a href="#Shodan-Query-http-favicon-hash-1922044295" class="headerlink" title="Shodan Query: http.favicon.hash:&quot;-1922044295&quot;"></a>Shodan Query: <code>http.favicon.hash:&quot;-1922044295&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Mitel MiCollab and MiVoice Business Express TP-240 信息泄露和拒绝服务漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2022-26143</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Mitel MiCollab 9.4 SP1 FP1之前版本和MiVoice Business Express 8.1及之前版本中的TP-240组件（也称为tp240dvr）存在信息泄露和拒绝服务漏洞，远程攻击者可利用该漏洞获取敏感信息并导致服务性能下降和出站流量过大。2022年2月和3月，该漏洞被利用于TP240PhoneHome DDoS攻击。</p><p><strong>产品厂商：</strong> Mitel</p><p><strong>产品名称：</strong> MiCollab, MiVoice Business Express</p><p><strong>影响版本：</strong> MiCollab before 9.4 SP1 FP1, MiVoice Business Express through 8.1</p><p><strong>搜索语法：</strong> http.favicon.hash:”-1922044295”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12494">https://github.com/projectdiscovery/nuclei-templates/issues/12494</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>The TP-240 (aka tp240dvr) component in Mitel MiCollab before 9.4 SP1 FP1 and MiVoice Business Express through 8.1 allows remote attackers to obtain sensitive information and cause a denial of service (performance degradation and excessive outbound traffic). This was exploited in the wild in February and March 2022 for the TP240PhoneHome DDoS attack.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://arstechnica.com/information-technology/2022/03/ddosers-use-new-method-capable-of-amplifying-traffic-by-a-factor-of-4-billion/">https://arstechnica.com/information-technology/2022/03/ddosers-use-new-method-capable-of-amplifying-traffic-by-a-factor-of-4-billion/</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-http-favicon-hash-1922044295"><a href="#Shodan-Query-http-favicon-hash-1922044295" class="headerlink" title="Shodan Query: http.favicon.hash:&quot;-1922044295&quot;"></a>Shodan Query: <code>http.favicon.hash:&quot;-1922044295&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
     
     
       
@@ -39,6 +39,32 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Microsoft FrontPage Configuration - Exposure</title>
+    <link href="http://example.com/2025/06/29/github_2536565019/"/>
+    <id>http://example.com/2025/06/29/github_2536565019/</id>
+    <published>2025-06-29T04:15:11.351Z</published>
+    <updated>2025-06-29T04:15:11.345Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Microsoft FrontPage Configuration - Exposure</p><p><strong>漏洞类型：</strong> 配置问题</p><p><strong>漏洞等级：</strong> 低危</p><p><strong>漏洞描述：</strong> Microsoft FrontPage Server Extensions的配置文件可被访问，可能暴露敏感信息，如FrontPage的版本、目录的物理路径和其他配置细节。这是在安装了FrontPage Server Extensions的旧（2000年代）IIS服务器上常见的配置问题。</p><p><strong>产品厂商：</strong> Microsoft</p><p><strong>产品名称：</strong> Microsoft FrontPage Server Extensions</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/46958a3e711f57a0c495eb7dfddc4f46767ac893/http%2Fmisconfiguration%2Fmicrosoft%2Fmicrosoft-front-page-misconfig.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/46958a3e711f57a0c495eb7dfddc4f46767ac893/http%2Fmisconfiguration%2Fmicrosoft%2Fmicrosoft-front-page-misconfig.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><code class="hljs less"><br>id: microsoft-front-<span class="hljs-attribute">page-misconfig</span><br><span class="hljs-attribute"></span><br><span class="hljs-attribute">info</span>:<br>  <span class="hljs-attribute">name</span>: Microsoft FrontPage Configuration - Exposure<br>  <span class="hljs-attribute">author</span>: JTeles,pikpikcu<br>  <span class="hljs-attribute">severity</span>: low<br>  <span class="hljs-attribute">description</span>: |<br>    Microsoft FrontPage Server Extensions configuration files are accessible, which may expose sensitive information such as the version of FrontPage, physical paths of directories, <span class="hljs-keyword">and</span> other configuration details. This is a common misconfiguration on old (<span class="hljs-number">2000s</span>) IIS servers that have FrontPage Server Extensions installed.<br>  <span class="hljs-attribute">reference</span>:<br>    - <span class="hljs-attribute">https</span>:<span class="hljs-comment">//docs.microsoft.com/en-us/archive/blogs/fabdulwahab/security-protecting-sharepoint-server-applications</span><br>    - <span class="hljs-attribute">https</span>:<span class="hljs-comment">//www.tenable.com/plugins/was/112772</span><br>    - <span class="hljs-attribute">https</span>:<span class="hljs-comment">//stackoverflow.com/questions/1163820/what-are-vti-cnf-vti-pvt-vti-script-and-vti-txt-folders</span><br>  <span class="hljs-attribute">metadata</span>:<br>    <span class="hljs-attribute">verified</span>: true<br>    <span class="hljs-attribute">max-request</span>: <span class="hljs-number">2</span><br>  <span class="hljs-attribute">tags</span>: misconfig,exposure,frontpage,microsoft,detect<br><br><span class="hljs-attribute">http</span>:<br>  - <span class="hljs-attribute">method</span>: GET<br>    <span class="hljs-attribute">path</span>:<br>      - <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/_vti_inf.html&quot;</span><br>      - <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/_vti_pvt/service.cnf&quot;</span><br>      - <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/_vti_pvt/access.cnf&quot;</span><br>      - <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/_vti_txt/default.wti/All.cat&quot;</span><br><br>    <span class="hljs-attribute">matchers-condition</span>: <span class="hljs-keyword">and</span><br>    <span class="hljs-attribute">matchers</span>:<br>      - <span class="hljs-attribute">type</span>: word<br>        <span class="hljs-attribute">part</span>: body<br>        <span class="hljs-attribute">words</span>:<br>          - <span class="hljs-string">&quot;vti_extenderversion:&quot;</span><br>          - <span class="hljs-string">&quot;FPVersion=&quot;</span><br>          - <span class="hljs-string">&quot;PasswordDir&quot;</span><br>          - <span class="hljs-string">&quot;Catalog for database:&quot;</span><br><br>      - <span class="hljs-attribute">type</span>: status<br>        <span class="hljs-attribute">status</span>:<br>          - <span class="hljs-number">200</span><br># <span class="hljs-attribute">digest</span>: <span class="hljs-number">4</span><span class="hljs-attribute">a0a0047304502202c11068ec33e1e93276f2b642a8714758f1f7081f83ee03aa3fa258513eca523022100970663f6eb8d6ee8110d7866b856777e8434eebb914dca091d2f1d74648e0bef</span>:<span class="hljs-number">922</span>c64590222798bb761d5b6d8e72950<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Microsoft FrontPage Configuration - Exp</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="配置问题" scheme="http://example.com/tags/%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/"/>
     
   </entry>
   
@@ -511,33 +537,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PDF JS CVE-2024-4367 漏洞</title>
-    <link href="http://example.com/2025/06/28/github_2186246628/"/>
-    <id>http://example.com/2025/06/28/github_2186246628/</id>
-    <published>2025-06-28T18:15:12.334Z</published>
-    <updated>2025-06-28T18:15:12.331Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> PDF JS CVE-2024-4367 漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-4367</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> PDF JS的CVE-2024-4367漏洞的POC</p><p><strong>产品名称：</strong> PDF JS</p><p><strong>来源：</strong> <a href="https://github.com/pS3ud0RAnD0m/CVE-2024-4367-POC">https://github.com/pS3ud0RAnD0m/CVE-2024-4367-POC</a></p><p><strong>类型：</strong> CVE-2024:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>LICENSE</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2024-4367-POC"><a href="#CVE-2024-4367-POC" class="headerlink" title="CVE-2024-4367-POC"></a>CVE-2024-4367-POC</h2><p>POC for PDF JS’ CVE-2024-4367 vuln</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; PDF JS CVE-2024-4367 漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
-    
-    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
     
   </entry>
   
