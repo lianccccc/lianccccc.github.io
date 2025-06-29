@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-29T21:15:12.109Z</updated>
+  <updated>2025-06-29T22:00:05.083Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Multiple Authenticated SQL Injection vulnerabilities found in UISP Application (Version 24206</title>
+    <link href="http://example.com/2025/06/29/github_304784057/"/>
+    <id>http://example.com/2025/06/29/github_304784057/</id>
+    <published>2025-06-29T22:00:05.085Z</published>
+    <updated>2025-06-29T22:00:05.083Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-8hv4-jp7q-gqgc">https://github.com/advisories/GHSA-8hv4-jp7q-gqgc</a></p><p><strong>CVSS 评分：</strong> 9.9</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-24290">https://nvd.nist.gov/vuln/detail/CVE-2025-24290</a></p></li><li><p><a href="https://community.ui.com/releases/Security-Advisory-Bulletin-048-048/af007d99-bb6d-4368-a12f-75e84de19e8d">https://community.ui.com/releases/Security-Advisory-Bulletin-048-048/af007d99-bb6d-4368-a12f-75e84de19e8d</a></p></li><li><p><a href="https://github.com/advisories/GHSA-8hv4-jp7q-gqgc">https://github.com/advisories/GHSA-8hv4-jp7q-gqgc</a></p></li></ul><p><strong>描述：</strong></p><p>Multiple Authenticated SQL Injection vulnerabilities found in UISP Application (Version 2.4.206 and earlier) could allow a malicious actor with low privileges to escalate privileges.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-8hv4-jp7q-gqgc&quot;&gt;https://github.com/advisories/GHSA-8hv4-jp7q-gqgc&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>OpenMetadata 默认凭证漏洞</title>
@@ -509,32 +533,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="文件上传" scheme="http://example.com/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mitel MiCollab TP-240 (tp240dvr) DDoS Amplification Vulnerability</title>
-    <link href="http://example.com/2025/06/29/github_2983095357/"/>
-    <id>http://example.com/2025/06/29/github_2983095357/</id>
-    <published>2025-06-29T08:15:25.757Z</published>
-    <updated>2025-06-29T08:15:25.752Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Mitel MiCollab TP-240 (tp240dvr) DDoS Amplification Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2022-26143</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Mitel MiCollab TP-240 (tp240dvr)组件在Mitel MiCollab 9.4 SP1 FP1之前和MiVoice Business Express 8.1及之前版本中存在拒绝服务（放大攻击）漏洞。远程攻击者通过发送一个小UDP包并接收一个更大的响应，可以导致拒绝服务。此漏洞在2022年2月和3月被利用于TP240PhoneHome DDoS攻击，该攻击可以将流量放大40亿倍。攻击涉及向端口10074发送一个4字节的UDP包并接收一个显著更大的响应，使其成为一个有效的DDoS放大向量。</p><p><strong>产品厂商：</strong> Mitel</p><p><strong>产品名称：</strong> Mitel MiCollab, MiVoice Business Express</p><p><strong>影响版本：</strong> Mitel MiCollab before 9.4 SP1 FP1, MiVoice Business Express through 8.1</p><p><strong>搜索语法：</strong> port:10074</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/623191bc6c30b1d88ff3f6eab5bf8498b6e4afda/network%2Fcves%2F2022%2FCVE-2022-26143.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/623191bc6c30b1d88ff3f6eab5bf8498b6e4afda/network%2Fcves%2F2022%2FCVE-2022-26143.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>2-<span class="hljs-number">26143</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Mitel MiCollab TP-<span class="hljs-number">240</span> (tp240dvr) <span class="hljs-operator">-</span> DDoS Amplification Vulnerability<br>  <span class="hljs-params">author:</span> aybanda<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    The TP-<span class="hljs-number">240</span> (tp240dvr) component <span class="hljs-keyword">in</span> Mitel MiCollab before <span class="hljs-number">9.4</span> SP1 FP1 and MiVoice Business Express through <span class="hljs-number">8.1</span> allows remote attackers to cause a denial of service (amplification attack) by sending a small UDP packet and receiving a much larger response. This vulnerability was exploited <span class="hljs-keyword">in</span> the wild <span class="hljs-keyword">in</span> February and March <span class="hljs-number">2022</span> for the TP240PhoneHome DDoS attack, which could amplify traffic by a factor of <span class="hljs-number">4</span> billion. The attack involves sending a <span class="hljs-number">4</span><span class="hljs-operator">-</span>byte UDP packet to port <span class="hljs-number">10074</span> and receiving a response that is significantly larger, making it an effective DDoS amplification vector.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>arstechnica.com<span class="hljs-operator">/</span>information-technology<span class="hljs-operator">/</span><span class="hljs-number">2022</span><span class="hljs-operator">/</span><span class="hljs-number">03</span><span class="hljs-operator">/</span>ddosers-use-new-method-capable-of-amplifying-traffic-by-a-factor-of-<span class="hljs-number">4</span><span class="hljs-operator">-</span>billion<span class="hljs-symbol">/</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2022-26143</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>www.rapid7.com<span class="hljs-operator">/</span>blog<span class="hljs-operator">/</span>post<span class="hljs-operator">/</span><span class="hljs-number">2022</span><span class="hljs-operator">/</span><span class="hljs-number">03</span><span class="hljs-operator">/</span><span class="hljs-number">10</span><span class="hljs-operator">/</span>mitel-tp240-phonehome-ddos-amplification-cve-<span class="hljs-number">202</span>2-<span class="hljs-number">26143</span><span class="hljs-symbol">/</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>2-<span class="hljs-number">26143</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">400</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">shodan-query:</span> port:<span class="hljs-number">10074</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">vendor:</span> mitel<br>    <span class="hljs-params">product:</span> micollab<br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-params">tags:</span> cve,cve2022,mitel,ddos,amplification,tp240,kev<br><br><span class="hljs-params">tcp:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">host:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;Hostname&#125;&#125;&quot;</span><br>    <span class="hljs-params">port:</span> <span class="hljs-number">10074</span><br>    <span class="hljs-params">inputs:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">data:</span> <span class="hljs-string">&quot;00000000&quot;</span><br>        <span class="hljs-params">type:</span> hex<br>        <span class="hljs-params">read:</span> <span class="hljs-number">4096</span><br>    <span class="hljs-params">read-size:</span> <span class="hljs-number">4096</span><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> raw<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;tp240&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;mitel&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;tp240dvr&quot;</span><br>        <span class="hljs-params">condition:</span> <span class="hljs-keyword">or</span><br>      <br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> size<br>        <span class="hljs-params">part:</span> raw<br>        <span class="hljs-params">size:</span><br>          <span class="hljs-params">gt:</span> <span class="hljs-number">1000</span><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Mitel MiCollab TP-240 (tp240dvr) DDoS A</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
     
   </entry>
   
