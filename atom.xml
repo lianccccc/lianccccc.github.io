@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-29T07:15:13.429Z</updated>
+  <updated>2025-06-29T07:30:17.093Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Apache Struts 路径遍历与远程代码执行漏洞</title>
+    <link href="http://example.com/2025/06/29/github_4241703152/"/>
+    <id>http://example.com/2025/06/29/github_4241703152/</id>
+    <published>2025-06-29T07:30:17.097Z</published>
+    <updated>2025-06-29T07:30:17.093Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache Struts 路径遍历与远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-50164</li></ul><p><strong>漏洞类型：</strong> 目录遍历</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Apache Struts 2.5.33和6.3.0.2+版本中存在路径遍历漏洞，攻击者可以通过操纵文件上传参数上传恶意文件并可能执行远程代码。此漏洞要求攻击者操纵上传参数。</p><p><strong>产品厂商：</strong> Apache</p><p><strong>产品名称：</strong> Struts</p><p><strong>影响版本：</strong> 2.5.33, 6.3.0.2+</p><p><strong>搜索语法：</strong> http.title:”struts2 showcase”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12302">https://github.com/projectdiscovery/nuclei-templates/issues/12302</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Struts 2.5.33 and 6.3.0.2+ contain a path traversal caused by manipulation of file upload parameters, letting attackers upload malicious files and potentially execute remote code, exploit requires attacker to manipulate upload parameters.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://vulncheck.com/xdb/676c45378050">https://vulncheck.com/xdb/676c45378050</a></li><li><a href="https://github.com/Pixel-DefaultBR/CVE-2023-50164">https://github.com/Pixel-DefaultBR/CVE-2023-50164</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:Pixel-DefaultBR&#x2F;CVE-2023-50164.git</li><li><a href="https://github.com/Trackflaw/CVE-2024-10924-Wordpress-Docker">https://github.com/Trackflaw/CVE-2024-10924-Wordpress-Docker</a></li><li><a href="https://vulncheck.com/xdb/891b149617f9">https://vulncheck.com/xdb/891b149617f9</a></li><li><a href="https://github.com/NikitaPark/CVE-2023-50164-PoC">https://github.com/NikitaPark/CVE-2023-50164-PoC</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:NikitaPark&#x2F;CVE-2023-50164-PoC.git</li><li><a href="https://vulncheck.com/xdb/78854c0dc088">https://vulncheck.com/xdb/78854c0dc088</a></li><li><a href="https://github.com/AsfandAliMemon25/CVE-2023-50164Analysis-">https://github.com/AsfandAliMemon25/CVE-2023-50164Analysis-</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:AsfandAliMemon25&#x2F;CVE-2023-50164Analysis-.git</li><li><a href="https://github.com/sunnyvale-it/CVE-2023-50164-PoC">https://github.com/sunnyvale-it/CVE-2023-50164-PoC</a></li><li><a href="https://vulncheck.com/xdb/17870a6362f9">https://vulncheck.com/xdb/17870a6362f9</a></li><li>https&#x2F;&#x2F;&#x2F;gitlab.com:Hamdane10&#x2F;cve-2023-50164.git</li><li><a href="https://vulncheck.com/xdb/83f6fcc57b59">https://vulncheck.com/xdb/83f6fcc57b59</a></li><li><a href="https://github.com/snyk-labs/CVE-2023-50164-POC">https://github.com/snyk-labs/CVE-2023-50164-POC</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:snyk-labs&#x2F;CVE-2023-50164-POC.git</li><li><a href="https://github.com/aaronm-sysdig/cve-2023-50164">https://github.com/aaronm-sysdig/cve-2023-50164</a></li><li><a href="https://github.com/miles3719/cve-2023-50164">https://github.com/miles3719/cve-2023-50164</a></li><li><a href="https://github.com/Trackflaw/CVE-2023-50164-ApacheStruts2-Docker">https://github.com/Trackflaw/CVE-2023-50164-ApacheStruts2-Docker</a></li><li><a href="https://github.com/Thirukrishnan/CVE-2023-50164-Apache-Struts-RCE">https://github.com/Thirukrishnan/CVE-2023-50164-Apache-Struts-RCE</a></li><li><a href="https://github.com/helsecert/cve-2023-50164">https://github.com/helsecert/cve-2023-50164</a></li><li><a href="https://vulncheck.com/xdb/6b23f76ae74b">https://vulncheck.com/xdb/6b23f76ae74b</a></li><li><a href="https://github.com/dwisiswant0/cve-2023-50164-poc">https://github.com/dwisiswant0/cve-2023-50164-poc</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:dwisiswant0&#x2F;cve-2023-50164-poc.git</li><li><a href="https://vulncheck.com/xdb/2eedf38daab7">https://vulncheck.com/xdb/2eedf38daab7</a></li><li><a href="https://github.com/bcdannyboy/CVE-2023-50164">https://github.com/bcdannyboy/CVE-2023-50164</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:bcdannyboy&#x2F;CVE-2023-50164.git</li><li><a href="https://github.com/jakabakos/CVE-2023-50164-Apache-Struts-RCE">https://github.com/jakabakos/CVE-2023-50164-Apache-Struts-RCE</a></li><li><a href="https://github.com/minhbao15677/CVE-2023-50164">https://github.com/minhbao15677/CVE-2023-50164</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-http-title-struts2-showcase"><a href="#Shodan-Query-http-title-struts2-showcase" class="headerlink" title="Shodan Query: http.title:&quot;struts2 showcase&quot;"></a>Shodan Query: <code>http.title:&quot;struts2 showcase&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Apache Struts 路径遍历与远程代码执行漏洞&lt;/p&gt;
+&lt;p&gt;&lt;str</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="目录遍历" scheme="http://example.com/tags/%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86/"/>
+    
+  </entry>
   
   <entry>
     <title>ISPConfig language_editphp PHP代码注入</title>
@@ -510,32 +537,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Obscura$ DNS Relay Injector + NTLM Coercion Tool</title>
-    <link href="http://example.com/2025/06/28/github_3440151392/"/>
-    <id>http://example.com/2025/06/28/github_3440151392/</id>
-    <published>2025-06-28T18:45:34.715Z</published>
-    <updated>2025-06-28T18:45:34.711Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Obscura$ DNS Relay Injector + NTLM Coercion Tool</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-33073</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 一个隐蔽的概念验证工具，通过链式利用DNS注入、NTLM中继和基于RPC的强制手段，测试Windows Active Directory环境中的认证中继路径。该工具结合了<code>samba-tool</code>注入DNS <code>A</code>记录、验证DNS记录传播、使用<code>impacket-ntlmrelayx</code>启动NTLM中继监听器，以及通过<code>rpcping</code>（MS-RPRN强制）触发强制认证。</p><p><strong>来源：</strong> <a href="https://github.com/obscura-cert/CVE-2025-33073">https://github.com/obscura-cert/CVE-2025-33073</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>LICENSE</li><li>README.md</li><li>main.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="Obscura-DNS-Relay-Injector-NTLM-Coercion-Tool"><a href="#Obscura-DNS-Relay-Injector-NTLM-Coercion-Tool" class="headerlink" title="Obscura$ DNS Relay Injector + NTLM Coercion Tool"></a>Obscura$ DNS Relay Injector + NTLM Coercion Tool</h2><p>A stealthy proof-of-concept that chains DNS injection, NTLM relay, and RPC-based coercion to test authentication relay paths in Windows Active Directory environments.</p><blockquote><p>⚠️ <strong>DISCLAIMER: For authorized security testing and educational use only.</strong><br>❌ Unauthorized use is strictly prohibited. The author takes no responsibility for misuse.</p></blockquote><hr><h3 id="🔧-Features"><a href="#🔧-Features" class="headerlink" title="🔧 Features"></a>🔧 Features</h3><ul><li>Injects DNS <code>A</code> records via <code>samba-tool</code></li><li>Verifies DNS record propagation</li><li>Launches NTLM relay listener using <code>impacket-ntlmrelayx</code></li><li>Triggers forced authentication via <code>rpcping</code> (MS-RPRN coercion)</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Obscura$ DNS Relay Injector + NTLM Coer</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
   </entry>
   
