@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-29T16:15:17.270Z</updated>
+  <updated>2025-06-29T17:00:28.174Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BlackHatEvents twitter update</title>
+    <link href="http://example.com/2025/06/29/twitter_1241000146/"/>
+    <id>http://example.com/2025/06/29/twitter_1241000146/</id>
+    <published>2025-06-29T17:00:28.179Z</published>
+    <updated>2025-06-29T17:00:28.174Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> 加入#BlackHat创业聚焦大赛在#sectorca，这是一场展示#网络安全行业最具突破性创新的 pitch 竞赛。立即报名您的#初创企业，以提升知名度、与行业领袖建立联系并加速您的成长。决赛选手将有机会赢得参加2026年Black Hat USA的名额。🏆 了解更多 &gt;&gt; <a href="https://t.co/IaqE2rEb17">https://t.co/IaqE2rEb17</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1939355709348495401">https://x.com/BlackHatEvents/status/1939355709348495401</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 加入#BlackHat创业聚焦大赛在#sectorca，这是一场展示#网络安全行业最具突破性创新的 pitch 竞赛。立即报名您的#初创企业，以提</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
+    
+  </entry>
   
   <entry>
     <title>Vite Arbitrary File Read Vulnerability</title>
@@ -500,32 +525,6 @@
       
       
     <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; FasterXML jackson-databind 反序列化远程代码执行漏洞</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>FasterXML jackson-databind JtaTransactionConfig 反序列化漏洞</title>
-    <link href="http://example.com/2025/06/29/github_3550199103/"/>
-    <id>http://example.com/2025/06/29/github_3550199103/</id>
-    <published>2025-06-29T02:00:17.576Z</published>
-    <updated>2025-06-29T02:00:17.574Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> FasterXML jackson-databind JtaTransactionConfig 反序列化漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2020-9547</li></ul><p><strong>漏洞类型：</strong> 反序列化</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> FasterXML jackson-databind 2.x 在2.9.10.4之前的版本中，处理序列化小工具和类型交互时存在缺陷，与com.ibatis.sqlmap.engine.transaction.jta.JtaTransactionConfig（即ibatis-sqlmap）相关。</p><p><strong>产品厂商：</strong> FasterXML</p><p><strong>产品名称：</strong> jackson-databind</p><p><strong>影响版本：</strong> 2.x &lt; 2.9.10.4</p><p><strong>搜索语法：</strong> cpe:”cpe:2.3:o:debian:debian_linux”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12488">https://github.com/projectdiscovery/nuclei-templates/issues/12488</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>FasterXML jackson-databind 2.x before 2.9.10.4 mishandles the interaction between serialization gadgets and typing, related to com.ibatis.sqlmap.engine.transaction.jta.JtaTransactionConfig (aka ibatis-sqlmap).</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://github.com/fairyming/CVE-2020-9547">https://github.com/fairyming/CVE-2020-9547</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-cpe-cpe-2-3-o-debian-debian-linux"><a href="#Shodan-Query-cpe-cpe-2-3-o-debian-debian-linux" class="headerlink" title="Shodan Query: cpe:&quot;cpe:2.3:o:debian:debian_linux&quot;"></a>Shodan Query: <code>cpe:&quot;cpe:2.3:o:debian:debian_linux&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; FasterXML jackson-databind JtaTransacti</summary>
       
     
     
