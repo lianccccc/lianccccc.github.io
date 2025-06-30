@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-30T12:01:09.412Z</updated>
+  <updated>2025-06-30T14:00:27.932Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>offsectraining twitter update</title>
+    <link href="http://example.com/2025/06/30/twitter_3711812017/"/>
+    <id>http://example.com/2025/06/30/twitter_3711812017/</id>
+    <published>2025-06-30T14:00:27.934Z</published>
+    <updated>2025-06-30T14:00:27.932Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> offsectraining</p><p><strong>推文：</strong> 祝贺我们最新的CORE奖得主：Salar 🏆</p><p>Salar总是在任何人需要支持时伸出援手，无论是同事还是考试中的学生。他始终站在前线，指导OffSec团队，确保一切顺利进行。</p><p>有你在这里真是太棒了，Salar！</p><p><strong>链接：</strong> <a href="https://x.com/offsectraining/status/1939675016196391016">https://x.com/offsectraining/status/1939675016196391016</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; offsectraining&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 祝贺我们最新的CORE奖得主：Salar 🏆&lt;/p&gt;
+&lt;p&gt;Salar总是在任何人需要支持时伸出援手，无论是同事还是考试中的学生。他始终站在前线</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="offsectraining" scheme="http://example.com/tags/offsectraining/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sophos Firewall Asnarök Malware Detection - CVE-2020-12271</title>
+    <link href="http://example.com/2025/06/30/github_3426777089/"/>
+    <id>http://example.com/2025/06/30/github_3426777089/</id>
+    <published>2025-06-30T14:00:23.973Z</published>
+    <updated>2025-06-30T14:00:23.972Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Sophos Firewall Asnarök Malware Detection - CVE-2020-12271</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2020-12271</li></ul><p><strong>漏洞类型：</strong> SQL注入</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> 在Sophos XG Firewall设备的SFOS 17.0、17.1、17.5和18.0版本中，发现了一个SQL注入问题，该问题在2020年4月被野外利用。这影响了配置了管理（HTTPS）服务或在WAN区域暴露用户门户的设备。成功的攻击可能导致远程代码执行，泄露本地设备管理员、门户管理员和用于远程访问的用户账户的用户名和哈希密码（但不包括外部Active Directory或LDAP密码）。</p><p><strong>产品厂商：</strong> Sophos</p><p><strong>产品名称：</strong> Sophos XG Firewall</p><p><strong>影响版本：</strong> SFOS 17.0, 17.1, 17.5, and 18.0 before 2020-04-25</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/03d003c7ecc14342e1d57d5b1cbfd8d7e4dcbe8c/http%2Fcves%2F2020%2FCVE-2020-12271.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/03d003c7ecc14342e1d57d5b1cbfd8d7e4dcbe8c/http%2Fcves%2F2020%2FCVE-2020-12271.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>0-<span class="hljs-number">12271</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Sophos Firewall Asnarök Malware Detection <span class="hljs-operator">-</span> CVE-<span class="hljs-number">202</span>0-<span class="hljs-number">12271</span><br>  <span class="hljs-params">author:</span> x.com<span class="hljs-symbol">/redperfect1847</span><br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    A SQL injection issue was found <span class="hljs-keyword">in</span> SFOS <span class="hljs-number">17.0</span>, <span class="hljs-number">17.1</span>, <span class="hljs-number">17.5</span>, and <span class="hljs-number">18.0</span> before <span class="hljs-number">202</span>0-<span class="hljs-number">0</span>4-<span class="hljs-number">25</span> on Sophos XG Firewall devices, as exploited <span class="hljs-keyword">in</span> the wild <span class="hljs-keyword">in</span> April <span class="hljs-number">2020</span>. This affected devices configured <span class="hljs-keyword">with</span> either the administration (HTTPS) service <span class="hljs-keyword">or</span> the User Portal exposed on the WAN zone. A successful attack may have caused remote code execution that exfiltrated usernames and hashed passwords for the local device admin(s), portal admins, and user accounts used for remote access (but not external Active Directory <span class="hljs-keyword">or</span> LDAP passwords).<br>  <span class="hljs-params">tags:</span> malware, asnarok, sophos, rce, sql-injection<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>news.sophos.com<span class="hljs-operator">/</span>en-us<span class="hljs-operator">/</span><span class="hljs-number">2020</span><span class="hljs-operator">/</span><span class="hljs-number">04</span><span class="hljs-operator">/</span><span class="hljs-number">26</span><span class="hljs-operator">/</span>asnarok<span class="hljs-symbol">/</span><br><br><span class="hljs-params">variables:</span><br>  <span class="hljs-params">interactsh_url:</span> <span class="hljs-string">&quot;&#123;&#123;interactsh-url&#125;&#125;&quot;</span><br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-symbol">/sp/Install.sh</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> sophosfirewallupdate.com<br><br>    <span class="hljs-params">matchers-condition:</span> <span class="hljs-keyword">or</span><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;#!/bin/bash&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;chmod +x&quot;</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> header<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;content-type: application/x-sh&quot;</span><br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-symbol">/sh_guard/lc</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> sophosfirewallupdate.com<br><br>    <span class="hljs-params">matchers-condition:</span> <span class="hljs-keyword">or</span><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;#!/bin/bash&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;downloaded lp&quot;</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> header<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;content-type: application/x-sh&quot;</span><br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-symbol">/sp/sophos.dat</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> sophosfirewallupdate.com<br><br>    <span class="hljs-params">matchers-condition:</span> <span class="hljs-keyword">or</span><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;ELF&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;binaries&quot;</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> header<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;content-type: application/octet-stream&quot;</span><br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-symbol">/sp/ae.sh</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> sophosfirewallupdate.com<br><br>    <span class="hljs-params">matchers-condition:</span> <span class="hljs-keyword">or</span><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;#!/bin/bash&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Modified scripts&quot;</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> header<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;content-type: application/x-sh&quot;</span><br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-symbol">/sp/patch.sh</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> ragnarokfromasgard.com<br><br>    <span class="hljs-params">matchers-condition:</span> <span class="hljs-keyword">or</span><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;#!/bin/bash&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;patching system&quot;</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> header<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;content-type: application/x-sh&quot;</span><br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-symbol">/bkin</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> filedownloaderservers.com<br><br>    <span class="hljs-params">matchers-condition:</span> <span class="hljs-keyword">or</span><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;ELF&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Executable&quot;</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> header<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;content-type: application/octet-stream&quot;</span><br><br>    <span class="hljs-params">stop-at-first-match:</span> <span class="hljs-literal">true</span><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Sophos Firewall Asnarök Malware Detecti</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="SQL注入" scheme="http://example.com/tags/SQL%E6%B3%A8%E5%85%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>慢雾 Q2 追踪实录：协助被盗客户冻结/追回超千万美元资金</title>
@@ -438,9 +490,9 @@
     <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
     
     
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
     <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
   </entry>
   
@@ -495,59 +547,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="微步在线研究响应中心" scheme="http://example.com/tags/%E5%BE%AE%E6%AD%A5%E5%9C%A8%E7%BA%BF%E7%A0%94%E7%A9%B6%E5%93%8D%E5%BA%94%E4%B8%AD%E5%BF%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Github Poc</title>
-    <link href="http://example.com/2025/06/30/github_2825788633/"/>
-    <id>http://example.com/2025/06/30/github_2825788633/</id>
-    <published>2025-06-30T07:45:12.095Z</published>
-    <updated>2025-06-30T07:45:12.096Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> </p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-27388</li></ul><p><strong>来源：</strong> <a href="https://github.com/Mahesh-970/CVE-2024-27388_afterPatch">https://github.com/Mahesh-970/CVE-2024-27388_afterPatch</a></p><p><strong>类型：</strong> CVE-2024:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>.whitesource</li><li>gss_rpc_xdr.c</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CVE-2024-27388_beforPatch</title>
-    <link href="http://example.com/2025/06/30/github_2761984751/"/>
-    <id>http://example.com/2025/06/30/github_2761984751/</id>
-    <published>2025-06-30T07:15:13.809Z</published>
-    <updated>2025-06-30T07:15:13.806Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CVE-2024-27388_beforPatch</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-27388</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>来源：</strong> <a href="https://github.com/Mahesh-970/CVE-2024-27388_beforPatch">https://github.com/Mahesh-970/CVE-2024-27388_beforPatch</a></p><p><strong>类型：</strong> CVE-2024:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>.whitesource</li><li>gss_rpc_xdr.c</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CVE-2024-27388_beforPatch&lt;/p&gt;
-&lt;p&gt;&lt;stron</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
-    
-    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
     
   </entry>
   
