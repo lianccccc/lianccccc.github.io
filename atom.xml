@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-30T22:00:28.256Z</updated>
+  <updated>2025-06-30T22:30:16.665Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CVE-2025-6210 Hardlink-Based Path Traversal in ObsidianReader</title>
+    <link href="http://example.com/2025/06/30/other_2394685130/"/>
+    <id>http://example.com/2025/06/30/other_2394685130/</id>
+    <published>2025-06-30T22:30:16.665Z</published>
+    <updated>2025-06-30T22:30:16.665Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://huntr.com/bounties/a654b322-a509-4448-a1f5-0f22850b4687">https://huntr.com/bounties/a654b322-a509-4448-a1f5-0f22850b4687</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://huntr.com/bounties/a654b322-a509-4448-a1f5-0f22850b4687&quot;&gt;https://huntr.com/bounties/a654b322-a509-4</summary>
+      
+    
+    
+    
+    <category term="其他" scheme="http://example.com/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+    <category term="huntr.com" scheme="http://example.com/tags/huntr-com/"/>
+    
+  </entry>
   
   <entry>
     <title>BlackHatEvents twitter update</title>
@@ -175,7 +199,7 @@
     <published>2025-06-30T19:00:04.808Z</published>
     <updated>2025-06-30T19:00:04.808Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-6r2x-8pq8-9489">https://github.com/advisories/GHSA-6r2x-8pq8-9489</a></p><p><strong>仓库 Star：</strong> 117292</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/electron/electron/security/advisories/GHSA-6r2x-8pq8-9489">https://github.com/electron/electron/security/advisories/GHSA-6r2x-8pq8-9489</a></p></li><li><p><a href="https://github.com/advisories/GHSA-6r2x-8pq8-9489">https://github.com/advisories/GHSA-6r2x-8pq8-9489</a></p></li></ul><p><strong>描述：</strong></p><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>The <code>nativeImage.createFromPath()</code> and <code>nativeImage.createFromBuffer()</code> functions call a function downstream that is vulnerable to a heap buffer overflow. An Electron program that uses either of the affected functions is vulnerable to a buffer overflow if an attacker is in control of the image’s height, width, and contents.</p><h3 id="Workaround"><a href="#Workaround" class="headerlink" title="Workaround"></a>Workaround</h3><p>There are no app-side workarounds for this issue. You must update your Electron version to be protected.</p><h3 id="Patches"><a href="#Patches" class="headerlink" title="Patches"></a>Patches</h3><ul><li><code>v28.3.2</code></li><li><code>v29.3.3</code></li><li><code>v30.0.3</code></li></ul><h3 id="For-More-Information"><a href="#For-More-Information" class="headerlink" title="For More Information"></a>For More Information</h3><p>If you have any questions or comments about this advisory, email us at <a href="mailto:&#115;&#x65;&#x63;&#117;&#x72;&#105;&#x74;&#121;&#x40;&#101;&#x6c;&#x65;&#99;&#116;&#x72;&#x6f;&#110;&#106;&#115;&#x2e;&#x6f;&#114;&#x67;">security@electronjs.org</a>.</p>]]></content>
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-6r2x-8pq8-9489">https://github.com/advisories/GHSA-6r2x-8pq8-9489</a></p><p><strong>仓库 Star：</strong> 117292</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/electron/electron/security/advisories/GHSA-6r2x-8pq8-9489">https://github.com/electron/electron/security/advisories/GHSA-6r2x-8pq8-9489</a></p></li><li><p><a href="https://github.com/advisories/GHSA-6r2x-8pq8-9489">https://github.com/advisories/GHSA-6r2x-8pq8-9489</a></p></li></ul><p><strong>描述：</strong></p><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>The <code>nativeImage.createFromPath()</code> and <code>nativeImage.createFromBuffer()</code> functions call a function downstream that is vulnerable to a heap buffer overflow. An Electron program that uses either of the affected functions is vulnerable to a buffer overflow if an attacker is in control of the image’s height, width, and contents.</p><h3 id="Workaround"><a href="#Workaround" class="headerlink" title="Workaround"></a>Workaround</h3><p>There are no app-side workarounds for this issue. You must update your Electron version to be protected.</p><h3 id="Patches"><a href="#Patches" class="headerlink" title="Patches"></a>Patches</h3><ul><li><code>v28.3.2</code></li><li><code>v29.3.3</code></li><li><code>v30.0.3</code></li></ul><h3 id="For-More-Information"><a href="#For-More-Information" class="headerlink" title="For More Information"></a>For More Information</h3><p>If you have any questions or comments about this advisory, email us at <a href="mailto:&#x73;&#x65;&#x63;&#117;&#x72;&#x69;&#116;&#121;&#x40;&#101;&#108;&#x65;&#x63;&#x74;&#x72;&#111;&#110;&#106;&#x73;&#x2e;&#111;&#114;&#103;">security@electronjs.org</a>.</p>]]></content>
     
     
       
@@ -319,7 +343,7 @@
     <published>2025-06-30T18:00:10.407Z</published>
     <updated>2025-06-30T18:00:10.406Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-xw5q-g62x-2qjc">https://github.com/advisories/GHSA-xw5q-g62x-2qjc</a></p><p><strong>仓库 Star：</strong> 117291</p><p><strong>CVSS 评分：</strong> 7.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/electron/electron/security/advisories/GHSA-xw5q-g62x-2qjc">https://github.com/electron/electron/security/advisories/GHSA-xw5q-g62x-2qjc</a></p></li><li><p><a href="https://github.com/advisories/GHSA-xw5q-g62x-2qjc">https://github.com/advisories/GHSA-xw5q-g62x-2qjc</a></p></li></ul><p><strong>描述：</strong></p><p>electron’s ASAR Integrity can be bypass by modifying the content.</p><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>This only impacts apps that have the <code>embeddedAsarIntegrityValidation</code> and <code>onlyLoadAppFromAsar</code> <a href="https://www.electronjs.org/docs/latest/tutorial/fuses">fuses</a> enabled. Apps without these fuses enabled are not impacted. This issue is specific to Windows, apps using these fuses on macOS are unimpacted.</p><p>Specifically this issue can only be exploited if your app is launched from a filesystem the attacker has write access too. i.e. the ability to edit files inside the .app bundle on macOS which these fuses are supposed to protect against.</p><h3 id="Workarounds"><a href="#Workarounds" class="headerlink" title="Workarounds"></a>Workarounds</h3><p>There are no app side workarounds, you must update to a patched version of Electron.</p><h3 id="Fixed-Versions"><a href="#Fixed-Versions" class="headerlink" title="Fixed Versions"></a>Fixed Versions</h3><ul><li><code>30.0.5</code></li><li><code>31.0.0-beta.1</code></li></ul><h3 id="For-more-information"><a href="#For-more-information" class="headerlink" title="For more information"></a>For more information</h3><p>If you have any questions or comments about this advisory, email us at <a href="mailto:&#x73;&#x65;&#99;&#117;&#114;&#x69;&#116;&#x79;&#x40;&#101;&#108;&#x65;&#99;&#116;&#x72;&#x6f;&#110;&#x6a;&#115;&#x2e;&#111;&#114;&#103;">security@electronjs.org</a></p>]]></content>
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-xw5q-g62x-2qjc">https://github.com/advisories/GHSA-xw5q-g62x-2qjc</a></p><p><strong>仓库 Star：</strong> 117291</p><p><strong>CVSS 评分：</strong> 7.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/electron/electron/security/advisories/GHSA-xw5q-g62x-2qjc">https://github.com/electron/electron/security/advisories/GHSA-xw5q-g62x-2qjc</a></p></li><li><p><a href="https://github.com/advisories/GHSA-xw5q-g62x-2qjc">https://github.com/advisories/GHSA-xw5q-g62x-2qjc</a></p></li></ul><p><strong>描述：</strong></p><p>electron’s ASAR Integrity can be bypass by modifying the content.</p><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>This only impacts apps that have the <code>embeddedAsarIntegrityValidation</code> and <code>onlyLoadAppFromAsar</code> <a href="https://www.electronjs.org/docs/latest/tutorial/fuses">fuses</a> enabled. Apps without these fuses enabled are not impacted. This issue is specific to Windows, apps using these fuses on macOS are unimpacted.</p><p>Specifically this issue can only be exploited if your app is launched from a filesystem the attacker has write access too. i.e. the ability to edit files inside the .app bundle on macOS which these fuses are supposed to protect against.</p><h3 id="Workarounds"><a href="#Workarounds" class="headerlink" title="Workarounds"></a>Workarounds</h3><p>There are no app side workarounds, you must update to a patched version of Electron.</p><h3 id="Fixed-Versions"><a href="#Fixed-Versions" class="headerlink" title="Fixed Versions"></a>Fixed Versions</h3><ul><li><code>30.0.5</code></li><li><code>31.0.0-beta.1</code></li></ul><h3 id="For-more-information"><a href="#For-more-information" class="headerlink" title="For more information"></a>For more information</h3><p>If you have any questions or comments about this advisory, email us at <a href="mailto:&#x73;&#x65;&#x63;&#117;&#114;&#x69;&#116;&#121;&#64;&#101;&#108;&#x65;&#x63;&#116;&#114;&#x6f;&#110;&#106;&#115;&#46;&#x6f;&#114;&#103;">security@electronjs.org</a></p>]]></content>
     
     
       
@@ -486,33 +510,6 @@
     
     
     <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Apache HTTP Server SSL证书验证绕过漏洞</title>
-    <link href="http://example.com/2025/06/30/github_481563331/"/>
-    <id>http://example.com/2025/06/30/github_481563331/</id>
-    <published>2025-06-30T16:00:19.287Z</published>
-    <updated>2025-06-30T16:00:19.286Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache HTTP Server SSL证书验证绕过漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-40898</li></ul><p><strong>漏洞类型：</strong> 配置问题</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> CVE-2024-40898是Apache HTTP Server中的一个安全漏洞，允许攻击者在特定条件下绕过SSL证书验证，可能导致TLS上的中间人攻击(MitM)。此Python脚本是一个概念验证(PoC)扫描器，用于检测该漏洞。</p><p><strong>产品厂商：</strong> Apache</p><p><strong>产品名称：</strong> Apache HTTP Server</p><p><strong>来源：</strong> <a href="https://github.com/ForceEA001/CVE-2024-40898-SSL-Bypass-Detection">https://github.com/ForceEA001/CVE-2024-40898-SSL-Bypass-Detection</a></p><p><strong>类型：</strong> CVE-2024:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>.gitignore</li><li>CVE-2024-40898-SSL-Bypass-Detection</li><li>LICENSE</li><li>README.md</li><li>check_cve_40898.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><p>CVE-2024-40898 SSL Certificate Validation Bypass Scanner</p><p>This repository contains a Python-based proof-of-concept (PoC) script to detect <em>CVE-2024-40898</em>, a vulnerability in Apache HTTP Server that allows attackers to bypass SSL certificate verification.</p><h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>CVE-2024-40898 is a security issue in Apache HTTP Server which, under certain conditions, permits clients to bypass certificate validation. This can potentially allow man-in-the-middle (MitM) attacks over TLS.</p><h3 id="What-this-script-does"><a href="#What-this-script-does" class="headerlink" title="What this script does"></a>What this script does</h3><ul><li>Reads a list of host:port pairs from ssl-ports.txt.</li><li>For each entry:<ul><li>Establishes a TLS connection using a custom SSL context that disables certificate validation.</li><li>Sends a HEAD &#x2F; request to the server.</li><li>Examines the response:<ul><li>If the response includes 200 OK, the target is considered <em>potentially vulnerable</em>.</li><li>If no such response is returned, the target is marked as <em>safe</em>.</li><li>If any exception occurs during connection, the result is recorded as an <em>error</em>.</li></ul></li></ul></li></ul><h3 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h3><ul><li>Python 3.x</li></ul><h3 id="How-to-Use"><a href="#How-to-Use" class="headerlink" title="How to Use"></a>How to Use</h3><ol><li>Prepare your ssl-ports.txt file with a list of targets, one per line, in the format:<br>domain.com:443<br>example.org:443<ol start="2"><li>Run the script:</li></ol><pre><code class="language-bash"></code></pre></li></ol><p>python3 check_cve_40898.py<br>3.The output will label each domain as:<br>•[VULNERABLE] – possible certificate validation bypass<br>•[SAFE] – no issue detected<br>•[ERROR] – failed connection or SSL error<br> Disclaimer</p><p>This tool is provided for educational and testing purposes only. Ensure you have permission to scan the listed domains. The author is not responsible for any misuse of this code.</p><p>License</p><p>This project is licensed under the MIT License.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Apache HTTP Server SSL证书验证绕过漏洞&lt;/p&gt;
-&lt;p&gt;&lt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
-    
-    <category term="配置问题" scheme="http://example.com/tags/%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/"/>
     
   </entry>
   
