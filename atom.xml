@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-30T05:58:28.626Z</updated>
+  <updated>2025-06-30T07:00:33.598Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>zoomeye_team twitter update</title>
+    <link href="http://example.com/2025/06/30/twitter_875469289/"/>
+    <id>http://example.com/2025/06/30/twitter_875469289/</id>
+    <published>2025-06-30T07:00:33.600Z</published>
+    <updated>2025-06-30T07:00:33.598Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> zoomeye_team</p><p><strong>推文：</strong> ⚡️漏洞详情现已公布：<a href="https://t.co/BUokAbrmtP">https://t.co/BUokAbrmtP</a></p><p>🚨🚨CVE-2025-5777（CVSS 9.3）：NetScaler ADC及Gateway因输入验证薄弱遭遇内存越读漏洞，攻击者可借此窥探Citrix、RDP或远程访问会话。</p><p>按漏洞CVE筛选👉vul.cve&#x3D;”CVE-2025-5777”<br>ZoomEye搜索语法👉app&#x3D;”Citrix NetScaler Gateway” || app&#x3D;”Citrix ADC”<br>40.25万+易受攻击实例暴露。<br>ZoomEye链接：<a href="https://t.co/ruIDRxQ6vD">https://t.co/ruIDRxQ6vD</a></p><p>参考：</p><ol><li><a href="https://t.co/xQtFCWFcTq">https://t.co/xQtFCWFcTq</a></li><li><a href="https://t.co/wkHHKpcnlX">https://t.co/wkHHKpcnlX</a></li></ol><p>#ZoomEye #网络测绘 #网络安全 #网络空间洞察2025</p><p><strong>链接：</strong> <a href="https://x.com/zoomeye_team/status/1939571836682998011">https://x.com/zoomeye_team/status/1939571836682998011</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; zoomeye_team&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; ⚡️漏洞详情现已公布：&lt;a href=&quot;https://t.co/BUokAbrmtP&quot;&gt;https://t.co/BUokAbrmtP&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="zoomeye_team" scheme="http://example.com/tags/zoomeye-team/"/>
+    
+  </entry>
   
   <entry>
     <title>蓝牙漏洞可能让黑客通过麦克风进行监听</title>
@@ -526,33 +551,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络安全信息与动态周报2025年第25期（6月16日-6月22日）</title>
-    <link href="http://example.com/2025/06/30/weixin_281613747/"/>
-    <id>http://example.com/2025/06/30/weixin_281613747/</id>
-    <published>2025-06-30T01:47:00.187Z</published>
-    <updated>2025-06-30T01:47:00.182Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 安恒信息CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/BIJe_vXY1hv3wkerhrZHrA">https://mp.weixin.qq.com/s/BIJe_vXY1hv3wkerhrZHrA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 安恒信息CERT&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/BIJe_vXY1hv3wkerhrZHrA&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="安恒信息CERT" scheme="http://example.com/tags/%E5%AE%89%E6%81%92%E4%BF%A1%E6%81%AFCERT/"/>
     
   </entry>
   
