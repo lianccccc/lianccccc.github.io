@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-30T08:02:28.793Z</updated>
+  <updated>2025-06-30T08:15:14.240Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Citrix Bleed 2 PoC</title>
+    <link href="http://example.com/2025/06/30/github_1143863387/"/>
+    <id>http://example.com/2025/06/30/github_1143863387/</id>
+    <published>2025-06-30T08:15:14.240Z</published>
+    <updated>2025-06-30T08:15:14.240Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Citrix Bleed 2 PoC</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-6543</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> Citrix Bleed 2 PoC</p><p><strong>产品厂商：</strong> Citrix</p><p><strong>来源：</strong> <a href="https://github.com/seabed-atavism/CVE-2025-6543">https://github.com/seabed-atavism/CVE-2025-6543</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-6543"><a href="#CVE-2025-6543" class="headerlink" title="CVE-2025-6543"></a>CVE-2025-6543</h2><p>Citrix Bleed 2 PoC</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Citrix Bleed 2 PoC&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+  </entry>
   
   <entry>
     <title>微步情报局再次发现DataEase存在多个高危漏洞，可实现RCE</title>
@@ -513,33 +540,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/ttAOdIAUHcJZCHHa5rBT2Q&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>虚假WPS安装程序暗藏远控木马，可完全控制受害者系统</title>
-    <link href="http://example.com/2025/06/30/weixin_2661986572/"/>
-    <id>http://example.com/2025/06/30/weixin_2661986572/</id>
-    <published>2025-06-30T01:48:35.614Z</published>
-    <updated>2025-06-30T01:48:35.609Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/RzE0IHonBc-TJjFBv0rd2A">https://mp.weixin.qq.com/s/RzE0IHonBc-TJjFBv0rd2A</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/RzE0IHonBc-TJjFBv0rd2A&quot;&gt;https://mp.weixin.q</summary>
       
     
     
