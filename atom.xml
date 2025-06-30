@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-30T15:46:20.726Z</updated>
+  <updated>2025-06-30T16:01:11.788Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,133 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BlackHatEvents twitter update</title>
+    <link href="http://example.com/2025/06/30/twitter_604769248/"/>
+    <id>http://example.com/2025/06/30/twitter_604769248/</id>
+    <published>2025-06-30T16:01:11.787Z</published>
+    <updated>2025-06-30T16:01:11.788Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> RT @surya4n6: 抢占我们罕见的企业级macOS蓝队培训席位。实践实验室，真实世界威胁检测与数字取证及事件响应（DFIR）@…</p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1939705097564393849">https://x.com/BlackHatEvents/status/1939705097564393849</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; RT @surya4n6: 抢占我们罕见的企业级macOS蓝队培训席位。实践实验室，真实世界威胁检测与数字取证及事件响应（DFIR）@…&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>BlackHatEvents twitter update</title>
+    <link href="http://example.com/2025/06/30/twitter_1687137571/"/>
+    <id>http://example.com/2025/06/30/twitter_1687137571/</id>
+    <published>2025-06-30T16:01:02.465Z</published>
+    <updated>2025-06-30T16:01:02.463Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> RT @SecureYeti：教导你的员工成为你最强大的捍卫者！Secure Yeti的@jaysonstreet提供的培训将帮助你让安全变得“平易近人”…</p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1939705417518415996">https://x.com/BlackHatEvents/status/1939705417518415996</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; RT @SecureYeti：教导你的员工成为你最强大的捍卫者！Secure Yeti的@jaysonstreet提供的培训将帮助你让安全变得“平</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>BlackHatEvents twitter update</title>
+    <link href="http://example.com/2025/06/30/twitter_1924812840/"/>
+    <id>http://example.com/2025/06/30/twitter_1924812840/</id>
+    <published>2025-06-30T16:00:56.566Z</published>
+    <updated>2025-06-30T16:00:56.563Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> RT @getsquarex: SquareX的Audrey Adeline将在Black Hat (@BlackHatEvents) 的“网络安全先锋指南”小组讨论中发言。</p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1939714203612225980">https://x.com/BlackHatEvents/status/1939714203612225980</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; RT @getsquarex: SquareX的Audrey Adeline将在Black Hat (@BlackHatEvents) 的“网络安</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Apache HTTP Server SSL证书验证绕过漏洞</title>
+    <link href="http://example.com/2025/06/30/github_481563331/"/>
+    <id>http://example.com/2025/06/30/github_481563331/</id>
+    <published>2025-06-30T16:00:19.287Z</published>
+    <updated>2025-06-30T16:00:19.286Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache HTTP Server SSL证书验证绕过漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-40898</li></ul><p><strong>漏洞类型：</strong> 配置问题</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> CVE-2024-40898是Apache HTTP Server中的一个安全漏洞，允许攻击者在特定条件下绕过SSL证书验证，可能导致TLS上的中间人攻击(MitM)。此Python脚本是一个概念验证(PoC)扫描器，用于检测该漏洞。</p><p><strong>产品厂商：</strong> Apache</p><p><strong>产品名称：</strong> Apache HTTP Server</p><p><strong>来源：</strong> <a href="https://github.com/ForceEA001/CVE-2024-40898-SSL-Bypass-Detection">https://github.com/ForceEA001/CVE-2024-40898-SSL-Bypass-Detection</a></p><p><strong>类型：</strong> CVE-2024:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>.gitignore</li><li>CVE-2024-40898-SSL-Bypass-Detection</li><li>LICENSE</li><li>README.md</li><li>check_cve_40898.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><p>CVE-2024-40898 SSL Certificate Validation Bypass Scanner</p><p>This repository contains a Python-based proof-of-concept (PoC) script to detect <em>CVE-2024-40898</em>, a vulnerability in Apache HTTP Server that allows attackers to bypass SSL certificate verification.</p><h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>CVE-2024-40898 is a security issue in Apache HTTP Server which, under certain conditions, permits clients to bypass certificate validation. This can potentially allow man-in-the-middle (MitM) attacks over TLS.</p><h3 id="What-this-script-does"><a href="#What-this-script-does" class="headerlink" title="What this script does"></a>What this script does</h3><ul><li>Reads a list of host:port pairs from ssl-ports.txt.</li><li>For each entry:<ul><li>Establishes a TLS connection using a custom SSL context that disables certificate validation.</li><li>Sends a HEAD &#x2F; request to the server.</li><li>Examines the response:<ul><li>If the response includes 200 OK, the target is considered <em>potentially vulnerable</em>.</li><li>If no such response is returned, the target is marked as <em>safe</em>.</li><li>If any exception occurs during connection, the result is recorded as an <em>error</em>.</li></ul></li></ul></li></ul><h3 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h3><ul><li>Python 3.x</li></ul><h3 id="How-to-Use"><a href="#How-to-Use" class="headerlink" title="How to Use"></a>How to Use</h3><ol><li>Prepare your ssl-ports.txt file with a list of targets, one per line, in the format:<br>domain.com:443<br>example.org:443<ol start="2"><li>Run the script:</li></ol><pre><code class="language-bash"></code></pre></li></ol><p>python3 check_cve_40898.py<br>3.The output will label each domain as:<br>•[VULNERABLE] – possible certificate validation bypass<br>•[SAFE] – no issue detected<br>•[ERROR] – failed connection or SSL error<br> Disclaimer</p><p>This tool is provided for educational and testing purposes only. Ensure you have permission to scan the listed domains. The author is not responsible for any misuse of this code.</p><p>License</p><p>This project is licensed under the MIT License.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Apache HTTP Server SSL证书验证绕过漏洞&lt;/p&gt;
+&lt;p&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
+    
+    <category term="配置问题" scheme="http://example.com/tags/%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Konica Minolta bizhub Multifunction Printer Pass-Back Attack Vulnerability (NOT FIXED)</title>
+    <link href="http://example.com/2025/06/30/blog_2506286812/"/>
+    <id>http://example.com/2025/06/30/blog_2506286812/</id>
+    <published>2025-06-30T16:00:08.531Z</published>
+    <updated>2025-06-30T16:00:08.526Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://www.rapid7.com/blog/post/cve-2025-6081-konica-minolta-bizhub-pass-back-attack-vulnerability-not-fixed/">https://www.rapid7.com/blog/post/cve-2025-6081-konica-minolta-bizhub-pass-back-attack-vulnerability-not-fixed/</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://www.rapid7.com/blog/post/cve-2025-6081-konica-minolta-bizhub-pass-back-attack-vulnerability-not-fix</summary>
+      
+    
+    
+    
+    <category term="安全博客" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+    <category term="www.rapid7.com" scheme="http://example.com/tags/www-rapid7-com/"/>
+    
+  </entry>
   
   <entry>
     <title>Metasploit Framework Solaris 文件读取方法崩溃漏洞</title>
@@ -410,141 +537,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>群晖ABM漏洞泄露全局客户端密钥，危及所有微软365租户</title>
-    <link href="http://example.com/2025/06/30/weixin_1241502972/"/>
-    <id>http://example.com/2025/06/30/weixin_1241502972/</id>
-    <published>2025-06-30T11:07:29.756Z</published>
-    <updated>2025-06-30T11:07:29.754Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/-LLztedIca8uz1i7gvxpYA">https://mp.weixin.qq.com/s/-LLztedIca8uz1i7gvxpYA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/-LLztedIca8uz1i7gvxpYA&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>上海“工赋砺网”芯片安全培训会成功举行，斗象科技“芯企安全方案”广获好评</title>
-    <link href="http://example.com/2025/06/30/weixin_255000686/"/>
-    <id>http://example.com/2025/06/30/weixin_255000686/</id>
-    <published>2025-06-30T11:07:29.418Z</published>
-    <updated>2025-06-30T11:07:29.414Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/xwCUqSfnAG4MDKT8dPl5eg">https://mp.weixin.qq.com/s/xwCUqSfnAG4MDKT8dPl5eg</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/xwCUqSfnAG4MDKT8dPl5eg&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一键挖洞+自动出报告的自动化工具，免费试用资格，限时抢！</title>
-    <link href="http://example.com/2025/06/30/weixin_4162487137/"/>
-    <id>http://example.com/2025/06/30/weixin_4162487137/</id>
-    <published>2025-06-30T11:07:28.564Z</published>
-    <updated>2025-06-30T11:07:28.562Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/AP-r6WcZXg22vKywWsN3wQ">https://mp.weixin.qq.com/s/AP-r6WcZXg22vKywWsN3wQ</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/AP-r6WcZXg22vKywWsN3wQ&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>安全热点周报：iOS 零点击攻击用于传播 Graphite 间谍软件</title>
-    <link href="http://example.com/2025/06/30/weixin_3601389870/"/>
-    <id>http://example.com/2025/06/30/weixin_3601389870/</id>
-    <published>2025-06-30T10:52:23.716Z</published>
-    <updated>2025-06-30T10:52:23.715Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 奇安信 CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/1kJCTOCPhZ_fv16aYA0Ccg">https://mp.weixin.qq.com/s/1kJCTOCPhZ_fv16aYA0Ccg</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 奇安信 CERT&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/1kJCTOCPhZ_fv16aYA0Ccg&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="奇安信 CERT" scheme="http://example.com/tags/%E5%A5%87%E5%AE%89%E4%BF%A1-CERT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CVE-2025-5777 Session Hijack</title>
-    <link href="http://example.com/2025/06/30/github_1200336265/"/>
-    <id>http://example.com/2025/06/30/github_1200336265/</id>
-    <published>2025-06-30T10:45:11.784Z</published>
-    <updated>2025-06-30T10:45:11.783Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CVE-2025-5777 Session Hijack</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-5777</li></ul><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞描述：</strong> 该漏洞涉及会话劫持，可能导致未授权访问。</p><p><strong>来源：</strong> <a href="https://github.com/nagenar/CVE-2025-5777-Session-Hijack">https://github.com/nagenar/CVE-2025-5777-Session-Hijack</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-5777-Session-Hijack"><a href="#CVE-2025-5777-Session-Hijack" class="headerlink" title="CVE-2025-5777-Session-Hijack"></a>CVE-2025-5777-Session-Hijack</h2>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CVE-2025-5777 Session Hijack&lt;/p&gt;
-&lt;p&gt;&lt;st</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
     
   </entry>
   
