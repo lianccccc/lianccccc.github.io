@@ -1,0 +1,705 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=light>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="lianccc">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="链接： https:&#x2F;&#x2F;github.com&#x2F;advisories&#x2F;GHSA-cm2r-rg7r-p7gg 仓库 Star： 30015 CVSS 评分： 5.9 参考链接：  https:&#x2F;&#x2F;github.com&#x2F;filebrowser&#x2F;filebrowser&#x2F;security&#x2F;advisories&#x2F;GHSA-cm2r-rg7r-p7gg  https:&#x2F;&#x2F;github.com&#x2F;advisori">
+<meta property="og:type" content="article">
+<meta property="og:title" content="File Browser vulnerable to insecure password handling">
+<meta property="og:url" content="http://example.com/2025/06/30/github_654340709/index.html">
+<meta property="og:site_name" content="liancc&#39; infos blog">
+<meta property="og:description" content="链接： https:&#x2F;&#x2F;github.com&#x2F;advisories&#x2F;GHSA-cm2r-rg7r-p7gg 仓库 Star： 30015 CVSS 评分： 5.9 参考链接：  https:&#x2F;&#x2F;github.com&#x2F;filebrowser&#x2F;filebrowser&#x2F;security&#x2F;advisories&#x2F;GHSA-cm2r-rg7r-p7gg  https:&#x2F;&#x2F;github.com&#x2F;advisori">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://github.com/user-attachments/assets/46c07d99-dc7b-4d6e-ac27-7eb002229201">
+<meta property="article:published_time" content="2025-06-30T18:00:11.720Z">
+<meta property="article:modified_time" content="2025-06-30T18:00:11.718Z">
+<meta property="article:author" content="lianccc">
+<meta property="article:tag" content="Github Advisory">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://github.com/user-attachments/assets/46c07d99-dc7b-4d6e-ac27-7eb002229201">
+  
+  
+  
+  <title>File Browser vulnerable to insecure password handling - liancc&#39; infos blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="liancc' infos blog" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Craw Info</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="File Browser vulnerable to insecure password handling"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-06-30 18:00" pubdate>
+          2025年6月30日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          519 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          5 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">File Browser vulnerable to insecure password handling</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p><strong>链接：</strong> <a target="_blank" rel="noopener" href="https://github.com/advisories/GHSA-cm2r-rg7r-p7gg">https://github.com/advisories/GHSA-cm2r-rg7r-p7gg</a></p>
+<p><strong>仓库 Star：</strong> 30015</p>
+<p><strong>CVSS 评分：</strong> 5.9</p>
+<p><strong>参考链接：</strong></p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/filebrowser/filebrowser/security/advisories/GHSA-cm2r-rg7r-p7gg">https://github.com/filebrowser/filebrowser/security/advisories/GHSA-cm2r-rg7r-p7gg</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/advisories/GHSA-cm2r-rg7r-p7gg">https://github.com/advisories/GHSA-cm2r-rg7r-p7gg</a></p>
+</li>
+</ul>
+<p><strong>描述：</strong></p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>All user accounts authenticate towards a <em>File Browser</em> instance with a password. A missing password policy and brute-force protection makes it impossible for administrators to properly secure the authentication process.</p>
+<h2 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h2><p>Attackers can mount a brute-force attack against the passwords of all accounts of an instance. Since the application is lacking the ability to prevent users from choosing a weak password, the attack is likely to succeed.</p>
+<h2 id="Vulnerability-Description"><a href="#Vulnerability-Description" class="headerlink" title="Vulnerability Description"></a>Vulnerability Description</h2><p>The application implement a classical authentication scheme using a username and password combination. While employed by many systems, this scheme is quite error-prone and a common cause for vulnerabilities. File Browser’s implementation has multiple weak points:</p>
+<ol>
+<li>Since the application is missing the capability for administrators to define a password policy, users are at liberty to set trivial and well-known passwords such as <code>secret</code> or even ones with only single digit like <code>1</code>.</li>
+<li>New instances are set up with a default password of <code>admin</code> for the initial administrative account. This password is well known and easily guessable. While the documentation advises to change this password, the application does not technically enforce it.</li>
+<li>The application does not implement any brute-force protection for the authentication endpoint. Attackers can make as many guesses for a password as the network bandwidth allows.</li>
+</ol>
+<p>The combination of these problems makes it likely, that an attacker will succeed in compromising at least one account in a <em>File Browser</em> instance, possibly even one with administrative privileges. The likelihood of such an attack increases substantially for internet-facing instances.</p>
+<h2 id="Proof-of-Concept"><a href="#Proof-of-Concept" class="headerlink" title="Proof of Concept"></a>Proof of Concept</h2><p>The insecure default credentials are documented on the application’s website:</p>
+<p><img src="https://github.com/user-attachments/assets/46c07d99-dc7b-4d6e-ac27-7eb002229201" srcset="/img/loading.gif" lazyload alt="image"></p>
+<p>The following HTTP communication shows, that a trivial password of <code>1</code> can be configured by a user:</p>
+<figure class="highlight http"><figcaption><span>hl:17</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs http"><span class="hljs-keyword">PUT</span> <span class="hljs-string">/api/users/2</span> <span class="hljs-meta">HTTP/1.1</span><br><span class="hljs-attribute">Host</span><span class="hljs-punctuation">: </span>filebrowser.local:8080<br><span class="hljs-attribute">User-Agent</span><span class="hljs-punctuation">: </span>Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0<br><span class="hljs-attribute">Accept</span><span class="hljs-punctuation">: </span>*/*<br><span class="hljs-attribute">Accept-Language</span><span class="hljs-punctuation">: </span>en-US,en;q=0.5<br><span class="hljs-attribute">Accept-Encoding</span><span class="hljs-punctuation">: </span>gzip, deflate, br<br><span class="hljs-attribute">Referer</span><span class="hljs-punctuation">: </span>http://filebrowser.local:8080/settings/profile<br><span class="hljs-attribute">X-Auth</span><span class="hljs-punctuation">: </span>eyJ[...]<br><span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">: </span>text/plain;charset=UTF-8<br><span class="hljs-attribute">Content-Length</span><span class="hljs-punctuation">: </span>319<br><span class="hljs-attribute">Origin</span><span class="hljs-punctuation">: </span>http://filebrowser.local:8080<br><span class="hljs-attribute">Connection</span><span class="hljs-punctuation">: </span>keep-alive<br><span class="hljs-attribute">Cookie</span><span class="hljs-punctuation">: </span>auth=eyJ[...]<br><span class="hljs-attribute">X-PwnFox-Color</span><span class="hljs-punctuation">: </span>cyan<br><span class="hljs-attribute">Priority</span><span class="hljs-punctuation">: </span>u=0<br><br><span class="language-nix">&#123;<span class="hljs-string">&quot;what&quot;</span>:<span class="hljs-string">&quot;user&quot;</span>,<span class="hljs-string">&quot;which&quot;</span>:[<span class="hljs-string">&quot;password&quot;</span>],<span class="hljs-string">&quot;data&quot;</span>:&#123;<span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">2</span>,<span class="hljs-string">&quot;locale&quot;</span>:<span class="hljs-string">&quot;en&quot;</span>,<span class="hljs-string">&quot;viewMode&quot;</span>:<span class="hljs-string">&quot;mosaic&quot;</span>,<span class="hljs-string">&quot;singleClick&quot;</span>:<span class="hljs-literal">false</span>,<span class="hljs-string">&quot;perm&quot;</span>:&#123;<span class="hljs-string">&quot;admin&quot;</span>:<span class="hljs-literal">false</span>,<span class="hljs-string">&quot;execute&quot;</span>:<span class="hljs-literal">true</span>,<span class="hljs-string">&quot;create&quot;</span>:<span class="hljs-literal">true</span>,<span class="hljs-string">&quot;rename&quot;</span>:<span class="hljs-literal">true</span>,<span class="hljs-string">&quot;modify&quot;</span>:<span class="hljs-literal">true</span>,<span class="hljs-string">&quot;delete&quot;</span>:<span class="hljs-literal">true</span>,<span class="hljs-string">&quot;share&quot;</span>:<span class="hljs-literal">true</span>,<span class="hljs-string">&quot;download&quot;</span>:<span class="hljs-literal">true</span>&#125;,<span class="hljs-string">&quot;commands&quot;</span>:[],<span class="hljs-string">&quot;lockPassword&quot;</span>:<span class="hljs-literal">false</span>,<span class="hljs-string">&quot;hideDotfiles&quot;</span>:<span class="hljs-literal">false</span>,<span class="hljs-string">&quot;dateFormat&quot;</span>:<span class="hljs-literal">false</span>,<span class="hljs-string">&quot;password&quot;</span>:<span class="hljs-string">&quot;1&quot;</span>&#125;&#125;</span><br><span class="language-nix"></span><br><span class="language-nix">HTTP<span class="hljs-symbol">/1.1</span> <span class="hljs-number">200</span> OK</span><br><span class="language-nix"><span class="hljs-params">Cache-Control:</span> no-cache, no-store, must-revalidate</span><br><span class="language-nix"><span class="hljs-params">Content-Security-Policy:</span> default-src &#x27;self&#x27;; style-src &#x27;unsafe-inline&#x27;;</span><br><span class="language-nix"><span class="hljs-params">Content-Type:</span> text<span class="hljs-symbol">/plain</span>; <span class="hljs-attr">charset</span><span class="hljs-operator">=</span>utf-<span class="hljs-number">8</span></span><br><span class="language-nix"><span class="hljs-params">X-Content-Type-Options:</span> nosniff</span><br><span class="language-nix"><span class="hljs-params">Date:</span> Thu, <span class="hljs-number">27</span> Mar <span class="hljs-number">2025</span> <span class="hljs-number">08</span>:<span class="hljs-number">31</span>:<span class="hljs-number">34</span> GMT</span><br><span class="language-nix"><span class="hljs-params">Content-Length:</span> <span class="hljs-number">7</span></span><br><span class="language-nix"></span><br><span class="language-nix"><span class="hljs-number">200</span> OK</span><br></code></pre></td></tr></table></figure>
+
+<p>The missing brute-force protection can easily be tested by repeatedly sending the following request to the application with a tool such as Burp or hydra.</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/api/login</span> <span class="hljs-meta">HTTP/1.1</span><br><span class="hljs-attribute">Host</span><span class="hljs-punctuation">: </span>filebrowser.local:8080<br><span class="hljs-attribute">User-Agent</span><span class="hljs-punctuation">: </span>Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0<br><span class="hljs-attribute">Accept</span><span class="hljs-punctuation">: </span>*/*<br><span class="hljs-attribute">Accept-Language</span><span class="hljs-punctuation">: </span>en-US,en;q=0.5<br><span class="hljs-attribute">Accept-Encoding</span><span class="hljs-punctuation">: </span>gzip, deflate, br<br><span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">: </span>application/json<br><span class="hljs-attribute">Content-Length</span><span class="hljs-punctuation">: </span>52<br><span class="hljs-attribute">Origin</span><span class="hljs-punctuation">: </span>http://filebrowser.local:8080<br><br><span class="language-nix">&#123;<span class="hljs-string">&quot;username&quot;</span>:<span class="hljs-string">&quot;admin&quot;</span>,<span class="hljs-string">&quot;password&quot;</span>:<span class="hljs-string">&quot;myPasswordGuess&quot;</span>,<span class="hljs-string">&quot;recaptcha&quot;</span>:<span class="hljs-string">&quot;&quot;</span>&#125;</span><br><span class="language-nix"></span><br><span class="language-nix">HTTP<span class="hljs-symbol">/1.1</span> <span class="hljs-number">403</span> Forbidden</span><br><span class="language-nix"><span class="hljs-params">Cache-Control:</span> no-cache, no-store, must-revalidate</span><br><span class="language-nix"><span class="hljs-params">Content-Security-Policy:</span> default-src &#x27;self&#x27;; style-src &#x27;unsafe-inline&#x27;;</span><br><span class="language-nix"><span class="hljs-params">Content-Type:</span> text<span class="hljs-symbol">/plain</span>; <span class="hljs-attr">charset</span><span class="hljs-operator">=</span>utf-<span class="hljs-number">8</span></span><br><span class="language-nix"><span class="hljs-params">X-Content-Type-Options:</span> nosniff</span><br><span class="language-nix"><span class="hljs-params">Date:</span> Thu, <span class="hljs-number">27</span> Mar <span class="hljs-number">2025</span> <span class="hljs-number">08</span>:<span class="hljs-number">39</span>:<span class="hljs-number">48</span> GMT</span><br><span class="language-nix"><span class="hljs-params">Content-Length:</span> <span class="hljs-number">14</span></span><br><span class="language-nix"></span><br><span class="language-nix"><span class="hljs-number">403</span> Forbidden</span><br></code></pre></td></tr></table></figure>
+
+<p>After sending 3000 bad passwords to the application within a few seconds, a successful authentication is still possible for the account:</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/api/login</span> <span class="hljs-meta">HTTP/1.1</span><br><span class="hljs-attribute">Host</span><span class="hljs-punctuation">: </span>filebrowser.local:8080<br><span class="hljs-attribute">User-Agent</span><span class="hljs-punctuation">: </span>Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0<br><span class="hljs-attribute">Accept</span><span class="hljs-punctuation">: </span>*/*<br><span class="hljs-attribute">Accept-Language</span><span class="hljs-punctuation">: </span>en-US,en;q=0.5<br><span class="hljs-attribute">Accept-Encoding</span><span class="hljs-punctuation">: </span>gzip, deflate, br<br><span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">: </span>application/json<br><span class="hljs-attribute">Content-Length</span><span class="hljs-punctuation">: </span>54<br><span class="hljs-attribute">Origin</span><span class="hljs-punctuation">: </span>http://filebrowser.local:8080<br><span class="hljs-attribute">Connection</span><span class="hljs-punctuation">: </span>keep-alive<br><br><span class="language-nix">&#123;<span class="hljs-string">&quot;username&quot;</span>:<span class="hljs-string">&quot;admin&quot;</span>,<span class="hljs-string">&quot;password&quot;</span>:<span class="hljs-string">&quot;myCorrectPassword&quot;</span>,<span class="hljs-string">&quot;recaptcha&quot;</span>:<span class="hljs-string">&quot;&quot;</span>&#125;</span><br><span class="language-nix"></span><br><span class="language-nix">HTTP<span class="hljs-symbol">/1.1</span> <span class="hljs-number">200</span> OK</span><br><span class="language-nix"><span class="hljs-params">Cache-Control:</span> no-cache, no-store, must-revalidate</span><br><span class="language-nix"><span class="hljs-params">Content-Security-Policy:</span> default-src &#x27;self&#x27;; style-src &#x27;unsafe-inline&#x27;;</span><br><span class="language-nix"><span class="hljs-params">Content-Type:</span> text<span class="hljs-symbol">/plain</span></span><br><span class="language-nix"><span class="hljs-params">Date:</span> Thu, <span class="hljs-number">27</span> Mar <span class="hljs-number">2025</span> <span class="hljs-number">08</span>:<span class="hljs-number">39</span>:<span class="hljs-number">58</span> GMT</span><br><span class="language-nix"><span class="hljs-params">Content-Length:</span> <span class="hljs-number">508</span></span><br><span class="language-nix"></span><br><span class="language-nix">eyJ[...]</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="Recommended-Countermeasures"><a href="#Recommended-Countermeasures" class="headerlink" title="Recommended Countermeasures"></a>Recommended Countermeasures</h2><p>The application should add an option to define a password policy in its administrative interface which allows to set a minimum length for passwords.<br>The default settings should be in line with the NIST publication SP 800-63B. This means, that now passwords of fewer than 8 characters should ever be allowed by the application.<br>Whenever a user sets a new password, the application should verify whether that password is part of a “known passwords” list.</p>
+<p>The application should either create a secure and random password for the <code>admin</code> account upon initialization or enforce an immediate password change when that user logs in for the first time using the default password.</p>
+<p>A brute-force protection needs to be implemented, which limits the allowed amount of authentication attempts per user within a certain timeframe. This implementation should employ <em>device tokens</em> to prevent targeted lockout attacks.</p>
+<p>In addition, it would be advisable to allow the integration of the application into and existing <em>Identity Provider</em> using protocols like LDAP or OIDC.</p>
+<h2 id="Timeline"><a href="#Timeline" class="headerlink" title="Timeline"></a>Timeline</h2><ul>
+<li><code>2025-03-27</code> Identified the vulnerability in version 2.32.0</li>
+<li><code>2025-04-11</code> Contacted the project</li>
+<li><code>2025-04-29</code> Vulnerability disclosed to the project</li>
+<li><code>2025-06-25</code> Uploaded advisories to the project’s GitHub repository</li>
+<li><code>2025-06-26</code> CVE ID assigned by GitHub</li>
+<li><code>2025-06-29</code> Fix released in version 2.34.1</li>
+</ul>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html#implement-proper-password-strength-controls">OWASP Authentication Cheat Sheet</a></li>
+<li><a target="_blank" rel="noopener" href="https://pages.nist.gov/800-63-4/sp800-63b.html#password">NIST Special Publication 800-63B. Digital Identity Guidelines. Passwords</a></li>
+<li><a target="_blank" rel="noopener" href="https://haveibeenpwned.com/Passwords">Pwned Passwords</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/danielmiessler/SecLists/tree/master/Passwords/Common-Credentials">Common Credentials</a></li>
+<li><a target="_blank" rel="noopener" href="https://cwe.mitre.org/data/definitions/307.html">CWE-307: Improper Restriction of Excessive Authentication Attempts</a></li>
+<li><a target="_blank" rel="noopener" href="https://cwe.mitre.org/data/definitions/521.html">CWE-521: Weak Password Requirements</a></li>
+<li><a target="_blank" rel="noopener" href="https://cwe.mitre.org/data/definitions/1392.html">CWE-1392: Use of Default Credentials</a></li>
+</ul>
+<h2 id="Credits"><a href="#Credits" class="headerlink" title="Credits"></a>Credits</h2><ul>
+<li>Mathias Tausig (<a target="_blank" rel="noopener" href="https://www.sba-research.org/">SBA Research</a>)</li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/" class="category-chain-item">安全公告</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Github-Advisory/" class="print-no-link">#Github Advisory</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>File Browser vulnerable to insecure password handling</div>
+      <div>http://example.com/2025/06/30/github_654340709/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>lianccc</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年6月30日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/06/30/github_62532549/" title="File Browser&#39;s password protection of links is bypassable">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">File Browser&#39;s password protection of links is bypassable</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/06/30/github_779332663/" title="electron ASAR Integrity bypass by just modifying the content">
+                        <span class="hidden-mobile">electron ASAR Integrity bypass by just modifying the content</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
