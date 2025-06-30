@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-30T07:45:12.096Z</updated>
+  <updated>2025-06-30T08:02:28.793Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>微步情报局再次发现DataEase存在多个高危漏洞，可实现RCE</title>
+    <link href="http://example.com/2025/06/30/weixin_329679675/"/>
+    <id>http://example.com/2025/06/30/weixin_329679675/</id>
+    <published>2025-06-30T08:02:28.797Z</published>
+    <updated>2025-06-30T08:02:28.793Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 微步在线研究响应中心</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/jdMf3szzY7-N1jqVbPXLiA">https://mp.weixin.qq.com/s/jdMf3szzY7-N1jqVbPXLiA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 微步在线研究响应中心&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/jdMf3szzY7-N1jqVbPXLiA&quot;&gt;https://mp.weixi</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="微步在线研究响应中心" scheme="http://example.com/tags/%E5%BE%AE%E6%AD%A5%E5%9C%A8%E7%BA%BF%E7%A0%94%E7%A9%B6%E5%93%8D%E5%BA%94%E4%B8%AD%E5%BF%83/"/>
+    
+  </entry>
   
   <entry>
     <title>Github Poc</title>
@@ -513,33 +540,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/RzE0IHonBc-TJjFBv0rd2A&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>思科两处高危RCE漏洞可致未授权获取root权限</title>
-    <link href="http://example.com/2025/06/30/weixin_948444043/"/>
-    <id>http://example.com/2025/06/30/weixin_948444043/</id>
-    <published>2025-06-30T01:48:35.285Z</published>
-    <updated>2025-06-30T01:48:35.281Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/JRyuRO1BitXoIayl3zd_8w">https://mp.weixin.qq.com/s/JRyuRO1BitXoIayl3zd_8w</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/JRyuRO1BitXoIayl3zd_8w&quot;&gt;https://mp.weixin.q</summary>
       
     
     
