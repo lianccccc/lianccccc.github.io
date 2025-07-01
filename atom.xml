@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-01T18:45:30.538Z</updated>
+  <updated>2025-07-01T19:00:05.945Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>A remote code execution vulnerability exists in HPE Insight Remote Support (IRS) prior to v7150</title>
+    <link href="http://example.com/2025/07/01/github_1556044596/"/>
+    <id>http://example.com/2025/07/01/github_1556044596/</id>
+    <published>2025-07-01T19:00:05.949Z</published>
+    <updated>2025-07-01T19:00:05.945Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-grj5-8fx9-rjq9">https://github.com/advisories/GHSA-grj5-8fx9-rjq9</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-37099">https://nvd.nist.gov/vuln/detail/CVE-2025-37099</a></p></li><li><p><a href="https://support.hpe.com/hpesc/public/docDisplay?docId=hpesbgn04878en_us&docLocale=en_US">https://support.hpe.com/hpesc/public/docDisplay?docId=hpesbgn04878en_us&amp;docLocale=en_US</a></p></li><li><p><a href="https://github.com/advisories/GHSA-grj5-8fx9-rjq9">https://github.com/advisories/GHSA-grj5-8fx9-rjq9</a></p></li></ul><p><strong>描述：</strong></p><p>A remote code execution vulnerability exists in HPE Insight Remote Support (IRS) prior to v7.15.0.646.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-grj5-8fx9-rjq9&quot;&gt;https://github.com/advisories/GHSA-grj5-8fx9-rjq9&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>Wing FTP Server 未认证远程代码执行漏洞</title>
@@ -507,33 +531,6 @@
     
     
     <category term="attackerkb.com" scheme="http://example.com/tags/attackerkb-com/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Opal Estate Pro 权限提升漏洞</title>
-    <link href="http://example.com/2025/07/01/github_4278360977/"/>
-    <id>http://example.com/2025/07/01/github_4278360977/</id>
-    <published>2025-07-01T13:45:50.548Z</published>
-    <updated>2025-07-01T13:45:50.548Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Opal Estate Pro 权限提升漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-6934</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> WordPress的Opal Estate Pro – Property Management and Submission插件（用于FullHouse - Real Estate Responsive WordPress主题）在1.7.5及之前的所有版本中存在权限提升漏洞。攻击者可以通过发送特制的注册请求来获取管理员权限。</p><p><strong>产品厂商：</strong> Opal Estate Pro</p><p><strong>产品名称：</strong> Opal Estate Pro – Property Management and Submission</p><p><strong>影响版本：</strong> version &lt;&#x3D; 1.7.5</p><p><strong>来源：</strong> <a href="https://github.com/Nxploited/CVE-2025-6934">https://github.com/Nxploited/CVE-2025-6934</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2025-6934.py</li><li>LICENSE</li><li>NxPloitedCVE.PNG</li><li>README.md</li><li>requirements.txt</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="🛡️-CVE-2025-6934-Unauthenticated-Privilege-Escalation-in-Opal-Estate-Pro"><a href="#🛡️-CVE-2025-6934-Unauthenticated-Privilege-Escalation-in-Opal-Estate-Pro" class="headerlink" title="🛡️ CVE-2025-6934 - Unauthenticated Privilege Escalation in Opal Estate Pro"></a>🛡️ CVE-2025-6934 - Unauthenticated Privilege Escalation in Opal Estate Pro</h2><h3 id="📝-Description"><a href="#📝-Description" class="headerlink" title="📝 Description"></a>📝 Description</h3><p>The <strong>Opal Estate Pro – Property Management and Submission</strong> plugin for WordPress, used by the <strong>FullHouse - Real Estate Responsive WordPress Theme</strong>, is vulnerable to <strong>Privilege Escalation</strong> in all versions up to and including <strong>1.7.5</strong>.</p><hr><ul><li><strong>CVE ID:</strong> CVE-2025-6934  </li><li><strong>CVSS Score:</strong> 9.8 (Critical)  </li><li><strong>Published:</strong> June 30, 2025</li></ul><hr><h3 id="⚙️-Script-Information"><a href="#⚙️-Script-Information" class="headerlink" title="⚙️ Script Information"></a>⚙️ Script Information</h3><p>This Python exploit automates the privilege escalation process by:</p><ul><li>Verifying the vulnerable plugin version via <code>readme.txt</code>.</li><li>Fetching the required <strong>nonce</strong> from the registration page.</li><li>Sending a crafted registration request to gain <strong>Administrator access</strong>.</li></ul><hr><h3 id="🚀-Usage-Example"><a href="#🚀-Usage-Example" class="headerlink" title="🚀 Usage Example"></a>🚀 Usage Example</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python CVE-2025-6934.py -u http://target-site.com/login-default/ -mail NxploitBot@gmail.com -password nxp1234<br></code></pre></td></tr></table></figure><hr><h3 id="📤-Sample-Output"><a href="#📤-Sample-Output" class="headerlink" title="📤 Sample Output"></a>📤 Sample Output</h3><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><span class="hljs-attribute">[•] Plugin Version Check</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">[+] Vulnerable version detected</span><span class="hljs-punctuation">:</span> <span class="hljs-string">1.7.5</span><br><br><span class="hljs-attribute">[•] Exploit Attempt Started</span><br><span class="hljs-attribute">    [+] Nonce Found</span><span class="hljs-punctuation">:</span> <span class="hljs-string">70dd70630b</span><br>    <span class="hljs-attribute">[+] HTTP Status</span><span class="hljs-punctuation">:</span> <span class="hljs-string">200</span><br><br><span class="hljs-attribute">[✔] Exploit Successful!</span><br><span class="hljs-attribute">    --------------------------</span><br><span class="hljs-attribute">    Username</span><span class="hljs-punctuation"> :</span> <span class="hljs-string">nxploitedadmin</span><br>    <span class="hljs-attribute">Email</span><span class="hljs-punctuation">    :</span> <span class="hljs-string">NxploitBot@gmail.com</span><br>    <span class="hljs-attribute">Password</span><span class="hljs-punctuation"> :</span> <span class="hljs-string">nxp1234</span><br>    <span class="hljs-attribute">Role</span><span class="hljs-punctuation">     :</span> <span class="hljs-string">administrator</span><br>    <span class="hljs-attribute">--------------------------</span><br><span class="hljs-attribute"></span><br><span class="hljs-attribute">Exploit By</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Khaled_alenazi (Nxploited) | https://github.com/Nxploited</span><br></code></pre></td></tr></table></figure><hr><h3 id="🛠️-Arguments-Help"><a href="#🛠️-Arguments-Help" class="headerlink" title="🛠️ Arguments &amp; Help"></a>🛠️ Arguments &amp; Help</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash">usage: CVE-2025-6934.py [-h] -u URL -mail NEWMAIL -password NEWPASSWORD<br><br>CVE-2025-6934 Exploit by Khaled Alenazi (Nxploited)<br><br>options:<br>  -h, --<span class="hljs-built_in">help</span>              show this <span class="hljs-built_in">help</span> message and <span class="hljs-built_in">exit</span><br>  -u, --url URL           Target URL (e.g., http://site.com/path/)<br>  -mail, --newmail NEWMAIL<br>                          Email to register as admin<br>  -password, --newpassword NEWPASSWORD<br>                          Password <span class="hljs-keyword">for</span> new admin user<br></code></pre></td></tr></table></figure><hr><h3 id="⚠️-Disclaimer"><a href="#⚠️-Disclaimer" class="headerlink" title="⚠️ Disclaimer"></a>⚠️ Disclaimer</h3><p>This script is for <strong>educational and authorized security testing</strong> purposes only.<br>Unauthorized use of this tool against targets without consent is strictly prohibited.</p><hr><p><strong><em>By: Khaled_alenazi (Nxploited)</em></strong></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Opal Estate Pro 权限提升漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
     
   </entry>
   
