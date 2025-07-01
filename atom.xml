@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-01T19:00:05.945Z</updated>
+  <updated>2025-07-01T19:00:26.754Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BlackHatEvents twitter update</title>
+    <link href="http://example.com/2025/07/01/twitter_263889010/"/>
+    <id>http://example.com/2025/07/01/twitter_263889010/</id>
+    <published>2025-07-01T19:00:26.757Z</published>
+    <updated>2025-07-01T19:00:26.754Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> 转推 @PaulaCqure: 别错过@BlackHatEvents USA 2025，终极网络安全大会！🎩</p><p>8月2日至7日在拉斯维加斯，承诺将…</p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1940118403081281881">https://x.com/BlackHatEvents/status/1940118403081281881</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 转推 @PaulaCqure: 别错过@BlackHatEvents USA 2025，终极网络安全大会！🎩&lt;/p&gt;
+&lt;p&gt;8月2日至7日在拉斯</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
+    
+  </entry>
   
   <entry>
     <title>A remote code execution vulnerability exists in HPE Insight Remote Support (IRS) prior to v7150</title>
@@ -507,30 +533,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="弱口令" scheme="http://example.com/tags/%E5%BC%B1%E5%8F%A3%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CVE-2024-51978</title>
-    <link href="http://example.com/2025/07/01/other_1189886237/"/>
-    <id>http://example.com/2025/07/01/other_1189886237/</id>
-    <published>2025-07-01T14:00:07.244Z</published>
-    <updated>2025-07-01T14:00:07.244Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>描述：</strong> An unauthenticated attacker who knows the target device’s serial number, can generate the default administrator password for the device. An unauthenticated attacker can first discover the target device’s serial number via CVE-2024-51977 over HTTP&#x2F;HTTPS&#x2F;IPP, or via a PJL request, or via an SNMP request.</p><hr><p><a href="https://www.rapid7.com/blog/post/multiple-brother-devices-multiple-vulnerabilities-fixed/">Rapid7 disclosed</a> this authentication bypass vulnerability on June 25, 2025. A the time of disclosure, this authentication bypass is known to affect 695 models across Brother’s range of printer, scanner, and label maker devices.</p><p>The premise of the authentication bypass is as follows; a remote unauthenticated attacker can leak a vulnerable target device’s serial number via one of several means HTTP&#x2F;HTTPS&#x2F;IPP (via CVE-2024-51977), or SNMP, or PJL. The serial number can be transformed into the target devices default administrator password (i.e. the complex password found on the sticker attached to the device). If the device has not had its default admin password changed, the attacker can then successfully login to the target device with this default credential.</p><p>I have tagged this CVE with “Difficult to patch”, as Brother has indicated that this vulnerability cannot be fully remediated in firmware, and has required a change to the manufacturing process of all affected models.</p><p>For more information you can read the Rapid7 disclosure blog <a href="https://www.rapid7.com/blog/post/multiple-brother-devices-multiple-vulnerabilities-fixed/">here</a>, or a detailed technical analysis of the authentication bypass can be found in the Rapid7 white paper <a href="https://assets.contentstack.io/v3/assets/blte4f029e766e6b253/blt6495b3c6adf2867f/685aa980a26c5e2b1026969c/vulnerability-disclosure-whitepaper.pdf">“Print Scan Hacks: Identifying multiple vulnerabilities across multiple Brother devices”</a> (PDF).</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;描述：&lt;/strong&gt; An unauthenticated attacker who knows the target device’s serial number, can generate the default administrator pass</summary>
-      
-    
-    
-    
-    <category term="其他" scheme="http://example.com/categories/%E5%85%B6%E4%BB%96/"/>
-    
-    
-    <category term="attackerkb.com" scheme="http://example.com/tags/attackerkb-com/"/>
     
   </entry>
   
