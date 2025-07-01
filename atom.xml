@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-01T23:00:06.311Z</updated>
+  <updated>2025-07-01T23:00:27.027Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BlackHatEvents twitter update</title>
+    <link href="http://example.com/2025/07/01/twitter_2320626213/"/>
+    <id>http://example.com/2025/07/01/twitter_2320626213/</id>
+    <published>2025-07-01T23:00:27.030Z</published>
+    <updated>2025-07-01T23:00:27.027Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> 🔐 掌握云原生世界的攻防艺术 - 加入网络安全专家@jaybeale —— Bastille Linux、Peirates及Bust-a-Kube的创造者，参加Black Hat 2025秋季培训的4天全实践在线课程！&gt;&gt; <a href="https://t.co/pt9IlRxmQW">https://t.co/pt9IlRxmQW</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1940174829769941402">https://x.com/BlackHatEvents/status/1940174829769941402</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🔐 掌握云原生世界的攻防艺术 - 加入网络安全专家@jaybeale —— Bastille Linux、Peirates及Bust-a-Kub</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
+    
+  </entry>
   
   <entry>
     <title>junit-platform-reporting can leak Git credentials through its OpenTestReportGeneratingListener</title>
@@ -493,31 +518,6 @@
     <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; RT @AppSecEngineer: 攻击者自动化他们的攻击手段。你的防御措施自动化了吗？&lt;/p&gt;
 &lt;p&gt;当今DevSecOps面临的最大安全挑</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BlackHatEvents twitter update</title>
-    <link href="http://example.com/2025/07/01/twitter_3248732845/"/>
-    <id>http://example.com/2025/07/01/twitter_3248732845/</id>
-    <published>2025-07-01T18:00:33.597Z</published>
-    <updated>2025-07-01T18:00:33.594Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> RT @Claranet_Sec: 认识我们的培训师 | @BlackHatEvents 美国 2025<br>结识我们世界级黑客培训背后的智囊团<br>不要错过…</p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1940102779978092967">https://x.com/BlackHatEvents/status/1940102779978092967</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; RT @Claranet_Sec: 认识我们的培训师 | @BlackHatEvents 美国 2025&lt;br&gt;结识我们世界级黑客培训背后的智囊团</summary>
       
     
     
