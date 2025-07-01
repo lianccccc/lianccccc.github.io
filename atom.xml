@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-01T08:00:22.005Z</updated>
+  <updated>2025-07-01T08:00:52.950Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>fofabot twitter update</title>
+    <link href="http://example.com/2025/07/01/twitter_2642359487/"/>
+    <id>http://example.com/2025/07/01/twitter_2642359487/</id>
+    <published>2025-07-01T08:00:52.953Z</published>
+    <updated>2025-07-01T08:00:52.950Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> fofabot</p><p><strong>推文：</strong> ⚠️⚠️D-Link DIR-816路由器发现严重漏洞：<br>CVE-2025-5622（CVSS 9.8）：通过apcli_mode_5g、apcli_enc_5g或apcli_default_key_5g参数导致的栈溢出。<br>CVE-2025-5623（CVSS 9.8）：&#x2F;goform&#x2F;qosClassifier中因dip_address&#x2F;sip_address导致的栈溢出，引发系统崩溃&#x2F;劫持。<br>CVE-2025-5624（CVSS 9.8）：通过&#x2F;goform&#x2F;qosClassifier中畸形的dip_address&#x2F;sip_address在QoSPortSetup逻辑中的缓冲区溢出。<br>CVE-2025-5630（CVSS 9.8）：&#x2F;goform&#x2F;form2lansetup.cgi中因精心构造的IPargument导致的栈溢出，允许代码执行或DoS。<br>🎯在<a href="https://t.co/uLIbgJcaq5%E4%B8%8A%E5%8F%91%E7%8E%B02500+%E7%BB%93%E6%9E%9C%EF%BC%8C%E8%BF%91%E4%B8%80%E5%B9%B4">https://t.co/uLIbgJcaq5上发现2500+结果，近一年</a><br>🔗FOFA链接：<a href="https://t.co/Ih8NP2z9O3">https://t.co/Ih8NP2z9O3</a><br>FOFA查询：app&#x3D;”D_Link-DIR-816”<br>🔖参考：<a href="https://t.co/p3oGrJaSmr">https://t.co/p3oGrJaSmr</a><br>#OSINT #FOFA #网络安全 #漏洞</p><p><strong>链接：</strong> <a href="https://x.com/fofabot/status/1939954756291883204">https://x.com/fofabot/status/1939954756291883204</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; fofabot&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; ⚠️⚠️D-Link DIR-816路由器发现严重漏洞：&lt;br&gt;CVE-2025-5622（CVSS 9.8）：通过apcli_mode_5g、apcli_en</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="fofabot" scheme="http://example.com/tags/fofabot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>zoomeye_team twitter update</title>
+    <link href="http://example.com/2025/07/01/twitter_3924368104/"/>
+    <id>http://example.com/2025/07/01/twitter_3924368104/</id>
+    <published>2025-07-01T08:00:32.816Z</published>
+    <updated>2025-07-01T08:00:32.814Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> zoomeye_team</p><p><strong>推文：</strong> ⚡️漏洞详情现已公布：<a href="https://t.co/5QyzLsxZei">https://t.co/5QyzLsxZei</a></p><p>🚨🚨CVE-2025-47812：Wing FTP服务器远程代码执行漏洞！黑客可利用严重的空字节注入漏洞，无需登录即可以root&#x2F;SYSTEM权限运行任意代码！</p><p>ZoomEye搜索语法👉app&#x3D;”Wing FTP Server”<br>ZoomEye上暴露的易受攻击服务器超过78,000台。<br>ZoomEye链接：<a href="https://t.co/HQbsSQ3TkF">https://t.co/HQbsSQ3TkF</a></p><p>参考：<a href="https://t.co/Fgc6tY2ZBU">https://t.co/Fgc6tY2ZBU</a></p><p>#远程代码执行 #ZoomEye #网络测绘 #网络安全</p><p><strong>链接：</strong> <a href="https://x.com/zoomeye_team/status/1939952169308000277">https://x.com/zoomeye_team/status/1939952169308000277</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; zoomeye_team&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; ⚡️漏洞详情现已公布：&lt;a href=&quot;https://t.co/5QyzLsxZei&quot;&gt;https://t.co/5QyzLsxZei&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="zoomeye_team" scheme="http://example.com/tags/zoomeye-team/"/>
+    
+  </entry>
   
   <entry>
     <title>vBulletin 认证绕过漏洞</title>
@@ -486,60 +536,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/yW_llW5Pz-iv1ICbv4QqGw&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>微软报告：曹县远程 IT 工作者渗透组织的策略不断演变</title>
-    <link href="http://example.com/2025/07/01/weixin_1956112483/"/>
-    <id>http://example.com/2025/07/01/weixin_1956112483/</id>
-    <published>2025-07-01T06:04:45.766Z</published>
-    <updated>2025-07-01T06:04:45.762Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/RHKtFrP5cpj79qV8_15ptg">https://mp.weixin.qq.com/s/RHKtFrP5cpj79qV8_15ptg</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/RHKtFrP5cpj79qV8_15ptg&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Zig Strike：新型攻击工具包可生成有效载荷规避 AV、EDR 和 XDR</title>
-    <link href="http://example.com/2025/07/01/weixin_3565632028/"/>
-    <id>http://example.com/2025/07/01/weixin_3565632028/</id>
-    <published>2025-07-01T06:04:44.849Z</published>
-    <updated>2025-07-01T06:04:44.846Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/a5HdGKT45Z0ok0R6Fv_s5w">https://mp.weixin.qq.com/s/a5HdGKT45Z0ok0R6Fv_s5w</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/a5HdGKT45Z0ok0R6Fv_s5w&quot;&gt;https://mp.weixin.</summary>
       
     
     
