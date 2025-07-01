@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-01T09:30:17.225Z</updated>
+  <updated>2025-07-01T09:33:34.331Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>红帆OA MobileOAasmx SQL注入漏洞</title>
+    <link href="http://example.com/2025/07/01/weixin_147972676/"/>
+    <id>http://example.com/2025/07/01/weixin_147972676/</id>
+    <published>2025-07-01T09:33:34.334Z</published>
+    <updated>2025-07-01T09:33:34.331Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> Nday Poc</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/6vPmbFO4SxcZZlTm9RXPXw">https://mp.weixin.qq.com/s/6vPmbFO4SxcZZlTm9RXPXw</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; Nday Poc&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/6vPmbFO4SxcZZlTm9RXPXw&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="Nday Poc" scheme="http://example.com/tags/Nday-Poc/"/>
+    
+  </entry>
   
   <entry>
     <title>Alibaba Nacos 未授权账户创建漏洞</title>
@@ -519,33 +546,6 @@
     <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
     
     <category term="代码注入" scheme="http://example.com/tags/%E4%BB%A3%E7%A0%81%E6%B3%A8%E5%85%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WinRAR 路径处理不当漏洞</title>
-    <link href="http://example.com/2025/07/01/github_1499479342/"/>
-    <id>http://example.com/2025/07/01/github_1499479342/</id>
-    <published>2025-07-01T06:15:14.118Z</published>
-    <updated>2025-07-01T06:15:14.113Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> WinRAR 路径处理不当漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-6218</li></ul><p><strong>漏洞类型：</strong> 文件上传</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> WinRAR 7.11及更早版本中存在一个漏洞，涉及对存档提取路径的不当处理。攻击者可以制作一个ZIP存档，当用户使用WinRAR的“解压到{folder}\”选项解压时，会将批处理文件放入Windows启动文件夹中，从而在用户下次登录时自动执行任意代码。</p><p><strong>产品厂商：</strong> WinRAR</p><p><strong>产品名称：</strong> WinRAR</p><p><strong>影响版本：</strong> version &lt;&#x3D; 7.11</p><p><strong>来源：</strong> <a href="https://github.com/skimask1690/CVE-2025-6218-POC">https://github.com/skimask1690/CVE-2025-6218-POC</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2025-6218.bat</li><li>CVE-2025-6218.zip</li><li>LICENSE</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-6218-Proof-of-Concept-POC"><a href="#CVE-2025-6218-Proof-of-Concept-POC" class="headerlink" title="CVE-2025-6218 Proof of Concept (POC)"></a>CVE-2025-6218 Proof of Concept (POC)</h2><h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>This repository contains a simple Proof of Concept (POC) for <strong>CVE-2025-6218</strong>, demonstrating the exploitation of a vulnerability involving WinRAR’s handling of archive extraction paths. The POC batch script creates a ZIP archive that places a batch file into the Windows Startup folder, which runs <code>calc.exe</code> upon user login.</p><hr><h3 id="How-it-Works"><a href="#How-it-Works" class="headerlink" title="How it Works"></a>How it Works</h3><ul><li>The batch script (<code>CVE-2025-6218.bat</code>) generates a simple batch file (<code>POC.bat</code>) that runs the Windows Calculator (<code>calc.exe</code>).</li><li>It then uses WinRAR to create a ZIP archive (<code>CVE-2025-6218.zip</code>) that is crafted to extract the batch file into the Windows Startup folder.</li><li>The vulnerability is triggered when the ZIP archive is <strong>right-clicked</strong>, then <strong>opened with WinRAR</strong>, and extracted using the <strong>“Extract to {folder}&quot;</strong> option.</li><li>Upon extraction, the batch file is placed in the Startup folder and will execute automatically on the next user login, demonstrating arbitrary code execution.</li></ul><hr><h3 id="Vulnerable-Versions"><a href="#Vulnerable-Versions" class="headerlink" title="Vulnerable Versions"></a>Vulnerable Versions</h3><ul><li>✅ <strong>Vulnerable</strong>: WinRAR <strong>7.11 and earlier</strong></li><li>❌ <strong>Not vulnerable</strong>: WinRAR <strong>7.12 and later</strong><br>Users are strongly advised to update to the latest version to mitigate this vulnerability.</li></ul><hr><h3 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h3><ul><li>WinRAR installed in the default location: <code>C:\Program Files\WinRAR\WinRAR.exe</code></li></ul><hr><h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><ol><li>Run the provided batch script (<code>CVE-2025-6218.bat</code>).</li><li>This creates <code>CVE-2025-6218.zip</code> with the crafted batch file inside.</li><li>To exploit the vulnerability:<ul><li><strong>Right-click</strong> the <code>CVE-2025-6218.zip</code> file.</li><li>Select <strong>WinRAR</strong>.</li><li>Use the <strong>“Extract to {folder}&quot;</strong> option inside WinRAR to extract the files.</li></ul></li><li>The batch file will be extracted to the Windows Startup folder (<code>%APPDATA%\Roaming\Microsoft\Windows\Start Menu\Programs\Startup</code>), assuming that navigating two directories up from the current working directory leads to the user’s home directory (%USERPROFILE%).</li><li>On the next user login, <code>calc.exe</code> will launch automatically.</li></ol><hr><h3 id="Disclaimer"><a href="#Disclaimer" class="headerlink" title="Disclaimer"></a>Disclaimer</h3><p>This PoC is for educational and testing purposes only. Use it responsibly and only on systems you own or have explicit permission to test. The author is not responsible for any misuse or damage caused by this code.</p><hr><h3 id="License"><a href="#License" class="headerlink" title="License"></a>License</h3><p><a href="LICENSE">MIT License</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; WinRAR 路径处理不当漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/s</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="文件上传" scheme="http://example.com/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
     
   </entry>
   
