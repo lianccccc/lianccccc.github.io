@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-01T04:30:15.647Z</updated>
+  <updated>2025-07-01T05:00:23.703Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BlackHatEvents twitter update</title>
+    <link href="http://example.com/2025/07/01/twitter_2636016612/"/>
+    <id>http://example.com/2025/07/01/twitter_2636016612/</id>
+    <published>2025-07-01T05:00:23.705Z</published>
+    <updated>2025-07-01T05:00:23.703Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> 📢Arsenal提交截止日期为7月9日！Arsenal是一个开源工具演示区，研究人员和开发者可以在这里以互动环境展示他们的最新项目。在#BHEU与社区分享您的工具，并观看前沿演示 &gt;&gt; <a href="https://t.co/UgOELTkJKt">https://t.co/UgOELTkJKt</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1939897551840227419">https://x.com/BlackHatEvents/status/1939897551840227419</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 📢Arsenal提交截止日期为7月9日！Arsenal是一个开源工具演示区，研究人员和开发者可以在这里以互动环境展示他们的最新项目。在#BHEU</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
+    
+  </entry>
   
   <entry>
     <title>vBulletin 认证绕过漏洞</title>
@@ -329,7 +354,7 @@
     <published>2025-06-30T19:00:04.808Z</published>
     <updated>2025-06-30T19:00:04.808Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-6r2x-8pq8-9489">https://github.com/advisories/GHSA-6r2x-8pq8-9489</a></p><p><strong>仓库 Star：</strong> 117292</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/electron/electron/security/advisories/GHSA-6r2x-8pq8-9489">https://github.com/electron/electron/security/advisories/GHSA-6r2x-8pq8-9489</a></p></li><li><p><a href="https://github.com/advisories/GHSA-6r2x-8pq8-9489">https://github.com/advisories/GHSA-6r2x-8pq8-9489</a></p></li></ul><p><strong>描述：</strong></p><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>The <code>nativeImage.createFromPath()</code> and <code>nativeImage.createFromBuffer()</code> functions call a function downstream that is vulnerable to a heap buffer overflow. An Electron program that uses either of the affected functions is vulnerable to a buffer overflow if an attacker is in control of the image’s height, width, and contents.</p><h3 id="Workaround"><a href="#Workaround" class="headerlink" title="Workaround"></a>Workaround</h3><p>There are no app-side workarounds for this issue. You must update your Electron version to be protected.</p><h3 id="Patches"><a href="#Patches" class="headerlink" title="Patches"></a>Patches</h3><ul><li><code>v28.3.2</code></li><li><code>v29.3.3</code></li><li><code>v30.0.3</code></li></ul><h3 id="For-More-Information"><a href="#For-More-Information" class="headerlink" title="For More Information"></a>For More Information</h3><p>If you have any questions or comments about this advisory, email us at <a href="mailto:&#115;&#101;&#x63;&#117;&#x72;&#x69;&#116;&#121;&#64;&#101;&#x6c;&#x65;&#x63;&#116;&#114;&#x6f;&#110;&#x6a;&#115;&#x2e;&#x6f;&#x72;&#x67;">security@electronjs.org</a>.</p>]]></content>
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-6r2x-8pq8-9489">https://github.com/advisories/GHSA-6r2x-8pq8-9489</a></p><p><strong>仓库 Star：</strong> 117292</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/electron/electron/security/advisories/GHSA-6r2x-8pq8-9489">https://github.com/electron/electron/security/advisories/GHSA-6r2x-8pq8-9489</a></p></li><li><p><a href="https://github.com/advisories/GHSA-6r2x-8pq8-9489">https://github.com/advisories/GHSA-6r2x-8pq8-9489</a></p></li></ul><p><strong>描述：</strong></p><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>The <code>nativeImage.createFromPath()</code> and <code>nativeImage.createFromBuffer()</code> functions call a function downstream that is vulnerable to a heap buffer overflow. An Electron program that uses either of the affected functions is vulnerable to a buffer overflow if an attacker is in control of the image’s height, width, and contents.</p><h3 id="Workaround"><a href="#Workaround" class="headerlink" title="Workaround"></a>Workaround</h3><p>There are no app-side workarounds for this issue. You must update your Electron version to be protected.</p><h3 id="Patches"><a href="#Patches" class="headerlink" title="Patches"></a>Patches</h3><ul><li><code>v28.3.2</code></li><li><code>v29.3.3</code></li><li><code>v30.0.3</code></li></ul><h3 id="For-More-Information"><a href="#For-More-Information" class="headerlink" title="For More Information"></a>For More Information</h3><p>If you have any questions or comments about this advisory, email us at <a href="mailto:&#115;&#101;&#x63;&#117;&#x72;&#105;&#x74;&#x79;&#64;&#x65;&#x6c;&#101;&#99;&#x74;&#114;&#x6f;&#110;&#x6a;&#115;&#x2e;&#111;&#x72;&#103;">security@electronjs.org</a>.</p>]]></content>
     
     
       
@@ -473,7 +498,7 @@
     <published>2025-06-30T18:00:10.407Z</published>
     <updated>2025-06-30T18:00:10.406Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-xw5q-g62x-2qjc">https://github.com/advisories/GHSA-xw5q-g62x-2qjc</a></p><p><strong>仓库 Star：</strong> 117291</p><p><strong>CVSS 评分：</strong> 7.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/electron/electron/security/advisories/GHSA-xw5q-g62x-2qjc">https://github.com/electron/electron/security/advisories/GHSA-xw5q-g62x-2qjc</a></p></li><li><p><a href="https://github.com/advisories/GHSA-xw5q-g62x-2qjc">https://github.com/advisories/GHSA-xw5q-g62x-2qjc</a></p></li></ul><p><strong>描述：</strong></p><p>electron’s ASAR Integrity can be bypass by modifying the content.</p><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>This only impacts apps that have the <code>embeddedAsarIntegrityValidation</code> and <code>onlyLoadAppFromAsar</code> <a href="https://www.electronjs.org/docs/latest/tutorial/fuses">fuses</a> enabled. Apps without these fuses enabled are not impacted. This issue is specific to Windows, apps using these fuses on macOS are unimpacted.</p><p>Specifically this issue can only be exploited if your app is launched from a filesystem the attacker has write access too. i.e. the ability to edit files inside the .app bundle on macOS which these fuses are supposed to protect against.</p><h3 id="Workarounds"><a href="#Workarounds" class="headerlink" title="Workarounds"></a>Workarounds</h3><p>There are no app side workarounds, you must update to a patched version of Electron.</p><h3 id="Fixed-Versions"><a href="#Fixed-Versions" class="headerlink" title="Fixed Versions"></a>Fixed Versions</h3><ul><li><code>30.0.5</code></li><li><code>31.0.0-beta.1</code></li></ul><h3 id="For-more-information"><a href="#For-more-information" class="headerlink" title="For more information"></a>For more information</h3><p>If you have any questions or comments about this advisory, email us at <a href="mailto:&#x73;&#x65;&#x63;&#117;&#x72;&#x69;&#x74;&#x79;&#x40;&#x65;&#108;&#101;&#x63;&#116;&#114;&#111;&#110;&#106;&#115;&#46;&#111;&#114;&#103;">security@electronjs.org</a></p>]]></content>
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-xw5q-g62x-2qjc">https://github.com/advisories/GHSA-xw5q-g62x-2qjc</a></p><p><strong>仓库 Star：</strong> 117291</p><p><strong>CVSS 评分：</strong> 7.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/electron/electron/security/advisories/GHSA-xw5q-g62x-2qjc">https://github.com/electron/electron/security/advisories/GHSA-xw5q-g62x-2qjc</a></p></li><li><p><a href="https://github.com/advisories/GHSA-xw5q-g62x-2qjc">https://github.com/advisories/GHSA-xw5q-g62x-2qjc</a></p></li></ul><p><strong>描述：</strong></p><p>electron’s ASAR Integrity can be bypass by modifying the content.</p><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>This only impacts apps that have the <code>embeddedAsarIntegrityValidation</code> and <code>onlyLoadAppFromAsar</code> <a href="https://www.electronjs.org/docs/latest/tutorial/fuses">fuses</a> enabled. Apps without these fuses enabled are not impacted. This issue is specific to Windows, apps using these fuses on macOS are unimpacted.</p><p>Specifically this issue can only be exploited if your app is launched from a filesystem the attacker has write access too. i.e. the ability to edit files inside the .app bundle on macOS which these fuses are supposed to protect against.</p><h3 id="Workarounds"><a href="#Workarounds" class="headerlink" title="Workarounds"></a>Workarounds</h3><p>There are no app side workarounds, you must update to a patched version of Electron.</p><h3 id="Fixed-Versions"><a href="#Fixed-Versions" class="headerlink" title="Fixed Versions"></a>Fixed Versions</h3><ul><li><code>30.0.5</code></li><li><code>31.0.0-beta.1</code></li></ul><h3 id="For-more-information"><a href="#For-more-information" class="headerlink" title="For more information"></a>For more information</h3><p>If you have any questions or comments about this advisory, email us at <a href="mailto:&#x73;&#x65;&#x63;&#117;&#114;&#105;&#116;&#121;&#x40;&#101;&#108;&#101;&#x63;&#x74;&#x72;&#x6f;&#110;&#106;&#x73;&#46;&#111;&#114;&#x67;">security@electronjs.org</a></p>]]></content>
     
     
       
@@ -487,32 +512,6 @@
     
     
     <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BlackHatEvents twitter update</title>
-    <link href="http://example.com/2025/06/30/twitter_985847442/"/>
-    <id>http://example.com/2025/06/30/twitter_985847442/</id>
-    <published>2025-06-30T17:00:34.169Z</published>
-    <updated>2025-06-30T17:00:34.167Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> RT @Darktrace：你准备好参加@BlackHatEvents了吗？我们准备好了！⚡</p><p>来5636号展位找我们，看看我们的自学习AI如何保护你的整个组织…</p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1939715791777079694">https://x.com/BlackHatEvents/status/1939715791777079694</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; RT @Darktrace：你准备好参加@BlackHatEvents了吗？我们准备好了！⚡&lt;/p&gt;
-&lt;p&gt;来5636号展位找我们，看看我们的自学</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
     
   </entry>
   
