@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-01T20:30:08.498Z</updated>
+  <updated>2025-07-01T21:00:26.251Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BlackHatEvents twitter update</title>
+    <link href="http://example.com/2025/07/01/twitter_327590077/"/>
+    <id>http://example.com/2025/07/01/twitter_327590077/</id>
+    <published>2025-07-01T21:00:26.254Z</published>
+    <updated>2025-07-01T21:00:26.251Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> 想提升你的Kubernetes安全技能吗？📈 立即报名参加#BHUSA培训“无需0-Day：攻击与保护Kubernetes、Linux及容器”，向专家Jay Beale学习攻防实战技巧！这是一次动手实践、真实场景的培训。立即抢占席位 &gt;&gt; <a href="https://t.co/a8ZtQtSeMV">https://t.co/a8ZtQtSeMV</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1940146644021883380">https://x.com/BlackHatEvents/status/1940146644021883380</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 想提升你的Kubernetes安全技能吗？📈 立即报名参加#BHUSA培训“无需0-Day：攻击与保护Kubernetes、Linux及容器”，</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
+    
+  </entry>
   
   <entry>
     <title>@modelcontextprotocol/server-filesystem allows for path validation bypass via prefix matching and symlink handling</title>
@@ -501,33 +526,6 @@
     <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
     
     <category term="代码注入" scheme="http://example.com/tags/%E4%BB%A3%E7%A0%81%E6%B3%A8%E5%85%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WonderCMS 432 远程代码执行漏洞</title>
-    <link href="http://example.com/2025/07/01/github_3162904640/"/>
-    <id>http://example.com/2025/07/01/github_3162904640/</id>
-    <published>2025-07-01T16:45:16.574Z</published>
-    <updated>2025-07-01T16:45:16.572Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> WonderCMS 4.3.2 远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-41425</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 该漏洞允许攻击者通过自动化工具创建和托管JavaScript XSS负载，安装恶意主题模块，从而在WonderCMS中触发反向shell，实现远程代码执行。此工具使用PentestMonkey的PHP反向shell脚本作为负载。</p><p><strong>产品厂商：</strong> WonderCMS</p><p><strong>产品名称：</strong> WonderCMS</p><p><strong>影响版本：</strong> 4.3.2</p><p><strong>来源：</strong> <a href="https://github.com/Tea-On/CVE-2023-41425-RCE-WonderCMS-4.3.2">https://github.com/Tea-On/CVE-2023-41425-RCE-WonderCMS-4.3.2</a></p><p><strong>类型：</strong> CVE-2023:github search</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; WonderCMS 4.3.2 远程代码执行漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-    <category term="CVE-2023:github search" scheme="http://example.com/tags/CVE-2023-github-search/"/>
     
   </entry>
   
