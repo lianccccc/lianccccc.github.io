@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-01T10:45:45.772Z</updated>
+  <updated>2025-07-01T10:47:25.810Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【已复现】WinRAR 目录穿越漏洞(CVE-2025-6218)安全风险通告</title>
+    <link href="http://example.com/2025/07/01/weixin_1058794524/"/>
+    <id>http://example.com/2025/07/01/weixin_1058794524/</id>
+    <published>2025-07-01T10:47:25.811Z</published>
+    <updated>2025-07-01T10:47:25.810Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 奇安信 CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/TKRIPWedPBB-1JEsgQJzQQ">https://mp.weixin.qq.com/s/TKRIPWedPBB-1JEsgQJzQQ</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 奇安信 CERT&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/TKRIPWedPBB-1JEsgQJzQQ&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="奇安信 CERT" scheme="http://example.com/tags/%E5%A5%87%E5%AE%89%E4%BF%A1-CERT/"/>
+    
+  </entry>
   
   <entry>
     <title>Akamai CloudTest XML外部实体(XXE)漏洞</title>
@@ -499,33 +526,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/AINt9_jwdVx_elPBZyNehA&quot;&gt;https://mp.weixin.qq.c</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Open VSX Registry 的一个漏洞威胁数百万开发者</title>
-    <link href="http://example.com/2025/07/01/weixin_4158803738/"/>
-    <id>http://example.com/2025/07/01/weixin_4158803738/</id>
-    <published>2025-07-01T07:41:22.356Z</published>
-    <updated>2025-07-01T07:41:22.354Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/l4fWb0pYrEaWl-UbKZ7tOA">https://mp.weixin.qq.com/s/l4fWb0pYrEaWl-UbKZ7tOA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/l4fWb0pYrEaWl-UbKZ7tOA&quot;&gt;https://mp.weixin.qq.c</summary>
       
     
     
