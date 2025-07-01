@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-01T17:15:17.906Z</updated>
+  <updated>2025-07-01T17:30:05.867Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Pillow vulnerability can cause write buffer overflow on BCn encoding</title>
+    <link href="http://example.com/2025/07/01/github_4242685227/"/>
+    <id>http://example.com/2025/07/01/github_4242685227/</id>
+    <published>2025-07-01T17:30:05.870Z</published>
+    <updated>2025-07-01T17:30:05.867Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-xg8h-j46f-w952">https://github.com/advisories/GHSA-xg8h-j46f-w952</a></p><p><strong>仓库 Star：</strong> 12878</p><p><strong>CVSS 评分：</strong> 7.1</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/python-pillow/Pillow/security/advisories/GHSA-xg8h-j46f-w952">https://github.com/python-pillow/Pillow/security/advisories/GHSA-xg8h-j46f-w952</a></p></li><li><p><a href="https://github.com/python-pillow/Pillow/pull/9041">https://github.com/python-pillow/Pillow/pull/9041</a></p></li><li><p><a href="https://github.com/python-pillow/Pillow/releases/tag/11.3.0">https://github.com/python-pillow/Pillow/releases/tag/11.3.0</a></p></li><li><p><a href="https://github.com/advisories/GHSA-xg8h-j46f-w952">https://github.com/advisories/GHSA-xg8h-j46f-w952</a></p></li></ul><p><strong>描述：</strong></p><p>There is a heap buffer overflow when writing a sufficiently large (&gt;64k encoded with default settings) image in the DDS format due to writing into a buffer without checking for available space. </p><p>This only affects users who save untrusted data as a compressed DDS image. </p><ul><li>Unclear how large the potential write could be. It is likely limited by process segfault, so it’s not necessarily deterministic. It may be practically unbounded. </li><li>Unclear if there’s a restriction on the bytes that could be emitted. It’s likely that the only restriction is that the bytes would be emitted in chunks of 8 or 16.</li></ul><p>This was introduced in Pillow 11.2.0 when the feature was added.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-xg8h-j46f-w952&quot;&gt;https://github.com/advisories/GHSA-xg8h-j46f-w952&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>Wing FTP Server 未授权远程代码执行漏洞</title>
@@ -511,33 +535,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="SQL注入" scheme="http://example.com/tags/SQL%E6%B3%A8%E5%85%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Oracle WebLogic Server 远程代码执行漏洞</title>
-    <link href="http://example.com/2025/07/01/github_3667102766/"/>
-    <id>http://example.com/2025/07/01/github_3667102766/</id>
-    <published>2025-07-01T12:45:57.412Z</published>
-    <updated>2025-07-01T12:45:57.409Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Oracle WebLogic Server 远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2020-2883</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Oracle WebLogic Server 存在远程代码执行漏洞，攻击者可通过未认证的IIOP和T3协议访问，利用此漏洞可接管服务器。漏洞利用需要通过网络访问IIOP或T3协议。</p><p><strong>产品厂商：</strong> Oracle</p><p><strong>产品名称：</strong> WebLogic Server</p><p><strong>影响版本：</strong> 10.3.6.0.0, 12.1.3.0.0, 12.2.1.3.0, 12.2.1.4.0</p><p><strong>搜索语法：</strong> product:”oracle weblogic”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12228">https://github.com/projectdiscovery/nuclei-templates/issues/12228</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Oracle WebLogic Server (10.3.6.0.0, 12.1.3.0.0, 12.2.1.3.0, 12.2.1.4.0) contains a remote code execution caused by unauthenticated access via IIOP and T3 protocols, letting network attackers take over the server, exploit requires network access via IIOP or T3.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://github.com/Qynklee/POC_CVE-2020-2883">https://github.com/Qynklee/POC_CVE-2020-2883</a></li><li><a href="https://vulncheck.com/xdb/7960bb5df13e">https://vulncheck.com/xdb/7960bb5df13e</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:Qynklee&#x2F;POC_CVE-2020-2883.git</li><li><a href="https://github.com/Al1ex/CVE-2020-2883">https://github.com/Al1ex/CVE-2020-2883</a></li><li><a href="https://vulncheck.com/xdb/407219371c37">https://vulncheck.com/xdb/407219371c37</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:Al1ex&#x2F;CVE-2020-2883.git</li><li><a href="https://github.com/FancyDoesSecurity/CVE-2020-2883">https://github.com/FancyDoesSecurity/CVE-2020-2883</a></li><li><a href="https://github.com/Y4er/WebLogic-Shiro-shell">https://github.com/Y4er/WebLogic-Shiro-shell</a></li><li><a href="https://vulncheck.com/xdb/da7b6fb2895f">https://vulncheck.com/xdb/da7b6fb2895f</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:Y4er&#x2F;WebLogic-Shiro-shell.git</li><li><a href="https://vulncheck.com/xdb/9ab580b3f80b">https://vulncheck.com/xdb/9ab580b3f80b</a></li><li>https&#x2F;&#x2F;&#x2F;gitee.com:akira09&#x2F;exphub.git</li><li><a href="https://github.com/ZZZWD/CVE-2020-2883">https://github.com/ZZZWD/CVE-2020-2883</a></li><li><a href="https://vulncheck.com/xdb/d55ddb5fac32">https://vulncheck.com/xdb/d55ddb5fac32</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:zzwlpx&#x2F;weblogicPoc.git</li><li><a href="https://github.com/MagicZer0/Weblogic_CVE-2020-2883_POC">https://github.com/MagicZer0/Weblogic_CVE-2020-2883_POC</a></li><li><a href="https://github.com/Y4er/CVE-2020-2883">https://github.com/Y4er/CVE-2020-2883</a></li><li><a href="https://vulncheck.com/xdb/7927833b7021">https://vulncheck.com/xdb/7927833b7021</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:Y4er&#x2F;CVE-2020-2883.git</li><li><a href="https://vulncheck.com/xdb/f0337df1320b">https://vulncheck.com/xdb/f0337df1320b</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:0xn0ne&#x2F;weblogicScanner.git</li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-product-oracle-weblogic"><a href="#Shodan-Query-product-oracle-weblogic" class="headerlink" title="Shodan Query: product:&quot;oracle weblogic&quot;"></a>Shodan Query: <code>product:&quot;oracle weblogic&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Oracle WebLogic Server 远程代码执行漏洞&lt;/p&gt;
-&lt;p&gt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
   </entry>
   
