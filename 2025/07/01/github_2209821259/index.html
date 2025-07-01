@@ -1,0 +1,694 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=light>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="lianccc">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="漏洞信息漏洞名称： sudo chroot Privilege Escalation Vulnerability 漏洞编号：  CVE： CVE-2025-32463  漏洞类型： 权限提升 漏洞等级： 高危 漏洞描述： CVE-2025-32463是一个本地权限提升漏洞，影响sudo版本1.9.14至1.9.17。该漏洞允许本地非特权用户通过滥用sudo中的--chroot（-R）功能，即使没有">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sudo chroot Privilege Escalation Vulnerability">
+<meta property="og:url" content="http://example.com/2025/07/01/github_2209821259/index.html">
+<meta property="og:site_name" content="liancc&#39; infos blog">
+<meta property="og:description" content="漏洞信息漏洞名称： sudo chroot Privilege Escalation Vulnerability 漏洞编号：  CVE： CVE-2025-32463  漏洞类型： 权限提升 漏洞等级： 高危 漏洞描述： CVE-2025-32463是一个本地权限提升漏洞，影响sudo版本1.9.14至1.9.17。该漏洞允许本地非特权用户通过滥用sudo中的--chroot（-R）功能，即使没有">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-07-01T14:45:38.437Z">
+<meta property="article:modified_time" content="2025-07-01T14:45:38.435Z">
+<meta property="article:author" content="lianccc">
+<meta property="article:tag" content="CVE-2025:github search">
+<meta property="article:tag" content="权限提升">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>sudo chroot Privilege Escalation Vulnerability - liancc&#39; infos blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="liancc' infos blog" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Craw Info</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="sudo chroot Privilege Escalation Vulnerability"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-07-01 14:45" pubdate>
+          2025年7月1日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          420 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          4 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">sudo chroot Privilege Escalation Vulnerability</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> sudo chroot Privilege Escalation Vulnerability</p>
+<p><strong>漏洞编号：</strong></p>
+<ul>
+<li><strong>CVE：</strong> CVE-2025-32463</li>
+</ul>
+<p><strong>漏洞类型：</strong> 权限提升</p>
+<p><strong>漏洞等级：</strong> 高危</p>
+<p><strong>漏洞描述：</strong> CVE-2025-32463是一个本地权限提升漏洞，影响sudo版本1.9.14至1.9.17。该漏洞允许本地非特权用户通过滥用sudo中的<code>--chroot</code>（<code>-R</code>）功能，即使没有为该用户定义特定的sudo规则，也能将权限提升至root。漏洞源于sudo在执行<code>chroot()</code>结合名称服务切换（NSS）查找时的安全行为不当。当sudo chroot进入一个由非特权用户控制的可写目录时，它将使用chroot内的NSS配置解析用户信息，导致以root权限加载任意共享对象。通过在伪造的chroot环境中植入恶意共享对象（如<code>libnss_/malicious.so.2</code>），攻击者可以触发其与sudo的执行，从而实现权限提升。此问题在sudo版本1.9.14中引入，并在版本1.9.17p1中修复，其中chroot功能被弃用。</p>
+<p><strong>产品厂商：</strong> sudo</p>
+<p><strong>产品名称：</strong> sudo</p>
+<p><strong>影响版本：</strong> 1.9.14 &lt;&#x3D; version &lt;&#x3D; 1.9.17</p>
+<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/K1tt3h/CVE-2025-32463-POC">https://github.com/K1tt3h/CVE-2025-32463-POC</a></p>
+<p><strong>类型：</strong> CVE-2025:github search</p>
+<h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul>
+<li>CVE-2025-32463-POC.sh</li>
+<li>LICENSE</li>
+<li>README.md</li>
+</ul>
+<h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-32463-–-Sudo-chroot-Privilege-Escalation-PoC"><a href="#CVE-2025-32463-–-Sudo-chroot-Privilege-Escalation-PoC" class="headerlink" title="CVE-2025-32463 – Sudo chroot Privilege Escalation (PoC)"></a>CVE-2025-32463 – Sudo chroot Privilege Escalation (PoC)</h2><p>This repository contains a proof-of-concept (PoC) exploit for CVE-2025-32463, a local privilege escalation vulnerability in <code>sudo</code> versions 1.9.14 through 1.9.17. The vulnerability allows a local unprivileged user to escalate privileges to <code>root</code> by abusing the <code>--chroot</code> (<code>-R</code>) feature in <code>sudo</code>, even when no specific <code>sudo</code> rules are defined for that user.</p>
+<h3 id="Vulnerability-Overview"><a href="#Vulnerability-Overview" class="headerlink" title="Vulnerability Overview"></a>Vulnerability Overview</h3><p>CVE-2025-32463 arises from unsafe behavior in <code>sudo</code> when performing <code>chroot()</code> combined with Name Service Switch (NSS) lookups during command matching. When <code>sudo</code> chroots into a directory that is writable and controlled by an unprivileged user, it will resolve user information using the NSS configuration inside the chroot. This leads to arbitrary shared object loading with root privileges.</p>
+<p>By planting a malicious shared object (e.g., <code>libnss_/malicious.so.2</code>) in the fake chroot environment, an attacker can trigger its execution with <code>sudo</code>, resulting in privilege escalation.</p>
+<p>This issue was introduced in <code>sudo</code> version 1.9.14 and is patched in version 1.9.17p1, where the chroot feature was deprecated.</p>
+<h3 id="Affected-Versions"><a href="#Affected-Versions" class="headerlink" title="Affected Versions"></a>Affected Versions</h3><ul>
+<li>Vulnerable: <code>sudo</code> 1.9.14 to 1.9.17</li>
+<li>Patched: <code>sudo</code> 1.9.17p1 and later</li>
+<li>Not affected: Legacy versions prior to <code>1.9.14</code> (chroot feature did not exist)</li>
+</ul>
+<h3 id="PoC-File-Description"><a href="#PoC-File-Description" class="headerlink" title="PoC File Description"></a>PoC File Description</h3><p>This repository includes a single file:</p>
+<ul>
+<li><code>CVE-2025-32463-POC.sh</code><br>A self-contained bash script that demonstrates the exploit.<br>It creates a fake chroot environment, builds a malicious NSS module, and uses <code>sudo -R</code> to trigger the vulnerability.</li>
+</ul>
+<h3 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h3><ul>
+<li>A Linux system with <code>sudo</code> version between 1.9.14 and 1.9.17</li>
+<li><code>gcc</code> and basic build tools installed</li>
+</ul>
+<h3 id="Vulnerability-Discovery-Credit"><a href="#Vulnerability-Discovery-Credit" class="headerlink" title="Vulnerability Discovery Credit"></a>Vulnerability Discovery Credit</h3><p>CVE-2025-32463 was discovered by Rich Mirch of the Stratascale Cyber Research Unit (CRU).</p>
+<p>The Stratascale CRU team conducted detailed analysis of the <code>sudo</code> <code>chroot</code> implementation and identified the vulnerability as part of ongoing research into privileged Linux utilities. Their work included discovery, exploitation, responsible disclosure to the <code>sudo</code> maintainer, and coordination with MITRE for CVE assignment.</p>
+<p>Special thanks to Todd Miller, the maintainer of <code>sudo</code>, for working with the researchers to triage and patch the vulnerability in version 1.9.17p1.</p>
+<p>For the full technical breakdown of the vulnerability, see the original disclosure:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.stratascale.com/vulnerability-alert-CVE-2025-32463-sudo-chroot">https://www.stratascale.com/vulnerability-alert-CVE-2025-32463-sudo-chroot</a></li>
+</ul>
+<h3 id="Disclaimer"><a href="#Disclaimer" class="headerlink" title="Disclaimer"></a>Disclaimer</h3><p>This project is provided for <strong>educational and research purposes only</strong>.</p>
+<p>By using any part of this repository, you agree that:</p>
+<ul>
+<li>You will not use this code or technique to gain unauthorized access to systems you do not own or have explicit permission to test.</li>
+<li>The author of this repository (K1tt3h) assumes <strong>no responsibility or liability</strong> for any misuse, damage, or consequences caused by this PoC or related material.</li>
+</ul>
+<p>Use this code at your own risk.</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Github-Poc/" class="category-chain-item">Github Poc</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/CVE-2025-github-search/" class="print-no-link">#CVE-2025:github search</a>
+      
+        <a href="/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/" class="print-no-link">#权限提升</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>sudo chroot Privilege Escalation Vulnerability</div>
+      <div>http://example.com/2025/07/01/github_2209821259/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>lianccc</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年7月1日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/07/01/github_3789428080/" title="ISPConfig language_editphp PHP代码注入漏洞">
+                        <span class="hidden-mobile">ISPConfig language_editphp PHP代码注入漏洞</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
