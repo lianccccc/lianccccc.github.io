@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-01T14:45:38.435Z</updated>
+  <updated>2025-07-01T16:00:05.729Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Improper Control of Generation of Code (&#39;Code Injection&#39;) vulnerability in bittoKazi Custom</title>
+    <link href="http://example.com/2025/07/01/github_1208060342/"/>
+    <id>http://example.com/2025/07/01/github_1208060342/</id>
+    <published>2025-07-01T16:00:05.766Z</published>
+    <updated>2025-07-01T16:00:05.729Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-4mv9-2h4p-3hrx">https://github.com/advisories/GHSA-4mv9-2h4p-3hrx</a></p><p><strong>CVSS 评分：</strong> 9.1</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-49029">https://nvd.nist.gov/vuln/detail/CVE-2025-49029</a></p></li><li><p><a href="https://patchstack.com/database/wordpress/plugin/custom-login-and-signup-widget/vulnerability/wordpress-custom-login-and-signup-widget-plugin-1-0-arbitrary-code-execution-vulnerability?_s_id=cve">https://patchstack.com/database/wordpress/plugin/custom-login-and-signup-widget/vulnerability/wordpress-custom-login-and-signup-widget-plugin-1-0-arbitrary-code-execution-vulnerability?_s_id=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-4mv9-2h4p-3hrx">https://github.com/advisories/GHSA-4mv9-2h4p-3hrx</a></p></li></ul><p><strong>描述：</strong></p><p>Improper Control of Generation of Code (‘Code Injection’) vulnerability in bitto.Kazi Custom Login And Signup Widget allows Code Injection.This issue affects Custom Login And Signup Widget: from n&#x2F;a through 1.0.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-4mv9-2h4p-3hrx&quot;&gt;https://github.com/advisories/GHSA-4mv9-2h4p-3hrx&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>sudo chroot Privilege Escalation Vulnerability</title>
@@ -351,9 +375,9 @@
     <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
     
     
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
     <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
   </entry>
   
@@ -431,9 +455,9 @@
     <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
     
     
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
     <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
   </entry>
   
@@ -510,33 +534,6 @@
     
     
     <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NFC成网络犯罪新目标，恶意攻击数量半年激增35倍</title>
-    <link href="http://example.com/2025/07/01/weixin_3417216653/"/>
-    <id>http://example.com/2025/07/01/weixin_3417216653/</id>
-    <published>2025-07-01T11:48:16.767Z</published>
-    <updated>2025-07-01T11:48:16.762Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/7i0ml5XdJgzSA31LIBFoDg">https://mp.weixin.qq.com/s/7i0ml5XdJgzSA31LIBFoDg</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/7i0ml5XdJgzSA31LIBFoDg&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
     
   </entry>
   
