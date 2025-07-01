@@ -19,15 +19,15 @@
   <meta name="author" content="lianccc">
   <meta name="keywords" content="">
   
-    <meta name="description" content="漏洞信息漏洞名称： ISPConfig language_edit.php PHP代码注入 漏洞编号：  CVE： CVE-2023-46818  漏洞类型： 代码注入 漏洞等级： 高危 漏洞描述： ISPConfig的language_edit.php文件存在PHP代码注入漏洞。当admin_allow_langedit设置启用时，经过身份验证的管理员可以通过语言编辑器界面注入任意PHP代码。该">
+    <meta name="description" content="漏洞信息漏洞名称： ISPConfig language_edit.php PHP代码注入 漏洞编号：  CVE： CVE-2023-46818  漏洞类型： 代码注入 漏洞等级： 高危 漏洞描述： ISPConfig的language_edit.php文件存在PHP代码注入漏洞。当admin_allow_langedit设置启用时，经过身份验证的管理员可以通过语言编辑器界面注入任意PHP代码。此">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ISPConfig language_editphp PHP代码注入">
-<meta property="og:url" content="http://example.com/2025/06/30/github_938639146/index.html">
+<meta property="og:url" content="http://example.com/2025/07/01/github_938639146/index.html">
 <meta property="og:site_name" content="liancc&#39; infos blog">
-<meta property="og:description" content="漏洞信息漏洞名称： ISPConfig language_edit.php PHP代码注入 漏洞编号：  CVE： CVE-2023-46818  漏洞类型： 代码注入 漏洞等级： 高危 漏洞描述： ISPConfig的language_edit.php文件存在PHP代码注入漏洞。当admin_allow_langedit设置启用时，经过身份验证的管理员可以通过语言编辑器界面注入任意PHP代码。该">
+<meta property="og:description" content="漏洞信息漏洞名称： ISPConfig language_edit.php PHP代码注入 漏洞编号：  CVE： CVE-2023-46818  漏洞类型： 代码注入 漏洞等级： 高危 漏洞描述： ISPConfig的language_edit.php文件存在PHP代码注入漏洞。当admin_allow_langedit设置启用时，经过身份验证的管理员可以通过语言编辑器界面注入任意PHP代码。此">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-06-30T15:45:21.338Z">
-<meta property="article:modified_time" content="2025-06-30T15:45:21.333Z">
+<meta property="article:published_time" content="2025-07-01T07:15:16.677Z">
+<meta property="article:modified_time" content="2025-07-01T07:15:16.673Z">
 <meta property="article:author" content="lianccc">
 <meta property="article:tag" content="rapid7&#x2F;metasploit-framework:github issues">
 <meta property="article:tag" content="代码注入">
@@ -213,8 +213,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-06-30 15:45" pubdate>
-          2025年6月30日 下午
+        <time datetime="2025-07-01 07:15" pubdate>
+          2025年7月1日 早上
         </time>
       </span>
     
@@ -285,7 +285,7 @@
 </ul>
 <p><strong>漏洞类型：</strong> 代码注入</p>
 <p><strong>漏洞等级：</strong> 高危</p>
-<p><strong>漏洞描述：</strong> ISPConfig的language_edit.php文件存在PHP代码注入漏洞。当<code>admin_allow_langedit</code>设置启用时，经过身份验证的管理员可以通过语言编辑器界面注入任意PHP代码。该模块会自动检查<code>admin_allow_langedit</code>权限是否启用，并尝试启用它（需要具有系统配置访问权限的管理员凭据）。漏洞利用通过将PHP有效负载注入语言文件，然后在访问该文件时执行。有效负载使用PHP的file_put_contents函数进行base64编码并写入。</p>
+<p><strong>漏洞描述：</strong> ISPConfig的language_edit.php文件存在PHP代码注入漏洞。当<code>admin_allow_langedit</code>设置启用时，经过身份验证的管理员可以通过语言编辑器界面注入任意PHP代码。此漏洞允许攻击者通过注入PHP负载到语言文件中，当文件被访问时执行该负载。</p>
 <p><strong>产品厂商：</strong> ISPConfig</p>
 <p><strong>产品名称：</strong> ISPConfig</p>
 <p><strong>影响版本：</strong> version &lt; 3.2.11p1</p>
@@ -341,7 +341,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>ISPConfig language_editphp PHP代码注入</div>
-      <div>http://example.com/2025/06/30/github_938639146/</div>
+      <div>http://example.com/2025/07/01/github_938639146/</div>
     </div>
     <div class="license-meta">
       
@@ -353,7 +353,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年6月30日</div>
+          <div>2025年7月1日</div>
         </div>
       
       
@@ -385,18 +385,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/30/github_2006755968/" title="ProFTPD 135 mod_copy模块命令执行漏洞">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">ProFTPD 135 mod_copy模块命令执行漏洞</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/30/github_443250844/" title="SonicWall Email Security 权限控制漏洞">
-                        <span class="hidden-mobile">SonicWall Email Security 权限控制漏洞</span>
+                      <a href="/2025/07/01/github_1499479342/" title="WinRAR 路径处理不当漏洞">
+                        <span class="hidden-mobile">WinRAR 路径处理不当漏洞</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
