@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-01T22:15:18.298Z</updated>
+  <updated>2025-07-01T23:00:06.311Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>junit-platform-reporting can leak Git credentials through its OpenTestReportGeneratingListener</title>
+    <link href="http://example.com/2025/07/01/github_3786395212/"/>
+    <id>http://example.com/2025/07/01/github_3786395212/</id>
+    <published>2025-07-01T23:00:06.313Z</published>
+    <updated>2025-07-01T23:00:06.311Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-m43g-m425-p68x">https://github.com/advisories/GHSA-m43g-m425-p68x</a></p><p><strong>仓库 Star：</strong> 6715</p><p><strong>CVSS 评分：</strong> 5.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/junit-team/junit-framework/security/advisories/GHSA-m43g-m425-p68x">https://github.com/junit-team/junit-framework/security/advisories/GHSA-m43g-m425-p68x</a></p></li><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-53103">https://nvd.nist.gov/vuln/detail/CVE-2025-53103</a></p></li><li><p><a href="https://github.com/junit-team/junit-framework/commit/d4fc834c8c1c0b3168cd030c13551d1d041f51bc">https://github.com/junit-team/junit-framework/commit/d4fc834c8c1c0b3168cd030c13551d1d041f51bc</a></p></li><li><p><a href="https://github.com/junit-team/junit-framework/blob/6b7764dac92fd35cb348152d1b37f8726875a4e0/junit-platform-reporting/src/main/java/org/junit/platform/reporting/open/xml/OpenTestReportGeneratingListener.java#L183">https://github.com/junit-team/junit-framework/blob/6b7764dac92fd35cb348152d1b37f8726875a4e0/junit-platform-reporting/src/main/java/org/junit/platform/reporting/open/xml/OpenTestReportGeneratingListener.java#L183</a></p></li><li><p><a href="https://github.com/advisories/GHSA-m43g-m425-p68x">https://github.com/advisories/GHSA-m43g-m425-p68x</a></p></li></ul><p><strong>描述：</strong></p><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>This vulnerability affects JUnit’s support for writing Open Test Reporting XML files which is an opt-in feature of <code>junit-platform-reporting</code>.</p><p>If a repository is cloned using a GitHub token or other credentials in its URL, for example:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://<span class="hljs-variable">$&#123;GH_APP&#125;</span>:<span class="hljs-variable">$&#123;GH_TOKEN&#125;</span>@github.com/example/example.git<br></code></pre></td></tr></table></figure><p>The credentials are captured by <code>OpenTestReportGeneratingListener</code> which produces (trimmed for brevity):</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">infrastructure</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">git:repository</span> <span class="hljs-attr">originUrl</span>=<span class="hljs-string">&quot;https://username:token@github.com/example/example.git&quot;</span> /&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">infrastructure</span>&gt;</span><br></code></pre></td></tr></table></figure><h3 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h3><p><a href="https://github.com/junit-team/junit5/blob/6b7764dac92fd35cb348152d1b37f8726875a4e0/junit-platform-reporting/src/main/java/org/junit/platform/reporting/open/xml/OpenTestReportGeneratingListener.java#L183">https://github.com/junit-team/junit5/blob/6b7764dac92fd35cb348152d1b37f8726875a4e0/junit-platform-reporting/src/main/java/org/junit/platform/reporting/open/xml/OpenTestReportGeneratingListener.java#L183</a></p><p>I think this should be configurable in some way to exclude select git information or exclude it entirely.</p><h3 id="PoC"><a href="#PoC" class="headerlink" title="PoC"></a>PoC</h3><ol><li>Clone a repo using a GitHub token as shown above.</li><li>Enable the listener <code>junit.platform.reporting.open.xml.enabled=true</code></li><li>Observe report captures credentials</li></ol><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>Depending on the level of access of the token, it can be nothing, limited, or everything.</p><p>If these test reports are published or stored anywhere public, then there is the possibility that a rouge attacker can steal the token and perform elevated actions by impersonating the user or app.</p><h3 id="Resolution"><a href="#Resolution" class="headerlink" title="Resolution"></a>Resolution</h3><p>JUnit 5.13.2 and later replace credentials in the URL with <code>***</code>. Moreover, including any Git metadata in the XML output is now an opt-in feature that can be enabled via the new <code>junit.platform.reporting.open.xml.git.enabled=true</code> configuration parameter but is not included by default.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-m43g-m425-p68x&quot;&gt;https://github.com/advisories/GHSA-m43g-m425-p68x&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>Apache Dubbo 反序列化漏洞</title>
@@ -494,32 +518,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; RT @Claranet_Sec: 认识我们的培训师 | @BlackHatEvents 美国 2025&lt;br&gt;结识我们世界级黑客培训背后的智囊团</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BlackHatEvents twitter update</title>
-    <link href="http://example.com/2025/07/01/twitter_3136265282/"/>
-    <id>http://example.com/2025/07/01/twitter_3136265282/</id>
-    <published>2025-07-01T18:00:26.980Z</published>
-    <updated>2025-07-01T18:00:26.978Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> RT @CQUREAcademy: @BlackHatEvents 美国站仅剩一个月了！🎩</p><p>我们的梦之队@PaulaCqure、@Amr_Thabet和Marcin Krawczyk将在…</p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1940103193381458389">https://x.com/BlackHatEvents/status/1940103193381458389</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; RT @CQUREAcademy: @BlackHatEvents 美国站仅剩一个月了！🎩&lt;/p&gt;
-&lt;p&gt;我们的梦之队@PaulaCqure、@</summary>
       
     
     
