@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-01T03:00:26.153Z</updated>
+  <updated>2025-07-01T04:30:15.647Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vBulletin 认证绕过漏洞</title>
+    <link href="http://example.com/2025/07/01/github_1674448598/"/>
+    <id>http://example.com/2025/07/01/github_1674448598/</id>
+    <published>2025-07-01T04:30:15.649Z</published>
+    <updated>2025-07-01T04:30:15.647Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> vBulletin 认证绕过漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-48827</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> vBulletin 5.0.0至5.7.5和6.0.0至6.0.3版本在PHP 8.1或更高版本上存在认证绕过漏洞，原因是未认证的用户可以访问受保护的API控制器，允许未认证的攻击者远程调用受保护的方法。</p><p><strong>产品厂商：</strong> vBulletin</p><p><strong>产品名称：</strong> vBulletin</p><p><strong>影响版本：</strong> 5.0.0 &lt;&#x3D; version &lt;&#x3D; 5.7.5, 6.0.0 &lt;&#x3D; version &lt;&#x3D; 6.0.3</p><p><strong>搜索语法：</strong> http.html:”powered by vbulletin”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12506">https://github.com/projectdiscovery/nuclei-templates/issues/12506</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>vBulletin 5.0.0 through 5.7.5 and 6.0.0 through 6.0.3 contain an authentication bypass caused by unauthenticated access to protected API controllers on PHP 8.1 or later, letting unauthenticated attackers invoke protected methods remotely.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://karmainsecurity.com/dont-call-that-protected-method-vbulletin-rce">https://karmainsecurity.com/dont-call-that-protected-method-vbulletin-rce</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:wiseep&#x2F;CVE-2025-48827.git</li><li><a href="https://github.com/wiseep/CVE-2025-48827">https://github.com/wiseep/CVE-2025-48827</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:0xgh057r3c0n&#x2F;CVE-2025-48827.git</li><li><a href="https://github.com/0xgh057r3c0n/CVE-2025-48827">https://github.com/0xgh057r3c0n/CVE-2025-48827</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-http-html-powered-by-vbulletin"><a href="#Shodan-Query-http-html-powered-by-vbulletin" class="headerlink" title="Shodan Query: http.html:&quot;powered by vbulletin&quot;"></a>Shodan Query: <code>http.html:&quot;powered by vbulletin&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; vBulletin 认证绕过漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
+    
+  </entry>
   
   <entry>
     <title>fofabot twitter update</title>
@@ -38,33 +65,6 @@
     
     
     <category term="fofabot" scheme="http://example.com/tags/fofabot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vBulletin 认证绕过漏洞</title>
-    <link href="http://example.com/2025/07/01/github_1674448598/"/>
-    <id>http://example.com/2025/07/01/github_1674448598/</id>
-    <published>2025-07-01T02:30:15.974Z</published>
-    <updated>2025-07-01T02:30:15.976Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> vBulletin 认证绕过漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-48827</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> vBulletin 5.0.0至5.7.5和6.0.0至6.0.3版本在PHP 8.1或更高版本上存在认证绕过漏洞，原因是未认证的用户可以访问受保护的API控制器，使得未认证的攻击者可以远程调用受保护的方法。</p><p><strong>产品厂商：</strong> vBulletin</p><p><strong>产品名称：</strong> vBulletin</p><p><strong>影响版本：</strong> 5.0.0 &lt;&#x3D; version &lt;&#x3D; 5.7.5, 6.0.0 &lt;&#x3D; version &lt;&#x3D; 6.0.3</p><p><strong>搜索语法：</strong> http.html:”powered by vbulletin”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12506">https://github.com/projectdiscovery/nuclei-templates/issues/12506</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>vBulletin 5.0.0 through 5.7.5 and 6.0.0 through 6.0.3 contain an authentication bypass caused by unauthenticated access to protected API controllers on PHP 8.1 or later, letting unauthenticated attackers invoke protected methods remotely.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://karmainsecurity.com/dont-call-that-protected-method-vbulletin-rce">https://karmainsecurity.com/dont-call-that-protected-method-vbulletin-rce</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:wiseep&#x2F;CVE-2025-48827.git</li><li><a href="https://github.com/wiseep/CVE-2025-48827">https://github.com/wiseep/CVE-2025-48827</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:0xgh057r3c0n&#x2F;CVE-2025-48827.git</li><li><a href="https://github.com/0xgh057r3c0n/CVE-2025-48827">https://github.com/0xgh057r3c0n/CVE-2025-48827</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-http-html-powered-by-vbulletin"><a href="#Shodan-Query-http-html-powered-by-vbulletin" class="headerlink" title="Shodan Query: http.html:&quot;powered by vbulletin&quot;"></a>Shodan Query: <code>http.html:&quot;powered by vbulletin&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; vBulletin 认证绕过漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
     
   </entry>
   
@@ -329,7 +329,7 @@
     <published>2025-06-30T19:00:04.808Z</published>
     <updated>2025-06-30T19:00:04.808Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-6r2x-8pq8-9489">https://github.com/advisories/GHSA-6r2x-8pq8-9489</a></p><p><strong>仓库 Star：</strong> 117292</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/electron/electron/security/advisories/GHSA-6r2x-8pq8-9489">https://github.com/electron/electron/security/advisories/GHSA-6r2x-8pq8-9489</a></p></li><li><p><a href="https://github.com/advisories/GHSA-6r2x-8pq8-9489">https://github.com/advisories/GHSA-6r2x-8pq8-9489</a></p></li></ul><p><strong>描述：</strong></p><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>The <code>nativeImage.createFromPath()</code> and <code>nativeImage.createFromBuffer()</code> functions call a function downstream that is vulnerable to a heap buffer overflow. An Electron program that uses either of the affected functions is vulnerable to a buffer overflow if an attacker is in control of the image’s height, width, and contents.</p><h3 id="Workaround"><a href="#Workaround" class="headerlink" title="Workaround"></a>Workaround</h3><p>There are no app-side workarounds for this issue. You must update your Electron version to be protected.</p><h3 id="Patches"><a href="#Patches" class="headerlink" title="Patches"></a>Patches</h3><ul><li><code>v28.3.2</code></li><li><code>v29.3.3</code></li><li><code>v30.0.3</code></li></ul><h3 id="For-More-Information"><a href="#For-More-Information" class="headerlink" title="For More Information"></a>For More Information</h3><p>If you have any questions or comments about this advisory, email us at <a href="mailto:&#115;&#x65;&#99;&#117;&#114;&#105;&#116;&#121;&#x40;&#x65;&#x6c;&#x65;&#99;&#x74;&#114;&#x6f;&#x6e;&#x6a;&#x73;&#46;&#x6f;&#114;&#x67;">security@electronjs.org</a>.</p>]]></content>
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-6r2x-8pq8-9489">https://github.com/advisories/GHSA-6r2x-8pq8-9489</a></p><p><strong>仓库 Star：</strong> 117292</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/electron/electron/security/advisories/GHSA-6r2x-8pq8-9489">https://github.com/electron/electron/security/advisories/GHSA-6r2x-8pq8-9489</a></p></li><li><p><a href="https://github.com/advisories/GHSA-6r2x-8pq8-9489">https://github.com/advisories/GHSA-6r2x-8pq8-9489</a></p></li></ul><p><strong>描述：</strong></p><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>The <code>nativeImage.createFromPath()</code> and <code>nativeImage.createFromBuffer()</code> functions call a function downstream that is vulnerable to a heap buffer overflow. An Electron program that uses either of the affected functions is vulnerable to a buffer overflow if an attacker is in control of the image’s height, width, and contents.</p><h3 id="Workaround"><a href="#Workaround" class="headerlink" title="Workaround"></a>Workaround</h3><p>There are no app-side workarounds for this issue. You must update your Electron version to be protected.</p><h3 id="Patches"><a href="#Patches" class="headerlink" title="Patches"></a>Patches</h3><ul><li><code>v28.3.2</code></li><li><code>v29.3.3</code></li><li><code>v30.0.3</code></li></ul><h3 id="For-More-Information"><a href="#For-More-Information" class="headerlink" title="For More Information"></a>For More Information</h3><p>If you have any questions or comments about this advisory, email us at <a href="mailto:&#115;&#101;&#x63;&#117;&#x72;&#x69;&#116;&#121;&#64;&#101;&#x6c;&#x65;&#x63;&#116;&#114;&#x6f;&#110;&#x6a;&#115;&#x2e;&#x6f;&#x72;&#x67;">security@electronjs.org</a>.</p>]]></content>
     
     
       
@@ -473,7 +473,7 @@
     <published>2025-06-30T18:00:10.407Z</published>
     <updated>2025-06-30T18:00:10.406Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-xw5q-g62x-2qjc">https://github.com/advisories/GHSA-xw5q-g62x-2qjc</a></p><p><strong>仓库 Star：</strong> 117291</p><p><strong>CVSS 评分：</strong> 7.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/electron/electron/security/advisories/GHSA-xw5q-g62x-2qjc">https://github.com/electron/electron/security/advisories/GHSA-xw5q-g62x-2qjc</a></p></li><li><p><a href="https://github.com/advisories/GHSA-xw5q-g62x-2qjc">https://github.com/advisories/GHSA-xw5q-g62x-2qjc</a></p></li></ul><p><strong>描述：</strong></p><p>electron’s ASAR Integrity can be bypass by modifying the content.</p><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>This only impacts apps that have the <code>embeddedAsarIntegrityValidation</code> and <code>onlyLoadAppFromAsar</code> <a href="https://www.electronjs.org/docs/latest/tutorial/fuses">fuses</a> enabled. Apps without these fuses enabled are not impacted. This issue is specific to Windows, apps using these fuses on macOS are unimpacted.</p><p>Specifically this issue can only be exploited if your app is launched from a filesystem the attacker has write access too. i.e. the ability to edit files inside the .app bundle on macOS which these fuses are supposed to protect against.</p><h3 id="Workarounds"><a href="#Workarounds" class="headerlink" title="Workarounds"></a>Workarounds</h3><p>There are no app side workarounds, you must update to a patched version of Electron.</p><h3 id="Fixed-Versions"><a href="#Fixed-Versions" class="headerlink" title="Fixed Versions"></a>Fixed Versions</h3><ul><li><code>30.0.5</code></li><li><code>31.0.0-beta.1</code></li></ul><h3 id="For-more-information"><a href="#For-more-information" class="headerlink" title="For more information"></a>For more information</h3><p>If you have any questions or comments about this advisory, email us at <a href="mailto:&#x73;&#101;&#99;&#x75;&#114;&#105;&#116;&#x79;&#64;&#101;&#108;&#101;&#x63;&#116;&#x72;&#111;&#110;&#106;&#x73;&#x2e;&#x6f;&#x72;&#103;">security@electronjs.org</a></p>]]></content>
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-xw5q-g62x-2qjc">https://github.com/advisories/GHSA-xw5q-g62x-2qjc</a></p><p><strong>仓库 Star：</strong> 117291</p><p><strong>CVSS 评分：</strong> 7.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/electron/electron/security/advisories/GHSA-xw5q-g62x-2qjc">https://github.com/electron/electron/security/advisories/GHSA-xw5q-g62x-2qjc</a></p></li><li><p><a href="https://github.com/advisories/GHSA-xw5q-g62x-2qjc">https://github.com/advisories/GHSA-xw5q-g62x-2qjc</a></p></li></ul><p><strong>描述：</strong></p><p>electron’s ASAR Integrity can be bypass by modifying the content.</p><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>This only impacts apps that have the <code>embeddedAsarIntegrityValidation</code> and <code>onlyLoadAppFromAsar</code> <a href="https://www.electronjs.org/docs/latest/tutorial/fuses">fuses</a> enabled. Apps without these fuses enabled are not impacted. This issue is specific to Windows, apps using these fuses on macOS are unimpacted.</p><p>Specifically this issue can only be exploited if your app is launched from a filesystem the attacker has write access too. i.e. the ability to edit files inside the .app bundle on macOS which these fuses are supposed to protect against.</p><h3 id="Workarounds"><a href="#Workarounds" class="headerlink" title="Workarounds"></a>Workarounds</h3><p>There are no app side workarounds, you must update to a patched version of Electron.</p><h3 id="Fixed-Versions"><a href="#Fixed-Versions" class="headerlink" title="Fixed Versions"></a>Fixed Versions</h3><ul><li><code>30.0.5</code></li><li><code>31.0.0-beta.1</code></li></ul><h3 id="For-more-information"><a href="#For-more-information" class="headerlink" title="For more information"></a>For more information</h3><p>If you have any questions or comments about this advisory, email us at <a href="mailto:&#x73;&#x65;&#x63;&#117;&#x72;&#x69;&#x74;&#x79;&#x40;&#x65;&#108;&#101;&#x63;&#116;&#114;&#111;&#110;&#106;&#115;&#46;&#111;&#114;&#103;">security@electronjs.org</a></p>]]></content>
     
     
       
