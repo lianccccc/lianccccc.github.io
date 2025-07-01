@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-06-30T22:30:16.665Z</updated>
+  <updated>2025-07-01T01:16:06.731Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Google Cloud API Key Unrestricted Usage Vulnerability</title>
+    <link href="http://example.com/2025/07/01/github_162163352/"/>
+    <id>http://example.com/2025/07/01/github_162163352/</id>
+    <published>2025-07-01T01:16:06.731Z</published>
+    <updated>2025-07-01T01:16:06.731Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Google Cloud API Key Unrestricted Usage Vulnerability</p><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> 确保Google Cloud API密钥的使用仅限于受信任和可靠的主机、HTTP引用者或应用程序。API密钥应用程序限制管理可以使用您的API密钥的网站、IP地址或Android&#x2F;iOS移动应用程序的授权。所有在生产中使用的API密钥都必须采用主机和应用程序限制。通过执行这些限制，可以减少受损API密钥对应用程序的影响。</p><p><strong>产品厂商：</strong> Google</p><p><strong>产品名称：</strong> Google Cloud API</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/ef6da2d38202874d2981200a25fadff8547e0209/cloud%2Fgcp%2Fapi%2Fgcloud-api-key-unrestricted.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/ef6da2d38202874d2981200a25fadff8547e0209/cloud%2Fgcp%2Fapi%2Fgcloud-api-key-unrestricted.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> gcloud-api-key-unrestricted<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Unrestricted API Key Usage<br>  <span class="hljs-params">author:</span> princechaddha<br>  <span class="hljs-params">severity:</span> medium<br>  <span class="hljs-params">description:</span> |<br>    Ensure that the use of Google Cloud API keys is limited to trusted and reliable hosts, HTTP referrers, <span class="hljs-keyword">or</span> applications. An API key application restriction manages the authorization of websites, IP addresses, <span class="hljs-keyword">or</span> Android<span class="hljs-symbol">/iOS</span> mobile applications that can employ your API key. It is crucial that all API keys used <span class="hljs-keyword">in</span> production employ host and application restrictions. By enforcing these restrictions, you can reduce the impact that a compromised API key can have on your applications.<br>  <span class="hljs-params">impact:</span> |<br>    API keys without restrictions can be used unrestrictedly, which might lead to unauthorized access and misuse, potentially exposing sensitive data <span class="hljs-keyword">or</span> services.<br>  <span class="hljs-params">remediation:</span> |<br>    Apply restrictions to all production API keys to specify the allowed websites, IP addresses, <span class="hljs-keyword">or</span> mobile applications that can use each key, to mitigate potential abuse.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>cloud.google.com<span class="hljs-operator">/</span>docs<span class="hljs-operator">/</span>authentication<span class="hljs-operator">/</span>api-keys<span class="hljs-comment">#restricting_api_keys</span><br>  <span class="hljs-params">tags:</span> cloud,devops,gcp,gcloud,api-keys,gcp-cloud-config<br><br><span class="hljs-params">flow:</span> |<br>  code(<span class="hljs-number">1</span>)<br>  for(<span class="hljs-keyword">let</span> projectId of iterate(template.projectIds))&#123;<br>    set(<span class="hljs-string">&quot;projectId&quot;</span>, projectId)<br>    code(<span class="hljs-number">2</span>)<br>    for(<span class="hljs-keyword">let</span> uid of iterate(template.uids))&#123;<br>      set(<span class="hljs-string">&quot;uid&quot;</span>, uid)<br>      code(<span class="hljs-number">3</span>)<br>    &#125;<br>  &#125;<br><br><span class="hljs-params">self-contained:</span> <span class="hljs-literal">true</span><br><br><span class="hljs-params">code:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">engine:</span><br>      <span class="hljs-operator">-</span> sh<br>      <span class="hljs-operator">-</span> bash<br>    <span class="hljs-params">source:</span> |<br>      gcloud projects list <span class="hljs-operator">-</span>-format<span class="hljs-operator">=</span><span class="hljs-string">&quot;json(projectId)&quot;</span><br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> json<br>        <span class="hljs-params">name:</span> projectIds<br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">json:</span><br>          <span class="hljs-operator">-</span> &#x27;.[].projectId&#x27;<br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">engine:</span><br>      <span class="hljs-operator">-</span> sh<br>      <span class="hljs-operator">-</span> bash<br>    <span class="hljs-params">source:</span> |<br>      gcloud alpha services api-keys list <span class="hljs-operator">-</span>-project $projectId <span class="hljs-operator">-</span>-format<span class="hljs-operator">=</span><span class="hljs-string">&quot;json(uid)&quot;</span><br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> json<br>        <span class="hljs-params">name:</span> uids<br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">json:</span><br>          <span class="hljs-operator">-</span> &#x27;.[].uid&#x27;<br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">engine:</span><br>      <span class="hljs-operator">-</span> sh<br>      <span class="hljs-operator">-</span> bash<br>    <span class="hljs-params">source:</span> |<br>      gcloud alpha services api-keys describe $uid <span class="hljs-operator">-</span>-format<span class="hljs-operator">=</span><span class="hljs-string">&quot;json(restrictions)&quot;</span><br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-literal">null</span>&#x27;<br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;Unrestricted API Key: &quot;</span> <span class="hljs-operator">+</span> uid <span class="hljs-operator">+</span> <span class="hljs-string">&quot; in Project: &quot;</span> <span class="hljs-operator">+</span> projectId&#x27;<br><span class="hljs-comment"># digest: 4a0a00473045022100d1751d133cbe1cb508355fb6acc6fb0d51094a8c42db864114772bfce2fd382a022022cb36fbfcf3f8b8ef22cd8a428104f85035cc421437b2e735f221396b39c224:922c64590222798bb761d5b6d8e72950</span><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Google Cloud API Key Unrestricted Usage</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>QNAP Photo Station 路径遍历漏洞</title>
+    <link href="http://example.com/2025/07/01/github_2731243997/"/>
+    <id>http://example.com/2025/07/01/github_2731243997/</id>
+    <published>2025-07-01T01:15:47.401Z</published>
+    <updated>2025-07-01T01:15:47.402Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> QNAP Photo Station 路径遍历漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2019-7194</li></ul><p><strong>漏洞类型：</strong> 目录遍历</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> QNAP Photo Station 存在外部文件名或路径控制漏洞，由于验证不足，远程攻击者可以访问或修改系统文件，利用此漏洞需要远程网络访问。</p><p><strong>产品厂商：</strong> QNAP</p><p><strong>产品名称：</strong> Photo Station</p><p><strong>影响版本：</strong> 6.0.3</p><p><strong>搜索语法：</strong> content-length: 580 “http server 1.0”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12254">https://github.com/projectdiscovery/nuclei-templates/issues/12254</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>QNAP Photo Station contains an external control of file name or path caused by insufficient validation, letting remote attackers access or modify system files, exploit requires remote network access.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="http://packetstormsecurity.com/files/157857/QNAP-QTS-And-Photo-Station-6.0.3-Remote-Command-Execution.html">http://packetstormsecurity.com/files/157857/QNAP-QTS-And-Photo-Station-6.0.3-Remote-Command-Execution.html</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-content-length-580-http-server-1-0"><a href="#Shodan-Query-content-length-580-http-server-1-0" class="headerlink" title="Shodan Query: content-length: 580 &quot;http server 1.0&quot;"></a>Shodan Query: <code>content-length: 580 &quot;http server 1.0&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; QNAP Photo Station 路径遍历漏洞&lt;/p&gt;
+&lt;p&gt;&lt;stron</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="目录遍历" scheme="http://example.com/tags/%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86/"/>
+    
+  </entry>
   
   <entry>
     <title>CVE-2025-6210 Hardlink-Based Path Traversal in ObsidianReader</title>
@@ -199,7 +252,7 @@
     <published>2025-06-30T19:00:04.808Z</published>
     <updated>2025-06-30T19:00:04.808Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-6r2x-8pq8-9489">https://github.com/advisories/GHSA-6r2x-8pq8-9489</a></p><p><strong>仓库 Star：</strong> 117292</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/electron/electron/security/advisories/GHSA-6r2x-8pq8-9489">https://github.com/electron/electron/security/advisories/GHSA-6r2x-8pq8-9489</a></p></li><li><p><a href="https://github.com/advisories/GHSA-6r2x-8pq8-9489">https://github.com/advisories/GHSA-6r2x-8pq8-9489</a></p></li></ul><p><strong>描述：</strong></p><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>The <code>nativeImage.createFromPath()</code> and <code>nativeImage.createFromBuffer()</code> functions call a function downstream that is vulnerable to a heap buffer overflow. An Electron program that uses either of the affected functions is vulnerable to a buffer overflow if an attacker is in control of the image’s height, width, and contents.</p><h3 id="Workaround"><a href="#Workaround" class="headerlink" title="Workaround"></a>Workaround</h3><p>There are no app-side workarounds for this issue. You must update your Electron version to be protected.</p><h3 id="Patches"><a href="#Patches" class="headerlink" title="Patches"></a>Patches</h3><ul><li><code>v28.3.2</code></li><li><code>v29.3.3</code></li><li><code>v30.0.3</code></li></ul><h3 id="For-More-Information"><a href="#For-More-Information" class="headerlink" title="For More Information"></a>For More Information</h3><p>If you have any questions or comments about this advisory, email us at <a href="mailto:&#x73;&#x65;&#x63;&#117;&#x72;&#x69;&#116;&#121;&#x40;&#101;&#108;&#x65;&#x63;&#x74;&#x72;&#111;&#110;&#106;&#x73;&#x2e;&#111;&#114;&#103;">security@electronjs.org</a>.</p>]]></content>
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-6r2x-8pq8-9489">https://github.com/advisories/GHSA-6r2x-8pq8-9489</a></p><p><strong>仓库 Star：</strong> 117292</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/electron/electron/security/advisories/GHSA-6r2x-8pq8-9489">https://github.com/electron/electron/security/advisories/GHSA-6r2x-8pq8-9489</a></p></li><li><p><a href="https://github.com/advisories/GHSA-6r2x-8pq8-9489">https://github.com/advisories/GHSA-6r2x-8pq8-9489</a></p></li></ul><p><strong>描述：</strong></p><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>The <code>nativeImage.createFromPath()</code> and <code>nativeImage.createFromBuffer()</code> functions call a function downstream that is vulnerable to a heap buffer overflow. An Electron program that uses either of the affected functions is vulnerable to a buffer overflow if an attacker is in control of the image’s height, width, and contents.</p><h3 id="Workaround"><a href="#Workaround" class="headerlink" title="Workaround"></a>Workaround</h3><p>There are no app-side workarounds for this issue. You must update your Electron version to be protected.</p><h3 id="Patches"><a href="#Patches" class="headerlink" title="Patches"></a>Patches</h3><ul><li><code>v28.3.2</code></li><li><code>v29.3.3</code></li><li><code>v30.0.3</code></li></ul><h3 id="For-More-Information"><a href="#For-More-Information" class="headerlink" title="For More Information"></a>For More Information</h3><p>If you have any questions or comments about this advisory, email us at <a href="mailto:&#x73;&#x65;&#99;&#117;&#x72;&#105;&#116;&#x79;&#x40;&#101;&#x6c;&#x65;&#99;&#116;&#114;&#111;&#x6e;&#x6a;&#x73;&#46;&#x6f;&#x72;&#x67;">security@electronjs.org</a>.</p>]]></content>
     
     
       
@@ -343,7 +396,7 @@
     <published>2025-06-30T18:00:10.407Z</published>
     <updated>2025-06-30T18:00:10.406Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-xw5q-g62x-2qjc">https://github.com/advisories/GHSA-xw5q-g62x-2qjc</a></p><p><strong>仓库 Star：</strong> 117291</p><p><strong>CVSS 评分：</strong> 7.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/electron/electron/security/advisories/GHSA-xw5q-g62x-2qjc">https://github.com/electron/electron/security/advisories/GHSA-xw5q-g62x-2qjc</a></p></li><li><p><a href="https://github.com/advisories/GHSA-xw5q-g62x-2qjc">https://github.com/advisories/GHSA-xw5q-g62x-2qjc</a></p></li></ul><p><strong>描述：</strong></p><p>electron’s ASAR Integrity can be bypass by modifying the content.</p><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>This only impacts apps that have the <code>embeddedAsarIntegrityValidation</code> and <code>onlyLoadAppFromAsar</code> <a href="https://www.electronjs.org/docs/latest/tutorial/fuses">fuses</a> enabled. Apps without these fuses enabled are not impacted. This issue is specific to Windows, apps using these fuses on macOS are unimpacted.</p><p>Specifically this issue can only be exploited if your app is launched from a filesystem the attacker has write access too. i.e. the ability to edit files inside the .app bundle on macOS which these fuses are supposed to protect against.</p><h3 id="Workarounds"><a href="#Workarounds" class="headerlink" title="Workarounds"></a>Workarounds</h3><p>There are no app side workarounds, you must update to a patched version of Electron.</p><h3 id="Fixed-Versions"><a href="#Fixed-Versions" class="headerlink" title="Fixed Versions"></a>Fixed Versions</h3><ul><li><code>30.0.5</code></li><li><code>31.0.0-beta.1</code></li></ul><h3 id="For-more-information"><a href="#For-more-information" class="headerlink" title="For more information"></a>For more information</h3><p>If you have any questions or comments about this advisory, email us at <a href="mailto:&#x73;&#x65;&#x63;&#117;&#114;&#x69;&#116;&#121;&#64;&#101;&#108;&#x65;&#x63;&#116;&#114;&#x6f;&#110;&#106;&#115;&#46;&#x6f;&#114;&#103;">security@electronjs.org</a></p>]]></content>
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-xw5q-g62x-2qjc">https://github.com/advisories/GHSA-xw5q-g62x-2qjc</a></p><p><strong>仓库 Star：</strong> 117291</p><p><strong>CVSS 评分：</strong> 7.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/electron/electron/security/advisories/GHSA-xw5q-g62x-2qjc">https://github.com/electron/electron/security/advisories/GHSA-xw5q-g62x-2qjc</a></p></li><li><p><a href="https://github.com/advisories/GHSA-xw5q-g62x-2qjc">https://github.com/advisories/GHSA-xw5q-g62x-2qjc</a></p></li></ul><p><strong>描述：</strong></p><p>electron’s ASAR Integrity can be bypass by modifying the content.</p><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>This only impacts apps that have the <code>embeddedAsarIntegrityValidation</code> and <code>onlyLoadAppFromAsar</code> <a href="https://www.electronjs.org/docs/latest/tutorial/fuses">fuses</a> enabled. Apps without these fuses enabled are not impacted. This issue is specific to Windows, apps using these fuses on macOS are unimpacted.</p><p>Specifically this issue can only be exploited if your app is launched from a filesystem the attacker has write access too. i.e. the ability to edit files inside the .app bundle on macOS which these fuses are supposed to protect against.</p><h3 id="Workarounds"><a href="#Workarounds" class="headerlink" title="Workarounds"></a>Workarounds</h3><p>There are no app side workarounds, you must update to a patched version of Electron.</p><h3 id="Fixed-Versions"><a href="#Fixed-Versions" class="headerlink" title="Fixed Versions"></a>Fixed Versions</h3><ul><li><code>30.0.5</code></li><li><code>31.0.0-beta.1</code></li></ul><h3 id="For-more-information"><a href="#For-more-information" class="headerlink" title="For more information"></a>For more information</h3><p>If you have any questions or comments about this advisory, email us at <a href="mailto:&#115;&#101;&#x63;&#x75;&#x72;&#105;&#x74;&#121;&#64;&#101;&#x6c;&#x65;&#x63;&#116;&#114;&#111;&#x6e;&#106;&#115;&#x2e;&#x6f;&#114;&#103;">security@electronjs.org</a></p>]]></content>
     
     
       
@@ -452,56 +505,6 @@
     <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; RT @surya4n6: 抢占我们罕见的企业级macOS蓝队培训席位。实践实验室，真实世界威胁检测与数字取证及事件响应（DFIR）@…&lt;/p&gt;
 </summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BlackHatEvents twitter update</title>
-    <link href="http://example.com/2025/06/30/twitter_1687137571/"/>
-    <id>http://example.com/2025/06/30/twitter_1687137571/</id>
-    <published>2025-06-30T16:01:02.465Z</published>
-    <updated>2025-06-30T16:01:02.463Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> RT @SecureYeti：教导你的员工成为你最强大的捍卫者！Secure Yeti的@jaysonstreet提供的培训将帮助你让安全变得“平易近人”…</p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1939705417518415996">https://x.com/BlackHatEvents/status/1939705417518415996</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; RT @SecureYeti：教导你的员工成为你最强大的捍卫者！Secure Yeti的@jaysonstreet提供的培训将帮助你让安全变得“平</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BlackHatEvents twitter update</title>
-    <link href="http://example.com/2025/06/30/twitter_1924812840/"/>
-    <id>http://example.com/2025/06/30/twitter_1924812840/</id>
-    <published>2025-06-30T16:00:56.566Z</published>
-    <updated>2025-06-30T16:00:56.563Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> RT @getsquarex: SquareX的Audrey Adeline将在Black Hat (@BlackHatEvents) 的“网络安全先锋指南”小组讨论中发言。</p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1939714203612225980">https://x.com/BlackHatEvents/status/1939714203612225980</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; RT @getsquarex: SquareX的Audrey Adeline将在Black Hat (@BlackHatEvents) 的“网络安</summary>
       
     
     
