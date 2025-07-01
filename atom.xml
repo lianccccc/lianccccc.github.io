@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-01T14:00:17.784Z</updated>
+  <updated>2025-07-01T14:15:14.198Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>sudo chroot 漏洞</title>
+    <link href="http://example.com/2025/07/01/github_2318896393/"/>
+    <id>http://example.com/2025/07/01/github_2318896393/</id>
+    <published>2025-07-01T14:15:14.201Z</published>
+    <updated>2025-07-01T14:15:14.198Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> sudo chroot 漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-32463</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞描述：</strong> CVE-2025-32463是一个影响sudo的漏洞，具体细节参考了Stratascale的漏洞警报。该漏洞可能允许攻击者通过chroot功能提升权限。</p><p><strong>产品名称：</strong> sudo</p><p><strong>来源：</strong> <a href="https://github.com/4f-kira/CVE-2025-32463">https://github.com/4f-kira/CVE-2025-32463</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>chwoot-demo.c</li><li>exp.sh</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-32463-chwoot"><a href="#CVE-2025-32463-chwoot" class="headerlink" title="CVE-2025-32463_chwoot"></a>CVE-2025-32463_chwoot</h2><p>参考：<a href="https://www.stratascale.com/vulnerability-alert-CVE-2025-32463-sudo-chroot">https://www.stratascale.com/vulnerability-alert-CVE-2025-32463-sudo-chroot</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; sudo chroot 漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/st</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
+    
+  </entry>
   
   <entry>
     <title>Brother Printers 默认管理员密码认证绕过漏洞</title>
@@ -502,33 +529,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/CsCsC4qiSUvVPDBqe9j7-w&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux高危Sudo漏洞，可提权至root并绕过限制，PoC已公开</title>
-    <link href="http://example.com/2025/07/01/weixin_3907262161/"/>
-    <id>http://example.com/2025/07/01/weixin_3907262161/</id>
-    <published>2025-07-01T11:48:15.706Z</published>
-    <updated>2025-07-01T11:48:15.702Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/2rwEiB-rFO6O3n2EkRTBZQ">https://mp.weixin.qq.com/s/2rwEiB-rFO6O3n2EkRTBZQ</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/2rwEiB-rFO6O3n2EkRTBZQ&quot;&gt;https://mp.weixin.q</summary>
       
     
     
