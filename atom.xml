@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-01T19:15:46.921Z</updated>
+  <updated>2025-07-01T20:00:35.402Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BlackHatEvents twitter update</title>
+    <link href="http://example.com/2025/07/01/twitter_1472917564/"/>
+    <id>http://example.com/2025/07/01/twitter_1472917564/</id>
+    <published>2025-07-01T20:00:35.404Z</published>
+    <updated>2025-07-01T20:00:35.402Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> 🚨 刚接触网络安全？从这里开始。🕵️‍♂️ 在#BlackHatUSA 2025上的《基础网络黑客》是你动手实践真实世界网络应用漏洞的入门课程📍 拉斯维加斯 | 🗓️ 8月3日至4日<br>🔗 了解更多并注册：<a href="https://t.co/N6fWSqmcP5">https://t.co/N6fWSqmcP5</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1940130035773440043">https://x.com/BlackHatEvents/status/1940130035773440043</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🚨 刚接触网络安全？从这里开始。🕵️‍♂️ 在#BlackHatUSA 2025上的《基础网络黑客》是你动手实践真实世界网络应用漏洞的入门课程</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>BlackHatEvents twitter update</title>
+    <link href="http://example.com/2025/07/01/twitter_466714780/"/>
+    <id>http://example.com/2025/07/01/twitter_466714780/</id>
+    <published>2025-07-01T20:00:27.026Z</published>
+    <updated>2025-07-01T20:00:27.022Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> 🚨 #BHUSA 2025首轮主题演讲重磅登场！从全球隐私倡导者到网络安全传奇人物，今年的演讲阵容已经引起轰动。<br>🔗 点击此处深入了解详情：<a href="https://t.co/oXZNyNkyNu">https://t.co/oXZNyNkyNu</a><br>👀 更多主题演讲即将公布——敬请期待 <a href="https://t.co/51TxMORo0z">https://t.co/51TxMORo0z</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1940130749828481115">https://x.com/BlackHatEvents/status/1940130749828481115</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🚨 #BHUSA 2025首轮主题演讲重磅登场！从全球隐私倡导者到网络安全传奇人物，今年的演讲阵容已经引起轰动。&lt;br&gt;🔗 点击此处深入了解详</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
+    
+  </entry>
   
   <entry>
     <title>Periodic Script Persistence</title>
@@ -483,56 +533,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="代码注入" scheme="http://example.com/tags/%E4%BB%A3%E7%A0%81%E6%B3%A8%E5%85%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Improper Control of Generation of Code (&#39;Code Injection&#39;) vulnerability in bittoKazi Custom</title>
-    <link href="http://example.com/2025/07/01/github_1208060342/"/>
-    <id>http://example.com/2025/07/01/github_1208060342/</id>
-    <published>2025-07-01T16:00:05.766Z</published>
-    <updated>2025-07-01T16:00:05.729Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-4mv9-2h4p-3hrx">https://github.com/advisories/GHSA-4mv9-2h4p-3hrx</a></p><p><strong>CVSS 评分：</strong> 9.1</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-49029">https://nvd.nist.gov/vuln/detail/CVE-2025-49029</a></p></li><li><p><a href="https://patchstack.com/database/wordpress/plugin/custom-login-and-signup-widget/vulnerability/wordpress-custom-login-and-signup-widget-plugin-1-0-arbitrary-code-execution-vulnerability?_s_id=cve">https://patchstack.com/database/wordpress/plugin/custom-login-and-signup-widget/vulnerability/wordpress-custom-login-and-signup-widget-plugin-1-0-arbitrary-code-execution-vulnerability?_s_id=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-4mv9-2h4p-3hrx">https://github.com/advisories/GHSA-4mv9-2h4p-3hrx</a></p></li></ul><p><strong>描述：</strong></p><p>Improper Control of Generation of Code (‘Code Injection’) vulnerability in bitto.Kazi Custom Login And Signup Widget allows Code Injection.This issue affects Custom Login And Signup Widget: from n&#x2F;a through 1.0.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-4mv9-2h4p-3hrx&quot;&gt;https://github.com/advisories/GHSA-4mv9-2h4p-3hrx&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>sudo chroot Privilege Escalation Vulnerability</title>
-    <link href="http://example.com/2025/07/01/github_2209821259/"/>
-    <id>http://example.com/2025/07/01/github_2209821259/</id>
-    <published>2025-07-01T14:45:38.437Z</published>
-    <updated>2025-07-01T14:45:38.435Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> sudo chroot Privilege Escalation Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-32463</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> CVE-2025-32463是一个本地权限提升漏洞，影响sudo版本1.9.14至1.9.17。该漏洞允许本地非特权用户通过滥用sudo中的<code>--chroot</code>（<code>-R</code>）功能，即使没有为该用户定义特定的sudo规则，也能将权限提升至root。漏洞源于sudo在执行<code>chroot()</code>结合名称服务切换（NSS）查找时的安全行为不当。当sudo chroot进入一个由非特权用户控制的可写目录时，它将使用chroot内的NSS配置解析用户信息，导致以root权限加载任意共享对象。通过在伪造的chroot环境中植入恶意共享对象（如<code>libnss_/malicious.so.2</code>），攻击者可以触发其与sudo的执行，从而实现权限提升。此问题在sudo版本1.9.14中引入，并在版本1.9.17p1中修复，其中chroot功能被弃用。</p><p><strong>产品厂商：</strong> sudo</p><p><strong>产品名称：</strong> sudo</p><p><strong>影响版本：</strong> 1.9.14 &lt;&#x3D; version &lt;&#x3D; 1.9.17</p><p><strong>来源：</strong> <a href="https://github.com/K1tt3h/CVE-2025-32463-POC">https://github.com/K1tt3h/CVE-2025-32463-POC</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2025-32463-POC.sh</li><li>LICENSE</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-32463-–-Sudo-chroot-Privilege-Escalation-PoC"><a href="#CVE-2025-32463-–-Sudo-chroot-Privilege-Escalation-PoC" class="headerlink" title="CVE-2025-32463 – Sudo chroot Privilege Escalation (PoC)"></a>CVE-2025-32463 – Sudo chroot Privilege Escalation (PoC)</h2><p>This repository contains a proof-of-concept (PoC) exploit for CVE-2025-32463, a local privilege escalation vulnerability in <code>sudo</code> versions 1.9.14 through 1.9.17. The vulnerability allows a local unprivileged user to escalate privileges to <code>root</code> by abusing the <code>--chroot</code> (<code>-R</code>) feature in <code>sudo</code>, even when no specific <code>sudo</code> rules are defined for that user.</p><h3 id="Vulnerability-Overview"><a href="#Vulnerability-Overview" class="headerlink" title="Vulnerability Overview"></a>Vulnerability Overview</h3><p>CVE-2025-32463 arises from unsafe behavior in <code>sudo</code> when performing <code>chroot()</code> combined with Name Service Switch (NSS) lookups during command matching. When <code>sudo</code> chroots into a directory that is writable and controlled by an unprivileged user, it will resolve user information using the NSS configuration inside the chroot. This leads to arbitrary shared object loading with root privileges.</p><p>By planting a malicious shared object (e.g., <code>libnss_/malicious.so.2</code>) in the fake chroot environment, an attacker can trigger its execution with <code>sudo</code>, resulting in privilege escalation.</p><p>This issue was introduced in <code>sudo</code> version 1.9.14 and is patched in version 1.9.17p1, where the chroot feature was deprecated.</p><h3 id="Affected-Versions"><a href="#Affected-Versions" class="headerlink" title="Affected Versions"></a>Affected Versions</h3><ul><li>Vulnerable: <code>sudo</code> 1.9.14 to 1.9.17</li><li>Patched: <code>sudo</code> 1.9.17p1 and later</li><li>Not affected: Legacy versions prior to <code>1.9.14</code> (chroot feature did not exist)</li></ul><h3 id="PoC-File-Description"><a href="#PoC-File-Description" class="headerlink" title="PoC File Description"></a>PoC File Description</h3><p>This repository includes a single file:</p><ul><li><code>CVE-2025-32463-POC.sh</code><br>A self-contained bash script that demonstrates the exploit.<br>It creates a fake chroot environment, builds a malicious NSS module, and uses <code>sudo -R</code> to trigger the vulnerability.</li></ul><h3 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h3><ul><li>A Linux system with <code>sudo</code> version between 1.9.14 and 1.9.17</li><li><code>gcc</code> and basic build tools installed</li></ul><h3 id="Vulnerability-Discovery-Credit"><a href="#Vulnerability-Discovery-Credit" class="headerlink" title="Vulnerability Discovery Credit"></a>Vulnerability Discovery Credit</h3><p>CVE-2025-32463 was discovered by Rich Mirch of the Stratascale Cyber Research Unit (CRU).</p><p>The Stratascale CRU team conducted detailed analysis of the <code>sudo</code> <code>chroot</code> implementation and identified the vulnerability as part of ongoing research into privileged Linux utilities. Their work included discovery, exploitation, responsible disclosure to the <code>sudo</code> maintainer, and coordination with MITRE for CVE assignment.</p><p>Special thanks to Todd Miller, the maintainer of <code>sudo</code>, for working with the researchers to triage and patch the vulnerability in version 1.9.17p1.</p><p>For the full technical breakdown of the vulnerability, see the original disclosure:</p><ul><li><a href="https://www.stratascale.com/vulnerability-alert-CVE-2025-32463-sudo-chroot">https://www.stratascale.com/vulnerability-alert-CVE-2025-32463-sudo-chroot</a></li></ul><h3 id="Disclaimer"><a href="#Disclaimer" class="headerlink" title="Disclaimer"></a>Disclaimer</h3><p>This project is provided for <strong>educational and research purposes only</strong>.</p><p>By using any part of this repository, you agree that:</p><ul><li>You will not use this code or technique to gain unauthorized access to systems you do not own or have explicit permission to test.</li><li>The author of this repository (K1tt3h) assumes <strong>no responsibility or liability</strong> for any misuse, damage, or consequences caused by this PoC or related material.</li></ul><p>Use this code at your own risk.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; sudo chroot Privilege Escalation Vulner</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
     
   </entry>
   
