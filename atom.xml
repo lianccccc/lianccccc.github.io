@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-02T11:00:07.313Z</updated>
+  <updated>2025-07-02T11:38:56.968Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,141 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>新型C4攻击绕过Chrome应用绑定加密机制</title>
+    <link href="http://example.com/2025/07/02/weixin_1682095356/"/>
+    <id>http://example.com/2025/07/02/weixin_1682095356/</id>
+    <published>2025-07-02T11:38:56.973Z</published>
+    <updated>2025-07-02T11:38:56.968Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/rI8uH1Q9KBaFNq0B-aiNzw">https://mp.weixin.qq.com/s/rI8uH1Q9KBaFNq0B-aiNzw</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/rI8uH1Q9KBaFNq0B-aiNzw&quot;&gt;https://mp.weixin.q</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开源工具Kanister：数据保护工作流管理工具</title>
+    <link href="http://example.com/2025/07/02/weixin_3248848752/"/>
+    <id>http://example.com/2025/07/02/weixin_3248848752/</id>
+    <published>2025-07-02T11:38:56.637Z</published>
+    <updated>2025-07-02T11:38:56.632Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/3iMzCRQz3jZlhCINkxggWw">https://mp.weixin.qq.com/s/3iMzCRQz3jZlhCINkxggWw</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/3iMzCRQz3jZlhCINkxggWw&quot;&gt;https://mp.weixin.q</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>@一汽丰田：如何用 AI 与安全护航数字化转型？</title>
+    <link href="http://example.com/2025/07/02/weixin_3316211725/"/>
+    <id>http://example.com/2025/07/02/weixin_3316211725/</id>
+    <published>2025-07-02T11:38:56.305Z</published>
+    <updated>2025-07-02T11:38:56.300Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/xT3MVTZkppWlrIK8aMJ10g">https://mp.weixin.qq.com/s/xT3MVTZkppWlrIK8aMJ10g</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/xT3MVTZkppWlrIK8aMJ10g&quot;&gt;https://mp.weixin.q</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Nessus严重漏洞允许覆盖任意本地系统文件</title>
+    <link href="http://example.com/2025/07/02/weixin_2619442570/"/>
+    <id>http://example.com/2025/07/02/weixin_2619442570/</id>
+    <published>2025-07-02T11:38:55.521Z</published>
+    <updated>2025-07-02T11:38:55.516Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/Hoha64mcUbf3FlhUeyQdGQ">https://mp.weixin.qq.com/s/Hoha64mcUbf3FlhUeyQdGQ</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/Hoha64mcUbf3FlhUeyQdGQ&quot;&gt;https://mp.weixin.q</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FBI 刚发布预警，澳航就发数据泄露道歉信，五眼联盟呢？</title>
+    <link href="http://example.com/2025/07/02/weixin_2227988826/"/>
+    <id>http://example.com/2025/07/02/weixin_2227988826/</id>
+    <published>2025-07-02T11:19:13.439Z</published>
+    <updated>2025-07-02T11:19:13.436Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/E4rONc6OaMBORRSBG2h8ag">https://mp.weixin.qq.com/s/E4rONc6OaMBORRSBG2h8ag</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/E4rONc6OaMBORRSBG2h8ag&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>CVE-2025-47812</title>
@@ -410,132 +545,6 @@
     <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
     
     <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sudo Local Privilege Escalation Vulnerability</title>
-    <link href="http://example.com/2025/07/02/github_267595600/"/>
-    <id>http://example.com/2025/07/02/github_267595600/</id>
-    <published>2025-07-02T07:45:21.021Z</published>
-    <updated>2025-07-02T07:45:21.020Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Sudo Local Privilege Escalation Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-32463</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> CVE-2025-32463是Sudo二进制文件中的一个本地权限提升漏洞。该漏洞允许本地用户在特定错误配置或通过精心构造的输入下将权限提升至root。此问题由Rich Mirch发现。攻击者可以利用此漏洞获得root访问权限，完全控制系统。</p><p><strong>产品厂商：</strong> sudo project</p><p><strong>产品名称：</strong> sudo</p><p><strong>来源：</strong> <a href="https://github.com/kh4sh3i/CVE-2025-32463">https://github.com/kh4sh3i/CVE-2025-32463</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>LICENSE</li><li>README.md</li><li>exploit.sh</li><li>img</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-32463"><a href="#CVE-2025-32463" class="headerlink" title="CVE-2025-32463"></a>CVE-2025-32463</h2><p>Local Privilege Escalation to Root via Sudo chroot in Linux</p><h3 id="🛑-Vulnerability-Summary"><a href="#🛑-Vulnerability-Summary" class="headerlink" title="🛑 Vulnerability Summary"></a>🛑 Vulnerability Summary</h3><p><strong>CVE-2025-32463</strong> is a <strong>local privilege escalation vulnerability</strong> in the <strong>Sudo</strong> binary. The flaw allows a local user to escalate privileges to <strong>root</strong> under specific misconfigurations or with crafted inputs. The issue was discovered by <strong>Rich Mirch</strong>.</p><ul><li><strong>CVE-ID:</strong> CVE-2025-32463  </li><li><strong>Component:</strong> sudo  </li><li><strong>Type:</strong> Local Privilege Escalation (EoP)  </li><li><strong>CVSS Score:</strong> TBD  </li><li><strong>Discovered by:</strong> <a href="https://twitter.com/rmirch">Rich Mirch</a></li></ul><h3 id="🔥-Impact"><a href="#🔥-Impact" class="headerlink" title="🔥 Impact"></a>🔥 Impact</h3><p>An attacker with low privileges can exploit this vulnerability to gain <strong>root access</strong>, compromising the system entirely.</p><h3 id="🧪-Proof-of-Concept"><a href="#🧪-Proof-of-Concept" class="headerlink" title="🧪 Proof of Concept"></a>🧪 Proof of Concept</h3><h4 id="Exploit"><a href="#Exploit" class="headerlink" title="Exploit"></a>Exploit</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><br></code></pre></td></tr></table></figure><h3 id="🛠-Requirements"><a href="#🛠-Requirements" class="headerlink" title="🛠 Requirements"></a>🛠 Requirements</h3><ul><li>Affected version of <code>sudo</code></li><li>Local shell access</li></ul><h3 id="🛡️-Mitigation"><a href="#🛡️-Mitigation" class="headerlink" title="🛡️ Mitigation"></a>🛡️ Mitigation</h3><ul><li>Update <code>sudo</code> to the latest patched version.</li><li>Use security frameworks like AppArmor or SELinux to limit sudo behavior.</li><li>Monitor for abnormal sudo invocations.</li></ul><h3 id="🧷-References"><a href="#🧷-References" class="headerlink" title="🧷 References"></a>🧷 References</h3><ul><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32463">CVE-2025-32463 on NVD</a></li><li><a href="https://twitter.com/rmirch">Rich Mirch on Twitter</a></li><li><a href="https://www.sudo.ws/">sudo project</a></li></ul><h3 id="⚠️-Disclaimer"><a href="#⚠️-Disclaimer" class="headerlink" title="⚠️ Disclaimer"></a>⚠️ Disclaimer</h3><p>This PoC is provided for <strong>educational and research</strong> purposes only. Running this on any system without permission is <strong>illegal</strong> and unethical.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Sudo Local Privilege Escalation Vulnera</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>fofabot twitter update</title>
-    <link href="http://example.com/2025/07/02/twitter_1669630063/"/>
-    <id>http://example.com/2025/07/02/twitter_1669630063/</id>
-    <published>2025-07-02T07:00:59.170Z</published>
-    <updated>2025-07-02T07:00:59.167Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> fofabot</p><p><strong>推文：</strong> ⚠️⚠️CVE-2025-47812(CVSS 10) Wing FTP服务器存在严重远程代码执行漏洞，未经认证的攻击者可完全控制服务器。<br>🎯在<a href="https://t.co/uLIbgJcaq5%E4%B8%8A%E5%8F%91%E7%8E%B0%E8%BF%9110%E4%B8%87+%E7%BB%93%E6%9E%9C">https://t.co/uLIbgJcaq5上发现近10万+结果</a><br>🔗FOFA链接:<a href="https://t.co/xwbD48swQx">https://t.co/xwbD48swQx</a><br>FOFA查询:app&#x3D;”Wing_FTP_Server”<br>🔖参考:<a href="https://t.co/IhnAapBpuD">https://t.co/IhnAapBpuD</a><br>#开源情报 #FOFA #网络安全 #漏洞</p><p><strong>链接：</strong> <a href="https://x.com/fofabot/status/1940293092206420008">https://x.com/fofabot/status/1940293092206420008</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; fofabot&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; ⚠️⚠️CVE-2025-47812(CVSS 10) Wing FTP服务器存在严重远程代码执行漏洞，未经认证的攻击者可完全控制服务器。&lt;br&gt;🎯在&lt;a h</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="fofabot" scheme="http://example.com/tags/fofabot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>The Drag and Drop Multiple File Upload (Pro) - WooCommerce plugin for WordPress is vulnerable to</title>
-    <link href="http://example.com/2025/07/02/github_1560830084/"/>
-    <id>http://example.com/2025/07/02/github_1560830084/</id>
-    <published>2025-07-02T07:00:15.630Z</published>
-    <updated>2025-07-02T07:00:15.626Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-c438-893p-pq8h">https://github.com/advisories/GHSA-c438-893p-pq8h</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5746">https://nvd.nist.gov/vuln/detail/CVE-2025-5746</a></p></li><li><p><a href="https://www.codedropz.com/woocommerce-drag-drop-multiple-file-upload">https://www.codedropz.com/woocommerce-drag-drop-multiple-file-upload</a></p></li><li><p><a href="https://www.wordfence.com/threat-intel/vulnerabilities/id/3c1f625e-4456-45e4-8a7f-809b22edb66b?source=cve">https://www.wordfence.com/threat-intel/vulnerabilities/id/3c1f625e-4456-45e4-8a7f-809b22edb66b?source=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-c438-893p-pq8h">https://github.com/advisories/GHSA-c438-893p-pq8h</a></p></li></ul><p><strong>描述：</strong></p><p>The Drag and Drop Multiple File Upload (Pro) - WooCommerce plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the dnd_upload_cf7_upload_chunks() function in version 5.0 - 5.0.5 (when bundled with the PrintSpace theme) and all versions up to, and including, 1.7.1 (in the standalone version). This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site’s server which may make remote code execution possible. The execution of PHP is disabled via a .htaccess file but is still possible in certain server configurations.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-c438-893p-pq8h&quot;&gt;https://github.com/advisories/GHSA-c438-893p-pq8h&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>The Ads Pro Plugin - Multi-Purpose WordPress Advertising Manager plugin for WordPress is</title>
-    <link href="http://example.com/2025/07/02/github_3779301834/"/>
-    <id>http://example.com/2025/07/02/github_3779301834/</id>
-    <published>2025-07-02T07:00:05.572Z</published>
-    <updated>2025-07-02T07:00:05.570Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-c9gr-fm33-6r9r">https://github.com/advisories/GHSA-c9gr-fm33-6r9r</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-4689">https://nvd.nist.gov/vuln/detail/CVE-2025-4689</a></p></li><li><p><a href="https://codecanyon.net/item/ads-pro-plugin-multipurpose-wordpress-advertising-manager/10275010">https://codecanyon.net/item/ads-pro-plugin-multipurpose-wordpress-advertising-manager/10275010</a></p></li><li><p><a href="https://www.wordfence.com/threat-intel/vulnerabilities/id/038ddfcd-093b-4234-a0b8-a3bf9a3d329f?source=cve">https://www.wordfence.com/threat-intel/vulnerabilities/id/038ddfcd-093b-4234-a0b8-a3bf9a3d329f?source=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-c9gr-fm33-6r9r">https://github.com/advisories/GHSA-c9gr-fm33-6r9r</a></p></li></ul><p><strong>描述：</strong></p><p>The Ads Pro Plugin - Multi-Purpose WordPress Advertising Manager plugin for WordPress is vulnerable to Local File Inclusion which leads to Remote Code Execution in all versions up to, and including, 4.89. This is due to the presence of a SQL Injection vulnerability and Local File Inclusion vulnerability that can be chained with an image upload. This makes it possible for unauthenticated attackers to execute code on the server upload image files on the server than can be fetched via a SQL injection vulnerability, and ultimately executed as PHP code through the local file inclusion vulnerability.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-c9gr-fm33-6r9r&quot;&gt;https://github.com/advisories/GHSA-c9gr-fm33-6r9r&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【已复现】Linux sudo 本地提权漏洞(CVE-2025-32462、CVE-2025-32463)安全风险通告</title>
-    <link href="http://example.com/2025/07/02/weixin_849133831/"/>
-    <id>http://example.com/2025/07/02/weixin_849133831/</id>
-    <published>2025-07-02T06:53:08.080Z</published>
-    <updated>2025-07-02T06:53:08.077Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 奇安信 CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/vldYxiqCSpclY-KvUhEQEQ">https://mp.weixin.qq.com/s/vldYxiqCSpclY-KvUhEQEQ</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 奇安信 CERT&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/vldYxiqCSpclY-KvUhEQEQ&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="奇安信 CERT" scheme="http://example.com/tags/%E5%A5%87%E5%AE%89%E4%BF%A1-CERT/"/>
     
   </entry>
   
