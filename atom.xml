@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-02T21:45:13.943Z</updated>
+  <updated>2025-07-02T22:00:33.291Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BlackHatEvents twitter update</title>
+    <link href="http://example.com/2025/07/02/twitter_2474162321/"/>
+    <id>http://example.com/2025/07/02/twitter_2474162321/</id>
+    <published>2025-07-02T22:00:33.293Z</published>
+    <updated>2025-07-02T22:00:33.291Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> 在#BlackHatTrainings的“网络高管AI战略（在线）”课程中，学员将以分析的方式解决问题。我们将探索数据科学工具、基础设施和流程，以分析数据、做出更优决策并识别提升性能的领域。数据分析与数据科学流程的结合将为数据科学问题提供基础。立即注册&gt;&gt; <a href="https://t.co/AVhsKiFTBS">https://t.co/AVhsKiFTBS</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1940523125910728996">https://x.com/BlackHatEvents/status/1940523125910728996</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 在#BlackHatTrainings的“网络高管AI战略（在线）”课程中，学员将以分析的方式解决问题。我们将探索数据科学工具、基础设施和流程，以</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
+    
+  </entry>
   
   <entry>
     <title>RevPi Webstatus 认证绕过漏洞</title>
@@ -503,33 +528,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/xT3MVTZkppWlrIK8aMJ10g&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Nessus严重漏洞允许覆盖任意本地系统文件</title>
-    <link href="http://example.com/2025/07/02/weixin_2619442570/"/>
-    <id>http://example.com/2025/07/02/weixin_2619442570/</id>
-    <published>2025-07-02T11:38:55.521Z</published>
-    <updated>2025-07-02T11:38:55.516Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/Hoha64mcUbf3FlhUeyQdGQ">https://mp.weixin.qq.com/s/Hoha64mcUbf3FlhUeyQdGQ</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/Hoha64mcUbf3FlhUeyQdGQ&quot;&gt;https://mp.weixin.q</summary>
       
     
     
