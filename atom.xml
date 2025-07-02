@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-02T08:15:18.079Z</updated>
+  <updated>2025-07-02T08:33:12.585Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网络安全信息与动态周报2025年第26期（6月23日-6月29日）</title>
+    <link href="http://example.com/2025/07/02/weixin_3058989112/"/>
+    <id>http://example.com/2025/07/02/weixin_3058989112/</id>
+    <published>2025-07-02T08:33:12.591Z</published>
+    <updated>2025-07-02T08:33:12.585Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 国家互联网应急中心CNCERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/1nLie8svLZHxyBWvrVAqqw">https://mp.weixin.qq.com/s/1nLie8svLZHxyBWvrVAqqw</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 国家互联网应急中心CNCERT&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/1nLie8svLZHxyBWvrVAqqw&quot;&gt;https://mp.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="国家互联网应急中心CNCERT" scheme="http://example.com/tags/%E5%9B%BD%E5%AE%B6%E4%BA%92%E8%81%94%E7%BD%91%E5%BA%94%E6%80%A5%E4%B8%AD%E5%BF%83CNCERT/"/>
+    
+  </entry>
   
   <entry>
     <title>FortiOS 测试环境漏洞</title>
@@ -513,32 +540,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Github Poc</title>
-    <link href="http://example.com/2025/07/02/github_1475746638/"/>
-    <id>http://example.com/2025/07/02/github_1475746638/</id>
-    <published>2025-07-02T04:45:27.867Z</published>
-    <updated>2025-07-02T04:45:27.867Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> </p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-49144</li></ul><p><strong>来源：</strong> <a href="https://github.com/timsonner/CVE-2025-49144-Research">https://github.com/timsonner/CVE-2025-49144-Research</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>archive-org.txt</li><li>call-agent-no-prompt.cs</li><li>call-agent.cs</li><li>npp.8.8.1.Installer.exe</li><li>npp.8.8.1.checksums.sha256</li><li>pop-shell.cs</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
   </entry>
   
