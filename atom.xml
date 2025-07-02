@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-02T09:15:27.721Z</updated>
+  <updated>2025-07-02T10:00:04.624Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>The education theme for WordPress is vulnerable to PHP Object Injection in all versions up to,</title>
+    <link href="http://example.com/2025/07/02/github_2492647829/"/>
+    <id>http://example.com/2025/07/02/github_2492647829/</id>
+    <published>2025-07-02T10:00:04.625Z</published>
+    <updated>2025-07-02T10:00:04.624Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-v5pf-366x-4gxg">https://github.com/advisories/GHSA-v5pf-366x-4gxg</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-13786">https://nvd.nist.gov/vuln/detail/CVE-2024-13786</a></p></li><li><p><a href="https://themeforest.net/item/education-center-training-courses-wordpress-theme/10652918#item-description__change-log">https://themeforest.net/item/education-center-training-courses-wordpress-theme/10652918#item-description__change-log</a></p></li><li><p><a href="https://www.wordfence.com/threat-intel/vulnerabilities/id/d0b27bc8-617a-4f98-954f-e49f87dca311?source=cve">https://www.wordfence.com/threat-intel/vulnerabilities/id/d0b27bc8-617a-4f98-954f-e49f87dca311?source=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-v5pf-366x-4gxg">https://github.com/advisories/GHSA-v5pf-366x-4gxg</a></p></li></ul><p><strong>描述：</strong></p><p>The education theme for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 3.6.10 via deserialization of untrusted input in the ‘themerex_callback_view_more_posts’ function. This makes it possible for unauthenticated attackers to inject a PHP Object. No known POP chain is present in the vulnerable software, which means this vulnerability has no impact unless another plugin or theme containing a POP chain is installed on the site. If a POP chain is present via an additional plugin or theme installed on the target system, it may allow the attacker to perform actions like delete arbitrary files, retrieve sensitive data, or execute code depending on the POP chain present.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-v5pf-366x-4gxg&quot;&gt;https://github.com/advisories/GHSA-v5pf-366x-4gxg&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>NFSundown 漏洞</title>
@@ -503,33 +527,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/Bs60waxZxDcErAsmUB_4ug&quot;&gt;https://mp.weixin.qq.c</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>资通电军全面启用“身分掩护与别名识别”制度</title>
-    <link href="http://example.com/2025/07/02/weixin_3908491994/"/>
-    <id>http://example.com/2025/07/02/weixin_3908491994/</id>
-    <published>2025-07-02T04:48:17.402Z</published>
-    <updated>2025-07-02T04:48:17.399Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/BVNErlGM1tALdf_ExHP9Cw">https://mp.weixin.qq.com/s/BVNErlGM1tALdf_ExHP9Cw</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/BVNErlGM1tALdf_ExHP9Cw&quot;&gt;https://mp.weixin.qq.c</summary>
       
     
     
