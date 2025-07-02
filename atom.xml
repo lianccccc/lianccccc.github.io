@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-02T20:45:25.462Z</updated>
+  <updated>2025-07-02T21:15:11.761Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>chainwalk 漏洞</title>
+    <link href="http://example.com/2025/07/02/github_1371202742/"/>
+    <id>http://example.com/2025/07/02/github_1371202742/</id>
+    <published>2025-07-02T21:15:11.763Z</published>
+    <updated>2025-07-02T21:15:11.761Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> chainwalk 漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-6855</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> 与CVE-2025-6855相关的漏洞，详情请参考GitHub仓库Spirizeon&#x2F;chainwalk。</p><p><strong>产品名称：</strong> chainwalk</p><p><strong>来源：</strong> <a href="https://github.com/Spirizeon/chainwalk">https://github.com/Spirizeon/chainwalk</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>build</li><li>walkthrough</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; chainwalk 漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/stro</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+  </entry>
   
   <entry>
     <title>Microsoft Outlook 远程代码执行漏洞</title>
@@ -513,30 +540,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CVE-2025-47812</title>
-    <link href="http://example.com/2025/07/02/other_1237371955/"/>
-    <id>http://example.com/2025/07/02/other_1237371955/</id>
-    <published>2025-07-02T11:00:07.318Z</published>
-    <updated>2025-07-02T11:00:07.313Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>描述：</strong> ** RESERVED ** This candidate has been reserved by an organization or individual that will use it when announcing a new security problem. When the candidate has been publicized, the details for this candidate will be provided.</p><hr><p>On  June 30, 2025 a detailed <a href="https://www.rcesecurity.com/2025/06/what-the-null-wing-ftp-server-rce-cve-2025-47812/">technical analysis</a> of CVE-2025-47812 was published by the original finders, RCE Security. This analysis shows how an anonymous user (with no password), can leverage a NULL byte injection issue, allowing for arbitrary attacker-controlled LUA code to be placed in a session file. An attacker can then execute this arbitrary LUA code to achieve RCE. The technical analysis shows this occurring with <code>root</code> privileges by default on a Linux based system, and notes that on Windows, code execution will be as <code>NT AUTHORITY\SYSTEM</code>.</p><p>On July 1, 2025, a Metasploit exploit module for CVE-2025-47812 was added the <a href="https://github.com/rapid7/metasploit-framework/pull/20364">Metasploit pull queue</a>.</p><p>Given this is a file transfer server, is vulnerable to unauthenticated RCE, and public exploit code is available, I have rated this as <code>Extremely High</code> attacker Value, and <code>Extremely High</code> exploitability.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;描述：&lt;/strong&gt; ** RESERVED ** This candidate has been reserved by an organization or individual that will use it when announcing a </summary>
-      
-    
-    
-    
-    <category term="其他" scheme="http://example.com/categories/%E5%85%B6%E4%BB%96/"/>
-    
-    
-    <category term="attackerkb.com" scheme="http://example.com/tags/attackerkb-com/"/>
     
   </entry>
   
