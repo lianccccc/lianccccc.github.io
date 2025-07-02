@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-02T01:06:27.504Z</updated>
+  <updated>2025-07-02T01:30:20.812Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CVE-2025-5472 Denial of Service via Uncontrolled Recursive JSON Parsing in JSONReader</title>
+    <link href="http://example.com/2025/07/02/other_4078983740/"/>
+    <id>http://example.com/2025/07/02/other_4078983740/</id>
+    <published>2025-07-02T01:30:20.817Z</published>
+    <updated>2025-07-02T01:30:20.812Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://huntr.com/bounties/df187bda-7911-4823-a19a-e15b2c66b0d4">https://huntr.com/bounties/df187bda-7911-4823-a19a-e15b2c66b0d4</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://huntr.com/bounties/df187bda-7911-4823-a19a-e15b2c66b0d4&quot;&gt;https://huntr.com/bounties/df187bda-7911-4</summary>
+      
+    
+    
+    
+    <category term="其他" scheme="http://example.com/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+    <category term="huntr.com" scheme="http://example.com/tags/huntr-com/"/>
+    
+  </entry>
   
   <entry>
     <title>音频设备中的蓝牙漏洞可被利用来监视用户</title>
@@ -503,32 +527,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="远程代码执行" scheme="http://example.com/tags/%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BlackHatEvents twitter update</title>
-    <link href="http://example.com/2025/07/01/twitter_263889010/"/>
-    <id>http://example.com/2025/07/01/twitter_263889010/</id>
-    <published>2025-07-01T19:00:26.757Z</published>
-    <updated>2025-07-01T19:00:26.754Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> 转推 @PaulaCqure: 别错过@BlackHatEvents USA 2025，终极网络安全大会！🎩</p><p>8月2日至7日在拉斯维加斯，承诺将…</p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1940118403081281881">https://x.com/BlackHatEvents/status/1940118403081281881</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 转推 @PaulaCqure: 别错过@BlackHatEvents USA 2025，终极网络安全大会！🎩&lt;/p&gt;
-&lt;p&gt;8月2日至7日在拉斯</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
     
   </entry>
   
