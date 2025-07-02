@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-02T18:00:28.448Z</updated>
+  <updated>2025-07-02T18:45:15.157Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CVE-2025-32463 POC</title>
+    <link href="http://example.com/2025/07/02/github_2140662395/"/>
+    <id>http://example.com/2025/07/02/github_2140662395/</id>
+    <published>2025-07-02T18:45:15.162Z</published>
+    <updated>2025-07-02T18:45:15.157Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CVE-2025-32463 POC</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-32463</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞描述：</strong> 该漏洞利用<code>chroot</code>和<code>sudo</code>在解析<code>nsswitch.conf</code>配置值时尝试打开<code>libnss_systemd.so.2</code>的行为，可能导致权限提升。</p><p><strong>来源：</strong> <a href="https://github.com/robbert1978/CVE-2025-32463_POC">https://github.com/robbert1978/CVE-2025-32463_POC</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>.gitignore</li><li>Makefile</li><li>evil.c</li><li>evil.so</li><li>image-1.png</li><li>image.png</li><li>readme.md</li><li>strace.log</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><p><img src="/image.png" alt="alt text"><br><img src="/image-1.png" alt="alt text"></p><p>Checking <code>nsswitch.conf</code> default values:</p><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">passwd:</span>         files systemd<br></code></pre></td></tr></table></figure><p>After calling <code>chroot</code>, <code>sudo</code> trys to parse the config values at  <code>nsswitch.conf</code> to run the command, which leads it to try to open  <code>libnss_systemd.so.2</code>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CVE-2025-32463 POC&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
+    
+  </entry>
   
   <entry>
     <title>BlackHatEvents twitter update</title>
@@ -504,33 +531,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 飓风网络安全&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/f-nH7bwyi0OscAVc54ZzcQ&quot;&gt;https://mp.weixin.qq</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="飓风网络安全" scheme="http://example.com/tags/%E9%A3%93%E9%A3%8E%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【高危漏洞预警】sudo &lt; 1917p1 host&amp;chroot本地提权漏洞</title>
-    <link href="http://example.com/2025/07/02/weixin_3873582614/"/>
-    <id>http://example.com/2025/07/02/weixin_3873582614/</id>
-    <published>2025-07-02T10:23:31.402Z</published>
-    <updated>2025-07-02T10:23:31.399Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 飓风网络安全</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/CbKYxT3ODo--QULJadvoRQ">https://mp.weixin.qq.com/s/CbKYxT3ODo--QULJadvoRQ</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 飓风网络安全&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/CbKYxT3ODo--QULJadvoRQ&quot;&gt;https://mp.weixin.qq</summary>
       
     
     
