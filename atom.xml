@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-02T08:33:12.585Z</updated>
+  <updated>2025-07-02T09:15:27.721Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>NFSundown 漏洞</title>
+    <link href="http://example.com/2025/07/02/github_2507562211/"/>
+    <id>http://example.com/2025/07/02/github_2507562211/</id>
+    <published>2025-07-02T09:15:27.727Z</published>
+    <updated>2025-07-02T09:15:27.721Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> NFSundown 漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-38089</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> PoC for CVE-2025-38089</p><p><strong>产品名称：</strong> NFSundown</p><p><strong>来源：</strong> <a href="https://github.com/keymaker-arch/NFSundown">https://github.com/keymaker-arch/NFSundown</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="NFSundown"><a href="#NFSundown" class="headerlink" title="NFSundown"></a>NFSundown</h2><p>PoC for CVE-2025-38089</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; NFSundown 漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/stro</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sudo chroot 漏洞</title>
+    <link href="http://example.com/2025/07/02/github_2402304019/"/>
+    <id>http://example.com/2025/07/02/github_2402304019/</id>
+    <published>2025-07-02T09:15:16.432Z</published>
+    <updated>2025-07-02T09:15:16.428Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Sudo chroot 漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-32463</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> CVE-2025-32463是Sudo中的一个权限提升漏洞，影响版本从1.9.14到1.9.17。攻击者可以利用此漏洞通过特定的chroot环境设置和恶意的nsswitch.conf文件，编译并执行恶意的共享库，从而获得root权限。</p><p><strong>产品名称：</strong> Sudo</p><p><strong>影响版本：</strong> 1.9.14 to 1.9.17</p><p><strong>来源：</strong> <a href="https://github.com/neko205-mx/CVE-2025-32463_Exploit">https://github.com/neko205-mx/CVE-2025-32463_Exploit</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>run.sh</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-32463-Exploit"><a href="#CVE-2025-32463-Exploit" class="headerlink" title="CVE-2025-32463_Exploit"></a>CVE-2025-32463_Exploit</h2><p>受危害版本 1.9.14 to 1.9.17</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">bash run.sh<br></code></pre></td></tr></table></figure><p>成功如下</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs shell">neko@aosc-neko205 [ CVE-2025-32463_Exploit@main ] $ bash run.sh <br>[+] CVE-2025-32463 Sudo chroot 漏洞复现脚本<br>[*] 正在创建临时工作目录...<br>[*] 工作目录已创建: /tmp/sudo_exploit.nc0EjT<br>[*] 正在创建 C 语言 payload (woot1337.c)...<br>[*] 正在设置 chroot 环境和恶意的 nsswitch.conf...<br>[*] 正在将 payload 编译为共享库 (libnss_/woot1337.so.2)...<br>[*] 编译成功！<br>[+] root shell!!!!!<br>woot!<br>root@aosc-neko205 [ / ] # id<br>uid=0(root) gid=0(root) 组=0(root),11(audio),12(video),15(cdrom),974(ollama),997(wheel),999(plugdev),1001(neko),1002(gamemode)<br>root@aosc-neko205 [ / ] # exit<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Sudo chroot 漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/st</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
+    
+  </entry>
   
   <entry>
     <title>网络安全信息与动态周报2025年第26期（6月23日-6月29日）</title>
@@ -486,60 +540,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>俄罗斯大型国防承包商遭入侵，海军机密被曝光</title>
-    <link href="http://example.com/2025/07/02/weixin_1950911770/"/>
-    <id>http://example.com/2025/07/02/weixin_1950911770/</id>
-    <published>2025-07-02T04:48:16.574Z</published>
-    <updated>2025-07-02T04:48:16.571Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/YgVK2oUpU5oOUSv2JNOD0Q">https://mp.weixin.qq.com/s/YgVK2oUpU5oOUSv2JNOD0Q</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/YgVK2oUpU5oOUSv2JNOD0Q&quot;&gt;https://mp.weixin.qq.c</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Nuclei CVE-2023-5561 Vulnerability</title>
-    <link href="http://example.com/2025/07/02/github_1115355293/"/>
-    <id>http://example.com/2025/07/02/github_1115355293/</id>
-    <published>2025-07-02T04:45:37.129Z</published>
-    <updated>2025-07-02T04:45:37.127Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Nuclei CVE-2023-5561 Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-5561</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> 该漏洞与Nuclei模板中的CVE-2023-5561相关，具体细节未公开。</p><p><strong>产品厂商：</strong> projectdiscovery</p><p><strong>产品名称：</strong> nuclei-templates</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12187">https://github.com/projectdiscovery/nuclei-templates/issues/12187</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Template-IDs-or-paths"><a href="#Template-IDs-or-paths" class="headerlink" title="Template IDs or paths"></a>Template IDs or paths</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">-</span> CVE-2023-5561<br></code></pre></td></tr></table></figure><h4 id="Environment"><a href="#Environment" class="headerlink" title="Environment"></a>Environment</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">-</span> OS: Ubuntu 20.04<br><span class="hljs-bullet">-</span> Nuclei: 3.4.4<br><span class="hljs-bullet">-</span> Go: 1.22.4<br></code></pre></td></tr></table></figure><h4 id="Steps-To-Reproduce"><a href="#Steps-To-Reproduce" class="headerlink" title="Steps To Reproduce"></a>Steps To Reproduce</h4><p>nuclei -u <a href="https://site.com/">https://site.com</a> -id CVE-2023-5561</p><h4 id="Relevant-dumped-responses"><a href="#Relevant-dumped-responses" class="headerlink" title="Relevant dumped responses"></a>Relevant dumped responses</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell"><br></code></pre></td></tr></table></figure><h4 id="Anything-else"><a href="#Anything-else" class="headerlink" title="Anything else?"></a>Anything else?</h4><p>Will send site in Discord</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Nuclei CVE-2023-5561 Vulnerability&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
     
   </entry>
   
