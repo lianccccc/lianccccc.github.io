@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-01T23:00:27.027Z</updated>
+  <updated>2025-07-02T00:00:26.963Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BlackHatEvents twitter update</title>
+    <link href="http://example.com/2025/07/02/twitter_347486431/"/>
+    <id>http://example.com/2025/07/02/twitter_347486431/</id>
+    <published>2025-07-02T00:00:26.965Z</published>
+    <updated>2025-07-02T00:00:26.963Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> 第十届云安全峰会将于2025年9月30日在多伦多市中心的Metro Toronto Convention Centre举行。云安全峰会是加拿大领先的云安全活动，主题演讲、小组讨论、交流机会等精彩内容不容错过 &gt;&gt; <a href="https://t.co/FlVBXW1acF">https://t.co/FlVBXW1acF</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1940190935200977248">https://x.com/BlackHatEvents/status/1940190935200977248</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 第十届云安全峰会将于2025年9月30日在多伦多市中心的Metro Toronto Convention Centre举行。云安全峰会是加拿大领先</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
+    
+  </entry>
   
   <entry>
     <title>BlackHatEvents twitter update</title>
@@ -500,32 +525,6 @@
     <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
     
     <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BlackHatEvents twitter update</title>
-    <link href="http://example.com/2025/07/01/twitter_2313326446/"/>
-    <id>http://example.com/2025/07/01/twitter_2313326446/</id>
-    <published>2025-07-01T18:00:43.520Z</published>
-    <updated>2025-07-01T18:00:43.518Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> RT @AppSecEngineer: 攻击者自动化他们的攻击手段。你的防御措施自动化了吗？</p><p>当今DevSecOps面临的最大安全挑战…</p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1940102617515864411">https://x.com/BlackHatEvents/status/1940102617515864411</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; RT @AppSecEngineer: 攻击者自动化他们的攻击手段。你的防御措施自动化了吗？&lt;/p&gt;
-&lt;p&gt;当今DevSecOps面临的最大安全挑</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
     
   </entry>
   
