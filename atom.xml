@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-02T22:00:33.291Z</updated>
+  <updated>2025-07-02T22:15:22.038Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Wing FTP Server Lua注入漏洞</title>
+    <link href="http://example.com/2025/07/02/github_2955672373/"/>
+    <id>http://example.com/2025/07/02/github_2955672373/</id>
+    <published>2025-07-02T22:15:22.042Z</published>
+    <updated>2025-07-02T22:15:22.038Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Wing FTP Server Lua注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-47812</li></ul><p><strong>漏洞类型：</strong> 代码注入</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 该漏洞利用了Wing FTP Server登录处理器（loginok.html）中的Lua注入漏洞，通过未经过滤的Lua代码执行，允许攻击者执行任意操作系统命令或获取反向shell。此漏洞通过<code>username</code>参数进行利用。</p><p><strong>产品厂商：</strong> Wing FTP Server</p><p><strong>产品名称：</strong> Wing FTP Server</p><p><strong>来源：</strong> <a href="https://github.com/0xgh057r3c0n/CVE-2025-47812">https://github.com/0xgh057r3c0n/CVE-2025-47812</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>.gitignore</li><li>CVE-2025-47812.py</li><li>LICENSE</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-47812-–-Wing-FTP-Server-RCE-via-Lua-Injection"><a href="#CVE-2025-47812-–-Wing-FTP-Server-RCE-via-Lua-Injection" class="headerlink" title="CVE-2025-47812 – Wing FTP Server RCE via Lua Injection"></a>CVE-2025-47812 – Wing FTP Server RCE via Lua Injection</h2><h2 id="Author-0xgh057r3c0n"><a href="#Author-0xgh057r3c0n" class="headerlink" title="Author: 0xgh057r3c0n  "></a><strong>Author:</strong> <a href="https://github.com/0xgh057r3c0n">0xgh057r3c0n</a>  </h2><h3 id="🧠-Description"><a href="#🧠-Description" class="headerlink" title="🧠 Description"></a>🧠 Description</h3><p>This exploit leverages a Lua injection vulnerability in <strong>Wing FTP Server</strong>‘s login handler (<code>loginok.html</code>) to execute arbitrary operating system commands or gain a reverse shell. It abuses unsanitized Lua code execution through the <code>username</code> parameter.</p><hr><h3 id="📦-Requirements"><a href="#📦-Requirements" class="headerlink" title="📦 Requirements"></a>📦 Requirements</h3><ul><li>Python 3.6 or higher</li><li><code>pip3</code></li></ul><h4 id="Python-Packages"><a href="#Python-Packages" class="headerlink" title="Python Packages"></a>Python Packages</h4><p>Install the required packages with:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip3 install -r requirements.txt<br>````<br><br>Or manually:<br><br>```bash<br>pip3 install requests colorama<br></code></pre></td></tr></table></figure><hr><h3 id="🛠️-Installation"><a href="#🛠️-Installation" class="headerlink" title="🛠️ Installation"></a>🛠️ Installation</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/0xgh057r3c0n/CVE-2025-47812.git<br><span class="hljs-built_in">cd</span> CVE-2025-47812<br>python3 CVE-2025-47812.py<br></code></pre></td></tr></table></figure><hr><h3 id="🚀-Usage"><a href="#🚀-Usage" class="headerlink" title="🚀 Usage"></a>🚀 Usage</h3><p>Run the script:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 CVE-2025-47812.py<br></code></pre></td></tr></table></figure><h4 id="Options"><a href="#Options" class="headerlink" title="Options:"></a>Options:</h4><ul><li><strong>Option 1:</strong> Execute a system command (e.g., <code>whoami</code>, <code>id</code>)</li><li><strong>Option 2:</strong> Launch a reverse shell (multiple payload options included)</li></ul><hr><h3 id="💡-Example"><a href="#💡-Example" class="headerlink" title="💡 Example"></a>💡 Example</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs text">Target URL (e.g., http://localhost:5466): http://192.168.1.100:5466<br>Username (e.g., anonymous): anonymous<br>Your choice (1 or 2): 1<br>Command to execute (default: whoami): whoami<br></code></pre></td></tr></table></figure><hr><h3 id="⚠️-Legal-Disclaimer"><a href="#⚠️-Legal-Disclaimer" class="headerlink" title="⚠️ Legal Disclaimer"></a>⚠️ Legal Disclaimer</h3><p>This tool is provided for <strong>educational and authorized security testing purposes only</strong>.<br>You are responsible for your actions. Use only on systems you own or are authorized to test.</p><hr><h3 id="📄-License"><a href="#📄-License" class="headerlink" title="📄 License"></a>📄 License</h3><p>This project is licensed under the MIT License. See the <a href="LICENSE">LICENSE</a> file for details.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Wing FTP Server Lua注入漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="代码注入" scheme="http://example.com/tags/%E4%BB%A3%E7%A0%81%E6%B3%A8%E5%85%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>BlackHatEvents twitter update</title>
@@ -501,33 +528,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/3iMzCRQz3jZlhCINkxggWw&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>@一汽丰田：如何用 AI 与安全护航数字化转型？</title>
-    <link href="http://example.com/2025/07/02/weixin_3316211725/"/>
-    <id>http://example.com/2025/07/02/weixin_3316211725/</id>
-    <published>2025-07-02T11:38:56.305Z</published>
-    <updated>2025-07-02T11:38:56.300Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/xT3MVTZkppWlrIK8aMJ10g">https://mp.weixin.qq.com/s/xT3MVTZkppWlrIK8aMJ10g</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/xT3MVTZkppWlrIK8aMJ10g&quot;&gt;https://mp.weixin.q</summary>
       
     
     
