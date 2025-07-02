@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-02T02:30:13.075Z</updated>
+  <updated>2025-07-02T02:45:15.161Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Apache Tomcat HTTP/2 DoS Vulnerability</title>
+    <link href="http://example.com/2025/07/02/github_522076302/"/>
+    <id>http://example.com/2025/07/02/github_522076302/</id>
+    <published>2025-07-02T02:45:15.163Z</published>
+    <updated>2025-07-02T02:45:15.161Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache Tomcat HTTP&#x2F;2 DoS Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-31650</li></ul><p><strong>漏洞类型：</strong> 拒绝服务</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Apache Tomcat HTTP&#x2F;2 DoS漏洞（CVE-2025-31650）允许攻击者通过发送畸形的<code>priority</code>头来触发内存耗尽条件，影响Apache Tomcat的多个版本。此漏洞可能导致服务不可用。</p><p><strong>产品厂商：</strong> Apache</p><p><strong>产品名称：</strong> Apache Tomcat</p><p><strong>影响版本：</strong> 9.0.76 – 9.0.102, 10.1.10 – 10.1.39, 11.0.0-M2 – 11.0.5</p><p><strong>来源：</strong> <a href="https://github.com/B1gN0Se/Tomcat-CVE-2025-31650">https://github.com/B1gN0Se/Tomcat-CVE-2025-31650</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>PoC.py</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="TomcatKiller-CVE-2025-31650"><a href="#TomcatKiller-CVE-2025-31650" class="headerlink" title="TomcatKiller - CVE-2025-31650"></a>TomcatKiller - CVE-2025-31650</h2><p>🚨 Proof of Concept (PoC) for Apache Tomcat HTTP&#x2F;2 DoS vulnerability (CVE-2025-31650)</p><p>This script triggers a memory exhaustion condition in Apache Tomcat by sending malformed <code>priority</code> headers over HTTP&#x2F;2.</p><hr><h3 id="🎯-Affected-Versions"><a href="#🎯-Affected-Versions" class="headerlink" title="🎯 Affected Versions"></a>🎯 Affected Versions</h3><ul><li>Apache Tomcat 9.0.76 – 9.0.102</li><li>Apache Tomcat 10.1.10 – 10.1.39</li><li>Apache Tomcat 11.0.0-M2 – 11.0.5</li></ul><hr><h3 id="⚙️-Features"><a href="#⚙️-Features" class="headerlink" title="⚙️ Features"></a>⚙️ Features</h3><ul><li>✔️ HTTP&#x2F;2 support verification</li><li>✔️ <code>Server</code> header inspection (detect Tomcat)</li><li>✔️ <code>--check-only</code> mode (non-intrusive)</li><li>✔️ Async-based scalable exploit with adjustable intensity</li></ul><hr><h3 id="🚀-Usage"><a href="#🚀-Usage" class="headerlink" title="🚀 Usage"></a>🚀 Usage</h3><h4 id="✅-Check-only-safe-detection"><a href="#✅-Check-only-safe-detection" class="headerlink" title="✅ Check-only (safe detection)"></a>✅ Check-only (safe detection)</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 tomcatkiller.py --target https://example.com:8443 --check-only<br></code></pre></td></tr></table></figure><h4 id="💥-Exploit-DoS"><a href="#💥-Exploit-DoS" class="headerlink" title="💥 Exploit (DoS)"></a>💥 Exploit (DoS)</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 tomcatkiller.py --target https://example.com:8443 --exploit --tasks 50 --requests 5000<br></code></pre></td></tr></table></figure><hr><h3 id="🧩-Arguments"><a href="#🧩-Arguments" class="headerlink" title="🧩 Arguments"></a>🧩 Arguments</h3><table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>--target</code></td><td>Full target URL with protocol and port</td></tr><tr><td><code>--check-only</code></td><td>Only test if the server supports HTTP&#x2F;2 &amp; Tomcat</td></tr><tr><td><code>--exploit</code></td><td>Run the actual DoS attack</td></tr><tr><td><code>--tasks</code></td><td>Number of async tasks (default: 50)</td></tr><tr><td><code>--requests</code></td><td>Requests per task (default: 5000)</td></tr></tbody></table><hr><h3 id="⚠️-Disclaimer"><a href="#⚠️-Disclaimer" class="headerlink" title="⚠️ Disclaimer"></a>⚠️ Disclaimer</h3><p>This PoC is for educational and authorized security testing <strong>only</strong>.<br>Do <strong>not</strong> use it against systems without explicit permission.</p><hr>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Apache Tomcat HTTP&amp;#x2F;2 DoS Vulnerabi</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="拒绝服务" scheme="http://example.com/tags/%E6%8B%92%E7%BB%9D%E6%9C%8D%E5%8A%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>Microsoft Outlook 远程代码执行漏洞</title>
@@ -491,31 +517,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🚨 刚接触网络安全？从这里开始。🕵️‍♂️ 在#BlackHatUSA 2025上的《基础网络黑客》是你动手实践真实世界网络应用漏洞的入门课程</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BlackHatEvents twitter update</title>
-    <link href="http://example.com/2025/07/01/twitter_466714780/"/>
-    <id>http://example.com/2025/07/01/twitter_466714780/</id>
-    <published>2025-07-01T20:00:27.026Z</published>
-    <updated>2025-07-01T20:00:27.022Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> 🚨 #BHUSA 2025首轮主题演讲重磅登场！从全球隐私倡导者到网络安全传奇人物，今年的演讲阵容已经引起轰动。<br>🔗 点击此处深入了解详情：<a href="https://t.co/oXZNyNkyNu">https://t.co/oXZNyNkyNu</a><br>👀 更多主题演讲即将公布——敬请期待 <a href="https://t.co/51TxMORo0z">https://t.co/51TxMORo0z</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1940130749828481115">https://x.com/BlackHatEvents/status/1940130749828481115</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🚨 #BHUSA 2025首轮主题演讲重磅登场！从全球隐私倡导者到网络安全传奇人物，今年的演讲阵容已经引起轰动。&lt;br&gt;🔗 点击此处深入了解详</summary>
       
     
     
