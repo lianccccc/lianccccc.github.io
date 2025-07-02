@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-02T07:00:15.626Z</updated>
+  <updated>2025-07-02T07:00:59.167Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>fofabot twitter update</title>
+    <link href="http://example.com/2025/07/02/twitter_1669630063/"/>
+    <id>http://example.com/2025/07/02/twitter_1669630063/</id>
+    <published>2025-07-02T07:00:59.170Z</published>
+    <updated>2025-07-02T07:00:59.167Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> fofabot</p><p><strong>推文：</strong> ⚠️⚠️CVE-2025-47812(CVSS 10) Wing FTP服务器存在严重远程代码执行漏洞，未经认证的攻击者可完全控制服务器。<br>🎯在<a href="https://t.co/uLIbgJcaq5%E4%B8%8A%E5%8F%91%E7%8E%B0%E8%BF%9110%E4%B8%87+%E7%BB%93%E6%9E%9C">https://t.co/uLIbgJcaq5上发现近10万+结果</a><br>🔗FOFA链接:<a href="https://t.co/xwbD48swQx">https://t.co/xwbD48swQx</a><br>FOFA查询:app&#x3D;”Wing_FTP_Server”<br>🔖参考:<a href="https://t.co/IhnAapBpuD">https://t.co/IhnAapBpuD</a><br>#开源情报 #FOFA #网络安全 #漏洞</p><p><strong>链接：</strong> <a href="https://x.com/fofabot/status/1940293092206420008">https://x.com/fofabot/status/1940293092206420008</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; fofabot&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; ⚠️⚠️CVE-2025-47812(CVSS 10) Wing FTP服务器存在严重远程代码执行漏洞，未经认证的攻击者可完全控制服务器。&lt;br&gt;🎯在&lt;a h</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="fofabot" scheme="http://example.com/tags/fofabot/"/>
+    
+  </entry>
   
   <entry>
     <title>The Drag and Drop Multiple File Upload (Pro) - WooCommerce plugin for WordPress is vulnerable to</title>
@@ -511,31 +536,6 @@
     
     
     <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>zoomeye_team twitter update</title>
-    <link href="http://example.com/2025/07/02/twitter_537760268/"/>
-    <id>http://example.com/2025/07/02/twitter_537760268/</id>
-    <published>2025-07-02T02:00:35.454Z</published>
-    <updated>2025-07-02T02:00:35.450Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> zoomeye_team</p><p><strong>推文：</strong> CVE-2025-47812：Wing FTP服务器远程代码执行漏洞<br>🔥概念验证(PoC)：<a href="https://t.co/k0h56Qz4gh">https://t.co/k0h56Qz4gh</a> <a href="https://t.co/9uk5pmtREj">https://t.co/9uk5pmtREj</a></p><p><strong>链接：</strong> <a href="https://x.com/zoomeye_team/status/1940227988282642439">https://x.com/zoomeye_team/status/1940227988282642439</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; zoomeye_team&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-47812：Wing FTP服务器远程代码执行漏洞&lt;br&gt;🔥概念验证(PoC)：&lt;a href=&quot;https://t.co/k0h</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="zoomeye_team" scheme="http://example.com/tags/zoomeye-team/"/>
     
   </entry>
   
