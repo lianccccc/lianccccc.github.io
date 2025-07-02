@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-02T02:45:15.161Z</updated>
+  <updated>2025-07-02T02:55:00.049Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>神州讯盟芯管家 login_confirmjsp SQL注入漏洞</title>
+    <link href="http://example.com/2025/07/02/weixin_1900999601/"/>
+    <id>http://example.com/2025/07/02/weixin_1900999601/</id>
+    <published>2025-07-02T02:55:00.052Z</published>
+    <updated>2025-07-02T02:55:00.049Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> Nday Poc</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/VIhoszpA8NSlSK_Cs5Hf6Q">https://mp.weixin.qq.com/s/VIhoszpA8NSlSK_Cs5Hf6Q</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; Nday Poc&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/VIhoszpA8NSlSK_Cs5Hf6Q&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="Nday Poc" scheme="http://example.com/tags/Nday-Poc/"/>
+    
+  </entry>
   
   <entry>
     <title>Apache Tomcat HTTP/2 DoS Vulnerability</title>
@@ -500,31 +527,6 @@
     
     
     <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BlackHatEvents twitter update</title>
-    <link href="http://example.com/2025/07/01/twitter_1472917564/"/>
-    <id>http://example.com/2025/07/01/twitter_1472917564/</id>
-    <published>2025-07-01T20:00:35.404Z</published>
-    <updated>2025-07-01T20:00:35.402Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> 🚨 刚接触网络安全？从这里开始。🕵️‍♂️ 在#BlackHatUSA 2025上的《基础网络黑客》是你动手实践真实世界网络应用漏洞的入门课程📍 拉斯维加斯 | 🗓️ 8月3日至4日<br>🔗 了解更多并注册：<a href="https://t.co/N6fWSqmcP5">https://t.co/N6fWSqmcP5</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1940130035773440043">https://x.com/BlackHatEvents/status/1940130035773440043</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🚨 刚接触网络安全？从这里开始。🕵️‍♂️ 在#BlackHatUSA 2025上的《基础网络黑客》是你动手实践真实世界网络应用漏洞的入门课程</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
     
   </entry>
   
