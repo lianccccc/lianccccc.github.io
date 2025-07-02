@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-02T11:45:16.244Z</updated>
+  <updated>2025-07-02T12:00:27.977Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>offsectraining twitter update</title>
+    <link href="http://example.com/2025/07/02/twitter_1463853978/"/>
+    <id>http://example.com/2025/07/02/twitter_1463853978/</id>
+    <published>2025-07-02T12:00:27.981Z</published>
+    <updated>2025-07-02T12:00:27.977Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> offsectraining</p><p><strong>推文：</strong> 谁都可以润色简历。</p><p>但并非所有人都能通过一场模拟真实世界攻击、在时间压力下进行的24小时实践考试。</p><p>这就是为什么OffSec认证不仅仅展示候选人知道什么；它们证明了候选人能做什么。如果他们获得了OSCP+认证，他们已经展示了你的团队所需的毅力、技术技能和对抗性思维。</p><p>想要雇佣已经证明自己的专业人士吗？👀</p><p>Learn Enterprise包括访问#TalentFinder：一种识别并与已展示真实世界能力的候选人建立联系的方式👇<br>🔗 <a href="https://t.co/Ljfv3Fdyhh">https://t.co/Ljfv3Fdyhh</a></p><p><strong>链接：</strong> <a href="https://x.com/offsectraining/status/1940376814804766752">https://x.com/offsectraining/status/1940376814804766752</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; offsectraining&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 谁都可以润色简历。&lt;/p&gt;
+&lt;p&gt;但并非所有人都能通过一场模拟真实世界攻击、在时间压力下进行的24小时实践考试。&lt;/p&gt;
+&lt;p&gt;这就是为什么Off</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="offsectraining" scheme="http://example.com/tags/offsectraining/"/>
+    
+  </entry>
   
   <entry>
     <title>Cisco IOS Smart Install 缓冲区溢出漏洞</title>
@@ -509,32 +536,6 @@
       
     <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Microsoft Outlook 远程代码执行漏洞&lt;/p&gt;
 &lt;p&gt;&lt;stro</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Fortinet FortiOS &amp; FortiProxy 格式字符串漏洞</title>
-    <link href="http://example.com/2025/07/02/github_327400358/"/>
-    <id>http://example.com/2025/07/02/github_327400358/</id>
-    <published>2025-07-02T08:00:36.628Z</published>
-    <updated>2025-07-02T08:00:36.626Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Fortinet FortiOS &amp; FortiProxy 格式字符串漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-23113</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Fortinet FortiOS、FortiProxy、FortiPAM和FortiSwitchManager中存在一个由外部控制的格式字符串漏洞，攻击者通过处理特制的数据包，可以执行任意代码或命令。</p><p><strong>产品厂商：</strong> Fortinet</p><p><strong>产品名称：</strong> FortiOS, FortiProxy, FortiPAM, FortiSwitchManager</p><p><strong>影响版本：</strong> FortiOS (7.4.0-7.4.2, 7.2.0-7.2.6, 7.0.0-7.0.13), FortiProxy (7.4.0-7.4.2, 7.2.0-7.2.8, 7.0.0-7.0.14), FortiPAM (1.2.0, 1.1.0-1.1.2, 1.0.0-1.0.3), FortiSwitchManager (7.2.0-7.2.3, 7.0.0-7.0.3)</p><p><strong>搜索语法：</strong> cpe:”cpe:2.3:o:fortinet:fortios”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12222">https://github.com/projectdiscovery/nuclei-templates/issues/12222</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Fortinet FortiOS (versions 7.4.0-7.4.2, 7.2.0-7.2.6, 7.0.0-7.0.13), FortiProxy (versions 7.4.0-7.4.2, 7.2.0-7.2.8, 7.0.0-7.0.14), FortiPAM (versions 1.2.0, 1.1.0-1.1.2, 1.0.0-1.0.3), and FortiSwitchManager (versions 7.2.0-7.2.3, 7.0.0-7.0.3) contain a use of externally-controlled format string caused by processing specially crafted packets, letting attackers execute arbitrary code or commands.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://vulncheck.com/xdb/aad788d038d3">https://vulncheck.com/xdb/aad788d038d3</a></li><li><a href="https://github.com/valornode/CVE-2024-23113">https://github.com/valornode/CVE-2024-23113</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:valornode&#x2F;CVE-2024-23113.git</li><li><a href="https://vulncheck.com/xdb/b3ae997acc06">https://vulncheck.com/xdb/b3ae997acc06</a></li><li><a href="https://github.com/XiaomingX/cve-2024-23113-poc">https://github.com/XiaomingX/cve-2024-23113-poc</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:XiaomingX&#x2F;cve-2024-23113-poc.git</li><li><a href="https://github.com/XiaomingX/cve-2024-23113-exp">https://github.com/XiaomingX/cve-2024-23113-exp</a></li><li><a href="https://github.com/expl0itsecurity/CVE-2024-23113">https://github.com/expl0itsecurity/CVE-2024-23113</a></li><li><a href="https://vulncheck.com/xdb/0548206afc9c">https://vulncheck.com/xdb/0548206afc9c</a></li><li><a href="https://github.com/puckiestyle/CVE-2024-23113">https://github.com/puckiestyle/CVE-2024-23113</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:puckiestyle&#x2F;CVE-2024-23113.git</li><li><a href="https://vulncheck.com/xdb/3039091c436b">https://vulncheck.com/xdb/3039091c436b</a></li><li><a href="https://github.com/p33d/CVE-2024-23113">https://github.com/p33d/CVE-2024-23113</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:p33d&#x2F;CVE-2024-23113.git</li><li><a href="https://github.com/CheckCve2/CVE-2024-23113">https://github.com/CheckCve2/CVE-2024-23113</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-cpe-cpe-2-3-o-fortinet-fortios"><a href="#Shodan-Query-cpe-cpe-2-3-o-fortinet-fortios" class="headerlink" title="Shodan Query: cpe:&quot;cpe:2.3:o:fortinet:fortios&quot;"></a>Shodan Query: <code>cpe:&quot;cpe:2.3:o:fortinet:fortios&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Fortinet FortiOS &amp;amp; FortiProxy 格式字符串</summary>
       
     
     
