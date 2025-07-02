@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-02T06:53:08.077Z</updated>
+  <updated>2025-07-02T07:00:15.626Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>The Drag and Drop Multiple File Upload (Pro) - WooCommerce plugin for WordPress is vulnerable to</title>
+    <link href="http://example.com/2025/07/02/github_1560830084/"/>
+    <id>http://example.com/2025/07/02/github_1560830084/</id>
+    <published>2025-07-02T07:00:15.630Z</published>
+    <updated>2025-07-02T07:00:15.626Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-c438-893p-pq8h">https://github.com/advisories/GHSA-c438-893p-pq8h</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5746">https://nvd.nist.gov/vuln/detail/CVE-2025-5746</a></p></li><li><p><a href="https://www.codedropz.com/woocommerce-drag-drop-multiple-file-upload">https://www.codedropz.com/woocommerce-drag-drop-multiple-file-upload</a></p></li><li><p><a href="https://www.wordfence.com/threat-intel/vulnerabilities/id/3c1f625e-4456-45e4-8a7f-809b22edb66b?source=cve">https://www.wordfence.com/threat-intel/vulnerabilities/id/3c1f625e-4456-45e4-8a7f-809b22edb66b?source=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-c438-893p-pq8h">https://github.com/advisories/GHSA-c438-893p-pq8h</a></p></li></ul><p><strong>描述：</strong></p><p>The Drag and Drop Multiple File Upload (Pro) - WooCommerce plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the dnd_upload_cf7_upload_chunks() function in version 5.0 - 5.0.5 (when bundled with the PrintSpace theme) and all versions up to, and including, 1.7.1 (in the standalone version). This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site’s server which may make remote code execution possible. The execution of PHP is disabled via a .htaccess file but is still possible in certain server configurations.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-c438-893p-pq8h&quot;&gt;https://github.com/advisories/GHSA-c438-893p-pq8h&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>The Ads Pro Plugin - Multi-Purpose WordPress Advertising Manager plugin for WordPress is</title>
+    <link href="http://example.com/2025/07/02/github_3779301834/"/>
+    <id>http://example.com/2025/07/02/github_3779301834/</id>
+    <published>2025-07-02T07:00:05.572Z</published>
+    <updated>2025-07-02T07:00:05.570Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-c9gr-fm33-6r9r">https://github.com/advisories/GHSA-c9gr-fm33-6r9r</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-4689">https://nvd.nist.gov/vuln/detail/CVE-2025-4689</a></p></li><li><p><a href="https://codecanyon.net/item/ads-pro-plugin-multipurpose-wordpress-advertising-manager/10275010">https://codecanyon.net/item/ads-pro-plugin-multipurpose-wordpress-advertising-manager/10275010</a></p></li><li><p><a href="https://www.wordfence.com/threat-intel/vulnerabilities/id/038ddfcd-093b-4234-a0b8-a3bf9a3d329f?source=cve">https://www.wordfence.com/threat-intel/vulnerabilities/id/038ddfcd-093b-4234-a0b8-a3bf9a3d329f?source=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-c9gr-fm33-6r9r">https://github.com/advisories/GHSA-c9gr-fm33-6r9r</a></p></li></ul><p><strong>描述：</strong></p><p>The Ads Pro Plugin - Multi-Purpose WordPress Advertising Manager plugin for WordPress is vulnerable to Local File Inclusion which leads to Remote Code Execution in all versions up to, and including, 4.89. This is due to the presence of a SQL Injection vulnerability and Local File Inclusion vulnerability that can be chained with an image upload. This makes it possible for unauthenticated attackers to execute code on the server upload image files on the server than can be fetched via a SQL injection vulnerability, and ultimately executed as PHP code through the local file inclusion vulnerability.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-c9gr-fm33-6r9r&quot;&gt;https://github.com/advisories/GHSA-c9gr-fm33-6r9r&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>【已复现】Linux sudo 本地提权漏洞(CVE-2025-32462、CVE-2025-32463)安全风险通告</title>
@@ -488,57 +536,6 @@
     
     
     <category term="zoomeye_team" scheme="http://example.com/tags/zoomeye-team/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CVE-2025-5472 Denial of Service via Uncontrolled Recursive JSON Parsing in JSONReader</title>
-    <link href="http://example.com/2025/07/02/other_4078983740/"/>
-    <id>http://example.com/2025/07/02/other_4078983740/</id>
-    <published>2025-07-02T01:30:20.817Z</published>
-    <updated>2025-07-02T01:30:20.812Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://huntr.com/bounties/df187bda-7911-4823-a19a-e15b2c66b0d4">https://huntr.com/bounties/df187bda-7911-4823-a19a-e15b2c66b0d4</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://huntr.com/bounties/df187bda-7911-4823-a19a-e15b2c66b0d4&quot;&gt;https://huntr.com/bounties/df187bda-7911-4</summary>
-      
-    
-    
-    
-    <category term="其他" scheme="http://example.com/categories/%E5%85%B6%E4%BB%96/"/>
-    
-    
-    <category term="huntr.com" scheme="http://example.com/tags/huntr-com/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>音频设备中的蓝牙漏洞可被利用来监视用户</title>
-    <link href="http://example.com/2025/07/02/weixin_2341159451/"/>
-    <id>http://example.com/2025/07/02/weixin_2341159451/</id>
-    <published>2025-07-02T01:06:27.505Z</published>
-    <updated>2025-07-02T01:06:27.504Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/YrcS0SLdbZPerBZmuckUHw">https://mp.weixin.qq.com/s/YrcS0SLdbZPerBZmuckUHw</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/YrcS0SLdbZPerBZmuckUHw&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
     
   </entry>
   
