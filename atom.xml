@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-02T06:15:14.669Z</updated>
+  <updated>2025-07-02T06:45:13.638Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Framer Subdomain Takeover Vulnerability</title>
+    <link href="http://example.com/2025/07/02/github_2419929608/"/>
+    <id>http://example.com/2025/07/02/github_2419929608/</id>
+    <published>2025-07-02T06:45:13.640Z</published>
+    <updated>2025-07-02T06:45:13.638Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Framer Subdomain Takeover Vulnerability</p><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 检测Framer的子域名接管漏洞。当子域名指向Framer，但该地址未配置站点时，会发生这种情况。</p><p><strong>产品厂商：</strong> Framer</p><p><strong>产品名称：</strong> Framer</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/27110f796b7c3367bccb5825be30837a78a76162/framer-subdomain-takeover.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/27110f796b7c3367bccb5825be30837a78a76162/framer-subdomain-takeover.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><br><span class="hljs-attribute">id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">framer-subdomain-takeover</span><br><br><span class="hljs-attribute">info</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Framer Subdomain Takeover Detection</span><br>  <span class="hljs-attribute">author</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Amjad Ali</span><br>  <span class="hljs-attribute">severity</span><span class="hljs-punctuation">:</span> <span class="hljs-string">high</span><br>  <span class="hljs-attribute">description</span><span class="hljs-punctuation">:</span> <span class="hljs-string">|</span><br>    <span class="hljs-attribute">Detects subdomain takeover vulnerability for Framer.</span><br><span class="hljs-attribute">    This happens when a subdomain points to Framer, but no site is configured on that address.</span><br><span class="hljs-attribute">  reference</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-string">https://github.com/projectdiscovery/nuclei-templates</span><br>  <span class="hljs-attribute">tags</span><span class="hljs-punctuation">:</span> <span class="hljs-string">takeover,framer,subdomain,bugbounty</span><br><br><span class="hljs-attribute">http</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">method: GET</span><br>    <span class="hljs-attribute">path</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;&quot;</span><br><br>    <span class="hljs-attribute">matchers-condition</span><span class="hljs-punctuation">:</span> <span class="hljs-string">and</span><br>    <span class="hljs-attribute">matchers</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: status</span><br>        <span class="hljs-attribute">status</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">404</span><br><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: word</span><br>        <span class="hljs-attribute">words</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;Site Not Found&quot;</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;There is no site configured at this address.&quot;</span><br>        <span class="hljs-attribute">condition</span><span class="hljs-punctuation">:</span> <span class="hljs-string">and</span><br>        <span class="hljs-attribute">part</span><span class="hljs-punctuation">:</span> <span class="hljs-string">body</span><br><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">type: word</span><br>        <span class="hljs-attribute">words</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;Framer&quot;</span><br>        <span class="hljs-attribute">part</span><span class="hljs-punctuation">:</span> <span class="hljs-string">body</span><br>        <span class="hljs-attribute">condition</span><span class="hljs-punctuation">:</span> <span class="hljs-string">or</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Framer Subdomain Takeover Vulnerability</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>Wing FTP Server NULL-byte Authentication Bypass</title>
@@ -513,33 +539,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sudo chroot 本地权限提升漏洞</title>
-    <link href="http://example.com/2025/07/02/github_227185281/"/>
-    <id>http://example.com/2025/07/02/github_227185281/</id>
-    <published>2025-07-02T00:15:18.682Z</published>
-    <updated>2025-07-02T00:15:18.678Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Sudo chroot 本地权限提升漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-32463</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 该漏洞存在于sudo的<code>--chroot</code>选项中，允许攻击者通过精心构造的<code>nsswitch.conf</code>文件加载恶意的NSS模块，从而获得root shell访问权限。影响版本为1.9.14至1.9.17。</p><p><strong>产品厂商：</strong> sudo.ws</p><p><strong>产品名称：</strong> sudo</p><p><strong>影响版本：</strong> 1.9.14 &lt;&#x3D; version &lt;&#x3D; 1.9.17</p><p><strong>来源：</strong> <a href="https://github.com/Adonijah01/cve-2025-32463-lab">https://github.com/Adonijah01/cve-2025-32463-lab</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>Dockerfile</li><li>README.md</li><li>sudo-chwoot.sh</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-32463-–-Sudo-chroot-Local-Privilege-Escalation-Lab"><a href="#CVE-2025-32463-–-Sudo-chroot-Local-Privilege-Escalation-Lab" class="headerlink" title="CVE-2025-32463 – Sudo chroot Local Privilege Escalation Lab"></a>CVE-2025-32463 – Sudo chroot Local Privilege Escalation Lab</h2><p>This repository contains a Docker-based lab and proof-of-concept exploit for <a href="https://www.sudo.ws/security/advisories/chroot_bug">CVE-2025-32463</a>, a local privilege escalation vulnerability in <code>sudo</code> (versions 1.9.14 to 1.9.17).</p><h3 id="🚨-Disclaimer"><a href="#🚨-Disclaimer" class="headerlink" title="🚨 Disclaimer"></a>🚨 Disclaimer</h3><p>This code is for educational and authorized testing purposes only. Do not use on systems you do not own or have explicit permission to test.</p><h3 id="Lab-Features"><a href="#Lab-Features" class="headerlink" title="Lab Features"></a>Lab Features</h3><ul><li>Vulnerable Ubuntu 24.04 container with <code>sudo</code> 1.9.15p5</li><li>Non-privileged user (<code>labuser</code>)</li><li>Exploit script: <code>sudo-chwoot.sh</code></li><li>Dockerfile for easy setup</li></ul><h3 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/adonijah01/cve-2025-32463-lab.git<br><span class="hljs-built_in">cd</span> cve-2025-32463-lab<br>docker build -t cve-2025-32463-lab .<br>docker run --<span class="hljs-built_in">rm</span> -it --privileged cve-2025-32463-lab<br></code></pre></td></tr></table></figure><p>Inside the container:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> ~<br>./sudo-chwoot.sh<br></code></pre></td></tr></table></figure><h3 id="Exploit-Overview"><a href="#Exploit-Overview" class="headerlink" title="Exploit Overview"></a>Exploit Overview</h3><p>The exploit abuses the <code>--chroot</code> option in sudo and a crafted <code>nsswitch.conf</code> to load a malicious NSS module, resulting in root shell access.</p><h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ul><li><a href="https://www.sudo.ws/security/advisories/chroot_bug">Sudo Security Advisory</a></li><li><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-32463">CVE-2025-32463 in the CVE database</a></li><li><a href="https://www.stratascale.com/vulnerability-alert-CVE-2025-32463-sudo-chroot">Stratascale Advisory</a> - Original research and PoC concept</li></ul><h3 id="Credits"><a href="#Credits" class="headerlink" title="Credits"></a>Credits</h3><p>Exploit concept and vulnerability details referenced from the official Sudo advisory, CVE database, and <a href="https://www.stratascale.com/vulnerability-alert-CVE-2025-32463-sudo-chroot">Stratascale’s research</a>.</p><p>Stay safe and use responsibly!</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Sudo chroot 本地权限提升漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
     
   </entry>
   
