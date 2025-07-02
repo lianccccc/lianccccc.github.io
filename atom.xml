@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-02T02:55:00.049Z</updated>
+  <updated>2025-07-02T04:00:47.189Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>zoomeye_team twitter update</title>
+    <link href="http://example.com/2025/07/02/twitter_3945904308/"/>
+    <id>http://example.com/2025/07/02/twitter_3945904308/</id>
+    <published>2025-07-02T04:00:47.192Z</published>
+    <updated>2025-07-02T04:00:47.189Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> zoomeye_team</p><p><strong>推文：</strong> 🕵️‍♂️看起来像是Cloudflare的“验证你是人类”页面？<br>实际上，这是一个钓鱼陷阱，诱使你手动运行恶意命令。<br>⚠️只需按下Win + R，Ctrl + V，然后回车——游戏就结束了。<br>使用ZoomEye，你可以立即发现这些假页面！</p><p>ZoomEye搜索语法👉http.body&#x3D;”Press” &amp;&amp; http.body&#x3D;”Win + R” &amp;&amp; http.body&#x3D;”Paste” &amp;&amp; http.body&#x3D;”cloudflare”<br>ZoomEye链接: <a href="https://t.co/Cx64YuOAit">https://t.co/Cx64YuOAit</a></p><p>原帖来自@AzakaSekai_: <a href="https://t.co/i4VuUN55uH">https://t.co/i4VuUN55uH</a></p><p>#威胁情报 #威胁狩猎 #开源情报 #钓鱼</p><p><strong>链接：</strong> <a href="https://x.com/zoomeye_team/status/1940249340494405843">https://x.com/zoomeye_team/status/1940249340494405843</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; zoomeye_team&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🕵️‍♂️看起来像是Cloudflare的“验证你是人类”页面？&lt;br&gt;实际上，这是一个钓鱼陷阱，诱使你手动运行恶意命令。&lt;br&gt;⚠️只需按下Win</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="zoomeye_team" scheme="http://example.com/tags/zoomeye-team/"/>
+    
+  </entry>
   
   <entry>
     <title>神州讯盟芯管家 login_confirmjsp SQL注入漏洞</title>
@@ -495,30 +520,6 @@
       
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-q66q-fx2p-7w4m&quot;&gt;https://github.com/advisories/GHSA-q66q-fx2p-7w4m&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>@modelcontextprotocol/server-filesystem vulnerability allows for path validation bypass via colliding path prefix</title>
-    <link href="http://example.com/2025/07/01/github_4100733700/"/>
-    <id>http://example.com/2025/07/01/github_4100733700/</id>
-    <published>2025-07-01T20:30:06.948Z</published>
-    <updated>2025-07-01T20:30:06.946Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-hc55-p739-j48w">https://github.com/advisories/GHSA-hc55-p739-j48w</a></p><p><strong>仓库 Star：</strong> 57079</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/modelcontextprotocol/servers/security/advisories/GHSA-hc55-p739-j48w">https://github.com/modelcontextprotocol/servers/security/advisories/GHSA-hc55-p739-j48w</a></p></li><li><p><a href="https://github.com/modelcontextprotocol/servers/commit/cc99bdabdcad93a58877c5f3ab20e21d4394423d">https://github.com/modelcontextprotocol/servers/commit/cc99bdabdcad93a58877c5f3ab20e21d4394423d</a></p></li><li><p><a href="https://github.com/advisories/GHSA-hc55-p739-j48w">https://github.com/advisories/GHSA-hc55-p739-j48w</a></p></li></ul><p><strong>描述：</strong></p><p>Versions of Filesystem prior to 0.6.3 &amp; 2025.7.1 could allow access to unintended files in cases where the prefix matches an allowed directory. Users are advised to upgrade to 2025.7.1 to resolve the issue.</p><p>Thank you to Elad Beber (Cymulate) for reporting these issues.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-hc55-p739-j48w&quot;&gt;https://github.com/advisories/GHSA-hc55-p739-j48w&lt;/a&gt;&lt;/p</summary>
       
     
     
