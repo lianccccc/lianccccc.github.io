@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-02T10:27:17.443Z</updated>
+  <updated>2025-07-02T11:00:07.313Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CVE-2025-47812</title>
+    <link href="http://example.com/2025/07/02/other_1237371955/"/>
+    <id>http://example.com/2025/07/02/other_1237371955/</id>
+    <published>2025-07-02T11:00:07.318Z</published>
+    <updated>2025-07-02T11:00:07.313Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>描述：</strong> ** RESERVED ** This candidate has been reserved by an organization or individual that will use it when announcing a new security problem. When the candidate has been publicized, the details for this candidate will be provided.</p><hr><p>On  June 30, 2025 a detailed <a href="https://www.rcesecurity.com/2025/06/what-the-null-wing-ftp-server-rce-cve-2025-47812/">technical analysis</a> of CVE-2025-47812 was published by the original finders, RCE Security. This analysis shows how an anonymous user (with no password), can leverage a NULL byte injection issue, allowing for arbitrary attacker-controlled LUA code to be placed in a session file. An attacker can then execute this arbitrary LUA code to achieve RCE. The technical analysis shows this occurring with <code>root</code> privileges by default on a Linux based system, and notes that on Windows, code execution will be as <code>NT AUTHORITY\SYSTEM</code>.</p><p>On July 1, 2025, a Metasploit exploit module for CVE-2025-47812 was added the <a href="https://github.com/rapid7/metasploit-framework/pull/20364">Metasploit pull queue</a>.</p><p>Given this is a file transfer server, is vulnerable to unauthenticated RCE, and public exploit code is available, I have rated this as <code>Extremely High</code> attacker Value, and <code>Extremely High</code> exploitability.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;描述：&lt;/strong&gt; ** RESERVED ** This candidate has been reserved by an organization or individual that will use it when announcing a </summary>
+      
+    
+    
+    
+    <category term="其他" scheme="http://example.com/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+    <category term="attackerkb.com" scheme="http://example.com/tags/attackerkb-com/"/>
+    
+  </entry>
   
   <entry>
     <title>网络安全信息与动态周报2025年第26期（6月23日-6月29日）</title>
@@ -502,33 +526,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 奇安信 CERT&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/vldYxiqCSpclY-KvUhEQEQ&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="奇安信 CERT" scheme="http://example.com/tags/%E5%A5%87%E5%AE%89%E4%BF%A1-CERT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【已复现】Google Chrome V8 类型混淆漏洞(CVE-2025-6554)安全风险通告</title>
-    <link href="http://example.com/2025/07/02/weixin_4235889259/"/>
-    <id>http://example.com/2025/07/02/weixin_4235889259/</id>
-    <published>2025-07-02T06:53:07.085Z</published>
-    <updated>2025-07-02T06:53:07.081Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 奇安信 CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/ESA0mGiKeWDuSnY450pYwg">https://mp.weixin.qq.com/s/ESA0mGiKeWDuSnY450pYwg</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 奇安信 CERT&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/ESA0mGiKeWDuSnY450pYwg&quot;&gt;https://mp.weixin.</summary>
       
     
     
