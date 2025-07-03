@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-03T20:15:34.738Z</updated>
+  <updated>2025-07-03T20:30:04.928Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>n8n is vulnerable to Improper Authorization through its /stop endpoint</title>
+    <link href="http://example.com/2025/07/03/github_1591619740/"/>
+    <id>http://example.com/2025/07/03/github_1591619740/</id>
+    <published>2025-07-03T20:30:04.000Z</published>
+    <updated>2025-07-03T20:30:04.928Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-gq57-v332-7666">https://github.com/advisories/GHSA-gq57-v332-7666</a></p><p><strong>仓库 Star：</strong> 114670</p><p><strong>CVSS 评分：</strong> 4.3</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/n8n-io/n8n/security/advisories/GHSA-gq57-v332-7666">https://github.com/n8n-io/n8n/security/advisories/GHSA-gq57-v332-7666</a></p></li><li><p><a href="https://github.com/n8n-io/n8n/pull/16405">https://github.com/n8n-io/n8n/pull/16405</a></p></li><li><p><a href="https://github.com/dudanogueira/n8n/commit/ca2f90c7fbaa1d661ade2f45d587d9469bc287e1">https://github.com/dudanogueira/n8n/commit/ca2f90c7fbaa1d661ade2f45d587d9469bc287e1</a></p></li><li><p><a href="https://github.com/n8n-io/n8n/commit/e5edc60e344924230baafb11fa1f0af788e9ca9a">https://github.com/n8n-io/n8n/commit/e5edc60e344924230baafb11fa1f0af788e9ca9a</a></p></li><li><p><a href="https://github.com/advisories/GHSA-gq57-v332-7666">https://github.com/advisories/GHSA-gq57-v332-7666</a></p></li></ul><p><strong>描述：</strong></p><h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>An authorization vulnerability was discovered in the <code>/rest/executions/:id/stop</code> endpoint of n8n. An authenticated user can stop workflow executions that they do not own or that have not been shared with them, leading to potential business disruption.</p><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>This is an <strong>improper authorization</strong> vulnerability. While most API methods enforce user-scoped access to workflow execution IDs, the <code>/stop</code> endpoint fails to do so. An attacker can guess or enumerate execution IDs (which are sequential and partially exposed via verbose error messages) and terminate active workflows initiated by other users.</p><p><strong>Who is impacted:</strong></p><ul><li>Environments where multiple users with varying trust levels share access to the same n8n instance.</li><li>All users running long-running or time-sensitive workflows (e.g., using the <code>wait</code> node).</li></ul><p>An attacker with authenticated access can exploit this flaw to:</p><ul><li>Disrupt other users’ workflow executions.</li><li>Cause denial of service for business-critical automations.</li></ul><h3 id="Patches"><a href="#Patches" class="headerlink" title="Patches"></a>Patches</h3><p>The issue was addressed in <a href="https://github.com/n8n-io/n8n/pull/16405">https://github.com/n8n-io/n8n/pull/16405</a>. Users should upgrade to version &gt;&#x3D; 1.99.1.</p><p>Users should upgrade to this version or later to ensure proper authorization checks are enforced before stopping workflow executions.</p><h3 id="Workarounds"><a href="#Workarounds" class="headerlink" title="Workarounds"></a>Workarounds</h3><p>To mitigate this issue without upgrading:</p><ul><li>Restrict access to the <code>/rest/executions/:id/stop</code> endpoint via reverse proxy or API gateway.</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-gq57-v332-7666&quot;&gt;https://github.com/advisories/GHSA-gq57-v332-7666&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>CVE-2024-48061 - poc</title>
@@ -503,30 +527,6 @@
     
     
     <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>n8n Vulnerable to Denial of Service via Malformed Binary Data Requests</title>
-    <link href="http://example.com/2025/07/03/github_1032376969/"/>
-    <id>http://example.com/2025/07/03/github_1032376969/</id>
-    <published>2025-07-03T14:30:05.000Z</published>
-    <updated>2025-07-03T14:30:05.566Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-pr9r-gxgp-9rm8">https://github.com/advisories/GHSA-pr9r-gxgp-9rm8</a></p><p><strong>仓库 Star：</strong> 114596</p><p><strong>CVSS 评分：</strong> 4.9</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/n8n-io/n8n/security/advisories/GHSA-pr9r-gxgp-9rm8">https://github.com/n8n-io/n8n/security/advisories/GHSA-pr9r-gxgp-9rm8</a></p></li><li><p><a href="https://github.com/n8n-io/n8n/pull/16229">https://github.com/n8n-io/n8n/pull/16229</a></p></li><li><p><a href="https://github.com/n8n-io/n8n/commit/43c52a8b4f844e91b02e3cc9df92826a2d7b6052">https://github.com/n8n-io/n8n/commit/43c52a8b4f844e91b02e3cc9df92826a2d7b6052</a></p></li><li><p><a href="https://github.com/advisories/GHSA-pr9r-gxgp-9rm8">https://github.com/advisories/GHSA-pr9r-gxgp-9rm8</a></p></li></ul><p><strong>描述：</strong></p><h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Denial of Service vulnerability in <code>/rest/binary-data</code> endpoint when processing empty filesystem URIs (<code>filesystem://</code> or <code>filesystem-v2://</code>).</p><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>This is a Denial of Service (DoS) vulnerability that allows authenticated attackers to cause service unavailability through malformed filesystem URI requests. The vulnerability affects:</p><ul><li>The <code>/rest/binary-data</code> endpoint</li><li>n8n.cloud instances (confirmed HTTP&#x2F;2 524 timeout responses)</li></ul><p>Attackers can exploit this by sending GET requests with empty filesystem URIs (<code>filesystem://</code> or <code>filesystem-v2://</code>) to the <code>/rest/binary-data</code> endpoint, causing resource exhaustion and service disruption.</p><h3 id="Patches"><a href="#Patches" class="headerlink" title="Patches"></a>Patches</h3><p>The issue has been patched in <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%401.99.0">1.99.0</a>.<br>All users should upgrade to this version or later.</p><p>The fix introduces strict checking of URI patterns.</p><p>Patch commit: <a href="https://github.com/n8n-io/n8n/pull/16229">https://github.com/n8n-io/n8n/pull/16229</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-pr9r-gxgp-9rm8&quot;&gt;https://github.com/advisories/GHSA-pr9r-gxgp-9rm8&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
     
   </entry>
   
