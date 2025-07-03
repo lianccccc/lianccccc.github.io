@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-03T10:45:25.236Z</updated>
+  <updated>2025-07-03T11:00:30.040Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>zoomeye_team twitter update</title>
+    <link href="http://example.com/2025/07/03/twitter_2056498917/"/>
+    <id>http://example.com/2025/07/03/twitter_2056498917/</id>
+    <published>2025-07-03T11:00:30.000Z</published>
+    <updated>2025-07-03T11:00:30.040Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> zoomeye_team</p><p><strong>推文：</strong> ⚡️漏洞详情现已公布：<a href="https://t.co/9pDdJLXkYX">https://t.co/9pDdJLXkYX</a></p><p>🚨🚨CVE-2025-49493：Akamai CloudTest 存在XXE注入漏洞！攻击者可利用SOAP端点进行文件包含攻击。<br>🔥PoC：<a href="https://t.co/BnrqTGTdlS">https://t.co/BnrqTGTdlS</a></p><p>通过vul.cve筛选搜索👉vul.cve&#x3D;”CVE-2025-49493”<br>ZoomEye搜索语句👉app&#x3D;”Akamai CloudTest”<br>揭示293个潜在目标！<br>ZoomEye链接：<a href="https://t.co/1vYFhYG9zx">https://t.co/1vYFhYG9zx</a></p><p>来自@Xbow的深度分析：<a href="https://t.co/nQvMGya2lU">https://t.co/nQvMGya2lU</a><br>参考：<a href="https://t.co/2RLdNtxMeg">https://t.co/2RLdNtxMeg</a></p><p>#ZoomEye #网络测绘 #网络安全 #网络空间洞察2025</p><p><strong>链接：</strong> <a href="https://x.com/zoomeye_team/status/1940717920109449524">https://x.com/zoomeye_team/status/1940717920109449524</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; zoomeye_team&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; ⚡️漏洞详情现已公布：&lt;a href=&quot;https://t.co/9pDdJLXkYX&quot;&gt;https://t.co/9pDdJLXkYX&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="zoomeye_team" scheme="http://example.com/tags/zoomeye-team/"/>
+    
+  </entry>
   
   <entry>
     <title>Sudo chroot() Privilege Escalation Vulnerability</title>
@@ -515,31 +540,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="代码注入" scheme="http://example.com/tags/%E4%BB%A3%E7%A0%81%E6%B3%A8%E5%85%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BlackHatEvents twitter update</title>
-    <link href="http://example.com/2025/07/02/twitter_2474162321/"/>
-    <id>http://example.com/2025/07/02/twitter_2474162321/</id>
-    <published>2025-07-02T22:00:33.293Z</published>
-    <updated>2025-07-02T22:00:33.291Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> 在#BlackHatTrainings的“网络高管AI战略（在线）”课程中，学员将以分析的方式解决问题。我们将探索数据科学工具、基础设施和流程，以分析数据、做出更优决策并识别提升性能的领域。数据分析与数据科学流程的结合将为数据科学问题提供基础。立即注册&gt;&gt; <a href="https://t.co/AVhsKiFTBS">https://t.co/AVhsKiFTBS</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1940523125910728996">https://x.com/BlackHatEvents/status/1940523125910728996</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 在#BlackHatTrainings的“网络高管AI战略（在线）”课程中，学员将以分析的方式解决问题。我们将探索数据科学工具、基础设施和流程，以</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
     
   </entry>
   
