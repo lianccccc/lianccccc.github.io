@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-03T01:15:15.595Z</updated>
+  <updated>2025-07-03T02:45:16.795Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Cisco Identity Services Engine (ISE) 和 ISE-PIC 未授权远程代码执行漏洞</title>
+    <link href="http://example.com/2025/07/03/github_1121957256/"/>
+    <id>http://example.com/2025/07/03/github_1121957256/</id>
+    <published>2025-07-03T02:45:16.796Z</published>
+    <updated>2025-07-03T02:45:16.795Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Cisco Identity Services Engine (ISE) 和 ISE-PIC 未授权远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-20281</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Cisco Identity Services Engine (ISE) 和 ISE-PIC 中的特定API由于输入验证不足，允许未经身份验证的远程攻击者以root权限执行任意命令。此漏洞由于对用户提供的输入验证不当，攻击向量为远程，无需特权，影响严重，可能导致远程代码执行。</p><p><strong>产品厂商：</strong> Cisco</p><p><strong>产品名称：</strong> Cisco Identity Services Engine (ISE), ISE-PIC</p><p><strong>来源：</strong> <a href="https://github.com/grupooruss/CVE-2025-20281-Cisco">https://github.com/grupooruss/CVE-2025-20281-Cisco</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>.gitignore</li><li>README.md</li><li>check_cve_2025_20281.py</li><li>requirements.txt</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-20281-Cisco-ISE-RCE-Vulnerability-Checker"><a href="#CVE-2025-20281-Cisco-ISE-RCE-Vulnerability-Checker" class="headerlink" title="CVE-2025-20281 - Cisco ISE RCE Vulnerability Checker"></a>CVE-2025-20281 - Cisco ISE RCE Vulnerability Checker</h2><p>This script checks for the presence of the <strong>CVE-2025-20281</strong> vulnerability in Cisco Identity Services Engine (ISE) and ISE-PIC, which allows <strong>unauthenticated remote code execution (RCE)</strong> as root due to insufficient input validation in a specific API.</p><p><strong>This tool is intended for authorized security testing and educational purposes only. Do not use it against systems you do not own or have permission to test.</strong></p><h3 id="About-the-Vulnerability"><a href="#About-the-Vulnerability" class="headerlink" title="About the Vulnerability"></a>About the Vulnerability</h3><p><strong>CVE-2025-20281</strong> allows an <strong>unauthenticated, remote attacker</strong> to execute arbitrary commands as root on the underlying OS by submitting a specially crafted API request. The flaw is due to <strong>improper validation of user-supplied input</strong>.</p><ul><li><strong>Attack Vector:</strong> Remote</li><li><strong>Privileges Required:</strong> None</li><li><strong>Impact:</strong> Remote Code Execution (root)</li><li><strong>Affected Products:</strong> Cisco ISE, Cisco ISE-PIC (specific versions)</li></ul><h3 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h3><ul><li>Sends a crafted payload to simulate code execution attempts</li><li>Detects possible signs of vulnerability</li><li>Simple command-line usage</li><li>No authentication required</li></ul><h3 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h3><ul><li>Python 3.x</li><li><code>requests</code> library<br>Install via:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install requests<br></code></pre></td></tr></table></figure></li></ul><h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python check_cve_2025_20281.py https://&lt;TARGET-IP-OR-DOMAIN&gt;<br></code></pre></td></tr></table></figure><h4 id="Example"><a href="#Example" class="headerlink" title="Example:"></a>Example:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python check_cve_2025_20281.py https://192.168.1.100<br></code></pre></td></tr></table></figure><h3 id="Interpreting-Results"><a href="#Interpreting-Results" class="headerlink" title="Interpreting Results"></a>Interpreting Results</h3><ul><li><code>[!!!] POSIBLE VULNERABILIDAD DETECTADA</code> — Exploit attempt likely succeeded or triggered a revealing response.</li><li><code>[*] Server responded with error</code> — Possible indicator of payload processing.</li><li><code>[-] No abnormal behavior detected</code> — Target may not be vulnerable or is patched.</li></ul><h3 id="File-Structure"><a href="#File-Structure" class="headerlink" title="File Structure"></a>File Structure</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs stylus">.<br>├── check_cve_2025_20281<span class="hljs-selector-class">.py</span><br>├── README<span class="hljs-selector-class">.md</span><br>├── requirements<span class="hljs-selector-class">.txt</span><br>└── .gitignore<br></code></pre></td></tr></table></figure><h3 id="Disclaimer"><a href="#Disclaimer" class="headerlink" title="Disclaimer"></a>Disclaimer</h3><p>This script is provided <strong>as-is</strong> for <strong>research and professional pentesting</strong>. The authors are not responsible for any misuse or damages caused by this tool.</p><h3 id="🔗-References"><a href="#🔗-References" class="headerlink" title="🔗 References"></a>🔗 References</h3><ul><li><a href="https://tools.cisco.com/security/center/">Cisco Security Advisory for CVE-2025-20281</a></li><li><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-20281">MITRE CVE Record</a></li></ul><h3 id="👨‍💻-Author"><a href="#👨‍💻-Author" class="headerlink" title="👨‍💻 Author"></a>👨‍💻 Author</h3><p><strong>Grupo Oruss</strong> – — Joy Bassett (@Division81),<br><a href="https://www.grupooruss.com/">https://www.grupooruss.com</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Cisco Identity Services Engine (ISE) 和 </summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+  </entry>
   
   <entry>
     <title>Apache Tomcat Java反序列化漏洞</title>
@@ -511,33 +537,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sudo 本地权限提升漏洞</title>
-    <link href="http://example.com/2025/07/02/github_2637942166/"/>
-    <id>http://example.com/2025/07/02/github_2637942166/</id>
-    <published>2025-07-02T12:15:20.884Z</published>
-    <updated>2025-07-02T12:15:20.883Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Sudo 本地权限提升漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-32463</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Sudo是一个在Unix-like系统上广泛使用的命令行工具，允许授权用户以提升的权限执行命令。Stratascale Cyber Research Unit (CRU)发现了Sudo中的两个本地权限提升漏洞之一，即CVE-2025-32463。该漏洞影响Sudo版本1.9.14至1.9.17，允许未授权的本地用户通过滥用–chroot (-R)选项获得root访问权限，即使用户没有定义sudo规则。此存储库提供了一个Python概念验证(PoC)重新实现了CRU团队开发的原始Bash利用程序，展示了如何通过用户控制的chroot环境中的精心制作的nsswitch.conf文件实现任意代码执行。</p><p><strong>产品名称：</strong> Sudo</p><p><strong>影响版本：</strong> 1.9.14 &lt;&#x3D; version &lt;&#x3D; 1.9.17</p><p><strong>来源：</strong> <a href="https://github.com/pevinkumar10/CVE-2025-32463">https://github.com/pevinkumar10/CVE-2025-32463</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>exploit.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="📘-Introduction"><a href="#📘-Introduction" class="headerlink" title="📘 Introduction"></a>📘 Introduction</h2><p>Sudo is a widely used command-line utility on Unix-like systems that allows permitted users to execute commands with elevated privileges. It plays a critical role in enforcing the principle of least privilege and maintaining a secure audit trail of administrative activities.<br>The Stratascale Cyber Research Unit (CRU) discovered two local privilege escalation vulnerabilities in Sudo, one of which is CVE-2025-32463. This vulnerability affects Sudo versions 1.9.14 through 1.9.17, and allows unprivileged local users to gain root access by abusing the –chroot (-R) option, even if no sudo rules are defined for the user.<br>This repository provides a Python proof-of-concept (PoC) reimplementation of the original Bash exploit developed by the CRU team. It demonstrates how to achieve arbitrary code execution as root via a crafted nsswitch.conf file inside a user-controlled chroot environment.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Sudo 本地权限提升漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/str</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
     
   </entry>
   
