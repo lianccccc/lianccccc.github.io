@@ -19,15 +19,15 @@
   <meta name="author" content="lianccc">
   <meta name="keywords" content="">
   
-    <meta name="description" content="漏洞信息漏洞名称： Wing FTP Server NULL-byte Authentication Bypass 漏洞编号：  CVE： CVE-2025-47812  漏洞类型： 命令执行 漏洞等级： 严重 漏洞描述： Wing FTP Server是一款广泛使用的FTP服务器软件，支持多种操作系统平台，包括Unix、Linux和Windows。它提供了丰富的功能，如文件传输、用户管理、权限控">
+    <meta name="description" content="漏洞信息漏洞名称： Wing FTP Server NULL-byte Authentication Bypass 漏洞编号：  CVE： CVE-2025-47812  漏洞类型： 命令执行 漏洞等级： 严重 漏洞描述： Wing FTP Server是一款广泛使用的FTP服务器软件，支持多种操作系统平台，包括Unix、Linux和Windows，常用于企业级文件传输服务。该软件因其易用性和功能">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Wing FTP Server NULL-byte Authentication Bypass">
 <meta property="og:url" content="http://example.com/2025/07/03/github_1759639730/index.html">
 <meta property="og:site_name" content="liancc&#39; infos blog">
-<meta property="og:description" content="漏洞信息漏洞名称： Wing FTP Server NULL-byte Authentication Bypass 漏洞编号：  CVE： CVE-2025-47812  漏洞类型： 命令执行 漏洞等级： 严重 漏洞描述： Wing FTP Server是一款广泛使用的FTP服务器软件，支持多种操作系统平台，包括Unix、Linux和Windows。它提供了丰富的功能，如文件传输、用户管理、权限控">
+<meta property="og:description" content="漏洞信息漏洞名称： Wing FTP Server NULL-byte Authentication Bypass 漏洞编号：  CVE： CVE-2025-47812  漏洞类型： 命令执行 漏洞等级： 严重 漏洞描述： Wing FTP Server是一款广泛使用的FTP服务器软件，支持多种操作系统平台，包括Unix、Linux和Windows，常用于企业级文件传输服务。该软件因其易用性和功能">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-07-03T16:15:39.000Z">
-<meta property="article:modified_time" content="2025-07-03T16:15:39.026Z">
+<meta property="article:published_time" content="2025-07-03T16:45:45.000Z">
+<meta property="article:modified_time" content="2025-07-03T16:45:45.034Z">
 <meta property="article:author" content="lianccc">
 <meta property="article:tag" content="命令执行">
 <meta property="article:tag" content="rapid7&#x2F;metasploit-framework:github issues">
@@ -213,7 +213,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-07-03 16:15" pubdate>
+        <time datetime="2025-07-03 16:45" pubdate>
           2025年7月3日 下午
         </time>
       </span>
@@ -285,9 +285,7 @@
 </ul>
 <p><strong>漏洞类型：</strong> 命令执行</p>
 <p><strong>漏洞等级：</strong> 严重</p>
-<p><strong>漏洞描述：</strong> Wing FTP Server是一款广泛使用的FTP服务器软件，支持多种操作系统平台，包括Unix、Linux和Windows。它提供了丰富的功能，如文件传输、用户管理、权限控制等，常用于企业级文件共享和数据交换服务。该软件因其易用性和功能强大而受到许多组织的青睐。</p>
-<p>该漏洞（CVE-2025-47812）是一个NULL字节截断漏洞，允许攻击者通过构造特殊的用户名（如<valid-user>%00<lua-payload>）绕过认证机制。具体来说，C++认证例程在处理用户名时，由于NULL字节（%00）的存在，仅验证前缀部分，而完整的字符串（包括恶意Lua代码）会被写入会话文件，随后以root&#x2F;SYSTEM权限执行，导致远程代码执行（RCE）。</p>
-<p>此漏洞的影响极为严重，攻击者无需有效凭证即可利用此漏洞在目标系统上执行任意命令，可能导致完全控制系统、数据泄露、服务中断等后果。由于漏洞利用过程可以自动化，且攻击者可以远程触发，因此该漏洞对使用Wing FTP Server的组织构成了重大安全威胁。</p>
+<p><strong>漏洞描述：</strong> Wing FTP Server是一款广泛使用的FTP服务器软件，支持多种操作系统平台，包括Unix、Linux和Windows，常用于企业级文件传输服务。该软件因其易用性和功能丰富性而受到许多组织的青睐。此次发现的漏洞（CVE-2025-47812）允许攻击者通过NULL字节（%00）截断漏洞绕过身份验证，实现远程代码执行。具体来说，攻击者可以通过构造特殊的用户名（如<valid-user>%00<lua-payload>），利用C++身份验证例程仅验证前缀的特性，将未经过滤的完整字符串写入会话文件，随后以root&#x2F;SYSTEM权限执行Lua代码，从而导致远程代码执行。此漏洞的利用无需复杂交互，攻击者一旦成功利用，即可完全控制受影响的服务器，执行任意命令，窃取敏感数据，或进一步渗透内网。由于该漏洞涉及身份验证绕过和代码执行，其危害性极高，建议所有使用Wing FTP Server的用户立即检查并更新至最新版本，或采取其他缓解措施以防止潜在的攻击。</p>
 <p><strong>产品厂商：</strong> Wing FTP Server</p>
 <p><strong>产品名称：</strong> Wing FTP Server</p>
 <p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/rapid7/metasploit-framework/blob/d79810a7e39e413a58568be3fed070113b26b8c5/modules%2Fexploits%2Fmulti%2Fhttp%2Fwingftp_null_byte_rce.rb">https://github.com/rapid7/metasploit-framework/blob/d79810a7e39e413a58568be3fed070113b26b8c5/modules%2Fexploits%2Fmulti%2Fhttp%2Fwingftp_null_byte_rce.rb</a></p>
@@ -386,18 +384,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/07/03/github_2184802524/" title="CVE-2025-32462 Exploit">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">CVE-2025-32462 Exploit</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/07/03/github_2516877191/" title="ISPConfig language_editphp PHP代码注入漏洞">
-                        <span class="hidden-mobile">ISPConfig language_editphp PHP代码注入漏洞</span>
+                      <a href="/2025/07/03/github_1878223453/" title="MCP Inspector 未授权访问漏洞">
+                        <span class="hidden-mobile">MCP Inspector 未授权访问漏洞</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
