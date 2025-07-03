@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-03T21:30:05.653Z</updated>
+  <updated>2025-07-03T22:00:06.776Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Unrestricted Upload of File with Dangerous Type vulnerability in WPCenter AiBud WP allows Upload</title>
+    <link href="http://example.com/2025/07/03/github_2227168860/"/>
+    <id>http://example.com/2025/07/03/github_2227168860/</id>
+    <published>2025-07-03T22:00:06.000Z</published>
+    <updated>2025-07-03T22:00:06.776Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-6gmj-v8v5-94pg">https://github.com/advisories/GHSA-6gmj-v8v5-94pg</a></p><p><strong>CVSS 评分：</strong> 9.1</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-23968">https://nvd.nist.gov/vuln/detail/CVE-2025-23968</a></p></li><li><p><a href="https://patchstack.com/database/wordpress/plugin/aibuddy-openai-chatgpt/vulnerability/wordpress-aibud-wp-plugin-1-8-5-arbitrary-file-upload-vulnerability?_s_id=cve">https://patchstack.com/database/wordpress/plugin/aibuddy-openai-chatgpt/vulnerability/wordpress-aibud-wp-plugin-1-8-5-arbitrary-file-upload-vulnerability?_s_id=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-6gmj-v8v5-94pg">https://github.com/advisories/GHSA-6gmj-v8v5-94pg</a></p></li></ul><p><strong>描述：</strong></p><p>Unrestricted Upload of File with Dangerous Type vulnerability in WPCenter AiBud WP allows Upload a Web Shell to a Web Server.This issue affects AiBud WP: from n&#x2F;a through 1.8.5.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-6gmj-v8v5-94pg&quot;&gt;https://github.com/advisories/GHSA-6gmj-v8v5-94pg&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>NextJS vulnerability can lead to DoS via cache poisoning</title>
@@ -499,31 +523,6 @@
     <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
     
     <category term="代码注入" scheme="http://example.com/tags/%E4%BB%A3%E7%A0%81%E6%B3%A8%E5%85%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>offsectraining twitter update</title>
-    <link href="http://example.com/2025/07/03/twitter_2933660727/"/>
-    <id>http://example.com/2025/07/03/twitter_2933660727/</id>
-    <published>2025-07-03T16:00:55.000Z</published>
-    <updated>2025-07-03T16:00:55.991Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> offsectraining</p><p><strong>推文：</strong> 深度解析：CVE-2025-29306（FoxCMS通过反序列化注入实现的远程代码执行）<br>⚠️ CVSS 9.8 | EPSS 71.52%</p><p>无需认证。暂无补丁。仅需一个传递给unserialize()的id参数——突然间你就能在服务器上运行system()。构造一个序列化的payload，通过URL或curl命令发送，即可执行任意命令。FoxCMS ≤ 1.2.5版本完全暴露于此漏洞。</p><p>了解漏洞利用方法：<br> 🔗 <a href="https://t.co/hmatnEl4Dd">https://t.co/hmatnEl4Dd</a><br> 🧪 想亲眼看看它的效果吗？拥有#LearnEnterprise账户，你就可以亲自尝试：<br><a href="https://t.co/hmatnEl4Dd">https://t.co/hmatnEl4Dd</a></p><p><strong>链接：</strong> <a href="https://x.com/offsectraining/status/1940795166194864628">https://x.com/offsectraining/status/1940795166194864628</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; offsectraining&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 深度解析：CVE-2025-29306（FoxCMS通过反序列化注入实现的远程代码执行）&lt;br&gt;⚠️ CVSS 9.8 | EPSS 71.52%</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="offsectraining" scheme="http://example.com/tags/offsectraining/"/>
     
   </entry>
   
