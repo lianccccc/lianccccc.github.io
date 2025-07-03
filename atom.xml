@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-03T20:30:04.928Z</updated>
+  <updated>2025-07-03T20:45:20.637Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Citrix NetScaler CVE-2025-6543 Vulnerability</title>
+    <link href="http://example.com/2025/07/03/github_216158512/"/>
+    <id>http://example.com/2025/07/03/github_216158512/</id>
+    <published>2025-07-03T20:45:20.000Z</published>
+    <updated>2025-07-03T20:45:20.637Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Citrix NetScaler CVE-2025-6543 Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-6543</li></ul><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Citrix NetScaler ADC&#x2F;VPX是一款广泛使用的应用交付控制器和负载均衡解决方案，常见于企业级网络环境中，用于优化应用性能、确保高可用性以及提供安全防护。此次发现的CVE-2025-6543漏洞影响了特定版本的NetScaler设备，可能导致严重的安全风险。该漏洞属于未授权访问类型，攻击者可能利用此漏洞绕过正常的访问控制机制，直接访问或控制受影响的设备。技术层面上，漏洞的根源在于设备对某些请求的处理不当，未能正确验证请求的合法性，从而允许攻击者执行未授权的操作。这种漏洞的存在，使得攻击者可以在不需要任何认证的情况下，远程利用漏洞进行攻击，可能导致数据泄露、服务中断甚至远程代码执行等严重后果。由于NetScaler设备通常部署在网络的关键位置，一旦被攻击，可能对整个网络的安全构成威胁。因此，建议所有使用受影响版本的用户尽快检查并应用相关的安全补丁，以防范潜在的安全风险。</p><p><strong>产品厂商：</strong> Citrix</p><p><strong>产品名称：</strong> NetScaler ADC&#x2F;VPX</p><p><strong>来源：</strong> <a href="https://github.com/abrewer251/CVE-2025-6543_CitrixNetScaler_PoC">https://github.com/abrewer251/CVE-2025-6543_CitrixNetScaler_PoC</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>LICENSE</li><li>README.md</li><li>cve_2025_6543_checker.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-6543-CitrixNetScaler-PoC"><a href="#CVE-2025-6543-CitrixNetScaler-PoC" class="headerlink" title="CVE-2025-6543_CitrixNetScaler_PoC"></a>CVE-2025-6543_CitrixNetScaler_PoC</h2><p>Multi-host, multi-port scanner and auditor for CVE-2025-6543-affected NetScaler devices. Supports SNMP and SSH enumeration with optional CSV reporting and exploit stubs.</p><h3 id="🔐-GitHub-Repository-Description"><a href="#🔐-GitHub-Repository-Description" class="headerlink" title="🔐 GitHub Repository Description"></a>🔐 GitHub Repository Description</h3><blockquote><p><strong>CVE-2025-6543 Enhanced Checker</strong><br>Multi-host, multi-port scanner and auditor for CVE-2025-6543-affected NetScaler devices. Supports SNMP and SSH enumeration with optional CSV reporting and exploit stubs.</p></blockquote><hr><h3 id="📄-README-md"><a href="#📄-README-md" class="headerlink" title="📄 README.md"></a>📄 <code>README.md</code></h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-section">## CVE-2025-6543 Enhanced Checker</span><br><br>A robust multi-host, multi-port vulnerability scanner for <span class="hljs-strong">**CVE-2025-6543**</span>, targeting Citrix NetScaler appliances. This tool supports both SNMP and SSH banner grabbing to determine build versions and patch status. Includes optional CSV output and a stub for future exploit integration.<br><br><span class="hljs-section">### ⚙️ Features</span><br><br><span class="hljs-bullet">-</span> ✅ Multi-host and multi-port scanning<br><span class="hljs-bullet">-</span> ✅ SNMP and SSH version enumeration<br><span class="hljs-bullet">-</span> ✅ Build/version parsing logic with patch baseline comparison<br><span class="hljs-bullet">-</span> ✅ Progress bar support via <span class="hljs-code">`tqdm`</span><br><span class="hljs-bullet">-</span> ✅ Export results to CSV<br><span class="hljs-bullet">-</span> ⚠️ Stub for exploit probe<br><br>---<br><br><span class="hljs-section">### 📦 Requirements</span><br><br><span class="hljs-bullet">-</span> Python 3.6+<br><span class="hljs-bullet">-</span> <span class="hljs-code">`tqdm`</span> (optional, for progress bar)<br><span class="hljs-bullet">-</span> <span class="hljs-code">`snmpget`</span> from <span class="hljs-code">`net-snmp-utils`</span><br><span class="hljs-bullet">-</span> <span class="hljs-code">`sshpass`</span> for password-based SSH access<br><br><span class="hljs-section">#### Install dependencies on Debian/Ubuntu:</span><br><br><span class="hljs-code">```bash</span><br><span class="hljs-code">sudo apt update</span><br><span class="hljs-code">sudo apt install -y net-snmp sshpass python3-pip</span><br><span class="hljs-code">pip3 install tqdm</span><br></code></pre></td></tr></table></figure><hr><h3 id="🚀-Usage"><a href="#🚀-Usage" class="headerlink" title="🚀 Usage"></a>🚀 Usage</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 cve_2025_6543_checker.py [OPTIONS]<br></code></pre></td></tr></table></figure><h4 id="🔹-Input-Options"><a href="#🔹-Input-Options" class="headerlink" title="🔹 Input Options"></a>🔹 Input Options</h4><p><strong>Required</strong>: either provide a host list or a file:</p><ul><li><code>-H HOST [HOST ...]</code> – Space-separated list of IPs&#x2F;FQDNs</li><li><code>-f FILE</code> – File with one host per line</li></ul><p><strong>Required</strong>: either provide a port or a file:</p><ul><li><code>-p PORT</code> – Single TCP port</li><li><code>-P FILE</code> – File with one port per line</li></ul><h4 id="🔹-Connection-Options"><a href="#🔹-Connection-Options" class="headerlink" title="🔹 Connection Options"></a>🔹 Connection Options</h4><ul><li><code>--no-snmp</code> – Disable SNMP scanning</li><li><code>-c STRING</code> – SNMP community string (default: <code>public</code>)</li><li><code>--ssh-user USER</code> – SSH username</li><li><code>--ssh-pass PASS</code> – SSH password</li></ul><h4 id="🔹-Output-Exploitation"><a href="#🔹-Output-Exploitation" class="headerlink" title="🔹 Output &amp; Exploitation"></a>🔹 Output &amp; Exploitation</h4><ul><li><code>-o FILE</code> – Save results to CSV</li><li><code>-x</code> – Run exploit probe (currently stubbed)</li></ul><h4 id="🔹-Debugging"><a href="#🔹-Debugging" class="headerlink" title="🔹 Debugging"></a>🔹 Debugging</h4><ul><li><code>-v</code> – Verbose output for debugging and banner grabs</li></ul><hr><h3 id="📘-Example-Usages"><a href="#📘-Example-Usages" class="headerlink" title="📘 Example Usages"></a>📘 Example Usages</h3><h4 id="Scan-multiple-hosts-on-one-port"><a href="#Scan-multiple-hosts-on-one-port" class="headerlink" title="Scan multiple hosts on one port:"></a>Scan multiple hosts on one port:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 cve_2025_6543_checker.py -H 192.168.1.10 192.168.1.11 -p 161<br></code></pre></td></tr></table></figure><h4 id="Scan-from-host-and-port-files-with-SSH-fallback"><a href="#Scan-from-host-and-port-files-with-SSH-fallback" class="headerlink" title="Scan from host and port files with SSH fallback:"></a>Scan from host and port files with SSH fallback:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 cve_2025_6543_checker.py -f hosts.txt -P ports.txt \<br>    --ssh-user admin --ssh-pass password123 -o results.csv<br></code></pre></td></tr></table></figure><h4 id="Disable-SNMP-and-force-SSH-only-scanning"><a href="#Disable-SNMP-and-force-SSH-only-scanning" class="headerlink" title="Disable SNMP and force SSH-only scanning:"></a>Disable SNMP and force SSH-only scanning:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 cve_2025_6543_checker.py -H 10.10.10.1 -p 22 \<br>    --no-snmp --ssh-user root --ssh-pass changeme<br></code></pre></td></tr></table></figure><hr><h3 id="📝-Output-Format-CSV"><a href="#📝-Output-Format-CSV" class="headerlink" title="📝 Output Format (CSV)"></a>📝 Output Format (CSV)</h3><p>If <code>-o</code> is used, the output file will include:</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">host</span>,port,branch,build,state<br><span class="hljs-attribute">192</span>.<span class="hljs-number">168</span>.<span class="hljs-number">1</span>.<span class="hljs-number">10</span>,<span class="hljs-number">22</span>,<span class="hljs-number">13</span>.<span class="hljs-number">1</span>,<span class="hljs-number">57</span>.<span class="hljs-number">16</span>,VULNERABLE ⚠️<br></code></pre></td></tr></table></figure><hr><h3 id="🔒-About-CVE-2025-6543"><a href="#🔒-About-CVE-2025-6543" class="headerlink" title="🔒 About CVE-2025-6543"></a>🔒 About CVE-2025-6543</h3><p>This vulnerability affects certain builds of Citrix NetScaler ADC&#x2F;VPX appliances. The tool checks for known patched versions and flags devices that are potentially vulnerable based on build signatures. The included banner parsing logic supports various formats and tags (e.g., FIPS, NDCPP).</p><hr><h3 id="⚠️-Disclaimer"><a href="#⚠️-Disclaimer" class="headerlink" title="⚠️ Disclaimer"></a>⚠️ Disclaimer</h3><p>This tool is for <strong>educational and authorized security testing</strong> only. Unauthorized use against systems you do not own or have explicit permission to test is illegal and unethical.</p><hr><h3 id="📌-TODO"><a href="#📌-TODO" class="headerlink" title="📌 TODO"></a>📌 TODO</h3><ul><li>Implement real exploit logic in <code>exploit_probe()</code></li><li>Add TLS&#x2F;HTTPS banner scraping fallback</li><li>Implement JSON and XML output options</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Citrix NetScaler CVE-2025-6543 Vulnerab</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>n8n is vulnerable to Improper Authorization through its /stop endpoint</title>
@@ -502,31 +528,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BlackHatEvents twitter update</title>
-    <link href="http://example.com/2025/07/03/twitter_2371547728/"/>
-    <id>http://example.com/2025/07/03/twitter_2371547728/</id>
-    <published>2025-07-03T15:00:24.000Z</published>
-    <updated>2025-07-03T15:00:24.860Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> #BHUSA简报 “LLMDYara：基于大语言模型的可解释文件特征与DNAHash自动生成YARA规则” 将介绍LLMDYara，这是一个整合专家知识与大语言模型的自动规则生成解决方案。不要错过，立即注册&gt;&gt; <a href="https://t.co/2pfSlTHGzb">https://t.co/2pfSlTHGzb</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1940787391838523628">https://x.com/BlackHatEvents/status/1940787391838523628</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; #BHUSA简报 “LLMDYara：基于大语言模型的可解释文件特征与DNAHash自动生成YARA规则” 将介绍LLMDYara，这是一个整合专</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
     
   </entry>
   
