@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-03T14:15:42.697Z</updated>
+  <updated>2025-07-03T14:30:05.566Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>n8n Vulnerable to Denial of Service via Malformed Binary Data Requests</title>
+    <link href="http://example.com/2025/07/03/github_1032376969/"/>
+    <id>http://example.com/2025/07/03/github_1032376969/</id>
+    <published>2025-07-03T14:30:05.000Z</published>
+    <updated>2025-07-03T14:30:05.566Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-pr9r-gxgp-9rm8">https://github.com/advisories/GHSA-pr9r-gxgp-9rm8</a></p><p><strong>仓库 Star：</strong> 114596</p><p><strong>CVSS 评分：</strong> 4.9</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/n8n-io/n8n/security/advisories/GHSA-pr9r-gxgp-9rm8">https://github.com/n8n-io/n8n/security/advisories/GHSA-pr9r-gxgp-9rm8</a></p></li><li><p><a href="https://github.com/n8n-io/n8n/pull/16229">https://github.com/n8n-io/n8n/pull/16229</a></p></li><li><p><a href="https://github.com/n8n-io/n8n/commit/43c52a8b4f844e91b02e3cc9df92826a2d7b6052">https://github.com/n8n-io/n8n/commit/43c52a8b4f844e91b02e3cc9df92826a2d7b6052</a></p></li><li><p><a href="https://github.com/advisories/GHSA-pr9r-gxgp-9rm8">https://github.com/advisories/GHSA-pr9r-gxgp-9rm8</a></p></li></ul><p><strong>描述：</strong></p><h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Denial of Service vulnerability in <code>/rest/binary-data</code> endpoint when processing empty filesystem URIs (<code>filesystem://</code> or <code>filesystem-v2://</code>).</p><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>This is a Denial of Service (DoS) vulnerability that allows authenticated attackers to cause service unavailability through malformed filesystem URI requests. The vulnerability affects:</p><ul><li>The <code>/rest/binary-data</code> endpoint</li><li>n8n.cloud instances (confirmed HTTP&#x2F;2 524 timeout responses)</li></ul><p>Attackers can exploit this by sending GET requests with empty filesystem URIs (<code>filesystem://</code> or <code>filesystem-v2://</code>) to the <code>/rest/binary-data</code> endpoint, causing resource exhaustion and service disruption.</p><h3 id="Patches"><a href="#Patches" class="headerlink" title="Patches"></a>Patches</h3><p>The issue has been patched in <a href="https://github.com/n8n-io/n8n/releases/tag/n8n%401.99.0">1.99.0</a>.<br>All users should upgrade to this version or later.</p><p>The fix introduces strict checking of URI patterns.</p><p>Patch commit: <a href="https://github.com/n8n-io/n8n/pull/16229">https://github.com/n8n-io/n8n/pull/16229</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-pr9r-gxgp-9rm8&quot;&gt;https://github.com/advisories/GHSA-pr9r-gxgp-9rm8&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>ISPConfig language_editphp PHP代码注入漏洞</title>
@@ -504,33 +528,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/YwAPcunrxrHMZ6Xcro9nmg&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>思科修复统一通信管理器静态SSH root凭证高危漏洞</title>
-    <link href="http://example.com/2025/07/03/weixin_1176037017/"/>
-    <id>http://example.com/2025/07/03/weixin_1176037017/</id>
-    <published>2025-07-03T11:14:30.088Z</published>
-    <updated>2025-07-03T11:14:30.086Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/IU3KqPrXnMKdqy4F9G-0Ww">https://mp.weixin.qq.com/s/IU3KqPrXnMKdqy4F9G-0Ww</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/IU3KqPrXnMKdqy4F9G-0Ww&quot;&gt;https://mp.weixin.q</summary>
       
     
     
