@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-03T11:00:30.040Z</updated>
+  <updated>2025-07-03T11:15:18.772Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,221 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DiscoveryNG Multiple XSS Vulnerabilities</title>
+    <link href="http://example.com/2025/07/03/github_3925956407/"/>
+    <id>http://example.com/2025/07/03/github_3925956407/</id>
+    <published>2025-07-03T11:15:18.000Z</published>
+    <updated>2025-07-03T11:15:18.772Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> DiscoveryNG Multiple XSS Vulnerabilities</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-45407</li></ul><p><strong>漏洞类型：</strong> 跨站可执行脚本</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> DiscoveryNG是一款广泛使用的网络发现工具，主要用于企业级网络环境中自动发现和管理网络设备。它支持多种网络协议，能够帮助管理员高效地监控和维护网络状态。由于其广泛的应用，DiscoveryNG的安全性对许多企业至关重要。该产品在v6.0.8 Hotfix 2版本中发现了多个跨站脚本（XSS）漏洞。这些漏洞的根本原因在于应用未能对用户输入进行充分的验证和过滤，导致攻击者能够注入恶意脚本。当其他用户访问包含恶意脚本的页面时，这些脚本会在用户的浏览器中执行，可能导致会话劫持、信息泄露或其他恶意操作。由于XSS漏洞通常不需要认证即可利用，且可以通过简单的网络请求触发，因此它们对系统安全构成了显著威胁。攻击者可以利用这些漏洞进行钓鱼攻击、窃取敏感信息或传播恶意软件，从而对企业和个人用户造成严重的安全风险。</p><p><strong>产品名称：</strong> DiscoveryNG</p><p><strong>影响版本：</strong> v6.0.8 Hotfix 2</p><p><strong>来源：</strong> <a href="https://github.com/yallasec/CVE-2025-45407">https://github.com/yallasec/CVE-2025-45407</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>cve-2025-45407.yaml</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-45407"><a href="#CVE-2025-45407" class="headerlink" title="CVE-2025-45407"></a>CVE-2025-45407</h2><p>CVE-2025-45407: Multiple XSS Vulnerabilities in DiscoveryNG v6.0.8 Hotfix 2 Discovered by: YallaSec Security Research Team CVE ID: CVE-2025-45407 Date Published: July 2025</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; DiscoveryNG Multiple XSS Vulnerabilitie</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="跨站可执行脚本" scheme="http://example.com/tags/%E8%B7%A8%E7%AB%99%E5%8F%AF%E6%89%A7%E8%A1%8C%E8%84%9A%E6%9C%AC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WordPress表单插件高危漏洞威胁超60万网站安全</title>
+    <link href="http://example.com/2025/07/03/weixin_745744355/"/>
+    <id>http://example.com/2025/07/03/weixin_745744355/</id>
+    <published>2025-07-03T11:14:30.774Z</published>
+    <updated>2025-07-03T11:14:30.770Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/P0iPSUoi_0gHIlEWRjtTfA">https://mp.weixin.qq.com/s/P0iPSUoi_0gHIlEWRjtTfA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/P0iPSUoi_0gHIlEWRjtTfA&quot;&gt;https://mp.weixin.q</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>攻击者利用PDF文件冒充微软实施钓鱼攻击</title>
+    <link href="http://example.com/2025/07/03/weixin_1181601774/"/>
+    <id>http://example.com/2025/07/03/weixin_1181601774/</id>
+    <published>2025-07-03T11:14:30.436Z</published>
+    <updated>2025-07-03T11:14:30.434Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/YwAPcunrxrHMZ6Xcro9nmg">https://mp.weixin.qq.com/s/YwAPcunrxrHMZ6Xcro9nmg</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/YwAPcunrxrHMZ6Xcro9nmg&quot;&gt;https://mp.weixin.q</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>思科修复统一通信管理器静态SSH root凭证高危漏洞</title>
+    <link href="http://example.com/2025/07/03/weixin_1176037017/"/>
+    <id>http://example.com/2025/07/03/weixin_1176037017/</id>
+    <published>2025-07-03T11:14:30.088Z</published>
+    <updated>2025-07-03T11:14:30.086Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/IU3KqPrXnMKdqy4F9G-0Ww">https://mp.weixin.qq.com/s/IU3KqPrXnMKdqy4F9G-0Ww</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/IU3KqPrXnMKdqy4F9G-0Ww&quot;&gt;https://mp.weixin.q</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>新型macOS恶意软件利用进程注入与远程通信窃取钥匙串凭证</title>
+    <link href="http://example.com/2025/07/03/weixin_1772259798/"/>
+    <id>http://example.com/2025/07/03/weixin_1772259798/</id>
+    <published>2025-07-03T11:14:29.448Z</published>
+    <updated>2025-07-03T11:14:29.446Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/FNe3632M5qmYXdwbfLi2Kg">https://mp.weixin.qq.com/s/FNe3632M5qmYXdwbfLi2Kg</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/FNe3632M5qmYXdwbfLi2Kg&quot;&gt;https://mp.weixin.q</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>与伊朗有关的黑客“Robert”再度活跃，威胁公开 100 GB 特朗普团队邮件</title>
+    <link href="http://example.com/2025/07/03/weixin_899437749/"/>
+    <id>http://example.com/2025/07/03/weixin_899437749/</id>
+    <published>2025-07-03T11:06:44.052Z</published>
+    <updated>2025-07-03T11:06:44.050Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/tYDiNIaYaDwkBxoLG3vigw">https://mp.weixin.qq.com/s/tYDiNIaYaDwkBxoLG3vigw</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/tYDiNIaYaDwkBxoLG3vigw&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>星际访客高速穿越太阳系</title>
+    <link href="http://example.com/2025/07/03/weixin_475304236/"/>
+    <id>http://example.com/2025/07/03/weixin_475304236/</id>
+    <published>2025-07-03T11:06:43.037Z</published>
+    <updated>2025-07-03T11:06:43.034Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/cdF4nCo2CM3AfKeT76EzsQ">https://mp.weixin.qq.com/s/cdF4nCo2CM3AfKeT76EzsQ</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/cdF4nCo2CM3AfKeT76EzsQ&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【7/3特辑】今日最新漏洞情报速递</title>
+    <link href="http://example.com/2025/07/03/weixin_3866565569/"/>
+    <id>http://example.com/2025/07/03/weixin_3866565569/</id>
+    <published>2025-07-03T11:01:11.449Z</published>
+    <updated>2025-07-03T11:01:11.445Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 安恒信息CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/Ke1qgHvcB6Ym6mx_Q1nnVw">https://mp.weixin.qq.com/s/Ke1qgHvcB6Ym6mx_Q1nnVw</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 安恒信息CERT&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/Ke1qgHvcB6Ym6mx_Q1nnVw&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="安恒信息CERT" scheme="http://example.com/tags/%E5%AE%89%E6%81%92%E4%BF%A1%E6%81%AFCERT/"/>
+    
+  </entry>
   
   <entry>
     <title>zoomeye_team twitter update</title>
@@ -327,219 +542,6 @@
     
     
     <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>zoomeye_team twitter update</title>
-    <link href="http://example.com/2025/07/03/twitter_1386668046/"/>
-    <id>http://example.com/2025/07/03/twitter_1386668046/</id>
-    <published>2025-07-03T04:00:28.443Z</published>
-    <updated>2025-07-03T04:00:28.441Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> zoomeye_team</p><p><strong>推文：</strong> ⚡️漏洞详情现已公布：<a href="https://t.co/NhXNIvINQ1">https://t.co/NhXNIvINQ1</a></p><p>🚨🚨CVE-2025-20309（CVSS 10分）影响Cisco Unified Communications Manager！静态SSH凭证为root账户，使用不可更改的默认凭证，允许任何人远程登录。可能导致系统完全被接管！</p><p>通过vul.cve筛选器搜索👉vul.cve&#x3D;”CVE-2025-20309”<br>ZoomEye搜索语句👉app&#x3D;”Cisco Unified Communications Manager”<br>揭示了9.4k+易受攻击的实例！<br>ZoomEye链接：<a href="https://t.co/C18SNmgoVh">https://t.co/C18SNmgoVh</a></p><p>参考：<a href="https://t.co/mv1aL0ycgU">https://t.co/mv1aL0ycgU</a></p><p>#思科 #ZoomEye #网络安全映射 #网络安全 #网络空间洞察2025</p><p><strong>链接：</strong> <a href="https://x.com/zoomeye_team/status/1940614840302907837">https://x.com/zoomeye_team/status/1940614840302907837</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; zoomeye_team&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; ⚡️漏洞详情现已公布：&lt;a href=&quot;https://t.co/NhXNIvINQ1&quot;&gt;https://t.co/NhXNIvINQ1&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="zoomeye_team" scheme="http://example.com/tags/zoomeye-team/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Optilink upgradephp 命令执行漏洞</title>
-    <link href="http://example.com/2025/07/03/weixin_2401833635/"/>
-    <id>http://example.com/2025/07/03/weixin_2401833635/</id>
-    <published>2025-07-03T02:50:52.474Z</published>
-    <updated>2025-07-03T02:50:52.470Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> Nday Poc</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/4oXPBN2P3iHbF4t_zgbsEw">https://mp.weixin.qq.com/s/4oXPBN2P3iHbF4t_zgbsEw</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; Nday Poc&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/4oXPBN2P3iHbF4t_zgbsEw&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="Nday Poc" scheme="http://example.com/tags/Nday-Poc/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Cisco Identity Services Engine (ISE) 和 ISE-PIC 未授权远程代码执行漏洞</title>
-    <link href="http://example.com/2025/07/03/github_1121957256/"/>
-    <id>http://example.com/2025/07/03/github_1121957256/</id>
-    <published>2025-07-03T02:45:16.796Z</published>
-    <updated>2025-07-03T02:45:16.795Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Cisco Identity Services Engine (ISE) 和 ISE-PIC 未授权远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-20281</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Cisco Identity Services Engine (ISE) 和 ISE-PIC 中的特定API由于输入验证不足，允许未经身份验证的远程攻击者以root权限执行任意命令。此漏洞由于对用户提供的输入验证不当，攻击向量为远程，无需特权，影响严重，可能导致远程代码执行。</p><p><strong>产品厂商：</strong> Cisco</p><p><strong>产品名称：</strong> Cisco Identity Services Engine (ISE), ISE-PIC</p><p><strong>来源：</strong> <a href="https://github.com/grupooruss/CVE-2025-20281-Cisco">https://github.com/grupooruss/CVE-2025-20281-Cisco</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>.gitignore</li><li>README.md</li><li>check_cve_2025_20281.py</li><li>requirements.txt</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-20281-Cisco-ISE-RCE-Vulnerability-Checker"><a href="#CVE-2025-20281-Cisco-ISE-RCE-Vulnerability-Checker" class="headerlink" title="CVE-2025-20281 - Cisco ISE RCE Vulnerability Checker"></a>CVE-2025-20281 - Cisco ISE RCE Vulnerability Checker</h2><p>This script checks for the presence of the <strong>CVE-2025-20281</strong> vulnerability in Cisco Identity Services Engine (ISE) and ISE-PIC, which allows <strong>unauthenticated remote code execution (RCE)</strong> as root due to insufficient input validation in a specific API.</p><p><strong>This tool is intended for authorized security testing and educational purposes only. Do not use it against systems you do not own or have permission to test.</strong></p><h3 id="About-the-Vulnerability"><a href="#About-the-Vulnerability" class="headerlink" title="About the Vulnerability"></a>About the Vulnerability</h3><p><strong>CVE-2025-20281</strong> allows an <strong>unauthenticated, remote attacker</strong> to execute arbitrary commands as root on the underlying OS by submitting a specially crafted API request. The flaw is due to <strong>improper validation of user-supplied input</strong>.</p><ul><li><strong>Attack Vector:</strong> Remote</li><li><strong>Privileges Required:</strong> None</li><li><strong>Impact:</strong> Remote Code Execution (root)</li><li><strong>Affected Products:</strong> Cisco ISE, Cisco ISE-PIC (specific versions)</li></ul><h3 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h3><ul><li>Sends a crafted payload to simulate code execution attempts</li><li>Detects possible signs of vulnerability</li><li>Simple command-line usage</li><li>No authentication required</li></ul><h3 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h3><ul><li>Python 3.x</li><li><code>requests</code> library<br>Install via:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install requests<br></code></pre></td></tr></table></figure></li></ul><h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python check_cve_2025_20281.py https://&lt;TARGET-IP-OR-DOMAIN&gt;<br></code></pre></td></tr></table></figure><h4 id="Example"><a href="#Example" class="headerlink" title="Example:"></a>Example:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python check_cve_2025_20281.py https://192.168.1.100<br></code></pre></td></tr></table></figure><h3 id="Interpreting-Results"><a href="#Interpreting-Results" class="headerlink" title="Interpreting Results"></a>Interpreting Results</h3><ul><li><code>[!!!] POSIBLE VULNERABILIDAD DETECTADA</code> — Exploit attempt likely succeeded or triggered a revealing response.</li><li><code>[*] Server responded with error</code> — Possible indicator of payload processing.</li><li><code>[-] No abnormal behavior detected</code> — Target may not be vulnerable or is patched.</li></ul><h3 id="File-Structure"><a href="#File-Structure" class="headerlink" title="File Structure"></a>File Structure</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs stylus">.<br>├── check_cve_2025_20281<span class="hljs-selector-class">.py</span><br>├── README<span class="hljs-selector-class">.md</span><br>├── requirements<span class="hljs-selector-class">.txt</span><br>└── .gitignore<br></code></pre></td></tr></table></figure><h3 id="Disclaimer"><a href="#Disclaimer" class="headerlink" title="Disclaimer"></a>Disclaimer</h3><p>This script is provided <strong>as-is</strong> for <strong>research and professional pentesting</strong>. The authors are not responsible for any misuse or damages caused by this tool.</p><h3 id="🔗-References"><a href="#🔗-References" class="headerlink" title="🔗 References"></a>🔗 References</h3><ul><li><a href="https://tools.cisco.com/security/center/">Cisco Security Advisory for CVE-2025-20281</a></li><li><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-20281">MITRE CVE Record</a></li></ul><h3 id="👨‍💻-Author"><a href="#👨‍💻-Author" class="headerlink" title="👨‍💻 Author"></a>👨‍💻 Author</h3><p><strong>Grupo Oruss</strong> – — Joy Bassett (@Division81),<br><a href="https://www.grupooruss.com/">https://www.grupooruss.com</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Cisco Identity Services Engine (ISE) 和 </summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Apache Tomcat Java反序列化漏洞</title>
-    <link href="http://example.com/2025/07/03/github_649161799/"/>
-    <id>http://example.com/2025/07/03/github_649161799/</id>
-    <published>2025-07-03T01:15:15.594Z</published>
-    <updated>2025-07-03T01:15:15.595Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache Tomcat Java反序列化漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-24813</li></ul><p><strong>漏洞类型：</strong> 反序列化</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> CVE-2025-24813是Apache Tomcat中的一个Java反序列化漏洞，允许攻击者通过上传恶意序列化的Java payload作为会话文件，并触发反序列化过程来执行任意代码。此漏洞的利用需要目标servlet可通过PUT请求写入。</p><p><strong>产品厂商：</strong> Apache</p><p><strong>产品名称：</strong> Apache Tomcat</p><p><strong>来源：</strong> <a href="https://github.com/yaleman/cve-2025-24813-poc">https://github.com/yaleman/cve-2025-24813-poc</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>.gitignore</li><li>.python-version</li><li>CLAUDE.md</li><li>Dockerfile</li><li>README.md</li><li>download.sh</li><li>justfile</li><li>main.py</li><li>payload.base64</li><li>pyproject.toml</li><li>uv.lock</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-24813-Apache-Tomcat-RCE-Exploit-PoC"><a href="#CVE-2025-24813-Apache-Tomcat-RCE-Exploit-PoC" class="headerlink" title="CVE-2025-24813 Apache Tomcat RCE Exploit PoC"></a>CVE-2025-24813 Apache Tomcat RCE Exploit PoC</h2><p>This repository contains a proof-of-concept exploit for CVE-2025-24813, a Java<br>deserialization vulnerability in Apache Tomcat.</p><p>Based on<br><a href="https://github.com/absholi7ly/POC-CVE-2025-24813/">absholi7ly&#x2F;POC-CVE-2025-24813&#x2F;</a>.</p><h3 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h3><ul><li>Docker</li></ul><h3 id="Setup"><a href="#Setup" class="headerlink" title="Setup"></a>Setup</h3><ol><li><p>Install dependencies:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">uv venv<br><span class="hljs-built_in">source</span> .venv/bin/activate<br>uv <span class="hljs-built_in">sync</span><br></code></pre></td></tr></table></figure></li><li><p>Download ysoserial:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">./download.sh<br></code></pre></td></tr></table></figure></li></ol><h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><h4 id="Using-Docker-Recommended"><a href="#Using-Docker-Recommended" class="headerlink" title="Using Docker (Recommended)"></a>Using Docker (Recommended)</h4><p>Build and run the exploit in a container:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker build -t cve-2025-24813-poc:latest .<br>docker run --<span class="hljs-built_in">rm</span> -it --mount <span class="hljs-string">&quot;type=bind,src=<span class="hljs-subst">$(pwd)</span>,target=/app&quot;</span> cve-2025-24813-poc:latest<br>python main.py &lt;target&gt;<br></code></pre></td></tr></table></figure><h4 id="Direct-Execution"><a href="#Direct-Execution" class="headerlink" title="Direct Execution"></a>Direct Execution</h4><p>Run the exploit directly:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python main.py &lt;target_url&gt; [options]<br></code></pre></td></tr></table></figure><h5 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h5><ul><li><code>--command</code>: Command to execute (default: <code>calc.exe</code>)</li><li><code>--ysoserial</code>: Path to ysoserial.jar (default: <code>./ysoserial-all.jar</code>)</li><li><code>--gadget</code>: ysoserial gadget chain (default: <code>CommonsCollections6</code>)</li><li><code>--payload_type</code>: Payload type - <code>ysoserial</code> or <code>java</code> (default: <code>ysoserial</code>)</li><li><code>--no-ssl-verify</code>: Disable SSL verification</li></ul><h5 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">## Basic usage</span><br>python main.py http://target:8080<br><br><span class="hljs-comment">## Custom command</span><br>python main.py http://target:8080 --<span class="hljs-built_in">command</span> <span class="hljs-string">&quot;whoami&quot;</span><br><br><span class="hljs-comment">## Using Java payload instead of ysoserial</span><br>python main.py http://target:8080 --payload_type java<br></code></pre></td></tr></table></figure><h3 id="How-it-Works"><a href="#How-it-Works" class="headerlink" title="How it Works"></a>How it Works</h3><ol><li>Checks if the target servlet is writable via PUT requests</li><li>Generates a malicious serialized Java payload</li><li>Uploads the payload as a session file</li><li>Triggers deserialization by accessing the session</li></ol><h3 id="Disclaimer"><a href="#Disclaimer" class="headerlink" title="Disclaimer"></a>Disclaimer</h3><p>This tool is for educational and authorized testing purposes only. Do not use<br>against systems you do not own or have explicit permission to test.</p><h3 id="References"><a href="#References" class="headerlink" title="References"></a>References</h3><ul><li><a href="https://scrapco.de/blog/analysis-of-cve-2025-24813-apache-tomcat-path-equivalence-rce.html">https://scrapco.de/blog/analysis-of-cve-2025-24813-apache-tomcat-path-equivalence-rce.html</a></li><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-24813">https://nvd.nist.gov/vuln/detail/CVE-2025-24813</a></li><li><a href="https://github.com/PaloAltoNetworks/Unit42-timely-threat-intel/blob/main/2025-03-14-Testing-CVE-2025-24813.md">https://github.com/PaloAltoNetworks/Unit42-timely-threat-intel/blob/main/2025-03-14-Testing-CVE-2025-24813.md</a></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Apache Tomcat Java反序列化漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>澳航遭受网络攻击，大量客户数据被盗</title>
-    <link href="http://example.com/2025/07/03/weixin_2985943417/"/>
-    <id>http://example.com/2025/07/03/weixin_2985943417/</id>
-    <published>2025-07-03T01:11:18.994Z</published>
-    <updated>2025-07-03T01:11:18.989Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/iaMKcYRvQaEJMa6pSZHmWQ">https://mp.weixin.qq.com/s/iaMKcYRvQaEJMa6pSZHmWQ</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/iaMKcYRvQaEJMa6pSZHmWQ&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>曹县黑客利用 macOS 恶意软件 NimDoor 攻击 Web3 相关目标</title>
-    <link href="http://example.com/2025/07/03/weixin_3018503311/"/>
-    <id>http://example.com/2025/07/03/weixin_3018503311/</id>
-    <published>2025-07-03T01:11:17.593Z</published>
-    <updated>2025-07-03T01:11:17.589Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/mLnrnh5wxgOwWjVfkrAHmg">https://mp.weixin.qq.com/s/mLnrnh5wxgOwWjVfkrAHmg</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/mLnrnh5wxgOwWjVfkrAHmg&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Houken 黑客组织利用 Ivanti 0day漏洞安装 Linux Rootkit</title>
-    <link href="http://example.com/2025/07/03/weixin_2278954623/"/>
-    <id>http://example.com/2025/07/03/weixin_2278954623/</id>
-    <published>2025-07-03T01:11:16.033Z</published>
-    <updated>2025-07-03T01:11:16.029Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/_AfoYdx1FzJPqqUD6hK_CQ">https://mp.weixin.qq.com/s/_AfoYdx1FzJPqqUD6hK_CQ</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/_AfoYdx1FzJPqqUD6hK_CQ&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Wing FTP Server Lua注入漏洞</title>
-    <link href="http://example.com/2025/07/02/github_2955672373/"/>
-    <id>http://example.com/2025/07/02/github_2955672373/</id>
-    <published>2025-07-02T22:15:22.042Z</published>
-    <updated>2025-07-02T22:15:22.038Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Wing FTP Server Lua注入漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-47812</li></ul><p><strong>漏洞类型：</strong> 代码注入</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 该漏洞利用了Wing FTP Server登录处理器（loginok.html）中的Lua注入漏洞，通过未经过滤的Lua代码执行，允许攻击者执行任意操作系统命令或获取反向shell。此漏洞通过<code>username</code>参数进行利用。</p><p><strong>产品厂商：</strong> Wing FTP Server</p><p><strong>产品名称：</strong> Wing FTP Server</p><p><strong>来源：</strong> <a href="https://github.com/0xgh057r3c0n/CVE-2025-47812">https://github.com/0xgh057r3c0n/CVE-2025-47812</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>.gitignore</li><li>CVE-2025-47812.py</li><li>LICENSE</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-47812-–-Wing-FTP-Server-RCE-via-Lua-Injection"><a href="#CVE-2025-47812-–-Wing-FTP-Server-RCE-via-Lua-Injection" class="headerlink" title="CVE-2025-47812 – Wing FTP Server RCE via Lua Injection"></a>CVE-2025-47812 – Wing FTP Server RCE via Lua Injection</h2><h2 id="Author-0xgh057r3c0n"><a href="#Author-0xgh057r3c0n" class="headerlink" title="Author: 0xgh057r3c0n  "></a><strong>Author:</strong> <a href="https://github.com/0xgh057r3c0n">0xgh057r3c0n</a>  </h2><h3 id="🧠-Description"><a href="#🧠-Description" class="headerlink" title="🧠 Description"></a>🧠 Description</h3><p>This exploit leverages a Lua injection vulnerability in <strong>Wing FTP Server</strong>‘s login handler (<code>loginok.html</code>) to execute arbitrary operating system commands or gain a reverse shell. It abuses unsanitized Lua code execution through the <code>username</code> parameter.</p><hr><h3 id="📦-Requirements"><a href="#📦-Requirements" class="headerlink" title="📦 Requirements"></a>📦 Requirements</h3><ul><li>Python 3.6 or higher</li><li><code>pip3</code></li></ul><h4 id="Python-Packages"><a href="#Python-Packages" class="headerlink" title="Python Packages"></a>Python Packages</h4><p>Install the required packages with:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip3 install -r requirements.txt<br>````<br><br>Or manually:<br><br>```bash<br>pip3 install requests colorama<br></code></pre></td></tr></table></figure><hr><h3 id="🛠️-Installation"><a href="#🛠️-Installation" class="headerlink" title="🛠️ Installation"></a>🛠️ Installation</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/0xgh057r3c0n/CVE-2025-47812.git<br><span class="hljs-built_in">cd</span> CVE-2025-47812<br>python3 CVE-2025-47812.py<br></code></pre></td></tr></table></figure><hr><h3 id="🚀-Usage"><a href="#🚀-Usage" class="headerlink" title="🚀 Usage"></a>🚀 Usage</h3><p>Run the script:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 CVE-2025-47812.py<br></code></pre></td></tr></table></figure><h4 id="Options"><a href="#Options" class="headerlink" title="Options:"></a>Options:</h4><ul><li><strong>Option 1:</strong> Execute a system command (e.g., <code>whoami</code>, <code>id</code>)</li><li><strong>Option 2:</strong> Launch a reverse shell (multiple payload options included)</li></ul><hr><h3 id="💡-Example"><a href="#💡-Example" class="headerlink" title="💡 Example"></a>💡 Example</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs text">Target URL (e.g., http://localhost:5466): http://192.168.1.100:5466<br>Username (e.g., anonymous): anonymous<br>Your choice (1 or 2): 1<br>Command to execute (default: whoami): whoami<br></code></pre></td></tr></table></figure><hr><h3 id="⚠️-Legal-Disclaimer"><a href="#⚠️-Legal-Disclaimer" class="headerlink" title="⚠️ Legal Disclaimer"></a>⚠️ Legal Disclaimer</h3><p>This tool is provided for <strong>educational and authorized security testing purposes only</strong>.<br>You are responsible for your actions. Use only on systems you own or are authorized to test.</p><hr><h3 id="📄-License"><a href="#📄-License" class="headerlink" title="📄 License"></a>📄 License</h3><p>This project is licensed under the MIT License. See the <a href="LICENSE">LICENSE</a> file for details.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Wing FTP Server Lua注入漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="代码注入" scheme="http://example.com/tags/%E4%BB%A3%E7%A0%81%E6%B3%A8%E5%85%A5/"/>
     
   </entry>
   
