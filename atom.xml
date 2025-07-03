@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-03T13:00:27.173Z</updated>
+  <updated>2025-07-03T13:15:16.982Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CVE-2025-6019 Exploit</title>
+    <link href="http://example.com/2025/07/03/github_3768099411/"/>
+    <id>http://example.com/2025/07/03/github_3768099411/</id>
+    <published>2025-07-03T13:15:16.000Z</published>
+    <updated>2025-07-03T13:15:16.982Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CVE-2025-6019 Exploit</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-6019</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> 该漏洞（CVE-2025-6019）的具体细节目前尚未公开，但从提供的POC代码和描述来看，它可能涉及到一个尚未广泛披露的安全问题。由于缺乏具体的受影响产品和漏洞类型的详细信息，无法进行深入的技术分析。通常，此类漏洞可能涉及远程代码执行、信息泄露或其他类型的安全风险。建议关注官方发布的安全公告以获取更多信息。在漏洞细节公开之前，用户应保持警惕，及时更新和修补可能受影响的系统。</p><p><strong>来源：</strong> <a href="https://github.com/dreysanox/CVE-2025-6019_Poc">https://github.com/dreysanox/CVE-2025-6019_Poc</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>poc2025-6019.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-6019-Poc"><a href="#CVE-2025-6019-Poc" class="headerlink" title="CVE-2025-6019_Poc"></a>CVE-2025-6019_Poc</h2><p>Exploit for CVE-2025-6019</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CVE-2025-6019 Exploit&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+  </entry>
   
   <entry>
     <title>BlackHatEvents twitter update</title>
@@ -519,31 +546,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="安恒信息CERT" scheme="http://example.com/tags/%E5%AE%89%E6%81%92%E4%BF%A1%E6%81%AFCERT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>zoomeye_team twitter update</title>
-    <link href="http://example.com/2025/07/03/twitter_2056498917/"/>
-    <id>http://example.com/2025/07/03/twitter_2056498917/</id>
-    <published>2025-07-03T11:00:30.000Z</published>
-    <updated>2025-07-03T11:00:30.040Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> zoomeye_team</p><p><strong>推文：</strong> ⚡️漏洞详情现已公布：<a href="https://t.co/9pDdJLXkYX">https://t.co/9pDdJLXkYX</a></p><p>🚨🚨CVE-2025-49493：Akamai CloudTest 存在XXE注入漏洞！攻击者可利用SOAP端点进行文件包含攻击。<br>🔥PoC：<a href="https://t.co/BnrqTGTdlS">https://t.co/BnrqTGTdlS</a></p><p>通过vul.cve筛选搜索👉vul.cve&#x3D;”CVE-2025-49493”<br>ZoomEye搜索语句👉app&#x3D;”Akamai CloudTest”<br>揭示293个潜在目标！<br>ZoomEye链接：<a href="https://t.co/1vYFhYG9zx">https://t.co/1vYFhYG9zx</a></p><p>来自@Xbow的深度分析：<a href="https://t.co/nQvMGya2lU">https://t.co/nQvMGya2lU</a><br>参考：<a href="https://t.co/2RLdNtxMeg">https://t.co/2RLdNtxMeg</a></p><p>#ZoomEye #网络测绘 #网络安全 #网络空间洞察2025</p><p><strong>链接：</strong> <a href="https://x.com/zoomeye_team/status/1940717920109449524">https://x.com/zoomeye_team/status/1940717920109449524</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; zoomeye_team&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; ⚡️漏洞详情现已公布：&lt;a href=&quot;https://t.co/9pDdJLXkYX&quot;&gt;https://t.co/9pDdJLXkYX&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="zoomeye_team" scheme="http://example.com/tags/zoomeye-team/"/>
     
   </entry>
   
