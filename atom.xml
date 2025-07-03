@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-03T19:00:06.395Z</updated>
+  <updated>2025-07-03T19:45:21.452Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Sudo local privilege escalation Vulnerability</title>
+    <link href="http://example.com/2025/07/03/github_2963328844/"/>
+    <id>http://example.com/2025/07/03/github_2963328844/</id>
+    <published>2025-07-03T19:45:21.000Z</published>
+    <updated>2025-07-03T19:45:21.452Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Sudo local privilege escalation Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-32463</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 该漏洞CVE-2025-32463影响Sudo 1.9.14至1.9.17版本，是一个本地权限提升漏洞，CVSS评分为9.3，属于高危漏洞。Sudo是一个在Linux和Unix-like操作系统中广泛使用的程序，允许用户以其他用户的权限运行程序，通常是超级用户。此漏洞通过<code>--chroot</code>选项被利用，允许未授权的用户通过特定的操作获得root权限。</p><p><strong>受影响产品</strong>：Sudo是一个核心的系统管理工具，几乎所有的Linux发行版和macOS都预装了Sudo。它在企业级服务器、开发环境和个人电脑中都有广泛的应用。由于其高权限的特性，Sudo中的漏洞尤其危险。</p><p><strong>漏洞解释</strong>：此漏洞属于权限提升类型，技术根源在于Sudo的<code>--chroot</code>功能在处理某些参数时未能正确验证用户权限，导致攻击者可以绕过预期的权限限制。这种类型的漏洞通常由于输入验证不足或逻辑错误引起。</p><p><strong>影响分析</strong>：利用此漏洞，攻击者可以在不需要任何认证的情况下，从普通用户权限提升到root权限，从而完全控制系统。这种漏洞可以被自动化工具利用，对系统安全构成严重威胁。特别是对于Kali Linux用户，由于官方尚未发布补丁，风险更高。建议用户立即采取手动补丁措施以防止潜在的攻击。</p><p><strong>产品名称：</strong> Sudo</p><p><strong>影响版本：</strong> 1.9.14–1.9.17</p><p><strong>来源：</strong> <a href="https://github.com/CIA911/sudo_patch_CVE-2025-32463">https://github.com/CIA911/sudo_patch_CVE-2025-32463</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>LICENSE</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="sudo-patch-CVE-2025-32463"><a href="#sudo-patch-CVE-2025-32463" class="headerlink" title="sudo_patch_CVE-2025-32463"></a>sudo_patch_CVE-2025-32463</h2><p>Mr.CIA’s manual patching guide for CVE-2025-32463 (Sudo local privilege escalation) on Kali Linux and Ubuntu WSL.</p><h2 id="CVE-2025-32463-Sudo-Patch-Guide-🛡️"><a href="#CVE-2025-32463-Sudo-Patch-Guide-🛡️" class="headerlink" title="CVE-2025-32463 Sudo Patch Guide 🛡️"></a>CVE-2025-32463 Sudo Patch Guide 🛡️</h2><p>Eish, CVE-2025-32463 is a nasty local privilege escalation flaw (CVSS 9.3) in Sudo 1.9.14–1.9.17, exploitable via the <code>--chroot</code> option. Kali Linux has no official patch yet, and Ubuntu users need to stay sharp. This lekker guide shows you how to manually patch Sudo on Kali and Ubuntu WSL to keep your systems secure. 🚀</p><h3 id="Why-This-Matters"><a href="#Why-This-Matters" class="headerlink" title="Why This Matters"></a>Why This Matters</h3><p>CVE-2025-32463 lets unprivileged users gain root access by exploiting Sudo’s <code>--chroot</code> feature. Reported by Rich Mirch on June 30, 2025, it affects major Linux distros and macOS. Kali users are especially at risk due to no official patch. Patch now to avoid a hacker having a jol with your system! 😬</p><h3 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h3><ul><li>Root access (<code>sudo</code>)</li><li>Internet connection</li><li>Build tools:<pre><code class="language-bash">sudo apt install build-essential</code></pre></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Sudo local privilege escalation Vulnera</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
+    
+  </entry>
   
   <entry>
     <title>Scattered Spider Rapid7 Insights, Observations, and Recommendations</title>
@@ -500,33 +526,6 @@
     <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
     
     <category term="rapid7/metasploit-framework:github commit" scheme="http://example.com/tags/rapid7-metasploit-framework-github-commit/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CVE-2025-6019 Exploit</title>
-    <link href="http://example.com/2025/07/03/github_3768099411/"/>
-    <id>http://example.com/2025/07/03/github_3768099411/</id>
-    <published>2025-07-03T13:15:16.000Z</published>
-    <updated>2025-07-03T13:15:16.982Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CVE-2025-6019 Exploit</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-6019</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> 该漏洞（CVE-2025-6019）的具体细节目前尚未公开，但从提供的POC代码和描述来看，它可能涉及到一个尚未广泛披露的安全问题。由于缺乏具体的受影响产品和漏洞类型的详细信息，无法进行深入的技术分析。通常，此类漏洞可能涉及远程代码执行、信息泄露或其他类型的安全风险。建议关注官方发布的安全公告以获取更多信息。在漏洞细节公开之前，用户应保持警惕，及时更新和修补可能受影响的系统。</p><p><strong>来源：</strong> <a href="https://github.com/dreysanox/CVE-2025-6019_Poc">https://github.com/dreysanox/CVE-2025-6019_Poc</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>poc2025-6019.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-6019-Poc"><a href="#CVE-2025-6019-Poc" class="headerlink" title="CVE-2025-6019_Poc"></a>CVE-2025-6019_Poc</h2><p>Exploit for CVE-2025-6019</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CVE-2025-6019 Exploit&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
     
   </entry>
   
