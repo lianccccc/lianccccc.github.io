@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-03T18:00:26.896Z</updated>
+  <updated>2025-07-03T19:00:06.395Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Scattered Spider Rapid7 Insights, Observations, and Recommendations</title>
+    <link href="http://example.com/2025/07/03/blog_1322249762/"/>
+    <id>http://example.com/2025/07/03/blog_1322249762/</id>
+    <published>2025-07-03T19:00:06.000Z</published>
+    <updated>2025-07-03T19:00:06.395Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://www.rapid7.com/blog/post/scattered-spider-rapid7-insights-observations-and-recommendations/">https://www.rapid7.com/blog/post/scattered-spider-rapid7-insights-observations-and-recommendations/</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://www.rapid7.com/blog/post/scattered-spider-rapid7-insights-observations-and-recommendations/&quot;&gt;https:</summary>
+      
+    
+    
+    
+    <category term="安全博客" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+    <category term="www.rapid7.com" scheme="http://example.com/tags/www-rapid7-com/"/>
+    
+  </entry>
   
   <entry>
     <title>BlackHatEvents twitter update</title>
@@ -503,31 +527,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BlackHatEvents twitter update</title>
-    <link href="http://example.com/2025/07/03/twitter_2436457289/"/>
-    <id>http://example.com/2025/07/03/twitter_2436457289/</id>
-    <published>2025-07-03T13:00:27.000Z</published>
-    <updated>2025-07-03T13:00:27.173Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> SecTor的执行峰会给CISO及其他网络安全高管从业者提供了一个聆听行业专家见解的机会，这些专家正助力塑造下一代信息安全战略。立即申请参加峰会&gt;&gt; <a href="https://t.co/rKAEGQPHQk">https://t.co/rKAEGQPHQk</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1940756915190903053">https://x.com/BlackHatEvents/status/1940756915190903053</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; SecTor的执行峰会给CISO及其他网络安全高管从业者提供了一个聆听行业专家见解的机会，这些专家正助力塑造下一代信息安全战略。立即申请参加峰会&amp;</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
     
   </entry>
   
