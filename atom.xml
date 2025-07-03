@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-03T16:45:45.034Z</updated>
+  <updated>2025-07-03T17:00:33.054Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BlackHatEvents twitter update</title>
+    <link href="http://example.com/2025/07/03/twitter_3053168981/"/>
+    <id>http://example.com/2025/07/03/twitter_3053168981/</id>
+    <published>2025-07-03T17:00:33.000Z</published>
+    <updated>2025-07-03T17:00:33.054Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> RT @abhaybhargav: 大约一个月后，我们将在@BlackHatEvents #BHUSA带来我们传奇的课程“攻击应用供应链”…</p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1940816418637074750">https://x.com/BlackHatEvents/status/1940816418637074750</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; RT @abhaybhargav: 大约一个月后，我们将在@BlackHatEvents #BHUSA带来我们传奇的课程“攻击应用供应链”…&lt;/p</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>BlackHatEvents twitter update</title>
+    <link href="http://example.com/2025/07/03/twitter_3754733628/"/>
+    <id>http://example.com/2025/07/03/twitter_3754733628/</id>
+    <published>2025-07-03T17:00:26.000Z</published>
+    <updated>2025-07-03T17:00:26.013Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> RT @BeyondTrust: 25年2月8日。做好准备。</p><p>网络安全荒野即将来到拉斯维加斯…</p><p>🌲 <a href="https://t.co/S34nI5UScj">https://t.co/S34nI5UScj</a> 🌲</p><p>寻找BeyondTr…</p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1940816527718338650">https://x.com/BlackHatEvents/status/1940816527718338650</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; RT @BeyondTrust: 25年2月8日。做好准备。&lt;/p&gt;
+&lt;p&gt;网络安全荒野即将来到拉斯维加斯…&lt;/p&gt;
+&lt;p&gt;🌲 &lt;a href=</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
+    
+  </entry>
   
   <entry>
     <title>Wing FTP Server NULL-byte Authentication Bypass</title>
@@ -477,60 +529,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hvv72-73情报</title>
-    <link href="http://example.com/2025/07/03/weixin_1178145959/"/>
-    <id>http://example.com/2025/07/03/weixin_1178145959/</id>
-    <published>2025-07-03T11:56:08.793Z</published>
-    <updated>2025-07-03T11:56:08.788Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 飓风网络安全</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/dKjV3C5B3LiUpxL91trvBA">https://mp.weixin.qq.com/s/dKjV3C5B3LiUpxL91trvBA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 飓风网络安全&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/dKjV3C5B3LiUpxL91trvBA&quot;&gt;https://mp.weixin.qq</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="飓风网络安全" scheme="http://example.com/tags/%E9%A3%93%E9%A3%8E%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【高危漏洞预警】IBM WebSphere远程代码执行漏洞(CVE-2025-36038)</title>
-    <link href="http://example.com/2025/07/03/weixin_246998109/"/>
-    <id>http://example.com/2025/07/03/weixin_246998109/</id>
-    <published>2025-07-03T11:56:08.433Z</published>
-    <updated>2025-07-03T11:56:08.428Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 飓风网络安全</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/6092EMCrhyU8fOCB_rbLLg">https://mp.weixin.qq.com/s/6092EMCrhyU8fOCB_rbLLg</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 飓风网络安全&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/6092EMCrhyU8fOCB_rbLLg&quot;&gt;https://mp.weixin.qq</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="飓风网络安全" scheme="http://example.com/tags/%E9%A3%93%E9%A3%8E%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
     
   </entry>
   
