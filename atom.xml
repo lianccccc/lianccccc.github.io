@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-03T21:15:25.134Z</updated>
+  <updated>2025-07-03T21:30:05.653Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>NextJS vulnerability can lead to DoS via cache poisoning</title>
+    <link href="http://example.com/2025/07/03/github_1348466141/"/>
+    <id>http://example.com/2025/07/03/github_1348466141/</id>
+    <published>2025-07-03T21:30:05.000Z</published>
+    <updated>2025-07-03T21:30:05.653Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-67rr-84xm-4c7r">https://github.com/advisories/GHSA-67rr-84xm-4c7r</a></p><p><strong>仓库 Star：</strong> 132887</p><p><strong>CVSS 评分：</strong> 7.5</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/vercel/next.js/security/advisories/GHSA-67rr-84xm-4c7r">https://github.com/vercel/next.js/security/advisories/GHSA-67rr-84xm-4c7r</a></p></li><li><p><a href="https://github.com/vercel/next.js/commit/16bfce64ef2157f2c1dfedcfdb7771bc63103fd2">https://github.com/vercel/next.js/commit/16bfce64ef2157f2c1dfedcfdb7771bc63103fd2</a></p></li><li><p><a href="https://github.com/vercel/next.js/commit/a15b974ed707d63ad4da5b74c1441f5b7b120e93">https://github.com/vercel/next.js/commit/a15b974ed707d63ad4da5b74c1441f5b7b120e93</a></p></li><li><p><a href="https://vercel.com/changelog/cve-2025-49826">https://vercel.com/changelog/cve-2025-49826</a></p></li><li><p><a href="https://github.com/advisories/GHSA-67rr-84xm-4c7r">https://github.com/advisories/GHSA-67rr-84xm-4c7r</a></p></li></ul><p><strong>描述：</strong></p><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>A vulnerability affecting Next.js has been addressed. It impacted versions 15.0.4 through 15.1.8 and involved a cache poisoning bug leading to a Denial of Service (DoS) condition.</p><p>Under certain conditions, this issue may allow a HTTP 204 response to be cached for static pages, leading to the 204 response being served to all users attempting to access the page</p><p>More details: <a href="https://vercel.com/changelog/cve-2025-49826">CVE-2025-49826</a></p><h2 id="Credits"><a href="#Credits" class="headerlink" title="Credits"></a>Credits</h2><ul><li>Allam Rachid <a href="https://zhero-web-sec.github.io/research-and-things/">zhero;</a></li><li>Allam Yasser (inzo)</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-67rr-84xm-4c7r&quot;&gt;https://github.com/advisories/GHSA-67rr-84xm-4c7r&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>Sudo chroot Elevation of Privilege Vulnerability</title>
@@ -500,31 +524,6 @@
     
     
     <category term="offsectraining" scheme="http://example.com/tags/offsectraining/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BlackHatEvents twitter update</title>
-    <link href="http://example.com/2025/07/03/twitter_2820750841/"/>
-    <id>http://example.com/2025/07/03/twitter_2820750841/</id>
-    <published>2025-07-03T16:00:44.000Z</published>
-    <updated>2025-07-03T16:00:44.699Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> 在#BlackHatTrainings课程“滥用与保护Kubernetes、Linux及容器（在线）”中，您将向Bastille Linux的创建者Jay Beale学习如何攻击和防御Kubernetes、Linux及容器。了解更多并在此注册课程&gt;&gt; <a href="https://t.co/VuP1IpV7fL">https://t.co/VuP1IpV7fL</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1940802466083176778">https://x.com/BlackHatEvents/status/1940802466083176778</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 在#BlackHatTrainings课程“滥用与保护Kubernetes、Linux及容器（在线）”中，您将向Bastille Linux的创建</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
     
   </entry>
   
