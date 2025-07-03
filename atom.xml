@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-03T07:30:23.358Z</updated>
+  <updated>2025-07-03T08:15:27.786Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CVE-2025-32462 sudo 权限提升漏洞</title>
+    <link href="http://example.com/2025/07/03/github_3799603250/"/>
+    <id>http://example.com/2025/07/03/github_3799603250/</id>
+    <published>2025-07-03T08:15:27.000Z</published>
+    <updated>2025-07-03T08:15:27.786Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CVE-2025-32462 sudo 权限提升漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-32462</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> CVE-2025-32462是一个影响sudo的权限提升漏洞。sudo是一个在Unix和Linux操作系统中广泛使用的程序，它允许用户以其他用户的权限运行程序，通常是超级用户。这个漏洞的发现者CryingN提供了一个简单的POC（概念验证），展示了如何利用这个漏洞。</p><p><strong>受影响的产品</strong>：sudo是Unix和Linux系统中的核心组件，几乎所有的Unix-like系统都会预装sudo。它使得系统管理员可以委派权限，而不需要分享root密码，因此在企业级服务和日常系统管理中都非常重要。</p><p><strong>漏洞解释</strong>：这个漏洞属于权限提升类型，攻击者可以利用它绕过预期的权限限制，执行本不应被允许的操作。虽然具体的漏洞技术细节尚未公开，但通常这类漏洞是由于权限验证逻辑中的缺陷或错误导致的。</p><p><strong>影响分析</strong>：成功利用此漏洞的攻击者可以在不需要知道root密码的情况下，提升自己的权限到root级别。这意味着攻击者可以完全控制系统，执行任意命令，访问所有数据，甚至安装恶意软件。由于sudo的广泛使用，这个漏洞的影响范围非常广，尤其是在多用户环境或服务器上。攻击者可能需要一定的本地访问权限来利用这个漏洞，但一旦利用成功，后果将非常严重。</p><p><strong>产品名称：</strong> sudo</p><p><strong>来源：</strong> <a href="https://github.com/CryingN/CVE-2025-32462">https://github.com/CryingN/CVE-2025-32462</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CVE-2025-32462 sudo 权限提升漏洞&lt;/p&gt;
+&lt;p&gt;&lt;stro</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
+    
+  </entry>
   
   <entry>
     <title>JEHC-BPM Remote Code Execute Vulnerability</title>
@@ -515,33 +542,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Microsoft Outlook 远程代码执行漏洞</title>
-    <link href="http://example.com/2025/07/02/github_3724906721/"/>
-    <id>http://example.com/2025/07/02/github_3724906721/</id>
-    <published>2025-07-02T20:45:25.464Z</published>
-    <updated>2025-07-02T20:45:25.462Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Microsoft Outlook 远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-21413</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Microsoft Outlook 存在一个远程代码执行漏洞，攻击者可以通过构造特殊的Moniker Link来利用此漏洞，导致在受害者系统上执行任意代码。此漏洞被标记为严重级别，影响广泛使用的Microsoft Outlook客户端。</p><p><strong>产品厂商：</strong> Microsoft</p><p><strong>产品名称：</strong> Outlook</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12519">https://github.com/projectdiscovery/nuclei-templates/issues/12519</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>Microsoft Outlook Remote Code Execution Vulnerability</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://www.vicarius.io/vsociety/posts/cve-2024-21413-critical-monikerlink-vulnerability-affecting-microsoft-outlook-detection-script">https://www.vicarius.io/vsociety/posts/cve-2024-21413-critical-monikerlink-vulnerability-affecting-microsoft-outlook-detection-script</a></li><li><a href="https://github.com/MQKGitHub/Moniker-Link-CVE-2024-21413">https://github.com/MQKGitHub/Moniker-Link-CVE-2024-21413</a></li><li><a href="https://github.com/PolarisXSec/CVE-2024-21413">https://github.com/PolarisXSec/CVE-2024-21413</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:PolarisXSec&#x2F;CVE-2024-21413.git</li><li><a href="https://vulncheck.com/xdb/3a5fa2dbf482">https://vulncheck.com/xdb/3a5fa2dbf482</a></li><li><a href="https://github.com/ArtemCyberLab/Project-NTLM-Hash-Capture-and-Phishing-Email-Exploitation-for-CVE-2024-21413">https://github.com/ArtemCyberLab/Project-NTLM-Hash-Capture-and-Phishing-Email-Exploitation-for-CVE-2024-21413</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:ArtemCyberLab&#x2F;Project-NTLM-Hash-Capture-and-Phishing-Email-Exploitation-for-CVE-2024-21413.git</li><li><a href="https://vulncheck.com/xdb/e742b4b6b811">https://vulncheck.com/xdb/e742b4b6b811</a></li><li><a href="https://github.com/D1se0/CVE-2024-21413-Vulnerabilidad-Outlook-LAB">https://github.com/D1se0/CVE-2024-21413-Vulnerabilidad-Outlook-LAB</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:D1se0&#x2F;CVE-2024-21413-Vulnerabilidad-Outlook-LAB.git</li><li><a href="https://vulncheck.com/xdb/9d498f414ca6">https://vulncheck.com/xdb/9d498f414ca6</a></li><li><a href="https://github.com/ThemeHackers/CVE-2024-21413">https://github.com/ThemeHackers/CVE-2024-21413</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:ThemeHackers&#x2F;CVE-2024-21413.git</li><li><a href="https://github.com/Redfox-Security/Unveiling-Moniker-Link-CVE-2024-21413-Navigating-the-Latest-Cybersecurity-Landscape">https://github.com/Redfox-Security/Unveiling-Moniker-Link-CVE-2024-21413-Navigating-the-Latest-Cybersecurity-Landscape</a></li><li><a href="https://github.com/DerZiad/CVE-2024-21413">https://github.com/DerZiad/CVE-2024-21413</a></li><li><a href="https://vulncheck.com/xdb/903f7c89226e">https://vulncheck.com/xdb/903f7c89226e</a></li><li><a href="https://github.com/olebris/CVE-2024-21413">https://github.com/olebris/CVE-2024-21413</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:olebris&#x2F;CVE-2024-21413.git</li><li><a href="https://vulncheck.com/xdb/f5432e60cf3a">https://vulncheck.com/xdb/f5432e60cf3a</a></li><li><a href="https://github.com/ShubhamKanhere307/CVE-2024-21413">https://github.com/ShubhamKanhere307/CVE-2024-21413</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:ShubhamKanhere307&#x2F;CVE-2024-21413.git</li><li><a href="https://vulncheck.com/xdb/7e98d318e5ee">https://vulncheck.com/xdb/7e98d318e5ee</a></li><li><a href="https://github.com/th3Hellion/CVE-2024-21413">https://github.com/th3Hellion/CVE-2024-21413</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:th3Hellion&#x2F;CVE-2024-21413.git</li><li><a href="https://vulncheck.com/xdb/22ef4fecc344">https://vulncheck.com/xdb/22ef4fecc344</a></li><li><a href="https://github.com/X-Projetion/CVE-2024-21413-Microsoft-Outlook-RCE-Exploit">https://github.com/X-Projetion/CVE-2024-21413-Microsoft-Outlook-RCE-Exploit</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:X-Projetion&#x2F;CVE-2024-21413-Microsoft-Outlook-RCE-Exploit.git</li><li><a href="https://vulncheck.com/xdb/353be747e705">https://vulncheck.com/xdb/353be747e705</a></li><li><a href="https://github.com/dshabani96/CVE-2024-21413">https://github.com/dshabani96/CVE-2024-21413</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:dshabani96&#x2F;CVE-2024-21413.git</li><li><a href="https://vulncheck.com/xdb/9d1931bf8b43">https://vulncheck.com/xdb/9d1931bf8b43</a></li><li><a href="https://github.com/ahmetkarakayaoffical/CVE-2024-21413-Microsoft-Outlook-Remote-Code-Execution-Vulnerability">https://github.com/ahmetkarakayaoffical/CVE-2024-21413-Microsoft-Outlook-Remote-Code-Execution-Vulnerability</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:ahmetkarakayaoffical&#x2F;CVE-2024-21413-Microsoft-Outlook-Remote-Code-Execution-Vulnerability.git</li><li><a href="https://vulncheck.com/xdb/38f03d75ef65">https://vulncheck.com/xdb/38f03d75ef65</a></li><li><a href="https://github.com/Mdusmandasthaheer/CVE-2024-21413-Microsoft-Outlook-Remote-Code-Execution-Vulnerability">https://github.com/Mdusmandasthaheer/CVE-2024-21413-Microsoft-Outlook-Remote-Code-Execution-Vulnerability</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:Mdusmandasthaheer&#x2F;CVE-2024-21413-Microsoft-Outlook-Remote-Code-Execution-Vulnerability.git</li><li><a href="https://vulncheck.com/xdb/f843c9fab927">https://vulncheck.com/xdb/f843c9fab927</a></li><li><a href="https://github.com/MSeymenD/CVE-2024-21413">https://github.com/MSeymenD/CVE-2024-21413</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:MSeymenD&#x2F;CVE-2024-21413.git</li><li><a href="https://vulncheck.com/xdb/b009e7e8de7f">https://vulncheck.com/xdb/b009e7e8de7f</a></li><li><a href="https://github.com/CMNatic/CVE-2024-21413">https://github.com/CMNatic/CVE-2024-21413</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:CMNatic&#x2F;CVE-2024-21413.git</li><li><a href="https://vulncheck.com/xdb/e5743c4aa3d6">https://vulncheck.com/xdb/e5743c4aa3d6</a></li><li><a href="https://github.com/r00tb1t/CVE-2024-21413-POC">https://github.com/r00tb1t/CVE-2024-21413-POC</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:r00tb1t&#x2F;CVE-2024-21413-POC.git</li><li><a href="https://vulncheck.com/xdb/bf0ad298ff8b">https://vulncheck.com/xdb/bf0ad298ff8b</a></li><li><a href="https://github.com/xaitax/CVE-2024-21413-Microsoft-Outlook-Remote-Code-Execution-Vulnerability">https://github.com/xaitax/CVE-2024-21413-Microsoft-Outlook-Remote-Code-Execution-Vulnerability</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:xaitax&#x2F;CVE-2024-21413-Microsoft-Outlook-Remote-Code-Execution-Vulnerability.git</li><li><a href="https://vulncheck.com/xdb/4424d059b825">https://vulncheck.com/xdb/4424d059b825</a></li><li><a href="https://github.com/duy-31/CVE-2024-21413">https://github.com/duy-31/CVE-2024-21413</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:duy-31&#x2F;CVE-2024-21413.git</li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-NA"><a href="#Shodan-Query-NA" class="headerlink" title="Shodan Query: NA"></a>Shodan Query: <code>NA</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Microsoft Outlook 远程代码执行漏洞&lt;/p&gt;
-&lt;p&gt;&lt;stro</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
   </entry>
   
