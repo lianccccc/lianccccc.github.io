@@ -19,15 +19,15 @@
   <meta name="author" content="lianccc">
   <meta name="keywords" content="">
   
-    <meta name="description" content="漏洞信息漏洞名称： JEHC-BPM Remote Code Execute Vulnerability 漏洞编号：  CVE： CVE-2025-45854  漏洞类型： 命令执行 漏洞等级： 严重 漏洞描述： JEHC-BPM是一款业务流程管理软件，广泛应用于企业级服务中，用于优化和自动化业务流程。该软件支持多种业务流程的建模、执行和监控，是企业IT基础设施中的重要组成部分。由于其在企业中的广">
+    <meta name="description" content="漏洞信息漏洞名称： JEHC-BPM Remote Code Execute Vulnerability 漏洞编号：  CVE： CVE-2025-45854  漏洞类型： 命令执行 漏洞等级： 严重 漏洞描述： JEHC-BPM是一款业务流程管理软件，广泛应用于企业级服务中，用于优化和自动化业务流程。它支持多种部署场景，包括企业内部部署和云服务部署，因其功能强大和易用性而受到许多企业的青睐。该软">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JEHC-BPM Remote Code Execute Vulnerability">
 <meta property="og:url" content="http://example.com/2025/07/03/github_4203184563/index.html">
 <meta property="og:site_name" content="liancc&#39; infos blog">
-<meta property="og:description" content="漏洞信息漏洞名称： JEHC-BPM Remote Code Execute Vulnerability 漏洞编号：  CVE： CVE-2025-45854  漏洞类型： 命令执行 漏洞等级： 严重 漏洞描述： JEHC-BPM是一款业务流程管理软件，广泛应用于企业级服务中，用于优化和自动化业务流程。该软件支持多种业务流程的建模、执行和监控，是企业IT基础设施中的重要组成部分。由于其在企业中的广">
+<meta property="og:description" content="漏洞信息漏洞名称： JEHC-BPM Remote Code Execute Vulnerability 漏洞编号：  CVE： CVE-2025-45854  漏洞类型： 命令执行 漏洞等级： 严重 漏洞描述： JEHC-BPM是一款业务流程管理软件，广泛应用于企业级服务中，用于优化和自动化业务流程。它支持多种部署场景，包括企业内部部署和云服务部署，因其功能强大和易用性而受到许多企业的青睐。该软">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-07-03T07:30:23.000Z">
-<meta property="article:modified_time" content="2025-07-03T07:30:23.358Z">
+<meta property="article:published_time" content="2025-07-03T10:00:25.000Z">
+<meta property="article:modified_time" content="2025-07-03T10:00:25.740Z">
 <meta property="article:author" content="lianccc">
 <meta property="article:tag" content="命令执行">
 <meta property="article:tag" content="projectdiscovery&#x2F;nuclei-templates:github issues">
@@ -213,8 +213,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-07-03 07:30" pubdate>
-          2025年7月3日 早上
+        <time datetime="2025-07-03 10:00" pubdate>
+          2025年7月3日 上午
         </time>
       </span>
     
@@ -225,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          599 字
+          560 字
         
       </span>
     
@@ -285,7 +285,7 @@
 </ul>
 <p><strong>漏洞类型：</strong> 命令执行</p>
 <p><strong>漏洞等级：</strong> 严重</p>
-<p><strong>漏洞描述：</strong> JEHC-BPM是一款业务流程管理软件，广泛应用于企业级服务中，用于优化和自动化业务流程。该软件支持多种业务流程的建模、执行和监控，是企业IT基础设施中的重要组成部分。由于其在企业中的广泛应用，该漏洞的影响范围较广。该漏洞存在于JEHC-BPM的&#x2F;server&#x2F;executeExec组件中，由于对executeExec端点的授权检查不足，攻击者可以直接执行任意命令。这种漏洞的技术根源在于服务器端未能正确验证和限制用户输入，导致攻击者可以通过构造特定的请求来绕过安全限制，执行恶意代码。此漏洞的严重性在于，它允许攻击者在无需任何身份验证的情况下远程执行代码，可能导致服务器被完全控制，数据泄露，甚至服务中断。由于漏洞的利用方式简单且影响深远，它被评定为严重级别。攻击者可以利用此漏洞自动化地攻击目标系统，对企业信息安全构成重大威胁。</p>
+<p><strong>漏洞描述：</strong> JEHC-BPM是一款业务流程管理软件，广泛应用于企业级服务中，用于优化和自动化业务流程。它支持多种部署场景，包括企业内部部署和云服务部署，因其功能强大和易用性而受到许多企业的青睐。该软件在v2.0.1及之前版本中存在一个远程命令执行漏洞，攻击者可以通过构造特定的POST请求到&#x2F;server&#x2F;executeExec端点，利用授权检查不足的问题，直接执行任意命令。这一漏洞的技术根源在于服务器端对用户输入的命令参数未进行充分的验证和过滤，导致攻击者可以注入恶意命令。由于该漏洞允许未经授权的远程代码执行，攻击者可以完全控制受影响的系统，执行任意操作，如数据泄露、服务中断等，且无需任何形式的身份验证，极大地增加了被利用的风险。</p>
 <p><strong>产品名称：</strong> JEHC-BPM</p>
 <p><strong>影响版本：</strong> &lt;&#x3D; v2.0.1</p>
 <p><strong>搜索语法：</strong> body&#x3D;”JEHC”</p>
@@ -385,18 +385,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/07/03/github_3799603250/" title="CVE-2025-32462 sudo 权限提升漏洞">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">CVE-2025-32462 sudo 权限提升漏洞</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/07/03/twitter_973494131/" title="fofabot twitter update">
-                        <span class="hidden-mobile">fofabot twitter update</span>
+                      <a href="/2025/07/03/github_3799603250/" title="CVE-2025-32462 sudo 权限提升漏洞">
+                        <span class="hidden-mobile">CVE-2025-32462 sudo 权限提升漏洞</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
