@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-03T14:30:05.566Z</updated>
+  <updated>2025-07-03T15:00:24.860Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BlackHatEvents twitter update</title>
+    <link href="http://example.com/2025/07/03/twitter_2371547728/"/>
+    <id>http://example.com/2025/07/03/twitter_2371547728/</id>
+    <published>2025-07-03T15:00:24.000Z</published>
+    <updated>2025-07-03T15:00:24.860Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> #BHUSA简报 “LLMDYara：基于大语言模型的可解释文件特征与DNAHash自动生成YARA规则” 将介绍LLMDYara，这是一个整合专家知识与大语言模型的自动规则生成解决方案。不要错过，立即注册&gt;&gt; <a href="https://t.co/2pfSlTHGzb">https://t.co/2pfSlTHGzb</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1940787391838523628">https://x.com/BlackHatEvents/status/1940787391838523628</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; #BHUSA简报 “LLMDYara：基于大语言模型的可解释文件特征与DNAHash自动生成YARA规则” 将介绍LLMDYara，这是一个整合专</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
+    
+  </entry>
   
   <entry>
     <title>n8n Vulnerable to Denial of Service via Malformed Binary Data Requests</title>
@@ -501,33 +526,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/P0iPSUoi_0gHIlEWRjtTfA&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>攻击者利用PDF文件冒充微软实施钓鱼攻击</title>
-    <link href="http://example.com/2025/07/03/weixin_1181601774/"/>
-    <id>http://example.com/2025/07/03/weixin_1181601774/</id>
-    <published>2025-07-03T11:14:30.436Z</published>
-    <updated>2025-07-03T11:14:30.434Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/YwAPcunrxrHMZ6Xcro9nmg">https://mp.weixin.qq.com/s/YwAPcunrxrHMZ6Xcro9nmg</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/YwAPcunrxrHMZ6Xcro9nmg&quot;&gt;https://mp.weixin.q</summary>
       
     
     
