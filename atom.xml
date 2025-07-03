@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-03T20:45:20.637Z</updated>
+  <updated>2025-07-03T21:00:06.630Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Nextjs has a Cache poisoning vulnerability due to omission of the Vary header</title>
+    <link href="http://example.com/2025/07/03/github_558798396/"/>
+    <id>http://example.com/2025/07/03/github_558798396/</id>
+    <published>2025-07-03T21:00:06.000Z</published>
+    <updated>2025-07-03T21:00:06.630Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-r2fc-ccr8-96c4">https://github.com/advisories/GHSA-r2fc-ccr8-96c4</a></p><p><strong>仓库 Star：</strong> 132887</p><p><strong>CVSS 评分：</strong> 3.7</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/vercel/next.js/security/advisories/GHSA-r2fc-ccr8-96c4">https://github.com/vercel/next.js/security/advisories/GHSA-r2fc-ccr8-96c4</a></p></li><li><p><a href="https://github.com/vercel/next.js/pull/79939">https://github.com/vercel/next.js/pull/79939</a></p></li><li><p><a href="https://github.com/vercel/next.js/releases/tag/v15.3.3">https://github.com/vercel/next.js/releases/tag/v15.3.3</a></p></li><li><p><a href="https://vercel.com/changelog/cve-2025-49005">https://vercel.com/changelog/cve-2025-49005</a></p></li><li><p><a href="https://github.com/advisories/GHSA-r2fc-ccr8-96c4">https://github.com/advisories/GHSA-r2fc-ccr8-96c4</a></p></li></ul><p><strong>描述：</strong></p><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>A cache poisoning issue in <strong>Next.js App Router &gt;&#x3D;15.3.0 and &lt; 15.3.3</strong> may have allowed RSC payloads to be cached and served in place of HTML, under specific conditions involving middleware and redirects. This issue has been fixed in <strong>Next.js 15.3.3</strong>.</p><p>Users on affected versions should <strong>upgrade immediately</strong> and <strong>redeploy</strong> to ensure proper caching behavior.</p><p>More details: <a href="https://vercel.com/changelog/cve-2025-49005">CVE-2025-49005</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-r2fc-ccr8-96c4&quot;&gt;https://github.com/advisories/GHSA-r2fc-ccr8-96c4&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>Citrix NetScaler CVE-2025-6543 Vulnerability</title>
@@ -502,32 +526,6 @@
     <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
     
     <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sudo Host Option Local Privilege Escalation Vulnerability</title>
-    <link href="http://example.com/2025/07/03/github_410633474/"/>
-    <id>http://example.com/2025/07/03/github_410633474/</id>
-    <published>2025-07-03T15:15:22.000Z</published>
-    <updated>2025-07-03T15:15:22.597Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Sudo Host Option Local Privilege Escalation Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-32462</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 低危</p><p><strong>漏洞描述：</strong> <strong>受影响产品</strong>: Sudo是一个在Linux和Unix-like操作系统中广泛使用的程序，允许用户以其他用户的权限运行程序，通常是超级用户（root）。它是系统管理员和普通用户日常操作中不可或缺的工具，部署在几乎所有的Linux服务器和工作站上。</p><p><strong>漏洞解释</strong>: CVE-2025-32462是一个本地权限提升漏洞，存在于Sudo的host选项（<code>-h</code>或<code>--host</code>）中。该漏洞允许本地用户绕过sudoers文件中的主机名限制，从而在非预期的机器上执行命令，可能导致权限提升至root。这一漏洞的技术根源在于Sudo在处理host选项时的逻辑错误，使得攻击者可以绕过基于主机名的访问控制。</p><p><strong>影响分析</strong>: 攻击者利用此漏洞可以在受影响的系统上执行任意命令，可能导致系统完全被控制。由于这是一个本地漏洞，攻击者需要先获得对系统的低权限访问。然而，在配置了基于主机名的sudoers规则的环境中，尤其是那些使用集中式sudoers文件或LDAP配置的环境中，这一漏洞的风险尤为突出。尽管CVSS评分为2.8（低危），但在特定配置下，其实际影响可能更为严重。</p><p><strong>产品厂商：</strong> sudo</p><p><strong>产品名称：</strong> sudo</p><p><strong>影响版本：</strong> 1.8.8 &lt;&#x3D; version &lt;&#x3D; 1.9.17</p><p><strong>来源：</strong> <a href="https://github.com/atomicjjbod/CVE-2025-32462">https://github.com/atomicjjbod/CVE-2025-32462</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>exploit</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-32462"><a href="#CVE-2025-32462" class="headerlink" title="CVE-2025-32462"></a>CVE-2025-32462</h2><p>Local Privilege Escalation via Sudo Host Option in Linux</p><h3 id="Vulnerability-Summary"><a href="#Vulnerability-Summary" class="headerlink" title="Vulnerability Summary"></a>Vulnerability Summary</h3><p><strong>CVE-2025-32462</strong> is a <strong>local privilege escalation vulnerability</strong> in the <strong>Sudo</strong> binary, specifically in the host (<code>-h</code> or <code>--host</code>) option. The flaw allows a local user to bypass hostname restrictions in the sudoers file, enabling execution of commands on unintended machines, potentially escalating privileges to <strong>root</strong>. The issue was discovered by <strong>Rich Mirch</strong> of the Stratascale Cyber Research Unit. This vulnerability has been present in Sudo’s code for over 12 years.<a href="https://www.sudo.ws/security/advisories/host_any/"></a></p><ul><li><strong>CVE-ID:</strong> CVE-2025-32462  </li><li><strong>Component:</strong> sudo  </li><li><strong>Type:</strong> Local Privilege Escalation (EoP)  </li><li><strong>CVSS Score:</strong> 2.8 (Low)  </li><li><strong>Discovered by:</strong> <a href="https://twitter.com/rmirch">Rich Mirch</a></li></ul><h3 id="Impact"><a href="#Impact" class="headerlink" title="Impact"></a>Impact</h3><p>An attacker with low privileges can exploit this vulnerability to execute commands as <strong>root</strong> on systems where sudoers rules are restricted to specific hostnames or patterns, particularly in environments using centralized sudoers files or LDAP-based configurations. This can lead to complete system compromise.<a href="https://www.cyberkendra.com/2025/07/critical-sudo-vulnerabilities-root.html"></a></p><h4 id="Exploit"><a href="#Exploit" class="headerlink" title="Exploit"></a>Exploit</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/atomicjjbod/CVE-2025-32462.git<br><span class="hljs-built_in">cd</span> CVE-2025-32462<br><span class="hljs-built_in">chmod</span> +x exploit<br><span class="hljs-built_in">id</span><br>./exploit<br><span class="hljs-built_in">id</span><br></code></pre></td></tr></table></figure><h3 id="Affected-Versions"><a href="#Affected-Versions" class="headerlink" title="Affected Versions"></a>Affected Versions</h3><ul><li><strong>Vulnerable:</strong> Sudo 1.8.8 to 1.9.17  </li><li><strong>Patched:</strong> Sudo 1.9.17p1 and later  </li><li><strong>Not affected:</strong> Versions prior to 1.8.8 (host option behavior not vulnerable)<a href="https://securityonline.info/critical-sudo-flaws-cve-2025-32463-cvss-9-3-root-privilege-escalation-host-bypass-poc-available/"></a></li></ul><h3 id="Mitigation"><a href="#Mitigation" class="headerlink" title="Mitigation"></a>Mitigation</h3><ul><li>Update <code>sudo</code> to version 1.9.17p1 or later to patch the vulnerability.<a href="https://www.sudo.ws/security/advisories/host_any/"></a></li><li>Avoid using host-specific rules in sudoers files unless necessary, and prefer the <code>ALL</code> keyword for host fields to prevent bypass.<a href="https://www.openwall.com/lists/oss-security/2025/06/30/2"></a></li><li>Use security frameworks like AppArmor or SELinux to restrict sudo behavior.</li><li>Audit sudoers configurations, especially in environments with centralized or LDAP-based sudoers files, to identify and remove host-specific rules.<a href="https://www.cyberkendra.com/2025/07/critical-sudo-vulnerabilities-root.html"></a></li><li>Monitor for abnormal sudo invocations, such as unusual <code>-h</code> option usage.</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Sudo Host Option Local Privilege Escala</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
     
   </entry>
   
