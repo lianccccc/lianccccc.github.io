@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-03T13:45:21.845Z</updated>
+  <updated>2025-07-03T14:00:08.969Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CVE-2024-12632</title>
+    <link href="http://example.com/2025/07/03/other_2465921451/"/>
+    <id>http://example.com/2025/07/03/other_2465921451/</id>
+    <published>2025-07-03T14:00:08.000Z</published>
+    <updated>2025-07-03T14:00:08.969Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>描述：</strong> Rejected reason: DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: CVE-2024-55956. Reason: This candidate is a duplicate of CVE-2024-55956. Notes: All CVE users should reference CVE-2024-55956 instead of this candidate. All references and descriptions in this candidate have been removed to prevent accidental usage.</p><hr><p>CVE-2024-12632 was initially assigned to an unauthenticated RCE vuln affecting Cleo Harmony, VLTrader, and LexiCom. MITRE rejected CVE-2024-12632, and used the assignment CVE-2024-55956 instead. Our full analysis for CVE-2024-55956 can be found here: <a href="https://attackerkb.com/topics/geR0H8dgrE/cve-2024-55956/rapid7-analysis">https://attackerkb.com/topics/geR0H8dgrE/cve-2024-55956/rapid7-analysis</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;描述：&lt;/strong&gt; Rejected reason: DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: CVE-2024-55956. Reason: This candidate is a duplicate</summary>
+      
+    
+    
+    
+    <category term="其他" scheme="http://example.com/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+    <category term="attackerkb.com" scheme="http://example.com/tags/attackerkb-com/"/>
+    
+  </entry>
   
   <entry>
     <title>Maltrail Unauthenticated Command Injection</title>
@@ -508,33 +532,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/tYDiNIaYaDwkBxoLG3vigw&quot;&gt;https://mp.weixin.qq.c</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>星际访客高速穿越太阳系</title>
-    <link href="http://example.com/2025/07/03/weixin_475304236/"/>
-    <id>http://example.com/2025/07/03/weixin_475304236/</id>
-    <published>2025-07-03T11:06:43.037Z</published>
-    <updated>2025-07-03T11:06:43.034Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 独眼情报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/cdF4nCo2CM3AfKeT76EzsQ">https://mp.weixin.qq.com/s/cdF4nCo2CM3AfKeT76EzsQ</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 独眼情报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/cdF4nCo2CM3AfKeT76EzsQ&quot;&gt;https://mp.weixin.qq.c</summary>
       
     
     
