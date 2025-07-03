@@ -1,0 +1,671 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=light>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="lianccc">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="漏洞信息漏洞名称： phpMyAdmin 信息泄露漏洞 漏洞类型： 信息泄露 漏洞等级： 中危 漏洞描述： phpMyAdmin 是一个广泛使用的开源数据库管理工具，主要用于通过Web界面管理MySQL数据库。它通常部署在需要数据库管理的Web服务器上，是开发者和数据库管理员的常用工具。 该漏洞涉及phpMyAdmin在登录页面中暴露了JavaScript变量，如数据库名称和操作URL，这些信息本">
+<meta property="og:type" content="article">
+<meta property="og:title" content="phpMyAdmin 信息泄露漏洞">
+<meta property="og:url" content="http://example.com/2025/07/03/github_4136523791/index.html">
+<meta property="og:site_name" content="liancc&#39; infos blog">
+<meta property="og:description" content="漏洞信息漏洞名称： phpMyAdmin 信息泄露漏洞 漏洞类型： 信息泄露 漏洞等级： 中危 漏洞描述： phpMyAdmin 是一个广泛使用的开源数据库管理工具，主要用于通过Web界面管理MySQL数据库。它通常部署在需要数据库管理的Web服务器上，是开发者和数据库管理员的常用工具。 该漏洞涉及phpMyAdmin在登录页面中暴露了JavaScript变量，如数据库名称和操作URL，这些信息本">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://github.com/user-attachments/assets/219762af-b5ff-40c5-966d-df75c5210796">
+<meta property="article:published_time" content="2025-07-03T14:15:22.000Z">
+<meta property="article:modified_time" content="2025-07-03T14:15:22.673Z">
+<meta property="article:author" content="lianccc">
+<meta property="article:tag" content="projectdiscovery&#x2F;nuclei-templates:github issues">
+<meta property="article:tag" content="信息泄露">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://github.com/user-attachments/assets/219762af-b5ff-40c5-966d-df75c5210796">
+  
+  
+  
+  <title>phpMyAdmin 信息泄露漏洞 - liancc&#39; infos blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="liancc' infos blog" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Craw Info</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="phpMyAdmin 信息泄露漏洞"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-07-03 14:15" pubdate>
+          2025年7月3日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          3.5k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          30 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">phpMyAdmin 信息泄露漏洞</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> phpMyAdmin 信息泄露漏洞</p>
+<p><strong>漏洞类型：</strong> 信息泄露</p>
+<p><strong>漏洞等级：</strong> 中危</p>
+<p><strong>漏洞描述：</strong> phpMyAdmin 是一个广泛使用的开源数据库管理工具，主要用于通过Web界面管理MySQL数据库。它通常部署在需要数据库管理的Web服务器上，是开发者和数据库管理员的常用工具。</p>
+<p>该漏洞涉及phpMyAdmin在登录页面中暴露了JavaScript变量，如数据库名称和操作URL，这些信息本应在用户成功登录后才可用。这种信息泄露虽然轻微，但可能导致攻击者获取到不应在未认证状态下访问的数据。技术原因在于phpMyAdmin在响应中包含了这些敏感信息，而没有对未认证的访问进行适当的过滤或隐藏。</p>
+<p>此漏洞的主要风险在于信息泄露，攻击者可以利用这些信息进行进一步的攻击，如尝试未授权访问数据库结构。虽然需要攻击者具备一定的技术知识来利用这些信息，但漏洞的存在增加了系统被攻击的可能性。此外，由于phpMyAdmin的广泛使用，这一漏洞可能影响大量系统。</p>
+<p><strong>产品厂商：</strong> phpMyAdmin</p>
+<p><strong>产品名称：</strong> phpMyAdmin</p>
+<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/projectdiscovery/nuclei-templates/issues/12537">https://github.com/projectdiscovery/nuclei-templates/issues/12537</a></p>
+<p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p>
+<h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Template-IDs-or-paths"><a href="#Template-IDs-or-paths" class="headerlink" title="Template IDs or paths"></a>Template IDs or paths</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><code class="hljs markdown">Hello,<br><br>The phpmyadmin-misconfiguration template currently flags phpMyAdmin login pages as a finding.<br><br>The Problem<br>This happens because even on the login page, phpMyAdmin often includes JavaScript variables like db:&quot;information<span class="hljs-emphasis">_schema&quot; and opendb_</span>url:&quot;db<span class="hljs-emphasis">_structure.php&quot; in its response. These variables are typically used to prepare the application&#x27;s state for after a user successfully logs in.</span><br><span class="hljs-emphasis"></span><br><span class="hljs-emphasis">While this is a minor information disclosure, it results in a false positive for the template&#x27;s primary goal, which is to detect unauthenticated access to database structures.</span><br><span class="hljs-emphasis"></span><br><span class="hljs-emphasis">Proposed Solution</span><br><span class="hljs-emphasis">I suggest adding a negative matcher to the template. This matcher will check for the presence of common login form elements (like name=&quot;login_</span>form&quot; or id=&quot;input<span class="hljs-emphasis">_username&quot;). If a login form is detected, the finding will be ignored.</span><br><span class="hljs-emphasis"></span><br><span class="hljs-emphasis">This makes the template more precise by focusing on instances where data is exposed without requiring authentication, rather than just identifying a login panel.</span><br><span class="hljs-emphasis"></span><br><span class="hljs-emphasis">Fixed Template</span><br><span class="hljs-emphasis"></span><br><span class="hljs-emphasis"></span><br><span class="hljs-emphasis">id: phpmyadmin-misconfiguration-ignore-login</span><br><span class="hljs-emphasis">info:</span><br><span class="hljs-emphasis">  name: phpMyAdmin Data Exposure (Ignores Login Page)</span><br><span class="hljs-emphasis">  author: pussycat0x, NxTTAB</span><br><span class="hljs-emphasis">  severity: medium</span><br><span class="hljs-emphasis">  description: An unauthenticated instance of phpmyadmin was discovered.</span><br><span class="hljs-emphasis">  reference:</span><br><span class="hljs-emphasis">    - https://www.exploit-db.com/ghdb/6997</span><br><span class="hljs-emphasis">  classification:</span><br><span class="hljs-emphasis">    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N</span><br><span class="hljs-emphasis">    cvss-score: 5.3</span><br><span class="hljs-emphasis">    cwe-id: CWE-200</span><br><span class="hljs-emphasis">  metadata:</span><br><span class="hljs-emphasis">    max-request: 2</span><br><span class="hljs-emphasis">  tags: phpmyadmin,misconfig,edb</span><br><span class="hljs-emphasis"></span><br><span class="hljs-emphasis">http:</span><br><span class="hljs-emphasis">  - method: GET</span><br><span class="hljs-emphasis">    path:</span><br><span class="hljs-emphasis">      - &quot;&#123;&#123;BaseURL&#125;&#125;/phpmyadmin/index.php?db=information_</span>schema&quot;<br><span class="hljs-bullet">      -</span> &quot;&#123;&#123;BaseURL&#125;&#125;/phpMyAdmin/index.php?db=information<span class="hljs-emphasis">_schema&quot;</span><br><span class="hljs-emphasis">    stop-at-first-match: true</span><br><span class="hljs-emphasis"></span><br><span class="hljs-emphasis">    matchers-condition: and</span><br><span class="hljs-emphasis">    matchers:</span><br><span class="hljs-emphasis">      - type: status</span><br><span class="hljs-emphasis">        status:</span><br><span class="hljs-emphasis">          - 200</span><br><span class="hljs-emphasis"></span><br><span class="hljs-emphasis">      - type: word</span><br><span class="hljs-emphasis">        part: body</span><br><span class="hljs-emphasis">        condition: and</span><br><span class="hljs-emphasis">        words:</span><br><span class="hljs-emphasis">          - &quot;var db    = &#x27;information_</span>schema&#x27;;&quot;<br><span class="hljs-bullet">          -</span> &quot;var opendb<span class="hljs-emphasis">_url = &#x27;db_</span>structure.php&#x27;;&quot;<br><br><span class="hljs-bullet">      -</span> type: word<br><span class="hljs-code">        part: body</span><br><span class="hljs-code">        words:</span><br><span class="hljs-code">          - &#x27;name=&quot;login_form&quot;&#x27;</span><br><span class="hljs-code">          - &#x27;id=&quot;input_username&quot;&#x27;</span><br><span class="hljs-code">        negative: true</span><br><span class="hljs-code">        condition: or</span><br><span class="hljs-code"></span><br><span class="hljs-bullet">  -</span> method: GET<br><span class="hljs-code">    path:</span><br><span class="hljs-code">      - &quot;&#123;&#123;BaseURL&#125;&#125;/phpmyadmin/index.php?db=information_schema&quot;</span><br><span class="hljs-code">      - &quot;&#123;&#123;BaseURL&#125;&#125;/phpMyAdmin/index.php?db=information_schema&quot;</span><br><span class="hljs-code">    stop-at-first-match: true</span><br><span class="hljs-code"></span><br><span class="hljs-code">    matchers-condition: and</span><br><span class="hljs-code">    matchers:</span><br><span class="hljs-code">      - type: status</span><br><span class="hljs-code">        status:</span><br><span class="hljs-code">          - 200</span><br><span class="hljs-code"></span><br><span class="hljs-bullet">      -</span> type: word<br><span class="hljs-code">        part: body</span><br><span class="hljs-code">        condition: and</span><br><span class="hljs-code">        words:</span><br><span class="hljs-code">          - &quot;db:\&quot;information_schema\&quot;&quot;</span><br><span class="hljs-code">          - &quot;opendb_url:\&quot;db_structure.php\&quot;&quot;</span><br><span class="hljs-code"></span><br><span class="hljs-bullet">      -</span> type: word<br><span class="hljs-code">        part: body</span><br><span class="hljs-code">        words:</span><br><span class="hljs-code">          - &#x27;name=&quot;login_form&quot;&#x27;</span><br><span class="hljs-code">          - &#x27;id=&quot;input_username&quot;&#x27;</span><br><span class="hljs-code">        negative: true</span><br><span class="hljs-code">        condition: or</span><br><span class="hljs-code"></span><br>I hope this helps improve the template. Thank you!<br></code></pre></td></tr></table></figure>
+
+<h4 id="Environment"><a href="#Environment" class="headerlink" title="Environment"></a>Environment</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-bullet">-</span> OS: 6.15.4-arch2-1<br><span class="hljs-bullet">-</span> Nuclei: Nuclei Engine Version: v3.4.7<br><span class="hljs-bullet">-</span> Go: No go install<br></code></pre></td></tr></table></figure>
+
+<h4 id="Steps-To-Reproduce"><a href="#Steps-To-Reproduce" class="headerlink" title="Steps To Reproduce"></a>Steps To Reproduce</h4><p>nuclei -t http&#x2F;misconfiguration&#x2F;phpmyadmin&#x2F;phpmyadmin-misconfiguration.yaml -u <a target="_blank" rel="noopener" href="https://xxxxx.xxx-xx.xx/">https://xxxxx.xxx-xx.xx</a> -debug</p>
+<h4 id="Relevant-dumped-responses"><a href="#Relevant-dumped-responses" class="headerlink" title="Relevant dumped responses"></a>Relevant dumped responses</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br></pre></td><td class="code"><pre><code class="hljs shell">nuclei -t http/misconfiguration/phpmyadmin/phpmyadmin-misconfiguration.yaml -u https://xxxxxx.xxxx-xx.xx<br><br>                     __     _<br>   ____  __  _______/ /__  (_)<br>  / __ \/ / / / ___/ / _ \/ /<br> / / / / /_/ / /__/ /  __/ /<br>/_/ /_/\__,_/\___/_/\___/_/   v3.4.7<br><br>                projectdiscovery.io<br><br>[INF] Current nuclei version: v3.4.7 (latest)<br>[INF] Current nuclei-templates version: v10.2.4 (latest)<br>[WRN] Scan results upload to cloud is disabled.<br>[INF] New templates added in latest release: 67<br>[INF] Templates loaded for current scan: 1<br>[INF] Executing 1 signed templates from projectdiscovery/nuclei-templates<br>[INF] Targets loaded for current scan: 1<br>[phpmyadmin-misconfiguration] [http] [medium] https://xxxxxx.xxxx-xx.xx<br>[INF] Scan completed in 102.66089ms. 1 matches found.<br>╭─ zsh  git  526ms⠀                                                                                                                        100    3,15:26 <br>╰─ nuclei -t http/misconfiguration/phpmyadmin/phpmyadmin-misconfiguration.yaml -u https://xxxxxx.xxxx-xx.xx<br><br>                     __     _<br>   ____  __  _______/ /__  (_)<br>  / __ \/ / / / ___/ / _ \/ /<br> / / / / /_/ / /__/ /  __/ /<br>/_/ /_/\__,_/\___/_/\___/_/   v3.4.7<br><br>                projectdiscovery.io<br><br>[INF] Current nuclei version: v3.4.7 (latest)<br>[INF] Current nuclei-templates version: v10.2.4 (latest)<br>[WRN] Scan results upload to cloud is disabled.<br>[INF] New templates added in latest release: 67<br>[INF] Templates loaded for current scan: 1<br>[INF] Executing 1 signed templates from projectdiscovery/nuclei-templates<br>[INF] Targets loaded for current scan: 1<br>[INF] [phpmyadmin-misconfiguration] Dumped HTTP request for https://xxxxxx.xxxx-xx.xx<br><br>GET /phpmyadmin/index.php?db=information_schema HTTP/1.1<br>Host: xxxxxx.xxxx-xx.xx<br>User-Agent: Mozilla/5.0  Macintosh  Intel Mac OS X 10_15_7  AppleWebKit/605.1.15  KHTML  like Gecko  Version/18.3 Safari/605.1.15<br>Connection: close<br>Accept: */*<br>Accept-Language: en<br>Accept-Encoding: gzip<br><br>[DBG] [phpmyadmin-misconfiguration] Dumped HTTP response https://xxxxxx.xxxx-xx.xx<br><br>HTTP/1.1 200 OK<br>Connection: close<br>Cache-Control: no-store, no-cache, must-revalidate,  pre-check=0, post-check=0, max-age=0<br>Content-Security-Policy: default-src &#x27;self&#x27; ;script-src &#x27;self&#x27; &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; ;;style-src &#x27;self&#x27; &#x27;unsafe-inline&#x27; ;referrer no-referrer;img-src &#x27;self&#x27; data:  *.tile.openstreetmap.org;<br>Content-Type: text/html; charset=utf-8<br>Date: Thu, 03 Jul 2025 13:26:43 GMT<br>Expires: Thu, 03 Jul 2025 13:26:43 +0000<br>Last-Modified: Thu, 03 Jul 2025 13:26:43 +0000<br>Pragma: no-cache<br>Server: Apache/2.4.29 (Ubuntu)<br>Set-Cookie: pmaCookieVer=5; expires=Sat, 02-Aug-2025 13:26:43 GMT; Max-Age=2592000; path=/phpmyadmin/; secure; HttpOnly<br>Set-Cookie: phpMyAdmin=n31el61872qrsm8cg9r66plvpi; path=/phpmyadmin/; secure; HttpOnly<br>Set-Cookie: phpMyAdmin=n31el61872qrsm8cg9r66plvpi; path=/phpmyadmin/; secure; HttpOnly<br>Set-Cookie: pma_lang=en; expires=Sat, 02-Aug-2025 13:26:43 GMT; Max-Age=2592000; path=/phpmyadmin/; secure; HttpOnly<br>Set-Cookie: pma_collation_connection=utf8mb4_unicode_ci; expires=Sat, 02-Aug-2025 13:26:43 GMT; Max-Age=2592000; path=/phpmyadmin/; secure; HttpOnly<br>Set-Cookie: phpMyAdmin=l2nnbim28ngvohllrm8a260mbb; path=/phpmyadmin/; secure; HttpOnly<br>Vary: Accept-Encoding<br>X-Content-Security-Policy: default-src &#x27;self&#x27; ;options inline-script eval-script;referrer no-referrer;img-src &#x27;self&#x27; data:  *.tile.openstreetmap.org;<br>X-Content-Type-Options: nosniff<br>X-Frame-Options: DENY<br>X-Ob_mode: 1<br>X-Permitted-Cross-Domain-Policies: none<br>X-Robots-Tag: noindex, nofollow<br>X-Webkit-Csp: default-src &#x27;self&#x27; ;script-src &#x27;self&#x27;  &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27;;referrer no-referrer;style-src &#x27;self&#x27; &#x27;unsafe-inline&#x27; ;img-src &#x27;self&#x27; data:  *.tile.openstreetmap.org;<br>X-Xss-Protection: 1; mode=block<br><br>&lt;!DOCTYPE HTML&gt;&lt;html lang=&#x27;en&#x27; dir=&#x27;ltr&#x27; class=&#x27;safari safari18&#x27;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot; /&gt;&lt;meta name=&quot;robots&quot; content=&quot;noindex,nofollow&quot; /&gt;&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=Edge&quot; /&gt;&lt;style id=&quot;cfs-style&quot;&gt;html&#123;display: none;&#125;&lt;/style&gt;&lt;link rel=&quot;icon&quot; href=&quot;favicon.ico&quot; type=&quot;image/x-icon&quot; /&gt;&lt;link rel=&quot;shortcut icon&quot; href=&quot;favicon.ico&quot; type=&quot;image/x-icon&quot; /&gt;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;./themes/pmahomme/jquery/jquery-ui-1.11.4.css&quot; /&gt;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;js/codemirror/lib/codemirror.css?v=4.6.6deb5&quot; /&gt;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;js/codemirror/addon/hint/show-hint.css?v=4.6.6deb5&quot; /&gt;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;js/codemirror/addon/lint/lint.css?v=4.6.6deb5&quot; /&gt;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;phpmyadmin.css.php?nocache=4492461858ltr&quot; /&gt;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;./themes/pmahomme/css/printview.css?v=4.6.6deb5&quot; media=&quot;print&quot; id=&quot;printcss&quot;/&gt;&lt;title&gt;phpMyAdmin&lt;/title&gt;&lt;script data-cfasync=&#x27;false&#x27; type=&#x27;text/javascript&#x27; src=&#x27;js/whitelist.php?lang=en&amp;amp;db=information_schema&amp;amp;collation_connection=utf8mb4_unicode_ci&amp;amp;token=aea4b12e076b0f8a7d90446d1f9cac41&amp;v=4.6.6deb5&#x27;&gt;&lt;/script&gt;&lt;script data-cfasync=&quot;false&quot; type=&quot;text/javascript&quot; src=&quot;js/get_scripts.js.php?scripts%5B%5D=jquery/jquery-2.1.4.min.js&amp;amp;scripts%5B%5D=sprintf.js&amp;amp;scripts%5B%5D=ajax.js&amp;amp;scripts%5B%5D=keyhandler.js&amp;amp;scripts%5B%5D=jquery/jquery-ui-1.11.4.min.js&amp;amp;scripts%5B%5D=jquery/jquery.cookie.js&amp;amp;scripts%5B%5D=jquery/jquery.mousewheel.js&amp;amp;scripts%5B%5D=jquery/jquery.event.drag-2.2.js&amp;amp;scripts%5B%5D=jquery/jquery-ui-timepicker-addon.js&amp;amp;scripts%5B%5D=jquery/jquery.ba-hashchange-1.3.js&amp;amp;v=4.6.6deb5&quot;&gt;&lt;/script&gt;&lt;script data-cfasync=&quot;false&quot; type=&quot;text/javascript&quot; src=&quot;js/get_scripts.js.php?scripts%5B%5D=jquery/jquery.debounce-1.0.5.js&amp;amp;scripts%5B%5D=menu-resizer.js&amp;amp;scripts%5B%5D=cross_framing_protection.js&amp;amp;scripts%5B%5D=rte.js&amp;amp;scripts%5B%5D=tracekit/tracekit.js&amp;amp;scripts%5B%5D=error_report.js&amp;amp;scripts%5B%5D=config.js&amp;amp;scripts%5B%5D=doclinks.js&amp;amp;scripts%5B%5D=functions.js&amp;amp;scripts%5B%5D=navigation.js&amp;amp;v=4.6.6deb5&quot;&gt;&lt;/script&gt;&lt;script data-cfasync=&quot;false&quot; type=&quot;text/javascript&quot; src=&quot;js/get_scripts.js.php?scripts%5B%5D=indexes.js&amp;amp;scripts%5B%5D=common.js&amp;amp;scripts%5B%5D=page_settings.js&amp;amp;scripts%5B%5D=codemirror/lib/codemirror.js&amp;amp;scripts%5B%5D=codemirror/mode/sql/sql.js&amp;amp;scripts%5B%5D=codemirror/addon/runmode/runmode.js&amp;amp;scripts%5B%5D=codemirror/addon/hint/show-hint.js&amp;amp;scripts%5B%5D=codemirror/addon/hint/sql-hint.js&amp;amp;scripts%5B%5D=codemirror/addon/lint/lint.js&amp;amp;scripts%5B%5D=codemirror/addon/lint/sql-lint.js&amp;amp;v=4.6.6deb5&quot;&gt;&lt;/script&gt;&lt;script data-cfasync=&quot;false&quot; type=&quot;text/javascript&quot; src=&quot;js/get_scripts.js.php?scripts%5B%5D=console.js&amp;amp;v=4.6.6deb5&quot;&gt;&lt;/script&gt;&lt;script data-cfasync=&#x27;false&#x27; type=&#x27;text/javascript&#x27; src=&#x27;js/messages.php?lang=en&amp;amp;db=information_schema&amp;amp;collation_connection=utf8mb4_unicode_ci&amp;amp;token=aea4b12e076b0f8a7d90446d1f9cac41&amp;v=4.6.6deb5&#x27;&gt;&lt;/script&gt;&lt;script data-cfasync=&#x27;false&#x27; type=&#x27;text/javascript&#x27; src=&#x27;js/get_image.js.php?theme=pmahomme&amp;v=4.6.6deb5&#x27;&gt;&lt;/script&gt;&lt;script data-cfasync=&quot;false&quot; type=&quot;text/javascript&quot;&gt;// &lt;![CDATA[<br>PMA_commonParams.setAll(&#123;common_query:&quot;?lang=en&amp;collation_connection=utf8mb4_unicode_ci&amp;token=aea4b12e076b0f8a7d90446d1f9cac41&quot;,opendb_url:&quot;db_structure.php&quot;,safari_browser:&quot;1&quot;,collation_connection:&quot;utf8mb4_unicode_ci&quot;,lang:&quot;en&quot;,server:&quot;1&quot;,table:&quot;&quot;,db:&quot;information_schema&quot;,token:&quot;aea4b12e076b0f8a7d90446d1f9cac41&quot;,text_dir:&quot;ltr&quot;,show_databases_navigation_as_tree:&quot;1&quot;,pma_text_default_tab:&quot;Browse&quot;,pma_text_left_default_tab:&quot;Structure&quot;,pma_text_left_default_tab2:&quot;&quot;,LimitChars:&quot;50&quot;,pftext:&quot;&quot;,confirm:&quot;1&quot;,LoginCookieValidity:&quot;1440&quot;,logged_in:&quot;&quot;,PMA_VERSION:&quot;4.6.6deb5&quot;,auth_type:&quot;cookie&quot;&#125;);<br>ConsoleEnterExecutes=false<br>AJAX.scriptHandler.add(&quot;jquery/jquery-2.1.4.min.js&quot;,0).add(&quot;whitelist.php?lang=en&amp;amp;db=information_schema&amp;amp;collation_connection=utf8mb4_unicode_ci&amp;amp;token=aea4b12e076b0f8a7d90446d1f9cac41&quot;,1).add(&quot;sprintf.js&quot;,1).add(&quot;ajax.js&quot;,0).add(&quot;keyhandler.js&quot;,1).add(&quot;jquery/jquery-ui-1.11.4.min.js&quot;,0).add(&quot;jquery/jquery.cookie.js&quot;,0).add(&quot;jquery/jquery.mousewheel.js&quot;,0).add(&quot;jquery/jquery.event.drag-2.2.js&quot;,0).add(&quot;jquery/jquery-ui-timepicker-addon.js&quot;,0).add(&quot;jquery/jquery.ba-hashchange-1.3.js&quot;,0).add(&quot;jquery/jquery.debounce-1.0.5.js&quot;,0).add(&quot;menu-resizer.js&quot;,1).add(&quot;cross_framing_protection.js&quot;,0).add(&quot;rte.js&quot;,1).add(&quot;tracekit/tracekit.js&quot;,1).add(&quot;error_report.js&quot;,1).add(&quot;messages.php?lang=en&amp;amp;db=information_schema&amp;amp;collation_connection=utf8mb4_unicode_ci&amp;amp;token=aea4b12e076b0f8a7d90446d1f9cac41&quot;,0).add(&quot;get_image.js.php?theme=pmahomme&quot;,0).add(&quot;config.js&quot;,1).add(&quot;doclinks.js&quot;,1).add(&quot;functions.js&quot;,1).add(&quot;navigation.js&quot;,1).add(&quot;indexes.js&quot;,1).add(&quot;common.js&quot;,1).add(&quot;page_settings.js&quot;,1).add(&quot;codemirror/lib/codemirror.js&quot;,0).add(&quot;codemirror/mode/sql/sql.js&quot;,0).add(&quot;codemirror/addon/runmode/runmode.js&quot;,0).add(&quot;codemirror/addon/hint/show-hint.js&quot;,0).add(&quot;codemirror/addon/hint/sql-hint.js&quot;,0).add(&quot;codemirror/addon/lint/lint.js&quot;,0).add(&quot;codemirror/addon/lint/sql-lint.js&quot;,0).add(&quot;console.js&quot;,1);<br><span class="hljs-meta prompt_">$</span><span class="language-bash">(<span class="hljs-function"><span class="hljs-title">function</span></span>() &#123;AJAX.fireOnload(<span class="hljs-string">&quot;whitelist.php?lang=en&amp;amp;db=information_schema&amp;amp;collation_connection=utf8mb4_unicode_ci&amp;amp;token=aea4b12e076b0f8a7d90446d1f9cac41&quot;</span>);AJAX.fireOnload(<span class="hljs-string">&quot;sprintf.js&quot;</span>);AJAX.fireOnload(<span class="hljs-string">&quot;keyhandler.js&quot;</span>);AJAX.fireOnload(<span class="hljs-string">&quot;menu-resizer.js&quot;</span>);AJAX.fireOnload(<span class="hljs-string">&quot;rte.js&quot;</span>);AJAX.fireOnload(<span class="hljs-string">&quot;tracekit/tracekit.js&quot;</span>);AJAX.fireOnload(<span class="hljs-string">&quot;error_report.js&quot;</span>);AJAX.fireOnload(<span class="hljs-string">&quot;config.js&quot;</span>);AJAX.fireOnload(<span class="hljs-string">&quot;doclinks.js&quot;</span>);AJAX.fireOnload(<span class="hljs-string">&quot;functions.js&quot;</span>);AJAX.fireOnload(<span class="hljs-string">&quot;navigation.js&quot;</span>);AJAX.fireOnload(<span class="hljs-string">&quot;indexes.js&quot;</span>);AJAX.fireOnload(<span class="hljs-string">&quot;common.js&quot;</span>);AJAX.fireOnload(<span class="hljs-string">&quot;page_settings.js&quot;</span>);AJAX.fireOnload(<span class="hljs-string">&quot;console.js&quot;</span>);&#125;);</span><br>// ]]&gt;&lt;/script&gt;&lt;noscript&gt;&lt;style&gt;html&#123;display:block&#125;&lt;/style&gt;&lt;/noscript&gt;&lt;/head&gt;&lt;body id=&#x27;loginform&#x27;&gt;&lt;div id=&quot;pma_header&quot;&gt;&lt;/div&gt;&lt;div id=&quot;page_content&quot;&gt;<br>    &lt;div class=&quot;container&quot;&gt;<br>    &lt;a href=&quot;./url.php?url=https%3A%2F%2Fwww.phpmyadmin.net%2F&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; class=&quot;logo&quot;&gt;&lt;img src=&quot;./themes/pmahomme/img/logo_right.png&quot; id=&quot;imLogo&quot; name=&quot;imLogo&quot; alt=&quot;phpMyAdmin&quot; border=&quot;0&quot; /&gt;&lt;/a&gt;<br>       &lt;h1&gt;Welcome to &lt;bdo dir=&quot;ltr&quot; lang=&quot;en&quot;&gt;phpMyAdmin&lt;/bdo&gt;&lt;/h1&gt;&lt;noscript&gt;<br>&lt;div class=&quot;error&quot;&gt;&lt;img src=&quot;themes/dot.gif&quot; title=&quot;&quot; alt=&quot;&quot; class=&quot;icon ic_s_error&quot; /&gt; Javascript must be enabled past this point!&lt;/div&gt;&lt;/noscript&gt;<br>&lt;div class=&#x27;hide js-show&#x27;&gt;&lt;form method=&quot;get&quot; action=&quot;index.php&quot; class=&quot;disableAjax&quot;&gt;&lt;input type=&quot;hidden&quot; name=&quot;db&quot; value=&quot;information_schema&quot; /&gt;&lt;input type=&quot;hidden&quot; name=&quot;table&quot; value=&quot;&quot; /&gt;&lt;input type=&quot;hidden&quot; name=&quot;lang&quot; value=&quot;en&quot; /&gt;&lt;input type=&quot;hidden&quot; name=&quot;collation_connection&quot; value=&quot;utf8mb4_unicode_ci&quot; /&gt;&lt;input type=&quot;hidden&quot; name=&quot;token&quot; value=&quot;aea4b12e076b0f8a7d90446d1f9cac41&quot; /&gt;&lt;fieldset&gt;&lt;legend lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Language&lt;/legend&gt;&lt;select name=&quot;lang&quot; class=&quot;autosubmit&quot; lang=&quot;en&quot; dir=&quot;ltr&quot; id=&quot;sel-lang&quot;&gt;&lt;option value=&quot;hy&quot;&gt;Հայերէն - Armenian&lt;/option&gt;&lt;option value=&quot;az&quot;&gt;Az&amp;#601;rbaycanca - Azerbaijani&lt;/option&gt;&lt;option value=&quot;bn&quot;&gt;বাং - Bangla&lt;/option&gt;&lt;option value=&quot;pt_br&quot;&gt;Portugu&amp;ecirc;s - Brazilian Portuguese&lt;/option&gt;&lt;option value=&quot;bg&quot;&gt;&amp;#1041;&amp;#1098;&amp;#1083;&amp;#1075;&amp;#1072;&amp;#1088;&amp;#1089;&amp;#1082;&amp;#1080; - Bulgarian&lt;/option&gt;&lt;option value=&quot;ca&quot;&gt;Catal&amp;agrave; - Catalan&lt;/option&gt;&lt;option value=&quot;zh_cn&quot;&gt;&amp;#20013;&amp;#25991; - Chinese simplified&lt;/option&gt;&lt;option value=&quot;zh_tw&quot;&gt;&amp;#20013;&amp;#25991; - Chinese traditional&lt;/option&gt;&lt;option value=&quot;cs&quot;&gt;Čeština - Czech&lt;/option&gt;&lt;option value=&quot;da&quot;&gt;Dansk - Danish&lt;/option&gt;&lt;option value=&quot;nl&quot;&gt;Nederlands - Dutch&lt;/option&gt;&lt;option value=&quot;en&quot; selected=&quot;selected&quot;&gt;English&lt;/option&gt;&lt;option value=&quot;en_gb&quot;&gt;English (United Kingdom)&lt;/option&gt;&lt;option value=&quot;et&quot;&gt;Eesti - Estonian&lt;/option&gt;&lt;option value=&quot;fi&quot;&gt;Suomi - Finnish&lt;/option&gt;&lt;option value=&quot;fr&quot;&gt;Fran&amp;ccedil;ais - French&lt;/option&gt;&lt;option value=&quot;gl&quot;&gt;Galego - Galician&lt;/option&gt;&lt;option value=&quot;de&quot;&gt;Deutsch - German&lt;/option&gt;&lt;option value=&quot;el&quot;&gt;&amp;Epsilon;&amp;lambda;&amp;lambda;&amp;eta;&amp;nu;&amp;iota;&amp;kappa;&amp;#940; - Greek&lt;/option&gt;&lt;option value=&quot;hu&quot;&gt;Magyar - Hungarian&lt;/option&gt;&lt;option value=&quot;id&quot;&gt;Bahasa Indonesia - Indonesian&lt;/option&gt;&lt;option value=&quot;ia&quot;&gt;Interlingua&lt;/option&gt;&lt;option value=&quot;it&quot;&gt;Italiano - Italian&lt;/option&gt;&lt;option value=&quot;ja&quot;&gt;&amp;#26085;&amp;#26412;&amp;#35486; - Japanese&lt;/option&gt;&lt;option value=&quot;ko&quot;&gt;&amp;#54620;&amp;#44397;&amp;#50612; - Korean&lt;/option&gt;&lt;option value=&quot;lt&quot;&gt;Lietuvi&amp;#371; - Lithuanian&lt;/option&gt;&lt;option value=&quot;nb&quot;&gt;Norsk - Norwegian&lt;/option&gt;&lt;option value=&quot;pl&quot;&gt;Polski - Polish&lt;/option&gt;&lt;option value=&quot;pt&quot;&gt;Portugu&amp;ecirc;s - Portuguese&lt;/option&gt;&lt;option value=&quot;ro&quot;&gt;Rom&amp;acirc;n&amp;#259; - Romanian&lt;/option&gt;&lt;option value=&quot;ru&quot;&gt;&amp;#1056;&amp;#1091;&amp;#1089;&amp;#1089;&amp;#1082;&amp;#1080;&amp;#1081; - Russian&lt;/option&gt;&lt;option value=&quot;sr@latin&quot;&gt;Srpski - Serbian (latin)&lt;/option&gt;&lt;option value=&quot;si&quot;&gt;&amp;#3523;&amp;#3538;&amp;#3458;&amp;#3524;&amp;#3517; - Sinhala&lt;/option&gt;&lt;option value=&quot;sq&quot;&gt;Shqip - Slbanian&lt;/option&gt;&lt;option value=&quot;sk&quot;&gt;Sloven&amp;#269;ina - Slovak&lt;/option&gt;&lt;option value=&quot;sl&quot;&gt;Sloven&amp;scaron;&amp;#269;ina - Slovenian&lt;/option&gt;&lt;option value=&quot;es&quot;&gt;Espa&amp;ntilde;ol - Spanish&lt;/option&gt;&lt;option value=&quot;sv&quot;&gt;Svenska - Swedish&lt;/option&gt;&lt;option value=&quot;tr&quot;&gt;T&amp;uuml;rk&amp;ccedil;e - Turkish&lt;/option&gt;&lt;option value=&quot;uk&quot;&gt;&amp;#1059;&amp;#1082;&amp;#1088;&amp;#1072;&amp;#1111;&amp;#1085;&amp;#1089;&amp;#1100;&amp;#1082;&amp;#1072; - Ukrainian&lt;/option&gt;&lt;option value=&quot;vi&quot;&gt;Tiếng Việt - Vietnamese&lt;/option&gt;&lt;/select&gt;&lt;/fieldset&gt;&lt;/form&gt;&lt;/div&gt;<br>    &lt;br /&gt;<br>    &lt;!-- Login form --&gt;<br>    &lt;form method=&quot;post&quot; action=&quot;index.php&quot; name=&quot;login_form&quot; class=&quot;disableAjax login hide js-show&quot;&gt;<br>        &lt;fieldset&gt;<br>        &lt;legend&gt;Log in&lt;a href=&quot;./doc/html/index.html&quot; target=&quot;documentation&quot;&gt;&lt;img src=&quot;themes/dot.gif&quot; title=&quot;Documentation&quot; alt=&quot;Documentation&quot; class=&quot;icon ic_b_help&quot; /&gt;&lt;/a&gt;&lt;/legend&gt;&lt;div class=&quot;item&quot;&gt;<br>                &lt;label for=&quot;input_username&quot;&gt;Username:&lt;/label&gt;<br>                &lt;input type=&quot;text&quot; name=&quot;pma_username&quot; id=&quot;input_username&quot; value=&quot;&quot; size=&quot;24&quot; class=&quot;textfield&quot;/&gt;<br>            &lt;/div&gt;<br>            &lt;div class=&quot;item&quot;&gt;<br>                &lt;label for=&quot;input_password&quot;&gt;Password:&lt;/label&gt;<br>                &lt;input type=&quot;password&quot; name=&quot;pma_password&quot; id=&quot;input_password&quot; value=&quot;&quot; size=&quot;24&quot; class=&quot;textfield&quot; /&gt;<br>            &lt;/div&gt;    &lt;input type=&quot;hidden&quot; name=&quot;server&quot; value=&quot;1&quot; /&gt;&lt;/fieldset&gt;<br>        &lt;fieldset class=&quot;tblFooters&quot;&gt;<br>            &lt;input value=&quot;Go&quot; type=&quot;submit&quot; id=&quot;input_go&quot; /&gt;&lt;input type=&quot;hidden&quot; name=&quot;target&quot; value=&quot;index.php&quot; /&gt;&lt;input type=&quot;hidden&quot; name=&quot;db&quot; value=&quot;information_schema&quot; /&gt;&lt;input type=&quot;hidden&quot; name=&quot;lang&quot; value=&quot;en&quot; /&gt;&lt;input type=&quot;hidden&quot; name=&quot;collation_connection&quot; value=&quot;utf8mb4_unicode_ci&quot; /&gt;&lt;input type=&quot;hidden&quot; name=&quot;token&quot; value=&quot;aea4b12e076b0f8a7d90446d1f9cac41&quot; /&gt;&lt;/fieldset&gt;<br>    &lt;/form&gt;&lt;/div&gt;&lt;div id=&quot;pma_footer&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;<br>[phpmyadmin-misconfiguration:word-2] [http] [medium] https://xxxxxx.xxxx-xx.xx<br>[INF] Scan completed in 99.765399ms. 1 matches found.<br></code></pre></td></tr></table></figure>
+
+<h4 id="Anything-else"><a href="#Anything-else" class="headerlink" title="Anything else?"></a>Anything else?</h4><p><img src="https://github.com/user-attachments/assets/219762af-b5ff-40c5-966d-df75c5210796" srcset="/img/loading.gif" lazyload alt="Image"></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Github-Poc/" class="category-chain-item">Github Poc</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/projectdiscovery-nuclei-templates-github-issues/" class="print-no-link">#projectdiscovery/nuclei-templates:github issues</a>
+      
+        <a href="/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/" class="print-no-link">#信息泄露</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>phpMyAdmin 信息泄露漏洞</div>
+      <div>http://example.com/2025/07/03/github_4136523791/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>lianccc</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年7月3日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/07/03/github_1203265353/" title="ISPConfig language_editphp PHP代码注入漏洞">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">ISPConfig language_editphp PHP代码注入漏洞</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/07/03/other_2465921451/" title="CVE-2024-12632">
+                        <span class="hidden-mobile">CVE-2024-12632</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

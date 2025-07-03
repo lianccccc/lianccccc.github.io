@@ -19,15 +19,15 @@
   <meta name="author" content="lianccc">
   <meta name="keywords" content="">
   
-    <meta name="description" content="漏洞信息漏洞名称： ISPConfig language_edit.php PHP代码注入漏洞 漏洞编号：  CVE： CVE-2023-46818  漏洞类型： 代码注入 漏洞等级： 高危 漏洞描述： ISPConfig是一款广泛使用的开源主机控制面板，用于管理网站、电子邮件、数据库等网络服务。它通常部署在Linux服务器上，为管理员提供图形化界面以简化服务器管理任务。由于其功能强大且易于使用，">
+    <meta name="description" content="漏洞信息漏洞名称： ISPConfig language_edit.php PHP代码注入漏洞 漏洞编号：  CVE： CVE-2023-46818  漏洞类型： 代码注入 漏洞等级： 高危 漏洞描述： ISPConfig是一款广泛使用的开源主机控制面板，用于管理网站、邮件服务器、数据库等。它通常部署在Linux服务器上，为系统管理员提供便捷的Web界面来管理服务器资源。此次发现的漏洞存在于ISP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ISPConfig language_editphp PHP代码注入漏洞">
 <meta property="og:url" content="http://example.com/2025/07/03/github_1203265353/index.html">
 <meta property="og:site_name" content="liancc&#39; infos blog">
-<meta property="og:description" content="漏洞信息漏洞名称： ISPConfig language_edit.php PHP代码注入漏洞 漏洞编号：  CVE： CVE-2023-46818  漏洞类型： 代码注入 漏洞等级： 高危 漏洞描述： ISPConfig是一款广泛使用的开源主机控制面板，用于管理网站、电子邮件、数据库等网络服务。它通常部署在Linux服务器上，为管理员提供图形化界面以简化服务器管理任务。由于其功能强大且易于使用，">
+<meta property="og:description" content="漏洞信息漏洞名称： ISPConfig language_edit.php PHP代码注入漏洞 漏洞编号：  CVE： CVE-2023-46818  漏洞类型： 代码注入 漏洞等级： 高危 漏洞描述： ISPConfig是一款广泛使用的开源主机控制面板，用于管理网站、邮件服务器、数据库等。它通常部署在Linux服务器上，为系统管理员提供便捷的Web界面来管理服务器资源。此次发现的漏洞存在于ISP">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-07-03T10:15:20.000Z">
-<meta property="article:modified_time" content="2025-07-03T10:15:20.662Z">
+<meta property="article:published_time" content="2025-07-03T14:15:42.000Z">
+<meta property="article:modified_time" content="2025-07-03T14:15:42.697Z">
 <meta property="article:author" content="lianccc">
 <meta property="article:tag" content="rapid7&#x2F;metasploit-framework:github issues">
 <meta property="article:tag" content="代码注入">
@@ -213,8 +213,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-07-03 10:15" pubdate>
-          2025年7月3日 上午
+        <time datetime="2025-07-03 14:15" pubdate>
+          2025年7月3日 下午
         </time>
       </span>
     
@@ -285,9 +285,7 @@
 </ul>
 <p><strong>漏洞类型：</strong> 代码注入</p>
 <p><strong>漏洞等级：</strong> 高危</p>
-<p><strong>漏洞描述：</strong> ISPConfig是一款广泛使用的开源主机控制面板，用于管理网站、电子邮件、数据库等网络服务。它通常部署在Linux服务器上，为管理员提供图形化界面以简化服务器管理任务。由于其功能强大且易于使用，ISPConfig在中小型企业和个人用户中非常受欢迎。</p>
-<p>该漏洞存在于ISPConfig的language_edit.php文件中，当<code>admin_allow_langedit</code>设置被启用时，经过身份验证的管理员可以通过语言编辑器界面注入任意PHP代码。漏洞的技术根源在于对用户输入的不当验证，允许攻击者通过精心构造的请求执行恶意代码。</p>
-<p>此漏洞的安全风险极高，因为它允许攻击者在服务器上执行任意代码，可能导致完全控制受影响的系统。攻击者可以利用此漏洞窃取敏感数据、破坏服务或进一步渗透网络。需要注意的是，利用此漏洞需要管理员权限，但一旦获得这些权限，攻击者可以轻松地自动化攻击过程。因此，建议所有使用ISPConfig的用户尽快升级到最新版本以修复此漏洞。</p>
+<p><strong>漏洞描述：</strong> ISPConfig是一款广泛使用的开源主机控制面板，用于管理网站、邮件服务器、数据库等。它通常部署在Linux服务器上，为系统管理员提供便捷的Web界面来管理服务器资源。此次发现的漏洞存在于ISPConfig的language_edit.php文件中，当<code>admin_allow_langedit</code>设置被启用时，攻击者可以利用该漏洞注入任意PHP代码。漏洞的技术根源在于对用户输入的不当处理，导致攻击者可以通过构造特定的请求在服务器上执行任意代码。这种漏洞的危害性极高，因为它允许攻击者在受影响的系统上执行任意命令，可能导致服务器被完全控制、数据泄露或其他恶意活动。值得注意的是，利用此漏洞需要管理员权限，这意味着攻击者需要先获得有效的管理员凭证。然而，一旦获得这些凭证，攻击者可以轻松地利用此漏洞进行远程代码执行，无需进一步的用户交互。因此，对于使用ISPConfig的组织和个人来说，及时更新到最新版本以修复此漏洞至关重要。</p>
 <p><strong>产品厂商：</strong> ISPConfig</p>
 <p><strong>产品名称：</strong> ISPConfig</p>
 <p><strong>影响版本：</strong> version &lt; 3.2.11p1</p>
@@ -387,18 +385,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/07/03/github_1737625469/" title="Sudo chroot() Privilege Escalation Vulnerability">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Sudo chroot() Privilege Escalation Vulnerability</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/07/03/github_4203184563/" title="JEHC-BPM Remote Code Execute Vulnerability">
-                        <span class="hidden-mobile">JEHC-BPM Remote Code Execute Vulnerability</span>
+                      <a href="/2025/07/03/github_4136523791/" title="phpMyAdmin 信息泄露漏洞">
+                        <span class="hidden-mobile">phpMyAdmin 信息泄露漏洞</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
