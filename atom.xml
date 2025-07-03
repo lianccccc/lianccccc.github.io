@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-03T05:00:27.700Z</updated>
+  <updated>2025-07-03T05:15:14.786Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RARLAB WinRAR 目录遍历远程代码执行漏洞</title>
+    <link href="http://example.com/2025/07/03/github_913061514/"/>
+    <id>http://example.com/2025/07/03/github_913061514/</id>
+    <published>2025-07-03T05:15:14.786Z</published>
+    <updated>2025-07-03T05:15:14.786Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> RARLAB WinRAR 目录遍历远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-6218</li></ul><p><strong>漏洞类型：</strong> 目录遍历</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> RARLAB WinRAR 存在目录遍历远程代码执行漏洞，攻击者可通过构造特殊的文件路径，利用该漏洞在受影响的系统上执行任意代码。此漏洞需要用户交互，即目标用户需访问恶意页面或打开恶意文件。漏洞的具体缺陷在于处理归档文件中的文件路径时，可导致进程遍历到非预期的目录。攻击者可利用此漏洞在当前用户上下文中执行代码。</p><p><strong>产品厂商：</strong> RARLAB</p><p><strong>产品名称：</strong> WinRAR</p><p><strong>影响版本：</strong> all versions prior to patch</p><p><strong>来源：</strong> <a href="https://github.com/mulwareX/CVE-2025-6218-POC">https://github.com/mulwareX/CVE-2025-6218-POC</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>zip_payload_generator.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><p>RARLAB WinRAR Directory Traversal Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of RARLAB WinRAR. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.</p><p>The specific flaw exists within the handling of file paths within archive files. A crafted file path can cause the process to traverse to unintended directories. An attacker can leverage this vulnerability to execute code in the context of the current user. Was ZDI-CAN-27198.</p><h2 id="📦-Multi-Traversal-ZIP-Payload-Generator"><a href="#📦-Multi-Traversal-ZIP-Payload-Generator" class="headerlink" title="📦 Multi-Traversal ZIP Payload Generator"></a>📦 Multi-Traversal ZIP Payload Generator</h2><p>This Python script creates a specially crafted ZIP archive exploiting a <strong>WinRAR Directory Traversal Remote Code Execution</strong> vulnerability (ZDI-CAN-27198). The archive includes a payload designed to be extracted into the <strong>Windows Startup</strong> folder, allowing for execution upon the next user login.</p><blockquote><p><strong>⚠️ WARNING</strong>: This tool is provided for educational and research purposes only. Unauthorized use may be illegal and unethical. Always obtain proper authorization before testing on any system.</p></blockquote><hr><h3 id="🔥-Vulnerability-Overview"><a href="#🔥-Vulnerability-Overview" class="headerlink" title="🔥 Vulnerability Overview"></a>🔥 Vulnerability Overview</h3><ul><li><strong>Affected Software</strong>: WinRAR (all versions prior to patch)</li><li><strong>CVE &#x2F; ZDI Reference</strong>: ZDI-CAN-27198</li><li><strong>Attack Vector</strong>: Malicious ZIP file</li><li><strong>Impact</strong>: Remote Code Execution (RCE) upon archive extraction</li></ul><p>By embedding a payload with directory traversal sequences (<code>.. .\\.. .\\...</code>), the ZIP tricks WinRAR into extracting files outside the current directory—e.g., into the victim’s <strong>Startup folder</strong>:<br>AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup</p><hr><h3 id="🧰-Features"><a href="#🧰-Features" class="headerlink" title="🧰 Features"></a>🧰 Features</h3><ul><li>Injects payload into Startup folder using 3 to 7 levels of directory traversal</li><li>It will work even if the zip is extracted in 7 directories deep</li><li>Optionally includes a decoy <strong>normal file</strong> to appear legitimate</li><li>Supports arbitrary payload file</li></ul><hr><h3 id="🚀-Usage"><a href="#🚀-Usage" class="headerlink" title="🚀 Usage"></a>🚀 Usage</h3><h4 id="▶️-Requirements"><a href="#▶️-Requirements" class="headerlink" title="▶️ Requirements"></a>▶️ Requirements</h4><ul><li>Python 3.x</li></ul><h4 id="▶️-Command-Line"><a href="#▶️-Command-Line" class="headerlink" title="▶️ Command Line"></a>▶️ Command Line</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 zip_payload_generator.py --payload payload.bat --normal decoy.pdf --output backdoor.zip<br></code></pre></td></tr></table></figure><p>⚠️ Disclaimer</p><p>This project is for educational and authorized penetration testing only. The creator is not responsible for any misuse or damage caused by this tool. Always comply with local laws and regulations.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; RARLAB WinRAR 目录遍历远程代码执行漏洞&lt;/p&gt;
+&lt;p&gt;&lt;stro</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="目录遍历" scheme="http://example.com/tags/%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86/"/>
+    
+  </entry>
   
   <entry>
     <title>Cisco IOS Smart Install 缓冲区溢出漏洞</title>
@@ -514,33 +541,6 @@
     
     
     <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CVE-2025-32463 POC</title>
-    <link href="http://example.com/2025/07/02/github_2140662395/"/>
-    <id>http://example.com/2025/07/02/github_2140662395/</id>
-    <published>2025-07-02T18:45:15.162Z</published>
-    <updated>2025-07-02T18:45:15.157Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CVE-2025-32463 POC</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-32463</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞描述：</strong> 该漏洞利用<code>chroot</code>和<code>sudo</code>在解析<code>nsswitch.conf</code>配置值时尝试打开<code>libnss_systemd.so.2</code>的行为，可能导致权限提升。</p><p><strong>来源：</strong> <a href="https://github.com/robbert1978/CVE-2025-32463_POC">https://github.com/robbert1978/CVE-2025-32463_POC</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>.gitignore</li><li>Makefile</li><li>evil.c</li><li>evil.so</li><li>image-1.png</li><li>image.png</li><li>readme.md</li><li>strace.log</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><p><img src="/image.png" alt="alt text"><br><img src="/image-1.png" alt="alt text"></p><p>Checking <code>nsswitch.conf</code> default values:</p><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">passwd:</span>         files systemd<br></code></pre></td></tr></table></figure><p>After calling <code>chroot</code>, <code>sudo</code> trys to parse the config values at  <code>nsswitch.conf</code> to run the command, which leads it to try to open  <code>libnss_systemd.so.2</code>.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CVE-2025-32463 POC&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
     
   </entry>
   
