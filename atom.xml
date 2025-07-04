@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-04T13:45:40.140Z</updated>
+  <updated>2025-07-04T14:00:41.065Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>_r_netsec Twitter Update !</title>
+    <link href="http://example.com/2025/07/04/twitter_1602023076/"/>
+    <id>http://example.com/2025/07/04/twitter_1602023076/</id>
+    <published>2025-07-04T14:00:41.000Z</published>
+    <updated>2025-07-04T14:00:41.065Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> _r_netsec</p><p><strong>推文：</strong> 东京喰种 — TryHackMe CTF 攻略 | 网络利用与权限提升 <a href="https://t.co/lcFBihOp7l">https://t.co/lcFBihOp7l</a></p><p><strong>链接：</strong> <a href="https://x.com/_r_netsec/status/1941134426785878409">https://x.com/_r_netsec/status/1941134426785878409</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; _r_netsec&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 东京喰种 — TryHackMe CTF 攻略 | 网络利用与权限提升 &lt;a href=&quot;https://t.co/lcFBihOp7l&quot;&gt;https://</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="_r_netsec" scheme="http://example.com/tags/r-netsec/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>offsectraining Twitter Update !</title>
+    <link href="http://example.com/2025/07/04/twitter_570679787/"/>
+    <id>http://example.com/2025/07/04/twitter_570679787/</id>
+    <published>2025-07-04T14:00:32.000Z</published>
+    <updated>2025-07-04T14:00:32.824Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> offsectraining</p><p><strong>推文：</strong> 你是活跃的PEN-200学习者吗？通过HackTrack与导师一起提升你的OSCP准备水平 🎯</p><p>我们即将启动，前200名注册的PEN-200学习者将有机会加入。立即报名：<a href="https://t.co/azVcUfY0gE">https://t.co/azVcUfY0gE</a></p><p>更多信息请点击：<a href="https://t.co/yOz6xA2woT">https://t.co/yOz6xA2woT</a></p><p><strong>链接：</strong> <a href="https://x.com/offsectraining/status/1941126599509778469">https://x.com/offsectraining/status/1941126599509778469</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; offsectraining&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 你是活跃的PEN-200学习者吗？通过HackTrack与导师一起提升你的OSCP准备水平 🎯&lt;/p&gt;
+&lt;p&gt;我们即将启动，前200名注册的PE</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="offsectraining" scheme="http://example.com/tags/offsectraining/"/>
+    
+  </entry>
   
   <entry>
     <title>sudo Privilege Escalation Vulnerability</title>
@@ -461,60 +512,6 @@
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/Lt1PpyOGFLHujOjQetNoaA&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>高危Lucee漏洞通过计划任务滥用实现认证RCE，Metasploit模块已公开</title>
-    <link href="http://example.com/2025/07/04/weixin_3698659932/"/>
-    <id>http://example.com/2025/07/04/weixin_3698659932/</id>
-    <published>2025-07-04T11:13:27.235Z</published>
-    <updated>2025-07-04T11:13:27.229Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/79Y8MIZmlf_lcuGTGcCE7w">https://mp.weixin.qq.com/s/79Y8MIZmlf_lcuGTGcCE7w</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/79Y8MIZmlf_lcuGTGcCE7w&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HVV红队必备工具！快速打点，抢占第一先机</title>
-    <link href="http://example.com/2025/07/04/weixin_1036043757/"/>
-    <id>http://example.com/2025/07/04/weixin_1036043757/</id>
-    <published>2025-07-04T11:13:26.329Z</published>
-    <updated>2025-07-04T11:13:26.325Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/w3fqEOaIuYuvYoilmEvE2w">https://mp.weixin.qq.com/s/w3fqEOaIuYuvYoilmEvE2w</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/w3fqEOaIuYuvYoilmEvE2w&quot;&gt;https://mp.weixin.q</summary>
       
     
     
