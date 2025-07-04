@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-04T01:26:57.621Z</updated>
+  <updated>2025-07-04T02:15:29.780Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Apache Kafka 客户端未授权访问漏洞</title>
+    <link href="http://example.com/2025/07/04/github_1825460115/"/>
+    <id>http://example.com/2025/07/04/github_1825460115/</id>
+    <published>2025-07-04T02:15:29.000Z</published>
+    <updated>2025-07-04T02:15:29.780Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Apache Kafka 客户端未授权访问漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-27817</li></ul><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Apache Kafka是一个分布式流处理平台，广泛用于构建实时数据管道和流应用程序。它支持高吞吐量、低延迟的消息传递，常用于企业级服务和大数据处理场景。由于其高性能和可靠性，Kafka在众多行业中被广泛部署和使用。</p><p>该漏洞存在于Apache Kafka客户端，由于未对用户输入进行严格的验证和限制，未经身份验证的攻击者可以通过构造恶意配置，读取环境变量或磁盘上的任意内容，或者向非预期位置发送请求。这可能导致REST API的文件系统、环境变量或URL访问权限被不当提升。漏洞的根本原因在于客户端处理用户输入时的安全措施不足，未能有效防止未授权访问和恶意请求的构造。</p><p>此漏洞的安全风险较高，攻击者无需身份验证即可利用漏洞进行攻击，可能导致敏感信息泄露、服务配置被篡改，甚至可能被用于进一步的网络攻击。由于漏洞可以被远程利用，且攻击过程可以自动化，因此对运行受影响版本Apache Kafka的系统构成了严重威胁。建议用户及时检查并升级到安全版本，以防范潜在的安全风险。</p><p><strong>产品厂商：</strong> Apache</p><p><strong>产品名称：</strong> Apache Kafka</p><p><strong>影响版本：</strong> 3.1.0 &lt;&#x3D; version &lt;&#x3D; 3.9.0</p><p><strong>来源：</strong> <a href="https://github.com/iSee857/CVE-2025-27817">https://github.com/iSee857/CVE-2025-27817</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>kafka-CVE-2025-27817-ReadAnyFile(SSRF).py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="免责申明："><a href="#免责申明：" class="headerlink" title="免责申明："></a>免责申明：</h2><p>本文所描述的漏洞及其复现步骤仅供网络安全研究与教育目的使用。任何人不得将本文提供的信息用于非法目的或未经授权的系统测试。作者不对任何由于使用本文信息而导致的直接或间接损害承担责任。如涉及侵权，请及时与我们联系，我们将尽快处理并删除相关内容。</p><p>博客地址：</p><p><a href="https://blog.csdn.net/xc_214/article/details/148698902?spm=1001.2014.3001.5501">https://blog.csdn.net/xc_214/article/details/148698902?spm=1001.2014.3001.5501</a></p><p>纷传地址：</p><p>25hvv poc实时更新中</p><p><a href="https://pc.fenchuan8.com/#/index?forum=101158&yqm=DGR4X">https://pc.fenchuan8.com/#/index?forum=101158&amp;yqm=DGR4X</a><br><img src="https://github.com/user-attachments/assets/56220714-f829-477d-af31-2bd23009dcf7" alt="image"></p><h2 id="CVE-2025-27817"><a href="#CVE-2025-27817" class="headerlink" title="CVE-2025-27817"></a>CVE-2025-27817</h2><p>Apache Kafka客户端未对用户输入进行严格验证和限制，未经身份验证的攻击者可通过构造恶意配置读取环境变量或磁盘任意内容，或向非预期位置发送请求，提升REST API的文件系统&#x2F;环境&#x2F;URL访问权限。</p><h2 id="影响版本："><a href="#影响版本：" class="headerlink" title="影响版本："></a>影响版本：</h2><p>3.1.0 &lt;&#x3D; Apache Kafka &lt;&#x3D; 3.9.0</p><p>慢但是100%准确率，遇到超时的情况自行调整timeout</p><p><img src="https://github.com/user-attachments/assets/82450a1c-3252-4c3b-a5b6-5385e5aafe9f" alt="image"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Apache Kafka 客户端未授权访问漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>13 岁 Dylan 加入微软安全响应中心，成为最年轻的安全研究员</title>
@@ -497,31 +524,6 @@
     <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
     
     <category term="rapid7/metasploit-framework:github issues" scheme="http://example.com/tags/rapid7-metasploit-framework-github-issues/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BlackHatEvents twitter update</title>
-    <link href="http://example.com/2025/07/03/twitter_3053168981/"/>
-    <id>http://example.com/2025/07/03/twitter_3053168981/</id>
-    <published>2025-07-03T17:00:33.000Z</published>
-    <updated>2025-07-03T17:00:33.054Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> RT @abhaybhargav: 大约一个月后，我们将在@BlackHatEvents #BHUSA带来我们传奇的课程“攻击应用供应链”…</p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1940816418637074750">https://x.com/BlackHatEvents/status/1940816418637074750</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; RT @abhaybhargav: 大约一个月后，我们将在@BlackHatEvents #BHUSA带来我们传奇的课程“攻击应用供应链”…&lt;/p</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
     
   </entry>
   
