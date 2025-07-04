@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-04T12:00:21.120Z</updated>
+  <updated>2025-07-04T12:15:18.677Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>V8 JavaScript Engine 缓冲区溢出漏洞</title>
+    <link href="http://example.com/2025/07/04/github_3165619123/"/>
+    <id>http://example.com/2025/07/04/github_3165619123/</id>
+    <published>2025-07-04T12:15:18.000Z</published>
+    <updated>2025-07-04T12:15:18.677Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> V8 JavaScript Engine 缓冲区溢出漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-6554</li></ul><p><strong>漏洞类型：</strong> 缓冲区溢出</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> V8 JavaScript Engine是由Google开发的高性能JavaScript引擎，广泛应用于Chrome浏览器和Node.js等项目中，负责执行JavaScript代码。由于其高效和跨平台的特性，V8成为了现代Web技术栈中不可或缺的组件。本次发现的漏洞CVE-2025-6554是一个缓冲区溢出漏洞，存在于V8的特定版本13.8.500258中。漏洞的根源在于V8引擎在处理某些特定的JavaScript代码时，未能正确验证输入数据的边界，导致攻击者可以通过精心构造的JavaScript代码触发缓冲区溢出。这种漏洞可以被利用来执行任意代码，从而完全控制受影响的系统。由于V8引擎的高普及率，该漏洞的影响范围非常广泛，尤其是在使用受影响版本V8的Chrome浏览器和Node.js应用中。攻击者可以通过诱骗用户访问恶意网页或执行恶意Node.js代码来利用此漏洞，无需用户交互即可实现远程代码执行。因此，该漏洞被评级为高危，建议所有使用V8引擎的用户尽快检查并更新到安全版本。</p><p><strong>产品厂商：</strong> Google</p><p><strong>产品名称：</strong> V8 JavaScript Engine</p><p><strong>影响版本：</strong> 13.8.500258</p><p><strong>来源：</strong> <a href="https://github.com/windz3r0day/CVE-2025-6554">https://github.com/windz3r0day/CVE-2025-6554</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>poc-CVE-2025-6554.js</li><li>v8asan.sh</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-6554"><a href="#CVE-2025-6554" class="headerlink" title="CVE-2025-6554"></a>CVE-2025-6554</h2><h3 id="Reproducing-the-Vulnerability"><a href="#Reproducing-the-Vulnerability" class="headerlink" title="Reproducing the Vulnerability"></a>Reproducing the Vulnerability</h3><p>git clone <a href="https://chromium.googlesource.com/chromium/tools/depot_tools.git">https://chromium.googlesource.com/chromium/tools/depot_tools.git</a><br>export PATH&#x3D;&#x2F;path&#x2F;to&#x2F;depot_tools:$PATH</p><p>fetch v8<br>cd v8<br>git checkout 13.8.500258<br>gclient sync -D<br>sh v8asan.sh<br>autoninja -C out&#x2F;arm64.asan d8<br>ASAN_OPTIONS&#x3D;detect_leaks&#x3D;1:halt_on_error&#x3D;0 .&#x2F;d8 –allow-natives-syntax –trace-opt –trace-deopt poc-CVE-2025-6554.js</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; V8 JavaScript Engine 缓冲区溢出漏洞&lt;/p&gt;
+&lt;p&gt;&lt;st</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="缓冲区溢出" scheme="http://example.com/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>Cisco IOS Smart Install - Buffer Overflow</title>
@@ -515,31 +542,6 @@
     <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
     
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>zoomeye_team twitter update</title>
-    <link href="http://example.com/2025/07/04/twitter_341006288/"/>
-    <id>http://example.com/2025/07/04/twitter_341006288/</id>
-    <published>2025-07-04T04:00:30.000Z</published>
-    <updated>2025-07-04T04:00:30.002Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> zoomeye_team</p><p><strong>推文：</strong> ⚡️漏洞详情现已公布：<a href="https://t.co/V0pudnspL7">https://t.co/V0pudnspL7</a></p><p>🚨🚨CVE-2025-34074（CVSS评分9.4）影响Lucee！认证管理员可利用计划任务运行恶意.cfm文件，获得服务器完全控制权。</p><p>通过漏洞CVE筛选器搜索👉vul.cve&#x3D;”CVE-2025-34074”<br>ZoomEye搜索语法👉app&#x3D;”Lucee”<br>通过ZoomEye发现超过35,000个易受攻击的实例。<br>ZoomEye链接：<a href="https://t.co/RbYhovj2qQ">https://t.co/RbYhovj2qQ</a></p><p>参考：</p><ol><li><a href="https://t.co/o1GtZwRGlG">https://t.co/o1GtZwRGlG</a></li><li><a href="https://t.co/ql3vYNVR8h">https://t.co/ql3vYNVR8h</a></li></ol><p>#远程代码执行 #ZoomEye #网络安全映射 #网络安全 #网络空间洞察2025</p><p><strong>链接：</strong> <a href="https://x.com/zoomeye_team/status/1940979064287928342">https://x.com/zoomeye_team/status/1940979064287928342</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; zoomeye_team&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; ⚡️漏洞详情现已公布：&lt;a href=&quot;https://t.co/V0pudnspL7&quot;&gt;https://t.co/V0pudnspL7&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="zoomeye_team" scheme="http://example.com/tags/zoomeye-team/"/>
     
   </entry>
   
