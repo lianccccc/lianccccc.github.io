@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-04T04:00:30.002Z</updated>
+  <updated>2025-07-04T04:15:19.335Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Pterodactyl Panel 信息泄露漏洞</title>
+    <link href="http://example.com/2025/07/04/github_239190805/"/>
+    <id>http://example.com/2025/07/04/github_239190805/</id>
+    <published>2025-07-04T04:15:19.000Z</published>
+    <updated>2025-07-04T04:15:19.335Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Pterodactyl Panel 信息泄露漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-49132</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Pterodactyl Panel 是一款开源的游戏服务器管理面板，广泛用于游戏服务器托管和管理。它提供了一个基于Web的界面，允许用户轻松管理他们的游戏服务器。由于其易用性和功能丰富，Pterodactyl Panel 在游戏服务器社区中非常受欢迎。</p><p>该漏洞涉及敏感配置文件的暴露，特别是 <code>locale.json</code> 文件，以及从MySQL数据库中提取凭据的能力。攻击者可以利用这些信息泄露漏洞获取敏感数据，进一步可能导致未授权访问或其他恶意活动。技术根源在于不恰当的访问控制和敏感数据的不当处理，使得攻击者能够通过自动化工具发现并利用这些漏洞。</p><p>此漏洞的影响非常严重，因为它允许攻击者无需认证即可访问敏感信息，甚至可能创建具有管理员权限的用户，从而完全控制受影响的Pterodactyl Panel实例。这种漏洞的利用可以自动化进行，增加了其潜在的风险和广泛影响的可能性。因此，建议所有使用Pterodactyl Panel的用户立即检查并修复此漏洞，以防止潜在的安全威胁。</p><p><strong>产品厂商：</strong> Pterodactyl</p><p><strong>产品名称：</strong> Pterodactyl Panel</p><p><strong>来源：</strong> <a href="https://github.com/uxieltc/CVE-2025-49132">https://github.com/uxieltc/CVE-2025-49132</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>cve.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h1 align="center">🛡️ Pterodactyl Panel Vulnerability Checker & Exploit Tool</h1><p align="center">  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=24&pause=1500&color=00FF94&center=true&width=600&lines=Pentest+Tool+for+Pterodactyl;OSINT+%7C+Exploit+%7C+Automation" alt="Typing SVG" /></p><hr><h3 id="✨-Sobre"><a href="#✨-Sobre" class="headerlink" title="✨ Sobre"></a>✨ Sobre</h3><p>Um <strong>script Python</strong> que automatiza a descoberta e exploração de vulnerabilidades em painéis <strong>Pterodactyl</strong> mal configurados.</p><ul><li>🔍 Descobre exposição da configuração sensível (arquivo <code>locale.json</code>).  </li><li>🔑 Extrai credenciais do banco MySQL.  </li><li>👑 Cria usuário admin automaticamente com acesso total.  </li><li>☁️ Detecta e pula painéis protegidos por Cloudflare.</li></ul><hr><h3 id="⚙️-Tecnologias-e-Dependencias"><a href="#⚙️-Tecnologias-e-Dependencias" class="headerlink" title="⚙️ Tecnologias e Dependências"></a>⚙️ Tecnologias e Dependências</h3><p align="center">  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />  <img src="https://img.shields.io/badge/Requests-5282B8?style=for-the-badge&logo=python-requests&logoColor=white" />  <img src="https://img.shields.io/badge/Colorama-FE7E02?style=for-the-badge&logo=python&logoColor=white" />  <img src="https://img.shields.io/badge/PyMySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />  <img src="https://img.shields.io/badge/Bcrypt-002D72?style=for-the-badge&logo=python&logoColor=white" /></p><hr><h3 id="🚀-Como-usar"><a href="#🚀-Como-usar" class="headerlink" title="🚀 Como usar"></a>🚀 Como usar</h3><ol><li><p>Crie um arquivo <code>list.txt</code> com URLs dos painéis alvo (um por linha).</p></li><li><p>Execute:</p></li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 main.py list.txt<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Pterodactyl Panel 信息泄露漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+  </entry>
   
   <entry>
     <title>zoomeye_team twitter update</title>
@@ -499,31 +526,6 @@
     
     
     <category term="www.rapid7.com" scheme="http://example.com/tags/www-rapid7-com/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BlackHatEvents twitter update</title>
-    <link href="http://example.com/2025/07/03/twitter_1063474552/"/>
-    <id>http://example.com/2025/07/03/twitter_1063474552/</id>
-    <published>2025-07-03T18:00:26.000Z</published>
-    <updated>2025-07-03T18:00:26.896Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> 踏入终极#黑帽网络安全逃脱室挑战，测试你的数字取证技能！一名内鬼神不知鬼不觉地窃取了敏感数据——你能在为时已晚之前揭露他们的战术吗？ <a href="https://t.co/Cc4wVY13og">https://t.co/Cc4wVY13og</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1940825392845029656">https://x.com/BlackHatEvents/status/1940825392845029656</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 踏入终极#黑帽网络安全逃脱室挑战，测试你的数字取证技能！一名内鬼神不知鬼不觉地窃取了敏感数据——你能在为时已晚之前揭露他们的战术吗？ &lt;a hre</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
     
   </entry>
   
