@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-04T10:00:04.438Z</updated>
+  <updated>2025-07-04T10:04:04.432Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【7/4特辑】最新漏洞情报速递</title>
+    <link href="http://example.com/2025/07/04/weixin_414605148/"/>
+    <id>http://example.com/2025/07/04/weixin_414605148/</id>
+    <published>2025-07-04T10:04:04.437Z</published>
+    <updated>2025-07-04T10:04:04.432Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 安恒信息CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/tMCjuKRBA782K6FMWeq0Rw">https://mp.weixin.qq.com/s/tMCjuKRBA782K6FMWeq0Rw</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 安恒信息CERT&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/tMCjuKRBA782K6FMWeq0Rw&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="安恒信息CERT" scheme="http://example.com/tags/%E5%AE%89%E6%81%92%E4%BF%A1%E6%81%AFCERT/"/>
+    
+  </entry>
   
   <entry>
     <title>Unrestricted Upload of File with Dangerous Type vulnerability in CreedAlly Bulk Featured Image</title>
@@ -513,30 +540,6 @@
     
     
     <category term="Horizon3Attack" scheme="http://example.com/tags/Horizon3Attack/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Unrestricted Upload of File with Dangerous Type vulnerability in WPCenter AiBud WP allows Upload</title>
-    <link href="http://example.com/2025/07/03/github_2227168860/"/>
-    <id>http://example.com/2025/07/03/github_2227168860/</id>
-    <published>2025-07-03T22:00:06.000Z</published>
-    <updated>2025-07-03T22:00:06.776Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-6gmj-v8v5-94pg">https://github.com/advisories/GHSA-6gmj-v8v5-94pg</a></p><p><strong>CVSS 评分：</strong> 9.1</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-23968">https://nvd.nist.gov/vuln/detail/CVE-2025-23968</a></p></li><li><p><a href="https://patchstack.com/database/wordpress/plugin/aibuddy-openai-chatgpt/vulnerability/wordpress-aibud-wp-plugin-1-8-5-arbitrary-file-upload-vulnerability?_s_id=cve">https://patchstack.com/database/wordpress/plugin/aibuddy-openai-chatgpt/vulnerability/wordpress-aibud-wp-plugin-1-8-5-arbitrary-file-upload-vulnerability?_s_id=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-6gmj-v8v5-94pg">https://github.com/advisories/GHSA-6gmj-v8v5-94pg</a></p></li></ul><p><strong>描述：</strong></p><p>Unrestricted Upload of File with Dangerous Type vulnerability in WPCenter AiBud WP allows Upload a Web Shell to a Web Server.This issue affects AiBud WP: from n&#x2F;a through 1.8.5.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-6gmj-v8v5-94pg&quot;&gt;https://github.com/advisories/GHSA-6gmj-v8v5-94pg&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
     
   </entry>
   
