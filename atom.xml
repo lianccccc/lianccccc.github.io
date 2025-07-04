@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-04T08:15:24.018Z</updated>
+  <updated>2025-07-04T09:00:25.238Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>_r_netsec Twitter Update !</title>
+    <link href="http://example.com/2025/07/04/twitter_1465853161/"/>
+    <id>http://example.com/2025/07/04/twitter_1465853161/</id>
+    <published>2025-07-04T09:00:25.000Z</published>
+    <updated>2025-07-04T09:00:25.238Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> _r_netsec</p><p><strong>推文：</strong> CVE-2025-32462：sudo：通过主机选项实现本地权限提升 <a href="https://t.co/Wyjn7Gc6eY">https://t.co/Wyjn7Gc6eY</a></p><p><strong>链接：</strong> <a href="https://x.com/_r_netsec/status/1941055152099938492">https://x.com/_r_netsec/status/1941055152099938492</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; _r_netsec&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-32462：sudo：通过主机选项实现本地权限提升 &lt;a href=&quot;https://t.co/Wyjn7Gc6eY&quot;&gt;https://t</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="_r_netsec" scheme="http://example.com/tags/r-netsec/"/>
+    
+  </entry>
   
   <entry>
     <title>RevPi WebStatus Authentication Bypass Vulnerability</title>
@@ -512,32 +537,6 @@
     
     
     <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sudo chroot Elevation of Privilege Vulnerability</title>
-    <link href="http://example.com/2025/07/03/github_2397886201/"/>
-    <id>http://example.com/2025/07/03/github_2397886201/</id>
-    <published>2025-07-03T21:15:25.000Z</published>
-    <updated>2025-07-03T21:15:25.134Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Sudo chroot Elevation of Privilege Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-32463</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 受影响的产品是Sudo，一个在Unix和类Unix操作系统中广泛使用的程序，允许用户以其他用户的安全权限运行程序，通常是超级用户。Sudo是系统管理员和高级用户的常用工具，用于委派权限和执行需要更高权限的任务。该漏洞涉及Sudo的chroot功能，该功能允许用户在更改根目录的环境中运行命令，这在多用户环境和系统管理中是一个重要的安全特性。漏洞的技术根源在于Sudo在处理chroot命令时的权限提升机制存在缺陷，攻击者可以利用这一缺陷在特定条件下绕过预期的权限限制，从而获得未授权的root权限。这种漏洞的影响非常严重，因为它允许攻击者在不需要任何认证的情况下，直接提升到最高权限，执行任意命令，完全控制系统。由于Sudo的广泛使用，这一漏洞对许多系统构成了重大威胁，尤其是那些依赖于Sudo进行权限管理的服务器和工作站。攻击者可以利用此漏洞进行远程代码执行、数据泄露和服务中断等恶意活动，且攻击过程可以自动化执行，增加了漏洞的危险性。</p><p><strong>产品名称：</strong> Sudo</p><p><strong>来源：</strong> <a href="https://github.com/mirchr/CVE-2025-32463-sudo-chwoot">https://github.com/mirchr/CVE-2025-32463-sudo-chwoot</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-32463-sudo-chwoot"><a href="#CVE-2025-32463-sudo-chwoot" class="headerlink" title="CVE-2025-32463-sudo-chwoot"></a>CVE-2025-32463-sudo-chwoot</h2><p>PoC for CVE-2025-32463 - Sudo chroot Elevation of Privilege Vulnerability</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Sudo chroot Elevation of Privilege Vuln</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
     
   </entry>
   
