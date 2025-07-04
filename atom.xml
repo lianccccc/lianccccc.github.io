@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-04T13:30:22.519Z</updated>
+  <updated>2025-07-04T13:45:40.140Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>sudo Privilege Escalation Vulnerability</title>
+    <link href="http://example.com/2025/07/04/github_42297416/"/>
+    <id>http://example.com/2025/07/04/github_42297416/</id>
+    <published>2025-07-04T13:45:40.000Z</published>
+    <updated>2025-07-04T13:45:40.140Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> sudo Privilege Escalation Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-32463</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> 该漏洞影响的是sudo，一个在Linux系统中广泛使用的命令行程序，允许用户以其他用户的权限运行程序，通常是超级用户（root）。sudo是系统管理员和普通用户在执行需要更高权限的任务时的常用工具，几乎在所有Linux发行版中都有部署。</p><p>漏洞的技术根源在于sudo的<code>-R</code>选项在处理恶意NSS模块时的缺陷。攻击者可以通过创建一个伪造的chroot目录和自定义的<code>nsswitch.conf</code>文件，编译一个恶意的<code>libnss_illdeed.so.2</code>共享对象，然后通过执行<code>sudo -R &lt;fake_root&gt;</code>来执行任意root命令。这种方法利用了sudo在特定版本中的漏洞，允许本地用户无需密码即可提升权限至root。</p><p>此漏洞的影响极为严重，因为它允许任何具有本地shell访问权限的用户完全控制系统。攻击者可以执行任意命令，访问敏感数据，安装恶意软件，或进行其他恶意活动。由于漏洞利用不需要用户交互或认证，因此可以自动执行，大大增加了被利用的风险。此漏洞的存在强调了系统管理员需要及时更新软件以修补已知漏洞的重要性。</p><p><strong>产品名称：</strong> sudo</p><p><strong>影响版本：</strong> 1.9.14 &lt;&#x3D; version &lt;&#x3D; 1.9.17</p><p><strong>来源：</strong> <a href="https://github.com/ill-deed/CVE-2025-32463_illdeed">https://github.com/ill-deed/CVE-2025-32463_illdeed</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>LICENSE</li><li>README.md</li><li>sudo_illdeed.sh</li><li>sudo_illdeed_stealth.sh</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-32463-—-sudo-R-Privilege-Escalation-Exploit-illdeed-Variant"><a href="#CVE-2025-32463-—-sudo-R-Privilege-Escalation-Exploit-illdeed-Variant" class="headerlink" title="CVE-2025-32463 — sudo -R Privilege Escalation Exploit (illdeed Variant)"></a>CVE-2025-32463 — sudo -R Privilege Escalation Exploit (illdeed Variant)</h2><p>This is a refactored proof-of-concept (PoC) exploit for <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32463">CVE-2025-32463</a>, a critical vulnerability in <code>sudo</code> versions 1.9.14 through 1.9.17 that allows <strong>local privilege escalation to root</strong> via <code>sudo -R</code> and a fake NSS module.</p><blockquote><p>⚠️ This version creates a payload named <code>illdeed</code> for tracking and forensic testing.</p></blockquote><h3 id="💥-How-It-Works"><a href="#💥-How-It-Works" class="headerlink" title="💥 How It Works"></a>💥 How It Works</h3><ul><li>Creates a fake chroot directory with a custom <code>nsswitch.conf</code></li><li>Compiles a malicious <code>libnss_illdeed.so.2</code> shared object</li><li>Executes arbitrary root commands using <code>sudo -R &lt;fake_root&gt;</code></li><li>Cleans up after execution unless <code>--no-clean</code> is passed</li></ul><h3 id="✅-Requirements"><a href="#✅-Requirements" class="headerlink" title="✅ Requirements"></a>✅ Requirements</h3><ul><li>Linux system with <code>sudo</code> 1.9.14 → 1.9.17</li><li><code>gcc</code> installed</li><li>User with local shell access and ability to run <code>sudo -R</code> (no password required)</li></ul><h3 id="🚀-Usage"><a href="#🚀-Usage" class="headerlink" title="🚀 Usage"></a>🚀 Usage</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">## Get an interactive root shell</span><br>./sudo-illdeed.sh<br><br><span class="hljs-comment">## Run a custom root command</span><br>./sudo-illdeed.sh <span class="hljs-string">&quot;id &amp;&amp; whoami &amp;&amp; touch /root/illdeed.txt&quot;</span><br><br><span class="hljs-comment">## Keep generated files for analysis</span><br>./sudo-illdeed.sh --no-clean<br></code></pre></td></tr></table></figure><h3 id="🔐-Disclaimer"><a href="#🔐-Disclaimer" class="headerlink" title="🔐 Disclaimer"></a>🔐 Disclaimer</h3><p>This code is provided for educational and authorized security testing purposes only.<br>Do not use against systems you do not own or have explicit permission to test.</p><h3 id="📚-Credits"><a href="#📚-Credits" class="headerlink" title="📚 Credits"></a>📚 Credits</h3><p>Original PoC: Rich Mirch (Stratascale Cyber Research Unit)</p><p>Refactored variant: illdeed</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; sudo Privilege Escalation Vulnerability</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sudo 权限提升漏洞</title>
+    <link href="http://example.com/2025/07/04/github_1280218352/"/>
+    <id>http://example.com/2025/07/04/github_1280218352/</id>
+    <published>2025-07-04T13:45:21.000Z</published>
+    <updated>2025-07-04T13:45:21.007Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Sudo 权限提升漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-32463</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> CVE-2025-32463是一个影响sudo的本地权限提升漏洞，由Rich Mirch发现。sudo是一个在Unix和Linux操作系统中广泛使用的程序，允许用户以其他用户的权限运行程序，通常是超级用户。这个漏洞存在于sudo的特定版本中，允许攻击者从低权限用户提升到root权限。</p><p>漏洞的技术根源在于sudo的某个功能在处理特定请求时存在缺陷，导致攻击者可以绕过预期的权限检查。这种类型的漏洞通常由于输入验证不足或逻辑错误引起，使得攻击者能够执行未授权的操作。</p><p>此漏洞的影响非常严重，因为它允许攻击者在不需要任何形式的认证的情况下，从普通用户权限提升到root权限。这意味着攻击者可以完全控制系统，执行任意命令，访问敏感数据，甚至安装恶意软件。由于sudo在大多数Unix和Linux系统中的普及性，这个漏洞的影响范围非常广泛。攻击者可以利用这个漏洞自动化地提升权限，增加了被利用的风险。因此，建议所有使用受影响版本sudo的系统管理员尽快应用补丁或升级到不受影响的版本。</p><p><strong>产品名称：</strong> sudo</p><p><strong>影响版本：</strong> version &lt;&#x3D; 1.9.15p5</p><p><strong>来源：</strong> <a href="https://github.com/zinzloun/CVE-2025-32463">https://github.com/zinzloun/CVE-2025-32463</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>LICENSE</li><li>README.md</li><li>poc.sh</li><li>woot1337.so.2</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-32463-–-Sudo-EoP-Exploit-PoC-with-precompiled-so"><a href="#CVE-2025-32463-–-Sudo-EoP-Exploit-PoC-with-precompiled-so" class="headerlink" title="CVE-2025-32463 – Sudo EoP Exploit (PoC) with precompiled .so"></a>CVE-2025-32463 – Sudo EoP Exploit (PoC) with precompiled .so</h2><p>This repository contains a proof-of-concept (PoC) exploit for <strong>CVE-2025-32463</strong>, a local privilege escalation vulnerability in <code>sudo</code> discovered by Rich Mirch.</p><h3 id="⚠️-Disclaimer"><a href="#⚠️-Disclaimer" class="headerlink" title="⚠️ Disclaimer"></a>⚠️ Disclaimer</h3><p>This PoC is for <strong>educational and authorized testing purposes only</strong>. Do not use this code on systems you do not own or have explicit permission to assess.</p><hr><h3 id="🔧-Requirements"><a href="#🔧-Requirements" class="headerlink" title="🔧 Requirements"></a>🔧 Requirements</h3><ul><li>sudo version &lt;&#x3D; 1.9.15p5</li></ul><h3 id="How-to-run-the-POC"><a href="#How-to-run-the-POC" class="headerlink" title="How to run the POC"></a>How to run the POC</h3><pre><code class="hljs">git clone https://github.com/zinzloun/CVE-2025-32463.gitcd CVE-2025-32463</code></pre><p>Check if the current user has low privileges</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Sudo 权限提升漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/stron</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
+    
+  </entry>
   
   <entry>
     <title>WBCE CMS v154 - Remote Code Execution</title>
@@ -472,57 +525,6 @@
     <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
     
     <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【7/4特辑】最新漏洞情报速递</title>
-    <link href="http://example.com/2025/07/04/weixin_414605148/"/>
-    <id>http://example.com/2025/07/04/weixin_414605148/</id>
-    <published>2025-07-04T10:04:04.437Z</published>
-    <updated>2025-07-04T10:04:04.432Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 安恒信息CERT</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/tMCjuKRBA782K6FMWeq0Rw">https://mp.weixin.qq.com/s/tMCjuKRBA782K6FMWeq0Rw</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 安恒信息CERT&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/tMCjuKRBA782K6FMWeq0Rw&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="安恒信息CERT" scheme="http://example.com/tags/%E5%AE%89%E6%81%92%E4%BF%A1%E6%81%AFCERT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Unrestricted Upload of File with Dangerous Type vulnerability in CreedAlly Bulk Featured Image</title>
-    <link href="http://example.com/2025/07/04/github_3605842194/"/>
-    <id>http://example.com/2025/07/04/github_3605842194/</id>
-    <published>2025-07-04T10:00:04.000Z</published>
-    <updated>2025-07-04T10:00:04.438Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-2m2x-qh8q-wgqq">https://github.com/advisories/GHSA-2m2x-qh8q-wgqq</a></p><p><strong>CVSS 评分：</strong> 9.1</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-28951">https://nvd.nist.gov/vuln/detail/CVE-2025-28951</a></p></li><li><p><a href="https://patchstack.com/database/wordpress/plugin/bulk-featured-image/vulnerability/wordpress-bulk-featured-image-plugin-1-2-1-arbitrary-file-upload-vulnerability?_s_id=cve">https://patchstack.com/database/wordpress/plugin/bulk-featured-image/vulnerability/wordpress-bulk-featured-image-plugin-1-2-1-arbitrary-file-upload-vulnerability?_s_id=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-2m2x-qh8q-wgqq">https://github.com/advisories/GHSA-2m2x-qh8q-wgqq</a></p></li></ul><p><strong>描述：</strong></p><p>Unrestricted Upload of File with Dangerous Type vulnerability in CreedAlly Bulk Featured Image allows Upload a Web Shell to a Web Server. This issue affects Bulk Featured Image: from n&#x2F;a through 1.2.1.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-2m2x-qh8q-wgqq&quot;&gt;https://github.com/advisories/GHSA-2m2x-qh8q-wgqq&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
     
   </entry>
   
