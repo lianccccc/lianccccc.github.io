@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-04T09:00:25.238Z</updated>
+  <updated>2025-07-04T10:00:04.438Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Unrestricted Upload of File with Dangerous Type vulnerability in CreedAlly Bulk Featured Image</title>
+    <link href="http://example.com/2025/07/04/github_3605842194/"/>
+    <id>http://example.com/2025/07/04/github_3605842194/</id>
+    <published>2025-07-04T10:00:04.000Z</published>
+    <updated>2025-07-04T10:00:04.438Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-2m2x-qh8q-wgqq">https://github.com/advisories/GHSA-2m2x-qh8q-wgqq</a></p><p><strong>CVSS 评分：</strong> 9.1</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-28951">https://nvd.nist.gov/vuln/detail/CVE-2025-28951</a></p></li><li><p><a href="https://patchstack.com/database/wordpress/plugin/bulk-featured-image/vulnerability/wordpress-bulk-featured-image-plugin-1-2-1-arbitrary-file-upload-vulnerability?_s_id=cve">https://patchstack.com/database/wordpress/plugin/bulk-featured-image/vulnerability/wordpress-bulk-featured-image-plugin-1-2-1-arbitrary-file-upload-vulnerability?_s_id=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-2m2x-qh8q-wgqq">https://github.com/advisories/GHSA-2m2x-qh8q-wgqq</a></p></li></ul><p><strong>描述：</strong></p><p>Unrestricted Upload of File with Dangerous Type vulnerability in CreedAlly Bulk Featured Image allows Upload a Web Shell to a Web Server. This issue affects Bulk Featured Image: from n&#x2F;a through 1.2.1.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-2m2x-qh8q-wgqq&quot;&gt;https://github.com/advisories/GHSA-2m2x-qh8q-wgqq&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>_r_netsec Twitter Update !</title>
@@ -505,30 +529,6 @@
       
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-6gmj-v8v5-94pg&quot;&gt;https://github.com/advisories/GHSA-6gmj-v8v5-94pg&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NextJS vulnerability can lead to DoS via cache poisoning</title>
-    <link href="http://example.com/2025/07/03/github_1348466141/"/>
-    <id>http://example.com/2025/07/03/github_1348466141/</id>
-    <published>2025-07-03T21:30:05.000Z</published>
-    <updated>2025-07-03T21:30:05.653Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-67rr-84xm-4c7r">https://github.com/advisories/GHSA-67rr-84xm-4c7r</a></p><p><strong>仓库 Star：</strong> 132887</p><p><strong>CVSS 评分：</strong> 7.5</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/vercel/next.js/security/advisories/GHSA-67rr-84xm-4c7r">https://github.com/vercel/next.js/security/advisories/GHSA-67rr-84xm-4c7r</a></p></li><li><p><a href="https://github.com/vercel/next.js/commit/16bfce64ef2157f2c1dfedcfdb7771bc63103fd2">https://github.com/vercel/next.js/commit/16bfce64ef2157f2c1dfedcfdb7771bc63103fd2</a></p></li><li><p><a href="https://github.com/vercel/next.js/commit/a15b974ed707d63ad4da5b74c1441f5b7b120e93">https://github.com/vercel/next.js/commit/a15b974ed707d63ad4da5b74c1441f5b7b120e93</a></p></li><li><p><a href="https://vercel.com/changelog/cve-2025-49826">https://vercel.com/changelog/cve-2025-49826</a></p></li><li><p><a href="https://github.com/advisories/GHSA-67rr-84xm-4c7r">https://github.com/advisories/GHSA-67rr-84xm-4c7r</a></p></li></ul><p><strong>描述：</strong></p><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>A vulnerability affecting Next.js has been addressed. It impacted versions 15.0.4 through 15.1.8 and involved a cache poisoning bug leading to a Denial of Service (DoS) condition.</p><p>Under certain conditions, this issue may allow a HTTP 204 response to be cached for static pages, leading to the 204 response being served to all users attempting to access the page</p><p>More details: <a href="https://vercel.com/changelog/cve-2025-49826">CVE-2025-49826</a></p><h2 id="Credits"><a href="#Credits" class="headerlink" title="Credits"></a>Credits</h2><ul><li>Allam Rachid <a href="https://zhero-web-sec.github.io/research-and-things/">zhero;</a></li><li>Allam Yasser (inzo)</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-67rr-84xm-4c7r&quot;&gt;https://github.com/advisories/GHSA-67rr-84xm-4c7r&lt;/a&gt;&lt;/p</summary>
       
     
     
