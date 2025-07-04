@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-04T16:00:36.575Z</updated>
+  <updated>2025-07-04T16:01:04.276Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,107 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>illdeed Twitter Update !</title>
+    <link href="http://example.com/2025/07/04/twitter_2539392828/"/>
+    <id>http://example.com/2025/07/04/twitter_2539392828/</id>
+    <published>2025-07-04T16:01:04.000Z</published>
+    <updated>2025-07-04T16:01:04.276Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> illdeed</p><p><strong>推文：</strong> 🚨 新漏洞验证：CVE-2025-20281 – Cisco ISE ERS 未授权远程代码执行<br>无需登录。完全root权限。直接发送即可。</p><p>🔥 通过<a href="https://t.co/kbYC85glbb%E8%BF%9B%E8%A1%8CBash%E6%B3%A8%E5%85%A5">https://t.co/kbYC85glbb进行Bash注入</a><br>💣 反向Shell或命令执行<br>🛠 Python利用代码在此 → <a href="https://t.co/EGbyOHZjrT">https://t.co/EGbyOHZjrT</a><br>#思科 #远程代码执行 #cve2025 #漏洞利用 #信息安全</p><p><strong>链接：</strong> <a href="https://x.com/illdeed/status/1941152342201729393">https://x.com/illdeed/status/1941152342201729393</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; illdeed&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🚨 新漏洞验证：CVE-2025-20281 – Cisco ISE ERS 未授权远程代码执行&lt;br&gt;无需登录。完全root权限。直接发送即可。&lt;/p&gt;
+&lt;</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="illdeed" scheme="http://example.com/tags/illdeed/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CVEnew Twitter Update !</title>
+    <link href="http://example.com/2025/07/04/twitter_1788999112/"/>
+    <id>http://example.com/2025/07/04/twitter_1788999112/</id>
+    <published>2025-07-04T16:00:56.000Z</published>
+    <updated>2025-07-04T16:00:56.172Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> CVEnew</p><p><strong>推文：</strong> CVE-2025-49600 在MbedTLS 3.3.0至3.6.4之前的版本中，mbedtls_lms_verify可能在哈希计算失败且内部错误未被检查的情况下接受无效签名，从而启用LMS（Leighton-Mic… <a href="https://t.co/77Z21fepMX">https://t.co/77Z21fepMX</a></p><p><strong>链接：</strong> <a href="https://x.com/CVEnew/status/1941154060662366219">https://x.com/CVEnew/status/1941154060662366219</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; CVEnew&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-49600 在MbedTLS 3.3.0至3.6.4之前的版本中，mbedtls_lms_verify可能在哈希计算失败且内部错误未被检查的情况</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="CVEnew" scheme="http://example.com/tags/CVEnew/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CVEnew Twitter Update !</title>
+    <link href="http://example.com/2025/07/04/twitter_986319198/"/>
+    <id>http://example.com/2025/07/04/twitter_986319198/</id>
+    <published>2025-07-04T16:00:49.000Z</published>
+    <updated>2025-07-04T16:00:49.264Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> CVEnew</p><p><strong>推文：</strong> CVE-2025-49601 在MbedTLS 3.3.0至3.6.4之前的版本中，mbedtls_lms_import_public_key函数在读取32位字段之前未检查输入缓冲区是否至少有4字节，可能导致… <a href="https://t.co/K5LsiqegLm">https://t.co/K5LsiqegLm</a></p><p><strong>链接：</strong> <a href="https://x.com/CVEnew/status/1941154061778047322">https://x.com/CVEnew/status/1941154061778047322</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; CVEnew&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-49601 在MbedTLS 3.3.0至3.6.4之前的版本中，mbedtls_lms_import_public_key函数在读取32位字段</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="CVEnew" scheme="http://example.com/tags/CVEnew/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ZeroDayCVE Twitter Update !</title>
+    <link href="http://example.com/2025/07/04/twitter_4124395920/"/>
+    <id>http://example.com/2025/07/04/twitter_4124395920/</id>
+    <published>2025-07-04T16:00:43.000Z</published>
+    <updated>2025-07-04T16:00:43.328Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> ZeroDayCVE</p><p><strong>推文：</strong> #CVE202546733 CVE-2025-46733 - OP-TEE安全存储API恐慌漏洞：CVE ID：CVE-2025-46733<br>发布日期：2025年7月4日，下午2:15 | 1小时4分钟前<br>描述：OP-TEE是一个可信执行环境（TEE），设计作为…的伴侣 <a href="https://t.co/H2DSL4DcoV">https://t.co/H2DSL4DcoV</a></p><p><strong>链接：</strong> <a href="https://x.com/ZeroDayCVE/status/1941155361249222988">https://x.com/ZeroDayCVE/status/1941155361249222988</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; ZeroDayCVE&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; #CVE202546733 CVE-2025-46733 - OP-TEE安全存储API恐慌漏洞：CVE ID：CVE-2025-46733&lt;br&gt;发布日</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="ZeroDayCVE" scheme="http://example.com/tags/ZeroDayCVE/"/>
+    
+  </entry>
   
   <entry>
     <title>VulmonFeeds Twitter Update !</title>
@@ -419,102 +520,6 @@
       
       
     <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-fq9w-fp93-3f95&quot;&gt;https://github.com/advisories/GHSA-fq9w-fp93-3f95&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Improper Control of Generation of Code (&#39;Code Injection&#39;) vulnerability in Scott Paterson Easy</title>
-    <link href="http://example.com/2025/07/04/github_3351981931/"/>
-    <id>http://example.com/2025/07/04/github_3351981931/</id>
-    <published>2025-07-04T13:00:07.000Z</published>
-    <updated>2025-07-04T13:00:07.290Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-q246-98gq-xrh4">https://github.com/advisories/GHSA-q246-98gq-xrh4</a></p><p><strong>CVSS 评分：</strong> 10.0</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-49302">https://nvd.nist.gov/vuln/detail/CVE-2025-49302</a></p></li><li><p><a href="https://patchstack.com/database/wordpress/plugin/easy-stripe/vulnerability/wordpress-easy-stripe-1-1-remote-code-execution-rce-vulnerability?_s_id=cve">https://patchstack.com/database/wordpress/plugin/easy-stripe/vulnerability/wordpress-easy-stripe-1-1-remote-code-execution-rce-vulnerability?_s_id=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-q246-98gq-xrh4">https://github.com/advisories/GHSA-q246-98gq-xrh4</a></p></li></ul><p><strong>描述：</strong></p><p>Improper Control of Generation of Code (‘Code Injection’) vulnerability in Scott Paterson Easy Stripe allows Remote Code Inclusion. This issue affects Easy Stripe: from n&#x2F;a through 1.1.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-q246-98gq-xrh4&quot;&gt;https://github.com/advisories/GHSA-q246-98gq-xrh4&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Incorrect Privilege Assignment vulnerability in InspiryThemes RealHomes allows Privilege</title>
-    <link href="http://example.com/2025/07/04/github_1236561275/"/>
-    <id>http://example.com/2025/07/04/github_1236561275/</id>
-    <published>2025-07-04T13:00:06.000Z</published>
-    <updated>2025-07-04T13:00:06.962Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-m52w-76vq-gjvm">https://github.com/advisories/GHSA-m52w-76vq-gjvm</a></p><p><strong>CVSS 评分：</strong> 9.8</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-49867">https://nvd.nist.gov/vuln/detail/CVE-2025-49867</a></p></li><li><p><a href="https://patchstack.com/database/wordpress/theme/realhomes/vulnerability/wordpress-realhomes-4-4-0-privilege-escalation-vulnerability?_s_id=cve">https://patchstack.com/database/wordpress/theme/realhomes/vulnerability/wordpress-realhomes-4-4-0-privilege-escalation-vulnerability?_s_id=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-m52w-76vq-gjvm">https://github.com/advisories/GHSA-m52w-76vq-gjvm</a></p></li></ul><p><strong>描述：</strong></p><p>Incorrect Privilege Assignment vulnerability in InspiryThemes RealHomes allows Privilege Escalation. This issue affects RealHomes: from n&#x2F;a through 4.4.0.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-m52w-76vq-gjvm&quot;&gt;https://github.com/advisories/GHSA-m52w-76vq-gjvm&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;)</title>
-    <link href="http://example.com/2025/07/04/github_1833524291/"/>
-    <id>http://example.com/2025/07/04/github_1833524291/</id>
-    <published>2025-07-04T13:00:06.000Z</published>
-    <updated>2025-07-04T13:00:06.262Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-vm95-2m88-cv87">https://github.com/advisories/GHSA-vm95-2m88-cv87</a></p><p><strong>CVSS 评分：</strong> 9.3</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-52832">https://nvd.nist.gov/vuln/detail/CVE-2025-52832</a></p></li><li><p><a href="https://patchstack.com/database/wordpress/plugin/ngg-smart-image-search/vulnerability/wordpress-ngg-smart-image-search-3-4-1-sql-injection-vulnerability?_s_id=cve">https://patchstack.com/database/wordpress/plugin/ngg-smart-image-search/vulnerability/wordpress-ngg-smart-image-search-3-4-1-sql-injection-vulnerability?_s_id=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-vm95-2m88-cv87">https://github.com/advisories/GHSA-vm95-2m88-cv87</a></p></li></ul><p><strong>描述：</strong></p><p>Improper Neutralization of Special Elements used in an SQL Command (‘SQL Injection’) vulnerability in wpo-HR NGG Smart Image Search allows SQL Injection. This issue affects NGG Smart Image Search: from n&#x2F;a through 3.4.1.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-vm95-2m88-cv87&quot;&gt;https://github.com/advisories/GHSA-vm95-2m88-cv87&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;)</title>
-    <link href="http://example.com/2025/07/04/github_3098525848/"/>
-    <id>http://example.com/2025/07/04/github_3098525848/</id>
-    <published>2025-07-04T13:00:06.000Z</published>
-    <updated>2025-07-04T13:00:06.622Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-mq8r-5fmf-75cw">https://github.com/advisories/GHSA-mq8r-5fmf-75cw</a></p><p><strong>CVSS 评分：</strong> 9.3</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-52830">https://nvd.nist.gov/vuln/detail/CVE-2025-52830</a></p></li><li><p><a href="https://patchstack.com/database/wordpress/plugin/bsecure/vulnerability/wordpress-bsecure-your-universal-checkout-1-7-9-sql-injection-vulnerability?_s_id=cve">https://patchstack.com/database/wordpress/plugin/bsecure/vulnerability/wordpress-bsecure-your-universal-checkout-1-7-9-sql-injection-vulnerability?_s_id=cve</a></p></li><li><p><a href="https://github.com/advisories/GHSA-mq8r-5fmf-75cw">https://github.com/advisories/GHSA-mq8r-5fmf-75cw</a></p></li></ul><p><strong>描述：</strong></p><p>Improper Neutralization of Special Elements used in an SQL Command (‘SQL Injection’) vulnerability in bsecuretech bSecure &#8211; Your Universal Checkout allows Blind SQL Injection. This issue affects bSecure &#8211; Your Universal Checkout: from n&#x2F;a through 1.7.9.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-mq8r-5fmf-75cw&quot;&gt;https://github.com/advisories/GHSA-mq8r-5fmf-75cw&lt;/a&gt;&lt;/p</summary>
       
     
     
