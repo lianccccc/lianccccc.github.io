@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-04T15:00:39.902Z</updated>
+  <updated>2025-07-04T15:32:39.675Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hvv74情报</title>
+    <link href="http://example.com/2025/07/04/weixin_1850895555/"/>
+    <id>http://example.com/2025/07/04/weixin_1850895555/</id>
+    <published>2025-07-04T15:32:39.677Z</published>
+    <updated>2025-07-04T15:32:39.675Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> 飓风网络安全</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/98v8FU_0aFH4pTWPOk0f-Q">https://mp.weixin.qq.com/s/98v8FU_0aFH4pTWPOk0f-Q</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 飓风网络安全&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/98v8FU_0aFH4pTWPOk0f-Q&quot;&gt;https://mp.weixin.qq</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="飓风网络安全" scheme="http://example.com/tags/%E9%A3%93%E9%A3%8E%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>CrushFTP Authentication Bypass Vulnerability</title>
@@ -495,32 +522,6 @@
     <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
     
     <category term="缓冲区溢出" scheme="http://example.com/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WPvivid Backup &amp; Migration 任意文件上传漏洞</title>
-    <link href="http://example.com/2025/07/04/github_3252263130/"/>
-    <id>http://example.com/2025/07/04/github_3252263130/</id>
-    <published>2025-07-04T11:15:19.000Z</published>
-    <updated>2025-07-04T11:15:19.372Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> WPvivid Backup &amp; Migration 任意文件上传漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-5961</li></ul><p><strong>漏洞类型：</strong> 文件上传</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> WPvivid Backup &amp; Migration 是一款流行的WordPress插件，主要用于网站的迁移、备份和暂存功能。它允许用户轻松地备份网站数据、迁移到新的主机或暂存环境中进行测试。由于其易用性和强大的功能，该插件在WordPress社区中被广泛使用。该插件在版本0.9.116及之前存在一个认证后的任意文件上传漏洞。漏洞的根源在于插件未能正确验证管理员用户上传的文件类型和内容，导致攻击者可以上传恶意文件到服务器。这一漏洞需要攻击者拥有管理员权限才能利用，但一旦利用成功，攻击者可以上传任意文件，包括PHP脚本，从而可能导致远程代码执行（RCE）。这种漏洞的存在严重威胁到网站的安全性，因为它不仅允许攻击者执行任意代码，还可能进一步导致数据泄露、网站篡改或其他恶意活动。由于需要管理员权限，这种漏洞的利用门槛相对较高，但对于已经获得管理员权限的攻击者或通过其他方式提升权限的攻击者来说，这是一个非常危险的漏洞。</p><p><strong>产品厂商：</strong> WPvivid</p><p><strong>产品名称：</strong> WPvivid Backup &amp; Migration</p><p><strong>影响版本：</strong> &lt;&#x3D; 0.9.116</p><p><strong>来源：</strong> <a href="https://github.com/Nxploited/CVE-2025-5961">https://github.com/Nxploited/CVE-2025-5961</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; WPvivid Backup &amp;amp; Migration 任意文件上传漏洞</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
-    
-    <category term="文件上传" scheme="http://example.com/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
     
   </entry>
   
