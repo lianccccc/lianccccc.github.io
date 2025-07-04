@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-04T21:01:07.429Z</updated>
+  <updated>2025-07-04T21:45:18.856Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>NetScaler ADC/Gateway 内存泄露漏洞</title>
+    <link href="http://example.com/2025/07/04/github_1681427583/"/>
+    <id>http://example.com/2025/07/04/github_1681427583/</id>
+    <published>2025-07-04T21:45:18.000Z</published>
+    <updated>2025-07-04T21:45:18.856Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> NetScaler ADC&#x2F;Gateway 内存泄露漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-5777</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Citrix NetScaler ADC和Gateway是企业级网络设备，广泛用于负载均衡、应用交付控制和安全网关服务。这些设备通常部署在企业网络边缘，处理大量敏感数据流量，因此其安全性至关重要。CVE-2025-5777，也称为CitrixBleed-2，是一个影响NetScaler ADC&#x2F;Gateway的内存泄露漏洞。该漏洞允许攻击者通过特定的请求触发设备的内存泄露，从而可能获取到敏感信息。漏洞的技术根源在于设备在处理某些网络请求时，未能正确管理内存资源，导致部分内存内容被泄露。这种类型的信息泄露漏洞可能被利用来获取会话令牌、用户凭证或其他敏感数据，进而可能导致进一步的攻击，如会话劫持或未授权访问。由于NetScaler ADC&#x2F;Gateway的广泛使用和其在网络中的关键位置，此漏洞的影响范围较大，攻击者可能无需认证即可利用此漏洞，增加了其危险性。</p><p><strong>产品厂商：</strong> Citrix</p><p><strong>产品名称：</strong> NetScaler ADC&#x2F;Gateway</p><p><strong>来源：</strong> <a href="https://github.com/RickGeex/CVE-2025-5777-CitrixBleed">https://github.com/RickGeex/CVE-2025-5777-CitrixBleed</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-5777-CitrixBleed"><a href="#CVE-2025-5777-CitrixBleed" class="headerlink" title="CVE-2025-5777-CitrixBleed"></a>CVE-2025-5777-CitrixBleed</h2><p>CitrixBleed-2 (CVE-2025-5777) – proof-of-concept exploit for NetScaler ADC&#x2F;Gateway “memory bleed”</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; NetScaler ADC&amp;#x2F;Gateway 内存泄露漏洞&lt;/p&gt;
+&lt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+  </entry>
   
   <entry>
     <title>4cruzeta Twitter Update !</title>
@@ -497,31 +524,6 @@
     
     
     <category term="DarkWebInformer" scheme="http://example.com/tags/DarkWebInformer/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>xvonfers Twitter Update !</title>
-    <link href="http://example.com/2025/07/04/twitter_1928485244/"/>
-    <id>http://example.com/2025/07/04/twitter_1928485244/</id>
-    <published>2025-07-04T19:00:57.000Z</published>
-    <updated>2025-07-04T19:00:57.485Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> xvonfers</p><p><strong>推文：</strong> [io_uring]<br>(CVE-2025-38106)Slab-UAF 在 getrusage 中的问题<br><a href="https://t.co/nkWxmOtuEt">https://t.co/nkWxmOtuEt</a></p><p>(CVE-2025-38196)验证带偏移量的缓冲区计数以进行克隆<br><a href="https://t.co/9QxCH1hNPe">https://t.co/9QxCH1hNPe</a></p><p><strong>链接：</strong> <a href="https://x.com/xvonfers/status/1941198155007262901">https://x.com/xvonfers/status/1941198155007262901</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; xvonfers&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; [io_uring]&lt;br&gt;(CVE-2025-38106)Slab-UAF 在 getrusage 中的问题&lt;br&gt;&lt;a href=&quot;https://t.c</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="xvonfers" scheme="http://example.com/tags/xvonfers/"/>
     
   </entry>
   
