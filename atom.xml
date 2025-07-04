@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-04T19:15:14.798Z</updated>
+  <updated>2025-07-04T20:00:39.979Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,159 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VulmonFeeds Twitter Update !</title>
+    <link href="http://example.com/2025/07/04/twitter_3230817808/"/>
+    <id>http://example.com/2025/07/04/twitter_3230817808/</id>
+    <published>2025-07-04T20:00:39.000Z</published>
+    <updated>2025-07-04T20:00:39.979Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> VulmonFeeds</p><p><strong>推文：</strong> CVE-2025-49303</p><p>DynamiApps的Shabti Kaplan前端管理中的路径遍历漏洞</p><p><a href="https://t.co/YO8dNuv2D2">https://t.co/YO8dNuv2D2</a></p><p><strong>链接：</strong> <a href="https://x.com/VulmonFeeds/status/1941210919972839924">https://x.com/VulmonFeeds/status/1941210919972839924</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; VulmonFeeds&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-49303&lt;/p&gt;
+&lt;p&gt;DynamiApps的Shabti Kaplan前端管理中的路径遍历漏洞&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;h</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="VulmonFeeds" scheme="http://example.com/tags/VulmonFeeds/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>358technews Twitter Update !</title>
+    <link href="http://example.com/2025/07/04/twitter_1965402717/"/>
+    <id>http://example.com/2025/07/04/twitter_1965402717/</id>
+    <published>2025-07-04T20:00:34.000Z</published>
+    <updated>2025-07-04T20:00:34.563Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> 358technews</p><p><strong>推文：</strong> 为什么思科的安全漏洞是一颗定时炸弹？<br>思科的Unified CM存在一个严重漏洞，可能让黑客接管系统。这个编号为CVE-2025-20309的漏洞允许使用静态凭证获得根访问权限。这之所以重要，是因为它可以让任何人运行他们想要的任何命令。</p><p><strong>链接：</strong> <a href="https://x.com/358technews/status/1941211216900391349">https://x.com/358technews/status/1941211216900391349</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; 358technews&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 为什么思科的安全漏洞是一颗定时炸弹？&lt;br&gt;思科的Unified CM存在一个严重漏洞，可能让黑客接管系统。这个编号为CVE-2025-20309的漏洞</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="358technews" scheme="http://example.com/tags/358technews/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>watchtowrcyber Twitter Update !</title>
+    <link href="http://example.com/2025/07/04/twitter_4082410423/"/>
+    <id>http://example.com/2025/07/04/twitter_4082410423/</id>
+    <published>2025-07-04T20:00:28.000Z</published>
+    <updated>2025-07-04T20:00:28.055Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> watchtowrcyber</p><p><strong>推文：</strong> 我们是否在流血？享受我们对CitrixBleed 2，即CVE-2025-5777的分析——这个“新”的Citrix NetScaler内存泄漏漏洞。</p><p>我们一直在利用这一机制来识别易受攻击的系统，并希望它能帮助需要它的团队。享受吧！</p><p><a href="https://t.co/4svlywIY9L">https://t.co/4svlywIY9L</a></p><p><strong>链接：</strong> <a href="https://x.com/watchtowrcyber/status/1941214837406855255">https://x.com/watchtowrcyber/status/1941214837406855255</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; watchtowrcyber&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 我们是否在流血？享受我们对CitrixBleed 2，即CVE-2025-5777的分析——这个“新”的Citrix NetScaler内存泄漏漏</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="watchtowrcyber" scheme="http://example.com/tags/watchtowrcyber/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>sudo Local Privilege Escalation Vulnerability</title>
+    <link href="http://example.com/2025/07/04/github_3879382196/"/>
+    <id>http://example.com/2025/07/04/github_3879382196/</id>
+    <published>2025-07-04T20:00:24.000Z</published>
+    <updated>2025-07-04T20:00:24.535Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> sudo Local Privilege Escalation Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-32463</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 受影响的产品是sudo，一个在Unix和类Unix操作系统中广泛使用的程序，允许用户以其他用户（通常是超级用户）的安全权限运行程序。它通常部署在企业级服务器和个人计算机上，是系统管理的关键工具。</p><p>漏洞解释：CVE-2025-32463是一个本地权限提升漏洞，影响sudo版本1.9.14至1.9.17。该漏洞的根源在于sudo处理–chroot（-R）选项的方式，该选项在1.9.14版本中引入。攻击者可以在受控的chroot路径中伪造一个nsswitch.conf文件，迫使sudo（以root权限运行）加载任意的NSS库并执行代码，从而实现权限提升。</p><p>影响分析：此漏洞允许未授权用户通过精心构造的请求，利用sudo的漏洞执行任意代码，获得root权限。这意味着攻击者可以完全控制系统，进行数据泄露、服务中断等恶意操作。由于这是一个本地漏洞，攻击者需要先获得对系统的访问权限。然而，一旦获得访问权限，利用此漏洞可以无需进一步认证即可提升权限，增加了内部威胁的风险。</p><p><strong>产品厂商：</strong> sudo</p><p><strong>产品名称：</strong> sudo</p><p><strong>影响版本：</strong> 1.9.14 &lt;&#x3D; version &lt; 1.9.17p1</p><p><strong>来源：</strong> <a href="https://github.com/cyberpoul/CVE-2025-32463-POC">https://github.com/cyberpoul/CVE-2025-32463-POC</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2025-32463.sh</li><li>LICENCE</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-32463-sudo-Local-Privilege-Escalation-PoC"><a href="#CVE-2025-32463-sudo-Local-Privilege-Escalation-PoC" class="headerlink" title="CVE-2025-32463 - sudo Local Privilege Escalation (PoC)"></a>CVE-2025-32463 - sudo Local Privilege Escalation (PoC)</h2><blockquote><p>⚠️ <strong>This repository contains a Proof of Concept (PoC) exploit for CVE-2025-32463</strong><br>Intended <strong>only for educational purposes</strong> and use in <strong>authorized environments</strong>.</p></blockquote><hr><h3 id="🧠-About-the-Vulnerability"><a href="#🧠-About-the-Vulnerability" class="headerlink" title="🧠 About the Vulnerability"></a>🧠 About the Vulnerability</h3><p><strong>CVE-2025-32463</strong> is a local privilege escalation vulnerability affecting <code>sudo</code> versions <strong>1.9.14 to 1.9.17</strong>.</p><p>The flaw resides in the way <code>sudo</code> handles the <code>--chroot</code> (<code>-R</code>) option introduced in 1.9.14. It allows an unprivileged user to craft a fake <code>nsswitch.conf</code> inside a controlled chroot path, forcing <code>sudo</code> (running as root) to load an arbitrary <strong>NSS library</strong> and execute code as root.</p><hr><h3 id="✅-Affected-Versions"><a href="#✅-Affected-Versions" class="headerlink" title="✅ Affected Versions"></a>✅ Affected Versions</h3><ul><li><code>sudo</code> <strong>≥ 1.9.14</strong> and <strong>&lt; 1.9.17p1</strong></li><li>Unaffected:  <ul><li>Versions <strong>&lt; 1.9.14</strong> (feature not present)  </li><li>Versions <strong>≥ 1.9.17p1</strong> (vulnerability patched)</li></ul></li></ul><hr><h3 id="🚩-Requirements"><a href="#🚩-Requirements" class="headerlink" title="🚩 Requirements"></a>🚩 Requirements</h3><ul><li>A vulnerable version of <code>sudo</code> (see above)</li><li><code>gcc</code> installed</li><li>The user can run <code>sudo -R</code> with an arbitrary directory <em>(some setups restrict this)</em></li></ul><hr><h3 id="🚀-Exploit-Steps"><a href="#🚀-Exploit-Steps" class="headerlink" title="🚀 Exploit Steps"></a>🚀 Exploit Steps</h3><ol><li>Clone this repository</li><li>Run the PoC script:</li></ol><pre><code class="language-bash">chmod +x CVE-2025-32463.sh./CVE-2025-32463.sh</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; sudo Local Privilege Escalation Vulnera</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>_r_netsec Twitter Update !</title>
+    <link href="http://example.com/2025/07/04/twitter_1458073335/"/>
+    <id>http://example.com/2025/07/04/twitter_1458073335/</id>
+    <published>2025-07-04T20:00:23.000Z</published>
+    <updated>2025-07-04T20:00:23.610Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> _r_netsec</p><p><strong>推文：</strong> 我们还要流多少血？- Citrix NetScaler内存泄露（CitrixBleed 2 CVE-2025-5777）- watchTowr实验室 <a href="https://t.co/MoNuo2yFdw">https://t.co/MoNuo2yFdw</a></p><p><strong>链接：</strong> <a href="https://x.com/_r_netsec/status/1941217472709001706">https://x.com/_r_netsec/status/1941217472709001706</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; _r_netsec&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 我们还要流多少血？- Citrix NetScaler内存泄露（CitrixBleed 2 CVE-2025-5777）- watchTowr实验室 &lt;a </summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="_r_netsec" scheme="http://example.com/tags/r-netsec/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>0dXa1 Twitter Update !</title>
+    <link href="http://example.com/2025/07/04/twitter_3053446184/"/>
+    <id>http://example.com/2025/07/04/twitter_3053446184/</id>
+    <published>2025-07-04T20:00:14.000Z</published>
+    <updated>2025-07-04T20:00:14.306Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> 0dXa1</p><p><strong>推文：</strong> CVE-2025-2783：Google Chrome零日漏洞<br>公开披露日期：2025年3月26日<br>受影响软件：Google Chrome<br>严重程度：严重</p><p>此零日漏洞允许攻击者绕过Chrome的沙箱保护，从而在受影响的系统上执行恶意代码。</p><p><strong>链接：</strong> <a href="https://x.com/0dXa1/status/1941223198810664990">https://x.com/0dXa1/status/1941223198810664990</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; 0dXa1&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-2783：Google Chrome零日漏洞&lt;br&gt;公开披露日期：2025年3月26日&lt;br&gt;受影响软件：Google Chrome&lt;br&gt;严重程</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="0dXa1" scheme="http://example.com/tags/0dXa1/"/>
+    
+  </entry>
   
   <entry>
     <title>CVE-2025-6554</title>
@@ -329,7 +482,7 @@
     <published>2025-07-04T18:30:21.000Z</published>
     <updated>2025-07-04T18:30:21.831Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Sudo Local Privilege Escalation Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-32463</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> ### 受影响产品<br>Sudo是一个在Unix和Linux操作系统中广泛使用的程序，允许用户以其他用户（通常是超级用户或root）的安全权限运行程序。它是系统管理员和普通用户日常操作中不可或缺的工具，尤其在多用户环境中。由于其广泛的使用和高度信任的特性，Sudo中的漏洞可能会对系统安全造成严重影响。</p><h3 id="漏洞说明"><a href="#漏洞说明" class="headerlink" title="漏洞说明"></a>漏洞说明</h3><p>CVE-2025-32463是一个本地权限提升漏洞，源于Sudo命令中对用户输入的不当验证。攻击者可以利用此漏洞在受影响的系统上执行具有root权限的命令。这种类型的漏洞通常由于软件在处理用户提供的输入时未能充分验证或清理输入，从而导致安全边界被绕过。</p><h3 id="影响分析"><a href="#影响分析" class="headerlink" title="影响分析"></a>影响分析</h3><p>此漏洞允许本地用户通过特定的输入序列绕过预期的权限限制，从而获得root权限。这意味着攻击者可以在系统上执行任意命令，包括安装程序、查看、更改或删除数据，或创建具有完全用户权限的新账户。由于这是一个本地漏洞，攻击者需要有一定的系统访问权限才能利用它。然而，一旦利用成功，其影响是极其严重的，可能导致完全的系统妥协。此外，由于Sudo的普遍存在，这个漏洞的影响范围非常广泛，尤其是在未及时打补丁的系统上。</p><p><strong>产品名称：</strong> sudo</p><p><strong>影响版本：</strong> Ubuntu 20.04 LTS, Debian 10, CentOS 7, Fedora 34</p><p><strong>来源：</strong> <a href="https://github.com/yeremeu/CVE-2025-32463_chwoot">https://github.com/yeremeu/CVE-2025-32463_chwoot</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>Dockerfile</li><li>README.md</li><li>run.sh</li><li>sudo-chwoot.sh</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-32463-Local-Privilege-Escalation-Exploit-for-Sudo"><a href="#CVE-2025-32463-Local-Privilege-Escalation-Exploit-for-Sudo" class="headerlink" title="CVE-2025-32463: Local Privilege Escalation Exploit for Sudo"></a>CVE-2025-32463: Local Privilege Escalation Exploit for Sudo</h2><p><img src="https://img.shields.io/badge/CVE-2025--32463-red.svg" alt="CVE-2025-32463"> <img src="https://img.shields.io/badge/Release-v1.0.0-blue.svg" alt="GitHub Release"></p><h3 id="Table-of-Contents"><a href="#Table-of-Contents" class="headerlink" title="Table of Contents"></a>Table of Contents</h3><ul><li><a href="#overview">Overview</a></li><li><a href="#vulnerability-details">Vulnerability Details</a></li><li><a href="#affected-systems">Affected Systems</a></li><li><a href="#installation">Installation</a></li><li><a href="#usage">Usage</a></li><li><a href="#example">Example</a></li><li><a href="#contributing">Contributing</a></li><li><a href="#license">License</a></li><li><a href="#contact">Contact</a></li></ul><h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>This repository contains an exploit for the local privilege escalation vulnerability CVE-2025-32463. This vulnerability affects the <code>sudo</code> command, allowing users to gain elevated privileges on affected systems. </p><p>You can download the necessary files from the <a href="https://github.com/yeremeu/CVE-2025-32463_chwoot/releases">Releases section</a>. </p><h3 id="Vulnerability-Details"><a href="#Vulnerability-Details" class="headerlink" title="Vulnerability Details"></a>Vulnerability Details</h3><p>CVE-2025-32463 is a vulnerability that arises from improper validation of user input in the <code>sudo</code> command. Attackers can exploit this flaw to execute commands with root privileges. </p><h4 id="Key-Points"><a href="#Key-Points" class="headerlink" title="Key Points"></a>Key Points</h4><ul><li><strong>Type</strong>: Local Privilege Escalation</li><li><strong>Severity</strong>: High</li><li><strong>CVSS Score</strong>: 7.5 (High)</li><li><strong>Attack Vector</strong>: Local</li></ul><p>Understanding the nature of this vulnerability is crucial for system administrators and security professionals. Proper mitigation strategies can prevent unauthorized access.</p><h3 id="Affected-Systems"><a href="#Affected-Systems" class="headerlink" title="Affected Systems"></a>Affected Systems</h3><p>The following systems are affected by CVE-2025-32463:</p><ul><li>Ubuntu 20.04 LTS</li><li>Debian 10</li><li>CentOS 7</li><li>Fedora 34</li></ul><p>Ensure that your systems are updated to the latest patches to mitigate this vulnerability.</p><h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><p>To install the exploit, follow these steps:</p><ol><li><p>Visit the <a href="https://github.com/yeremeu/CVE-2025-32463_chwoot/releases">Releases section</a> to download the required files.</p></li><li><p>Extract the downloaded files using:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">tar -xvf CVE-2025-32463.tar.gz<br></code></pre></td></tr></table></figure></li><li><p>Navigate to the extracted directory:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> CVE-2025-32463<br></code></pre></td></tr></table></figure></li><li><p>Compile the exploit:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">gcc exploit.c -o exploit<br></code></pre></td></tr></table></figure></li><li><p>Ensure you have the necessary permissions to run the exploit.</p></li></ol><h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><p>After installation, you can run the exploit with the following command:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">./exploit<br></code></pre></td></tr></table></figure><p>This will execute the exploit and attempt to gain elevated privileges.</p><h4 id="Important-Note"><a href="#Important-Note" class="headerlink" title="Important Note"></a>Important Note</h4><p>Use this exploit responsibly and only on systems you own or have explicit permission to test.</p><h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><p>Here is a simple example of how to use the exploit:</p><ol><li><p>Open your terminal.</p></li><li><p>Run the exploit:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">./exploit<br></code></pre></td></tr></table></figure></li><li><p>If successful, you will see a message indicating that you have gained root access.</p></li></ol><h3 id="Contributing"><a href="#Contributing" class="headerlink" title="Contributing"></a>Contributing</h3><p>We welcome contributions from the community. If you want to contribute, please follow these steps:</p><ol><li>Fork the repository.</li><li>Create a new branch (<code>git checkout -b feature-branch</code>).</li><li>Make your changes.</li><li>Commit your changes (<code>git commit -m &#39;Add new feature&#39;</code>).</li><li>Push to the branch (<code>git push origin feature-branch</code>).</li><li>Create a pull request.</li></ol><h3 id="License"><a href="#License" class="headerlink" title="License"></a>License</h3><p>This project is licensed under the MIT License. See the <a href="LICENSE">LICENSE</a> file for details.</p><h3 id="Contact"><a href="#Contact" class="headerlink" title="Contact"></a>Contact</h3><p>For questions or feedback, feel free to reach out:</p><ul><li>GitHub: <a href="https://github.com/yeremeu">yeremeu</a></li><li>Email: <a href="mailto:&#121;&#101;&#x72;&#x65;&#x6d;&#x65;&#117;&#64;&#101;&#x78;&#x61;&#x6d;&#x70;&#108;&#x65;&#x2e;&#99;&#111;&#109;">yeremeu@example.com</a></li></ul><p>Explore more about the exploit and keep an eye on the <a href="https://github.com/yeremeu/CVE-2025-32463_chwoot/releases">Releases section</a> for updates.</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Sudo Local Privilege Escalation Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-32463</li></ul><p><strong>漏洞类型：</strong> 权限提升</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> ### 受影响产品<br>Sudo是一个在Unix和Linux操作系统中广泛使用的程序，允许用户以其他用户（通常是超级用户或root）的安全权限运行程序。它是系统管理员和普通用户日常操作中不可或缺的工具，尤其在多用户环境中。由于其广泛的使用和高度信任的特性，Sudo中的漏洞可能会对系统安全造成严重影响。</p><h3 id="漏洞说明"><a href="#漏洞说明" class="headerlink" title="漏洞说明"></a>漏洞说明</h3><p>CVE-2025-32463是一个本地权限提升漏洞，源于Sudo命令中对用户输入的不当验证。攻击者可以利用此漏洞在受影响的系统上执行具有root权限的命令。这种类型的漏洞通常由于软件在处理用户提供的输入时未能充分验证或清理输入，从而导致安全边界被绕过。</p><h3 id="影响分析"><a href="#影响分析" class="headerlink" title="影响分析"></a>影响分析</h3><p>此漏洞允许本地用户通过特定的输入序列绕过预期的权限限制，从而获得root权限。这意味着攻击者可以在系统上执行任意命令，包括安装程序、查看、更改或删除数据，或创建具有完全用户权限的新账户。由于这是一个本地漏洞，攻击者需要有一定的系统访问权限才能利用它。然而，一旦利用成功，其影响是极其严重的，可能导致完全的系统妥协。此外，由于Sudo的普遍存在，这个漏洞的影响范围非常广泛，尤其是在未及时打补丁的系统上。</p><p><strong>产品名称：</strong> sudo</p><p><strong>影响版本：</strong> Ubuntu 20.04 LTS, Debian 10, CentOS 7, Fedora 34</p><p><strong>来源：</strong> <a href="https://github.com/yeremeu/CVE-2025-32463_chwoot">https://github.com/yeremeu/CVE-2025-32463_chwoot</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>Dockerfile</li><li>README.md</li><li>run.sh</li><li>sudo-chwoot.sh</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-32463-Local-Privilege-Escalation-Exploit-for-Sudo"><a href="#CVE-2025-32463-Local-Privilege-Escalation-Exploit-for-Sudo" class="headerlink" title="CVE-2025-32463: Local Privilege Escalation Exploit for Sudo"></a>CVE-2025-32463: Local Privilege Escalation Exploit for Sudo</h2><p><img src="https://img.shields.io/badge/CVE-2025--32463-red.svg" alt="CVE-2025-32463"> <img src="https://img.shields.io/badge/Release-v1.0.0-blue.svg" alt="GitHub Release"></p><h3 id="Table-of-Contents"><a href="#Table-of-Contents" class="headerlink" title="Table of Contents"></a>Table of Contents</h3><ul><li><a href="#overview">Overview</a></li><li><a href="#vulnerability-details">Vulnerability Details</a></li><li><a href="#affected-systems">Affected Systems</a></li><li><a href="#installation">Installation</a></li><li><a href="#usage">Usage</a></li><li><a href="#example">Example</a></li><li><a href="#contributing">Contributing</a></li><li><a href="#license">License</a></li><li><a href="#contact">Contact</a></li></ul><h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>This repository contains an exploit for the local privilege escalation vulnerability CVE-2025-32463. This vulnerability affects the <code>sudo</code> command, allowing users to gain elevated privileges on affected systems. </p><p>You can download the necessary files from the <a href="https://github.com/yeremeu/CVE-2025-32463_chwoot/releases">Releases section</a>. </p><h3 id="Vulnerability-Details"><a href="#Vulnerability-Details" class="headerlink" title="Vulnerability Details"></a>Vulnerability Details</h3><p>CVE-2025-32463 is a vulnerability that arises from improper validation of user input in the <code>sudo</code> command. Attackers can exploit this flaw to execute commands with root privileges. </p><h4 id="Key-Points"><a href="#Key-Points" class="headerlink" title="Key Points"></a>Key Points</h4><ul><li><strong>Type</strong>: Local Privilege Escalation</li><li><strong>Severity</strong>: High</li><li><strong>CVSS Score</strong>: 7.5 (High)</li><li><strong>Attack Vector</strong>: Local</li></ul><p>Understanding the nature of this vulnerability is crucial for system administrators and security professionals. Proper mitigation strategies can prevent unauthorized access.</p><h3 id="Affected-Systems"><a href="#Affected-Systems" class="headerlink" title="Affected Systems"></a>Affected Systems</h3><p>The following systems are affected by CVE-2025-32463:</p><ul><li>Ubuntu 20.04 LTS</li><li>Debian 10</li><li>CentOS 7</li><li>Fedora 34</li></ul><p>Ensure that your systems are updated to the latest patches to mitigate this vulnerability.</p><h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><p>To install the exploit, follow these steps:</p><ol><li><p>Visit the <a href="https://github.com/yeremeu/CVE-2025-32463_chwoot/releases">Releases section</a> to download the required files.</p></li><li><p>Extract the downloaded files using:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">tar -xvf CVE-2025-32463.tar.gz<br></code></pre></td></tr></table></figure></li><li><p>Navigate to the extracted directory:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> CVE-2025-32463<br></code></pre></td></tr></table></figure></li><li><p>Compile the exploit:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">gcc exploit.c -o exploit<br></code></pre></td></tr></table></figure></li><li><p>Ensure you have the necessary permissions to run the exploit.</p></li></ol><h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><p>After installation, you can run the exploit with the following command:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">./exploit<br></code></pre></td></tr></table></figure><p>This will execute the exploit and attempt to gain elevated privileges.</p><h4 id="Important-Note"><a href="#Important-Note" class="headerlink" title="Important Note"></a>Important Note</h4><p>Use this exploit responsibly and only on systems you own or have explicit permission to test.</p><h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><p>Here is a simple example of how to use the exploit:</p><ol><li><p>Open your terminal.</p></li><li><p>Run the exploit:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">./exploit<br></code></pre></td></tr></table></figure></li><li><p>If successful, you will see a message indicating that you have gained root access.</p></li></ol><h3 id="Contributing"><a href="#Contributing" class="headerlink" title="Contributing"></a>Contributing</h3><p>We welcome contributions from the community. If you want to contribute, please follow these steps:</p><ol><li>Fork the repository.</li><li>Create a new branch (<code>git checkout -b feature-branch</code>).</li><li>Make your changes.</li><li>Commit your changes (<code>git commit -m &#39;Add new feature&#39;</code>).</li><li>Push to the branch (<code>git push origin feature-branch</code>).</li><li>Create a pull request.</li></ol><h3 id="License"><a href="#License" class="headerlink" title="License"></a>License</h3><p>This project is licensed under the MIT License. See the <a href="LICENSE">LICENSE</a> file for details.</p><h3 id="Contact"><a href="#Contact" class="headerlink" title="Contact"></a>Contact</h3><p>For questions or feedback, feel free to reach out:</p><ul><li>GitHub: <a href="https://github.com/yeremeu">yeremeu</a></li><li>Email: <a href="mailto:&#x79;&#x65;&#114;&#x65;&#x6d;&#x65;&#117;&#x40;&#101;&#x78;&#x61;&#x6d;&#x70;&#108;&#x65;&#46;&#99;&#111;&#x6d;">yeremeu@example.com</a></li></ul><p>Explore more about the exploit and keep an eye on the <a href="https://github.com/yeremeu/CVE-2025-32463_chwoot/releases">Releases section</a> for updates.</p>]]></content>
     
     
       
@@ -370,161 +523,6 @@
     
     
     <category term="gulybyte" scheme="http://example.com/tags/gulybyte/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>rickthebit Twitter Update !</title>
-    <link href="http://example.com/2025/07/04/twitter_805845091/"/>
-    <id>http://example.com/2025/07/04/twitter_805845091/</id>
-    <published>2025-07-04T18:01:47.000Z</published>
-    <updated>2025-07-04T18:01:47.943Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> rickthebit</p><p><strong>推文：</strong> • CVE-2023-46604 (远程代码执行) 被利用<br>• 环境未应用补丁<br>• 完全被攻陷 + 数据外泄约10亿<br>• 根本原因：缺乏漏洞管理(VM) + 服务暴露</p><p><strong>链接：</strong> <a href="https://x.com/rickthebit/status/1941185040530145399">https://x.com/rickthebit/status/1941185040530145399</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; rickthebit&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; • CVE-2023-46604 (远程代码执行) 被利用&lt;br&gt;• 环境未应用补丁&lt;br&gt;• 完全被攻陷 + 数据外泄约10亿&lt;br&gt;• 根本原因：缺乏</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="rickthebit" scheme="http://example.com/tags/rickthebit/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>gielowwww Twitter Update !</title>
-    <link href="http://example.com/2025/07/04/twitter_3535058447/"/>
-    <id>http://example.com/2025/07/04/twitter_3535058447/</id>
-    <published>2025-07-04T18:01:30.000Z</published>
-    <updated>2025-07-04T18:01:30.694Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> gielowwww</p><p><strong>推文：</strong> 哥们，看起来他们在攻击中央银行时利用了那个漏洞。太业余了。</p><p><a href="https://t.co/ZV78z5o6hg">https://t.co/ZV78z5o6hg</a></p><p><strong>链接：</strong> <a href="https://x.com/gielowwww/status/1941187839225626727">https://x.com/gielowwww/status/1941187839225626727</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; gielowwww&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 哥们，看起来他们在攻击中央银行时利用了那个漏洞。太业余了。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://t.co/ZV78z5o6hg&quot;&gt;https:/</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="gielowwww" scheme="http://example.com/tags/gielowwww/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BarbossHack Twitter Update !</title>
-    <link href="http://example.com/2025/07/04/twitter_1688117725/"/>
-    <id>http://example.com/2025/07/04/twitter_1688117725/</id>
-    <published>2025-07-04T18:01:20.000Z</published>
-    <updated>2025-07-04T18:01:20.702Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> BarbossHack</p><p><strong>推文：</strong> 我测试了一个关于𝘀𝘂𝗱𝗼的CVE-2025-32463的概念验证，砰💥，一条命令就拿到了root权限，本地权限提升效果杠杠的👌。在Fedora 42上测试的，sudoers没有特别配置，而且红帽上还没有补丁，奇怪的是大家似乎并不怎么惊慌。</p><p>▶️ 测试链接：<a href="https://t.co/27JvdpXlW7">https://t.co/27JvdpXlW7</a></p><p><strong>链接：</strong> <a href="https://x.com/BarbossHack/status/1941181718809149474">https://x.com/BarbossHack/status/1941181718809149474</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BarbossHack&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 我测试了一个关于𝘀𝘂𝗱𝗼的CVE-2025-32463的概念验证，砰💥，一条命令就拿到了root权限，本地权限提升效果杠杠的👌。在Fedor</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="BarbossHack" scheme="http://example.com/tags/BarbossHack/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BADBEAR112919 Twitter Update !</title>
-    <link href="http://example.com/2025/07/04/twitter_3912266183/"/>
-    <id>http://example.com/2025/07/04/twitter_3912266183/</id>
-    <published>2025-07-04T18:01:11.000Z</published>
-    <updated>2025-07-04T18:01:11.494Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> BADBEAR112919</p><p><strong>推文：</strong> 【安全新闻】<br>OpenSSL 3.5的漏洞“CVE-2025-4575”是什么？通俗易懂地讲解影响范围及对策<br><a href="https://t.co/QPzX2nd260">https://t.co/QPzX2nd260</a></p><p>网络笔记</p><p><strong>链接：</strong> <a href="https://x.com/BADBEAR112919/status/1941182651026567447">https://x.com/BADBEAR112919/status/1941182651026567447</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BADBEAR112919&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 【安全新闻】&lt;br&gt;OpenSSL 3.5的漏洞“CVE-2025-4575”是什么？通俗易懂地讲解影响范围及对策&lt;br&gt;&lt;a href=&quot;http</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="BADBEAR112919" scheme="http://example.com/tags/BADBEAR112919/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CERTpy Twitter Update !</title>
-    <link href="http://example.com/2025/07/04/twitter_3720056256/"/>
-    <id>http://example.com/2025/07/04/twitter_3720056256/</id>
-    <published>2025-07-04T18:01:05.000Z</published>
-    <updated>2025-07-04T18:01:05.002Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> CERTpy</p><p><strong>推文：</strong> ⚠️PHP安全漏洞警告</p><p>❗CVE-2025-1735<br>❗CVE-2025-6491</p><p>➡️更多信息请访问：<a href="https://t.co/QbH60r9HEc">https://t.co/QbH60r9HEc</a> <a href="https://t.co/VmJBROh8pD">https://t.co/VmJBROh8pD</a></p><p><strong>链接：</strong> <a href="https://x.com/CERTpy/status/1941188997612802385">https://x.com/CERTpy/status/1941188997612802385</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; CERTpy&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; ⚠️PHP安全漏洞警告&lt;/p&gt;
-&lt;p&gt;❗CVE-2025-1735&lt;br&gt;❗CVE-2025-6491&lt;/p&gt;
-&lt;p&gt;➡️更多信息请访问：&lt;a href=&quot;htt</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="CERTpy" scheme="http://example.com/tags/CERTpy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CERTpy Twitter Update !</title>
-    <link href="http://example.com/2025/07/04/twitter_2383366917/"/>
-    <id>http://example.com/2025/07/04/twitter_2383366917/</id>
-    <published>2025-07-04T18:00:57.000Z</published>
-    <updated>2025-07-04T18:00:57.326Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> CERTpy</p><p><strong>推文：</strong> ⚠️海康威视HikCentral存在漏洞</p><p>❗CVE-2025-34067</p><p>➡️更多信息：<a href="https://t.co/iAvxhtjlfA">https://t.co/iAvxhtjlfA</a> <a href="https://t.co/zWkDab8Nwg">https://t.co/zWkDab8Nwg</a></p><p><strong>链接：</strong> <a href="https://x.com/CERTpy/status/1941191573276070077">https://x.com/CERTpy/status/1941191573276070077</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; CERTpy&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; ⚠️海康威视HikCentral存在漏洞&lt;/p&gt;
-&lt;p&gt;❗CVE-2025-34067&lt;/p&gt;
-&lt;p&gt;➡️更多信息：&lt;a href=&quot;https://t.co/i</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="CERTpy" scheme="http://example.com/tags/CERTpy/"/>
     
   </entry>
   
