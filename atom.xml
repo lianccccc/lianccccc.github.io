@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-04T07:00:24.336Z</updated>
+  <updated>2025-07-04T08:00:28.671Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>fofabot twitter update</title>
+    <link href="http://example.com/2025/07/04/twitter_1673401368/"/>
+    <id>http://example.com/2025/07/04/twitter_1673401368/</id>
+    <published>2025-07-04T08:00:28.000Z</published>
+    <updated>2025-07-04T08:00:28.671Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> fofabot</p><p><strong>推文：</strong> ⚠️⚠️CVE-2025-34067（CVSS 10.0）该漏洞通过一个关键的序列化弱点，允许未经认证的远程命令执行。<br>🎯在<a href="https://t.co/uLIbgJcaq5%E4%B8%8A%E5%8F%91%E7%8E%B0%E8%BF%915.3%E4%B8%87%E6%9D%A1%E7%BB%93%E6%9E%9C%EF%BC%8C%E5%8E%86%E6%97%B6%E8%BF%91%E4%B8%80%E5%B9%B4">https://t.co/uLIbgJcaq5上发现近5.3万条结果，历时近一年</a><br>🔗FOFA链接:<a href="https://t.co/UULh5tZNQu">https://t.co/UULh5tZNQu</a><br>FOFA查询:app&#x3D;”HIKVISION-HikCentral”<br>🔖参考:<a href="https://t.co/UaPNK9C0ag">https://t.co/UaPNK9C0ag</a><br>#OSINT #FOFA #网络安全 #漏洞</p><p><strong>链接：</strong> <a href="https://x.com/fofabot/status/1941030290216103949">https://x.com/fofabot/status/1941030290216103949</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; fofabot&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; ⚠️⚠️CVE-2025-34067（CVSS 10.0）该漏洞通过一个关键的序列化弱点，允许未经认证的远程命令执行。&lt;br&gt;🎯在&lt;a href=&quot;https</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="fofabot" scheme="http://example.com/tags/fofabot/"/>
+    
+  </entry>
   
   <entry>
     <title>PandoraFMS Netflow Authenticated Remote Code Execution</title>
@@ -512,30 +537,6 @@
     
     
     <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Nextjs has a Cache poisoning vulnerability due to omission of the Vary header</title>
-    <link href="http://example.com/2025/07/03/github_558798396/"/>
-    <id>http://example.com/2025/07/03/github_558798396/</id>
-    <published>2025-07-03T21:00:06.000Z</published>
-    <updated>2025-07-03T21:00:06.630Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-r2fc-ccr8-96c4">https://github.com/advisories/GHSA-r2fc-ccr8-96c4</a></p><p><strong>仓库 Star：</strong> 132887</p><p><strong>CVSS 评分：</strong> 3.7</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/vercel/next.js/security/advisories/GHSA-r2fc-ccr8-96c4">https://github.com/vercel/next.js/security/advisories/GHSA-r2fc-ccr8-96c4</a></p></li><li><p><a href="https://github.com/vercel/next.js/pull/79939">https://github.com/vercel/next.js/pull/79939</a></p></li><li><p><a href="https://github.com/vercel/next.js/releases/tag/v15.3.3">https://github.com/vercel/next.js/releases/tag/v15.3.3</a></p></li><li><p><a href="https://vercel.com/changelog/cve-2025-49005">https://vercel.com/changelog/cve-2025-49005</a></p></li><li><p><a href="https://github.com/advisories/GHSA-r2fc-ccr8-96c4">https://github.com/advisories/GHSA-r2fc-ccr8-96c4</a></p></li></ul><p><strong>描述：</strong></p><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>A cache poisoning issue in <strong>Next.js App Router &gt;&#x3D;15.3.0 and &lt; 15.3.3</strong> may have allowed RSC payloads to be cached and served in place of HTML, under specific conditions involving middleware and redirects. This issue has been fixed in <strong>Next.js 15.3.3</strong>.</p><p>Users on affected versions should <strong>upgrade immediately</strong> and <strong>redeploy</strong> to ensure proper caching behavior.</p><p>More details: <a href="https://vercel.com/changelog/cve-2025-49005">CVE-2025-49005</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-r2fc-ccr8-96c4&quot;&gt;https://github.com/advisories/GHSA-r2fc-ccr8-96c4&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
     
   </entry>
   
