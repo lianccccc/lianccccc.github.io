@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-04T22:01:44.138Z</updated>
+  <updated>2025-07-04T22:30:05.377Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MCP Python SDK has Unhandled Exception in Streamable HTTP Transport ,Leading to Denial of Service</title>
+    <link href="http://example.com/2025/07/04/github_3928456896/"/>
+    <id>http://example.com/2025/07/04/github_3928456896/</id>
+    <published>2025-07-04T22:30:05.000Z</published>
+    <updated>2025-07-04T22:30:05.377Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-j975-95f5-7wqh">https://github.com/advisories/GHSA-j975-95f5-7wqh</a></p><p><strong>仓库 Star：</strong> 15626</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/modelcontextprotocol/python-sdk/security/advisories/GHSA-j975-95f5-7wqh">https://github.com/modelcontextprotocol/python-sdk/security/advisories/GHSA-j975-95f5-7wqh</a></p></li><li><p><a href="https://github.com/modelcontextprotocol/python-sdk/pull/967">https://github.com/modelcontextprotocol/python-sdk/pull/967</a></p></li><li><p><a href="https://github.com/modelcontextprotocol/python-sdk/commit/7b420656de48cfdb90b39eb582e60b6d55c2f891">https://github.com/modelcontextprotocol/python-sdk/commit/7b420656de48cfdb90b39eb582e60b6d55c2f891</a></p></li><li><p><a href="https://github.com/modelcontextprotocol/python-sdk/releases/tag/v1.10.0">https://github.com/modelcontextprotocol/python-sdk/releases/tag/v1.10.0</a></p></li><li><p><a href="https://github.com/advisories/GHSA-j975-95f5-7wqh">https://github.com/advisories/GHSA-j975-95f5-7wqh</a></p></li></ul><p><strong>描述：</strong></p><p>If a client deliberately triggers an exception after establishing a streamable HTTP session, this can lead to an uncaught ClosedResourceError on the server side, causing the server to crash and requiring a restart to restore service. Impact may vary depending on the deployment conditions, and presence of infrastructure-level resilience measures.</p><p>Thank you to Rich Harang for reporting this issue.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-j975-95f5-7wqh&quot;&gt;https://github.com/advisories/GHSA-j975-95f5-7wqh&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MCP Python SDK vulnerability in the FastMCP Server causes validation error, leading to DoS</title>
+    <link href="http://example.com/2025/07/04/github_497957122/"/>
+    <id>http://example.com/2025/07/04/github_497957122/</id>
+    <published>2025-07-04T22:30:04.000Z</published>
+    <updated>2025-07-04T22:30:04.637Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-3qhf-m339-9g5v">https://github.com/advisories/GHSA-3qhf-m339-9g5v</a></p><p><strong>仓库 Star：</strong> 15626</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/modelcontextprotocol/python-sdk/security/advisories/GHSA-3qhf-m339-9g5v">https://github.com/modelcontextprotocol/python-sdk/security/advisories/GHSA-3qhf-m339-9g5v</a></p></li><li><p><a href="https://github.com/modelcontextprotocol/python-sdk/pull/822">https://github.com/modelcontextprotocol/python-sdk/pull/822</a></p></li><li><p><a href="https://github.com/modelcontextprotocol/python-sdk/commit/29c69e6a47d0104d0afcea6ac35e7ab02fde809a">https://github.com/modelcontextprotocol/python-sdk/commit/29c69e6a47d0104d0afcea6ac35e7ab02fde809a</a></p></li><li><p><a href="https://github.com/modelcontextprotocol/python-sdk/releases/tag/v1.9.4">https://github.com/modelcontextprotocol/python-sdk/releases/tag/v1.9.4</a></p></li><li><p><a href="https://github.com/advisories/GHSA-3qhf-m339-9g5v">https://github.com/advisories/GHSA-3qhf-m339-9g5v</a></p></li></ul><p><strong>描述：</strong></p><p>A validation error in the MCP SDK can cause an unhandled exception when processing malformed requests, resulting in service unavailability (500 errors) until manually restarted. Impact may vary depending on the deployment conditions, and presence of infrastructure-level resilience measures.</p><p>Thank you to Rich Harang for reporting this issue.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-3qhf-m339-9g5v&quot;&gt;https://github.com/advisories/GHSA-3qhf-m339-9g5v&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>KulinskiArkadi Twitter Update !</title>
@@ -470,57 +518,6 @@
     
     
     <category term="hesar101" scheme="http://example.com/tags/hesar101/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>emmpeethree Twitter Update !</title>
-    <link href="http://example.com/2025/07/04/twitter_1609008750/"/>
-    <id>http://example.com/2025/07/04/twitter_1609008750/</id>
-    <published>2025-07-04T21:00:41.000Z</published>
-    <updated>2025-07-04T21:00:41.508Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> emmpeethree</p><p><strong>推文：</strong> Ink Research 加拿大EP净内部人买入与卖出（过去60天）</p><p>2025年6月30日<br>买入：$OBE $RBY $KEC $PSK $CVE<br>卖出：$CNQ $PEY.TO $NVA $AXL $ALV</p><p>2025年5月31日<br>买入：$OBE $AAV $TVE.TO $CJ $CVE<br>卖出：$NVA $TOU $ALV $PEY.TO $SU</p><p>#COM #OOTT <a href="https://t.co/HKYJ4JONlT">https://t.co/HKYJ4JONlT</a></p><p><strong>链接：</strong> <a href="https://x.com/emmpeethree/status/1941234847206473937">https://x.com/emmpeethree/status/1941234847206473937</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; emmpeethree&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; Ink Research 加拿大EP净内部人买入与卖出（过去60天）&lt;/p&gt;
-&lt;p&gt;2025年6月30日&lt;br&gt;买入：$OBE $RBY $KEC $P</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="emmpeethree" scheme="http://example.com/tags/emmpeethree/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VulmonFeeds Twitter Update !</title>
-    <link href="http://example.com/2025/07/04/twitter_3276381445/"/>
-    <id>http://example.com/2025/07/04/twitter_3276381445/</id>
-    <published>2025-07-04T21:00:33.000Z</published>
-    <updated>2025-07-04T21:00:33.692Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> VulmonFeeds</p><p><strong>推文：</strong> CVE-2025-47565<br>EventON插件存在授权缺失漏洞，可导致未授权访问控制绕过<br><a href="https://t.co/t2BmpVwdfE">https://t.co/t2BmpVwdfE</a></p><p><strong>链接：</strong> <a href="https://x.com/VulmonFeeds/status/1941236514224001277">https://x.com/VulmonFeeds/status/1941236514224001277</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; VulmonFeeds&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-47565&lt;br&gt;EventON插件存在授权缺失漏洞，可导致未授权访问控制绕过&lt;br&gt;&lt;a href=&quot;https://t.co/t2</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="VulmonFeeds" scheme="http://example.com/tags/VulmonFeeds/"/>
     
   </entry>
   
