@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-04T08:00:28.671Z</updated>
+  <updated>2025-07-04T08:15:24.018Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RevPi WebStatus Authentication Bypass Vulnerability</title>
+    <link href="http://example.com/2025/07/04/github_828016945/"/>
+    <id>http://example.com/2025/07/04/github_828016945/</id>
+    <published>2025-07-04T08:15:24.000Z</published>
+    <updated>2025-07-04T08:15:24.018Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> RevPi WebStatus Authentication Bypass Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-41646</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> RevPi WebStatus是一款用于工业&#x2F;OT系统的Web状态监控工具，通常部署在运行Raspbian和Apache的系统上，广泛应用于工业控制环境中。该工具提供了一个Web界面，用于监控和管理RevPi设备的运行状态。此次发现的认证绕过漏洞（CVE-2025-41646）影响v2.4.5及以下版本，由于在认证逻辑中使用了弱类型比较（<code>==</code>而非<code>===</code>），攻击者可以通过构造特定的登录请求（如发送包含<code>&#123;&quot;mode&quot;: &quot;LOGIN&quot;, &quot;username&quot;: &quot;admin&quot;, &quot;hashcode&quot;: true&#125;</code>的JSON数据）绕过认证机制，无需有效凭证即可获得管理员权限。这一漏洞的利用无需任何前置条件，攻击者可以远程发起攻击，导致未授权的管理员访问，进而可能执行任意操作，如修改系统配置、获取敏感信息或中断服务，对工业控制系统的安全构成严重威胁。</p><p><strong>产品名称：</strong> RevPi WebStatus</p><p><strong>影响版本：</strong> ≤ v2.4.5</p><p><strong>来源：</strong> <a href="https://github.com/cyberre124/CVE-2025-41646---Critical-Authentication-Bypass-">https://github.com/cyberre124/CVE-2025-41646---Critical-Authentication-Bypass-</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>Exploit.py</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-41646—Critical-Authentication-Bypass"><a href="#CVE-2025-41646—Critical-Authentication-Bypass" class="headerlink" title="CVE-2025-41646—Critical-Authentication-Bypass-"></a>CVE-2025-41646—Critical-Authentication-Bypass-</h2><p>CVE-2025-41646 - Critical Authentication bypass</p><h2 id="🔓-CVE-2025-41646-RevPi-WebStatus-Authentication-Bypass-PoC"><a href="#🔓-CVE-2025-41646-RevPi-WebStatus-Authentication-Bypass-PoC" class="headerlink" title="🔓 CVE-2025-41646 - RevPi WebStatus Authentication Bypass PoC"></a>🔓 CVE-2025-41646 - RevPi WebStatus Authentication Bypass PoC</h2><p>A critical authentication bypass vulnerability (CVE-2025-41646) in RevPi WebStatus ≤ v2.4.5 allows an attacker to log in as <strong>admin</strong> without valid credentials due to weak type comparison logic (<code>==</code> vs <code>===</code>).</p><hr><h3 id="📌-Affected"><a href="#📌-Affected" class="headerlink" title="📌 Affected"></a>📌 Affected</h3><ul><li>RevPi WebStatus v2.4.5 and below</li><li>Industrial&#x2F;OT systems running on Raspbian with Apache</li></ul><hr><h3 id="💥-Exploitation"><a href="#💥-Exploitation" class="headerlink" title="💥 Exploitation"></a>💥 Exploitation</h3><p>Send a login request with:</p><pre><code class="language-json">&#123;  &quot;mode&quot;: &quot;LOGIN&quot;,  &quot;username&quot;: &quot;admin&quot;,  &quot;hashcode&quot;: true&#125;</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; RevPi WebStatus Authentication Bypass V</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+  </entry>
   
   <entry>
     <title>fofabot twitter update</title>
@@ -512,31 +538,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="权限提升" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E6%8F%90%E5%8D%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BlackHatEvents twitter update</title>
-    <link href="http://example.com/2025/07/03/twitter_1921350364/"/>
-    <id>http://example.com/2025/07/03/twitter_1921350364/</id>
-    <published>2025-07-03T21:00:24.000Z</published>
-    <updated>2025-07-03T21:00:24.111Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> BlackHatEvents</p><p><strong>推文：</strong> 踏入#BHUSA 2025专业发展区——网络安全专业人士可通过互动项目提升经验、扩展知识、向行业领袖学习，并解锁职业成功的新机遇&gt;&gt; <a href="https://t.co/fA9RTp9inY">https://t.co/fA9RTp9inY</a></p><p><strong>链接：</strong> <a href="https://x.com/BlackHatEvents/status/1940870683203932305">https://x.com/BlackHatEvents/status/1940870683203932305</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BlackHatEvents&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 踏入#BHUSA 2025专业发展区——网络安全专业人士可通过互动项目提升经验、扩展知识、向行业领袖学习，并解锁职业成功的新机遇&amp;gt;&amp;gt; </summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="BlackHatEvents" scheme="http://example.com/tags/BlackHatEvents/"/>
     
   </entry>
   
