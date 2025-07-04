@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-04T10:04:04.432Z</updated>
+  <updated>2025-07-04T11:13:27.925Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,114 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>40余款恶意火狐扩展插件窃取用户资产</title>
+    <link href="http://example.com/2025/07/04/weixin_1114076053/"/>
+    <id>http://example.com/2025/07/04/weixin_1114076053/</id>
+    <published>2025-07-04T11:13:27.929Z</published>
+    <updated>2025-07-04T11:13:27.925Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/mHtn2wVseQR2WP-nwkNkgg">https://mp.weixin.qq.com/s/mHtn2wVseQR2WP-nwkNkgg</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/mHtn2wVseQR2WP-nwkNkgg&quot;&gt;https://mp.weixin.q</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Apache组件遭大规模攻击，高危RCE漏洞引来12万次利用尝试</title>
+    <link href="http://example.com/2025/07/04/weixin_3734003401/"/>
+    <id>http://example.com/2025/07/04/weixin_3734003401/</id>
+    <published>2025-07-04T11:13:27.569Z</published>
+    <updated>2025-07-04T11:13:27.565Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/Lt1PpyOGFLHujOjQetNoaA">https://mp.weixin.qq.com/s/Lt1PpyOGFLHujOjQetNoaA</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/Lt1PpyOGFLHujOjQetNoaA&quot;&gt;https://mp.weixin.q</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>高危Lucee漏洞通过计划任务滥用实现认证RCE，Metasploit模块已公开</title>
+    <link href="http://example.com/2025/07/04/weixin_3698659932/"/>
+    <id>http://example.com/2025/07/04/weixin_3698659932/</id>
+    <published>2025-07-04T11:13:27.235Z</published>
+    <updated>2025-07-04T11:13:27.229Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/79Y8MIZmlf_lcuGTGcCE7w">https://mp.weixin.qq.com/s/79Y8MIZmlf_lcuGTGcCE7w</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/79Y8MIZmlf_lcuGTGcCE7w&quot;&gt;https://mp.weixin.q</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HVV红队必备工具！快速打点，抢占第一先机</title>
+    <link href="http://example.com/2025/07/04/weixin_1036043757/"/>
+    <id>http://example.com/2025/07/04/weixin_1036043757/</id>
+    <published>2025-07-04T11:13:26.329Z</published>
+    <updated>2025-07-04T11:13:26.325Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/w3fqEOaIuYuvYoilmEvE2w">https://mp.weixin.qq.com/s/w3fqEOaIuYuvYoilmEvE2w</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/w3fqEOaIuYuvYoilmEvE2w&quot;&gt;https://mp.weixin.q</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
+    
+  </entry>
   
   <entry>
     <title>【7/4特辑】最新漏洞情报速递</title>
@@ -434,112 +542,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>13 岁 Dylan 加入微软安全响应中心，成为最年轻的安全研究员</title>
-    <link href="http://example.com/2025/07/04/weixin_3434492072/"/>
-    <id>http://example.com/2025/07/04/weixin_3434492072/</id>
-    <published>2025-07-04T01:26:57.624Z</published>
-    <updated>2025-07-04T01:26:57.621Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/fKcElr_A9Dt_L9gwjcfA-A">https://mp.weixin.qq.com/s/fKcElr_A9Dt_L9gwjcfA-A</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/fKcElr_A9Dt_L9gwjcfA-A&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>黑客声称俄罗斯主要国防承包商遭入侵，海军机密曝光</title>
-    <link href="http://example.com/2025/07/04/weixin_342996552/"/>
-    <id>http://example.com/2025/07/04/weixin_342996552/</id>
-    <published>2025-07-04T01:26:57.302Z</published>
-    <updated>2025-07-04T01:26:57.297Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/QbCbyFp015KDhEh_KhcPww">https://mp.weixin.qq.com/s/QbCbyFp015KDhEh_KhcPww</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/QbCbyFp015KDhEh_KhcPww&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>俄APT组织“Gamaredon”向乌克兰发起猛烈网络钓鱼攻击</title>
-    <link href="http://example.com/2025/07/04/weixin_4192222061/"/>
-    <id>http://example.com/2025/07/04/weixin_4192222061/</id>
-    <published>2025-07-04T01:26:56.293Z</published>
-    <updated>2025-07-04T01:26:56.289Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> 军哥网络安全读报</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/WnXGoqY-C5b5vV8a92Qg_g">https://mp.weixin.qq.com/s/WnXGoqY-C5b5vV8a92Qg_g</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; 军哥网络安全读报&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/WnXGoqY-C5b5vV8a92Qg_g&quot;&gt;https://mp.weixin.</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="军哥网络安全读报" scheme="http://example.com/tags/%E5%86%9B%E5%93%A5%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%AF%BB%E6%8A%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Horizon3Attack twitter update</title>
-    <link href="http://example.com/2025/07/03/twitter_2058243094/"/>
-    <id>http://example.com/2025/07/03/twitter_2058243094/</id>
-    <published>2025-07-03T22:00:26.000Z</published>
-    <updated>2025-07-03T22:00:26.893Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> Horizon3Attack</p><p><strong>推文：</strong> CVE-2025-5777，又称#CitrixBleed 2，允许在响应中泄露内存，可能导致会话令牌及其他敏感信息被泄露。下周将进行深入探讨。<a href="https://t.co/n2NVZFou2O">https://t.co/n2NVZFou2O</a></p><p><strong>链接：</strong> <a href="https://x.com/Horizon3Attack/status/1940879801096753589">https://x.com/Horizon3Attack/status/1940879801096753589</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; Horizon3Attack&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-5777，又称#CitrixBleed 2，允许在响应中泄露内存，可能导致会话令牌及其他敏感信息被泄露。下周将进行深入探讨。&lt;a</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="Horizon3Attack" scheme="http://example.com/tags/Horizon3Attack/"/>
     
   </entry>
   
