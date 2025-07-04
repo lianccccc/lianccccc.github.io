@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-04T14:00:41.065Z</updated>
+  <updated>2025-07-04T15:00:39.902Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CrushFTP Authentication Bypass Vulnerability</title>
+    <link href="http://example.com/2025/07/04/github_3044363706/"/>
+    <id>http://example.com/2025/07/04/github_3044363706/</id>
+    <published>2025-07-04T15:00:39.000Z</published>
+    <updated>2025-07-04T15:00:39.902Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CrushFTP Authentication Bypass Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-4040</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> CrushFTP是一款广泛使用的文件传输协议服务器软件，支持多种协议如FTP、SFTP、HTTP等，常用于企业环境中进行文件共享和数据传输。由于其功能强大且易于部署，CrushFTP在多个行业中有广泛的应用。此次发现的漏洞CVE-2024-4040影响CrushFTP v10及以下版本，属于认证绕过漏洞。攻击者可以通过伪造特定的<code>CrushAuth</code> cookie和AWS风格的<code>Authorization</code>头来绕过认证机制，无需有效凭证即可访问内部网络功能。这种漏洞的技术根源在于服务器未能正确验证用户提供的认证信息，导致攻击者可以构造恶意请求绕过安全检查。由于该漏洞允许未授权访问，攻击者可以利用此漏洞获取敏感信息、执行未授权操作或进一步渗透网络。更为严重的是，该漏洞的利用无需用户交互，可以被自动化工具利用，大大增加了其危害性。因此，该漏洞被评定为严重级别，建议所有使用受影响版本的用户立即更新到官方发布的最新版本以修复此漏洞。</p><p><strong>产品厂商：</strong> CrushFTP</p><p><strong>产品名称：</strong> CrushFTP</p><p><strong>影响版本：</strong> v10.x (prior to official patch)</p><p><strong>来源：</strong> <a href="https://github.com/ill-deed/CrushFTP-CVE-2024-4040-illdeed">https://github.com/ill-deed/CrushFTP-CVE-2024-4040-illdeed</a></p><p><strong>类型：</strong> CVE-2024:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2024-4040.py</li><li>LICENSE</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2024-4040-—-CrushFTP-Authentication-Bypass-Exploit"><a href="#CVE-2024-4040-—-CrushFTP-Authentication-Bypass-Exploit" class="headerlink" title="CVE-2024-4040 — CrushFTP Authentication Bypass Exploit"></a>CVE-2024-4040 — CrushFTP Authentication Bypass Exploit</h2><p>This repository contains a stealthy Python proof-of-concept (PoC) exploit for <strong>CVE-2024-4040</strong>, a critical vulnerability in CrushFTP (v10 and below) that allows an attacker to bypass authentication using a forged <code>CrushAuth</code> cookie and AWS-style <code>Authorization</code> header.</p><h3 id="🚨-Vulnerability-Summary"><a href="#🚨-Vulnerability-Summary" class="headerlink" title="🚨 Vulnerability Summary"></a>🚨 Vulnerability Summary</h3><blockquote><p>An unauthenticated attacker can bypass authentication in vulnerable CrushFTP instances by crafting a specific cookie&#x2F;header combination, gaining unauthorized access to internal web functions.</p></blockquote><ul><li><strong>CVE ID</strong>: <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-4040">CVE-2024-4040</a></li><li><strong>Severity</strong>: Critical (CVSS 9.8)</li><li><strong>Affected</strong>: CrushFTP v10.x (prior to official patch)</li></ul><hr><h3 id="⚙️-Features"><a href="#⚙️-Features" class="headerlink" title="⚙️ Features"></a>⚙️ Features</h3><ul><li>✅ Python 3.x PoC</li><li>✅ Secure <code>CrushAuth</code> generation using <code>secrets</code></li><li>✅ Valid AWS-style spoofed <code>Authorization</code> header</li><li>✅ Built-in SSL bypass with suppression</li><li>✅ No external dependencies (only <code>requests</code>)</li><li>✅ Clean console output with status and detection</li></ul><hr><h3 id="🛠-Usage"><a href="#🛠-Usage" class="headerlink" title="🛠 Usage"></a>🛠 Usage</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python3 CVE-2024-4040.py http://target-ip:8080 --valid_username crushadmin<br></code></pre></td></tr></table></figure><p><code>target_url</code> — Base URL of the CrushFTP server</p><p><code>--valid_username</code> — Known valid user (default: crushadmin)</p><hr><p>🔍 Example Output</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-selector-attr">[*]</span> CrushFTP Authentication Bypass Exploit<br><span class="hljs-selector-attr">[*]</span> Targeting: http:<span class="hljs-comment">//192.168.1.10:8080</span><br><span class="hljs-selector-attr">[*]</span> Using username: crushadmin<br><br><span class="hljs-selector-attr">[+]</span> Exploit Result:<br><br>Status_Code    : <span class="hljs-number">200</span><br>Response_Text  : &#123;<span class="hljs-string">&quot;getUserNameResponse&quot;</span>:&#123;<span class="hljs-string">&quot;user_name&quot;</span>:<span class="hljs-string">&quot;crushadmin&quot;</span>&#125;&#125;<br><br><span class="hljs-selector-attr">[+]</span> CrushFTP Server is VULNERABLE!<br></code></pre></td></tr></table></figure><hr><h3 id="⚠️-Legal-Notice"><a href="#⚠️-Legal-Notice" class="headerlink" title="⚠️ Legal Notice"></a>⚠️ Legal Notice</h3><p>This code is for educational and authorized security testing purposes only.<br>Do not use against systems you do not own or have explicit permission to test.</p><hr><h3 id="🙏-Credits"><a href="#🙏-Credits" class="headerlink" title="🙏 Credits"></a>🙏 Credits</h3><p>PoC Refactor: illdeed</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CrushFTP Authentication Bypass Vulnerab</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
+    
+    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cisco ISE ERS API 未授权远程代码执行漏洞</title>
+    <link href="http://example.com/2025/07/04/github_1022078866/"/>
+    <id>http://example.com/2025/07/04/github_1022078866/</id>
+    <published>2025-07-04T15:00:22.000Z</published>
+    <updated>2025-07-04T15:00:22.514Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Cisco ISE ERS API 未授权远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-20281</li></ul><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Cisco ISE（Identity Services Engine）是思科公司推出的一款身份服务引擎，广泛用于企业网络中，提供安全的访问控制策略、身份管理和网络设备合规性检查等功能。其ERS（External RESTful Services）API允许外部系统通过RESTful接口与ISE进行交互，实现自动化管理和配置。该漏洞存在于Cisco ISE的ERS API中，允许攻击者在无需认证的情况下远程执行代码，甚至以root权限启动反向shell。此漏洞的技术根源在于ERS API未能正确验证和处理未经认证的请求，导致攻击者可以绕过安全限制，直接向系统发送恶意指令。由于该漏洞无需认证即可利用，且攻击者能够获得系统的最高权限，因此对受影响系统的安全构成严重威胁，可能导致数据泄露、服务中断或进一步的内网渗透攻击。鉴于Cisco ISE在企业网络中的广泛应用，该漏洞的影响范围可能非常广泛，建议相关用户立即采取缓解措施。</p><p><strong>产品厂商：</strong> Cisco</p><p><strong>产品名称：</strong> Cisco ISE ERS API</p><p><strong>来源：</strong> <a href="https://github.com/ill-deed/Cisco-CVE-2025-20281-illdeed">https://github.com/ill-deed/Cisco-CVE-2025-20281-illdeed</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>LICENSE</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="Cisco-CVE-2025-20281-illdeed"><a href="#Cisco-CVE-2025-20281-illdeed" class="headerlink" title="Cisco-CVE-2025-20281-illdeed"></a>Cisco-CVE-2025-20281-illdeed</h2><p>Unauthenticated Remote Code Execution exploit for CVE-2025-20281 in Cisco ISE ERS API. Execute commands or launch reverse shells as root — no authentication required.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Cisco ISE ERS API 未授权远程代码执行漏洞&lt;/p&gt;
+&lt;p&gt;&lt;s</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+  </entry>
   
   <entry>
     <title>_r_netsec Twitter Update !</title>
@@ -468,60 +521,6 @@
     <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
     
     <category term="文件上传" scheme="http://example.com/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>40余款恶意火狐扩展插件窃取用户资产</title>
-    <link href="http://example.com/2025/07/04/weixin_1114076053/"/>
-    <id>http://example.com/2025/07/04/weixin_1114076053/</id>
-    <published>2025-07-04T11:13:27.929Z</published>
-    <updated>2025-07-04T11:13:27.925Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/mHtn2wVseQR2WP-nwkNkgg">https://mp.weixin.qq.com/s/mHtn2wVseQR2WP-nwkNkgg</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/mHtn2wVseQR2WP-nwkNkgg&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Apache组件遭大规模攻击，高危RCE漏洞引来12万次利用尝试</title>
-    <link href="http://example.com/2025/07/04/weixin_3734003401/"/>
-    <id>http://example.com/2025/07/04/weixin_3734003401/</id>
-    <published>2025-07-04T11:13:27.569Z</published>
-    <updated>2025-07-04T11:13:27.565Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>公众号：</strong> FreeBuf</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/Lt1PpyOGFLHujOjQetNoaA">https://mp.weixin.qq.com/s/Lt1PpyOGFLHujOjQetNoaA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; FreeBuf&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/Lt1PpyOGFLHujOjQetNoaA&quot;&gt;https://mp.weixin.q</summary>
-      
-    
-    
-    
-    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-    
-    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
-    
-    <category term="FreeBuf" scheme="http://example.com/tags/FreeBuf/"/>
     
   </entry>
   
