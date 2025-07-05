@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-05T21:45:24.006Z</updated>
+  <updated>2025-07-05T22:00:14.835Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>blueteamsec1 Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_484508824/"/>
+    <id>http://example.com/2025/07/05/twitter_484508824/</id>
+    <published>2025-07-05T22:00:14.000Z</published>
+    <updated>2025-07-05T22:00:14.835Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> blueteamsec1</p><p><strong>推文：</strong> JScript.dll中的释放后使用漏洞导致远程代码执行（CVE-2025-30397） <a href="https://t.co/I9n6acbYt6">https://t.co/I9n6acbYt6</a> #网络安全 #威胁狩猎 #信息安全</p><p><strong>链接：</strong> <a href="https://x.com/blueteamsec1/status/1941611177693544712">https://x.com/blueteamsec1/status/1941611177693544712</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; blueteamsec1&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; JScript.dll中的释放后使用漏洞导致远程代码执行（CVE-2025-30397） &lt;a href=&quot;https://t.co/I9n6acbY</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="blueteamsec1" scheme="http://example.com/tags/blueteamsec1/"/>
+    
+  </entry>
   
   <entry>
     <title>Citrix NetScaler Memory Disclosure - CitrixBleed 2</title>
@@ -502,32 +527,6 @@
     
     
     <category term="0xdonzDev" scheme="http://example.com/tags/0xdonzDev/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vuln_u Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_935108126/"/>
-    <id>http://example.com/2025/07/05/twitter_935108126/</id>
-    <published>2025-07-05T17:01:19.000Z</published>
-    <updated>2025-07-05T17:01:19.953Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> vuln_u</p><p><strong>推文：</strong> 网络钓鱼PDF文件+二维码，来自组织内部发送。</p><p>⚠️ 新的文件修复攻击向量<br>类似于点击修复，但滥用文件浏览器——复制&#x2F;粘贴风险自负。</p><p>🧠 Citrix漏洞2：电动布加洛<br>CVE-2025-5777让攻击者再次转储内存。立即打补丁。</p><p><strong>链接：</strong> <a href="https://x.com/vuln_u/status/1941527679007695204">https://x.com/vuln_u/status/1941527679007695204</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; vuln_u&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 网络钓鱼PDF文件+二维码，来自组织内部发送。&lt;/p&gt;
-&lt;p&gt;⚠️ 新的文件修复攻击向量&lt;br&gt;类似于点击修复，但滥用文件浏览器——复制&amp;#x2F;粘贴风险自负。</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="vuln_u" scheme="http://example.com/tags/vuln-u/"/>
     
   </entry>
   
