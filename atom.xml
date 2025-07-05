@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-05T08:00:50.349Z</updated>
+  <updated>2025-07-05T08:30:06.151Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>How Much More Must We Bleed? - Citrix NetScaler Memory Disclosure (CitrixBleed 2 CVE-2025-5777)</title>
+    <link href="http://example.com/2025/07/05/blog_1680224638/"/>
+    <id>http://example.com/2025/07/05/blog_1680224638/</id>
+    <published>2025-07-05T08:30:06.000Z</published>
+    <updated>2025-07-05T08:30:06.151Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>描述：</strong> Before you dive into our latest diatribe, indulge us and join us on a journey.</p><p>Sit in your chair, stand at your desk, lick your phone screen - close your eyes and imagine a world in which things are great. It’s sunny outside, the birds are chirping, and your</p><p><strong>链接：</strong> <a href="https://labs.watchtowr.com/how-much-more-must-we-bleed-citrix-netscaler-memory-disclosure-citrixbleed-2-cve-2025-5777/">https://labs.watchtowr.com/how-much-more-must-we-bleed-citrix-netscaler-memory-disclosure-citrixbleed-2-cve-2025-5777/</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;描述：&lt;/strong&gt; Before you dive into our latest diatribe, indulge us and join us on a journey.&lt;/p&gt;
+&lt;p&gt;Sit in your chair, stand at yo</summary>
+      
+    
+    
+    
+    <category term="安全博客" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+    <category term="labs.watchtowr.com" scheme="http://example.com/tags/labs-watchtowr-com/"/>
+    
+  </entry>
   
   <entry>
     <title>tanbablack Twitter Update !</title>
@@ -503,33 +528,6 @@
     
     
     <category term="yousukezan" scheme="http://example.com/tags/yousukezan/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VulmonFeeds Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_2159780479/"/>
-    <id>http://example.com/2025/07/05/twitter_2159780479/</id>
-    <published>2025-07-05T06:00:56.000Z</published>
-    <updated>2025-07-05T06:00:56.173Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> VulmonFeeds</p><p><strong>推文：</strong> CVE-2025-48952</p><p>NetAlertX 通过PHP松散比较漏洞实现认证绕过…</p><p>详情链接：<a href="https://t.co/6rD8e9jYei">https://t.co/6rD8e9jYei</a></p><p>漏洞警报订阅：<a href="https://t.co/hrQhy5uz4x">https://t.co/hrQhy5uz4x</a></p><p><strong>链接：</strong> <a href="https://x.com/VulmonFeeds/status/1941367047612518503">https://x.com/VulmonFeeds/status/1941367047612518503</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; VulmonFeeds&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-48952&lt;/p&gt;
-&lt;p&gt;NetAlertX 通过PHP松散比较漏洞实现认证绕过…&lt;/p&gt;
-&lt;p&gt;详情链接：&lt;a href=&quot;http</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="VulmonFeeds" scheme="http://example.com/tags/VulmonFeeds/"/>
     
   </entry>
   
