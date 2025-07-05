@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-05T00:00:31.432Z</updated>
+  <updated>2025-07-05T00:01:24.590Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,233 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Sn1perSecurity Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_578623155/"/>
+    <id>http://example.com/2025/07/05/twitter_578623155/</id>
+    <published>2025-07-05T00:01:24.000Z</published>
+    <updated>2025-07-05T00:01:24.590Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> Sn1perSecurity</p><p><strong>推文：</strong> 🔒 我们最新的Fuzzer模块更新增强了网页安全测试功能，包括动态搜索URL文件列表、Nuclei的自定义扫描选项、基本认证暴力破解、CVE-2023-44487 HTTP2 DDoS测试，以及针对单目标和多目标的HTTP Smuggler。💻🔐 <a href="https://t.co/slTk10eGH8">https://t.co/slTk10eGH8</a> <a href="https://t.co/WdJvRMptUI">https://t.co/WdJvRMptUI</a></p><p><strong>链接：</strong> <a href="https://x.com/Sn1perSecurity/status/1941285940070076692">https://x.com/Sn1perSecurity/status/1941285940070076692</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; Sn1perSecurity&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🔒 我们最新的Fuzzer模块更新增强了网页安全测试功能，包括动态搜索URL文件列表、Nuclei的自定义扫描选项、基本认证暴力破解、CVE-2</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="Sn1perSecurity" scheme="http://example.com/tags/Sn1perSecurity/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>frameandsurface Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_2279906423/"/>
+    <id>http://example.com/2025/07/05/twitter_2279906423/</id>
+    <published>2025-07-05T00:01:14.000Z</published>
+    <updated>2025-07-05T00:01:14.057Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> frameandsurface</p><p><strong>推文：</strong> 🐝 #速报 #WordPress #安全<br>【警告】WordPress的Embedder插件，从版本1.3到1.3.5，在ajax_set_global_option()函数的功能检查中存在安全问题…<a href="https://t.co/SMJQ6K9DHx">https://t.co/SMJQ6K9DHx</a></p><p><strong>链接：</strong> <a href="https://x.com/frameandsurface/status/1941270923338010914">https://x.com/frameandsurface/status/1941270923338010914</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; frameandsurface&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🐝 #速报 #WordPress #安全&lt;br&gt;【警告】WordPress的Embedder插件，从版本1.3到1.3.5，在ajax_set</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="frameandsurface" scheme="http://example.com/tags/frameandsurface/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>itm_enterprise Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_915577990/"/>
+    <id>http://example.com/2025/07/05/twitter_915577990/</id>
+    <published>2025-07-05T00:01:08.000Z</published>
+    <updated>2025-07-05T00:01:08.021Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> itm_enterprise</p><p><strong>推文：</strong> Chrome浏览器发现严重漏洞「CVE-2025-6554」，请立即更新<br><a href="https://t.co/2VrlB40BCK">https://t.co/2VrlB40BCK</a></p><p><strong>链接：</strong> <a href="https://x.com/itm_enterprise/status/1941272077799129450">https://x.com/itm_enterprise/status/1941272077799129450</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; itm_enterprise&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; Chrome浏览器发现严重漏洞「CVE-2025-6554」，请立即更新&lt;br&gt;&lt;a href=&quot;https://t.co/2VrlB40BCK&quot;</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="itm_enterprise" scheme="http://example.com/tags/itm-enterprise/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VulmonFeeds Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_4186417243/"/>
+    <id>http://example.com/2025/07/05/twitter_4186417243/</id>
+    <published>2025-07-05T00:01:03.000Z</published>
+    <updated>2025-07-05T00:01:03.545Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> VulmonFeeds</p><p><strong>推文：</strong> CVE-2025-38230</p><p>Linux内核JFS</p><p><a href="https://t.co/eWuca9lSNh">https://t.co/eWuca9lSNh</a></p><p>漏洞通知：<a href="https://t.co/xhLrNnfyrO">https://t.co/xhLrNnfyrO</a></p><p><strong>链接：</strong> <a href="https://x.com/VulmonFeeds/status/1941272349040422994">https://x.com/VulmonFeeds/status/1941272349040422994</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; VulmonFeeds&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-38230&lt;/p&gt;
+&lt;p&gt;Linux内核JFS&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://t.co/eWuca9lSNh&quot;&gt;ht</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="VulmonFeeds" scheme="http://example.com/tags/VulmonFeeds/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>sekurlsa_pw Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_3230187796/"/>
+    <id>http://example.com/2025/07/05/twitter_3230187796/</id>
+    <published>2025-07-05T00:00:58.000Z</published>
+    <updated>2025-07-05T00:00:58.377Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> sekurlsa_pw</p><p><strong>推文：</strong> 我在想那个思科根密码（CVE-2025-20309）是不是真的很简单，比如root、toor、devroot，还是他们用了更复杂的密码。欢迎你发一些搞笑错误的密码😺</p><p><strong>链接：</strong> <a href="https://x.com/sekurlsa_pw/status/1941272649516413104">https://x.com/sekurlsa_pw/status/1941272649516413104</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; sekurlsa_pw&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 我在想那个思科根密码（CVE-2025-20309）是不是真的很简单，比如root、toor、devroot，还是他们用了更复杂的密码。欢迎你发一些搞笑</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="sekurlsa_pw" scheme="http://example.com/tags/sekurlsa-pw/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>itmedia Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_688512254/"/>
+    <id>http://example.com/2025/07/05/twitter_688512254/</id>
+    <published>2025-07-05T00:00:52.000Z</published>
+    <updated>2025-07-05T00:00:52.965Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> itmedia</p><p><strong>推文：</strong> ［ITmedia 企业］安全新闻警报：Chrome存在严重漏洞「CVE-2025-6554」请尽快更新 <a href="https://t.co/1U3VvR5njq">https://t.co/1U3VvR5njq</a></p><p><strong>链接：</strong> <a href="https://x.com/itmedia/status/1941273396530295268">https://x.com/itmedia/status/1941273396530295268</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; itmedia&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; ［ITmedia 企业］安全新闻警报：Chrome存在严重漏洞「CVE-2025-6554」请尽快更新 &lt;a href=&quot;https://t.co/1U3VvR</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="itmedia" scheme="http://example.com/tags/itmedia/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VulmonFeeds Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_2822498732/"/>
+    <id>http://example.com/2025/07/05/twitter_2822498732/</id>
+    <published>2025-07-05T00:00:47.000Z</published>
+    <updated>2025-07-05T00:00:47.585Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> VulmonFeeds</p><p><strong>推文：</strong> CVE-2025-38227<br>Linux内核媒体子系统vidtv驱动中的释放后使用漏洞<br><a href="https://t.co/cjNv74lyju">https://t.co/cjNv74lyju</a></p><p><strong>链接：</strong> <a href="https://x.com/VulmonFeeds/status/1941274908815716398">https://x.com/VulmonFeeds/status/1941274908815716398</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; VulmonFeeds&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-38227&lt;br&gt;Linux内核媒体子系统vidtv驱动中的释放后使用漏洞&lt;br&gt;&lt;a href=&quot;https://t.co/cjNv</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="VulmonFeeds" scheme="http://example.com/tags/VulmonFeeds/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CVEnew Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_2298477313/"/>
+    <id>http://example.com/2025/07/05/twitter_2298477313/</id>
+    <published>2025-07-05T00:00:42.000Z</published>
+    <updated>2025-07-05T00:00:42.097Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> CVEnew</p><p><strong>推文：</strong> CVE-2025-26850 Quest KACE系统管理设备(SMA)中14.0.97之前版本及14.1.x中14.1.19之前版本的代理，可能允许在受管系统上进行权限提升。<a href="https://t.co/mpzwq7FpUy">https://t.co/mpzwq7FpUy</a></p><p><strong>链接：</strong> <a href="https://x.com/CVEnew/status/1941278860642811990">https://x.com/CVEnew/status/1941278860642811990</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; CVEnew&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-26850 Quest KACE系统管理设备(SMA)中14.0.97之前版本及14.1.x中14.1.19之前版本的代理，可能允许在受管系统上</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="CVEnew" scheme="http://example.com/tags/CVEnew/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OCGOT1616 Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_3160933802/"/>
+    <id>http://example.com/2025/07/05/twitter_3160933802/</id>
+    <published>2025-07-05T00:00:35.000Z</published>
+    <updated>2025-07-05T00:00:35.928Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> OCGOT1616</p><p><strong>推文：</strong> Chrome浏览器存在严重漏洞「CVE-2025-6554」 请立即更新 <a href="https://t.co/eaIlWRfx7r">https://t.co/eaIlWRfx7r</a></p><p><strong>链接：</strong> <a href="https://x.com/OCGOT1616/status/1941279068931989828">https://x.com/OCGOT1616/status/1941279068931989828</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; OCGOT1616&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; Chrome浏览器存在严重漏洞「CVE-2025-6554」 请立即更新 &lt;a href=&quot;https://t.co/eaIlWRfx7r&quot;&gt;https:/</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="OCGOT1616" scheme="http://example.com/tags/OCGOT1616/"/>
+    
+  </entry>
   
   <entry>
     <title>CveFindCom Twitter Update !</title>
@@ -294,229 +521,6 @@
     
     
     <category term="VulmonFeeds" scheme="http://example.com/tags/VulmonFeeds/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CveFindCom Twitter Update !</title>
-    <link href="http://example.com/2025/07/04/twitter_3374980432/"/>
-    <id>http://example.com/2025/07/04/twitter_3374980432/</id>
-    <published>2025-07-04T23:00:49.000Z</published>
-    <updated>2025-07-04T23:00:49.825Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> CveFindCom</p><p><strong>推文：</strong> [CVE-2025-53366：高危] 更新至MCP Python SDK 1.9.4版本，修复了一个验证错误，该错误在处理畸形请求时因未处理的异常可能导致服务不可用。#网络安全#cve,CVE-2025-53366,#网络安全 <a href="https://t.co/kijStuCXn9">https://t.co/kijStuCXn9</a> <a href="https://t.co/wHe8nB0CfF">https://t.co/wHe8nB0CfF</a></p><p><strong>链接：</strong> <a href="https://x.com/CveFindCom/status/1941265742084612434">https://x.com/CveFindCom/status/1941265742084612434</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; CveFindCom&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; [CVE-2025-53366：高危] 更新至MCP Python SDK 1.9.4版本，修复了一个验证错误，该错误在处理畸形请求时因未处理的异常可能导</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="CveFindCom" scheme="http://example.com/tags/CveFindCom/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CveFindCom Twitter Update !</title>
-    <link href="http://example.com/2025/07/04/twitter_1809775504/"/>
-    <id>http://example.com/2025/07/04/twitter_1809775504/</id>
-    <published>2025-07-04T23:00:36.000Z</published>
-    <updated>2025-07-04T23:00:36.704Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> CveFindCom</p><p><strong>推文：</strong> [CVE-2025-53365：高危] Python SDK <code>mcp</code>（PyPI）用于模型上下文协议的版本1.10.0之前存在漏洞。故意触发异常导致服务器崩溃，该问题已在1.10.0版本中修复。#cve,CVE-2025-53365,#网络安全 <a href="https://t.co/UpsErCrFXm">https://t.co/UpsErCrFXm</a> <a href="https://t.co/9PqdgnBpdU">https://t.co/9PqdgnBpdU</a></p><p><strong>链接：</strong> <a href="https://x.com/CveFindCom/status/1941265793993306584">https://x.com/CveFindCom/status/1941265793993306584</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; CveFindCom&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; [CVE-2025-53365：高危] Python SDK &lt;code&gt;mcp&lt;/code&gt;（PyPI）用于模型上下文协议的版本1.10.0之前存在漏洞</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="CveFindCom" scheme="http://example.com/tags/CveFindCom/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CveFindCom Twitter Update !</title>
-    <link href="http://example.com/2025/07/04/twitter_1746126938/"/>
-    <id>http://example.com/2025/07/04/twitter_1746126938/</id>
-    <published>2025-07-04T23:00:23.000Z</published>
-    <updated>2025-07-04T23:00:23.240Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> CveFindCom</p><p><strong>推文：</strong> [CVE-2025-48952：严重] NetAlertX 25.6.7之前版本存在一个漏洞，由于PHP中的松散比较，允许用户使用SHA-256魔法哈希绕过密码验证。请升级以修复此问题。#cve,CVE-2025-48952,#网络安全 <a href="https://t.co/PSGCL5VYRY">https://t.co/PSGCL5VYRY</a> <a href="https://t.co/aCXEwLdjJj">https://t.co/aCXEwLdjJj</a></p><p><strong>链接：</strong> <a href="https://x.com/CveFindCom/status/1941265853216887118">https://x.com/CveFindCom/status/1941265853216887118</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; CveFindCom&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; [CVE-2025-48952：严重] NetAlertX 25.6.7之前版本存在一个漏洞，由于PHP中的松散比较，允许用户使用SHA-256魔法哈希绕</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="CveFindCom" scheme="http://example.com/tags/CveFindCom/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CVEnew Twitter Update !</title>
-    <link href="http://example.com/2025/07/04/twitter_1709726917/"/>
-    <id>http://example.com/2025/07/04/twitter_1709726917/</id>
-    <published>2025-07-04T23:00:14.000Z</published>
-    <updated>2025-07-04T23:00:14.628Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> CVEnew</p><p><strong>推文：</strong> CVE-2025-48952 NetAlertX是一个网络、存在扫描器和警报框架。在25.6.7版本之前，认证逻辑中的一个漏洞允许用户绕过密码验证… <a href="https://t.co/rOZaBG20bp">https://t.co/rOZaBG20bp</a></p><p><strong>链接：</strong> <a href="https://x.com/CVEnew/status/1941269007744761957">https://x.com/CVEnew/status/1941269007744761957</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; CVEnew&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-48952 NetAlertX是一个网络、存在扫描器和警报框架。在25.6.7版本之前，认证逻辑中的一个漏洞允许用户绕过密码验证… &lt;a hre</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="CVEnew" scheme="http://example.com/tags/CVEnew/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MCP Python SDK has Unhandled Exception in Streamable HTTP Transport ,Leading to Denial of Service</title>
-    <link href="http://example.com/2025/07/04/github_3928456896/"/>
-    <id>http://example.com/2025/07/04/github_3928456896/</id>
-    <published>2025-07-04T22:30:05.000Z</published>
-    <updated>2025-07-04T22:30:05.377Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-j975-95f5-7wqh">https://github.com/advisories/GHSA-j975-95f5-7wqh</a></p><p><strong>仓库 Star：</strong> 15626</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/modelcontextprotocol/python-sdk/security/advisories/GHSA-j975-95f5-7wqh">https://github.com/modelcontextprotocol/python-sdk/security/advisories/GHSA-j975-95f5-7wqh</a></p></li><li><p><a href="https://github.com/modelcontextprotocol/python-sdk/pull/967">https://github.com/modelcontextprotocol/python-sdk/pull/967</a></p></li><li><p><a href="https://github.com/modelcontextprotocol/python-sdk/commit/7b420656de48cfdb90b39eb582e60b6d55c2f891">https://github.com/modelcontextprotocol/python-sdk/commit/7b420656de48cfdb90b39eb582e60b6d55c2f891</a></p></li><li><p><a href="https://github.com/modelcontextprotocol/python-sdk/releases/tag/v1.10.0">https://github.com/modelcontextprotocol/python-sdk/releases/tag/v1.10.0</a></p></li><li><p><a href="https://github.com/advisories/GHSA-j975-95f5-7wqh">https://github.com/advisories/GHSA-j975-95f5-7wqh</a></p></li></ul><p><strong>描述：</strong></p><p>If a client deliberately triggers an exception after establishing a streamable HTTP session, this can lead to an uncaught ClosedResourceError on the server side, causing the server to crash and requiring a restart to restore service. Impact may vary depending on the deployment conditions, and presence of infrastructure-level resilience measures.</p><p>Thank you to Rich Harang for reporting this issue.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-j975-95f5-7wqh&quot;&gt;https://github.com/advisories/GHSA-j975-95f5-7wqh&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MCP Python SDK vulnerability in the FastMCP Server causes validation error, leading to DoS</title>
-    <link href="http://example.com/2025/07/04/github_497957122/"/>
-    <id>http://example.com/2025/07/04/github_497957122/</id>
-    <published>2025-07-04T22:30:04.000Z</published>
-    <updated>2025-07-04T22:30:04.637Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-3qhf-m339-9g5v">https://github.com/advisories/GHSA-3qhf-m339-9g5v</a></p><p><strong>仓库 Star：</strong> 15626</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://github.com/modelcontextprotocol/python-sdk/security/advisories/GHSA-3qhf-m339-9g5v">https://github.com/modelcontextprotocol/python-sdk/security/advisories/GHSA-3qhf-m339-9g5v</a></p></li><li><p><a href="https://github.com/modelcontextprotocol/python-sdk/pull/822">https://github.com/modelcontextprotocol/python-sdk/pull/822</a></p></li><li><p><a href="https://github.com/modelcontextprotocol/python-sdk/commit/29c69e6a47d0104d0afcea6ac35e7ab02fde809a">https://github.com/modelcontextprotocol/python-sdk/commit/29c69e6a47d0104d0afcea6ac35e7ab02fde809a</a></p></li><li><p><a href="https://github.com/modelcontextprotocol/python-sdk/releases/tag/v1.9.4">https://github.com/modelcontextprotocol/python-sdk/releases/tag/v1.9.4</a></p></li><li><p><a href="https://github.com/advisories/GHSA-3qhf-m339-9g5v">https://github.com/advisories/GHSA-3qhf-m339-9g5v</a></p></li></ul><p><strong>描述：</strong></p><p>A validation error in the MCP SDK can cause an unhandled exception when processing malformed requests, resulting in service unavailability (500 errors) until manually restarted. Impact may vary depending on the deployment conditions, and presence of infrastructure-level resilience measures.</p><p>Thank you to Rich Harang for reporting this issue.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-3qhf-m339-9g5v&quot;&gt;https://github.com/advisories/GHSA-3qhf-m339-9g5v&lt;/a&gt;&lt;/p</summary>
-      
-    
-    
-    
-    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
-    
-    
-    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>KulinskiArkadi Twitter Update !</title>
-    <link href="http://example.com/2025/07/04/twitter_2748982624/"/>
-    <id>http://example.com/2025/07/04/twitter_2748982624/</id>
-    <published>2025-07-04T22:01:44.000Z</published>
-    <updated>2025-07-04T22:01:44.138Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> KulinskiArkadi</p><p><strong>推文：</strong> 恶意（99%）<br><a href="https://t.co/7ShGmdeM5d">https://t.co/7ShGmdeM5d</a><br>产品 Nginx<br>CVE-2021-23017 CVE-2021-3618 CVE-2022-3638 CVE-2023-44487</p><p><a href="https://t.co/yJfVvQJJqQ">https://t.co/yJfVvQJJqQ</a> <a href="https://t.co/hT3w7fzIsY">https://t.co/hT3w7fzIsY</a></p><p><strong>链接：</strong> <a href="https://x.com/KulinskiArkadi/status/1941246939896611089">https://x.com/KulinskiArkadi/status/1941246939896611089</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; KulinskiArkadi&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 恶意（99%）&lt;br&gt;&lt;a href=&quot;https://t.co/7ShGmdeM5d&quot;&gt;https://t.co/7ShGmdeM5d&lt;/a&gt;&lt;</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="KulinskiArkadi" scheme="http://example.com/tags/KulinskiArkadi/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Cezar_H_Linux Twitter Update !</title>
-    <link href="http://example.com/2025/07/04/twitter_3499452719/"/>
-    <id>http://example.com/2025/07/04/twitter_3499452719/</id>
-    <published>2025-07-04T22:01:44.000Z</published>
-    <updated>2025-07-04T22:01:44.506Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> Cezar_H_Linux</p><p><strong>推文：</strong> 🚨 紧急：Debian DSA-5958-1 修补了一个严重的 JPEG XL 漏洞（CVE-2023-XXXX）。<br>💥 风险：通过恶意图片远程执行代码。<br>✅ 修复方法：sudo apt upgrade libjxl<br>🔐 漏洞利用出现前立即修补！了解更多：👉 <a href="https://t.co/p9W9TCem1Q">https://t.co/p9W9TCem1Q</a>          #信息安全 #Linux <a href="https://t.co/tslUTGUCRb">https://t.co/tslUTGUCRb</a></p><p><strong>链接：</strong> <a href="https://x.com/Cezar_H_Linux/status/1941242295233515560">https://x.com/Cezar_H_Linux/status/1941242295233515560</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; Cezar_H_Linux&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🚨 紧急：Debian DSA-5958-1 修补了一个严重的 JPEG XL 漏洞（CVE-2023-XXXX）。&lt;br&gt;💥 风险：通过恶意图</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="Cezar_H_Linux" scheme="http://example.com/tags/Cezar-H-Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>mjtsai Twitter Update !</title>
-    <link href="http://example.com/2025/07/04/twitter_560539787/"/>
-    <id>http://example.com/2025/07/04/twitter_560539787/</id>
-    <published>2025-07-04T22:01:33.000Z</published>
-    <updated>2025-07-04T22:01:33.230Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> mjtsai</p><p><strong>推文：</strong> 常见漏洞与暴露（CVE）资助：<br><a href="https://t.co/4ygtQ5McN3">https://t.co/4ygtQ5McN3</a> #mjtsaiblog</p><p><strong>链接：</strong> <a href="https://x.com/mjtsai/status/1941240708008169852">https://x.com/mjtsai/status/1941240708008169852</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; mjtsai&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 常见漏洞与暴露（CVE）资助：&lt;br&gt;&lt;a href=&quot;https://t.co/4ygtQ5McN3&quot;&gt;https://t.co/4ygtQ5McN3&lt;/a&gt; </summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="mjtsai" scheme="http://example.com/tags/mjtsai/"/>
     
   </entry>
   
