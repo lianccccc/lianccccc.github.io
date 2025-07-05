@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-05T08:30:06.151Z</updated>
+  <updated>2025-07-05T09:00:42.418Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,108 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CVEShield Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_3135693881/"/>
+    <id>http://example.com/2025/07/05/twitter_3135693881/</id>
+    <published>2025-07-05T09:00:42.000Z</published>
+    <updated>2025-07-05T09:00:42.418Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> CVEShield</p><p><strong>推文：</strong> 热门CVE前五名：<br>    1 - CVE-2025-53109<br>    2 - CVE-2025-5777<br>    3 - CVE-2025-20309<br>    4 - CVE-2025-6554<br>    5 - CVE-2025-45080</p><pre><code class="hljs">#cve #cvetrends #cveshield #网络安全    https://t.co/4Fua3CAN6W</code></pre><p><strong>链接：</strong> <a href="https://x.com/CVEShield/status/1941408422789775444">https://x.com/CVEShield/status/1941408422789775444</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; CVEShield&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 热门CVE前五名：&lt;br&gt;    1 - CVE-2025-53109&lt;br&gt;    2 - CVE-2025-5777&lt;br&gt;    3 - CVE-20</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="CVEShield" scheme="http://example.com/tags/CVEShield/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vixxxkigoli Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_3226333107/"/>
+    <id>http://example.com/2025/07/05/twitter_3226333107/</id>
+    <published>2025-07-05T09:00:34.000Z</published>
+    <updated>2025-07-05T09:00:34.634Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> vixxxkigoli</p><p><strong>推文：</strong> 🚨 Debian用户请注意！<br>在Debian中发现了一个新的严重漏洞CVE-2025-32463。<br>请运行：sudo apt update &amp;&amp; sudo apt upgrade<br>👉 尽快更新以确保安全！<br>#Debian #Linux #网络安全 #立即更新</p><p><strong>链接：</strong> <a href="https://x.com/vixxxkigoli/status/1941418036185137272">https://x.com/vixxxkigoli/status/1941418036185137272</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; vixxxkigoli&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🚨 Debian用户请注意！&lt;br&gt;在Debian中发现了一个新的严重漏洞CVE-2025-32463。&lt;br&gt;请运行：sudo apt update</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="vixxxkigoli" scheme="http://example.com/tags/vixxxkigoli/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>alpha11890 Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_2640200742/"/>
+    <id>http://example.com/2025/07/05/twitter_2640200742/</id>
+    <published>2025-07-05T09:00:28.000Z</published>
+    <updated>2025-07-05T09:00:28.514Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> alpha11890</p><p><strong>推文：</strong> CALDERA刚刚投下了一颗网络炸弹</p><p>✦ 全新图形用户界面，操作更流畅，流程更清晰<br>✦ AI和OT技术即将上线，未来是自动化的<br>✦ CVE‑2025‑27364（CVSS 10.0）是一个可能摧毁你系统的严重远程代码执行漏洞<br>✦ 现已推出补丁，版本v5.1.0+<br>✦ 新增52个针对ICS的战术、技术和程序（TTPs）（你好，Profinet + IEC 61850）<br>✦ 新增对手档案和引导式规划器</p><p>@Calderaxyz 不仅幸存下来，还升级了</p><p>周末愉快，传奇们</p><p><strong>链接：</strong> <a href="https://x.com/alpha11890/status/1941418735220252910">https://x.com/alpha11890/status/1941418735220252910</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; alpha11890&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CALDERA刚刚投下了一颗网络炸弹&lt;/p&gt;
+&lt;p&gt;✦ 全新图形用户界面，操作更流畅，流程更清晰&lt;br&gt;✦ AI和OT技术即将上线，未来是自动化的&lt;br&gt;</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="alpha11890" scheme="http://example.com/tags/alpha11890/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>pdnuclei_bot Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_2575157742/"/>
+    <id>http://example.com/2025/07/05/twitter_2575157742/</id>
+    <published>2025-07-05T09:00:18.000Z</published>
+    <updated>2025-07-05T09:00:18.765Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> pdnuclei_bot</p><p><strong>推文：</strong> 🚨 紧急警报：CVE-2025-5777 - 严重漏洞 🚨</p><p>Citrix NetScaler 内存泄露 - CitrixBleed 2</p><p>&gt; NetScaler 管理界面因输入验证不足导致内存过度读取…</p><p>👾 详情点击：<a href="https://t.co/ZB3zC5PNYa">https://t.co/ZB3zC5PNYa</a></p><p>@pdnuclei #Nuclei模板 #漏洞公告</p><p><strong>链接：</strong> <a href="https://x.com/pdnuclei_bot/status/1941421808554738058">https://x.com/pdnuclei_bot/status/1941421808554738058</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; pdnuclei_bot&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🚨 紧急警报：CVE-2025-5777 - 严重漏洞 🚨&lt;/p&gt;
+&lt;p&gt;Citrix NetScaler 内存泄露 - CitrixBleed </summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="pdnuclei_bot" scheme="http://example.com/tags/pdnuclei-bot/"/>
+    
+  </entry>
   
   <entry>
     <title>How Much More Must We Bleed? - Citrix NetScaler Memory Disclosure (CitrixBleed 2 CVE-2025-5777)</title>
@@ -424,110 +526,6 @@
     
     
     <category term="minacrissDev_" scheme="http://example.com/tags/minacrissDev/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>TweetThreatNews Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_699613761/"/>
-    <id>http://example.com/2025/07/05/twitter_699613761/</id>
-    <published>2025-07-05T06:01:26.000Z</published>
-    <updated>2025-07-05T06:01:26.845Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> TweetThreatNews</p><p><strong>推文：</strong> 法国的关键基础设施去年遭到与中国有关的组织UNC5174利用Ivanti零日漏洞（CVE-2024-8190）的攻击。复杂的”Houken”攻击系列凸显了持续的间谍威胁。🚨 #法国 #网络威胁 #零日漏洞 <a href="https://t.co/h0nWFddLlX">https://t.co/h0nWFddLlX</a></p><p><strong>链接：</strong> <a href="https://x.com/TweetThreatNews/status/1941376689931464887">https://x.com/TweetThreatNews/status/1941376689931464887</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; TweetThreatNews&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 法国的关键基础设施去年遭到与中国有关的组织UNC5174利用Ivanti零日漏洞（CVE-2024-8190）的攻击。复杂的”Houken”攻击</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="TweetThreatNews" scheme="http://example.com/tags/TweetThreatNews/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VulmonFeeds Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_176160468/"/>
-    <id>http://example.com/2025/07/05/twitter_176160468/</id>
-    <published>2025-07-05T06:01:18.000Z</published>
-    <updated>2025-07-05T06:01:18.417Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> VulmonFeeds</p><p><strong>推文：</strong> CVE-2025-43711</p><p>Tunnelblick 不完全卸载导致根代码执行漏洞</p><p><a href="https://t.co/HN8WczGcvt">https://t.co/HN8WczGcvt</a></p><p><strong>链接：</strong> <a href="https://x.com/VulmonFeeds/status/1941361928409948340">https://x.com/VulmonFeeds/status/1941361928409948340</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; VulmonFeeds&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-43711&lt;/p&gt;
-&lt;p&gt;Tunnelblick 不完全卸载导致根代码执行漏洞&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://t.c</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="VulmonFeeds" scheme="http://example.com/tags/VulmonFeeds/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VulmonFeeds Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_3092144961/"/>
-    <id>http://example.com/2025/07/05/twitter_3092144961/</id>
-    <published>2025-07-05T06:01:13.000Z</published>
-    <updated>2025-07-05T06:01:13.161Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> VulmonFeeds</p><p><strong>推文：</strong> CVE-2025-26850</p><p>Quest KACE系统管理设备中的权限提升漏洞</p><p><a href="https://t.co/PZWw2lbPIf">https://t.co/PZWw2lbPIf</a></p><p><strong>链接：</strong> <a href="https://x.com/VulmonFeeds/status/1941364488021664147">https://x.com/VulmonFeeds/status/1941364488021664147</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; VulmonFeeds&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-26850&lt;/p&gt;
-&lt;p&gt;Quest KACE系统管理设备中的权限提升漏洞&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://t.co/</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="VulmonFeeds" scheme="http://example.com/tags/VulmonFeeds/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>yousukezan Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_4103524467/"/>
-    <id>http://example.com/2025/07/05/twitter_4103524467/</id>
-    <published>2025-07-05T06:01:07.000Z</published>
-    <updated>2025-07-05T06:01:07.281Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> yousukezan</p><p><strong>推文：</strong> Next.js中发现了一个严重漏洞（CVE-2025-49826）。攻击者通过故意将HTTP 204的空响应注入缓存，导致之后访问该页面的所有用户持续收到空白页面，从而引发DoS攻击。受影响版本为15.1.0至15.1.7。<br><a href="https://t.co/qWowjgFyR8">https://t.co/qWowjgFyR8</a></p><p><strong>链接：</strong> <a href="https://x.com/yousukezan/status/1941365598874894663">https://x.com/yousukezan/status/1941365598874894663</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; yousukezan&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; Next.js中发现了一个严重漏洞（CVE-2025-49826）。攻击者通过故意将HTTP 204的空响应注入缓存，导致之后访问该页面的所有用户持续收到</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="yousukezan" scheme="http://example.com/tags/yousukezan/"/>
     
   </entry>
   
