@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-05T02:01:16.197Z</updated>
+  <updated>2025-07-05T02:34:36.384Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>中科博华网龙网关 arp_scanphp 任意文件读取漏洞</title>
+    <link href="http://example.com/2025/07/05/weixin_1011999435/"/>
+    <id>http://example.com/2025/07/05/weixin_1011999435/</id>
+    <published>2025-07-05T02:34:36.386Z</published>
+    <updated>2025-07-05T02:34:36.384Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> Nday Poc</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/nLP5coU3ljQRXMoUKfvykQ">https://mp.weixin.qq.com/s/nLP5coU3ljQRXMoUKfvykQ</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; Nday Poc&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/nLP5coU3ljQRXMoUKfvykQ&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="Nday Poc" scheme="http://example.com/tags/Nday-Poc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>锐捷EWEB路由器 checkphp 任意文件读取漏洞</title>
+    <link href="http://example.com/2025/07/05/weixin_2290956448/"/>
+    <id>http://example.com/2025/07/05/weixin_2290956448/</id>
+    <published>2025-07-05T02:22:52.599Z</published>
+    <updated>2025-07-05T02:22:52.599Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>公众号：</strong> Nday Poc</p><p><strong>链接：</strong> <a href="https://mp.weixin.qq.com/s/1GaVAZLcHXVRLUPCdPnBVw">https://mp.weixin.qq.com/s/1GaVAZLcHXVRLUPCdPnBVw</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;公众号：&lt;/strong&gt; Nday Poc&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://mp.weixin.qq.com/s/1GaVAZLcHXVRLUPCdPnBVw&quot;&gt;https://mp.weixin.</summary>
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://example.com/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="mp.weixin.qq.com" scheme="http://example.com/tags/mp-weixin-qq-com/"/>
+    
+    <category term="Nday Poc" scheme="http://example.com/tags/Nday-Poc/"/>
+    
+  </entry>
   
   <entry>
     <title>the_yellow_fall Twitter Update !</title>
@@ -466,57 +520,6 @@
     <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; transilienceai&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 被积极利用的CVE漏洞：CVE-2025-20309&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://x</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="transilienceai" scheme="http://example.com/tags/transilienceai/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>transilienceai Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_2050551503/"/>
-    <id>http://example.com/2025/07/05/twitter_2050551503/</id>
-    <published>2025-07-05T01:00:39.000Z</published>
-    <updated>2025-07-05T01:00:39.239Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> transilienceai</p><p><strong>推文：</strong> 被积极利用的CVE漏洞：CVE-2025-31324</p><p><strong>链接：</strong> <a href="https://x.com/transilienceai/status/1941291188641828905">https://x.com/transilienceai/status/1941291188641828905</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; transilienceai&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 被积极利用的CVE漏洞：CVE-2025-31324&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://x</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="transilienceai" scheme="http://example.com/tags/transilienceai/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>transilienceai Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_193547840/"/>
-    <id>http://example.com/2025/07/05/twitter_193547840/</id>
-    <published>2025-07-05T01:00:35.000Z</published>
-    <updated>2025-07-05T01:00:35.707Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> transilienceai</p><p><strong>推文：</strong> 威胁文章链接: <a href="https://t.co/GVCBgz8agN">https://t.co/GVCBgz8agN</a></p><p><strong>链接：</strong> <a href="https://x.com/transilienceai/status/1941291189245812771">https://x.com/transilienceai/status/1941291189245812771</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; transilienceai&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 威胁文章链接: &lt;a href=&quot;https://t.co/GVCBgz8agN&quot;&gt;https://t.co/GVCBgz8agN&lt;/a&gt;&lt;/p&gt;</summary>
       
     
     
