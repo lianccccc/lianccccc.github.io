@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-05T07:01:34.557Z</updated>
+  <updated>2025-07-05T08:00:50.349Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,132 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>tanbablack Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_2249896016/"/>
+    <id>http://example.com/2025/07/05/twitter_2249896016/</id>
+    <published>2025-07-05T08:00:50.000Z</published>
+    <updated>2025-07-05T08:00:50.349Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> tanbablack</p><p><strong>推文：</strong> SOCRadar的威胁情报MCP服务器<br><a href="https://t.co/vqSPpiFYGa">https://t.co/vqSPpiFYGa</a></p><p>另外，虽然有点旧，但关于MCP服务器的漏洞（CVE-2025-49596）的讨论。不仅是自己公司的，请使用安全的服务器。<br>对象：MCP Inspector 0.14.1及之前的所有版本<br>确认方法：npm list -g<br><a href="https://t.co/B0HhREpw4M">https://t.co/B0HhREpw4M</a></p><p><strong>链接：</strong> <a href="https://x.com/tanbablack/status/1941395945943597485">https://x.com/tanbablack/status/1941395945943597485</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; tanbablack&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; SOCRadar的威胁情报MCP服务器&lt;br&gt;&lt;a href=&quot;https://t.co/vqSPpiFYGa&quot;&gt;https://t.co/vqSPpiF</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="tanbablack" scheme="http://example.com/tags/tanbablack/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Tinolle Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_1958495455/"/>
+    <id>http://example.com/2025/07/05/twitter_1958495455/</id>
+    <published>2025-07-05T08:00:37.000Z</published>
+    <updated>2025-07-05T08:00:37.277Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> Tinolle</p><p><strong>推文：</strong> 我们还要流多少血？- Citrix NetScaler内存泄露（CitrixBleed 2 CVE-2025-5777） <a href="https://t.co/gRjbYbIjLu">https://t.co/gRjbYbIjLu</a></p><p><strong>链接：</strong> <a href="https://x.com/Tinolle/status/1941396081037934669">https://x.com/Tinolle/status/1941396081037934669</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; Tinolle&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 我们还要流多少血？- Citrix NetScaler内存泄露（CitrixBleed 2 CVE-2025-5777） &lt;a href=&quot;https://t.</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="Tinolle" scheme="http://example.com/tags/Tinolle/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Shida_aisales Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_378605804/"/>
+    <id>http://example.com/2025/07/05/twitter_378605804/</id>
+    <published>2025-07-05T08:00:31.000Z</published>
+    <updated>2025-07-05T08:00:31.221Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> Shida_aisales</p><p><strong>推文：</strong> 安全注意事项<br>•MCP Inspector报告了RCE漏洞（CVE-2025-49596，CVSS评分9.4）。通过DNS重绑定可向本地MCP注入指令。<br>•官方最佳实践推荐使用Bearer认证、最小权限范围及日志审计。<br>•操作指南：<br>1.即使对于127.0.0.1，也需强制使用API令牌。<br>2.使用Docker&#x2F;VM隔离技术，将浏览器与MCP隔离在沙箱中。<br>3.启用自动更新，并移除旧版MCP Inspector。</p><p><strong>链接：</strong> <a href="https://x.com/Shida_aisales/status/1941396517820223708">https://x.com/Shida_aisales/status/1941396517820223708</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; Shida_aisales&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 安全注意事项&lt;br&gt;•MCP Inspector报告了RCE漏洞（CVE-2025-49596，CVSS评分9.4）。通过DNS重绑定可向本地MCP</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="Shida_aisales" scheme="http://example.com/tags/Shida-aisales/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>offseq Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_1590192319/"/>
+    <id>http://example.com/2025/07/05/twitter_1590192319/</id>
+    <published>2025-07-05T08:00:22.000Z</published>
+    <updated>2025-07-05T08:00:22.605Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> offseq</p><p><strong>推文：</strong> 🚨 紧急：InspiryThemes的RealHomes主题（版本≤4.4.0）存在漏洞，攻击者无需认证即可提升权限！请立即打补丁或限制管理员访问。🏠 详情点击：<a href="https://t.co/WYgV6jcasX">https://t.co/WYgV6jcasX</a> #OffSeq #WordPress #漏洞 <a href="https://t.co/xlkKa9wm8i">https://t.co/xlkKa9wm8i</a></p><p><strong>链接：</strong> <a href="https://x.com/offseq/status/1941399282021499113">https://x.com/offseq/status/1941399282021499113</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; offseq&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🚨 紧急：InspiryThemes的RealHomes主题（版本≤4.4.0）存在漏洞，攻击者无需认证即可提升权限！请立即打补丁或限制管理员访问。🏠 详情点</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="offseq" scheme="http://example.com/tags/offseq/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Neoviser Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_1083197439/"/>
+    <id>http://example.com/2025/07/05/twitter_1083197439/</id>
+    <published>2025-07-05T08:00:14.000Z</published>
+    <updated>2025-07-05T08:00:14.900Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> Neoviser</p><p><strong>推文：</strong> Chrome零日漏洞CVE-2025-6554目前正被利用。</p><p>在Google Chrome 138.0.7204.96之前版本中，V8的类型混淆问题允许远程攻击者通过精心制作的HTML页面执行任意读写操作。</p><p>我建议所有使用Chrome的用户尽快更新。</p><p><a href="https://t.co/a9yUOlmZs0">https://t.co/a9yUOlmZs0</a></p><p><strong>链接：</strong> <a href="https://x.com/Neoviser/status/1941400256731926991">https://x.com/Neoviser/status/1941400256731926991</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; Neoviser&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; Chrome零日漏洞CVE-2025-6554目前正被利用。&lt;/p&gt;
+&lt;p&gt;在Google Chrome 138.0.7204.96之前版本中，V8的类型混淆</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="Neoviser" scheme="http://example.com/tags/Neoviser/"/>
+    
+  </entry>
   
   <entry>
     <title>VulmonFeeds Twitter Update !</title>
@@ -396,138 +522,6 @@
 &lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-48952&lt;/p&gt;
 &lt;p&gt;NetAlertX 通过PHP松散比较漏洞实现认证绕过…&lt;/p&gt;
 &lt;p&gt;详情链接：&lt;a href=&quot;http</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="VulmonFeeds" scheme="http://example.com/tags/VulmonFeeds/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VulmonFeeds Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_999148718/"/>
-    <id>http://example.com/2025/07/05/twitter_999148718/</id>
-    <published>2025-07-05T06:00:49.000Z</published>
-    <updated>2025-07-05T06:00:49.348Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> VulmonFeeds</p><p><strong>推文：</strong> CVE-2025-7070<br>IROAD行车记录仪Q9本地网络资源分配漏洞<br><a href="https://t.co/jx2TghqJZs">https://t.co/jx2TghqJZs</a></p><p><strong>链接：</strong> <a href="https://x.com/VulmonFeeds/status/1941369607576486325">https://x.com/VulmonFeeds/status/1941369607576486325</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; VulmonFeeds&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-7070&lt;br&gt;IROAD行车记录仪Q9本地网络资源分配漏洞&lt;br&gt;&lt;a href=&quot;https://t.co/jx2TghqJZs&quot;</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="VulmonFeeds" scheme="http://example.com/tags/VulmonFeeds/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MuratDemirtas Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_1342621794/"/>
-    <id>http://example.com/2025/07/05/twitter_1342621794/</id>
-    <published>2025-07-05T06:00:35.000Z</published>
-    <updated>2025-07-05T06:00:35.480Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> MuratDemirtas</p><p><strong>推文：</strong> ⚠️ 2025年7月5日网络安全摘要：</p><ul><li>📌 Chrome&#x2F;Edge V8存在活跃的零日漏洞（CVE‑2025‑6554）。请立即更新！</li><li>� Next.js中的缓存投递DoS漏洞（CVE‑2025‑49826）已修复。</li><li>🔧 Citrix NetScaler（CVE‑2025‑6543）内存溢出漏洞需打补丁。</li><li>🔐 Microsoft WebDAV零日漏洞（CVE‑2025‑33053）已修补，但旧系统仍面临风险。</li><li>👛 Louis Vuitton韩国网络事件：客户联系信息泄露。</li><li>🤖 Hpingbot僵尸网络正在进行IoT&#x2F;DDoS攻击。</li></ul><p><strong>链接：</strong> <a href="https://x.com/MuratDemirtas/status/1941369742419169429">https://x.com/MuratDemirtas/status/1941369742419169429</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; MuratDemirtas&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; ⚠️ 2025年7月5日网络安全摘要：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;📌 Chrome&amp;#x2F;Edge V8存在活跃的零日漏洞（CVE‑2025‑</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="MuratDemirtas" scheme="http://example.com/tags/MuratDemirtas/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VulmonFeeds Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_1684382709/"/>
-    <id>http://example.com/2025/07/05/twitter_1684382709/</id>
-    <published>2025-07-05T06:00:26.000Z</published>
-    <updated>2025-07-05T06:00:26.324Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> VulmonFeeds</p><p><strong>推文：</strong> CVE-2025-53365</p><p>MCP Python SDK 服务器在1.10.0版本前因未捕获的ClosedResourceError导致崩溃</p><p><a href="https://t.co/fyIlQxmDMR">https://t.co/fyIlQxmDMR</a></p><p><strong>链接：</strong> <a href="https://x.com/VulmonFeeds/status/1941372167041495373">https://x.com/VulmonFeeds/status/1941372167041495373</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; VulmonFeeds&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-53365&lt;/p&gt;
-&lt;p&gt;MCP Python SDK 服务器在1.10.0版本前因未捕获的ClosedResourceError导致</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="VulmonFeeds" scheme="http://example.com/tags/VulmonFeeds/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VulmonFeeds Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_960144926/"/>
-    <id>http://example.com/2025/07/05/twitter_960144926/</id>
-    <published>2025-07-05T06:00:13.000Z</published>
-    <updated>2025-07-05T06:00:13.108Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> VulmonFeeds</p><p><strong>推文：</strong> CVE-2025-53366</p><p>MCP Python SDK验证错误导致1.9.4版本前未处理的异常</p><p><a href="https://t.co/ouvfjZtnms">https://t.co/ouvfjZtnms</a></p><p><strong>链接：</strong> <a href="https://x.com/VulmonFeeds/status/1941374726871437495">https://x.com/VulmonFeeds/status/1941374726871437495</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; VulmonFeeds&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-53366&lt;/p&gt;
-&lt;p&gt;MCP Python SDK验证错误导致1.9.4版本前未处理的异常&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;htt</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="VulmonFeeds" scheme="http://example.com/tags/VulmonFeeds/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VulmonFeeds Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_2306865347/"/>
-    <id>http://example.com/2025/07/05/twitter_2306865347/</id>
-    <published>2025-07-05T05:01:34.000Z</published>
-    <updated>2025-07-05T05:01:34.605Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> VulmonFeeds</p><p><strong>推文：</strong> CVE-2025-47228</p><p>Netmake ScriptCase生产环境中的Shell注入漏洞…</p><p><a href="https://t.co/izPuOMXS6L">https://t.co/izPuOMXS6L</a></p><p>可定制的漏洞警报：<a href="https://t.co/U7998fz7yk">https://t.co/U7998fz7yk</a></p><p><strong>链接：</strong> <a href="https://x.com/VulmonFeeds/status/1941346571997569529">https://x.com/VulmonFeeds/status/1941346571997569529</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; VulmonFeeds&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-47228&lt;/p&gt;
-&lt;p&gt;Netmake ScriptCase生产环境中的Shell注入漏洞…&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;htt</summary>
       
     
     
