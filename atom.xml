@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-05T17:01:19.953Z</updated>
+  <updated>2025-07-05T18:00:17.451Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>0xdonzDev Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_82927707/"/>
+    <id>http://example.com/2025/07/05/twitter_82927707/</id>
+    <published>2025-07-05T18:00:17.000Z</published>
+    <updated>2025-07-05T18:00:17.451Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> 0xdonzDev</p><p><strong>推文：</strong> 我对网络安全非常感兴趣，但前段时间看到了@0x4161的视频，讲的是关于iOS 18某个更新中的CVE-2025-43200漏洞。我完全没当回事，直到我看到有人在这条推文下回复，提到GNU&#x2F;Linux系统中Sudo的一个漏洞。最近系统漏洞的话题真是层出不穷！！！</p><p><strong>链接：</strong> <a href="https://x.com/0xdonzDev/status/1941554685137256924">https://x.com/0xdonzDev/status/1941554685137256924</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; 0xdonzDev&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 我对网络安全非常感兴趣，但前段时间看到了@0x4161的视频，讲的是关于iOS 18某个更新中的CVE-2025-43200漏洞。我完全没当回事，直到我看到</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="0xdonzDev" scheme="http://example.com/tags/0xdonzDev/"/>
+    
+  </entry>
   
   <entry>
     <title>vuln_u Twitter Update !</title>
@@ -503,31 +528,6 @@
     
     
     <category term="Huntio" scheme="http://example.com/tags/Huntio/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RedPacketSec Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_2721069448/"/>
-    <id>http://example.com/2025/07/05/twitter_2721069448/</id>
-    <published>2025-07-05T15:01:11.000Z</published>
-    <updated>2025-07-05T15:01:11.360Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> RedPacketSec</p><p><strong>推文：</strong> CVE警报：CVE-2025-52828 - <a href="https://t.co/edx1orXO12">https://t.co/edx1orXO12</a></p><p>#开源情报 #威胁情报 #网络安全 #cve_2025_52828</p><p><strong>链接：</strong> <a href="https://x.com/RedPacketSec/status/1941508623886106680">https://x.com/RedPacketSec/status/1941508623886106680</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; RedPacketSec&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE警报：CVE-2025-52828 - &lt;a href=&quot;https://t.co/edx1orXO12&quot;&gt;https://t.co/edx1o</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="RedPacketSec" scheme="http://example.com/tags/RedPacketSec/"/>
     
   </entry>
   
