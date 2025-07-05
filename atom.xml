@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-05T19:00:22.367Z</updated>
+  <updated>2025-07-05T19:00:30.963Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>riskigy Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_2658627506/"/>
+    <id>http://example.com/2025/07/05/twitter_2658627506/</id>
+    <published>2025-07-05T19:00:30.000Z</published>
+    <updated>2025-07-05T19:00:30.963Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> riskigy</p><p><strong>推文：</strong> 思科统一通信管理器存在严重漏洞，通过静态凭证可获取根访问权限。该漏洞编号为CVE-2025-20309，CVSS评分为10.0，可能允许攻击者以root用户身份登录易受攻击的设备。<br><a href="https://t.co/VifbwpPO0T">https://t.co/VifbwpPO0T</a> <a href="https://t.co/UmVBjaONnt">https://t.co/UmVBjaONnt</a></p><p><strong>链接：</strong> <a href="https://x.com/riskigy/status/1941561508267188705">https://x.com/riskigy/status/1941561508267188705</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; riskigy&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 思科统一通信管理器存在严重漏洞，通过静态凭证可获取根访问权限。该漏洞编号为CVE-2025-20309，CVSS评分为10.0，可能允许攻击者以root用户身份</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="riskigy" scheme="http://example.com/tags/riskigy/"/>
+    
+  </entry>
   
   <entry>
     <title>s4cript Twitter Update !</title>
@@ -499,33 +524,6 @@
     
     
     <category term="tdatwja" scheme="http://example.com/tags/tdatwja/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>aiohttp 路径遍历漏洞</title>
-    <link href="http://example.com/2025/07/05/github_3124689623/"/>
-    <id>http://example.com/2025/07/05/github_3124689623/</id>
-    <published>2025-07-05T15:46:08.000Z</published>
-    <updated>2025-07-05T15:46:08.971Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> aiohttp 路径遍历漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-23334</li></ul><p><strong>漏洞类型：</strong> 目录遍历</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> aiohttp是一个基于Python的异步HTTP客户端&#x2F;服务器框架，广泛用于构建高性能的Web服务和应用程序。它支持异步请求处理，适用于需要高并发处理的场景，如微服务架构和实时Web应用。由于其高效的性能和易用性，aiohttp在开发者社区中非常受欢迎。</p><p>该漏洞属于目录遍历类型，攻击者可以通过构造特殊的HTTP请求，绕过安全限制，访问服务器上的任意文件。这种漏洞的根源在于服务器未能正确验证和限制用户输入的路径，导致攻击者可以利用相对路径符号（如’..&#x2F;‘）访问受限目录之外的文件。</p><p>利用此漏洞，攻击者可以读取服务器上的敏感文件，如配置文件、数据库凭证或其他关键数据，从而导致信息泄露。在某些情况下，如果服务器配置不当，攻击者还可能执行任意代码，进一步危害服务器安全。此漏洞的利用通常不需要身份验证，且可以远程触发，因此风险等级较高。建议用户及时更新到修复了该漏洞的版本，以避免潜在的安全威胁。</p><p><strong>产品厂商：</strong> aiohttp</p><p><strong>产品名称：</strong> aiohttp</p><p><strong>来源：</strong> <a href="https://github.com/vulhub/vulhub/blob/9a79513ef02db9209fcfb773220decee177be8be/python%2FCVE-2024-23334%2Fdocker-compose.yml">https://github.com/vulhub/vulhub/blob/9a79513ef02db9209fcfb773220decee177be8be/python%2FCVE-2024-23334%2Fdocker-compose.yml</a></p><p><strong>类型：</strong> vulhub&#x2F;vulhub:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol"></span><br><span class="hljs-symbol">services:</span><br>  aiohttp-app:<br><span class="hljs-symbol">    build:</span><br><span class="hljs-symbol">      context:</span> .<br><span class="hljs-symbol">      dockerfile:</span> ../..<span class="hljs-keyword">/base/</span>python/python3<span class="hljs-number">.11</span>-slim/Dockerfile<br><span class="hljs-symbol">    container_name:</span> aiohttp<br><span class="hljs-symbol">    ports:</span><br>      - <span class="hljs-string">&quot;8080:8080&quot;</span><br><span class="hljs-symbol">    volumes:</span><br>      - ./static:<span class="hljs-keyword">/app/</span>static:ro<br><span class="hljs-symbol">    restart:</span> unless-stopped<br><br><br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; aiohttp 路径遍历漏洞&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/st</summary>
-      
-    
-    
-    
-    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
-    
-    
-    <category term="vulhub/vulhub:github issues" scheme="http://example.com/tags/vulhub-vulhub-github-issues/"/>
-    
-    <category term="目录遍历" scheme="http://example.com/tags/%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86/"/>
     
   </entry>
   
