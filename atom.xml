@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-05T00:01:24.590Z</updated>
+  <updated>2025-07-05T01:00:13.775Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VulmonFeeds Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_1535963679/"/>
+    <id>http://example.com/2025/07/05/twitter_1535963679/</id>
+    <published>2025-07-05T01:00:13.000Z</published>
+    <updated>2025-07-05T01:00:13.775Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> VulmonFeeds</p><p><strong>推文：</strong> CVE-2025-38225</p><p>Linux内核IMX-JPEG驱动中的内存分配漏洞</p><p><a href="https://t.co/JUdAma6z4x">https://t.co/JUdAma6z4x</a></p><p>漏洞警报订阅：<a href="https://t.co/hrQhy5uz4x">https://t.co/hrQhy5uz4x</a></p><p><strong>链接：</strong> <a href="https://x.com/VulmonFeeds/status/1941292824017703011">https://x.com/VulmonFeeds/status/1941292824017703011</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; VulmonFeeds&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-38225&lt;/p&gt;
+&lt;p&gt;Linux内核IMX-JPEG驱动中的内存分配漏洞&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://t.co</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="VulmonFeeds" scheme="http://example.com/tags/VulmonFeeds/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>The agent in Quest KACE Systems Management Appliance (SMA) before 14097 and 141x before 141</title>
+    <link href="http://example.com/2025/07/05/github_2928422720/"/>
+    <id>http://example.com/2025/07/05/github_2928422720/</id>
+    <published>2025-07-05T01:00:04.000Z</published>
+    <updated>2025-07-05T01:00:04.859Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>链接：</strong> <a href="https://github.com/advisories/GHSA-xp38-x25m-8fpq">https://github.com/advisories/GHSA-xp38-x25m-8fpq</a></p><p><strong>CVSS 评分：</strong> 9.4</p><p><strong>参考链接：</strong></p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26850">https://nvd.nist.gov/vuln/detail/CVE-2025-26850</a></p></li><li><p><a href="https://support.quest.com/kb/4378559/quest-response-to-kace-sma-agent-vulnerability-cve-2025-26850">https://support.quest.com/kb/4378559/quest-response-to-kace-sma-agent-vulnerability-cve-2025-26850</a></p></li><li><p><a href="https://github.com/advisories/GHSA-xp38-x25m-8fpq">https://github.com/advisories/GHSA-xp38-x25m-8fpq</a></p></li></ul><p><strong>描述：</strong></p><p>The agent in Quest KACE Systems Management Appliance (SMA) before 14.0.97 and 14.1.x before 14.1.19 potentially allows privilege escalation on managed systems.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://github.com/advisories/GHSA-xp38-x25m-8fpq&quot;&gt;https://github.com/advisories/GHSA-xp38-x25m-8fpq&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="安全公告" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="Github Advisory" scheme="http://example.com/tags/Github-Advisory/"/>
+    
+  </entry>
   
   <entry>
     <title>Sn1perSecurity Twitter Update !</title>
@@ -467,60 +518,6 @@
     
     
     <category term="CVEnew" scheme="http://example.com/tags/CVEnew/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VulmonFeeds Twitter Update !</title>
-    <link href="http://example.com/2025/07/04/twitter_3394088715/"/>
-    <id>http://example.com/2025/07/04/twitter_3394088715/</id>
-    <published>2025-07-04T23:01:04.000Z</published>
-    <updated>2025-07-04T23:01:04.149Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> VulmonFeeds</p><p><strong>推文：</strong> CVE-2025-52497</p><p>Mbed TLS 3.6.4之前版本中的PEM解析存在堆基缓冲区下溢漏洞</p><p>详情链接：<a href="https://t.co/mxeKbwWeJk">https://t.co/mxeKbwWeJk</a></p><p>漏洞通知：<a href="https://t.co/xhLrNnfyrO">https://t.co/xhLrNnfyrO</a></p><p><strong>链接：</strong> <a href="https://x.com/VulmonFeeds/status/1941262111742505432">https://x.com/VulmonFeeds/status/1941262111742505432</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; VulmonFeeds&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-52497&lt;/p&gt;
-&lt;p&gt;Mbed TLS 3.6.4之前版本中的PEM解析存在堆基缓冲区下溢漏洞&lt;/p&gt;
-&lt;p&gt;详情链接：&lt;a hr</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="VulmonFeeds" scheme="http://example.com/tags/VulmonFeeds/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VulmonFeeds Twitter Update !</title>
-    <link href="http://example.com/2025/07/04/twitter_3304683995/"/>
-    <id>http://example.com/2025/07/04/twitter_3304683995/</id>
-    <published>2025-07-04T23:00:56.000Z</published>
-    <updated>2025-07-04T23:00:56.533Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> VulmonFeeds</p><p><strong>推文：</strong> CVE-2025-52496</p><p>Mbed TLS AESNI检测中的竞态条件导致密钥提取漏洞</p><p><a href="https://t.co/4lHVcuTxXL">https://t.co/4lHVcuTxXL</a></p><p><strong>链接：</strong> <a href="https://x.com/VulmonFeeds/status/1941264671681417432">https://x.com/VulmonFeeds/status/1941264671681417432</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; VulmonFeeds&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-52496&lt;/p&gt;
-&lt;p&gt;Mbed TLS AESNI检测中的竞态条件导致密钥提取漏洞&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https:/</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="VulmonFeeds" scheme="http://example.com/tags/VulmonFeeds/"/>
     
   </entry>
   
