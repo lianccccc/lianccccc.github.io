@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-05T19:00:30.963Z</updated>
+  <updated>2025-07-05T19:15:50.849Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,86 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CVE-2024-42364</title>
+    <link href="http://example.com/2025/07/05/github_1615323680/"/>
+    <id>http://example.com/2025/07/05/github_1615323680/</id>
+    <published>2025-07-05T19:15:50.000Z</published>
+    <updated>2025-07-05T19:15:50.849Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CVE-2024-42364</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-42364</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> 该漏洞的详细信息目前尚未公开，但从其CVE标识符和GitHub仓库的存在可以推断，它涉及到一个特定的安全漏洞。由于缺乏具体的描述和影响范围，无法准确判断其影响的产品、漏洞类型以及潜在的安全风险。通常，CVE编号的分配意味着该漏洞已被识别并被认为对系统安全构成威胁。建议关注官方发布的安全公告或漏洞详情，以获取更全面的信息。在没有更多具体信息的情况下，用户应保持警惕，及时更新和修补可能受影响的系统。</p><p><strong>来源：</strong> <a href="https://github.com/ibrahmsql/CVE-2024-42364">https://github.com/ibrahmsql/CVE-2024-42364</a></p><p><strong>类型：</strong> CVE-2024:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>.gitignore</li><li>CVE-2024-42364.rb</li><li>LICENSE</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2024-42364"><a href="#CVE-2024-42364" class="headerlink" title="CVE-2024-42364"></a>CVE-2024-42364</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CVE-2024-42364&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/st</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
+    
+    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Github Poc</title>
+    <link href="http://example.com/2025/07/05/github_761927502/"/>
+    <id>http://example.com/2025/07/05/github_761927502/</id>
+    <published>2025-07-05T19:15:27.000Z</published>
+    <updated>2025-07-05T19:15:27.304Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> </p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-35198</li></ul><p><strong>来源：</strong> <a href="https://github.com/ibrahmsql/CVE-2024-35198">https://github.com/ibrahmsql/CVE-2024-35198</a></p><p><strong>类型：</strong> CVE-2024:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>.gitignore</li><li>CVE-2024-35198.rb</li><li>LICENSE</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2024-35198-rb"><a href="#CVE-2024-35198-rb" class="headerlink" title="CVE-2024-35198.rb"></a>CVE-2024-35198.rb</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2024:github search" scheme="http://example.com/tags/CVE-2024-github-search/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CVE-2023-49103</title>
+    <link href="http://example.com/2025/07/05/github_2874419637/"/>
+    <id>http://example.com/2025/07/05/github_2874419637/</id>
+    <published>2025-07-05T19:15:19.000Z</published>
+    <updated>2025-07-05T19:15:19.004Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> CVE-2023-49103</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2023-49103</li></ul><p><strong>漏洞类型：</strong> 其他</p><p><strong>漏洞描述：</strong> CVE-2023-49103是一个公开的漏洞，目前缺乏详细的描述和影响分析。从GitHub仓库的名称和内容来看，它可能与某个特定的产品或系统相关，但具体信息未明确提供。通常，这类漏洞可能涉及多种安全风险，包括但不限于代码执行、信息泄露或服务拒绝。由于缺乏具体的受影响产品和版本信息，无法进行更深入的分析。建议关注官方发布的安全公告或漏洞详情，以获取更准确的信息和修复建议。</p><p><strong>来源：</strong> <a href="https://github.com/ibrahmsql/CVE-2023-49103">https://github.com/ibrahmsql/CVE-2023-49103</a></p><p><strong>类型：</strong> CVE-2023:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>.gitignore</li><li>CVE-2023-49103.rb</li><li>LICENSE</li><li>README.md</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2023-49103"><a href="#CVE-2023-49103" class="headerlink" title="CVE-2023-49103"></a>CVE-2023-49103</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; CVE-2023-49103&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/st</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="CVE-2023:github search" scheme="http://example.com/tags/CVE-2023-github-search/"/>
+    
+    <category term="其他" scheme="http://example.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+  </entry>
   
   <entry>
     <title>riskigy Twitter Update !</title>
@@ -446,84 +526,6 @@
     
     
     <category term="ssogari_dev" scheme="http://example.com/tags/ssogari-dev/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>nakajimeeee Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_1470758734/"/>
-    <id>http://example.com/2025/07/05/twitter_1470758734/</id>
-    <published>2025-07-05T16:00:39.000Z</published>
-    <updated>2025-07-05T16:00:38.999Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> nakajimeeee</p><p><strong>推文：</strong> 【漏洞分析】Apache主要产品接连发现严重漏洞。Tomcat的CVE-2025-24813以及Camel的CVE-2025-27636、CVE-2025-29891三个漏洞于2025年3月公开，均允许远程代码执行。</p><p>Tomcat在Partial PUT功能中的漏洞，通过滥用包含Content-Range头的HTTP请求，覆盖序列化的会话文件。攻击分两步进行：首先通过PUT请求发送包含恶意代码的文件，然后利用JSESSIONID cookie的GET请求触发反序列化。但只有在readonly参数被禁用且会话持久化启用时，此漏洞才可被利用。</p><p>另一方面，Camel在HTTP头过滤处理上存在问题。通过改变大小写可绕过内部上下文键的过滤器，并通过CAmelExecCommandExecutable头执行任意命令。据Unit 42观察，仅3月就有超过12.5万次攻击尝试被记录，其中多数使用了Nuclei扫描器的模板。</p><p><a href="https://t.co/NQHopsMUpa">https://t.co/NQHopsMUpa</a></p><p><strong>链接：</strong> <a href="https://x.com/nakajimeeee/status/1941523637452013815">https://x.com/nakajimeeee/status/1941523637452013815</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; nakajimeeee&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 【漏洞分析】Apache主要产品接连发现严重漏洞。Tomcat的CVE-2025-24813以及Camel的CVE-2025-27636、CVE-202</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="nakajimeeee" scheme="http://example.com/tags/nakajimeeee/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ssogari_dev Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_2540772440/"/>
-    <id>http://example.com/2025/07/05/twitter_2540772440/</id>
-    <published>2025-07-05T16:00:24.000Z</published>
-    <updated>2025-07-05T16:00:24.987Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> ssogari_dev</p><p><strong>推文：</strong> - <a href="https://t.co/lQasRkNhXi">https://t.co/lQasRkNhXi</a></p><ul><li><a href="https://t.co/Q74huvTk9j">https://t.co/Q74huvTk9j</a></li><li><a href="https://t.co/u8LYYTeXPp">https://t.co/u8LYYTeXPp</a></li><li><a href="https://t.co/z8r4Q4ywgu">https://t.co/z8r4Q4ywgu</a></li><li><a href="https://t.co/lr3PaHXTJo">https://t.co/lr3PaHXTJo</a></li><li><a href="https://t.co/VY4LxLLOwj">https://t.co/VY4LxLLOwj</a></li></ul><p><strong>链接：</strong> <a href="https://x.com/ssogari_dev/status/1941524528255074445">https://x.com/ssogari_dev/status/1941524528255074445</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; ssogari_dev&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; - &lt;a href=&quot;https://t.co/lQasRkNhXi&quot;&gt;https://t.co/lQasRkNhXi&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="ssogari_dev" scheme="http://example.com/tags/ssogari-dev/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>tdatwja Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_811829635/"/>
-    <id>http://example.com/2025/07/05/twitter_811829635/</id>
-    <published>2025-07-05T16:00:16.000Z</published>
-    <updated>2025-07-05T16:00:16.723Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> tdatwja</p><p><strong>推文：</strong> pr0v3rbs&#x2F;CVE-2025-32463_chwoot</p><p>CVE-2025-32463 – sudo chroot（“chwoot”）概念验证</p><p><a href="https://t.co/Gut5ygLxQB">https://t.co/Gut5ygLxQB</a></p><p><strong>链接：</strong> <a href="https://x.com/tdatwja/status/1941524560190505089">https://x.com/tdatwja/status/1941524560190505089</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; tdatwja&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; pr0v3rbs&amp;#x2F;CVE-2025-32463_chwoot&lt;/p&gt;
-&lt;p&gt;CVE-2025-32463 – sudo chroot（“chwoot”</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="tdatwja" scheme="http://example.com/tags/tdatwja/"/>
     
   </entry>
   
