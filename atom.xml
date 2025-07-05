@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-05T01:01:08.368Z</updated>
+  <updated>2025-07-05T02:00:25.751Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,109 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>offseq Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_1314617581/"/>
+    <id>http://example.com/2025/07/05/twitter_1314617581/</id>
+    <published>2025-07-05T02:00:25.000Z</published>
+    <updated>2025-07-05T02:00:25.751Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> offseq</p><p><strong>推文：</strong> 🚨 紧急漏洞警告：Service Finder Booking存在严重漏洞！权限提升风险——未经授权的攻击者可能接管您的系统。立即限制访问并监控！<a href="https://t.co/4lrpjHutTq">https://t.co/4lrpjHutTq</a> #OffSeq #漏洞 #信息安全 <a href="https://t.co/ausf6WVPQa">https://t.co/ausf6WVPQa</a></p><p><strong>链接：</strong> <a href="https://x.com/offseq/status/1941308622601883811">https://x.com/offseq/status/1941308622601883811</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; offseq&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🚨 紧急漏洞警告：Service Finder Booking存在严重漏洞！权限提升风险——未经授权的攻击者可能接管您的系统。立即限制访问并监控！&lt;a href</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="offseq" scheme="http://example.com/tags/offseq/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Citrix NetScaler Memory Disclosure - CitrixBleed 2</title>
+    <link href="http://example.com/2025/07/05/github_3556400669/"/>
+    <id>http://example.com/2025/07/05/github_3556400669/</id>
+    <published>2025-07-05T02:00:21.000Z</published>
+    <updated>2025-07-05T02:00:21.707Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Citrix NetScaler Memory Disclosure - CitrixBleed 2</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-5777</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Citrix NetScaler是一款广泛使用的应用交付控制器和网关设备，为企业提供负载均衡、SSL加速和安全的远程访问等功能。由于其广泛部署于企业网络边界，NetScaler的安全问题可能对企业的网络安全构成严重威胁。CVE-2025-5777，也被称为CitrixBleed 2，是一个严重的内存泄露漏洞，影响NetScaler管理接口。该漏洞源于对输入验证不足，导致攻击者可以通过构造特定的请求，触发内存越界读取，从而泄露敏感信息。这种漏洞可能被利用来获取系统内存中的敏感数据，如用户凭证、会话令牌等，进一步可能导致未授权访问或其他恶意活动。由于漏洞存在于NetScaler的管理接口，攻击者可能无需认证即可利用此漏洞，增加了其潜在的危险性。企业应立即评估其NetScaler设备的安全性，并应用相关补丁以防止潜在的攻击。</p><p><strong>产品厂商：</strong> Citrix</p><p><strong>产品名称：</strong> NetScaler ADC, NetScaler Gateway</p><p><strong>搜索语法：</strong> title:”NetScaler Gateway”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/4815a962b8a9d6040dfc818d4139515530b01835/http%2Fcves%2F2025%2FCVE-2025-5777.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/4815a962b8a9d6040dfc818d4139515530b01835/http%2Fcves%2F2025%2FCVE-2025-5777.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">5777</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Citrix NetScaler Memory Disclosure <span class="hljs-operator">-</span> CitrixBleed <span class="hljs-number">2</span><br>  <span class="hljs-params">author:</span> watchtowr,DhiyaneshDk<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    Insufficient input validation leading to memory overread on the NetScaler Management Interface NetScaler ADC and NetScaler Gateway<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>support.citrix.com<span class="hljs-operator">/</span>support-home<span class="hljs-operator">/</span>kbsearch<span class="hljs-operator">/</span>article<span class="hljs-operator">?</span>articleNumber<span class="hljs-operator">=</span>CTX693420<br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>labs.watchtowr.com<span class="hljs-operator">/</span>how-much-more-must-we-bleed-citrix-netscaler-memory-disclosure-citrixbleed-<span class="hljs-number">2</span><span class="hljs-operator">-</span>cve-<span class="hljs-number">202</span>5-<span class="hljs-number">5777</span><span class="hljs-symbol">/</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2025-5777</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">epss-score:</span> <span class="hljs-number">0.00042</span><br>    <span class="hljs-params">epss-percentile:</span> <span class="hljs-number">0.12361</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">shodan-query:</span> title:<span class="hljs-string">&quot;NetScaler Gateway&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2025,netscaler,citrix,exposure<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<span class="hljs-operator">+</span><br>        POST <span class="hljs-symbol">/p/u/doAuthentication.do</span> HTTP<span class="hljs-symbol">/1.0</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">User-Agent:</span> watchTowrwatchTowrwatchTowrwatchTowrwatchTowrwatchTowrwatchTowrwatchTowrwatchTowrwatchTowrwatchTowrwatchTowr<br><br>        login<br><br>    <span class="hljs-params">unsafe:</span> <span class="hljs-literal">true</span><br><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;No active policy during authentication&quot;</span><br>        <span class="hljs-params">negative:</span> <span class="hljs-literal">true</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&lt;InitialValue&gt;&lt;/InitialValue&gt;&quot;</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> content_type<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;application/vnd.citrix.authenticateresponse&quot;</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Citrix NetScaler Memory Disclosure - Ci</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VulmonFeeds Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_2945282823/"/>
+    <id>http://example.com/2025/07/05/twitter_2945282823/</id>
+    <published>2025-07-05T02:00:20.000Z</published>
+    <updated>2025-07-05T02:00:20.323Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> VulmonFeeds</p><p><strong>推文：</strong> CVE-2025-38217</p><p>Linux内核hwmon fts_read()函数中的TOCTOU竞态条件</p><p>详情链接：<a href="https://t.co/P0aH2wTSSx">https://t.co/P0aH2wTSSx</a></p><p>漏洞警报订阅：<a href="https://t.co/hrQhy5uz4x">https://t.co/hrQhy5uz4x</a></p><p><strong>链接：</strong> <a href="https://x.com/VulmonFeeds/status/1941313297468281343">https://x.com/VulmonFeeds/status/1941313297468281343</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; VulmonFeeds&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-38217&lt;/p&gt;
+&lt;p&gt;Linux内核hwmon fts_read()函数中的TOCTOU竞态条件&lt;/p&gt;
+&lt;p&gt;详情链接：&lt;a h</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="VulmonFeeds" scheme="http://example.com/tags/VulmonFeeds/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Komodosec Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_2937483890/"/>
+    <id>http://example.com/2025/07/05/twitter_2937483890/</id>
+    <published>2025-07-05T02:00:13.000Z</published>
+    <updated>2025-07-05T02:00:13.895Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> Komodosec</p><p><strong>推文：</strong> 分析CVE-2025-31191：基于macOS安全范围书签的沙箱逃逸漏洞 <a href="https://t.co/2hRWMaCxQD">https://t.co/2hRWMaCxQD</a></p><p><strong>链接：</strong> <a href="https://x.com/Komodosec/status/1941315984952000848">https://x.com/Komodosec/status/1941315984952000848</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; Komodosec&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 分析CVE-2025-31191：基于macOS安全范围书签的沙箱逃逸漏洞 &lt;a href=&quot;https://t.co/2hRWMaCxQD&quot;&gt;https:</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="Komodosec" scheme="http://example.com/tags/Komodosec/"/>
+    
+  </entry>
   
   <entry>
     <title>offseq Twitter Update !</title>
@@ -421,108 +524,6 @@
     
     
     <category term="frameandsurface" scheme="http://example.com/tags/frameandsurface/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>itm_enterprise Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_915577990/"/>
-    <id>http://example.com/2025/07/05/twitter_915577990/</id>
-    <published>2025-07-05T00:01:08.000Z</published>
-    <updated>2025-07-05T00:01:08.021Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> itm_enterprise</p><p><strong>推文：</strong> Chrome浏览器发现严重漏洞「CVE-2025-6554」，请立即更新<br><a href="https://t.co/2VrlB40BCK">https://t.co/2VrlB40BCK</a></p><p><strong>链接：</strong> <a href="https://x.com/itm_enterprise/status/1941272077799129450">https://x.com/itm_enterprise/status/1941272077799129450</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; itm_enterprise&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; Chrome浏览器发现严重漏洞「CVE-2025-6554」，请立即更新&lt;br&gt;&lt;a href=&quot;https://t.co/2VrlB40BCK&quot;</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="itm_enterprise" scheme="http://example.com/tags/itm-enterprise/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VulmonFeeds Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_4186417243/"/>
-    <id>http://example.com/2025/07/05/twitter_4186417243/</id>
-    <published>2025-07-05T00:01:03.000Z</published>
-    <updated>2025-07-05T00:01:03.545Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> VulmonFeeds</p><p><strong>推文：</strong> CVE-2025-38230</p><p>Linux内核JFS</p><p><a href="https://t.co/eWuca9lSNh">https://t.co/eWuca9lSNh</a></p><p>漏洞通知：<a href="https://t.co/xhLrNnfyrO">https://t.co/xhLrNnfyrO</a></p><p><strong>链接：</strong> <a href="https://x.com/VulmonFeeds/status/1941272349040422994">https://x.com/VulmonFeeds/status/1941272349040422994</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; VulmonFeeds&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-38230&lt;/p&gt;
-&lt;p&gt;Linux内核JFS&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://t.co/eWuca9lSNh&quot;&gt;ht</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="VulmonFeeds" scheme="http://example.com/tags/VulmonFeeds/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>sekurlsa_pw Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_3230187796/"/>
-    <id>http://example.com/2025/07/05/twitter_3230187796/</id>
-    <published>2025-07-05T00:00:58.000Z</published>
-    <updated>2025-07-05T00:00:58.377Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> sekurlsa_pw</p><p><strong>推文：</strong> 我在想那个思科根密码（CVE-2025-20309）是不是真的很简单，比如root、toor、devroot，还是他们用了更复杂的密码。欢迎你发一些搞笑错误的密码😺</p><p><strong>链接：</strong> <a href="https://x.com/sekurlsa_pw/status/1941272649516413104">https://x.com/sekurlsa_pw/status/1941272649516413104</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; sekurlsa_pw&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 我在想那个思科根密码（CVE-2025-20309）是不是真的很简单，比如root、toor、devroot，还是他们用了更复杂的密码。欢迎你发一些搞笑</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="sekurlsa_pw" scheme="http://example.com/tags/sekurlsa-pw/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>itmedia Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_688512254/"/>
-    <id>http://example.com/2025/07/05/twitter_688512254/</id>
-    <published>2025-07-05T00:00:52.000Z</published>
-    <updated>2025-07-05T00:00:52.965Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> itmedia</p><p><strong>推文：</strong> ［ITmedia 企业］安全新闻警报：Chrome存在严重漏洞「CVE-2025-6554」请尽快更新 <a href="https://t.co/1U3VvR5njq">https://t.co/1U3VvR5njq</a></p><p><strong>链接：</strong> <a href="https://x.com/itmedia/status/1941273396530295268">https://x.com/itmedia/status/1941273396530295268</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; itmedia&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; ［ITmedia 企业］安全新闻警报：Chrome存在严重漏洞「CVE-2025-6554」请尽快更新 &lt;a href=&quot;https://t.co/1U3VvR</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="itmedia" scheme="http://example.com/tags/itmedia/"/>
     
   </entry>
   
