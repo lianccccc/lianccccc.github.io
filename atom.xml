@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-05T13:00:49.131Z</updated>
+  <updated>2025-07-05T13:15:59.341Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,86 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>aiohttp Directory Traversal Vulnerability</title>
+    <link href="http://example.com/2025/07/05/github_2025754880/"/>
+    <id>http://example.com/2025/07/05/github_2025754880/</id>
+    <published>2025-07-05T13:15:59.000Z</published>
+    <updated>2025-07-05T13:15:59.341Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> aiohttp Directory Traversal Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-23334</li></ul><p><strong>漏洞类型：</strong> 目录遍历</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> aiohttp是一个为asyncio和Python设计的异步HTTP客户端&#x2F;服务器框架。当使用aiohttp作为Web服务器并配置静态路由时，需要指定静态文件的根路径。此外，可以使用’follow_symlinks’选项来决定是否跟随静态根目录之外的符号链接。当’follow_symlinks’设置为True时，没有验证检查读取的文件是否在根目录内。这可能导致目录遍历漏洞，即使不存在符号链接，也可能导致未经授权访问系统上的任意文件。受影响的版本包括3.9.1及更早版本。</p><p><strong>受影响产品</strong>: aiohttp是一个广泛使用的异步HTTP客户端&#x2F;服务器框架，适用于需要高性能网络通信的Python应用程序。它常用于构建微服务、API服务器和其他需要异步处理的网络应用。由于其轻量级和高性能的特点，aiohttp在开发社区中非常受欢迎。</p><p><strong>漏洞解释</strong>: 此漏洞属于目录遍历类型，技术根源在于当’follow_symlinks’设置为True时，aiohttp未能正确验证文件路径是否位于配置的静态文件根目录内。这使得攻击者可以通过构造恶意的路径来访问服务器上的任意文件，如系统文件&#x2F;etc&#x2F;passwd，从而导致信息泄露或其他更严重的安全问题。</p><p><strong>影响分析</strong>: 此漏洞允许攻击者绕过预期的文件访问限制，读取服务器上的敏感文件。这可能导致敏感信息泄露，如用户凭证、系统配置等，进而可能被用于进一步的攻击。由于此漏洞可以通过网络远程利用，且不需要任何形式的认证，因此其潜在的安全风险非常高。攻击者可以自动化利用此漏洞，对受影响系统进行大规模扫描和攻击。</p><p><strong>产品厂商：</strong> aiohttp</p><p><strong>产品名称：</strong> aiohttp</p><p><strong>影响版本：</strong> version &lt;&#x3D; 3.9.1</p><p><strong>来源：</strong> <a href="https://github.com/vulhub/vulhub/blob/8c71a611ea83ec634bd7039db8c729fa91ffeb6f/python%2FCVE-2024-23334%2FREADME.md">https://github.com/vulhub/vulhub/blob/8c71a611ea83ec634bd7039db8c729fa91ffeb6f/python%2FCVE-2024-23334%2FREADME.md</a></p><p><strong>类型：</strong> vulhub&#x2F;vulhub:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="aiohttp-Directory-Traversal-Vulnerability-CVE-2024-23334"><a href="#aiohttp-Directory-Traversal-Vulnerability-CVE-2024-23334" class="headerlink" title="aiohttp Directory Traversal Vulnerability (CVE-2024-23334)"></a>aiohttp Directory Traversal Vulnerability (CVE-2024-23334)</h2><p><a href="README.zh-cn.md">中文版本(Chinese version)</a></p><p>aiohttp is an asynchronous HTTP client&#x2F;server framework for asyncio and Python.<br>When using aiohttp as a web server and configuring static routes, it is necessary to specify the root path for static files. Additionally, the option ‘follow_symlinks’ can be used to determine whether to follow symbolic links outside the static root directory.When ‘follow_symlinks’ is set to True, there is no validation to check if reading a file is within the root directory. This can lead to directory traversal vulnerabilities, resulting in unauthorized access to arbitrary files on the system, even when symlinks are not present. The affected versions include 3.9.1 and earlier.</p><p>References:</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-23334">NVD - CVE-2024-23334</a></p></li><li><p><a href="https://www.venustech.com.cn/new_type/aqldfx/20240401/27962.html">aiohttp Directory Traversal Vulnerability (CVE-2024-23334 Analysis)</a></p></li></ul><h3 id="Environment-Setup"><a href="#Environment-Setup" class="headerlink" title="Environment Setup"></a>Environment Setup</h3><p>Execute the following command to start a aiohttp server v3.9.1:</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">docker compose up -d</span><br></code></pre></td></tr></table></figure><p>After the server starts, the web page can be accessed by visiting <code>http://your-ip:8080/</code> in a browser.</p><h3 id="Vulnerability-Reproduction"><a href="#Vulnerability-Reproduction" class="headerlink" title="Vulnerability Reproduction"></a>Vulnerability Reproduction</h3><p>This vulnerability can be exploited by crafting a malicious path to access arbitrary files on the server.</p><p>For example, to view the system file &#x2F;etc&#x2F;passwd, send the following request:</p><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs http"><span class="hljs-keyword">GET</span> <span class="hljs-string">/static/../../../../../etc/passwd</span> <span class="hljs-meta">HTTP/1.1</span><br><span class="hljs-attribute">Host</span><span class="hljs-punctuation">: </span>your-ip:8080<br><span class="hljs-attribute">Content-Length</span><span class="hljs-punctuation">: </span>2<br></code></pre></td></tr></table></figure><p><img src="/1.png" alt="Request crafted to access &#x2F;etc&#x2F;passwd"></p><p>If successful, you will see the contents of <code>/etc/passwd</code>. which proves that the vulnerability exists.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; aiohttp Directory Traversal Vulnerabili</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="vulhub/vulhub:github issues" scheme="http://example.com/tags/vulhub-vulhub-github-issues/"/>
+    
+    <category term="目录遍历" scheme="http://example.com/tags/%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>aiohttp 未授权访问漏洞</title>
+    <link href="http://example.com/2025/07/05/github_3368871065/"/>
+    <id>http://example.com/2025/07/05/github_3368871065/</id>
+    <published>2025-07-05T13:15:37.000Z</published>
+    <updated>2025-07-05T13:15:37.488Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> aiohttp 未授权访问漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-23334</li></ul><p><strong>漏洞类型：</strong> 未授权访问</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> aiohttp是一个基于Python的异步HTTP客户端&#x2F;服务器框架，广泛用于构建高性能的Web服务和应用程序。它支持WebSocket和HTTP&#x2F;2，适用于需要高并发处理的场景。此次发现的漏洞CVE-2024-23334涉及未授权访问问题，允许攻击者在未经认证的情况下访问或操作本应受限的资源。这种漏洞通常由于配置错误或安全控制缺失导致，使得攻击者能够绕过正常的访问控制机制。利用此漏洞，攻击者可能获取敏感信息、执行未授权操作或进一步渗透系统。由于aiohttp的广泛使用，此漏洞对依赖该框架的Web应用构成了严重威胁，尤其是在未及时打补丁的情况下。攻击者可能无需任何认证即可利用此漏洞，增加了自动化和大规模攻击的风险。</p><p><strong>产品名称：</strong> aiohttp</p><p><strong>来源：</strong> <a href="https://github.com/vulhub/vulhub/blob/8c71a611ea83ec634bd7039db8c729fa91ffeb6f/python%2FCVE-2024-23334%2Fdocker-compose.yml">https://github.com/vulhub/vulhub/blob/8c71a611ea83ec634bd7039db8c729fa91ffeb6f/python%2FCVE-2024-23334%2Fdocker-compose.yml</a></p><p><strong>类型：</strong> vulhub&#x2F;vulhub:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol"></span><br><span class="hljs-symbol">services:</span><br>  aiohttp-app:<br><span class="hljs-symbol">    build:</span><br><span class="hljs-symbol">      context:</span> .<br><span class="hljs-symbol">      dockerfile:</span> ../..<span class="hljs-keyword">/base/</span>python/python3<span class="hljs-number">.11</span>-slim/Dockerfile<br><span class="hljs-symbol">    container_name:</span> aiohttp<br><span class="hljs-symbol">    ports:</span><br>      - <span class="hljs-string">&quot;8080:8080&quot;</span><br><span class="hljs-symbol">    volumes:</span><br>      - ./static:<span class="hljs-keyword">/app/</span>static:ro<br><span class="hljs-symbol">    restart:</span> unless-stopped<br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; aiohttp 未授权访问漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/s</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="未授权访问" scheme="http://example.com/tags/%E6%9C%AA%E6%8E%88%E6%9D%83%E8%AE%BF%E9%97%AE/"/>
+    
+    <category term="vulhub/vulhub:github issues" scheme="http://example.com/tags/vulhub-vulhub-github-issues/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>aiohttp 目录遍历漏洞</title>
+    <link href="http://example.com/2025/07/05/github_309010816/"/>
+    <id>http://example.com/2025/07/05/github_309010816/</id>
+    <published>2025-07-05T13:15:20.000Z</published>
+    <updated>2025-07-05T13:15:20.244Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> aiohttp 目录遍历漏洞</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2024-23334</li></ul><p><strong>漏洞类型：</strong> 目录遍历</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> aiohttp 是一个基于 asyncio 和 Python 的异步 HTTP 客户端&#x2F;服务器框架，广泛应用于构建高性能的 Web 应用和服务。该框架支持静态文件服务，但在配置静态路由时存在安全隐患。</p><p>漏洞的根源在于，当 aiohttp 用作 Web 服务器并配置静态路由时，如果设置了 <code>follow_symlinks</code> 选项为 <code>True</code>，框架不会验证所读取的文件是否位于静态根目录之内。这一缺陷导致攻击者可以通过构造恶意路径，绕过目录限制，访问服务器上的任意文件，即使系统中没有实际存在符号链接。这种目录遍历漏洞严重威胁到系统的安全性。</p><p>此漏洞的影响极为严重，因为它允许攻击者未经授权访问敏感文件，如系统配置文件（例如 <code>/etc/passwd</code>），可能导致信息泄露甚至系统被完全控制。攻击者无需任何认证即可利用此漏洞，且攻击过程可以自动化执行，大大增加了被利用的风险。因此，使用 aiohttp 3.9.1 及以下版本的用户应立即升级到安全版本，以避免潜在的安全威胁。</p><p><strong>产品厂商：</strong> aiohttp</p><p><strong>产品名称：</strong> aiohttp</p><p><strong>影响版本：</strong> version &lt;&#x3D; 3.9.1</p><p><strong>来源：</strong> <a href="https://github.com/vulhub/vulhub/blob/8c71a611ea83ec634bd7039db8c729fa91ffeb6f/python%2FCVE-2024-23334%2FREADME.zh-cn.md">https://github.com/vulhub/vulhub/blob/8c71a611ea83ec634bd7039db8c729fa91ffeb6f/python%2FCVE-2024-23334%2FREADME.zh-cn.md</a></p><p><strong>类型：</strong> vulhub&#x2F;vulhub:github issues</p><h1 id="来源概述"><a href="#来源概述" class="headerlink" title="来源概述"></a>来源概述</h1><h2 id="aiohttp-目录遍历漏洞-（CVE-2024-23334）"><a href="#aiohttp-目录遍历漏洞-（CVE-2024-23334）" class="headerlink" title="aiohttp 目录遍历漏洞 （CVE-2024-23334）"></a>aiohttp 目录遍历漏洞 （CVE-2024-23334）</h2><p>aiohttp 是一个基于 asyncio 和 Python 的异步 HTTP 客户端&#x2F;服务器框架。</p><p>在将 aiohttp 用作 Web 服务器并配置静态路由时，必须指定静态文件的根路径。此外，可以使用 <code>follow_symlinks</code> 选项来决定是否跟随指向静态根目录之外的符号链接。当 <code>follow_symlinks</code> 设置为 <code>True</code> 时，aiohttp 不会验证所读取的文件是否位于静态根目录之内。这可能导致目录遍历漏洞，从而使攻击者可以未经授权访问系统上的任意文件，即使系统中没有实际存在符号链接。该漏洞影响的版本包括 3.9.1 及以下。</p><p>参考链接：</p><ul><li><p><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-23334">NVD - CVE-2024-23334</a></p></li><li><p><a href="ttps://www.venustech.com.cn/new_type/aqldfx/20240401/27962.html">aiohttp 目录穿越漏洞（CVE-2024-23334 分析）</a></p></li></ul><h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h3><p>执行如下命令启动存在漏洞的 aiothttp 3.9.1 服务器：</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">docker compose up -d</span><br></code></pre></td></tr></table></figure><p>服务启动后，通过 <code>http://your-ip:8080/</code> 即可访问网页。</p><h3 id="漏洞复现"><a href="#漏洞复现" class="headerlink" title="漏洞复现"></a>漏洞复现</h3><p>利用此漏洞，可以构造恶意路径，从而访问服务器中任意文件。</p><p>例如，构造如下请求来查看系统文件<code>/etc/passwd</code>:</p><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs http"><span class="hljs-keyword">GET</span> <span class="hljs-string">/static/../../../../../etc/passwd</span> <span class="hljs-meta">HTTP/1.1</span><br><span class="hljs-attribute">Host</span><span class="hljs-punctuation">: </span>your-ip:8080<br><span class="hljs-attribute">Content-Length</span><span class="hljs-punctuation">: </span>2<br></code></pre></td></tr></table></figure><p><img src="/1.png" alt="构造查看&#x2F;etc&#x2F;passwd的请求"></p><p>如果操作成功，即可以看到<code>/etc/passwd</code>的内容，证明漏洞存在。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; aiohttp 目录遍历漏洞&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;漏洞编号：&lt;/st</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="vulhub/vulhub:github issues" scheme="http://example.com/tags/vulhub-vulhub-github-issues/"/>
+    
+    <category term="目录遍历" scheme="http://example.com/tags/%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86/"/>
+    
+  </entry>
   
   <entry>
     <title>grok Twitter Update !</title>
@@ -449,84 +529,6 @@
     
     
     <category term="dailycve" scheme="http://example.com/tags/dailycve/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>cyb3rops Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_4131297770/"/>
-    <id>http://example.com/2025/07/05/twitter_4131297770/</id>
-    <published>2025-07-05T12:00:56.000Z</published>
-    <updated>2025-07-05T12:00:56.279Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> cyb3rops</p><p><strong>推文：</strong> 终于，关于CitrixBleed 2（CVE-2025-5777）的一些技术洞见</p><p>对于任何希望在日志或反向代理流量中检测利用迹象的人来说，这非常有用</p><p>感谢Yury以及RST和watchTowr团队的深入研究</p><p><a href="https://t.co/6xhFS7YO7G">https://t.co/6xhFS7YO7G</a> <a href="https://t.co/BVjw6dEoME">https://t.co/BVjw6dEoME</a></p><p><strong>链接：</strong> <a href="https://x.com/cyb3rops/status/1941457765035278841">https://x.com/cyb3rops/status/1941457765035278841</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; cyb3rops&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 终于，关于CitrixBleed 2（CVE-2025-5777）的一些技术洞见&lt;/p&gt;
-&lt;p&gt;对于任何希望在日志或反向代理流量中检测利用迹象的人来说，这非常</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="cyb3rops" scheme="http://example.com/tags/cyb3rops/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Bavenhack Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_410559078/"/>
-    <id>http://example.com/2025/07/05/twitter_410559078/</id>
-    <published>2025-07-05T12:00:49.000Z</published>
-    <updated>2025-07-05T12:00:49.535Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> Bavenhack</p><p><strong>推文：</strong> 🚨#黑客 #快照黑客📢📢📢 #购买内容 #猴子应用 #电报链接 #Snapchat泄露 #加密货币 #比特币 ฿ #轻松赚钱 #购买快照黑客 旧摄像头，新威胁 🔥<br>Edimax IC-7100摄像头存在一个严重漏洞（CVE-2025-1316，CVSS 9.3），正遭受主动攻击——未打补丁的设备面临风险‼ <a href="https://t.co/ySl48yvHof">https://t.co/ySl48yvHof</a></p><p><strong>链接：</strong> <a href="https://x.com/Bavenhack/status/1941459494741127616">https://x.com/Bavenhack/status/1941459494741127616</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; Bavenhack&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🚨#黑客 #快照黑客📢📢📢 #购买内容 #猴子应用 #电报链接 #Snapchat泄露 #加密货币 #比特币 ฿ #轻松赚钱 #购买快照黑客 旧摄像</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="Bavenhack" scheme="http://example.com/tags/Bavenhack/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>rfackroyd Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_722443441/"/>
-    <id>http://example.com/2025/07/05/twitter_722443441/</id>
-    <published>2025-07-05T12:00:42.000Z</published>
-    <updated>2025-07-05T12:00:42.062Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> rfackroyd</p><p><strong>推文：</strong> 检查版本：</p><p>sudo –version</p><p>存在漏洞的版本：1.8.8–1.9.17 (CVE-2025-32462)<br>存在漏洞的版本：1.9.14–1.9.17 (CVE-2025-32463)</p><p>1.9.17p1+ 版本安全</p><p>如果存在漏洞，请更新</p><p>sudo apt update &amp;&amp; sudo apt install sudo</p><p><strong>链接：</strong> <a href="https://x.com/rfackroyd/status/1941460059571286318">https://x.com/rfackroyd/status/1941460059571286318</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; rfackroyd&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 检查版本：&lt;/p&gt;
-&lt;p&gt;sudo –version&lt;/p&gt;
-&lt;p&gt;存在漏洞的版本：1.8.8–1.9.17 (CVE-2025-32462)&lt;br&gt;存在漏</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="rfackroyd" scheme="http://example.com/tags/rfackroyd/"/>
     
   </entry>
   
