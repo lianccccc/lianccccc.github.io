@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-05T03:00:57.413Z</updated>
+  <updated>2025-07-05T03:01:26.882Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,106 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CVEnew Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_1059627498/"/>
+    <id>http://example.com/2025/07/05/twitter_1059627498/</id>
+    <published>2025-07-05T03:01:26.000Z</published>
+    <updated>2025-07-05T03:01:26.882Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> CVEnew</p><p><strong>推文：</strong> CVE-2024-58254 Rust的rustls crate 0.23.13至0.23.18版本中，当使用rustls::server::Acceptor::accept时，可能因分段的TLS ClientHello导致程序崩溃。<a href="https://t.co/YJownFTWVE">https://t.co/YJownFTWVE</a></p><p><strong>链接：</strong> <a href="https://x.com/CVEnew/status/1941329343789048297">https://x.com/CVEnew/status/1941329343789048297</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; CVEnew&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2024-58254 Rust的rustls crate 0.23.13至0.23.18版本中，当使用rustls::server::Acceptor::</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="CVEnew" scheme="http://example.com/tags/CVEnew/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VulmonFeeds Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_2765395211/"/>
+    <id>http://example.com/2025/07/05/twitter_2765395211/</id>
+    <published>2025-07-05T03:01:17.000Z</published>
+    <updated>2025-07-05T03:01:17.137Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> VulmonFeeds</p><p><strong>推文：</strong> CVE-2025-38212<br>Linux内核IPC子系统RCU处理中的释放后使用漏洞<br><a href="https://t.co/K9VYSmx1Q7">https://t.co/K9VYSmx1Q7</a></p><p><strong>链接：</strong> <a href="https://x.com/VulmonFeeds/status/1941318416419176742">https://x.com/VulmonFeeds/status/1941318416419176742</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; VulmonFeeds&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-38212&lt;br&gt;Linux内核IPC子系统RCU处理中的释放后使用漏洞&lt;br&gt;&lt;a href=&quot;https://t.co/K9VYS</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="VulmonFeeds" scheme="http://example.com/tags/VulmonFeeds/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>the_yellow_fall Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_1457891958/"/>
+    <id>http://example.com/2025/07/05/twitter_1457891958/</id>
+    <published>2025-07-05T03:01:11.000Z</published>
+    <updated>2025-07-05T03:01:11.817Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> the_yellow_fall</p><p><strong>推文：</strong> DjVuLibre中存在一个漏洞（CVE-2025-53367，CVSS 8.4），允许通过越界写入在Linux上远程执行代码。已有概念验证（PoC）可用；请立即升级至v3.5.29版本。#DjVuLibre #Linux安全 #远程代码执行 #网络安全 #漏洞 <a href="https://t.co/bMuwK2D2Dj">https://t.co/bMuwK2D2Dj</a></p><p><strong>链接：</strong> <a href="https://x.com/the_yellow_fall/status/1941318506940858375">https://x.com/the_yellow_fall/status/1941318506940858375</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; the_yellow_fall&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; DjVuLibre中存在一个漏洞（CVE-2025-53367，CVSS 8.4），允许通过越界写入在Linux上远程执行代码。已有概念验证（P</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="the_yellow_fall" scheme="http://example.com/tags/the-yellow-fall/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Teeegra Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_1135483748/"/>
+    <id>http://example.com/2025/07/05/twitter_1135483748/</id>
+    <published>2025-07-05T03:01:04.000Z</published>
+    <updated>2025-07-05T03:01:04.045Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> Teeegra</p><p><strong>推文：</strong> 研究人员在Linux和Unix操作系统的命令行工具Sudo中发现了两个安全漏洞，这些漏洞可能使攻击者能够在易受攻击的设备上将自身权限提升至root级别。漏洞CVE-2025-32463的CVSS评分为9.3，允许用户通过“–chroot”选项获得root访问权限。</p><p><strong>链接：</strong> <a href="https://x.com/Teeegra/status/1941319024844939480">https://x.com/Teeegra/status/1941319024844939480</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; Teeegra&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 研究人员在Linux和Unix操作系统的命令行工具Sudo中发现了两个安全漏洞，这些漏洞可能使攻击者能够在易受攻击的设备上将自身权限提升至root级别。漏洞CV</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="Teeegra" scheme="http://example.com/tags/Teeegra/"/>
+    
+  </entry>
   
   <entry>
     <title>fridaysecurity Twitter Update !</title>
@@ -426,107 +526,6 @@
     
     
     <category term="VulmonFeeds" scheme="http://example.com/tags/VulmonFeeds/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CVEnew Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_225000308/"/>
-    <id>http://example.com/2025/07/05/twitter_225000308/</id>
-    <published>2025-07-05T02:00:56.000Z</published>
-    <updated>2025-07-05T02:00:56.720Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> CVEnew</p><p><strong>推文：</strong> CVE-2025-53603 在Alinto SOPE SOGo 2.0.2至5.12.2版本中，sope-core&#x2F;NGExtensions&#x2F;NGHashMap.m允许通过请求中的参数导致空指针解引用，进而引发SOGo崩溃… <a href="https://t.co/ex0Ja9lJmY">https://t.co/ex0Ja9lJmY</a></p><p><strong>链接：</strong> <a href="https://x.com/CVEnew/status/1941303085390782693">https://x.com/CVEnew/status/1941303085390782693</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; CVEnew&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-53603 在Alinto SOPE SOGo 2.0.2至5.12.2版本中，sope-core&amp;#x2F;NGExtensions&amp;#x2F</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="CVEnew" scheme="http://example.com/tags/CVEnew/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CVEnew Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_1208902048/"/>
-    <id>http://example.com/2025/07/05/twitter_1208902048/</id>
-    <published>2025-07-05T02:00:50.000Z</published>
-    <updated>2025-07-05T02:00:50.876Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> CVEnew</p><p><strong>推文：</strong> CVE-2025-53604 Rust的web-push crate在0.10.3之前版本中，允许通过Content-Length头部中的大整数导致内置客户端遭受拒绝服务（内存消耗）攻击。 <a href="https://t.co/oowbDlzQQO">https://t.co/oowbDlzQQO</a></p><p><strong>链接：</strong> <a href="https://x.com/CVEnew/status/1941303086280004007">https://x.com/CVEnew/status/1941303086280004007</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; CVEnew&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-53604 Rust的web-push crate在0.10.3之前版本中，允许通过Content-Length头部中的大整数导致内置客户端遭受</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="CVEnew" scheme="http://example.com/tags/CVEnew/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CVEnew Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_2496864387/"/>
-    <id>http://example.com/2025/07/05/twitter_2496864387/</id>
-    <published>2025-07-05T02:00:45.000Z</published>
-    <updated>2025-07-05T02:00:45.376Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> CVEnew</p><p><strong>推文：</strong> CVE-2025-53605 Rust语言的protobuf crate在3.7.2之前版本中，允许在解析未知字段时，protobuf::coded_input_stream::CodedInputStream::skip_group方法中存在不受控制的递归问题… <a href="https://t.co/Vn0VhcpLiA">https://t.co/Vn0VhcpLiA</a></p><p><strong>链接：</strong> <a href="https://x.com/CVEnew/status/1941303087114719427">https://x.com/CVEnew/status/1941303087114719427</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; CVEnew&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE-2025-53605 Rust语言的protobuf crate在3.7.2之前版本中，允许在解析未知字段时，protobuf::coded_input_</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="CVEnew" scheme="http://example.com/tags/CVEnew/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>illdeed Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_2537974028/"/>
-    <id>http://example.com/2025/07/05/twitter_2537974028/</id>
-    <published>2025-07-05T02:00:39.000Z</published>
-    <updated>2025-07-05T02:00:39.163Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> illdeed</p><p><strong>推文：</strong> 🚨 新PoC发布<br>触发OOB内存泄漏 + 利用CitrixBleed v2（CVE-2025-5777）重放Citrix会话 💥</p><p>泄漏NSC_* cookies ➜ 绕过登录</p><p>🔗 <a href="https://t.co/KvCxrMPui6">https://t.co/KvCxrMPui6</a><br>#信息安全 #漏洞利用 #CVE2025 #Citrix #红队</p><p><strong>链接：</strong> <a href="https://x.com/illdeed/status/1941306932981268587">https://x.com/illdeed/status/1941306932981268587</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; illdeed&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🚨 新PoC发布&lt;br&gt;触发OOB内存泄漏 + 利用CitrixBleed v2（CVE-2025-5777）重放Citrix会话 💥&lt;/p&gt;
-&lt;p&gt;泄漏N</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="illdeed" scheme="http://example.com/tags/illdeed/"/>
     
   </entry>
   
