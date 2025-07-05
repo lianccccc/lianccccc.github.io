@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-05T16:01:18.340Z</updated>
+  <updated>2025-07-05T17:00:39.676Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,81 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BugsAggregator Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_4283562868/"/>
+    <id>http://example.com/2025/07/05/twitter_4283562868/</id>
+    <published>2025-07-05T17:00:39.000Z</published>
+    <updated>2025-07-05T17:00:39.676Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> BugsAggregator</p><p><strong>推文：</strong> 漏洞：CVE-2025-22870影响webpagereplay  <a href="https://t.co/xgIRQxhuaW">https://t.co/xgIRQxhuaW</a></p><p><strong>链接：</strong> <a href="https://x.com/BugsAggregator/status/1941533846576701619">https://x.com/BugsAggregator/status/1941533846576701619</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; BugsAggregator&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 漏洞：CVE-2025-22870影响webpagereplay  &lt;a href=&quot;https://t.co/xgIRQxhuaW&quot;&gt;https</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="BugsAggregator" scheme="http://example.com/tags/BugsAggregator/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>zoomeye_team Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_1507720874/"/>
+    <id>http://example.com/2025/07/05/twitter_1507720874/</id>
+    <published>2025-07-05T17:00:33.000Z</published>
+    <updated>2025-07-05T17:00:33.371Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> zoomeye_team</p><p><strong>推文：</strong> ⚡️漏洞详情现已公布：<a href="https://t.co/ezp3JQlmdR">https://t.co/ezp3JQlmdR</a></p><p>🚨🚨CVE-2025-49826影响Next.js，存在严重的缓存投毒漏洞！此漏洞允许攻击者通过缓存静态页面的HTTP 204响应，对所有用户返回空白响应，从而触发DoS攻击。</p><p>通过vul.cve筛选器搜索👉vul.cve&#x3D;”CVE-2025-49826”<br>ZoomEye搜索语法👉app&#x3D;”Next.js”<br>ZoomEye上暴露的Next.js应用超过230万+<br>ZoomEye链接：<a href="https://t.co/2ikttPj9g3">https://t.co/2ikttPj9g3</a></p><p>参考：</p><ol><li><a href="https://t.co/2JNNa7uUp2">https://t.co/2JNNa7uUp2</a></li><li><a href="https://t.co/I7oM8C6MZc">https://t.co/I7oM8C6MZc</a></li></ol><p>#ZoomEye #网络安全 #信息安全 #OSINT</p><p><strong>链接：</strong> <a href="https://x.com/zoomeye_team/status/1941538474965991936">https://x.com/zoomeye_team/status/1941538474965991936</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; zoomeye_team&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; ⚡️漏洞详情现已公布：&lt;a href=&quot;https://t.co/ezp3JQlmdR&quot;&gt;https://t.co/ezp3JQlmdR&lt;/a&gt;&lt;/p</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="zoomeye_team" scheme="http://example.com/tags/zoomeye-team/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AIShiftProtocol Twitter Update !</title>
+    <link href="http://example.com/2025/07/05/twitter_442753491/"/>
+    <id>http://example.com/2025/07/05/twitter_442753491/</id>
+    <published>2025-07-05T17:00:17.000Z</published>
+    <updated>2025-07-05T17:00:17.475Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>博主：</strong> AIShiftProtocol</p><p><strong>推文：</strong> 🧠 解读：CitrixBleed 2 暴露了 Citrix NetScaler 的漏洞，可能导致内存信息泄露和潜在的数据泄露风险。我们如何减轻这些风险？🔍 探索见解并保护您的系统：#网络安全 #CitrixBleed2</p><p><a href="https://t.co/ImVnvm6L1B">https://t.co/ImVnvm6L1B</a></p><p><strong>链接：</strong> <a href="https://x.com/AIShiftProtocol/status/1941539242703765837">https://x.com/AIShiftProtocol/status/1941539242703765837</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; AIShiftProtocol&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; 🧠 解读：CitrixBleed 2 暴露了 Citrix NetScaler 的漏洞，可能导致内存信息泄露和潜在的数据泄露风险。我们如何减轻</summary>
+      
+    
+    
+    
+    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
+    
+    
+    <category term="AIShiftProtocol" scheme="http://example.com/tags/AIShiftProtocol/"/>
+    
+  </entry>
   
   <entry>
     <title>ksg93rd Twitter Update !</title>
@@ -451,82 +526,6 @@
     
     
     <category term="RedPacketSec" scheme="http://example.com/tags/RedPacketSec/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RedPacketSec Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_962179632/"/>
-    <id>http://example.com/2025/07/05/twitter_962179632/</id>
-    <published>2025-07-05T15:00:41.000Z</published>
-    <updated>2025-07-05T15:00:41.456Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> RedPacketSec</p><p><strong>推文：</strong> CVE警报：CVE-2025-52776 - <a href="https://t.co/YYEoUQT0D6">https://t.co/YYEoUQT0D6</a></p><p>#开源情报 #威胁情报 #网络安全 #cve_2025_52776</p><p><strong>链接：</strong> <a href="https://x.com/RedPacketSec/status/1941508630718636465">https://x.com/RedPacketSec/status/1941508630718636465</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; RedPacketSec&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE警报：CVE-2025-52776 - &lt;a href=&quot;https://t.co/YYEoUQT0D6&quot;&gt;https://t.co/YYEoU</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="RedPacketSec" scheme="http://example.com/tags/RedPacketSec/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RedPacketSec Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_535950391/"/>
-    <id>http://example.com/2025/07/05/twitter_535950391/</id>
-    <published>2025-07-05T15:00:35.000Z</published>
-    <updated>2025-07-05T15:00:35.832Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> RedPacketSec</p><p><strong>推文：</strong> CVE警报：CVE-2025-52796 - <a href="https://t.co/WTq6AwsuJQ">https://t.co/WTq6AwsuJQ</a></p><p>#开源情报 #威胁情报 #网络安全 #cve_2025_52796</p><p><strong>链接：</strong> <a href="https://x.com/RedPacketSec/status/1941508632077586920">https://x.com/RedPacketSec/status/1941508632077586920</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; RedPacketSec&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; CVE警报：CVE-2025-52796 - &lt;a href=&quot;https://t.co/WTq6AwsuJQ&quot;&gt;https://t.co/WTq6A</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="RedPacketSec" scheme="http://example.com/tags/RedPacketSec/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>salajegheh_ir Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_1986598480/"/>
-    <id>http://example.com/2025/07/05/twitter_1986598480/</id>
-    <published>2025-07-05T15:00:30.000Z</published>
-    <updated>2025-07-05T15:00:30.156Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> salajegheh_ir</p><p><strong>推文：</strong> #严重警告<br>致国家关键和敏感组织的数据中心管理员</p><p>2025年3月，发现了一个严重漏洞（CVE‑2025‑24383），评分为9.1，存在于Dell Unity存储系统中。然而，在公司发布补丁更新之前，该漏洞已被某些人在一些地下论坛上出售！<br>此安全漏洞允许攻击者无需认证即可侵入系统，删除或破坏文件。</p><p>Dell公司当时发布了5.5版本来修复问题。但在伊朗，由于制裁，一些数据中心通过阿联酋、土耳其和中国等国家采购这些设备，有时为了节省成本和更便宜，通过无名中介和走私方式进行，可能未能接收到这一关键的更新。</p><p>如果您使用Dell Unity：</p><p>检查OE版本，并尽可能立即更新。（确保更新版本高于5.4！）<br>切断存储系统管理控制台的直接互联网访问。<br>隔离管理网络。<br>保持日志监控（监测）活动。</p><p>#网络安全<br>#网络战<br>#银行 #股市 #移动运营商</p><p><strong>链接：</strong> <a href="https://x.com/salajegheh_ir/status/1941510575021764875">https://x.com/salajegheh_ir/status/1941510575021764875</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; salajegheh_ir&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; #严重警告&lt;br&gt;致国家关键和敏感组织的数据中心管理员&lt;/p&gt;
-&lt;p&gt;2025年3月，发现了一个严重漏洞（CVE‑2025‑24383），评分为9.</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="salajegheh_ir" scheme="http://example.com/tags/salajegheh-ir/"/>
     
   </entry>
   
