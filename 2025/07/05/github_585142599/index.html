@@ -19,15 +19,15 @@
   <meta name="author" content="lianccc">
   <meta name="keywords" content="">
   
-    <meta name="description" content="漏洞信息漏洞名称： Citrix NetScaler Memory Disclosure - CitrixBleed 2 漏洞编号：  CVE： CVE-2025-5777  漏洞类型： 信息泄露 漏洞等级： 严重 漏洞描述： Citrix NetScaler是一款广泛使用的应用交付控制器（ADC）和网关产品，主要用于企业级网络环境中，提供负载均衡、应用加速和安全访问等功能。由于其广泛部署，一旦存">
+    <meta name="description" content="漏洞信息漏洞名称： Citrix NetScaler Memory Disclosure - CitrixBleed 2 漏洞编号：  CVE： CVE-2025-5777  漏洞类型： 信息泄露 漏洞等级： 严重 漏洞描述： Citrix NetScaler是一款广泛使用的应用交付控制器和网关产品，广泛应用于企业级网络环境中，用于优化应用性能、确保应用安全性和提供远程访问解决方案。该产品因其在企">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Citrix NetScaler Memory Disclosure - CitrixBleed 2">
 <meta property="og:url" content="http://example.com/2025/07/05/github_585142599/index.html">
 <meta property="og:site_name" content="liancc&#39; infos blog">
-<meta property="og:description" content="漏洞信息漏洞名称： Citrix NetScaler Memory Disclosure - CitrixBleed 2 漏洞编号：  CVE： CVE-2025-5777  漏洞类型： 信息泄露 漏洞等级： 严重 漏洞描述： Citrix NetScaler是一款广泛使用的应用交付控制器（ADC）和网关产品，主要用于企业级网络环境中，提供负载均衡、应用加速和安全访问等功能。由于其广泛部署，一旦存">
+<meta property="og:description" content="漏洞信息漏洞名称： Citrix NetScaler Memory Disclosure - CitrixBleed 2 漏洞编号：  CVE： CVE-2025-5777  漏洞类型： 信息泄露 漏洞等级： 严重 漏洞描述： Citrix NetScaler是一款广泛使用的应用交付控制器和网关产品，广泛应用于企业级网络环境中，用于优化应用性能、确保应用安全性和提供远程访问解决方案。该产品因其在企">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-07-05T18:45:28.000Z">
-<meta property="article:modified_time" content="2025-07-05T18:45:28.178Z">
+<meta property="article:published_time" content="2025-07-05T19:45:23.000Z">
+<meta property="article:modified_time" content="2025-07-05T19:45:23.910Z">
 <meta property="article:author" content="lianccc">
 <meta property="article:tag" content="projectdiscovery&#x2F;nuclei-templates:github issues">
 <meta property="article:tag" content="信息泄露">
@@ -213,7 +213,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-07-05 18:45" pubdate>
+        <time datetime="2025-07-05 19:45" pubdate>
           2025年7月5日 晚上
         </time>
       </span>
@@ -225,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          581 字
+          594 字
         
       </span>
     
@@ -285,9 +285,9 @@
 </ul>
 <p><strong>漏洞类型：</strong> 信息泄露</p>
 <p><strong>漏洞等级：</strong> 严重</p>
-<p><strong>漏洞描述：</strong> Citrix NetScaler是一款广泛使用的应用交付控制器（ADC）和网关产品，主要用于企业级网络环境中，提供负载均衡、应用加速和安全访问等功能。由于其广泛部署，一旦存在安全漏洞，可能对大量企业网络造成严重影响。</p>
-<p>该漏洞被命名为CitrixBleed 2，属于信息泄露类型，具体表现为由于NetScaler管理界面的输入验证不足，导致内存过度读取。这种漏洞的根源在于系统未能正确处理或验证特定的输入数据，从而允许攻击者读取敏感的内存信息。</p>
-<p>此漏洞的严重性被评定为“严重”，因为它可能导致敏感信息泄露，包括但不限于用户凭证、会话令牌等关键数据。攻击者可能利用这些信息进行进一步的攻击，如身份冒充或权限提升。值得注意的是，该漏洞可能不需要认证即可被利用，且存在自动化利用的可能性，这使得它尤其危险。企业应立即检查并应用相关的安全补丁，以防范潜在的攻击。</p>
+<p><strong>漏洞描述：</strong> Citrix NetScaler是一款广泛使用的应用交付控制器和网关产品，广泛应用于企业级网络环境中，用于优化应用性能、确保应用安全性和提供远程访问解决方案。该产品因其在企业网络中的核心作用而成为攻击者的重要目标。</p>
+<p>该漏洞被标识为CVE-2025-5777，属于信息泄露类型，由于NetScaler管理界面的输入验证不足导致内存过度读取。这种漏洞的根源在于处理用户输入时未能正确验证数据长度或内容，从而允许攻击者读取超出预期范围的内存数据。</p>
+<p>此漏洞的严重性被评定为“严重”，因为它可能导致敏感信息泄露，包括但不限于用户凭证、会话令牌和其他关键安全数据。攻击者无需认证即可远程利用此漏洞，增加了其潜在危害。此外，由于漏洞的可利用性高，攻击者可以自动化攻击流程，对受影响系统造成广泛的安全威胁。企业应立即应用相关补丁或采取缓解措施以防止潜在的数据泄露和服务中断。</p>
 <p><strong>产品厂商：</strong> Citrix</p>
 <p><strong>产品名称：</strong> NetScaler ADC, NetScaler Gateway</p>
 <p><strong>搜索语法：</strong> title:”NetScaler Gateway”, title:”NetScaler AAA”, http.favicon.hash:-1166125415, http.favicon.hash:-1292923998, title&#x3D;”NetScaler Gateway”, title&#x3D;”NetScaler AAA”, icon_hash&#x3D;”-1166125415”, icon_hash&#x3D;”-1292923998”</p>
@@ -387,18 +387,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/07/05/other_933885414/" title="CVE-2025-7105 Using Mermaid to cause JS memory overflow and service downtime">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">CVE-2025-7105 Using Mermaid to cause JS memory overflow and service downtime</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/07/05/github_2898359546/" title="Hikvision IP Camera Snapshot, Config, and User Info Exposure Vulnerability">
-                        <span class="hidden-mobile">Hikvision IP Camera Snapshot, Config, and User Info Exposure Vulnerability</span>
+                      <a href="/2025/07/05/github_1615323680/" title="CVE-2024-42364">
+                        <span class="hidden-mobile">CVE-2024-42364</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
